@@ -1,5 +1,5 @@
 {
-	"name": "garethp/php-ews",
+	"name": "blazingsun/php-ews",
 	"require": {
 		"guzzlehttp/guzzle": "~6.0",
 		"ext-curl": "*"
