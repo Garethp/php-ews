@@ -337,10 +337,14 @@ class EWSAutodiscover
                     return ExchangeWebServices::VERSION_2010;
             }
         }elseif ($majorversion == 15) {
-            if($minorversion === 0 && $buildversion >= 847) {
-            return ExchangeWebServices::VERSION_2013_SP1; // released 02/24/2014
+            switch($minorversion){
+                case 0:
+                    return ExchangeWebServices::VERSION_2013_SP1;
+                case 1:
+                    return ExchangeWebServices::VERSION_2016;
+                default:
+                    return ExchangeWebServices::VERSION_2013_SP1;
             }
-            return ExchangeWebServices::VERSION_2013;
         }
 
         // Guess we didn't find a known version.
