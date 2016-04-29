@@ -162,6 +162,6 @@ class Type
             return '';
         }
 
-        return (string)$this->_;
+        return $this->_;
     }
 }
