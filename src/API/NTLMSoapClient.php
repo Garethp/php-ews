@@ -88,7 +88,7 @@ class NTLMSoapClient extends SoapClient
         'SyncFolderItems',
         'GetServerTimeZones',
         'ConvertId',
-        'moveItem' 
+        'moveItem'
     );
 
     /**
