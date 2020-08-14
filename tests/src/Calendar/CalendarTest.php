@@ -4,7 +4,7 @@ namespace garethp\ews\Test\Calendar;
 
 use garethp\ews\Test\BaseTestCase;
 
-class APITest extends BaseTestCase
+class CalendarTest extends BaseTestCase
 {
     public function setUp()
     {
