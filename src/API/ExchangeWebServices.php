@@ -277,14 +277,20 @@ class ExchangeWebServices
         $this->server = $server;
         $this->version = $options['version'];
 
-        $backup = libxml_disable_entity_loader(false);
+        if (version_compare(PHP_VERSION, '8', '<')) {
+            $backup = libxml_disable_entity_loader(false);
+        }
+
         $this->soap = new NTLMSoapClient(
             $location,
             $auth,
             dirname(__FILE__) . '/../../Resources/wsdl/services.wsdl',
             $options
         );
-        libxml_disable_entity_loader($backup);
+
+        if (version_compare(PHP_VERSION, '8', '<')) {
+            libxml_disable_entity_loader($backup);
+        }
 
         if (isset($options['primarySmtpEmailAddress'])) {
             $this->setPrimarySmtpEmailAddress($options['primarySmtpEmailAddress']);
