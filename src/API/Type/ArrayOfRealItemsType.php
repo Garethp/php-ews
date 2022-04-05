@@ -132,22 +132,26 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         return $this->itemsArray;
     }
 
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->getItems());
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->getItems()[$offset]);
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         $this->getItems();
         return isset($this->itemsArray[$offset]) ? $this->itemsArray[$offset] : null;
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         $this->getItems();
@@ -159,12 +163,14 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         }
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         $this->getItems();
         unset($this->itemsArray[$offset]);
     }
 
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         $this->getItems();
