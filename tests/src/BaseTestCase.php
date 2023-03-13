@@ -3,8 +3,9 @@
 namespace garethp\ews\Test;
 
 use garethp\ews\API;
+use PHPUnit\Framework\TestCase;
 
-class BaseTestCase extends \PHPUnit_Framework_TestCase
+class BaseTestCase extends TestCase
 {
     /**
      * @param null $apiClass

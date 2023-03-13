@@ -244,12 +244,11 @@ class APITest extends BaseTestCase
         $this->assertTrue($client->deleteItems($item, ['SendMeetingCancellations' => 'SendToNone']));
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage The specified object was not found in the store
-     */
     public function testDeleteItemsFail()
     {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("The specified object was not found in the store");
+
         $client = $this->getClient();
         $start = new \DateTime();
         $args = array(

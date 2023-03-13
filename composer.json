@@ -1,8 +1,9 @@
 {
 	"name": "garethp/php-ews",
 	"license": "BSD-3-Clause",
+	"description": "A PHP Library to interact with the Exchange SOAP service",
 	"require": {
-		"garethp/http-playback": "^1.0",
+		"garethp/http-playback": "^2.0",
 		"ext-curl": "*",
 		"ext-soap": "*",
 		"ext-libxml": "*",
@@ -27,10 +28,10 @@
 		]
 	},
 	"require-dev": {
-		"phpunit/phpunit": "~4.8|~5.2",
-		"squizlabs/php_codesniffer": "~2.3",
-		"mockery/mockery": "~0.9.4",
-		"goetas/xsd2php": "2.*@dev",
-		"goetas/xsd-reader": "2.*@dev"
+		"phpunit/phpunit": "^9.4 || ^8.5",
+		"squizlabs/php_codesniffer": "~3.6.0",
+		"mockery/mockery": "^1.3",
+		"goetas/xsd2php": "^2.1",
+		"goetas/xsd-reader": "^2.0-dev"
 	}
 }

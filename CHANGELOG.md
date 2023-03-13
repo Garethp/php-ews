@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.10.1 - 2021-09-17
+ * Merge in fixes for PHP8
+
+## 0.10.0 - 2021-05-10
+ * Upgrading the version of Guzzle that's used in HttpPlayback
+ * Upgrading the version of PHPUnit used to allow for PHP 8
+ * This breaks backwards compatibility with PHP 5.x
+
 ## 0.9.9 - 2020-09-15
  * Fixing issue of any non-success responses failing XML check (since the body is not XML)
  * Fixing a problem with contacts over a different primary address introduced in `0.9.7`

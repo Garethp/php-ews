@@ -98,6 +98,7 @@ class NTLMSoapClient extends SoapClient
      * @param string $args
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function __call($name, $args)
     {
         $this->__setSoapHeaders(null);
@@ -187,6 +188,7 @@ class NTLMSoapClient extends SoapClient
      * @param integer $one_way
      * @return string the xml soap response.
      */
+    #[\ReturnTypeWillChange]
     public function __doRequest($request, $location, $action, $version, $one_way = 0)
     {
         $postOptions = array(
@@ -233,6 +235,7 @@ class NTLMSoapClient extends SoapClient
      *
      * @return string the last soap request headers
      */
+    #[\ReturnTypeWillChange]
     public function __getLastRequestHeaders()
     {
         return implode('n', $this->__last_request_headers)."\n";

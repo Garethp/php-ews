@@ -9,8 +9,9 @@
 namespace garethp\ews\Test;
 
 use garethp\ews\Caster;
+use PHPUnit\Framework\TestCase;
 
-class CasterTest extends \PHPUnit_Framework_TestCase
+class CasterTest extends TestCase
 {
     /**
      * @param $input

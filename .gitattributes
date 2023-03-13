@@ -1,0 +1,5 @@
+# Ignore all test and examples with "export-ignore".
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/tests              export-ignore
+/examples           export-ignore

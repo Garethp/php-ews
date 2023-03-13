@@ -9,7 +9,7 @@ use garethp\ews\Test\BaseTestCase;
 
 class MailAPITest extends BaseTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $client = $this->getClient();
         $items = $client->getMailItems();
@@ -19,7 +19,7 @@ class MailAPITest extends BaseTestCase
         }
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $client = $this->getClient();
         $items = $client->getMailItems();

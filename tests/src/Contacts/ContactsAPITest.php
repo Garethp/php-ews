@@ -7,7 +7,6 @@ use garethp\ews\API\Enumeration\PhysicalAddressKeyType;
 use garethp\ews\API\Type\ItemIdType;
 use garethp\ews\API\Type\PhysicalAddressDictionaryEntryType;
 use garethp\ews\Test\BaseTestCase;
-use PHPUnit_Framework_TestCase;
 use garethp\ews\ContactsAPI as API;
 
 class ContactsAPITest extends BaseTestCase

@@ -31,9 +31,10 @@ if (!$_SESSION['token'] && !isset($_GET)) {
         '&scope=' . urlencode('full_access_as_user');
     header("Location: {$redirect}");
     exit();
-} //Once you have your code, you can exchange it for a token. The code can only be used once, so you don't store the code.
-//The token is what we'll be using for the duration of the session, so you should store between pages.
-elseif (isset($_GET['code'])) {
+} elseif (isset($_GET['code'])) {
+    //Once you have your code, you can exchange it for a token. The code can only be used once, so you don't store the code.
+    //The token is what we'll be using for the duration of the session, so you should store between pages.
+
     $code = $_GET['code'];
 
     $token = ExchangeWebServicesAuth::getTokenFromAuthorizationCode(

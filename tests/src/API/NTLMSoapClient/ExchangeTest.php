@@ -2,10 +2,10 @@
 
 namespace garethp\ews\Test\API\NTLMSoapClient;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Mockery;
 
-class ExchangeTest extends PHPUnit_Framework_TestCase
+class ExchangeTest extends TestCase
 {
     public function testDummy()
     {

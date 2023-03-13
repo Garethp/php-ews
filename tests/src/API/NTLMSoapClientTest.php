@@ -9,16 +9,9 @@
 namespace garethp\ews\Test\API;
 
 use garethp\ews\Test\BaseTestCase;
-use GuzzleHttp\Client;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Psr7\Response;
 use garethp\ews\API\NTLMSoapClient;
-use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 use Mockery;
-use GuzzleHttp\Middleware;
-use SoapHeader;
 use garethp\ews\API;
 
 class NTLMSoapClientTest extends BaseTestCase

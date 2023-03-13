@@ -3,13 +3,12 @@
 namespace garethp\ews\Test\API;
 
 use garethp\ews\API\Type;
-use garethp\ews\API\Message;
 use garethp\ews\API\Enumeration;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Mockery;
 use DateTime;
 
-class TypeTest extends PHPUnit_Framework_TestCase
+class TypeTest extends TestCase
 {
     private $typeMock;
 
@@ -43,10 +42,10 @@ class TypeTest extends PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider magicExceptionProvider
-     * @expectedException \Exception
      */
     public function testMagicCallFail($callName, $value = null)
     {
+        $this->expectException(\Exception::class);
         $calendarItem = new Type\CalendarItemType();
 
         if ($value === null) {

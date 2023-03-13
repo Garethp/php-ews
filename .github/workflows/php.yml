@@ -1,0 +1,39 @@
+name: Run Tests
+on: [ push, pull_request ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ '7.2', '7.3', '7.4', '8.0', '8.1' ]
+    name: PHP ${{ matrix.php }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 10
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, intl, curl, soap, libxml, dom, simplexml
+          ini-values: post_max_size=256M, max_execution_time=180
+          coverage: xdebug
+
+      - name: Install Composer dependencies
+        run: composer install --no-progress
+
+      - name: Codestyle Check
+        run: composer cs
+
+      - name: PHPUnit
+        run: ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+        env:
+          XDEBUG_MODE: coverage
+
+      - name: Upload Scrutinizer coverage
+        uses: sudo-bot/action-scrutinizer@latest
+        with:
+          cli-args: "--format=php-clover build/logs/clover.xml"

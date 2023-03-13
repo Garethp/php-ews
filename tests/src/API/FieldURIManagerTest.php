@@ -5,8 +5,9 @@ namespace garethp\ews\Test\API;
 use garethp\ews\API\Enumeration\DictionaryURIType;
 use garethp\ews\API\Enumeration\UnindexedFieldURIType;
 use garethp\ews\API\FieldURIManager;
+use PHPUnit\Framework\TestCase;
 
-class FieldURIManagerTest extends \PHPUnit_Framework_TestCase
+class FieldURIManagerTest extends TestCase
 {
     public function testGetFieldUrisFromClass()
     {
