@@ -307,6 +307,15 @@ class API
         return $response;
     }
 
+    /**
+     * Update a folder by it's distinguishedId
+     *
+     * @param string $distinguishedId
+     * @param string $changes
+     * @param array $options
+     * @return Type\BaseFolderType
+     */
+
     public function updateFolder(BaseFolderIdType $folderId, $changes, $options = [])
     {
 	        $request = ['FolderChanges' => [
