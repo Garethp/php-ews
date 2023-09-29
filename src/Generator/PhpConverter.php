@@ -27,7 +27,6 @@ use Goetas\XML\XSDReader\Schema\Attribute\AttributeItem;
 use Goetas\XML\XSDReader\Schema\Element\ElementRef;
 use Goetas\XML\XSDReader\Schema\Element\ElementDef;
 use Goetas\XML\XSDReader\Schema\Element\ElementSingle;
-use Goetas\Xsd\XsdToPhp\AbstractConverter;
 use Goetas\Xsd\XsdToPhp\Naming\NamingStrategy;
 
 class PhpConverter extends \Goetas\Xsd\XsdToPhp\Php\PhpConverter
