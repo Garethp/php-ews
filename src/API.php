@@ -308,6 +308,37 @@ class API
     }
 
     /**
+     * Update a folder by it's distinguishedId
+     *
+     * @param string $distinguishedId
+     * @param string $changes
+     * @param array $options
+     * @return Type\BaseFolderType
+     */
+
+    public function updateFolder(BaseFolderIdType $folderId, $changes, $options = [])
+    {
+	        $request = ['FolderChanges' => [
+            'FolderChange' => [
+                'FolderId' => $folderId->toArray(),
+                'Updates' =>[
+					'SetFolderField'=>[
+						'FieldURI'=>['FieldURI'=>'folder:DisplayName'],
+						'Folder'=>[
+							'DisplayName'=>$changes
+						],
+					],
+				],
+            ],
+		],
+	];
+ 	$request = array_replace_recursive($request, $options);
+        $request = Type::buildFromArray($request);
+        $response = $this->getClient()->UpdateFolder($request);
+        return $response;
+    }
+  
+    /**
      * Get a folder by it's distinguishedId
      *
      * @param string $distinguishedId
