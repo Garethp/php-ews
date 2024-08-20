@@ -311,7 +311,7 @@ class CalendarAPI extends API
 
         $availabilities = array_map(function (FreeBusyResponseType $freeBusyResponseType) {
             return str_split($freeBusyResponseType->getFreeBusyView()->getMergedFreeBusy());
-        }, $availability->getFreeBusyResponseArray()->FreeBusyResponse);
+        }, array($availability->getFreeBusyResponseArray()->FreeBusyResponse));
 
         foreach ($availabilities[0] as $periodIndex => $availability) {
             if ($availability != 0) {
