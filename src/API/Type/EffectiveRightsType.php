@@ -10,19 +10,12 @@ use garethp\ews\API\Type;
  *
  * XSD Type: EffectiveRightsType
  *
- * @method boolean getCreateAssociated()
  * @method EffectiveRightsType setCreateAssociated(boolean $createAssociated)
- * @method boolean getCreateContents()
  * @method EffectiveRightsType setCreateContents(boolean $createContents)
- * @method boolean getCreateHierarchy()
  * @method EffectiveRightsType setCreateHierarchy(boolean $createHierarchy)
- * @method boolean getDelete()
  * @method EffectiveRightsType setDelete(boolean $delete)
- * @method boolean getModify()
  * @method EffectiveRightsType setModify(boolean $modify)
- * @method boolean getRead()
  * @method EffectiveRightsType setRead(boolean $read)
- * @method boolean getViewPrivateItems()
  * @method EffectiveRightsType setViewPrivateItems(boolean $viewPrivateItems)
  */
 class EffectiveRightsType extends Type
@@ -72,11 +65,27 @@ class EffectiveRightsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getCreateAssociated()
+    {
+        return $this->createAssociated;
+    }
+
+    /**
      * @returns bool
      */
     public function isCreateContents()
     {
         return ((bool) $this->createContents);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getCreateContents()
+    {
+        return $this->createContents;
     }
 
     /**
@@ -88,11 +97,27 @@ class EffectiveRightsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getCreateHierarchy()
+    {
+        return $this->createHierarchy;
+    }
+
+    /**
      * @returns bool
      */
     public function isDelete()
     {
         return ((bool) $this->delete);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getDelete()
+    {
+        return $this->delete;
     }
 
     /**
@@ -104,6 +129,14 @@ class EffectiveRightsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getModify()
+    {
+        return $this->modify;
+    }
+
+    /**
      * @returns bool
      */
     public function isRead()
@@ -112,10 +145,26 @@ class EffectiveRightsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getRead()
+    {
+        return $this->read;
+    }
+
+    /**
      * @returns bool
      */
     public function isViewPrivateItems()
     {
         return ((bool) $this->viewPrivateItems);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getViewPrivateItems()
+    {
+        return $this->viewPrivateItems;
     }
 }

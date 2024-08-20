@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: InternetHeaderType
  *
- * @method string getHeaderName()
  * @method InternetHeaderType setHeaderName(string $headerName)
  */
 class InternetHeaderType extends Type
@@ -20,4 +19,12 @@ class InternetHeaderType extends Type
      * @var string
      */
     protected $headerName = null;
+
+    /**
+     * @return string
+     */
+    public function getHeaderName()
+    {
+        return $this->headerName;
+    }
 }

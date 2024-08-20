@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: SmartResponseType
  *
- * @method BodyType getNewBodyContent()
  * @method SmartResponseType setNewBodyContent(BodyType $newBodyContent)
  */
 class SmartResponseType extends SmartResponseBaseType
@@ -18,4 +17,12 @@ class SmartResponseType extends SmartResponseBaseType
      * @var \garethp\ews\API\Type\BodyType
      */
     protected $newBodyContent = null;
+
+    /**
+     * @return BodyType
+     */
+    public function getNewBodyContent()
+    {
+        return $this->newBodyContent;
+    }
 }

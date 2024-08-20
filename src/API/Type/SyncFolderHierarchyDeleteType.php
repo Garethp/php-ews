@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SyncFolderHierarchyDeleteType
  *
- * @method FolderIdType getFolderId()
  * @method SyncFolderHierarchyDeleteType setFolderId(FolderIdType $folderId)
  */
 class SyncFolderHierarchyDeleteType extends Type
@@ -20,4 +19,12 @@ class SyncFolderHierarchyDeleteType extends Type
      * @var \garethp\ews\API\Type\FolderIdType
      */
     protected $folderId = null;
+
+    /**
+     * @return FolderIdType
+     */
+    public function getFolderId()
+    {
+        return $this->folderId;
+    }
 }

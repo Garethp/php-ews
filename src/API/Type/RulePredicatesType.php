@@ -11,84 +11,50 @@ use garethp\ews\API\Type;
  * XSD Type: RulePredicatesType
  *
  * @method RulePredicatesType addCategories(string $categories)
- * @method string[] getCategories()
  * @method RulePredicatesType setCategories(array $categories)
  * @method RulePredicatesType addContainsBodyStrings(string $containsBodyStrings)
- * @method string[] getContainsBodyStrings()
  * @method RulePredicatesType setContainsBodyStrings(array $containsBodyStrings)
  * @method RulePredicatesType addContainsHeaderStrings(string $containsHeaderStrings)
- * @method string[] getContainsHeaderStrings()
  * @method RulePredicatesType setContainsHeaderStrings(array $containsHeaderStrings)
  * @method RulePredicatesType addContainsRecipientStrings(string $containsRecipientStrings)
- * @method string[] getContainsRecipientStrings()
  * @method RulePredicatesType setContainsRecipientStrings(array $containsRecipientStrings)
  * @method RulePredicatesType addContainsSenderStrings(string $containsSenderStrings)
- * @method string[] getContainsSenderStrings()
  * @method RulePredicatesType setContainsSenderStrings(array $containsSenderStrings)
  * @method RulePredicatesType addContainsSubjectOrBodyStrings(string $containsSubjectOrBodyStrings)
- * @method string[] getContainsSubjectOrBodyStrings()
  * @method RulePredicatesType setContainsSubjectOrBodyStrings(array $containsSubjectOrBodyStrings)
  * @method RulePredicatesType addContainsSubjectStrings(string $containsSubjectStrings)
- * @method string[] getContainsSubjectStrings()
  * @method RulePredicatesType setContainsSubjectStrings(array $containsSubjectStrings)
- * @method string getFlaggedForAction()
  * @method RulePredicatesType setFlaggedForAction(string $flaggedForAction)
  * @method RulePredicatesType addFromAddresses(EmailAddressType $fromAddresses)
- * @method EmailAddressType[] getFromAddresses()
  * @method RulePredicatesType setFromAddresses(array $fromAddresses)
  * @method RulePredicatesType addFromConnectedAccounts(string $fromConnectedAccounts)
- * @method string[] getFromConnectedAccounts()
  * @method RulePredicatesType setFromConnectedAccounts(array $fromConnectedAccounts)
- * @method boolean getHasAttachments()
  * @method RulePredicatesType setHasAttachments(boolean $hasAttachments)
- * @method string getImportance()
  * @method RulePredicatesType setImportance(string $importance)
- * @method boolean getIsApprovalRequest()
  * @method RulePredicatesType setIsApprovalRequest(boolean $isApprovalRequest)
- * @method boolean getIsAutomaticForward()
  * @method RulePredicatesType setIsAutomaticForward(boolean $isAutomaticForward)
- * @method boolean getIsAutomaticReply()
  * @method RulePredicatesType setIsAutomaticReply(boolean $isAutomaticReply)
- * @method boolean getIsEncrypted()
  * @method RulePredicatesType setIsEncrypted(boolean $isEncrypted)
- * @method boolean getIsMeetingRequest()
  * @method RulePredicatesType setIsMeetingRequest(boolean $isMeetingRequest)
- * @method boolean getIsMeetingResponse()
  * @method RulePredicatesType setIsMeetingResponse(boolean $isMeetingResponse)
- * @method boolean getIsNDR()
  * @method RulePredicatesType setIsNDR(boolean $isNDR)
- * @method boolean getIsPermissionControlled()
  * @method RulePredicatesType setIsPermissionControlled(boolean $isPermissionControlled)
- * @method boolean getIsReadReceipt()
  * @method RulePredicatesType setIsReadReceipt(boolean $isReadReceipt)
- * @method boolean getIsSigned()
  * @method RulePredicatesType setIsSigned(boolean $isSigned)
- * @method boolean getIsVoicemail()
  * @method RulePredicatesType setIsVoicemail(boolean $isVoicemail)
  * @method RulePredicatesType addItemClasses(string $itemClasses)
- * @method string[] getItemClasses()
  * @method RulePredicatesType setItemClasses(array $itemClasses)
  * @method RulePredicatesType addMessageClassifications(string $messageClassifications)
- * @method string[] getMessageClassifications()
  * @method RulePredicatesType setMessageClassifications(array $messageClassifications)
- * @method boolean getNotSentToMe()
  * @method RulePredicatesType setNotSentToMe(boolean $notSentToMe)
- * @method boolean getSentCcMe()
  * @method RulePredicatesType setSentCcMe(boolean $sentCcMe)
- * @method boolean getSentOnlyToMe()
  * @method RulePredicatesType setSentOnlyToMe(boolean $sentOnlyToMe)
  * @method RulePredicatesType addSentToAddresses(EmailAddressType $sentToAddresses)
- * @method EmailAddressType[] getSentToAddresses()
  * @method RulePredicatesType setSentToAddresses(array $sentToAddresses)
- * @method boolean getSentToMe()
  * @method RulePredicatesType setSentToMe(boolean $sentToMe)
- * @method boolean getSentToOrCcMe()
  * @method RulePredicatesType setSentToOrCcMe(boolean $sentToOrCcMe)
- * @method string getSensitivity()
  * @method RulePredicatesType setSensitivity(string $sensitivity)
- * @method RulePredicateDateRangeType getWithinDateRange()
  * @method RulePredicatesType setWithinDateRange(RulePredicateDateRangeType $withinDateRange)
- * @method RulePredicateSizeRangeType getWithinSizeRange()
  * @method RulePredicatesType setWithinSizeRange(RulePredicateSizeRangeType $withinSizeRange)
  */
 class RulePredicatesType extends Type
@@ -265,11 +231,107 @@ class RulePredicatesType extends Type
     protected $withinSizeRange = null;
 
     /**
+     * @return string[]
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getContainsBodyStrings()
+    {
+        return $this->containsBodyStrings;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getContainsHeaderStrings()
+    {
+        return $this->containsHeaderStrings;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getContainsRecipientStrings()
+    {
+        return $this->containsRecipientStrings;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getContainsSenderStrings()
+    {
+        return $this->containsSenderStrings;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getContainsSubjectOrBodyStrings()
+    {
+        return $this->containsSubjectOrBodyStrings;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getContainsSubjectStrings()
+    {
+        return $this->containsSubjectStrings;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFlaggedForAction()
+    {
+        return $this->flaggedForAction;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getFromAddresses()
+    {
+        return $this->fromAddresses;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getFromConnectedAccounts()
+    {
+        return $this->fromConnectedAccounts;
+    }
+
+    /**
      * @returns bool
      */
     public function isHasAttachments()
     {
         return ((bool) $this->hasAttachments);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getHasAttachments()
+    {
+        return $this->hasAttachments;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImportance()
+    {
+        return $this->importance;
     }
 
     /**
@@ -281,11 +343,27 @@ class RulePredicatesType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsApprovalRequest()
+    {
+        return $this->isApprovalRequest;
+    }
+
+    /**
      * @returns bool
      */
     public function isAutomaticForward()
     {
         return ((bool) $this->isAutomaticForward);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsAutomaticForward()
+    {
+        return $this->isAutomaticForward;
     }
 
     /**
@@ -297,11 +375,27 @@ class RulePredicatesType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsAutomaticReply()
+    {
+        return $this->isAutomaticReply;
+    }
+
+    /**
      * @returns bool
      */
     public function isEncrypted()
     {
         return ((bool) $this->isEncrypted);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsEncrypted()
+    {
+        return $this->isEncrypted;
     }
 
     /**
@@ -313,11 +407,27 @@ class RulePredicatesType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsMeetingRequest()
+    {
+        return $this->isMeetingRequest;
+    }
+
+    /**
      * @returns bool
      */
     public function isMeetingResponse()
     {
         return ((bool) $this->isMeetingResponse);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsMeetingResponse()
+    {
+        return $this->isMeetingResponse;
     }
 
     /**
@@ -329,11 +439,27 @@ class RulePredicatesType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsNDR()
+    {
+        return $this->isNDR;
+    }
+
+    /**
      * @returns bool
      */
     public function isPermissionControlled()
     {
         return ((bool) $this->isPermissionControlled);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsPermissionControlled()
+    {
+        return $this->isPermissionControlled;
     }
 
     /**
@@ -345,11 +471,27 @@ class RulePredicatesType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsReadReceipt()
+    {
+        return $this->isReadReceipt;
+    }
+
+    /**
      * @returns bool
      */
     public function isSigned()
     {
         return ((bool) $this->isSigned);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsSigned()
+    {
+        return $this->isSigned;
     }
 
     /**
@@ -361,11 +503,43 @@ class RulePredicatesType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsVoicemail()
+    {
+        return $this->isVoicemail;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getItemClasses()
+    {
+        return $this->itemClasses;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getMessageClassifications()
+    {
+        return $this->messageClassifications;
+    }
+
+    /**
      * @returns bool
      */
     public function isNotSentToMe()
     {
         return ((bool) $this->notSentToMe);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getNotSentToMe()
+    {
+        return $this->notSentToMe;
     }
 
     /**
@@ -377,11 +551,35 @@ class RulePredicatesType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getSentCcMe()
+    {
+        return $this->sentCcMe;
+    }
+
+    /**
      * @returns bool
      */
     public function isSentOnlyToMe()
     {
         return ((bool) $this->sentOnlyToMe);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSentOnlyToMe()
+    {
+        return $this->sentOnlyToMe;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getSentToAddresses()
+    {
+        return $this->sentToAddresses;
     }
 
     /**
@@ -393,10 +591,50 @@ class RulePredicatesType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getSentToMe()
+    {
+        return $this->sentToMe;
+    }
+
+    /**
      * @returns bool
      */
     public function isSentToOrCcMe()
     {
         return ((bool) $this->sentToOrCcMe);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSentToOrCcMe()
+    {
+        return $this->sentToOrCcMe;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSensitivity()
+    {
+        return $this->sensitivity;
+    }
+
+    /**
+     * @return RulePredicateDateRangeType
+     */
+    public function getWithinDateRange()
+    {
+        return $this->withinDateRange;
+    }
+
+    /**
+     * @return RulePredicateSizeRangeType
+     */
+    public function getWithinSizeRange()
+    {
+        return $this->withinSizeRange;
     }
 }

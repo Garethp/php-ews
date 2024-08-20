@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: AbsoluteYearlyRecurrencePatternType
  *
- * @method integer getDayOfMonth()
  * @method AbsoluteYearlyRecurrencePatternType setDayOfMonth(integer $dayOfMonth)
- * @method string getMonth()
  * @method AbsoluteYearlyRecurrencePatternType setMonth(string $month)
  */
 class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
@@ -25,4 +23,20 @@ class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
      * @var string
      */
     protected $month = null;
+
+    /**
+     * @return integer
+     */
+    public function getDayOfMonth()
+    {
+        return $this->dayOfMonth;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMonth()
+    {
+        return $this->month;
+    }
 }

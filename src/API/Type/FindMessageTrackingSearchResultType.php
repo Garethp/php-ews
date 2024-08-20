@@ -10,25 +10,16 @@ use garethp\ews\API\Type;
  *
  * XSD Type: FindMessageTrackingSearchResultType
  *
- * @method string getSubject()
  * @method FindMessageTrackingSearchResultType setSubject(string $subject)
- * @method EmailAddressType getSender()
  * @method FindMessageTrackingSearchResultType setSender(EmailAddressType $sender)
- * @method EmailAddressType getPurportedSender()
  * @method FindMessageTrackingSearchResultType setPurportedSender(EmailAddressType $purportedSender)
  * @method FindMessageTrackingSearchResultType addRecipients(EmailAddressType $recipients)
- * @method EmailAddressType[] getRecipients()
  * @method FindMessageTrackingSearchResultType setRecipients(array $recipients)
- * @method \DateTime getSubmittedTime()
  * @method FindMessageTrackingSearchResultType setSubmittedTime(\DateTime $submittedTime)
- * @method string getMessageTrackingReportId()
  * @method FindMessageTrackingSearchResultType setMessageTrackingReportId(string $messageTrackingReportId)
- * @method string getPreviousHopServer()
  * @method FindMessageTrackingSearchResultType setPreviousHopServer(string $previousHopServer)
- * @method string getFirstHopServer()
  * @method FindMessageTrackingSearchResultType setFirstHopServer(string $firstHopServer)
  * @method FindMessageTrackingSearchResultType addProperties(TrackingPropertyType $properties)
- * @method TrackingPropertyType[] getProperties()
  * @method FindMessageTrackingSearchResultType setProperties(array $properties)
  */
 class FindMessageTrackingSearchResultType extends Type
@@ -82,4 +73,76 @@ class FindMessageTrackingSearchResultType extends Type
      * @var \garethp\ews\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
+
+    /**
+     * @return string
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getSender()
+    {
+        return $this->sender;
+    }
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getPurportedSender()
+    {
+        return $this->purportedSender;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getRecipients()
+    {
+        return $this->recipients;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getSubmittedTime()
+    {
+        return $this->submittedTime;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessageTrackingReportId()
+    {
+        return $this->messageTrackingReportId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPreviousHopServer()
+    {
+        return $this->previousHopServer;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstHopServer()
+    {
+        return $this->firstHopServer;
+    }
+
+    /**
+     * @return TrackingPropertyType[]
+     */
+    public function getProperties()
+    {
+        return $this->properties;
+    }
 }

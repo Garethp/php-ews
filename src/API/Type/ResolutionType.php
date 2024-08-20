@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ResolutionType
  *
- * @method EmailAddressType getMailbox()
  * @method ResolutionType setMailbox(EmailAddressType $mailbox)
- * @method ContactItemType getContact()
  * @method ResolutionType setContact(ContactItemType $contact)
  */
 class ResolutionType extends Type
@@ -27,4 +25,20 @@ class ResolutionType extends Type
      * @var \garethp\ews\API\Type\ContactItemType
      */
     protected $contact = null;
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
+    }
+
+    /**
+     * @return ContactItemType
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
 }

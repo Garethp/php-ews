@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: IntervalRecurrencePatternBaseType
  *
- * @method integer getInterval()
  * @method IntervalRecurrencePatternBaseType setInterval(integer $interval)
  */
 class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
@@ -18,4 +17,12 @@ class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
      * @var integer
      */
     protected $interval = null;
+
+    /**
+     * @return integer
+     */
+    public function getInterval()
+    {
+        return $this->interval;
+    }
 }

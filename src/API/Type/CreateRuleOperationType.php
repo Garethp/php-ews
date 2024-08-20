@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: CreateRuleOperationType
  *
- * @method RuleType getRule()
  * @method CreateRuleOperationType setRule(RuleType $rule)
  */
 class CreateRuleOperationType extends RuleOperationType
@@ -18,4 +17,12 @@ class CreateRuleOperationType extends RuleOperationType
      * @var \garethp\ews\API\Type\RuleType
      */
     protected $rule = null;
+
+    /**
+     * @return RuleType
+     */
+    public function getRule()
+    {
+        return $this->rule;
+    }
 }

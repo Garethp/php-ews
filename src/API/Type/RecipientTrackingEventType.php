@@ -10,31 +10,19 @@ use garethp\ews\API\Type;
  *
  * XSD Type: RecipientTrackingEventType
  *
- * @method \DateTime getDate()
  * @method RecipientTrackingEventType setDate(\DateTime $date)
- * @method EmailAddressType getRecipient()
  * @method RecipientTrackingEventType setRecipient(EmailAddressType $recipient)
- * @method string getDeliveryStatus()
  * @method RecipientTrackingEventType setDeliveryStatus(string $deliveryStatus)
- * @method string getEventDescription()
  * @method RecipientTrackingEventType setEventDescription(string $eventDescription)
  * @method RecipientTrackingEventType addEventData(string $eventData)
- * @method string[] getEventData()
  * @method RecipientTrackingEventType setEventData(array $eventData)
- * @method string getServer()
  * @method RecipientTrackingEventType setServer(string $server)
- * @method integer getInternalId()
  * @method RecipientTrackingEventType setInternalId(integer $internalId)
- * @method boolean getBccRecipient()
  * @method RecipientTrackingEventType setBccRecipient(boolean $bccRecipient)
- * @method boolean getHiddenRecipient()
  * @method RecipientTrackingEventType setHiddenRecipient(boolean $hiddenRecipient)
- * @method string getUniquePathId()
  * @method RecipientTrackingEventType setUniquePathId(string $uniquePathId)
- * @method string getRootAddress()
  * @method RecipientTrackingEventType setRootAddress(string $rootAddress)
  * @method RecipientTrackingEventType addProperties(TrackingPropertyType $properties)
- * @method TrackingPropertyType[] getProperties()
  * @method RecipientTrackingEventType setProperties(array $properties)
  */
 class RecipientTrackingEventType extends Type
@@ -105,6 +93,62 @@ class RecipientTrackingEventType extends Type
     protected $properties = null;
 
     /**
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getRecipient()
+    {
+        return $this->recipient;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeliveryStatus()
+    {
+        return $this->deliveryStatus;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEventDescription()
+    {
+        return $this->eventDescription;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getEventData()
+    {
+        return $this->eventData;
+    }
+
+    /**
+     * @return string
+     */
+    public function getServer()
+    {
+        return $this->server;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getInternalId()
+    {
+        return $this->internalId;
+    }
+
+    /**
      * @returns bool
      */
     public function isBccRecipient()
@@ -113,10 +157,50 @@ class RecipientTrackingEventType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getBccRecipient()
+    {
+        return $this->bccRecipient;
+    }
+
+    /**
      * @returns bool
      */
     public function isHiddenRecipient()
     {
         return ((bool) $this->hiddenRecipient);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getHiddenRecipient()
+    {
+        return $this->hiddenRecipient;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUniquePathId()
+    {
+        return $this->uniquePathId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRootAddress()
+    {
+        return $this->rootAddress;
+    }
+
+    /**
+     * @return TrackingPropertyType[]
+     */
+    public function getProperties()
+    {
+        return $this->properties;
     }
 }

@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: OpenAsAdminOrSystemServiceType
  *
- * @method string getLogonType()
  * @method OpenAsAdminOrSystemServiceType setLogonType(string $logonType)
- * @method ConnectingSIDType getConnectingSID()
  * @method OpenAsAdminOrSystemServiceType setConnectingSID(ConnectingSIDType $connectingSID)
  */
 class OpenAsAdminOrSystemServiceType extends Type
@@ -27,4 +25,20 @@ class OpenAsAdminOrSystemServiceType extends Type
      * @var \garethp\ews\API\Type\ConnectingSIDType
      */
     protected $connectingSID = null;
+
+    /**
+     * @return string
+     */
+    public function getLogonType()
+    {
+        return $this->logonType;
+    }
+
+    /**
+     * @return ConnectingSIDType
+     */
+    public function getConnectingSID()
+    {
+        return $this->connectingSID;
+    }
 }

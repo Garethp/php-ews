@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TrackingPropertyType
  *
- * @method string getName()
  * @method TrackingPropertyType setName(string $name)
- * @method string getValue()
  * @method TrackingPropertyType setValue(string $value)
  */
 class TrackingPropertyType extends Type
@@ -27,4 +25,20 @@ class TrackingPropertyType extends Type
      * @var string
      */
     protected $value = null;
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
 }

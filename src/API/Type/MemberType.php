@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: MemberType
  *
- * @method string getKey()
  * @method MemberType setKey(string $key)
- * @method EmailAddressType getMailbox()
  * @method MemberType setMailbox(EmailAddressType $mailbox)
- * @method string getStatus()
  * @method MemberType setStatus(string $status)
  */
 class MemberType extends Type
@@ -34,4 +31,28 @@ class MemberType extends Type
      * @var string
      */
     protected $status = null;
+
+    /**
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->key;
+    }
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
 }

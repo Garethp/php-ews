@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TransitionType
  *
- * @method TransitionTargetType getTo()
  * @method TransitionType setTo(TransitionTargetType $to)
  */
 class TransitionType extends Type
@@ -20,4 +19,12 @@ class TransitionType extends Type
      * @var \garethp\ews\API\Type\TransitionTargetType
      */
     protected $to = null;
+
+    /**
+     * @return TransitionTargetType
+     */
+    public function getTo()
+    {
+        return $this->to;
+    }
 }

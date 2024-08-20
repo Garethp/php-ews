@@ -8,9 +8,7 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetEventsType
  *
- * @method string getSubscriptionId()
  * @method GetEventsType setSubscriptionId(string $subscriptionId)
- * @method string getWatermark()
  * @method GetEventsType setWatermark(string $watermark)
  */
 class GetEventsType extends BaseRequestType
@@ -25,4 +23,20 @@ class GetEventsType extends BaseRequestType
      * @var string
      */
     protected $watermark = null;
+
+    /**
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->subscriptionId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWatermark()
+    {
+        return $this->watermark;
+    }
 }

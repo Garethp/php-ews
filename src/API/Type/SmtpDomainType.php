@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SmtpDomain
  *
- * @method string getName()
  * @method SmtpDomainType setName(string $name)
- * @method boolean getIncludeSubdomains()
  * @method SmtpDomainType setIncludeSubdomains(boolean $includeSubdomains)
  */
 class SmtpDomainType extends Type
@@ -29,10 +27,26 @@ class SmtpDomainType extends Type
     protected $includeSubdomains = null;
 
     /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludeSubdomains()
     {
         return ((bool) $this->includeSubdomains);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludeSubdomains()
+    {
+        return $this->includeSubdomains;
     }
 }

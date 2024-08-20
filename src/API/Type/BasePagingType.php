@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: BasePagingType
  *
- * @method integer getMaxEntriesReturned()
  * @method BasePagingType setMaxEntriesReturned(integer $maxEntriesReturned)
  */
 class BasePagingType extends Type
@@ -20,4 +19,12 @@ class BasePagingType extends Type
      * @var integer
      */
     protected $maxEntriesReturned = null;
+
+    /**
+     * @return integer
+     */
+    public function getMaxEntriesReturned()
+    {
+        return $this->maxEntriesReturned;
+    }
 }

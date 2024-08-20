@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: ContactsFolderType
  *
- * @method string getSharingEffectiveRights()
  * @method ContactsFolderType setSharingEffectiveRights(string $sharingEffectiveRights)
- * @method PermissionSetType getPermissionSet()
  * @method ContactsFolderType setPermissionSet(PermissionSetType $permissionSet)
  */
 class ContactsFolderType extends BaseFolderType
@@ -25,4 +23,20 @@ class ContactsFolderType extends BaseFolderType
      * @var \garethp\ews\API\Type\PermissionSetType
      */
     protected $permissionSet = null;
+
+    /**
+     * @return string
+     */
+    public function getSharingEffectiveRights()
+    {
+        return $this->sharingEffectiveRights;
+    }
+
+    /**
+     * @return PermissionSetType
+     */
+    public function getPermissionSet()
+    {
+        return $this->permissionSet;
+    }
 }

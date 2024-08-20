@@ -8,10 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetInboxRulesResponseType
  *
- * @method boolean getOutlookRuleBlobExists()
  * @method GetInboxRulesResponseType setOutlookRuleBlobExists(boolean $outlookRuleBlobExists)
  * @method GetInboxRulesResponseType addInboxRules(\garethp\ews\API\Type\RuleType $inboxRules)
- * @method \garethp\ews\API\Type\RuleType[] getInboxRules()
  * @method GetInboxRulesResponseType setInboxRules(array $inboxRules)
  */
 class GetInboxRulesResponseType extends ResponseMessageType
@@ -33,5 +31,21 @@ class GetInboxRulesResponseType extends ResponseMessageType
     public function isOutlookRuleBlobExists()
     {
         return ((bool) $this->outlookRuleBlobExists);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getOutlookRuleBlobExists()
+    {
+        return $this->outlookRuleBlobExists;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\RuleType[]
+     */
+    public function getInboxRules()
+    {
+        return $this->inboxRules;
     }
 }

@@ -8,15 +8,10 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: AppendToFolderFieldType
  *
- * @method FolderType getFolder()
  * @method AppendToFolderFieldType setFolder(FolderType $folder)
- * @method CalendarFolderType getCalendarFolder()
  * @method AppendToFolderFieldType setCalendarFolder(CalendarFolderType $calendarFolder)
- * @method ContactsFolderType getContactsFolder()
  * @method AppendToFolderFieldType setContactsFolder(ContactsFolderType $contactsFolder)
- * @method SearchFolderType getSearchFolder()
  * @method AppendToFolderFieldType setSearchFolder(SearchFolderType $searchFolder)
- * @method TasksFolderType getTasksFolder()
  * @method AppendToFolderFieldType setTasksFolder(TasksFolderType $tasksFolder)
  */
 class AppendToFolderFieldType extends FolderChangeDescriptionType
@@ -46,4 +41,44 @@ class AppendToFolderFieldType extends FolderChangeDescriptionType
      * @var \garethp\ews\API\Type\TasksFolderType
      */
     protected $tasksFolder = null;
+
+    /**
+     * @return FolderType
+     */
+    public function getFolder()
+    {
+        return $this->folder;
+    }
+
+    /**
+     * @return CalendarFolderType
+     */
+    public function getCalendarFolder()
+    {
+        return $this->calendarFolder;
+    }
+
+    /**
+     * @return ContactsFolderType
+     */
+    public function getContactsFolder()
+    {
+        return $this->contactsFolder;
+    }
+
+    /**
+     * @return SearchFolderType
+     */
+    public function getSearchFolder()
+    {
+        return $this->searchFolder;
+    }
+
+    /**
+     * @return TasksFolderType
+     */
+    public function getTasksFolder()
+    {
+        return $this->tasksFolder;
+    }
 }

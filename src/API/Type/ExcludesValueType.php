@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ExcludesValueType
  *
- * @method string getValue()
  * @method ExcludesValueType setValue(string $value)
  */
 class ExcludesValueType extends Type
@@ -20,4 +19,12 @@ class ExcludesValueType extends Type
      * @var string
      */
     protected $value = null;
+
+    /**
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
 }

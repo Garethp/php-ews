@@ -8,12 +8,9 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetSharingMetadataType
  *
- * @method \garethp\ews\API\Type\FolderIdType getIdOfFolderToShare()
  * @method GetSharingMetadataType setIdOfFolderToShare(\garethp\ews\API\Type\FolderIdType $idOfFolderToShare)
- * @method string getSenderSmtpAddress()
  * @method GetSharingMetadataType setSenderSmtpAddress(string $senderSmtpAddress)
  * @method GetSharingMetadataType addRecipients(string $recipients)
- * @method string[] getRecipients()
  * @method GetSharingMetadataType setRecipients(array $recipients)
  */
 class GetSharingMetadataType extends BaseRequestType
@@ -33,4 +30,28 @@ class GetSharingMetadataType extends BaseRequestType
      * @var string[]
      */
     protected $recipients = null;
+
+    /**
+     * @return \garethp\ews\API\Type\FolderIdType
+     */
+    public function getIdOfFolderToShare()
+    {
+        return $this->idOfFolderToShare;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSenderSmtpAddress()
+    {
+        return $this->senderSmtpAddress;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getRecipients()
+    {
+        return $this->recipients;
+    }
 }

@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: CalendarViewType
  *
- * @method \DateTime getStartDate()
  * @method CalendarViewType setStartDate(\DateTime $startDate)
- * @method \DateTime getEndDate()
  * @method CalendarViewType setEndDate(\DateTime $endDate)
  */
 class CalendarViewType extends BasePagingType
@@ -30,4 +28,20 @@ class CalendarViewType extends BasePagingType
      * @var \DateTime
      */
     protected $endDate = null;
+
+    /**
+     * @return \DateTime
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
+    }
 }

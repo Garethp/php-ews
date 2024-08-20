@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ReplyBody
  *
- * @method \garethp\ews\API\Type\ReplyBodyType\LangAType getLang()
  * @method ReplyBodyType setLang(\garethp\ews\API\Type\ReplyBodyType\LangAType $lang)
- * @method string getMessage()
  * @method ReplyBodyType setMessage(string $message)
  */
 class ReplyBodyType extends Type
@@ -27,4 +25,20 @@ class ReplyBodyType extends Type
      * @var string
      */
     protected $message = null;
+
+    /**
+     * @return \garethp\ews\API\Type\ReplyBodyType\LangAType
+     */
+    public function getLang()
+    {
+        return $this->lang;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
 }

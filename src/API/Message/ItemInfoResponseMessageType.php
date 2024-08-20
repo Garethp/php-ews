@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: ItemInfoResponseMessageType
  *
- * @method \garethp\ews\API\Type\ArrayOfRealItemsType getItems()
  * @method ItemInfoResponseMessageType setItems(\garethp\ews\API\Type\ArrayOfRealItemsType $items)
  */
 class ItemInfoResponseMessageType extends ResponseMessageType
@@ -18,4 +17,12 @@ class ItemInfoResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\ArrayOfRealItemsType
      */
     protected $items = null;
+
+    /**
+     * @return \garethp\ews\API\Type\ArrayOfRealItemsType
+     */
+    public function getItems()
+    {
+        return $this->items;
+    }
 }

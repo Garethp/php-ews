@@ -11,16 +11,12 @@ use garethp\ews\API\Type;
  * XSD Type: ArrayOfAttendeeConflictData
  *
  * @method ArrayOfAttendeeConflictDataType addUnknownAttendeeConflictData(UnknownAttendeeConflictDataType $unknownAttendeeConflictData)
- * @method UnknownAttendeeConflictDataType[] getUnknownAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setUnknownAttendeeConflictData(array $unknownAttendeeConflictData)
  * @method ArrayOfAttendeeConflictDataType addIndividualAttendeeConflictData(IndividualAttendeeConflictDataType $individualAttendeeConflictData)
- * @method IndividualAttendeeConflictDataType[] getIndividualAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setIndividualAttendeeConflictData(array $individualAttendeeConflictData)
  * @method ArrayOfAttendeeConflictDataType addTooBigGroupAttendeeConflictData(TooBigGroupAttendeeConflictDataType $tooBigGroupAttendeeConflictData)
- * @method TooBigGroupAttendeeConflictDataType[] getTooBigGroupAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setTooBigGroupAttendeeConflictData(array $tooBigGroupAttendeeConflictData)
  * @method ArrayOfAttendeeConflictDataType addGroupAttendeeConflictData(GroupAttendeeConflictDataType $groupAttendeeConflictData)
- * @method GroupAttendeeConflictDataType[] getGroupAttendeeConflictData()
  * @method ArrayOfAttendeeConflictDataType setGroupAttendeeConflictData(array $groupAttendeeConflictData)
  */
 class ArrayOfAttendeeConflictDataType extends Type
@@ -45,4 +41,36 @@ class ArrayOfAttendeeConflictDataType extends Type
      * @var \garethp\ews\API\Type\GroupAttendeeConflictDataType[]
      */
     protected $groupAttendeeConflictData = null;
+
+    /**
+     * @return UnknownAttendeeConflictDataType[]
+     */
+    public function getUnknownAttendeeConflictData()
+    {
+        return $this->unknownAttendeeConflictData;
+    }
+
+    /**
+     * @return IndividualAttendeeConflictDataType[]
+     */
+    public function getIndividualAttendeeConflictData()
+    {
+        return $this->individualAttendeeConflictData;
+    }
+
+    /**
+     * @return TooBigGroupAttendeeConflictDataType[]
+     */
+    public function getTooBigGroupAttendeeConflictData()
+    {
+        return $this->tooBigGroupAttendeeConflictData;
+    }
+
+    /**
+     * @return GroupAttendeeConflictDataType[]
+     */
+    public function getGroupAttendeeConflictData()
+    {
+        return $this->groupAttendeeConflictData;
+    }
 }

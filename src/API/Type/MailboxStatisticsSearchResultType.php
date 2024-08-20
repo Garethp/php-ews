@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  * Mailbox statistics search result.
  * XSD Type: MailboxStatisticsSearchResultType
  *
- * @method UserMailboxType getUserMailbox()
  * @method MailboxStatisticsSearchResultType setUserMailbox(UserMailboxType $userMailbox)
- * @method KeywordStatisticsSearchResultType getKeywordStatisticsSearchResult()
  * @method MailboxStatisticsSearchResultType setKeywordStatisticsSearchResult(KeywordStatisticsSearchResultType $keywordStatisticsSearchResult)
  */
 class MailboxStatisticsSearchResultType extends Type
@@ -27,4 +25,20 @@ class MailboxStatisticsSearchResultType extends Type
      * @var \garethp\ews\API\Type\KeywordStatisticsSearchResultType
      */
     protected $keywordStatisticsSearchResult = null;
+
+    /**
+     * @return UserMailboxType
+     */
+    public function getUserMailbox()
+    {
+        return $this->userMailbox;
+    }
+
+    /**
+     * @return KeywordStatisticsSearchResultType
+     */
+    public function getKeywordStatisticsSearchResult()
+    {
+        return $this->keywordStatisticsSearchResult;
+    }
 }

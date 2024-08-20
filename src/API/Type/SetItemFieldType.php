@@ -8,27 +8,16 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: SetItemFieldType
  *
- * @method ItemType getItem()
  * @method SetItemFieldType setItem(ItemType $item)
- * @method MessageType getMessage()
  * @method SetItemFieldType setMessage(MessageType $message)
- * @method CalendarItemType getCalendarItem()
  * @method SetItemFieldType setCalendarItem(CalendarItemType $calendarItem)
- * @method ContactItemType getContact()
  * @method SetItemFieldType setContact(ContactItemType $contact)
- * @method DistributionListType getDistributionList()
  * @method SetItemFieldType setDistributionList(DistributionListType $distributionList)
- * @method MeetingMessageType getMeetingMessage()
  * @method SetItemFieldType setMeetingMessage(MeetingMessageType $meetingMessage)
- * @method MeetingRequestMessageType getMeetingRequest()
  * @method SetItemFieldType setMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method MeetingResponseMessageType getMeetingResponse()
  * @method SetItemFieldType setMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method MeetingCancellationMessageType getMeetingCancellation()
  * @method SetItemFieldType setMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method TaskType getTask()
  * @method SetItemFieldType setTask(TaskType $task)
- * @method PostItemType getPostItem()
  * @method SetItemFieldType setPostItem(PostItemType $postItem)
  */
 class SetItemFieldType extends ItemChangeDescriptionType
@@ -88,4 +77,92 @@ class SetItemFieldType extends ItemChangeDescriptionType
      * @var \garethp\ews\API\Type\PostItemType
      */
     protected $postItem = null;
+
+    /**
+     * @return ItemType
+     */
+    public function getItem()
+    {
+        return $this->item;
+    }
+
+    /**
+     * @return MessageType
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return CalendarItemType
+     */
+    public function getCalendarItem()
+    {
+        return $this->calendarItem;
+    }
+
+    /**
+     * @return ContactItemType
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
+
+    /**
+     * @return DistributionListType
+     */
+    public function getDistributionList()
+    {
+        return $this->distributionList;
+    }
+
+    /**
+     * @return MeetingMessageType
+     */
+    public function getMeetingMessage()
+    {
+        return $this->meetingMessage;
+    }
+
+    /**
+     * @return MeetingRequestMessageType
+     */
+    public function getMeetingRequest()
+    {
+        return $this->meetingRequest;
+    }
+
+    /**
+     * @return MeetingResponseMessageType
+     */
+    public function getMeetingResponse()
+    {
+        return $this->meetingResponse;
+    }
+
+    /**
+     * @return MeetingCancellationMessageType
+     */
+    public function getMeetingCancellation()
+    {
+        return $this->meetingCancellation;
+    }
+
+    /**
+     * @return TaskType
+     */
+    public function getTask()
+    {
+        return $this->task;
+    }
+
+    /**
+     * @return PostItemType
+     */
+    public function getPostItem()
+    {
+        return $this->postItem;
+    }
 }

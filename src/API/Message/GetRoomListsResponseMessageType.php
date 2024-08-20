@@ -9,7 +9,6 @@ namespace garethp\ews\API\Message;
  * XSD Type: GetRoomListsResponseMessageType
  *
  * @method GetRoomListsResponseMessageType addRoomLists(\garethp\ews\API\Type\EmailAddressType $roomLists)
- * @method \garethp\ews\API\Type\EmailAddressType[] getRoomLists()
  * @method GetRoomListsResponseMessageType setRoomLists(array $roomLists)
  */
 class GetRoomListsResponseMessageType extends ResponseMessageType
@@ -19,4 +18,12 @@ class GetRoomListsResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\EmailAddressType[]
      */
     protected $roomLists = null;
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType[]
+     */
+    public function getRoomLists()
+    {
+        return $this->roomLists;
+    }
 }

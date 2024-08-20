@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  * Size range type used for the WithinSizeRange rule predicate.
  * XSD Type: RulePredicateSizeRangeType
  *
- * @method integer getMinimumSize()
  * @method RulePredicateSizeRangeType setMinimumSize(integer $minimumSize)
- * @method integer getMaximumSize()
  * @method RulePredicateSizeRangeType setMaximumSize(integer $maximumSize)
  */
 class RulePredicateSizeRangeType extends Type
@@ -27,4 +25,20 @@ class RulePredicateSizeRangeType extends Type
      * @var integer
      */
     protected $maximumSize = null;
+
+    /**
+     * @return integer
+     */
+    public function getMinimumSize()
+    {
+        return $this->minimumSize;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMaximumSize()
+    {
+        return $this->maximumSize;
+    }
 }

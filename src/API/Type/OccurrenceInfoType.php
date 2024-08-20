@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: OccurrenceInfoType
  *
- * @method ItemIdType getItemId()
  * @method OccurrenceInfoType setItemId(ItemIdType $itemId)
- * @method \DateTime getStart()
  * @method OccurrenceInfoType setStart(\DateTime $start)
- * @method \DateTime getEnd()
  * @method OccurrenceInfoType setEnd(\DateTime $end)
- * @method \DateTime getOriginalStart()
  * @method OccurrenceInfoType setOriginalStart(\DateTime $originalStart)
  */
 class OccurrenceInfoType extends Type
@@ -47,4 +43,36 @@ class OccurrenceInfoType extends Type
      * @var \DateTime
      */
     protected $originalStart = null;
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getStart()
+    {
+        return $this->start;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getEnd()
+    {
+        return $this->end;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getOriginalStart()
+    {
+        return $this->originalStart;
+    }
 }

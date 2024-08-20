@@ -8,11 +8,8 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: MovedCopiedEventType
  *
- * @method FolderIdType getOldFolderId()
  * @method MovedCopiedEventType setOldFolderId(FolderIdType $oldFolderId)
- * @method ItemIdType getOldItemId()
  * @method MovedCopiedEventType setOldItemId(ItemIdType $oldItemId)
- * @method FolderIdType getOldParentFolderId()
  * @method MovedCopiedEventType setOldParentFolderId(FolderIdType $oldParentFolderId)
  */
 class MovedCopiedEventType extends BaseObjectChangedEventType
@@ -32,4 +29,28 @@ class MovedCopiedEventType extends BaseObjectChangedEventType
      * @var \garethp\ews\API\Type\FolderIdType
      */
     protected $oldParentFolderId = null;
+
+    /**
+     * @return FolderIdType
+     */
+    public function getOldFolderId()
+    {
+        return $this->oldFolderId;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getOldItemId()
+    {
+        return $this->oldItemId;
+    }
+
+    /**
+     * @return FolderIdType
+     */
+    public function getOldParentFolderId()
+    {
+        return $this->oldParentFolderId;
+    }
 }

@@ -10,10 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: UserConfigurationDictionaryObjectType
  *
- * @method string getType()
  * @method UserConfigurationDictionaryObjectType setType(string $type)
  * @method UserConfigurationDictionaryObjectType addValue(string $value)
- * @method string[] getValue()
  * @method UserConfigurationDictionaryObjectType setValue(array $value)
  */
 class UserConfigurationDictionaryObjectType extends Type
@@ -28,4 +26,20 @@ class UserConfigurationDictionaryObjectType extends Type
      * @var string[]
      */
     protected $value = null;
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
 }

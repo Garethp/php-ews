@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: MailTipsResponseMessageType
  *
- * @method \garethp\ews\API\Type\MailTipsType getMailTips()
  * @method MailTipsResponseMessageType setMailTips(\garethp\ews\API\Type\MailTipsType $mailTips)
  */
 class MailTipsResponseMessageType extends ResponseMessageType
@@ -18,4 +17,12 @@ class MailTipsResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\MailTipsType
      */
     protected $mailTips = null;
+
+    /**
+     * @return \garethp\ews\API\Type\MailTipsType
+     */
+    public function getMailTips()
+    {
+        return $this->mailTips;
+    }
 }

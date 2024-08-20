@@ -8,9 +8,7 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: SubscribeResponseMessageType
  *
- * @method string getSubscriptionId()
  * @method SubscribeResponseMessageType setSubscriptionId(string $subscriptionId)
- * @method string getWatermark()
  * @method SubscribeResponseMessageType setWatermark(string $watermark)
  */
 class SubscribeResponseMessageType extends ResponseMessageType
@@ -25,4 +23,20 @@ class SubscribeResponseMessageType extends ResponseMessageType
      * @var string
      */
     protected $watermark = null;
+
+    /**
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->subscriptionId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWatermark()
+    {
+        return $this->watermark;
+    }
 }

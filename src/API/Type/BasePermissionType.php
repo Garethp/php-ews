@@ -10,21 +10,13 @@ use garethp\ews\API\Type;
  * A permission on a folder
  * XSD Type: BasePermissionType
  *
- * @method UserIdType getUserId()
  * @method BasePermissionType setUserId(UserIdType $userId)
- * @method boolean getCanCreateItems()
  * @method BasePermissionType setCanCreateItems(boolean $canCreateItems)
- * @method boolean getCanCreateSubFolders()
  * @method BasePermissionType setCanCreateSubFolders(boolean $canCreateSubFolders)
- * @method boolean getIsFolderOwner()
  * @method BasePermissionType setIsFolderOwner(boolean $isFolderOwner)
- * @method boolean getIsFolderVisible()
  * @method BasePermissionType setIsFolderVisible(boolean $isFolderVisible)
- * @method boolean getIsFolderContact()
  * @method BasePermissionType setIsFolderContact(boolean $isFolderContact)
- * @method string getEditItems()
  * @method BasePermissionType setEditItems(string $editItems)
- * @method string getDeleteItems()
  * @method BasePermissionType setDeleteItems(string $deleteItems)
  */
 class BasePermissionType extends Type
@@ -71,11 +63,27 @@ class BasePermissionType extends Type
     protected $deleteItems = null;
 
     /**
+     * @return UserIdType
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    /**
      * @returns bool
      */
     public function isCanCreateItems()
     {
         return ((bool) $this->canCreateItems);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getCanCreateItems()
+    {
+        return $this->canCreateItems;
     }
 
     /**
@@ -87,11 +95,27 @@ class BasePermissionType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getCanCreateSubFolders()
+    {
+        return $this->canCreateSubFolders;
+    }
+
+    /**
      * @returns bool
      */
     public function isFolderOwner()
     {
         return ((bool) $this->isFolderOwner);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsFolderOwner()
+    {
+        return $this->isFolderOwner;
     }
 
     /**
@@ -103,10 +127,42 @@ class BasePermissionType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsFolderVisible()
+    {
+        return $this->isFolderVisible;
+    }
+
+    /**
      * @returns bool
      */
     public function isFolderContact()
     {
         return ((bool) $this->isFolderContact);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsFolderContact()
+    {
+        return $this->isFolderContact;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEditItems()
+    {
+        return $this->editItems;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeleteItems()
+    {
+        return $this->deleteItems;
     }
 }

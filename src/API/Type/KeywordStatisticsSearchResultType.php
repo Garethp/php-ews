@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  * Keyword statistics search result.
  * XSD Type: KeywordStatisticsSearchResultType
  *
- * @method string getKeyword()
  * @method KeywordStatisticsSearchResultType setKeyword(string $keyword)
- * @method integer getItemHits()
  * @method KeywordStatisticsSearchResultType setItemHits(integer $itemHits)
- * @method integer getSize()
  * @method KeywordStatisticsSearchResultType setSize(integer $size)
  */
 class KeywordStatisticsSearchResultType extends Type
@@ -34,4 +31,28 @@ class KeywordStatisticsSearchResultType extends Type
      * @var integer
      */
     protected $size = null;
+
+    /**
+     * @return string
+     */
+    public function getKeyword()
+    {
+        return $this->keyword;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getItemHits()
+    {
+        return $this->itemHits;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
 }

@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: MimeContentType
  *
- * @method string getCharacterSet()
  * @method MimeContentType setCharacterSet(string $characterSet)
  */
 class MimeContentType extends Type
@@ -20,4 +19,12 @@ class MimeContentType extends Type
      * @var string
      */
     protected $characterSet = null;
+
+    /**
+     * @return string
+     */
+    public function getCharacterSet()
+    {
+        return $this->characterSet;
+    }
 }

@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: PhoneCallInformationType
  *
- * @method string getPhoneCallState()
  * @method PhoneCallInformationType setPhoneCallState(string $phoneCallState)
- * @method string getConnectionFailureCause()
  * @method PhoneCallInformationType setConnectionFailureCause(string $connectionFailureCause)
- * @method string getSIPResponseText()
  * @method PhoneCallInformationType setSIPResponseText(string $sIPResponseText)
- * @method integer getSIPResponseCode()
  * @method PhoneCallInformationType setSIPResponseCode(integer $sIPResponseCode)
  */
 class PhoneCallInformationType extends Type
@@ -41,4 +37,36 @@ class PhoneCallInformationType extends Type
      * @var integer
      */
     protected $sIPResponseCode = null;
+
+    /**
+     * @return string
+     */
+    public function getPhoneCallState()
+    {
+        return $this->phoneCallState;
+    }
+
+    /**
+     * @return string
+     */
+    public function getConnectionFailureCause()
+    {
+        return $this->connectionFailureCause;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSIPResponseText()
+    {
+        return $this->sIPResponseText;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getSIPResponseCode()
+    {
+        return $this->sIPResponseCode;
+    }
 }

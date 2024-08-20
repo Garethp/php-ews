@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: FolderType
  *
- * @method PermissionSetType getPermissionSet()
  * @method FolderType setPermissionSet(PermissionSetType $permissionSet)
- * @method integer getUnreadCount()
  * @method FolderType setUnreadCount(integer $unreadCount)
  */
 class FolderType extends BaseFolderType
@@ -25,4 +23,20 @@ class FolderType extends BaseFolderType
      * @var integer
      */
     protected $unreadCount = null;
+
+    /**
+     * @return PermissionSetType
+     */
+    public function getPermissionSet()
+    {
+        return $this->permissionSet;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getUnreadCount()
+    {
+        return $this->unreadCount;
+    }
 }

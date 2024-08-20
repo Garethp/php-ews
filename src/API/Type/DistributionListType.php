@@ -8,14 +8,10 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: DistributionListType
  *
- * @method string getDisplayName()
  * @method DistributionListType setDisplayName(string $displayName)
- * @method string getFileAs()
  * @method DistributionListType setFileAs(string $fileAs)
- * @method string getContactSource()
  * @method DistributionListType setContactSource(string $contactSource)
  * @method DistributionListType addMembers(MemberType $members)
- * @method MemberType[] getMembers()
  * @method DistributionListType setMembers(array $members)
  */
 class DistributionListType extends ItemType
@@ -40,4 +36,36 @@ class DistributionListType extends ItemType
      * @var \garethp\ews\API\Type\MemberType[]
      */
     protected $members = null;
+
+    /**
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFileAs()
+    {
+        return $this->fileAs;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContactSource()
+    {
+        return $this->contactSource;
+    }
+
+    /**
+     * @return MemberType[]
+     */
+    public function getMembers()
+    {
+        return $this->members;
+    }
 }

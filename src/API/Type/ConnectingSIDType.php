@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ConnectingSIDType
  *
- * @method string getPrincipalName()
  * @method ConnectingSIDType setPrincipalName(string $principalName)
- * @method string getSID()
  * @method ConnectingSIDType setSID(string $sID)
- * @method string getPrimarySmtpAddress()
  * @method ConnectingSIDType setPrimarySmtpAddress(string $primarySmtpAddress)
- * @method string getSmtpAddress()
  * @method ConnectingSIDType setSmtpAddress(string $smtpAddress)
  */
 class ConnectingSIDType extends Type
@@ -41,4 +37,36 @@ class ConnectingSIDType extends Type
      * @var string
      */
     protected $smtpAddress = null;
+
+    /**
+     * @return string
+     */
+    public function getPrincipalName()
+    {
+        return $this->principalName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSID()
+    {
+        return $this->sID;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrimarySmtpAddress()
+    {
+        return $this->primarySmtpAddress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSmtpAddress()
+    {
+        return $this->smtpAddress;
+    }
 }

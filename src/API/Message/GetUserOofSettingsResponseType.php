@@ -10,11 +10,8 @@ use garethp\ews\API\Message;
  *
  * XSD Type: GetUserOofSettingsResponse
  *
- * @method ResponseMessageType getResponseMessage()
  * @method GetUserOofSettingsResponseType setResponseMessage(ResponseMessageType $responseMessage)
- * @method \garethp\ews\API\Type\OofSettings getOofSettings()
  * @method GetUserOofSettingsResponseType setOofSettings(\garethp\ews\API\Type\OofSettings $oofSettings)
- * @method string getAllowExternalOof()
  * @method GetUserOofSettingsResponseType setAllowExternalOof(string $allowExternalOof)
  */
 class GetUserOofSettingsResponseType extends Message
@@ -34,4 +31,28 @@ class GetUserOofSettingsResponseType extends Message
      * @var string
      */
     protected $allowExternalOof = null;
+
+    /**
+     * @return ResponseMessageType
+     */
+    public function getResponseMessage()
+    {
+        return $this->responseMessage;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\OofSettings
+     */
+    public function getOofSettings()
+    {
+        return $this->oofSettings;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAllowExternalOof()
+    {
+        return $this->allowExternalOof;
+    }
 }

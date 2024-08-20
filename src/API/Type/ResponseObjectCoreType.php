@@ -9,7 +9,6 @@ namespace garethp\ews\API\Type;
  *  Should not appear in client code
  * XSD Type: ResponseObjectCoreType
  *
- * @method ItemIdType getReferenceItemId()
  * @method ResponseObjectCoreType setReferenceItemId(ItemIdType $referenceItemId)
  */
 class ResponseObjectCoreType extends MessageType
@@ -19,4 +18,12 @@ class ResponseObjectCoreType extends MessageType
      * @var \garethp\ews\API\Type\ItemIdType
      */
     protected $referenceItemId = null;
+
+    /**
+     * @return ItemIdType
+     */
+    public function getReferenceItemId()
+    {
+        return $this->referenceItemId;
+    }
 }

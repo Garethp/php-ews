@@ -9,31 +9,20 @@ namespace garethp\ews\API\Message;
  * XSD Type: FindMailboxStatisticsByKeywordsType
  *
  * @method FindMailboxStatisticsByKeywordsType addMailboxes(\garethp\ews\API\Type\UserMailboxType $mailboxes)
- * @method \garethp\ews\API\Type\UserMailboxType[] getMailboxes()
  * @method FindMailboxStatisticsByKeywordsType setMailboxes(array $mailboxes)
  * @method FindMailboxStatisticsByKeywordsType addKeywords(string $keywords)
- * @method string[] getKeywords()
  * @method FindMailboxStatisticsByKeywordsType setKeywords(array $keywords)
- * @method string getLanguage()
  * @method FindMailboxStatisticsByKeywordsType setLanguage(string $language)
  * @method FindMailboxStatisticsByKeywordsType addSenders(string $senders)
- * @method string[] getSenders()
  * @method FindMailboxStatisticsByKeywordsType setSenders(array $senders)
  * @method FindMailboxStatisticsByKeywordsType addRecipients(string $recipients)
- * @method string[] getRecipients()
  * @method FindMailboxStatisticsByKeywordsType setRecipients(array $recipients)
- * @method \DateTime getFromDate()
  * @method FindMailboxStatisticsByKeywordsType setFromDate(\DateTime $fromDate)
- * @method \DateTime getToDate()
  * @method FindMailboxStatisticsByKeywordsType setToDate(\DateTime $toDate)
  * @method FindMailboxStatisticsByKeywordsType addMessageTypes(string $messageTypes)
- * @method string[] getMessageTypes()
  * @method FindMailboxStatisticsByKeywordsType setMessageTypes(array $messageTypes)
- * @method boolean getSearchDumpster()
  * @method FindMailboxStatisticsByKeywordsType setSearchDumpster(boolean $searchDumpster)
- * @method boolean getIncludePersonalArchive()
  * @method FindMailboxStatisticsByKeywordsType setIncludePersonalArchive(boolean $includePersonalArchive)
- * @method boolean getIncludeUnsearchableItems()
  * @method FindMailboxStatisticsByKeywordsType setIncludeUnsearchableItems(boolean $includeUnsearchableItems)
  */
 class FindMailboxStatisticsByKeywordsType extends BaseRequestType
@@ -100,11 +89,83 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
     protected $includeUnsearchableItems = null;
 
     /**
+     * @return \garethp\ews\API\Type\UserMailboxType[]
+     */
+    public function getMailboxes()
+    {
+        return $this->mailboxes;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getKeywords()
+    {
+        return $this->keywords;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getSenders()
+    {
+        return $this->senders;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getRecipients()
+    {
+        return $this->recipients;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getFromDate()
+    {
+        return $this->fromDate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getToDate()
+    {
+        return $this->toDate;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getMessageTypes()
+    {
+        return $this->messageTypes;
+    }
+
+    /**
      * @returns bool
      */
     public function isSearchDumpster()
     {
         return ((bool) $this->searchDumpster);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSearchDumpster()
+    {
+        return $this->searchDumpster;
     }
 
     /**
@@ -116,10 +177,26 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIncludePersonalArchive()
+    {
+        return $this->includePersonalArchive;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludeUnsearchableItems()
     {
         return ((bool) $this->includeUnsearchableItems);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludeUnsearchableItems()
+    {
+        return $this->includeUnsearchableItems;
     }
 }

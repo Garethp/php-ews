@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: FindItemResponseMessageType
  *
- * @method \garethp\ews\API\Type\FindItemParentType getRootFolder()
  * @method FindItemResponseMessageType setRootFolder(\garethp\ews\API\Type\FindItemParentType $rootFolder)
  */
 class FindItemResponseMessageType extends ResponseMessageType
@@ -18,4 +17,12 @@ class FindItemResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\FindItemParentType
      */
     protected $rootFolder = null;
+
+    /**
+     * @return \garethp\ews\API\Type\FindItemParentType
+     */
+    public function getRootFolder()
+    {
+        return $this->rootFolder;
+    }
 }

@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: AttendeeType
  *
- * @method EmailAddressType getMailbox()
  * @method AttendeeType setMailbox(EmailAddressType $mailbox)
- * @method string getResponseType()
  * @method AttendeeType setResponseType(string $responseType)
- * @method \DateTime getLastResponseTime()
  * @method AttendeeType setLastResponseTime(\DateTime $lastResponseTime)
  */
 class AttendeeType extends Type
@@ -38,4 +35,28 @@ class AttendeeType extends Type
     protected $_typeMap = array(
         'lastResponseTime' => 'dateTime',
     );
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResponseType()
+    {
+        return $this->responseType;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLastResponseTime()
+    {
+        return $this->lastResponseTime;
+    }
 }

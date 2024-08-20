@@ -8,9 +8,7 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: BaseMoveCopyFolderType
  *
- * @method \garethp\ews\API\Type\TargetFolderIdType getToFolderId()
  * @method BaseMoveCopyFolderType setToFolderId(\garethp\ews\API\Type\TargetFolderIdType $toFolderId)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method BaseMoveCopyFolderType setFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class BaseMoveCopyFolderType extends BaseRequestType
@@ -25,4 +23,20 @@ class BaseMoveCopyFolderType extends BaseRequestType
      * @var \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $folderIds = null;
+
+    /**
+     * @return \garethp\ews\API\Type\TargetFolderIdType
+     */
+    public function getToFolderId()
+    {
+        return $this->toFolderId;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
+     */
+    public function getFolderIds()
+    {
+        return $this->folderIds;
+    }
 }

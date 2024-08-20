@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TimeZoneContextType
  *
- * @method TimeZoneDefinitionType getTimeZoneDefinition()
  * @method TimeZoneContextType setTimeZoneDefinition(TimeZoneDefinitionType $timeZoneDefinition)
  */
 class TimeZoneContextType extends Type
@@ -20,4 +19,12 @@ class TimeZoneContextType extends Type
      * @var \garethp\ews\API\Type\TimeZoneDefinitionType
      */
     protected $timeZoneDefinition = null;
+
+    /**
+     * @return TimeZoneDefinitionType
+     */
+    public function getTimeZoneDefinition()
+    {
+        return $this->timeZoneDefinition;
+    }
 }

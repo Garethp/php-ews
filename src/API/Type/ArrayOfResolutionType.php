@@ -10,18 +10,12 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ArrayOfResolutionType
  *
- * @method integer getIndexedPagingOffset()
  * @method ArrayOfResolutionType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method integer getNumeratorOffset()
  * @method ArrayOfResolutionType setNumeratorOffset(integer $numeratorOffset)
- * @method integer getAbsoluteDenominator()
  * @method ArrayOfResolutionType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean getIncludesLastItemInRange()
  * @method ArrayOfResolutionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method integer getTotalItemsInView()
  * @method ArrayOfResolutionType setTotalItemsInView(integer $totalItemsInView)
  * @method ArrayOfResolutionType addResolution(ResolutionType $resolution)
- * @method ResolutionType[] getResolution()
  * @method ArrayOfResolutionType setResolution(array $resolution)
  */
 class ArrayOfResolutionType extends Type
@@ -58,10 +52,58 @@ class ArrayOfResolutionType extends Type
     protected $resolution = null;
 
     /**
+     * @return integer
+     */
+    public function getIndexedPagingOffset()
+    {
+        return $this->indexedPagingOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNumeratorOffset()
+    {
+        return $this->numeratorOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getAbsoluteDenominator()
+    {
+        return $this->absoluteDenominator;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludesLastItemInRange()
     {
         return ((bool) $this->includesLastItemInRange);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getTotalItemsInView()
+    {
+        return $this->totalItemsInView;
+    }
+
+    /**
+     * @return ResolutionType[]
+     */
+    public function getResolution()
+    {
+        return $this->resolution;
     }
 }

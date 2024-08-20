@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: PhoneCallIdType
  *
- * @method string getId()
  * @method PhoneCallIdType setId(string $id)
  */
 class PhoneCallIdType extends Type
@@ -20,4 +19,12 @@ class PhoneCallIdType extends Type
      * @var string
      */
     protected $id = null;
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

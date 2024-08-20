@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: IndividualAttendeeConflictData
  *
- * @method string getBusyType()
  * @method IndividualAttendeeConflictDataType setBusyType(string $busyType)
  */
 class IndividualAttendeeConflictDataType extends AttendeeConflictDataType
@@ -18,4 +17,12 @@ class IndividualAttendeeConflictDataType extends AttendeeConflictDataType
      * @var string
      */
     protected $busyType = null;
+
+    /**
+     * @return string
+     */
+    public function getBusyType()
+    {
+        return $this->busyType;
+    }
 }

@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ImAddressDictionaryEntryType
  *
- * @method string getKey()
  * @method ImAddressDictionaryEntryType setKey(string $key)
  */
 class ImAddressDictionaryEntryType extends Type
@@ -20,4 +19,12 @@ class ImAddressDictionaryEntryType extends Type
      * @var string
      */
     protected $key = null;
+
+    /**
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->key;
+    }
 }

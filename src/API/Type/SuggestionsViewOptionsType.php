@@ -10,21 +10,13 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SuggestionsViewOptionsType
  *
- * @method integer getGoodThreshold()
  * @method SuggestionsViewOptionsType setGoodThreshold(integer $goodThreshold)
- * @method integer getMaximumResultsByDay()
  * @method SuggestionsViewOptionsType setMaximumResultsByDay(integer $maximumResultsByDay)
- * @method integer getMaximumNonWorkHourResultsByDay()
  * @method SuggestionsViewOptionsType setMaximumNonWorkHourResultsByDay(integer $maximumNonWorkHourResultsByDay)
- * @method integer getMeetingDurationInMinutes()
  * @method SuggestionsViewOptionsType setMeetingDurationInMinutes(integer $meetingDurationInMinutes)
- * @method string getMinimumSuggestionQuality()
  * @method SuggestionsViewOptionsType setMinimumSuggestionQuality(string $minimumSuggestionQuality)
- * @method DurationType getDetailedSuggestionsWindow()
  * @method SuggestionsViewOptionsType setDetailedSuggestionsWindow(DurationType $detailedSuggestionsWindow)
- * @method \DateTime getCurrentMeetingTime()
  * @method SuggestionsViewOptionsType setCurrentMeetingTime(\DateTime $currentMeetingTime)
- * @method string getGlobalObjectId()
  * @method SuggestionsViewOptionsType setGlobalObjectId(string $globalObjectId)
  */
 class SuggestionsViewOptionsType extends Type
@@ -73,4 +65,68 @@ class SuggestionsViewOptionsType extends Type
      * @var string
      */
     protected $globalObjectId = null;
+
+    /**
+     * @return integer
+     */
+    public function getGoodThreshold()
+    {
+        return $this->goodThreshold;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMaximumResultsByDay()
+    {
+        return $this->maximumResultsByDay;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMaximumNonWorkHourResultsByDay()
+    {
+        return $this->maximumNonWorkHourResultsByDay;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMeetingDurationInMinutes()
+    {
+        return $this->meetingDurationInMinutes;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMinimumSuggestionQuality()
+    {
+        return $this->minimumSuggestionQuality;
+    }
+
+    /**
+     * @return DurationType
+     */
+    public function getDetailedSuggestionsWindow()
+    {
+        return $this->detailedSuggestionsWindow;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCurrentMeetingTime()
+    {
+        return $this->currentMeetingTime;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGlobalObjectId()
+    {
+        return $this->globalObjectId;
+    }
 }

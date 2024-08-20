@@ -11,10 +11,8 @@ use garethp\ews\API\Type;
  * XSD Type: NonEmptyArrayOfAttachmentsType
  *
  * @method NonEmptyArrayOfAttachmentsType addItemAttachment(ItemAttachmentType $itemAttachment)
- * @method ItemAttachmentType[] getItemAttachment()
  * @method NonEmptyArrayOfAttachmentsType setItemAttachment(array $itemAttachment)
  * @method NonEmptyArrayOfAttachmentsType addFileAttachment(FileAttachmentType $fileAttachment)
- * @method FileAttachmentType[] getFileAttachment()
  * @method NonEmptyArrayOfAttachmentsType setFileAttachment(array $fileAttachment)
  */
 class NonEmptyArrayOfAttachmentsType extends Type

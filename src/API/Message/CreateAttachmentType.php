@@ -8,9 +8,7 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: CreateAttachmentType
  *
- * @method \garethp\ews\API\Type\ItemIdType getParentItemId()
  * @method CreateAttachmentType setParentItemId(\garethp\ews\API\Type\ItemIdType $parentItemId)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfAttachmentsType getAttachments()
  * @method CreateAttachmentType setAttachments(\garethp\ews\API\Type\NonEmptyArrayOfAttachmentsType $attachments)
  */
 class CreateAttachmentType extends BaseRequestType
@@ -25,4 +23,20 @@ class CreateAttachmentType extends BaseRequestType
      * @var \garethp\ews\API\Type\NonEmptyArrayOfAttachmentsType
      */
     protected $attachments = null;
+
+    /**
+     * @return \garethp\ews\API\Type\ItemIdType
+     */
+    public function getParentItemId()
+    {
+        return $this->parentItemId;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfAttachmentsType
+     */
+    public function getAttachments()
+    {
+        return $this->attachments;
+    }
 }

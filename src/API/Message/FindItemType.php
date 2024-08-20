@@ -10,30 +10,18 @@ use garethp\ews\API\Type\IndexedPageViewType;
  *
  * XSD Type: FindItemType
  *
- * @method string getTraversal()
  * @method FindItemType setTraversal(string $traversal)
- * @method \garethp\ews\API\Type\ItemResponseShapeType getItemShape()
  * @method FindItemType setItemShape(\garethp\ews\API\Type\ItemResponseShapeType $itemShape)
- * @method \garethp\ews\API\Type\IndexedPageViewType getIndexedPageItemView()
  * @method FindItemType setIndexedPageItemView(\garethp\ews\API\Type\IndexedPageViewType $indexedPageItemView)
- * @method \garethp\ews\API\Type\FractionalPageViewType getFractionalPageItemView()
  * @method FindItemType setFractionalPageItemView(\garethp\ews\API\Type\FractionalPageViewType $fractionalPageItemView)
- * @method \garethp\ews\API\Type\CalendarViewType getCalendarView()
  * @method FindItemType setCalendarView(\garethp\ews\API\Type\CalendarViewType $calendarView)
- * @method \garethp\ews\API\Type\ContactsViewType getContactsView()
  * @method FindItemType setContactsView(\garethp\ews\API\Type\ContactsViewType $contactsView)
- * @method \garethp\ews\API\Type\GroupByType getGroupBy()
  * @method FindItemType setGroupBy(\garethp\ews\API\Type\GroupByType $groupBy)
- * @method \garethp\ews\API\Type\DistinguishedGroupByType getDistinguishedGroupBy()
  * @method FindItemType setDistinguishedGroupBy(\garethp\ews\API\Type\DistinguishedGroupByType $distinguishedGroupBy)
- * @method \garethp\ews\API\Type\RestrictionType getRestriction()
  * @method FindItemType setRestriction(\garethp\ews\API\Type\RestrictionType $restriction)
  * @method FindItemType addSortOrder(\garethp\ews\API\Type\FieldOrderType $sortOrder)
- * @method \garethp\ews\API\Type\FieldOrderType[] getSortOrder()
  * @method FindItemType setSortOrder(array $sortOrder)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType getParentFolderIds()
  * @method FindItemType setParentFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
- * @method string getQueryString()
  * @method FindItemType setQueryString(string $queryString)
  */
 class FindItemType extends BaseRequestType
@@ -103,5 +91,101 @@ class FindItemType extends BaseRequestType
     {
         $this->indexedPageItemView = $page;
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTraversal()
+    {
+        return $this->traversal;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\ItemResponseShapeType
+     */
+    public function getItemShape()
+    {
+        return $this->itemShape;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\IndexedPageViewType
+     */
+    public function getIndexedPageItemView()
+    {
+        return $this->indexedPageItemView;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\FractionalPageViewType
+     */
+    public function getFractionalPageItemView()
+    {
+        return $this->fractionalPageItemView;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\CalendarViewType
+     */
+    public function getCalendarView()
+    {
+        return $this->calendarView;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\ContactsViewType
+     */
+    public function getContactsView()
+    {
+        return $this->contactsView;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\GroupByType
+     */
+    public function getGroupBy()
+    {
+        return $this->groupBy;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\DistinguishedGroupByType
+     */
+    public function getDistinguishedGroupBy()
+    {
+        return $this->distinguishedGroupBy;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\RestrictionType
+     */
+    public function getRestriction()
+    {
+        return $this->restriction;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\FieldOrderType[]
+     */
+    public function getSortOrder()
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
+     */
+    public function getParentFolderIds()
+    {
+        return $this->parentFolderIds;
+    }
+
+    /**
+     * @return string
+     */
+    public function getQueryString()
+    {
+        return $this->queryString;
     }
 }

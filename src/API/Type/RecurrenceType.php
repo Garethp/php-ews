@@ -10,23 +10,14 @@ use garethp\ews\API\Type;
  *
  * XSD Type: RecurrenceType
  *
- * @method RelativeYearlyRecurrencePatternType getRelativeYearlyRecurrence()
  * @method RecurrenceType setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $relativeYearlyRecurrence)
- * @method AbsoluteYearlyRecurrencePatternType getAbsoluteYearlyRecurrence()
  * @method RecurrenceType setAbsoluteYearlyRecurrence(AbsoluteYearlyRecurrencePatternType $absoluteYearlyRecurrence)
- * @method RelativeMonthlyRecurrencePatternType getRelativeMonthlyRecurrence()
  * @method RecurrenceType setRelativeMonthlyRecurrence(RelativeMonthlyRecurrencePatternType $relativeMonthlyRecurrence)
- * @method AbsoluteMonthlyRecurrencePatternType getAbsoluteMonthlyRecurrence()
  * @method RecurrenceType setAbsoluteMonthlyRecurrence(AbsoluteMonthlyRecurrencePatternType $absoluteMonthlyRecurrence)
- * @method WeeklyRecurrencePatternType getWeeklyRecurrence()
  * @method RecurrenceType setWeeklyRecurrence(WeeklyRecurrencePatternType $weeklyRecurrence)
- * @method DailyRecurrencePatternType getDailyRecurrence()
  * @method RecurrenceType setDailyRecurrence(DailyRecurrencePatternType $dailyRecurrence)
- * @method NoEndRecurrenceRangeType getNoEndRecurrence()
  * @method RecurrenceType setNoEndRecurrence(NoEndRecurrenceRangeType $noEndRecurrence)
- * @method EndDateRecurrenceRangeType getEndDateRecurrence()
  * @method RecurrenceType setEndDateRecurrence(EndDateRecurrenceRangeType $endDateRecurrence)
- * @method NumberedRecurrenceRangeType getNumberedRecurrence()
  * @method RecurrenceType setNumberedRecurrence(NumberedRecurrenceRangeType $numberedRecurrence)
  */
 class RecurrenceType extends Type
@@ -76,4 +67,76 @@ class RecurrenceType extends Type
      * @var \garethp\ews\API\Type\NumberedRecurrenceRangeType
      */
     protected $numberedRecurrence = null;
+
+    /**
+     * @return RelativeYearlyRecurrencePatternType
+     */
+    public function getRelativeYearlyRecurrence()
+    {
+        return $this->relativeYearlyRecurrence;
+    }
+
+    /**
+     * @return AbsoluteYearlyRecurrencePatternType
+     */
+    public function getAbsoluteYearlyRecurrence()
+    {
+        return $this->absoluteYearlyRecurrence;
+    }
+
+    /**
+     * @return RelativeMonthlyRecurrencePatternType
+     */
+    public function getRelativeMonthlyRecurrence()
+    {
+        return $this->relativeMonthlyRecurrence;
+    }
+
+    /**
+     * @return AbsoluteMonthlyRecurrencePatternType
+     */
+    public function getAbsoluteMonthlyRecurrence()
+    {
+        return $this->absoluteMonthlyRecurrence;
+    }
+
+    /**
+     * @return WeeklyRecurrencePatternType
+     */
+    public function getWeeklyRecurrence()
+    {
+        return $this->weeklyRecurrence;
+    }
+
+    /**
+     * @return DailyRecurrencePatternType
+     */
+    public function getDailyRecurrence()
+    {
+        return $this->dailyRecurrence;
+    }
+
+    /**
+     * @return NoEndRecurrenceRangeType
+     */
+    public function getNoEndRecurrence()
+    {
+        return $this->noEndRecurrence;
+    }
+
+    /**
+     * @return EndDateRecurrenceRangeType
+     */
+    public function getEndDateRecurrence()
+    {
+        return $this->endDateRecurrence;
+    }
+
+    /**
+     * @return NumberedRecurrenceRangeType
+     */
+    public function getNumberedRecurrence()
+    {
+        return $this->numberedRecurrence;
+    }
 }

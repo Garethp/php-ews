@@ -8,27 +8,16 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: AppendToItemFieldType
  *
- * @method ItemType getItem()
  * @method AppendToItemFieldType setItem(ItemType $item)
- * @method MessageType getMessage()
  * @method AppendToItemFieldType setMessage(MessageType $message)
- * @method CalendarItemType getCalendarItem()
  * @method AppendToItemFieldType setCalendarItem(CalendarItemType $calendarItem)
- * @method ContactItemType getContact()
  * @method AppendToItemFieldType setContact(ContactItemType $contact)
- * @method DistributionListType getDistributionList()
  * @method AppendToItemFieldType setDistributionList(DistributionListType $distributionList)
- * @method MeetingMessageType getMeetingMessage()
  * @method AppendToItemFieldType setMeetingMessage(MeetingMessageType $meetingMessage)
- * @method MeetingRequestMessageType getMeetingRequest()
  * @method AppendToItemFieldType setMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method MeetingResponseMessageType getMeetingResponse()
  * @method AppendToItemFieldType setMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method MeetingCancellationMessageType getMeetingCancellation()
  * @method AppendToItemFieldType setMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method TaskType getTask()
  * @method AppendToItemFieldType setTask(TaskType $task)
- * @method PostItemType getPostItem()
  * @method AppendToItemFieldType setPostItem(PostItemType $postItem)
  */
 class AppendToItemFieldType extends ItemChangeDescriptionType
@@ -88,4 +77,92 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      * @var \garethp\ews\API\Type\PostItemType
      */
     protected $postItem = null;
+
+    /**
+     * @return ItemType
+     */
+    public function getItem()
+    {
+        return $this->item;
+    }
+
+    /**
+     * @return MessageType
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return CalendarItemType
+     */
+    public function getCalendarItem()
+    {
+        return $this->calendarItem;
+    }
+
+    /**
+     * @return ContactItemType
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
+
+    /**
+     * @return DistributionListType
+     */
+    public function getDistributionList()
+    {
+        return $this->distributionList;
+    }
+
+    /**
+     * @return MeetingMessageType
+     */
+    public function getMeetingMessage()
+    {
+        return $this->meetingMessage;
+    }
+
+    /**
+     * @return MeetingRequestMessageType
+     */
+    public function getMeetingRequest()
+    {
+        return $this->meetingRequest;
+    }
+
+    /**
+     * @return MeetingResponseMessageType
+     */
+    public function getMeetingResponse()
+    {
+        return $this->meetingResponse;
+    }
+
+    /**
+     * @return MeetingCancellationMessageType
+     */
+    public function getMeetingCancellation()
+    {
+        return $this->meetingCancellation;
+    }
+
+    /**
+     * @return TaskType
+     */
+    public function getTask()
+    {
+        return $this->task;
+    }
+
+    /**
+     * @return PostItemType
+     */
+    public function getPostItem()
+    {
+        return $this->postItem;
+    }
 }

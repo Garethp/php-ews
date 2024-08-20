@@ -7,15 +7,10 @@ use garethp\ews\API\Type;
 /**
  * Class representing ServerVersionInfo
  *
- * @method integer getMajorVersion()
  * @method ServerVersionInfo setMajorVersion(integer $majorVersion)
- * @method integer getMinorVersion()
  * @method ServerVersionInfo setMinorVersion(integer $minorVersion)
- * @method integer getMajorBuildNumber()
  * @method ServerVersionInfo setMajorBuildNumber(integer $majorBuildNumber)
- * @method integer getMinorBuildNumber()
  * @method ServerVersionInfo setMinorBuildNumber(integer $minorBuildNumber)
- * @method string getVersion()
  * @method ServerVersionInfo setVersion(string $version)
  */
 class ServerVersionInfo extends Type
@@ -45,4 +40,44 @@ class ServerVersionInfo extends Type
      * @var string
      */
     protected $version = null;
+
+    /**
+     * @return integer
+     */
+    public function getMajorVersion()
+    {
+        return $this->majorVersion;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMinorVersion()
+    {
+        return $this->minorVersion;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMajorBuildNumber()
+    {
+        return $this->majorBuildNumber;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMinorBuildNumber()
+    {
+        return $this->minorBuildNumber;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
 }

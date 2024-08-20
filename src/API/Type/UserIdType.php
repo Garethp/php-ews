@@ -10,15 +10,10 @@ use garethp\ews\API\Type;
  *
  * XSD Type: UserIdType
  *
- * @method string getSID()
  * @method UserIdType setSID(string $sID)
- * @method string getPrimarySmtpAddress()
  * @method UserIdType setPrimarySmtpAddress(string $primarySmtpAddress)
- * @method string getDisplayName()
  * @method UserIdType setDisplayName(string $displayName)
- * @method string getDistinguishedUser()
  * @method UserIdType setDistinguishedUser(string $distinguishedUser)
- * @method string getExternalUserIdentity()
  * @method UserIdType setExternalUserIdentity(string $externalUserIdentity)
  */
 class UserIdType extends Type
@@ -48,4 +43,44 @@ class UserIdType extends Type
      * @var string
      */
     protected $externalUserIdentity = null;
+
+    /**
+     * @return string
+     */
+    public function getSID()
+    {
+        return $this->sID;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrimarySmtpAddress()
+    {
+        return $this->primarySmtpAddress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDistinguishedUser()
+    {
+        return $this->distinguishedUser;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExternalUserIdentity()
+    {
+        return $this->externalUserIdentity;
+    }
 }

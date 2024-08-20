@@ -10,35 +10,24 @@ use garethp\ews\API\Type;
  *
  * XSD Type: NotificationType
  *
- * @method string getSubscriptionId()
  * @method NotificationType setSubscriptionId(string $subscriptionId)
- * @method string getPreviousWatermark()
  * @method NotificationType setPreviousWatermark(string $previousWatermark)
- * @method boolean getMoreEvents()
  * @method NotificationType setMoreEvents(boolean $moreEvents)
  * @method NotificationType addCopiedEvent(MovedCopiedEventType $copiedEvent)
- * @method MovedCopiedEventType[] getCopiedEvent()
  * @method NotificationType setCopiedEvent(array $copiedEvent)
  * @method NotificationType addCreatedEvent(BaseObjectChangedEventType $createdEvent)
- * @method BaseObjectChangedEventType[] getCreatedEvent()
  * @method NotificationType setCreatedEvent(array $createdEvent)
  * @method NotificationType addDeletedEvent(BaseObjectChangedEventType $deletedEvent)
- * @method BaseObjectChangedEventType[] getDeletedEvent()
  * @method NotificationType setDeletedEvent(array $deletedEvent)
  * @method NotificationType addModifiedEvent(ModifiedEventType $modifiedEvent)
- * @method ModifiedEventType[] getModifiedEvent()
  * @method NotificationType setModifiedEvent(array $modifiedEvent)
  * @method NotificationType addMovedEvent(MovedCopiedEventType $movedEvent)
- * @method MovedCopiedEventType[] getMovedEvent()
  * @method NotificationType setMovedEvent(array $movedEvent)
  * @method NotificationType addNewMailEvent(BaseObjectChangedEventType $newMailEvent)
- * @method BaseObjectChangedEventType[] getNewMailEvent()
  * @method NotificationType setNewMailEvent(array $newMailEvent)
  * @method NotificationType addStatusEvent(BaseNotificationEventType $statusEvent)
- * @method BaseNotificationEventType[] getStatusEvent()
  * @method NotificationType setStatusEvent(array $statusEvent)
  * @method NotificationType addFreeBusyChangedEvent(BaseObjectChangedEventType $freeBusyChangedEvent)
- * @method BaseObjectChangedEventType[] getFreeBusyChangedEvent()
  * @method NotificationType setFreeBusyChangedEvent(array $freeBusyChangedEvent)
  */
 class NotificationType extends Type
@@ -100,10 +89,98 @@ class NotificationType extends Type
     protected $freeBusyChangedEvent = null;
 
     /**
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->subscriptionId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPreviousWatermark()
+    {
+        return $this->previousWatermark;
+    }
+
+    /**
      * @returns bool
      */
     public function isMoreEvents()
     {
         return ((bool) $this->moreEvents);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getMoreEvents()
+    {
+        return $this->moreEvents;
+    }
+
+    /**
+     * @return MovedCopiedEventType[]
+     */
+    public function getCopiedEvent()
+    {
+        return $this->copiedEvent;
+    }
+
+    /**
+     * @return BaseObjectChangedEventType[]
+     */
+    public function getCreatedEvent()
+    {
+        return $this->createdEvent;
+    }
+
+    /**
+     * @return BaseObjectChangedEventType[]
+     */
+    public function getDeletedEvent()
+    {
+        return $this->deletedEvent;
+    }
+
+    /**
+     * @return ModifiedEventType[]
+     */
+    public function getModifiedEvent()
+    {
+        return $this->modifiedEvent;
+    }
+
+    /**
+     * @return MovedCopiedEventType[]
+     */
+    public function getMovedEvent()
+    {
+        return $this->movedEvent;
+    }
+
+    /**
+     * @return BaseObjectChangedEventType[]
+     */
+    public function getNewMailEvent()
+    {
+        return $this->newMailEvent;
+    }
+
+    /**
+     * @return BaseNotificationEventType[]
+     */
+    public function getStatusEvent()
+    {
+        return $this->statusEvent;
+    }
+
+    /**
+     * @return BaseObjectChangedEventType[]
+     */
+    public function getFreeBusyChangedEvent()
+    {
+        return $this->freeBusyChangedEvent;
     }
 }

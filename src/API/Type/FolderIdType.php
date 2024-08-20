@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  * Identifier for a fully resolved folder
  * XSD Type: FolderIdType
  *
- * @method string getId()
  * @method FolderIdType setId(string $id)
- * @method string getChangeKey()
  * @method FolderIdType setChangeKey(string $changeKey)
  */
 class FolderIdType extends BaseFolderIdType
@@ -41,5 +39,21 @@ class FolderIdType extends BaseFolderIdType
         }
 
         return $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getChangeKey()
+    {
+        return $this->changeKey;
     }
 }

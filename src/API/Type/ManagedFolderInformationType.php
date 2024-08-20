@@ -10,25 +10,15 @@ use garethp\ews\API\Type;
  * Compound property for Managed Folder related information for Managed Folders.
  * XSD Type: ManagedFolderInformationType
  *
- * @method boolean getCanDelete()
  * @method ManagedFolderInformationType setCanDelete(boolean $canDelete)
- * @method boolean getCanRenameOrMove()
  * @method ManagedFolderInformationType setCanRenameOrMove(boolean $canRenameOrMove)
- * @method boolean getMustDisplayComment()
  * @method ManagedFolderInformationType setMustDisplayComment(boolean $mustDisplayComment)
- * @method boolean getHasQuota()
  * @method ManagedFolderInformationType setHasQuota(boolean $hasQuota)
- * @method boolean getIsManagedFoldersRoot()
  * @method ManagedFolderInformationType setIsManagedFoldersRoot(boolean $isManagedFoldersRoot)
- * @method string getManagedFolderId()
  * @method ManagedFolderInformationType setManagedFolderId(string $managedFolderId)
- * @method string getComment()
  * @method ManagedFolderInformationType setComment(string $comment)
- * @method integer getStorageQuota()
  * @method ManagedFolderInformationType setStorageQuota(integer $storageQuota)
- * @method integer getFolderSize()
  * @method ManagedFolderInformationType setFolderSize(integer $folderSize)
- * @method string getHomePage()
  * @method ManagedFolderInformationType setHomePage(string $homePage)
  */
 class ManagedFolderInformationType extends Type
@@ -93,11 +83,27 @@ class ManagedFolderInformationType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getCanDelete()
+    {
+        return $this->canDelete;
+    }
+
+    /**
      * @returns bool
      */
     public function isCanRenameOrMove()
     {
         return ((bool) $this->canRenameOrMove);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getCanRenameOrMove()
+    {
+        return $this->canRenameOrMove;
     }
 
     /**
@@ -109,6 +115,14 @@ class ManagedFolderInformationType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getMustDisplayComment()
+    {
+        return $this->mustDisplayComment;
+    }
+
+    /**
      * @returns bool
      */
     public function isHasQuota()
@@ -117,10 +131,66 @@ class ManagedFolderInformationType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getHasQuota()
+    {
+        return $this->hasQuota;
+    }
+
+    /**
      * @returns bool
      */
     public function isManagedFoldersRoot()
     {
         return ((bool) $this->isManagedFoldersRoot);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsManagedFoldersRoot()
+    {
+        return $this->isManagedFoldersRoot;
+    }
+
+    /**
+     * @return string
+     */
+    public function getManagedFolderId()
+    {
+        return $this->managedFolderId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getStorageQuota()
+    {
+        return $this->storageQuota;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getFolderSize()
+    {
+        return $this->folderSize;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHomePage()
+    {
+        return $this->homePage;
     }
 }

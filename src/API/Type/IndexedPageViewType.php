@@ -10,9 +10,7 @@ use garethp\ews\API\Enumeration\IndexBasePointType;
  *
  * XSD Type: IndexedPageViewType
  *
- * @method integer getOffset()
  * @method IndexedPageViewType setOffset(integer $offset)
- * @method string getBasePoint()
  * @method IndexedPageViewType setBasePoint(string $basePoint)
  */
 class IndexedPageViewType extends BasePagingType
@@ -33,5 +31,21 @@ class IndexedPageViewType extends BasePagingType
         $this->maxEntriesReturned = $maxEntries;
         $this->offset = $offset;
         $this->basePoint = $basePoint;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getOffset()
+    {
+        return $this->offset;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBasePoint()
+    {
+        return $this->basePoint;
     }
 }

@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: RootItemIdType
  *
- * @method string getRootItemId()
  * @method RootItemIdType setRootItemId(string $rootItemId)
- * @method string getRootItemChangeKey()
  * @method RootItemIdType setRootItemChangeKey(string $rootItemChangeKey)
  */
 class RootItemIdType extends BaseItemIdType
@@ -25,4 +23,20 @@ class RootItemIdType extends BaseItemIdType
      * @var string
      */
     protected $rootItemChangeKey = null;
+
+    /**
+     * @return string
+     */
+    public function getRootItemId()
+    {
+        return $this->rootItemId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRootItemChangeKey()
+    {
+        return $this->rootItemChangeKey;
+    }
 }

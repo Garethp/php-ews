@@ -8,18 +8,12 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: SyncFolderItemsType
  *
- * @method \garethp\ews\API\Type\ItemResponseShapeType getItemShape()
  * @method SyncFolderItemsType setItemShape(\garethp\ews\API\Type\ItemResponseShapeType $itemShape)
- * @method \garethp\ews\API\Type\TargetFolderIdType getSyncFolderId()
  * @method SyncFolderItemsType setSyncFolderId(\garethp\ews\API\Type\TargetFolderIdType $syncFolderId)
- * @method string getSyncState()
  * @method SyncFolderItemsType setSyncState(string $syncState)
  * @method SyncFolderItemsType addIgnore(\garethp\ews\API\Type\ItemIdType $ignore)
- * @method \garethp\ews\API\Type\ItemIdType[] getIgnore()
  * @method SyncFolderItemsType setIgnore(array $ignore)
- * @method integer getMaxChangesReturned()
  * @method SyncFolderItemsType setMaxChangesReturned(integer $maxChangesReturned)
- * @method string getSyncScope()
  * @method SyncFolderItemsType setSyncScope(string $syncScope)
  */
 class SyncFolderItemsType extends BaseRequestType
@@ -54,4 +48,52 @@ class SyncFolderItemsType extends BaseRequestType
      * @var string
      */
     protected $syncScope = null;
+
+    /**
+     * @return \garethp\ews\API\Type\ItemResponseShapeType
+     */
+    public function getItemShape()
+    {
+        return $this->itemShape;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\TargetFolderIdType
+     */
+    public function getSyncFolderId()
+    {
+        return $this->syncFolderId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSyncState()
+    {
+        return $this->syncState;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\ItemIdType[]
+     */
+    public function getIgnore()
+    {
+        return $this->ignore;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMaxChangesReturned()
+    {
+        return $this->maxChangesReturned;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSyncScope()
+    {
+        return $this->syncScope;
+    }
 }

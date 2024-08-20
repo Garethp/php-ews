@@ -8,18 +8,12 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: MailTipsServiceConfiguration
  *
- * @method boolean getMailTipsEnabled()
  * @method MailTipsServiceConfigurationType setMailTipsEnabled(boolean $mailTipsEnabled)
- * @method integer getMaxRecipientsPerGetMailTipsRequest()
  * @method MailTipsServiceConfigurationType setMaxRecipientsPerGetMailTipsRequest(integer $maxRecipientsPerGetMailTipsRequest)
- * @method integer getMaxMessageSize()
  * @method MailTipsServiceConfigurationType setMaxMessageSize(integer $maxMessageSize)
- * @method integer getLargeAudienceThreshold()
  * @method MailTipsServiceConfigurationType setLargeAudienceThreshold(integer $largeAudienceThreshold)
- * @method boolean getShowExternalRecipientCount()
  * @method MailTipsServiceConfigurationType setShowExternalRecipientCount(boolean $showExternalRecipientCount)
  * @method MailTipsServiceConfigurationType addInternalDomains(SmtpDomainType $internalDomains)
- * @method SmtpDomainType[] getInternalDomains()
  * @method MailTipsServiceConfigurationType setInternalDomains(array $internalDomains)
  */
 class MailTipsServiceConfigurationType extends ServiceConfigurationType
@@ -64,10 +58,58 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
     }
 
     /**
+     * @return boolean
+     */
+    public function getMailTipsEnabled()
+    {
+        return $this->mailTipsEnabled;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMaxRecipientsPerGetMailTipsRequest()
+    {
+        return $this->maxRecipientsPerGetMailTipsRequest;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMaxMessageSize()
+    {
+        return $this->maxMessageSize;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getLargeAudienceThreshold()
+    {
+        return $this->largeAudienceThreshold;
+    }
+
+    /**
      * @returns bool
      */
     public function isShowExternalRecipientCount()
     {
         return ((bool) $this->showExternalRecipientCount);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getShowExternalRecipientCount()
+    {
+        return $this->showExternalRecipientCount;
+    }
+
+    /**
+     * @return SmtpDomainType[]
+     */
+    public function getInternalDomains()
+    {
+        return $this->internalDomains;
     }
 }

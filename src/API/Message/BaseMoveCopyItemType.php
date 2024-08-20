@@ -8,11 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: BaseMoveCopyItemType
  *
- * @method \garethp\ews\API\Type\TargetFolderIdType getToFolderId()
  * @method BaseMoveCopyItemType setToFolderId(\garethp\ews\API\Type\TargetFolderIdType $toFolderId)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType getItemIds()
  * @method BaseMoveCopyItemType setItemIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds)
- * @method boolean getReturnNewItemIds()
  * @method BaseMoveCopyItemType setReturnNewItemIds(boolean $returnNewItemIds)
  */
 class BaseMoveCopyItemType extends BaseRequestType
@@ -34,10 +31,34 @@ class BaseMoveCopyItemType extends BaseRequestType
     protected $returnNewItemIds = null;
 
     /**
+     * @return \garethp\ews\API\Type\TargetFolderIdType
+     */
+    public function getToFolderId()
+    {
+        return $this->toFolderId;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType
+     */
+    public function getItemIds()
+    {
+        return $this->itemIds;
+    }
+
+    /**
      * @returns bool
      */
     public function isReturnNewItemIds()
     {
         return ((bool) $this->returnNewItemIds);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getReturnNewItemIds()
+    {
+        return $this->returnNewItemIds;
     }
 }

@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: PullSubscriptionRequestType
  *
- * @method integer getTimeout()
  * @method PullSubscriptionRequestType setTimeout(integer $timeout)
  */
 class PullSubscriptionRequestType extends BaseSubscriptionRequestType
@@ -18,4 +17,12 @@ class PullSubscriptionRequestType extends BaseSubscriptionRequestType
      * @var integer
      */
     protected $timeout = null;
+
+    /**
+     * @return integer
+     */
+    public function getTimeout()
+    {
+        return $this->timeout;
+    }
 }

@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  * Represents a single validation error on a particular rule property value, predicate property value or action property value
  * XSD Type: RuleValidationErrorType
  *
- * @method string getFieldURI()
  * @method RuleValidationErrorType setFieldURI(string $fieldURI)
- * @method string getErrorCode()
  * @method RuleValidationErrorType setErrorCode(string $errorCode)
- * @method string getErrorMessage()
  * @method RuleValidationErrorType setErrorMessage(string $errorMessage)
- * @method string getFieldValue()
  * @method RuleValidationErrorType setFieldValue(string $fieldValue)
  */
 class RuleValidationErrorType extends Type
@@ -41,4 +37,36 @@ class RuleValidationErrorType extends Type
      * @var string
      */
     protected $fieldValue = null;
+
+    /**
+     * @return string
+     */
+    public function getFieldURI()
+    {
+        return $this->fieldURI;
+    }
+
+    /**
+     * @return string
+     */
+    public function getErrorCode()
+    {
+        return $this->errorCode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getErrorMessage()
+    {
+        return $this->errorMessage;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFieldValue()
+    {
+        return $this->fieldValue;
+    }
 }

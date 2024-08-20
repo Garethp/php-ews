@@ -11,13 +11,10 @@ use garethp\ews\API\Type;
  * XSD Type: ChangeDescriptionType
  *
  * @method ChangeDescriptionType addFieldURI(FieldURI $fieldURI)
- * @method FieldURI[] getFieldURI()
  * @method ChangeDescriptionType setFieldURI(array $fieldURI)
  * @method ChangeDescriptionType addIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
- * @method IndexedFieldURI[] getIndexedFieldURI()
  * @method ChangeDescriptionType setIndexedFieldURI(array $indexedFieldURI)
  * @method ChangeDescriptionType addExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
- * @method ExtendedFieldURI[] getExtendedFieldURI()
  * @method ChangeDescriptionType setExtendedFieldURI(array $extendedFieldURI)
  */
 class ChangeDescriptionType extends Type
@@ -37,4 +34,28 @@ class ChangeDescriptionType extends Type
      * @var \garethp\ews\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
+
+    /**
+     * @return FieldURI[]
+     */
+    public function getFieldURI()
+    {
+        return $this->fieldURI;
+    }
+
+    /**
+     * @return IndexedFieldURI[]
+     */
+    public function getIndexedFieldURI()
+    {
+        return $this->indexedFieldURI;
+    }
+
+    /**
+     * @return ExtendedFieldURI[]
+     */
+    public function getExtendedFieldURI()
+    {
+        return $this->extendedFieldURI;
+    }
 }

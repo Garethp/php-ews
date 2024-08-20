@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: PeriodType
  *
- * @method \DateInterval getBias()
  * @method PeriodType setBias(\DateInterval $bias)
- * @method string getName()
  * @method PeriodType setName(string $name)
- * @method string getId()
  * @method PeriodType setId(string $id)
  */
 class PeriodType extends Type
@@ -34,4 +31,28 @@ class PeriodType extends Type
      * @var string
      */
     protected $id = null;
+
+    /**
+     * @return \DateInterval
+     */
+    public function getBias()
+    {
+        return $this->bias;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

@@ -10,17 +10,11 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SerializableTimeZoneTime
  *
- * @method integer getBias()
  * @method SerializableTimeZoneTimeType setBias(integer $bias)
- * @method string getTime()
  * @method SerializableTimeZoneTimeType setTime(string $time)
- * @method integer getDayOrder()
  * @method SerializableTimeZoneTimeType setDayOrder(integer $dayOrder)
- * @method integer getMonth()
  * @method SerializableTimeZoneTimeType setMonth(integer $month)
- * @method string getDayOfWeek()
  * @method SerializableTimeZoneTimeType setDayOfWeek(string $dayOfWeek)
- * @method string getYear()
  * @method SerializableTimeZoneTimeType setYear(string $year)
  */
 class SerializableTimeZoneTimeType extends Type
@@ -55,4 +49,52 @@ class SerializableTimeZoneTimeType extends Type
      * @var string
      */
     protected $year = null;
+
+    /**
+     * @return integer
+     */
+    public function getBias()
+    {
+        return $this->bias;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getDayOrder()
+    {
+        return $this->dayOrder;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMonth()
+    {
+        return $this->month;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDayOfWeek()
+    {
+        return $this->dayOfWeek;
+    }
+
+    /**
+     * @return string
+     */
+    public function getYear()
+    {
+        return $this->year;
+    }
 }

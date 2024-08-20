@@ -10,10 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: RuleOperationErrorType
  *
- * @method integer getOperationIndex()
  * @method RuleOperationErrorType setOperationIndex(integer $operationIndex)
  * @method RuleOperationErrorType addValidationErrors(RuleValidationErrorType $validationErrors)
- * @method RuleValidationErrorType[] getValidationErrors()
  * @method RuleOperationErrorType setValidationErrors(array $validationErrors)
  */
 class RuleOperationErrorType extends Type
@@ -28,4 +26,20 @@ class RuleOperationErrorType extends Type
      * @var \garethp\ews\API\Type\RuleValidationErrorType[]
      */
     protected $validationErrors = null;
+
+    /**
+     * @return integer
+     */
+    public function getOperationIndex()
+    {
+        return $this->operationIndex;
+    }
+
+    /**
+     * @return RuleValidationErrorType[]
+     */
+    public function getValidationErrors()
+    {
+        return $this->validationErrors;
+    }
 }

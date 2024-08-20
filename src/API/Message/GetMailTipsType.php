@@ -8,13 +8,10 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetMailTipsType
  *
- * @method \garethp\ews\API\Type\EmailAddressType getSendingAs()
  * @method GetMailTipsType setSendingAs(\garethp\ews\API\Type\EmailAddressType $sendingAs)
  * @method GetMailTipsType addRecipients(\garethp\ews\API\Type\EmailAddressType $recipients)
- * @method \garethp\ews\API\Type\EmailAddressType[] getRecipients()
  * @method GetMailTipsType setRecipients(array $recipients)
  * @method GetMailTipsType addMailTipsRequested(string $mailTipsRequested)
- * @method string[] getMailTipsRequested()
  * @method GetMailTipsType setMailTipsRequested(array $mailTipsRequested)
  */
 class GetMailTipsType extends BaseRequestType
@@ -34,4 +31,28 @@ class GetMailTipsType extends BaseRequestType
      * @var string[]
      */
     protected $mailTipsRequested = null;
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getSendingAs()
+    {
+        return $this->sendingAs;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType[]
+     */
+    public function getRecipients()
+    {
+        return $this->recipients;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getMailTipsRequested()
+    {
+        return $this->mailTipsRequested;
+    }
 }

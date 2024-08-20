@@ -11,41 +11,25 @@ use function garethp\ews\Utilities\ensureIsMailbox;
  *
  * XSD Type: MessageType
  *
- * @method SingleRecipientType getSender()
  * @method MessageType setSender(SingleRecipientType $sender)
  * @method MessageType addToRecipients(EmailAddressType $toRecipients)
- * @method EmailAddressType[] getToRecipients()
  * @method MessageType setToRecipients(array $toRecipients)
  * @method MessageType addCcRecipients(EmailAddressType $ccRecipients)
- * @method EmailAddressType[] getCcRecipients()
  * @method MessageType setCcRecipients(array $ccRecipients)
  * @method MessageType addBccRecipients(EmailAddressType $bccRecipients)
- * @method EmailAddressType[] getBccRecipients()
  * @method MessageType setBccRecipients(array $bccRecipients)
- * @method boolean getIsReadReceiptRequested()
  * @method MessageType setIsReadReceiptRequested(boolean $isReadReceiptRequested)
- * @method boolean getIsDeliveryReceiptRequested()
  * @method MessageType setIsDeliveryReceiptRequested(boolean $isDeliveryReceiptRequested)
- * @method string getConversationIndex()
  * @method MessageType setConversationIndex(string $conversationIndex)
- * @method string getConversationTopic()
  * @method MessageType setConversationTopic(string $conversationTopic)
- * @method SingleRecipientType getFrom()
  * @method MessageType setFrom(SingleRecipientType $from)
- * @method string getInternetMessageId()
  * @method MessageType setInternetMessageId(string $internetMessageId)
- * @method boolean getIsRead()
  * @method MessageType setIsRead(boolean $isRead)
- * @method boolean getIsResponseRequested()
  * @method MessageType setIsResponseRequested(boolean $isResponseRequested)
- * @method string getReferences()
  * @method MessageType setReferences(string $references)
  * @method MessageType addReplyTo(EmailAddressType $replyTo)
- * @method EmailAddressType[] getReplyTo()
  * @method MessageType setReplyTo(array $replyTo)
- * @method SingleRecipientType getReceivedBy()
  * @method MessageType setReceivedBy(SingleRecipientType $receivedBy)
- * @method SingleRecipientType getReceivedRepresenting()
  * @method MessageType setReceivedRepresenting(SingleRecipientType $receivedRepresenting)
  */
 class MessageType extends ItemType
@@ -230,11 +214,51 @@ class MessageType extends ItemType
     }
 
     /**
+     * @return SingleRecipientType
+     */
+    public function getSender()
+    {
+        return $this->sender;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getToRecipients()
+    {
+        return $this->toRecipients;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getCcRecipients()
+    {
+        return $this->ccRecipients;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getBccRecipients()
+    {
+        return $this->bccRecipients;
+    }
+
+    /**
      * @returns bool
      */
     public function isReadReceiptRequested()
     {
         return ((bool) $this->isReadReceiptRequested);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsReadReceiptRequested()
+    {
+        return $this->isReadReceiptRequested;
     }
 
     /**
@@ -246,6 +270,46 @@ class MessageType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsDeliveryReceiptRequested()
+    {
+        return $this->isDeliveryReceiptRequested;
+    }
+
+    /**
+     * @return string
+     */
+    public function getConversationIndex()
+    {
+        return $this->conversationIndex;
+    }
+
+    /**
+     * @return string
+     */
+    public function getConversationTopic()
+    {
+        return $this->conversationTopic;
+    }
+
+    /**
+     * @return SingleRecipientType
+     */
+    public function getFrom()
+    {
+        return $this->from;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInternetMessageId()
+    {
+        return $this->internetMessageId;
+    }
+
+    /**
      * @returns bool
      */
     public function isRead()
@@ -254,10 +318,58 @@ class MessageType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsRead()
+    {
+        return $this->isRead;
+    }
+
+    /**
      * @returns bool
      */
     public function isResponseRequested()
     {
         return ((bool) $this->isResponseRequested);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsResponseRequested()
+    {
+        return $this->isResponseRequested;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReferences()
+    {
+        return $this->references;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getReplyTo()
+    {
+        return $this->replyTo;
+    }
+
+    /**
+     * @return SingleRecipientType
+     */
+    public function getReceivedBy()
+    {
+        return $this->receivedBy;
+    }
+
+    /**
+     * @return SingleRecipientType
+     */
+    public function getReceivedRepresenting()
+    {
+        return $this->receivedRepresenting;
     }
 }

@@ -8,11 +8,8 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: OccurrenceItemIdType
  *
- * @method string getRecurringMasterId()
  * @method OccurrenceItemIdType setRecurringMasterId(string $recurringMasterId)
- * @method string getChangeKey()
  * @method OccurrenceItemIdType setChangeKey(string $changeKey)
- * @method integer getInstanceIndex()
  * @method OccurrenceItemIdType setInstanceIndex(integer $instanceIndex)
  */
 class OccurrenceItemIdType extends BaseItemIdType
@@ -32,4 +29,28 @@ class OccurrenceItemIdType extends BaseItemIdType
      * @var integer
      */
     protected $instanceIndex = null;
+
+    /**
+     * @return string
+     */
+    public function getRecurringMasterId()
+    {
+        return $this->recurringMasterId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getChangeKey()
+    {
+        return $this->changeKey;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getInstanceIndex()
+    {
+        return $this->instanceIndex;
+    }
 }

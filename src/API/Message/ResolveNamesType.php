@@ -8,15 +8,10 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: ResolveNamesType
  *
- * @method boolean getReturnFullContactData()
  * @method ResolveNamesType setReturnFullContactData(boolean $returnFullContactData)
- * @method string getSearchScope()
  * @method ResolveNamesType setSearchScope(string $searchScope)
- * @method string getContactDataShape()
  * @method ResolveNamesType setContactDataShape(string $contactDataShape)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType getParentFolderIds()
  * @method ResolveNamesType setParentFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
- * @method string getUnresolvedEntry()
  * @method ResolveNamesType setUnresolvedEntry(string $unresolvedEntry)
  */
 class ResolveNamesType extends BaseRequestType
@@ -53,5 +48,45 @@ class ResolveNamesType extends BaseRequestType
     public function isReturnFullContactData()
     {
         return ((bool) $this->returnFullContactData);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getReturnFullContactData()
+    {
+        return $this->returnFullContactData;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSearchScope()
+    {
+        return $this->searchScope;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContactDataShape()
+    {
+        return $this->contactDataShape;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
+     */
+    public function getParentFolderIds()
+    {
+        return $this->parentFolderIds;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUnresolvedEntry()
+    {
+        return $this->unresolvedEntry;
     }
 }

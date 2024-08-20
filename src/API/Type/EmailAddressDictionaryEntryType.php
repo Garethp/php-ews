@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: EmailAddressDictionaryEntryType
  *
- * @method string getKey()
  * @method EmailAddressDictionaryEntryType setKey(string $key)
- * @method string getName()
  * @method EmailAddressDictionaryEntryType setName(string $name)
- * @method string getRoutingType()
  * @method EmailAddressDictionaryEntryType setRoutingType(string $routingType)
- * @method string getMailboxType()
  * @method EmailAddressDictionaryEntryType setMailboxType(string $mailboxType)
  */
 class EmailAddressDictionaryEntryType extends Type
@@ -41,4 +37,36 @@ class EmailAddressDictionaryEntryType extends Type
      * @var string
      */
     protected $mailboxType = null;
+
+    /**
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->key;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRoutingType()
+    {
+        return $this->routingType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMailboxType()
+    {
+        return $this->mailboxType;
+    }
 }

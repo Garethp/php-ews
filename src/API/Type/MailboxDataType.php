@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: MailboxData
  *
- * @method EmailAddressType getEmail()
  * @method MailboxDataType setEmail(EmailAddressType $email)
- * @method string getAttendeeType()
  * @method MailboxDataType setAttendeeType(string $attendeeType)
- * @method boolean getExcludeConflicts()
  * @method MailboxDataType setExcludeConflicts(boolean $excludeConflicts)
  */
 class MailboxDataType extends Type
@@ -36,10 +33,34 @@ class MailboxDataType extends Type
     protected $excludeConflicts = null;
 
     /**
+     * @return EmailAddressType
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAttendeeType()
+    {
+        return $this->attendeeType;
+    }
+
+    /**
      * @returns bool
      */
     public function isExcludeConflicts()
     {
         return ((bool) $this->excludeConflicts);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getExcludeConflicts()
+    {
+        return $this->excludeConflicts;
     }
 }

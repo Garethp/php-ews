@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: RecurringDayTransitionType
  *
- * @method string getDayOfWeek()
  * @method RecurringDayTransitionType setDayOfWeek(string $dayOfWeek)
- * @method string getOccurrence()
  * @method RecurringDayTransitionType setOccurrence(string $occurrence)
  */
 class RecurringDayTransitionType extends RecurringTimeTransitionType
@@ -25,4 +23,20 @@ class RecurringDayTransitionType extends RecurringTimeTransitionType
      * @var string
      */
     protected $occurrence = null;
+
+    /**
+     * @return string
+     */
+    public function getDayOfWeek()
+    {
+        return $this->dayOfWeek;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOccurrence()
+    {
+        return $this->occurrence;
+    }
 }

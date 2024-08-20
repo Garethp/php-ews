@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  * User Mailbox.
  * XSD Type: UserMailboxType
  *
- * @method string getId()
  * @method UserMailboxType setId(string $id)
- * @method boolean getIsArchive()
  * @method UserMailboxType setIsArchive(boolean $isArchive)
  */
 class UserMailboxType extends Type
@@ -29,10 +27,26 @@ class UserMailboxType extends Type
     protected $isArchive = null;
 
     /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
      * @returns bool
      */
     public function isArchive()
     {
         return ((bool) $this->isArchive);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsArchive()
+    {
+        return $this->isArchive;
     }
 }

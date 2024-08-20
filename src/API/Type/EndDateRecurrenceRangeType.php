@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: EndDateRecurrenceRangeType
  *
- * @method \DateTime getEndDate()
  * @method EndDateRecurrenceRangeType setEndDate(\DateTime $endDate)
  */
 class EndDateRecurrenceRangeType extends RecurrenceRangeBaseType
@@ -22,4 +21,12 @@ class EndDateRecurrenceRangeType extends RecurrenceRangeBaseType
     protected $_typeMap = array(
         'endDate' => 'date',
     );
+
+    /**
+     * @return \DateTime
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
+    }
 }

@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: CalendarEvent
  *
- * @method \DateTime getStartTime()
  * @method CalendarEventType setStartTime(\DateTime $startTime)
- * @method \DateTime getEndTime()
  * @method CalendarEventType setEndTime(\DateTime $endTime)
- * @method string getBusyType()
  * @method CalendarEventType setBusyType(string $busyType)
- * @method CalendarEventDetailsType getCalendarEventDetails()
  * @method CalendarEventType setCalendarEventDetails(CalendarEventDetailsType $calendarEventDetails)
  */
 class CalendarEventType extends Type
@@ -46,4 +42,36 @@ class CalendarEventType extends Type
      * @var \garethp\ews\API\Type\CalendarEventDetailsType
      */
     protected $calendarEventDetails = null;
+
+    /**
+     * @return \DateTime
+     */
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBusyType()
+    {
+        return $this->busyType;
+    }
+
+    /**
+     * @return CalendarEventDetailsType
+     */
+    public function getCalendarEventDetails()
+    {
+        return $this->calendarEventDetails;
+    }
 }

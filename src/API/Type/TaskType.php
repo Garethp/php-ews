@@ -8,51 +8,29 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: TaskType
  *
- * @method integer getActualWork()
  * @method TaskType setActualWork(integer $actualWork)
- * @method \DateTime getAssignedTime()
  * @method TaskType setAssignedTime(\DateTime $assignedTime)
- * @method string getBillingInformation()
  * @method TaskType setBillingInformation(string $billingInformation)
- * @method integer getChangeCount()
  * @method TaskType setChangeCount(integer $changeCount)
  * @method TaskType addCompanies(string $companies)
- * @method string[] getCompanies()
  * @method TaskType setCompanies(array $companies)
- * @method \DateTime getCompleteDate()
  * @method TaskType setCompleteDate(\DateTime $completeDate)
  * @method TaskType addContacts(string $contacts)
- * @method string[] getContacts()
  * @method TaskType setContacts(array $contacts)
- * @method string getDelegationState()
  * @method TaskType setDelegationState(string $delegationState)
- * @method string getDelegator()
  * @method TaskType setDelegator(string $delegator)
- * @method \DateTime getDueDate()
  * @method TaskType setDueDate(\DateTime $dueDate)
- * @method integer getIsAssignmentEditable()
  * @method TaskType setIsAssignmentEditable(integer $isAssignmentEditable)
- * @method boolean getIsComplete()
  * @method TaskType setIsComplete(boolean $isComplete)
- * @method boolean getIsRecurring()
  * @method TaskType setIsRecurring(boolean $isRecurring)
- * @method boolean getIsTeamTask()
  * @method TaskType setIsTeamTask(boolean $isTeamTask)
- * @method string getMileage()
  * @method TaskType setMileage(string $mileage)
- * @method string getOwner()
  * @method TaskType setOwner(string $owner)
- * @method float getPercentComplete()
  * @method TaskType setPercentComplete(float $percentComplete)
- * @method TaskRecurrenceType getRecurrence()
  * @method TaskType setRecurrence(TaskRecurrenceType $recurrence)
- * @method \DateTime getStartDate()
  * @method TaskType setStartDate(\DateTime $startDate)
- * @method string getStatus()
  * @method TaskType setStatus(string $status)
- * @method string getStatusDescription()
  * @method TaskType setStatusDescription(string $statusDescription)
- * @method integer getTotalWork()
  * @method TaskType setTotalWork(integer $totalWork)
  */
 class TaskType extends ItemType
@@ -176,11 +154,107 @@ class TaskType extends ItemType
     protected $totalWork = null;
 
     /**
+     * @return integer
+     */
+    public function getActualWork()
+    {
+        return $this->actualWork;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getAssignedTime()
+    {
+        return $this->assignedTime;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBillingInformation()
+    {
+        return $this->billingInformation;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getChangeCount()
+    {
+        return $this->changeCount;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getCompanies()
+    {
+        return $this->companies;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCompleteDate()
+    {
+        return $this->completeDate;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getContacts()
+    {
+        return $this->contacts;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDelegationState()
+    {
+        return $this->delegationState;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDelegator()
+    {
+        return $this->delegator;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDueDate()
+    {
+        return $this->dueDate;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getIsAssignmentEditable()
+    {
+        return $this->isAssignmentEditable;
+    }
+
+    /**
      * @returns bool
      */
     public function isComplete()
     {
         return ((bool) $this->isComplete);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsComplete()
+    {
+        return $this->isComplete;
     }
 
     /**
@@ -192,10 +266,90 @@ class TaskType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsRecurring()
+    {
+        return $this->isRecurring;
+    }
+
+    /**
      * @returns bool
      */
     public function isTeamTask()
     {
         return ((bool) $this->isTeamTask);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsTeamTask()
+    {
+        return $this->isTeamTask;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMileage()
+    {
+        return $this->mileage;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOwner()
+    {
+        return $this->owner;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPercentComplete()
+    {
+        return $this->percentComplete;
+    }
+
+    /**
+     * @return TaskRecurrenceType
+     */
+    public function getRecurrence()
+    {
+        return $this->recurrence;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatusDescription()
+    {
+        return $this->statusDescription;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getTotalWork()
+    {
+        return $this->totalWork;
     }
 }

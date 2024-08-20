@@ -8,11 +8,8 @@ namespace garethp\ews\API\Type;
  * Identifier for a distinguished folder
  * XSD Type: DistinguishedFolderIdType
  *
- * @method string getId()
  * @method DistinguishedFolderIdType setId(string $id)
- * @method string getChangeKey()
  * @method DistinguishedFolderIdType setChangeKey(string $changeKey)
- * @method EmailAddressType getMailbox()
  * @method DistinguishedFolderIdType setMailbox(EmailAddressType $mailbox)
  */
 class DistinguishedFolderIdType extends BaseFolderIdType
@@ -49,5 +46,29 @@ class DistinguishedFolderIdType extends BaseFolderIdType
         }
 
         return $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getChangeKey()
+    {
+        return $this->changeKey;
+    }
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
     }
 }

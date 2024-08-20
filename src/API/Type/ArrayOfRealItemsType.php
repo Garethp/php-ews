@@ -14,37 +14,26 @@ use garethp\ews\API\Type;
  * XSD Type: ArrayOfRealItemsType
  *
  * @method ArrayOfRealItemsType addItem(ItemType $item)
- * @method ItemType[] getItem()
  * @method ArrayOfRealItemsType setItem(array $item)
  * @method ArrayOfRealItemsType addMessage(MessageType $message)
- * @method MessageType[] getMessage()
  * @method ArrayOfRealItemsType setMessage(array $message)
  * @method ArrayOfRealItemsType addCalendarItem(CalendarItemType $calendarItem)
- * @method CalendarItemType[] getCalendarItem()
  * @method ArrayOfRealItemsType setCalendarItem(array $calendarItem)
  * @method ArrayOfRealItemsType addContact(ContactItemType $contact)
- * @method ContactItemType[] getContact()
  * @method ArrayOfRealItemsType setContact(array $contact)
  * @method ArrayOfRealItemsType addDistributionList(DistributionListType $distributionList)
- * @method DistributionListType[] getDistributionList()
  * @method ArrayOfRealItemsType setDistributionList(array $distributionList)
  * @method ArrayOfRealItemsType addMeetingMessage(MeetingMessageType $meetingMessage)
- * @method MeetingMessageType[] getMeetingMessage()
  * @method ArrayOfRealItemsType setMeetingMessage(array $meetingMessage)
  * @method ArrayOfRealItemsType addMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method MeetingRequestMessageType[] getMeetingRequest()
  * @method ArrayOfRealItemsType setMeetingRequest(array $meetingRequest)
  * @method ArrayOfRealItemsType addMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method MeetingResponseMessageType[] getMeetingResponse()
  * @method ArrayOfRealItemsType setMeetingResponse(array $meetingResponse)
  * @method ArrayOfRealItemsType addMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method MeetingCancellationMessageType[] getMeetingCancellation()
  * @method ArrayOfRealItemsType setMeetingCancellation(array $meetingCancellation)
  * @method ArrayOfRealItemsType addTask(TaskType $task)
- * @method TaskType[] getTask()
  * @method ArrayOfRealItemsType setTask(array $task)
  * @method ArrayOfRealItemsType addPostItem(PostItemType $postItem)
- * @method PostItemType[] getPostItem()
  * @method ArrayOfRealItemsType setPostItem(array $postItem)
  */
 class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, IteratorAggregate
@@ -174,5 +163,93 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
     {
         $this->getItems();
         return new \ArrayIterator($this->itemsArray);
+    }
+
+    /**
+     * @return ItemType[]
+     */
+    public function getItem()
+    {
+        return $this->item;
+    }
+
+    /**
+     * @return MessageType[]
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return CalendarItemType[]
+     */
+    public function getCalendarItem()
+    {
+        return $this->calendarItem;
+    }
+
+    /**
+     * @return ContactItemType[]
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
+
+    /**
+     * @return DistributionListType[]
+     */
+    public function getDistributionList()
+    {
+        return $this->distributionList;
+    }
+
+    /**
+     * @return MeetingMessageType[]
+     */
+    public function getMeetingMessage()
+    {
+        return $this->meetingMessage;
+    }
+
+    /**
+     * @return MeetingRequestMessageType[]
+     */
+    public function getMeetingRequest()
+    {
+        return $this->meetingRequest;
+    }
+
+    /**
+     * @return MeetingResponseMessageType[]
+     */
+    public function getMeetingResponse()
+    {
+        return $this->meetingResponse;
+    }
+
+    /**
+     * @return MeetingCancellationMessageType[]
+     */
+    public function getMeetingCancellation()
+    {
+        return $this->meetingCancellation;
+    }
+
+    /**
+     * @return TaskType[]
+     */
+    public function getTask()
+    {
+        return $this->task;
+    }
+
+    /**
+     * @return PostItemType[]
+     */
+    public function getPostItem()
+    {
+        return $this->postItem;
     }
 }

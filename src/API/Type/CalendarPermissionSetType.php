@@ -11,10 +11,8 @@ use garethp\ews\API\Type;
  * XSD Type: CalendarPermissionSetType
  *
  * @method CalendarPermissionSetType addCalendarPermissions(CalendarPermissionType $calendarPermissions)
- * @method CalendarPermissionType[] getCalendarPermissions()
  * @method CalendarPermissionSetType setCalendarPermissions(array $calendarPermissions)
  * @method CalendarPermissionSetType addUnknownEntries(string $unknownEntries)
- * @method string[] getUnknownEntries()
  * @method CalendarPermissionSetType setUnknownEntries(array $unknownEntries)
  */
 class CalendarPermissionSetType extends Type
@@ -29,4 +27,20 @@ class CalendarPermissionSetType extends Type
      * @var string[]
      */
     protected $unknownEntries = null;
+
+    /**
+     * @return CalendarPermissionType[]
+     */
+    public function getCalendarPermissions()
+    {
+        return $this->calendarPermissions;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getUnknownEntries()
+    {
+        return $this->unknownEntries;
+    }
 }

@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: Suggestion
  *
- * @method \DateTime getMeetingTime()
  * @method SuggestionType setMeetingTime(\DateTime $meetingTime)
- * @method boolean getIsWorkTime()
  * @method SuggestionType setIsWorkTime(boolean $isWorkTime)
- * @method string getSuggestionQuality()
  * @method SuggestionType setSuggestionQuality(string $suggestionQuality)
- * @method ArrayOfAttendeeConflictDataType getAttendeeConflictDataArray()
  * @method SuggestionType setAttendeeConflictDataArray(ArrayOfAttendeeConflictDataType $attendeeConflictDataArray)
  */
 class SuggestionType extends Type
@@ -47,10 +43,42 @@ class SuggestionType extends Type
     protected $attendeeConflictDataArray = null;
 
     /**
+     * @return \DateTime
+     */
+    public function getMeetingTime()
+    {
+        return $this->meetingTime;
+    }
+
+    /**
      * @returns bool
      */
     public function isWorkTime()
     {
         return ((bool) $this->isWorkTime);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsWorkTime()
+    {
+        return $this->isWorkTime;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSuggestionQuality()
+    {
+        return $this->suggestionQuality;
+    }
+
+    /**
+     * @return ArrayOfAttendeeConflictDataType
+     */
+    public function getAttendeeConflictDataArray()
+    {
+        return $this->attendeeConflictDataArray;
     }
 }

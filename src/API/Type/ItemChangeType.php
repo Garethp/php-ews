@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ItemChangeType
  *
- * @method ItemIdType getItemId()
  * @method ItemChangeType setItemId(ItemIdType $itemId)
- * @method OccurrenceItemIdType getOccurrenceItemId()
  * @method ItemChangeType setOccurrenceItemId(OccurrenceItemIdType $occurrenceItemId)
- * @method RecurringMasterItemIdType getRecurringMasterItemId()
  * @method ItemChangeType setRecurringMasterItemId(RecurringMasterItemIdType $recurringMasterItemId)
- * @method NonEmptyArrayOfItemChangeDescriptionsType getUpdates()
  * @method ItemChangeType setUpdates(NonEmptyArrayOfItemChangeDescriptionsType $updates)
  */
 class ItemChangeType extends Type
@@ -41,4 +37,36 @@ class ItemChangeType extends Type
      * @var \garethp\ews\API\Type\NonEmptyArrayOfItemChangeDescriptionsType
      */
     protected $updates = null;
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @return OccurrenceItemIdType
+     */
+    public function getOccurrenceItemId()
+    {
+        return $this->occurrenceItemId;
+    }
+
+    /**
+     * @return RecurringMasterItemIdType
+     */
+    public function getRecurringMasterItemId()
+    {
+        return $this->recurringMasterItemId;
+    }
+
+    /**
+     * @return NonEmptyArrayOfItemChangeDescriptionsType
+     */
+    public function getUpdates()
+    {
+        return $this->updates;
+    }
 }

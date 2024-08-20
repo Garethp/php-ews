@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: RecurrenceRangeBaseType
  *
- * @method \DateTime getStartDate()
  * @method RecurrenceRangeBaseType setStartDate(\DateTime $startDate)
  */
 class RecurrenceRangeBaseType extends Type
@@ -24,4 +23,12 @@ class RecurrenceRangeBaseType extends Type
     protected $_typeMap = array(
         'startDate' => 'date',
     );
+
+    /**
+     * @return \DateTime
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
 }

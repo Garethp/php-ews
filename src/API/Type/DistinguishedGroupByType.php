@@ -9,7 +9,6 @@ namespace garethp\ews\API\Type;
  *  contrast to the arbitrary (custom) groupings available via the t:GroupByType
  * XSD Type: DistinguishedGroupByType
  *
- * @method string getStandardGroupBy()
  * @method DistinguishedGroupByType setStandardGroupBy(string $standardGroupBy)
  */
 class DistinguishedGroupByType extends BaseGroupByType
@@ -19,4 +18,12 @@ class DistinguishedGroupByType extends BaseGroupByType
      * @var string
      */
     protected $standardGroupBy = null;
+
+    /**
+     * @return string
+     */
+    public function getStandardGroupBy()
+    {
+        return $this->standardGroupBy;
+    }
 }

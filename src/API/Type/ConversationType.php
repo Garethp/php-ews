@@ -10,71 +10,43 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ConversationType
  *
- * @method ItemIdType getConversationId()
  * @method ConversationType setConversationId(ItemIdType $conversationId)
- * @method string getConversationTopic()
  * @method ConversationType setConversationTopic(string $conversationTopic)
  * @method ConversationType addUniqueRecipients(string $uniqueRecipients)
- * @method string[] getUniqueRecipients()
  * @method ConversationType setUniqueRecipients(array $uniqueRecipients)
  * @method ConversationType addGlobalUniqueRecipients(string $globalUniqueRecipients)
- * @method string[] getGlobalUniqueRecipients()
  * @method ConversationType setGlobalUniqueRecipients(array $globalUniqueRecipients)
  * @method ConversationType addUniqueUnreadSenders(string $uniqueUnreadSenders)
- * @method string[] getUniqueUnreadSenders()
  * @method ConversationType setUniqueUnreadSenders(array $uniqueUnreadSenders)
  * @method ConversationType addGlobalUniqueUnreadSenders(string $globalUniqueUnreadSenders)
- * @method string[] getGlobalUniqueUnreadSenders()
  * @method ConversationType setGlobalUniqueUnreadSenders(array $globalUniqueUnreadSenders)
  * @method ConversationType addUniqueSenders(string $uniqueSenders)
- * @method string[] getUniqueSenders()
  * @method ConversationType setUniqueSenders(array $uniqueSenders)
  * @method ConversationType addGlobalUniqueSenders(string $globalUniqueSenders)
- * @method string[] getGlobalUniqueSenders()
  * @method ConversationType setGlobalUniqueSenders(array $globalUniqueSenders)
- * @method \DateTime getLastDeliveryTime()
  * @method ConversationType setLastDeliveryTime(\DateTime $lastDeliveryTime)
- * @method \DateTime getGlobalLastDeliveryTime()
  * @method ConversationType setGlobalLastDeliveryTime(\DateTime $globalLastDeliveryTime)
  * @method ConversationType addCategories(string $categories)
- * @method string[] getCategories()
  * @method ConversationType setCategories(array $categories)
  * @method ConversationType addGlobalCategories(string $globalCategories)
- * @method string[] getGlobalCategories()
  * @method ConversationType setGlobalCategories(array $globalCategories)
- * @method string getFlagStatus()
  * @method ConversationType setFlagStatus(string $flagStatus)
- * @method string getGlobalFlagStatus()
  * @method ConversationType setGlobalFlagStatus(string $globalFlagStatus)
- * @method boolean getHasAttachments()
  * @method ConversationType setHasAttachments(boolean $hasAttachments)
- * @method boolean getGlobalHasAttachments()
  * @method ConversationType setGlobalHasAttachments(boolean $globalHasAttachments)
- * @method integer getMessageCount()
  * @method ConversationType setMessageCount(integer $messageCount)
- * @method integer getGlobalMessageCount()
  * @method ConversationType setGlobalMessageCount(integer $globalMessageCount)
- * @method integer getUnreadCount()
  * @method ConversationType setUnreadCount(integer $unreadCount)
- * @method integer getGlobalUnreadCount()
  * @method ConversationType setGlobalUnreadCount(integer $globalUnreadCount)
- * @method integer getSize()
  * @method ConversationType setSize(integer $size)
- * @method integer getGlobalSize()
  * @method ConversationType setGlobalSize(integer $globalSize)
  * @method ConversationType addItemClasses(string $itemClasses)
- * @method string[] getItemClasses()
  * @method ConversationType setItemClasses(array $itemClasses)
  * @method ConversationType addGlobalItemClasses(string $globalItemClasses)
- * @method string[] getGlobalItemClasses()
  * @method ConversationType setGlobalItemClasses(array $globalItemClasses)
- * @method string getImportance()
  * @method ConversationType setImportance(string $importance)
- * @method string getGlobalImportance()
  * @method ConversationType setGlobalImportance(string $globalImportance)
- * @method NonEmptyArrayOfBaseItemIdsType getItemIds()
  * @method ConversationType setItemIds(NonEmptyArrayOfBaseItemIdsType $itemIds)
- * @method NonEmptyArrayOfBaseItemIdsType getGlobalItemIds()
  * @method ConversationType setGlobalItemIds(NonEmptyArrayOfBaseItemIdsType $globalItemIds)
  */
 class ConversationType extends Type
@@ -226,6 +198,118 @@ class ConversationType extends Type
     protected $globalItemIds = null;
 
     /**
+     * @return ItemIdType
+     */
+    public function getConversationId()
+    {
+        return $this->conversationId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getConversationTopic()
+    {
+        return $this->conversationTopic;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getUniqueRecipients()
+    {
+        return $this->uniqueRecipients;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getGlobalUniqueRecipients()
+    {
+        return $this->globalUniqueRecipients;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getUniqueUnreadSenders()
+    {
+        return $this->uniqueUnreadSenders;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getGlobalUniqueUnreadSenders()
+    {
+        return $this->globalUniqueUnreadSenders;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getUniqueSenders()
+    {
+        return $this->uniqueSenders;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getGlobalUniqueSenders()
+    {
+        return $this->globalUniqueSenders;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLastDeliveryTime()
+    {
+        return $this->lastDeliveryTime;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getGlobalLastDeliveryTime()
+    {
+        return $this->globalLastDeliveryTime;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getGlobalCategories()
+    {
+        return $this->globalCategories;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFlagStatus()
+    {
+        return $this->flagStatus;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGlobalFlagStatus()
+    {
+        return $this->globalFlagStatus;
+    }
+
+    /**
      * @returns bool
      */
     public function isHasAttachments()
@@ -234,10 +318,122 @@ class ConversationType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getHasAttachments()
+    {
+        return $this->hasAttachments;
+    }
+
+    /**
      * @returns bool
      */
     public function isGlobalHasAttachments()
     {
         return ((bool) $this->globalHasAttachments);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getGlobalHasAttachments()
+    {
+        return $this->globalHasAttachments;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMessageCount()
+    {
+        return $this->messageCount;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getGlobalMessageCount()
+    {
+        return $this->globalMessageCount;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getUnreadCount()
+    {
+        return $this->unreadCount;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getGlobalUnreadCount()
+    {
+        return $this->globalUnreadCount;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getGlobalSize()
+    {
+        return $this->globalSize;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getItemClasses()
+    {
+        return $this->itemClasses;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getGlobalItemClasses()
+    {
+        return $this->globalItemClasses;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImportance()
+    {
+        return $this->importance;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGlobalImportance()
+    {
+        return $this->globalImportance;
+    }
+
+    /**
+     * @return NonEmptyArrayOfBaseItemIdsType
+     */
+    public function getItemIds()
+    {
+        return $this->itemIds;
+    }
+
+    /**
+     * @return NonEmptyArrayOfBaseItemIdsType
+     */
+    public function getGlobalItemIds()
+    {
+        return $this->globalItemIds;
     }
 }

@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: RecurringMasterItemIdType
  *
- * @method string getOccurrenceId()
  * @method RecurringMasterItemIdType setOccurrenceId(string $occurrenceId)
- * @method string getChangeKey()
  * @method RecurringMasterItemIdType setChangeKey(string $changeKey)
  */
 class RecurringMasterItemIdType extends BaseItemIdType
@@ -25,4 +23,20 @@ class RecurringMasterItemIdType extends BaseItemIdType
      * @var string
      */
     protected $changeKey = null;
+
+    /**
+     * @return string
+     */
+    public function getOccurrenceId()
+    {
+        return $this->occurrenceId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getChangeKey()
+    {
+        return $this->changeKey;
+    }
 }

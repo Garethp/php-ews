@@ -12,17 +12,11 @@ namespace garethp\ews\API\Type;
  *  2. PropertyTag
  * XSD Type: PathToExtendedFieldType
  *
- * @method string getDistinguishedPropertySetId()
  * @method PathToExtendedFieldType setDistinguishedPropertySetId(string $distinguishedPropertySetId)
- * @method string getPropertySetId()
  * @method PathToExtendedFieldType setPropertySetId(string $propertySetId)
- * @method integer getPropertyTag()
  * @method PathToExtendedFieldType setPropertyTag(integer $propertyTag)
- * @method string getPropertyName()
  * @method PathToExtendedFieldType setPropertyName(string $propertyName)
- * @method integer getPropertyId()
  * @method PathToExtendedFieldType setPropertyId(integer $propertyId)
- * @method string getPropertyType()
  * @method PathToExtendedFieldType setPropertyType(string $propertyType)
  */
 class PathToExtendedFieldType extends BasePathToElementType
@@ -57,4 +51,52 @@ class PathToExtendedFieldType extends BasePathToElementType
      * @var string
      */
     protected $propertyType = null;
+
+    /**
+     * @return string
+     */
+    public function getDistinguishedPropertySetId()
+    {
+        return $this->distinguishedPropertySetId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPropertySetId()
+    {
+        return $this->propertySetId;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getPropertyTag()
+    {
+        return $this->propertyTag;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPropertyName()
+    {
+        return $this->propertyName;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getPropertyId()
+    {
+        return $this->propertyId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPropertyType()
+    {
+        return $this->propertyType;
+    }
 }

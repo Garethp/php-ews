@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ExchangeImpersonationType
  *
- * @method ConnectingSIDType getConnectingSID()
  * @method ExchangeImpersonationType setConnectingSID(ConnectingSIDType $connectingSID)
  */
 class ExchangeImpersonationType extends Type
@@ -29,5 +28,13 @@ class ExchangeImpersonationType extends Type
 
         $impersonation->setConnectingSID($connectingSID);
         return $impersonation;
+    }
+
+    /**
+     * @return ConnectingSIDType
+     */
+    public function getConnectingSID()
+    {
+        return $this->connectingSID;
     }
 }

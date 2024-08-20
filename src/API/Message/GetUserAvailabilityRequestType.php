@@ -8,14 +8,10 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetUserAvailabilityRequestType
  *
- * @method \garethp\ews\API\Type\TimeZone getTimeZone()
  * @method GetUserAvailabilityRequestType setTimeZone(\garethp\ews\API\Type\TimeZone $timeZone)
  * @method GetUserAvailabilityRequestType addMailboxDataArray(\garethp\ews\API\Type\MailboxDataType $mailboxDataArray)
- * @method \garethp\ews\API\Type\MailboxDataType[] getMailboxDataArray()
  * @method GetUserAvailabilityRequestType setMailboxDataArray(array $mailboxDataArray)
- * @method \garethp\ews\API\Type\FreeBusyViewOptions getFreeBusyViewOptions()
  * @method GetUserAvailabilityRequestType setFreeBusyViewOptions(\garethp\ews\API\Type\FreeBusyViewOptions $freeBusyViewOptions)
- * @method \garethp\ews\API\Type\SuggestionsViewOptions getSuggestionsViewOptions()
  * @method GetUserAvailabilityRequestType setSuggestionsViewOptions(\garethp\ews\API\Type\SuggestionsViewOptions $suggestionsViewOptions)
  */
 class GetUserAvailabilityRequestType extends BaseRequestType
@@ -40,4 +36,36 @@ class GetUserAvailabilityRequestType extends BaseRequestType
      * @var \garethp\ews\API\Type\SuggestionsViewOptions
      */
     protected $suggestionsViewOptions = null;
+
+    /**
+     * @return \garethp\ews\API\Type\TimeZone
+     */
+    public function getTimeZone()
+    {
+        return $this->timeZone;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\MailboxDataType[]
+     */
+    public function getMailboxDataArray()
+    {
+        return $this->mailboxDataArray;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\FreeBusyViewOptions
+     */
+    public function getFreeBusyViewOptions()
+    {
+        return $this->freeBusyViewOptions;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\SuggestionsViewOptions
+     */
+    public function getSuggestionsViewOptions()
+    {
+        return $this->suggestionsViewOptions;
+    }
 }

@@ -10,17 +10,11 @@ use garethp\ews\API\Type\IndexedPageViewType;
  *
  * XSD Type: FindFolderType
  *
- * @method string getTraversal()
  * @method FindFolderType setTraversal(string $traversal)
- * @method \garethp\ews\API\Type\FolderResponseShapeType getFolderShape()
  * @method FindFolderType setFolderShape(\garethp\ews\API\Type\FolderResponseShapeType $folderShape)
- * @method \garethp\ews\API\Type\IndexedPageViewType getIndexedPageFolderView()
  * @method FindFolderType setIndexedPageFolderView(\garethp\ews\API\Type\IndexedPageViewType $indexedPageFolderView)
- * @method \garethp\ews\API\Type\FractionalPageViewType getFractionalPageFolderView()
  * @method FindFolderType setFractionalPageFolderView(\garethp\ews\API\Type\FractionalPageViewType $fractionalPageFolderView)
- * @method \garethp\ews\API\Type\RestrictionType getRestriction()
  * @method FindFolderType setRestriction(\garethp\ews\API\Type\RestrictionType $restriction)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType getParentFolderIds()
  * @method FindFolderType setParentFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $parentFolderIds)
  */
 class FindFolderType extends BaseRequestType
@@ -60,5 +54,53 @@ class FindFolderType extends BaseRequestType
     {
         $this->indexedPageFolderView = $page;
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTraversal()
+    {
+        return $this->traversal;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\FolderResponseShapeType
+     */
+    public function getFolderShape()
+    {
+        return $this->folderShape;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\IndexedPageViewType
+     */
+    public function getIndexedPageFolderView()
+    {
+        return $this->indexedPageFolderView;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\FractionalPageViewType
+     */
+    public function getFractionalPageFolderView()
+    {
+        return $this->fractionalPageFolderView;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\RestrictionType
+     */
+    public function getRestriction()
+    {
+        return $this->restriction;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
+     */
+    public function getParentFolderIds()
+    {
+        return $this->parentFolderIds;
     }
 }

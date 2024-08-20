@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: RelativeMonthlyRecurrencePatternType
  *
- * @method string getDaysOfWeek()
  * @method RelativeMonthlyRecurrencePatternType setDaysOfWeek(string $daysOfWeek)
- * @method string getDayOfWeekIndex()
  * @method RelativeMonthlyRecurrencePatternType setDayOfWeekIndex(string $dayOfWeekIndex)
  */
 class RelativeMonthlyRecurrencePatternType extends IntervalRecurrencePatternBaseType
@@ -25,4 +23,20 @@ class RelativeMonthlyRecurrencePatternType extends IntervalRecurrencePatternBase
      * @var string
      */
     protected $dayOfWeekIndex = null;
+
+    /**
+     * @return string
+     */
+    public function getDaysOfWeek()
+    {
+        return $this->daysOfWeek;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDayOfWeekIndex()
+    {
+        return $this->dayOfWeekIndex;
+    }
 }

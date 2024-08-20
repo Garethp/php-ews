@@ -9,9 +9,7 @@ namespace garethp\ews\API\Message;
  * XSD Type: GetStreamingEventsType
  *
  * @method GetStreamingEventsType addSubscriptionIds(string $subscriptionIds)
- * @method string[] getSubscriptionIds()
  * @method GetStreamingEventsType setSubscriptionIds(array $subscriptionIds)
- * @method integer getConnectionTimeout()
  * @method GetStreamingEventsType setConnectionTimeout(integer $connectionTimeout)
  */
 class GetStreamingEventsType extends BaseRequestType
@@ -26,4 +24,20 @@ class GetStreamingEventsType extends BaseRequestType
      * @var integer
      */
     protected $connectionTimeout = null;
+
+    /**
+     * @return string[]
+     */
+    public function getSubscriptionIds()
+    {
+        return $this->subscriptionIds;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getConnectionTimeout()
+    {
+        return $this->connectionTimeout;
+    }
 }

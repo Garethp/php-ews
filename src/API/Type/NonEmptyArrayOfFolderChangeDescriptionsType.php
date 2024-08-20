@@ -11,13 +11,10 @@ use garethp\ews\API\Type;
  * XSD Type: NonEmptyArrayOfFolderChangeDescriptionsType
  *
  * @method NonEmptyArrayOfFolderChangeDescriptionsType addAppendToFolderField(AppendToFolderFieldType $appendToFolderField)
- * @method AppendToFolderFieldType[] getAppendToFolderField()
  * @method NonEmptyArrayOfFolderChangeDescriptionsType setAppendToFolderField(array $appendToFolderField)
  * @method NonEmptyArrayOfFolderChangeDescriptionsType addSetFolderField(SetFolderFieldType $setFolderField)
- * @method SetFolderFieldType[] getSetFolderField()
  * @method NonEmptyArrayOfFolderChangeDescriptionsType setSetFolderField(array $setFolderField)
  * @method NonEmptyArrayOfFolderChangeDescriptionsType addDeleteFolderField(DeleteFolderFieldType $deleteFolderField)
- * @method DeleteFolderFieldType[] getDeleteFolderField()
  * @method NonEmptyArrayOfFolderChangeDescriptionsType setDeleteFolderField(array $deleteFolderField)
  */
 class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
@@ -37,4 +34,28 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
      * @var \garethp\ews\API\Type\DeleteFolderFieldType[]
      */
     protected $deleteFolderField = null;
+
+    /**
+     * @return AppendToFolderFieldType[]
+     */
+    public function getAppendToFolderField()
+    {
+        return $this->appendToFolderField;
+    }
+
+    /**
+     * @return SetFolderFieldType[]
+     */
+    public function getSetFolderField()
+    {
+        return $this->setFolderField;
+    }
+
+    /**
+     * @return DeleteFolderFieldType[]
+     */
+    public function getDeleteFolderField()
+    {
+        return $this->deleteFolderField;
+    }
 }

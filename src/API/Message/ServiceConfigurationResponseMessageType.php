@@ -8,11 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: ServiceConfigurationResponseMessageType
  *
- * @method \garethp\ews\API\Type\MailTipsServiceConfigurationType getMailTipsConfiguration()
  * @method ServiceConfigurationResponseMessageType setMailTipsConfiguration(\garethp\ews\API\Type\MailTipsServiceConfigurationType $mailTipsConfiguration)
- * @method \garethp\ews\API\Type\UnifiedMessageServiceConfigurationType getUnifiedMessagingConfiguration()
  * @method ServiceConfigurationResponseMessageType setUnifiedMessagingConfiguration(\garethp\ews\API\Type\UnifiedMessageServiceConfigurationType $unifiedMessagingConfiguration)
- * @method \garethp\ews\API\Type\ProtectionRulesServiceConfigurationType getProtectionRulesConfiguration()
  * @method ServiceConfigurationResponseMessageType setProtectionRulesConfiguration(\garethp\ews\API\Type\ProtectionRulesServiceConfigurationType $protectionRulesConfiguration)
  */
 class ServiceConfigurationResponseMessageType extends ResponseMessageType
@@ -32,4 +29,28 @@ class ServiceConfigurationResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\ProtectionRulesServiceConfigurationType
      */
     protected $protectionRulesConfiguration = null;
+
+    /**
+     * @return \garethp\ews\API\Type\MailTipsServiceConfigurationType
+     */
+    public function getMailTipsConfiguration()
+    {
+        return $this->mailTipsConfiguration;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\UnifiedMessageServiceConfigurationType
+     */
+    public function getUnifiedMessagingConfiguration()
+    {
+        return $this->unifiedMessagingConfiguration;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\ProtectionRulesServiceConfigurationType
+     */
+    public function getProtectionRulesConfiguration()
+    {
+        return $this->protectionRulesConfiguration;
+    }
 }

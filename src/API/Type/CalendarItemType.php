@@ -8,96 +8,53 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: CalendarItemType
  *
- * @method string getUID()
  * @method CalendarItemType setUID(string $uID)
- * @method \DateTime getRecurrenceId()
  * @method CalendarItemType setRecurrenceId(\DateTime $recurrenceId)
- * @method \DateTime getDateTimeStamp()
  * @method CalendarItemType setDateTimeStamp(\DateTime $dateTimeStamp)
- * @method \DateTime getStart()
  * @method CalendarItemType setStart(\DateTime $start)
- * @method \DateTime getEnd()
  * @method CalendarItemType setEnd(\DateTime $end)
- * @method \DateTime getOriginalStart()
  * @method CalendarItemType setOriginalStart(\DateTime $originalStart)
- * @method boolean getIsAllDayEvent()
  * @method CalendarItemType setIsAllDayEvent(boolean $isAllDayEvent)
- * @method string getLegacyFreeBusyStatus()
  * @method CalendarItemType setLegacyFreeBusyStatus(string $legacyFreeBusyStatus)
- * @method string getLocation()
  * @method CalendarItemType setLocation(string $location)
- * @method string getWhen()
  * @method CalendarItemType setWhen(string $when)
- * @method boolean getIsMeeting()
  * @method CalendarItemType setIsMeeting(boolean $isMeeting)
- * @method boolean getIsCancelled()
  * @method CalendarItemType setIsCancelled(boolean $isCancelled)
- * @method boolean getIsRecurring()
  * @method CalendarItemType setIsRecurring(boolean $isRecurring)
- * @method boolean getMeetingRequestWasSent()
  * @method CalendarItemType setMeetingRequestWasSent(boolean $meetingRequestWasSent)
- * @method boolean getIsResponseRequested()
  * @method CalendarItemType setIsResponseRequested(boolean $isResponseRequested)
- * @method string getCalendarItemType()
  * @method CalendarItemType setCalendarItemType(string $calendarItemType)
- * @method string getMyResponseType()
  * @method CalendarItemType setMyResponseType(string $myResponseType)
- * @method SingleRecipientType getOrganizer()
  * @method CalendarItemType setOrganizer(SingleRecipientType $organizer)
  * @method CalendarItemType addRequiredAttendees(AttendeeType $requiredAttendees)
- * @method AttendeeType[] getRequiredAttendees()
  * @method CalendarItemType setRequiredAttendees(array $requiredAttendees)
  * @method CalendarItemType addOptionalAttendees(AttendeeType $optionalAttendees)
- * @method AttendeeType[] getOptionalAttendees()
  * @method CalendarItemType setOptionalAttendees(array $optionalAttendees)
  * @method CalendarItemType addResources(AttendeeType $resources)
- * @method AttendeeType[] getResources()
  * @method CalendarItemType setResources(array $resources)
- * @method integer getConflictingMeetingCount()
  * @method CalendarItemType setConflictingMeetingCount(integer $conflictingMeetingCount)
- * @method integer getAdjacentMeetingCount()
  * @method CalendarItemType setAdjacentMeetingCount(integer $adjacentMeetingCount)
- * @method NonEmptyArrayOfAllItemsType getConflictingMeetings()
  * @method CalendarItemType setConflictingMeetings(NonEmptyArrayOfAllItemsType $conflictingMeetings)
- * @method NonEmptyArrayOfAllItemsType getAdjacentMeetings()
  * @method CalendarItemType setAdjacentMeetings(NonEmptyArrayOfAllItemsType $adjacentMeetings)
- * @method string getDuration()
  * @method CalendarItemType setDuration(string $duration)
- * @method string getTimeZone()
  * @method CalendarItemType setTimeZone(string $timeZone)
- * @method \DateTime getAppointmentReplyTime()
  * @method CalendarItemType setAppointmentReplyTime(\DateTime $appointmentReplyTime)
- * @method integer getAppointmentSequenceNumber()
  * @method CalendarItemType setAppointmentSequenceNumber(integer $appointmentSequenceNumber)
- * @method integer getAppointmentState()
  * @method CalendarItemType setAppointmentState(integer $appointmentState)
- * @method RecurrenceType getRecurrence()
  * @method CalendarItemType setRecurrence(RecurrenceType $recurrence)
- * @method OccurrenceInfoType getFirstOccurrence()
  * @method CalendarItemType setFirstOccurrence(OccurrenceInfoType $firstOccurrence)
- * @method OccurrenceInfoType getLastOccurrence()
  * @method CalendarItemType setLastOccurrence(OccurrenceInfoType $lastOccurrence)
  * @method CalendarItemType addModifiedOccurrences(OccurrenceInfoType $modifiedOccurrences)
- * @method OccurrenceInfoType[] getModifiedOccurrences()
  * @method CalendarItemType setModifiedOccurrences(array $modifiedOccurrences)
  * @method CalendarItemType addDeletedOccurrences(DeletedOccurrenceInfoType $deletedOccurrences)
- * @method DeletedOccurrenceInfoType[] getDeletedOccurrences()
  * @method CalendarItemType setDeletedOccurrences(array $deletedOccurrences)
- * @method TimeZoneType getMeetingTimeZone()
  * @method CalendarItemType setMeetingTimeZone(TimeZoneType $meetingTimeZone)
- * @method TimeZoneDefinitionType getStartTimeZone()
  * @method CalendarItemType setStartTimeZone(TimeZoneDefinitionType $startTimeZone)
- * @method TimeZoneDefinitionType getEndTimeZone()
  * @method CalendarItemType setEndTimeZone(TimeZoneDefinitionType $endTimeZone)
- * @method integer getConferenceType()
  * @method CalendarItemType setConferenceType(integer $conferenceType)
- * @method boolean getAllowNewTimeProposal()
  * @method CalendarItemType setAllowNewTimeProposal(boolean $allowNewTimeProposal)
- * @method boolean getIsOnlineMeeting()
  * @method CalendarItemType setIsOnlineMeeting(boolean $isOnlineMeeting)
- * @method string getMeetingWorkspaceUrl()
  * @method CalendarItemType setMeetingWorkspaceUrl(string $meetingWorkspaceUrl)
- * @method string getNetShowUrl()
  * @method CalendarItemType setNetShowUrl(string $netShowUrl)
  */
 class CalendarItemType extends ItemType
@@ -328,11 +285,91 @@ class CalendarItemType extends ItemType
     protected $netShowUrl = null;
 
     /**
+     * @return string
+     */
+    public function getUID()
+    {
+        return $this->uID;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getRecurrenceId()
+    {
+        return $this->recurrenceId;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateTimeStamp()
+    {
+        return $this->dateTimeStamp;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getStart()
+    {
+        return $this->start;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getEnd()
+    {
+        return $this->end;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getOriginalStart()
+    {
+        return $this->originalStart;
+    }
+
+    /**
      * @returns bool
      */
     public function isAllDayEvent()
     {
         return ((bool) $this->isAllDayEvent);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsAllDayEvent()
+    {
+        return $this->isAllDayEvent;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLegacyFreeBusyStatus()
+    {
+        return $this->legacyFreeBusyStatus;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWhen()
+    {
+        return $this->when;
     }
 
     /**
@@ -344,11 +381,27 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsMeeting()
+    {
+        return $this->isMeeting;
+    }
+
+    /**
      * @returns bool
      */
     public function isCancelled()
     {
         return ((bool) $this->isCancelled);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsCancelled()
+    {
+        return $this->isCancelled;
     }
 
     /**
@@ -360,11 +413,27 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsRecurring()
+    {
+        return $this->isRecurring;
+    }
+
+    /**
      * @returns bool
      */
     public function isMeetingRequestWasSent()
     {
         return ((bool) $this->meetingRequestWasSent);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getMeetingRequestWasSent()
+    {
+        return $this->meetingRequestWasSent;
     }
 
     /**
@@ -376,6 +445,206 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsResponseRequested()
+    {
+        return $this->isResponseRequested;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCalendarItemType()
+    {
+        return $this->calendarItemType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMyResponseType()
+    {
+        return $this->myResponseType;
+    }
+
+    /**
+     * @return SingleRecipientType
+     */
+    public function getOrganizer()
+    {
+        return $this->organizer;
+    }
+
+    /**
+     * @return AttendeeType[]
+     */
+    public function getRequiredAttendees()
+    {
+        return $this->requiredAttendees;
+    }
+
+    /**
+     * @return AttendeeType[]
+     */
+    public function getOptionalAttendees()
+    {
+        return $this->optionalAttendees;
+    }
+
+    /**
+     * @return AttendeeType[]
+     */
+    public function getResources()
+    {
+        return $this->resources;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getConflictingMeetingCount()
+    {
+        return $this->conflictingMeetingCount;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getAdjacentMeetingCount()
+    {
+        return $this->adjacentMeetingCount;
+    }
+
+    /**
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function getConflictingMeetings()
+    {
+        return $this->conflictingMeetings;
+    }
+
+    /**
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function getAdjacentMeetings()
+    {
+        return $this->adjacentMeetings;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTimeZone()
+    {
+        return $this->timeZone;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getAppointmentReplyTime()
+    {
+        return $this->appointmentReplyTime;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getAppointmentSequenceNumber()
+    {
+        return $this->appointmentSequenceNumber;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getAppointmentState()
+    {
+        return $this->appointmentState;
+    }
+
+    /**
+     * @return RecurrenceType
+     */
+    public function getRecurrence()
+    {
+        return $this->recurrence;
+    }
+
+    /**
+     * @return OccurrenceInfoType
+     */
+    public function getFirstOccurrence()
+    {
+        return $this->firstOccurrence;
+    }
+
+    /**
+     * @return OccurrenceInfoType
+     */
+    public function getLastOccurrence()
+    {
+        return $this->lastOccurrence;
+    }
+
+    /**
+     * @return OccurrenceInfoType[]
+     */
+    public function getModifiedOccurrences()
+    {
+        return $this->modifiedOccurrences;
+    }
+
+    /**
+     * @return DeletedOccurrenceInfoType[]
+     */
+    public function getDeletedOccurrences()
+    {
+        return $this->deletedOccurrences;
+    }
+
+    /**
+     * @return TimeZoneType
+     */
+    public function getMeetingTimeZone()
+    {
+        return $this->meetingTimeZone;
+    }
+
+    /**
+     * @return TimeZoneDefinitionType
+     */
+    public function getStartTimeZone()
+    {
+        return $this->startTimeZone;
+    }
+
+    /**
+     * @return TimeZoneDefinitionType
+     */
+    public function getEndTimeZone()
+    {
+        return $this->endTimeZone;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getConferenceType()
+    {
+        return $this->conferenceType;
+    }
+
+    /**
      * @returns bool
      */
     public function isAllowNewTimeProposal()
@@ -384,10 +653,42 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getAllowNewTimeProposal()
+    {
+        return $this->allowNewTimeProposal;
+    }
+
+    /**
      * @returns bool
      */
     public function isOnlineMeeting()
     {
         return ((bool) $this->isOnlineMeeting);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsOnlineMeeting()
+    {
+        return $this->isOnlineMeeting;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMeetingWorkspaceUrl()
+    {
+        return $this->meetingWorkspaceUrl;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNetShowUrl()
+    {
+        return $this->netShowUrl;
     }
 }

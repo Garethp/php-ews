@@ -9,7 +9,6 @@ namespace garethp\ews\API\Message;
  * XSD Type: FindConversationResponseMessageType
  *
  * @method FindConversationResponseMessageType addConversations(\garethp\ews\API\Type\ConversationType $conversations)
- * @method \garethp\ews\API\Type\ConversationType[] getConversations()
  * @method FindConversationResponseMessageType setConversations(array $conversations)
  */
 class FindConversationResponseMessageType extends ResponseMessageType
@@ -19,4 +18,12 @@ class FindConversationResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\ConversationType[]
      */
     protected $conversations = null;
+
+    /**
+     * @return \garethp\ews\API\Type\ConversationType[]
+     */
+    public function getConversations()
+    {
+        return $this->conversations;
+    }
 }

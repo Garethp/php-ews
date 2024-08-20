@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SerializableTimeZone
  *
- * @method integer getBias()
  * @method SerializableTimeZoneType setBias(integer $bias)
- * @method SerializableTimeZoneTimeType getStandardTime()
  * @method SerializableTimeZoneType setStandardTime(SerializableTimeZoneTimeType $standardTime)
- * @method SerializableTimeZoneTimeType getDaylightTime()
  * @method SerializableTimeZoneType setDaylightTime(SerializableTimeZoneTimeType $daylightTime)
  */
 class SerializableTimeZoneType extends Type
@@ -34,4 +31,28 @@ class SerializableTimeZoneType extends Type
      * @var \garethp\ews\API\Type\SerializableTimeZoneTimeType
      */
     protected $daylightTime = null;
+
+    /**
+     * @return integer
+     */
+    public function getBias()
+    {
+        return $this->bias;
+    }
+
+    /**
+     * @return SerializableTimeZoneTimeType
+     */
+    public function getStandardTime()
+    {
+        return $this->standardTime;
+    }
+
+    /**
+     * @return SerializableTimeZoneTimeType
+     */
+    public function getDaylightTime()
+    {
+        return $this->daylightTime;
+    }
 }

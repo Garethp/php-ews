@@ -14,19 +14,14 @@ use garethp\ews\API\Type;
  * XSD Type: ArrayOfFoldersType
  *
  * @method ArrayOfFoldersType addFolder(FolderType $folder)
- * @method FolderType[] getFolder()
  * @method ArrayOfFoldersType setFolder(array $folder)
  * @method ArrayOfFoldersType addCalendarFolder(CalendarFolderType $calendarFolder)
- * @method CalendarFolderType[] getCalendarFolder()
  * @method ArrayOfFoldersType setCalendarFolder(array $calendarFolder)
  * @method ArrayOfFoldersType addContactsFolder(ContactsFolderType $contactsFolder)
- * @method ContactsFolderType[] getContactsFolder()
  * @method ArrayOfFoldersType setContactsFolder(array $contactsFolder)
  * @method ArrayOfFoldersType addSearchFolder(SearchFolderType $searchFolder)
- * @method SearchFolderType[] getSearchFolder()
  * @method ArrayOfFoldersType setSearchFolder(array $searchFolder)
  * @method ArrayOfFoldersType addTasksFolder(TasksFolderType $tasksFolder)
- * @method TasksFolderType[] getTasksFolder()
  * @method ArrayOfFoldersType setTasksFolder(array $tasksFolder)
  */
 class ArrayOfFoldersType extends Type implements Countable, ArrayAccess, IteratorAggregate
@@ -145,5 +140,45 @@ class ArrayOfFoldersType extends Type implements Countable, ArrayAccess, Iterato
     {
         $this->getAllFolders();
         return new \ArrayIterator($this->allFolders);
+    }
+
+    /**
+     * @return FolderType[]
+     */
+    public function getFolder()
+    {
+        return $this->folder;
+    }
+
+    /**
+     * @return CalendarFolderType[]
+     */
+    public function getCalendarFolder()
+    {
+        return $this->calendarFolder;
+    }
+
+    /**
+     * @return ContactsFolderType[]
+     */
+    public function getContactsFolder()
+    {
+        return $this->contactsFolder;
+    }
+
+    /**
+     * @return SearchFolderType[]
+     */
+    public function getSearchFolder()
+    {
+        return $this->searchFolder;
+    }
+
+    /**
+     * @return TasksFolderType[]
+     */
+    public function getTasksFolder()
+    {
+        return $this->tasksFolder;
     }
 }

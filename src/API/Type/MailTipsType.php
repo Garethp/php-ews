@@ -10,28 +10,17 @@ use garethp\ews\API\Type;
  *
  * XSD Type: MailTips
  *
- * @method EmailAddressType getRecipientAddress()
  * @method MailTipsType setRecipientAddress(EmailAddressType $recipientAddress)
  * @method MailTipsType addPendingMailTips(string $pendingMailTips)
- * @method string[] getPendingMailTips()
  * @method MailTipsType setPendingMailTips(array $pendingMailTips)
- * @method OutOfOfficeMailTipType getOutOfOffice()
  * @method MailTipsType setOutOfOffice(OutOfOfficeMailTipType $outOfOffice)
- * @method boolean getMailboxFull()
  * @method MailTipsType setMailboxFull(boolean $mailboxFull)
- * @method string getCustomMailTip()
  * @method MailTipsType setCustomMailTip(string $customMailTip)
- * @method integer getTotalMemberCount()
  * @method MailTipsType setTotalMemberCount(integer $totalMemberCount)
- * @method integer getExternalMemberCount()
  * @method MailTipsType setExternalMemberCount(integer $externalMemberCount)
- * @method integer getMaxMessageSize()
  * @method MailTipsType setMaxMessageSize(integer $maxMessageSize)
- * @method boolean getDeliveryRestricted()
  * @method MailTipsType setDeliveryRestricted(boolean $deliveryRestricted)
- * @method boolean getIsModerated()
  * @method MailTipsType setIsModerated(boolean $isModerated)
- * @method boolean getInvalidRecipient()
  * @method MailTipsType setInvalidRecipient(boolean $invalidRecipient)
  */
 class MailTipsType extends Type
@@ -93,11 +82,75 @@ class MailTipsType extends Type
     protected $invalidRecipient = null;
 
     /**
+     * @return EmailAddressType
+     */
+    public function getRecipientAddress()
+    {
+        return $this->recipientAddress;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getPendingMailTips()
+    {
+        return $this->pendingMailTips;
+    }
+
+    /**
+     * @return OutOfOfficeMailTipType
+     */
+    public function getOutOfOffice()
+    {
+        return $this->outOfOffice;
+    }
+
+    /**
      * @returns bool
      */
     public function isMailboxFull()
     {
         return ((bool) $this->mailboxFull);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getMailboxFull()
+    {
+        return $this->mailboxFull;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomMailTip()
+    {
+        return $this->customMailTip;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getTotalMemberCount()
+    {
+        return $this->totalMemberCount;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getExternalMemberCount()
+    {
+        return $this->externalMemberCount;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMaxMessageSize()
+    {
+        return $this->maxMessageSize;
     }
 
     /**
@@ -109,6 +162,14 @@ class MailTipsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getDeliveryRestricted()
+    {
+        return $this->deliveryRestricted;
+    }
+
+    /**
      * @returns bool
      */
     public function isModerated()
@@ -117,10 +178,26 @@ class MailTipsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsModerated()
+    {
+        return $this->isModerated;
+    }
+
+    /**
      * @returns bool
      */
     public function isInvalidRecipient()
     {
         return ((bool) $this->invalidRecipient);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getInvalidRecipient()
+    {
+        return $this->invalidRecipient;
     }
 }

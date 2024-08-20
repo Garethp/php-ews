@@ -8,32 +8,19 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: FindMessageTrackingReportRequestType
  *
- * @method string getScope()
  * @method FindMessageTrackingReportRequestType setScope(string $scope)
- * @method string getDomain()
  * @method FindMessageTrackingReportRequestType setDomain(string $domain)
- * @method \garethp\ews\API\Type\EmailAddressType getSender()
  * @method FindMessageTrackingReportRequestType setSender(\garethp\ews\API\Type\EmailAddressType $sender)
- * @method \garethp\ews\API\Type\EmailAddressType getPurportedSender()
  * @method FindMessageTrackingReportRequestType setPurportedSender(\garethp\ews\API\Type\EmailAddressType $purportedSender)
- * @method \garethp\ews\API\Type\EmailAddressType getRecipient()
  * @method FindMessageTrackingReportRequestType setRecipient(\garethp\ews\API\Type\EmailAddressType $recipient)
- * @method string getSubject()
  * @method FindMessageTrackingReportRequestType setSubject(string $subject)
- * @method \DateTime getStartDateTime()
  * @method FindMessageTrackingReportRequestType setStartDateTime(\DateTime $startDateTime)
- * @method \DateTime getEndDateTime()
  * @method FindMessageTrackingReportRequestType setEndDateTime(\DateTime $endDateTime)
- * @method string getMessageId()
  * @method FindMessageTrackingReportRequestType setMessageId(string $messageId)
- * @method \garethp\ews\API\Type\EmailAddressType getFederatedDeliveryMailbox()
  * @method FindMessageTrackingReportRequestType setFederatedDeliveryMailbox(\garethp\ews\API\Type\EmailAddressType $federatedDeliveryMailbox)
- * @method string getDiagnosticsLevel()
  * @method FindMessageTrackingReportRequestType setDiagnosticsLevel(string $diagnosticsLevel)
- * @method string getServerHint()
  * @method FindMessageTrackingReportRequestType setServerHint(string $serverHint)
  * @method FindMessageTrackingReportRequestType addProperties(\garethp\ews\API\Type\TrackingPropertyType $properties)
- * @method \garethp\ews\API\Type\TrackingPropertyType[] getProperties()
  * @method FindMessageTrackingReportRequestType setProperties(array $properties)
  */
 class FindMessageTrackingReportRequestType extends BaseRequestType
@@ -108,4 +95,108 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      * @var \garethp\ews\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
+
+    /**
+     * @return string
+     */
+    public function getScope()
+    {
+        return $this->scope;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDomain()
+    {
+        return $this->domain;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getSender()
+    {
+        return $this->sender;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getPurportedSender()
+    {
+        return $this->purportedSender;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getRecipient()
+    {
+        return $this->recipient;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getStartDateTime()
+    {
+        return $this->startDateTime;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getEndDateTime()
+    {
+        return $this->endDateTime;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessageId()
+    {
+        return $this->messageId;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getFederatedDeliveryMailbox()
+    {
+        return $this->federatedDeliveryMailbox;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiagnosticsLevel()
+    {
+        return $this->diagnosticsLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getServerHint()
+    {
+        return $this->serverHint;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\TrackingPropertyType[]
+     */
+    public function getProperties()
+    {
+        return $this->properties;
+    }
 }

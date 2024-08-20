@@ -8,11 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: UpdateInboxRulesRequestType
  *
- * @method string getMailboxSmtpAddress()
  * @method UpdateInboxRulesRequestType setMailboxSmtpAddress(string $mailboxSmtpAddress)
- * @method boolean getRemoveOutlookRuleBlob()
  * @method UpdateInboxRulesRequestType setRemoveOutlookRuleBlob(boolean $removeOutlookRuleBlob)
- * @method \garethp\ews\API\Type\ArrayOfRuleOperationsType getOperations()
  * @method UpdateInboxRulesRequestType setOperations(\garethp\ews\API\Type\ArrayOfRuleOperationsType $operations)
  */
 class UpdateInboxRulesRequestType extends BaseRequestType
@@ -34,10 +31,34 @@ class UpdateInboxRulesRequestType extends BaseRequestType
     protected $operations = null;
 
     /**
+     * @return string
+     */
+    public function getMailboxSmtpAddress()
+    {
+        return $this->mailboxSmtpAddress;
+    }
+
+    /**
      * @returns bool
      */
     public function isRemoveOutlookRuleBlob()
     {
         return ((bool) $this->removeOutlookRuleBlob);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getRemoveOutlookRuleBlob()
+    {
+        return $this->removeOutlookRuleBlob;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\ArrayOfRuleOperationsType
+     */
+    public function getOperations()
+    {
+        return $this->operations;
     }
 }

@@ -11,139 +11,94 @@ use garethp\ews\API\Message;
  * XSD Type: ArrayOfResponseMessagesType
  *
  * @method ArrayOfResponseMessagesType addCreateItemResponseMessage(ItemInfoResponseMessageType $createItemResponseMessage)
- * @method ItemInfoResponseMessageType[] getCreateItemResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateItemResponseMessage(array $createItemResponseMessage)
  * @method ArrayOfResponseMessagesType addDeleteItemResponseMessage(ResponseMessageType $deleteItemResponseMessage)
- * @method ResponseMessageType[] getDeleteItemResponseMessage()
  * @method ArrayOfResponseMessagesType setDeleteItemResponseMessage(array $deleteItemResponseMessage)
  * @method ArrayOfResponseMessagesType addGetItemResponseMessage(ItemInfoResponseMessageType $getItemResponseMessage)
- * @method ItemInfoResponseMessageType[] getGetItemResponseMessage()
  * @method ArrayOfResponseMessagesType setGetItemResponseMessage(array $getItemResponseMessage)
  * @method ArrayOfResponseMessagesType addUpdateItemResponseMessage(UpdateItemResponseMessageType $updateItemResponseMessage)
- * @method UpdateItemResponseMessageType[] getUpdateItemResponseMessage()
  * @method ArrayOfResponseMessagesType setUpdateItemResponseMessage(array $updateItemResponseMessage)
  * @method ArrayOfResponseMessagesType addSendItemResponseMessage(ResponseMessageType $sendItemResponseMessage)
- * @method ResponseMessageType[] getSendItemResponseMessage()
  * @method ArrayOfResponseMessagesType setSendItemResponseMessage(array $sendItemResponseMessage)
  * @method ArrayOfResponseMessagesType addDeleteFolderResponseMessage(ResponseMessageType $deleteFolderResponseMessage)
- * @method ResponseMessageType[] getDeleteFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setDeleteFolderResponseMessage(array $deleteFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addEmptyFolderResponseMessage(ResponseMessageType $emptyFolderResponseMessage)
- * @method ResponseMessageType[] getEmptyFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setEmptyFolderResponseMessage(array $emptyFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addCreateFolderResponseMessage(FolderInfoResponseMessageType $createFolderResponseMessage)
- * @method FolderInfoResponseMessageType[] getCreateFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateFolderResponseMessage(array $createFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addGetFolderResponseMessage(FolderInfoResponseMessageType $getFolderResponseMessage)
- * @method FolderInfoResponseMessageType[] getGetFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setGetFolderResponseMessage(array $getFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addFindFolderResponseMessage(FindFolderResponseMessageType $findFolderResponseMessage)
- * @method FindFolderResponseMessageType[] getFindFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setFindFolderResponseMessage(array $findFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addUpdateFolderResponseMessage(FolderInfoResponseMessageType $updateFolderResponseMessage)
- * @method FolderInfoResponseMessageType[] getUpdateFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setUpdateFolderResponseMessage(array $updateFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addMoveFolderResponseMessage(FolderInfoResponseMessageType $moveFolderResponseMessage)
- * @method FolderInfoResponseMessageType[] getMoveFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setMoveFolderResponseMessage(array $moveFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addCopyFolderResponseMessage(FolderInfoResponseMessageType $copyFolderResponseMessage)
- * @method FolderInfoResponseMessageType[] getCopyFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setCopyFolderResponseMessage(array $copyFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addCreateAttachmentResponseMessage(AttachmentInfoResponseMessageType $createAttachmentResponseMessage)
- * @method AttachmentInfoResponseMessageType[] getCreateAttachmentResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateAttachmentResponseMessage(array $createAttachmentResponseMessage)
  * @method ArrayOfResponseMessagesType addDeleteAttachmentResponseMessage(DeleteAttachmentResponseMessageType $deleteAttachmentResponseMessage)
- * @method DeleteAttachmentResponseMessageType[] getDeleteAttachmentResponseMessage()
  * @method ArrayOfResponseMessagesType setDeleteAttachmentResponseMessage(array $deleteAttachmentResponseMessage)
  * @method ArrayOfResponseMessagesType addGetAttachmentResponseMessage(AttachmentInfoResponseMessageType $getAttachmentResponseMessage)
- * @method AttachmentInfoResponseMessageType[] getGetAttachmentResponseMessage()
  * @method ArrayOfResponseMessagesType setGetAttachmentResponseMessage(array $getAttachmentResponseMessage)
  * @method ArrayOfResponseMessagesType addUploadItemsResponseMessage(UploadItemsResponseMessageType $uploadItemsResponseMessage)
- * @method UploadItemsResponseMessageType[] getUploadItemsResponseMessage()
  * @method ArrayOfResponseMessagesType setUploadItemsResponseMessage(array $uploadItemsResponseMessage)
  * @method ArrayOfResponseMessagesType addExportItemsResponseMessage(ExportItemsResponseMessageType $exportItemsResponseMessage)
- * @method ExportItemsResponseMessageType[] getExportItemsResponseMessage()
  * @method ArrayOfResponseMessagesType setExportItemsResponseMessage(array $exportItemsResponseMessage)
  * @method ArrayOfResponseMessagesType addFindItemResponseMessage(FindItemResponseMessageType $findItemResponseMessage)
- * @method FindItemResponseMessageType[] getFindItemResponseMessage()
  * @method ArrayOfResponseMessagesType setFindItemResponseMessage(array $findItemResponseMessage)
  * @method ArrayOfResponseMessagesType addMoveItemResponseMessage(ItemInfoResponseMessageType $moveItemResponseMessage)
- * @method ItemInfoResponseMessageType[] getMoveItemResponseMessage()
  * @method ArrayOfResponseMessagesType setMoveItemResponseMessage(array $moveItemResponseMessage)
  * @method ArrayOfResponseMessagesType addCopyItemResponseMessage(ItemInfoResponseMessageType $copyItemResponseMessage)
- * @method ItemInfoResponseMessageType[] getCopyItemResponseMessage()
  * @method ArrayOfResponseMessagesType setCopyItemResponseMessage(array $copyItemResponseMessage)
  * @method ArrayOfResponseMessagesType addResolveNamesResponseMessage(ResolveNamesResponseMessageType $resolveNamesResponseMessage)
- * @method ResolveNamesResponseMessageType[] getResolveNamesResponseMessage()
  * @method ArrayOfResponseMessagesType setResolveNamesResponseMessage(array $resolveNamesResponseMessage)
  * @method ArrayOfResponseMessagesType addExpandDLResponseMessage(ExpandDLResponseMessageType $expandDLResponseMessage)
- * @method ExpandDLResponseMessageType[] getExpandDLResponseMessage()
  * @method ArrayOfResponseMessagesType setExpandDLResponseMessage(array $expandDLResponseMessage)
  * @method ArrayOfResponseMessagesType addGetServerTimeZonesResponseMessage(GetServerTimeZonesResponseMessageType $getServerTimeZonesResponseMessage)
- * @method GetServerTimeZonesResponseMessageType[] getGetServerTimeZonesResponseMessage()
  * @method ArrayOfResponseMessagesType setGetServerTimeZonesResponseMessage(array $getServerTimeZonesResponseMessage)
  * @method ArrayOfResponseMessagesType addGetEventsResponseMessage(GetEventsResponseMessageType $getEventsResponseMessage)
- * @method GetEventsResponseMessageType[] getGetEventsResponseMessage()
  * @method ArrayOfResponseMessagesType setGetEventsResponseMessage(array $getEventsResponseMessage)
  * @method ArrayOfResponseMessagesType addGetStreamingEventsResponseMessage(GetStreamingEventsResponseMessageType $getStreamingEventsResponseMessage)
- * @method GetStreamingEventsResponseMessageType[] getGetStreamingEventsResponseMessage()
  * @method ArrayOfResponseMessagesType setGetStreamingEventsResponseMessage(array $getStreamingEventsResponseMessage)
  * @method ArrayOfResponseMessagesType addSubscribeResponseMessage(SubscribeResponseMessageType $subscribeResponseMessage)
- * @method SubscribeResponseMessageType[] getSubscribeResponseMessage()
  * @method ArrayOfResponseMessagesType setSubscribeResponseMessage(array $subscribeResponseMessage)
  * @method ArrayOfResponseMessagesType addUnsubscribeResponseMessage(ResponseMessageType $unsubscribeResponseMessage)
- * @method ResponseMessageType[] getUnsubscribeResponseMessage()
  * @method ArrayOfResponseMessagesType setUnsubscribeResponseMessage(array $unsubscribeResponseMessage)
  * @method ArrayOfResponseMessagesType addSendNotificationResponseMessage(SendNotificationResponseMessageType $sendNotificationResponseMessage)
- * @method SendNotificationResponseMessageType[] getSendNotificationResponseMessage()
  * @method ArrayOfResponseMessagesType setSendNotificationResponseMessage(array $sendNotificationResponseMessage)
  * @method ArrayOfResponseMessagesType addSyncFolderHierarchyResponseMessage(SyncFolderHierarchyResponseMessageType $syncFolderHierarchyResponseMessage)
- * @method SyncFolderHierarchyResponseMessageType[] getSyncFolderHierarchyResponseMessage()
  * @method ArrayOfResponseMessagesType setSyncFolderHierarchyResponseMessage(array $syncFolderHierarchyResponseMessage)
  * @method ArrayOfResponseMessagesType addSyncFolderItemsResponseMessage(SyncFolderItemsResponseMessageType $syncFolderItemsResponseMessage)
- * @method SyncFolderItemsResponseMessageType[] getSyncFolderItemsResponseMessage()
  * @method ArrayOfResponseMessagesType setSyncFolderItemsResponseMessage(array $syncFolderItemsResponseMessage)
  * @method ArrayOfResponseMessagesType addCreateManagedFolderResponseMessage(FolderInfoResponseMessageType $createManagedFolderResponseMessage)
- * @method FolderInfoResponseMessageType[] getCreateManagedFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateManagedFolderResponseMessage(array $createManagedFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addConvertIdResponseMessage(ConvertIdResponseMessageType $convertIdResponseMessage)
- * @method ConvertIdResponseMessageType[] getConvertIdResponseMessage()
  * @method ArrayOfResponseMessagesType setConvertIdResponseMessage(array $convertIdResponseMessage)
  * @method ArrayOfResponseMessagesType addGetSharingMetadataResponseMessage(GetSharingMetadataResponseMessageType $getSharingMetadataResponseMessage)
- * @method GetSharingMetadataResponseMessageType[] getGetSharingMetadataResponseMessage()
  * @method ArrayOfResponseMessagesType setGetSharingMetadataResponseMessage(array $getSharingMetadataResponseMessage)
  * @method ArrayOfResponseMessagesType addRefreshSharingFolderResponseMessage(RefreshSharingFolderResponseMessageType $refreshSharingFolderResponseMessage)
- * @method RefreshSharingFolderResponseMessageType[] getRefreshSharingFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setRefreshSharingFolderResponseMessage(array $refreshSharingFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addGetSharingFolderResponseMessage(GetSharingFolderResponseMessageType $getSharingFolderResponseMessage)
- * @method GetSharingFolderResponseMessageType[] getGetSharingFolderResponseMessage()
  * @method ArrayOfResponseMessagesType setGetSharingFolderResponseMessage(array $getSharingFolderResponseMessage)
  * @method ArrayOfResponseMessagesType addCreateUserConfigurationResponseMessage(ResponseMessageType $createUserConfigurationResponseMessage)
- * @method ResponseMessageType[] getCreateUserConfigurationResponseMessage()
  * @method ArrayOfResponseMessagesType setCreateUserConfigurationResponseMessage(array $createUserConfigurationResponseMessage)
  * @method ArrayOfResponseMessagesType addDeleteUserConfigurationResponseMessage(ResponseMessageType $deleteUserConfigurationResponseMessage)
- * @method ResponseMessageType[] getDeleteUserConfigurationResponseMessage()
  * @method ArrayOfResponseMessagesType setDeleteUserConfigurationResponseMessage(array $deleteUserConfigurationResponseMessage)
  * @method ArrayOfResponseMessagesType addGetUserConfigurationResponseMessage(GetUserConfigurationResponseMessageType $getUserConfigurationResponseMessage)
- * @method GetUserConfigurationResponseMessageType[] getGetUserConfigurationResponseMessage()
  * @method ArrayOfResponseMessagesType setGetUserConfigurationResponseMessage(array $getUserConfigurationResponseMessage)
  * @method ArrayOfResponseMessagesType addUpdateUserConfigurationResponseMessage(ResponseMessageType $updateUserConfigurationResponseMessage)
- * @method ResponseMessageType[] getUpdateUserConfigurationResponseMessage()
  * @method ArrayOfResponseMessagesType setUpdateUserConfigurationResponseMessage(array $updateUserConfigurationResponseMessage)
  * @method ArrayOfResponseMessagesType addGetRoomListsResponse(GetRoomListsResponseMessageType $getRoomListsResponse)
- * @method GetRoomListsResponseMessageType[] getGetRoomListsResponse()
  * @method ArrayOfResponseMessagesType setGetRoomListsResponse(array $getRoomListsResponse)
  * @method ArrayOfResponseMessagesType addGetRoomsResponse(GetRoomsResponseMessageType $getRoomsResponse)
- * @method GetRoomsResponseMessageType[] getGetRoomsResponse()
  * @method ArrayOfResponseMessagesType setGetRoomsResponse(array $getRoomsResponse)
  * @method ArrayOfResponseMessagesType addApplyConversationActionResponseMessage(ResponseMessageType $applyConversationActionResponseMessage)
- * @method ResponseMessageType[] getApplyConversationActionResponseMessage()
  * @method ArrayOfResponseMessagesType setApplyConversationActionResponseMessage(array $applyConversationActionResponseMessage)
  * @method ArrayOfResponseMessagesType addFindMailboxStatisticsByKeywordsResponseMessage(FindMailboxStatisticsByKeywordsResponseMessageType $findMailboxStatisticsByKeywordsResponseMessage)
- * @method FindMailboxStatisticsByKeywordsResponseMessageType[] getFindMailboxStatisticsByKeywordsResponseMessage()
  * @method ArrayOfResponseMessagesType setFindMailboxStatisticsByKeywordsResponseMessage(array $findMailboxStatisticsByKeywordsResponseMessage)
  * @method ArrayOfResponseMessagesType addGetPasswordExpirationDateResponse(GetPasswordExpirationDateResponseMessageType $getPasswordExpirationDateResponse)
- * @method GetPasswordExpirationDateResponseMessageType[] getGetPasswordExpirationDateResponse()
  * @method ArrayOfResponseMessagesType setGetPasswordExpirationDateResponse(array $getPasswordExpirationDateResponse)
  */
 class ArrayOfResponseMessagesType extends Message
@@ -374,4 +329,364 @@ class ArrayOfResponseMessagesType extends Message
      * @var \garethp\ews\API\Message\GetPasswordExpirationDateResponseMessageType[]
      */
     protected $getPasswordExpirationDateResponse = null;
+
+    /**
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getCreateItemResponseMessage()
+    {
+        return $this->createItemResponseMessage;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getDeleteItemResponseMessage()
+    {
+        return $this->deleteItemResponseMessage;
+    }
+
+    /**
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getGetItemResponseMessage()
+    {
+        return $this->getItemResponseMessage;
+    }
+
+    /**
+     * @return UpdateItemResponseMessageType[]
+     */
+    public function getUpdateItemResponseMessage()
+    {
+        return $this->updateItemResponseMessage;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getSendItemResponseMessage()
+    {
+        return $this->sendItemResponseMessage;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getDeleteFolderResponseMessage()
+    {
+        return $this->deleteFolderResponseMessage;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getEmptyFolderResponseMessage()
+    {
+        return $this->emptyFolderResponseMessage;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getCreateFolderResponseMessage()
+    {
+        return $this->createFolderResponseMessage;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getGetFolderResponseMessage()
+    {
+        return $this->getFolderResponseMessage;
+    }
+
+    /**
+     * @return FindFolderResponseMessageType[]
+     */
+    public function getFindFolderResponseMessage()
+    {
+        return $this->findFolderResponseMessage;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getUpdateFolderResponseMessage()
+    {
+        return $this->updateFolderResponseMessage;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getMoveFolderResponseMessage()
+    {
+        return $this->moveFolderResponseMessage;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getCopyFolderResponseMessage()
+    {
+        return $this->copyFolderResponseMessage;
+    }
+
+    /**
+     * @return AttachmentInfoResponseMessageType[]
+     */
+    public function getCreateAttachmentResponseMessage()
+    {
+        return $this->createAttachmentResponseMessage;
+    }
+
+    /**
+     * @return DeleteAttachmentResponseMessageType[]
+     */
+    public function getDeleteAttachmentResponseMessage()
+    {
+        return $this->deleteAttachmentResponseMessage;
+    }
+
+    /**
+     * @return AttachmentInfoResponseMessageType[]
+     */
+    public function getGetAttachmentResponseMessage()
+    {
+        return $this->getAttachmentResponseMessage;
+    }
+
+    /**
+     * @return UploadItemsResponseMessageType[]
+     */
+    public function getUploadItemsResponseMessage()
+    {
+        return $this->uploadItemsResponseMessage;
+    }
+
+    /**
+     * @return ExportItemsResponseMessageType[]
+     */
+    public function getExportItemsResponseMessage()
+    {
+        return $this->exportItemsResponseMessage;
+    }
+
+    /**
+     * @return FindItemResponseMessageType[]
+     */
+    public function getFindItemResponseMessage()
+    {
+        return $this->findItemResponseMessage;
+    }
+
+    /**
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getMoveItemResponseMessage()
+    {
+        return $this->moveItemResponseMessage;
+    }
+
+    /**
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getCopyItemResponseMessage()
+    {
+        return $this->copyItemResponseMessage;
+    }
+
+    /**
+     * @return ResolveNamesResponseMessageType[]
+     */
+    public function getResolveNamesResponseMessage()
+    {
+        return $this->resolveNamesResponseMessage;
+    }
+
+    /**
+     * @return ExpandDLResponseMessageType[]
+     */
+    public function getExpandDLResponseMessage()
+    {
+        return $this->expandDLResponseMessage;
+    }
+
+    /**
+     * @return GetServerTimeZonesResponseMessageType[]
+     */
+    public function getGetServerTimeZonesResponseMessage()
+    {
+        return $this->getServerTimeZonesResponseMessage;
+    }
+
+    /**
+     * @return GetEventsResponseMessageType[]
+     */
+    public function getGetEventsResponseMessage()
+    {
+        return $this->getEventsResponseMessage;
+    }
+
+    /**
+     * @return GetStreamingEventsResponseMessageType[]
+     */
+    public function getGetStreamingEventsResponseMessage()
+    {
+        return $this->getStreamingEventsResponseMessage;
+    }
+
+    /**
+     * @return SubscribeResponseMessageType[]
+     */
+    public function getSubscribeResponseMessage()
+    {
+        return $this->subscribeResponseMessage;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getUnsubscribeResponseMessage()
+    {
+        return $this->unsubscribeResponseMessage;
+    }
+
+    /**
+     * @return SendNotificationResponseMessageType[]
+     */
+    public function getSendNotificationResponseMessage()
+    {
+        return $this->sendNotificationResponseMessage;
+    }
+
+    /**
+     * @return SyncFolderHierarchyResponseMessageType[]
+     */
+    public function getSyncFolderHierarchyResponseMessage()
+    {
+        return $this->syncFolderHierarchyResponseMessage;
+    }
+
+    /**
+     * @return SyncFolderItemsResponseMessageType[]
+     */
+    public function getSyncFolderItemsResponseMessage()
+    {
+        return $this->syncFolderItemsResponseMessage;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getCreateManagedFolderResponseMessage()
+    {
+        return $this->createManagedFolderResponseMessage;
+    }
+
+    /**
+     * @return ConvertIdResponseMessageType[]
+     */
+    public function getConvertIdResponseMessage()
+    {
+        return $this->convertIdResponseMessage;
+    }
+
+    /**
+     * @return GetSharingMetadataResponseMessageType[]
+     */
+    public function getGetSharingMetadataResponseMessage()
+    {
+        return $this->getSharingMetadataResponseMessage;
+    }
+
+    /**
+     * @return RefreshSharingFolderResponseMessageType[]
+     */
+    public function getRefreshSharingFolderResponseMessage()
+    {
+        return $this->refreshSharingFolderResponseMessage;
+    }
+
+    /**
+     * @return GetSharingFolderResponseMessageType[]
+     */
+    public function getGetSharingFolderResponseMessage()
+    {
+        return $this->getSharingFolderResponseMessage;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getCreateUserConfigurationResponseMessage()
+    {
+        return $this->createUserConfigurationResponseMessage;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getDeleteUserConfigurationResponseMessage()
+    {
+        return $this->deleteUserConfigurationResponseMessage;
+    }
+
+    /**
+     * @return GetUserConfigurationResponseMessageType[]
+     */
+    public function getGetUserConfigurationResponseMessage()
+    {
+        return $this->getUserConfigurationResponseMessage;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getUpdateUserConfigurationResponseMessage()
+    {
+        return $this->updateUserConfigurationResponseMessage;
+    }
+
+    /**
+     * @return GetRoomListsResponseMessageType[]
+     */
+    public function getGetRoomListsResponse()
+    {
+        return $this->getRoomListsResponse;
+    }
+
+    /**
+     * @return GetRoomsResponseMessageType[]
+     */
+    public function getGetRoomsResponse()
+    {
+        return $this->getRoomsResponse;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getApplyConversationActionResponseMessage()
+    {
+        return $this->applyConversationActionResponseMessage;
+    }
+
+    /**
+     * @return FindMailboxStatisticsByKeywordsResponseMessageType[]
+     */
+    public function getFindMailboxStatisticsByKeywordsResponseMessage()
+    {
+        return $this->findMailboxStatisticsByKeywordsResponseMessage;
+    }
+
+    /**
+     * @return GetPasswordExpirationDateResponseMessageType[]
+     */
+    public function getGetPasswordExpirationDateResponse()
+    {
+        return $this->getPasswordExpirationDateResponse;
+    }
 }

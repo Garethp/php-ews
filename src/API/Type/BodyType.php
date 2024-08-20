@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: BodyType
  *
- * @method string getBodyType()
  * @method BodyType setBodyType(string $bodyType)
  */
 class BodyType extends Type
@@ -25,5 +24,13 @@ class BodyType extends Type
     {
         $this->_ = $text;
         $this->bodyType = $type;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBodyType()
+    {
+        return $this->bodyType;
     }
 }

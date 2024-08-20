@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: FolderResponseShapeType
  *
- * @method string getBaseShape()
  * @method FolderResponseShapeType setBaseShape(string $baseShape)
- * @method NonEmptyArrayOfPathsToElementType getAdditionalProperties()
  * @method FolderResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class FolderResponseShapeType extends Type
@@ -27,4 +25,20 @@ class FolderResponseShapeType extends Type
      * @var \garethp\ews\API\Type\NonEmptyArrayOfPathsToElementType
      */
     protected $additionalProperties = null;
+
+    /**
+     * @return string
+     */
+    public function getBaseShape()
+    {
+        return $this->baseShape;
+    }
+
+    /**
+     * @return NonEmptyArrayOfPathsToElementType
+     */
+    public function getAdditionalProperties()
+    {
+        return $this->additionalProperties;
+    }
 }

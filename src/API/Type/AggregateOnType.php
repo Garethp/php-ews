@@ -11,13 +11,9 @@ use garethp\ews\API\Type;
  *  field in determining which item will represent the group.
  * XSD Type: AggregateOnType
  *
- * @method string getAggregate()
  * @method AggregateOnType setAggregate(string $aggregate)
- * @method PathToUnindexedFieldType getFieldURI()
  * @method AggregateOnType setFieldURI(PathToUnindexedFieldType $fieldURI)
- * @method PathToIndexedFieldType getIndexedFieldURI()
  * @method AggregateOnType setIndexedFieldURI(PathToIndexedFieldType $indexedFieldURI)
- * @method PathToExtendedFieldType getExtendedFieldURI()
  * @method AggregateOnType setExtendedFieldURI(PathToExtendedFieldType $extendedFieldURI)
  */
 class AggregateOnType extends Type
@@ -42,4 +38,36 @@ class AggregateOnType extends Type
      * @var \garethp\ews\API\Type\PathToExtendedFieldType
      */
     protected $extendedFieldURI = null;
+
+    /**
+     * @return string
+     */
+    public function getAggregate()
+    {
+        return $this->aggregate;
+    }
+
+    /**
+     * @return PathToUnindexedFieldType
+     */
+    public function getFieldURI()
+    {
+        return $this->fieldURI;
+    }
+
+    /**
+     * @return PathToIndexedFieldType
+     */
+    public function getIndexedFieldURI()
+    {
+        return $this->indexedFieldURI;
+    }
+
+    /**
+     * @return PathToExtendedFieldType
+     */
+    public function getExtendedFieldURI()
+    {
+        return $this->extendedFieldURI;
+    }
 }

@@ -237,16 +237,26 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         }
 
         $name = "get" . Inflector::classify($prop->getName());
-        $fullName = "method $type $name()";
 
-        $docblock = $generator->getDocBlock();
+        $ensureArrayWhenGettingArray = false;
 
-        $tag = new Generator\DocBlock\Tag();
-        $tag->setName($fullName);
+        if (!$ensureArrayWhenGettingArray && $generator->hasMethod($name)) {
+            return;
+        }
 
-        $docblock->setTag($tag);
+        if ($generator->hasMethod($name)) {
+            $generator->removeMethod($name);
+        }
 
-        return;
+        if (str_ends_with($type, "[]") && $ensureArrayWhenGettingArray) {
+            $generator->addMethod($name, [], [], "if (!is_array(\$this->{$prop->getName()}) && \$this->{$prop->getName()} !== null) {
+return array(\$this->{$prop->getName()});
+        }
+
+return \$this->{$prop->getName()};", "@return $type");
+        } else {
+            $generator->addMethod($name, [], [], "return \$this->{$prop->getName()};", "@return $type");
+        }
     }
 
     protected function handleSetter(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)

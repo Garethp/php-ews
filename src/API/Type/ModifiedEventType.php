@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: ModifiedEventType
  *
- * @method integer getUnreadCount()
  * @method ModifiedEventType setUnreadCount(integer $unreadCount)
  */
 class ModifiedEventType extends BaseObjectChangedEventType
@@ -18,4 +17,12 @@ class ModifiedEventType extends BaseObjectChangedEventType
      * @var integer
      */
     protected $unreadCount = null;
+
+    /**
+     * @return integer
+     */
+    public function getUnreadCount()
+    {
+        return $this->unreadCount;
+    }
 }

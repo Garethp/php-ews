@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: CreateUserConfigurationType
  *
- * @method \garethp\ews\API\Type\UserConfigurationType getUserConfiguration()
  * @method CreateUserConfigurationType setUserConfiguration(\garethp\ews\API\Type\UserConfigurationType $userConfiguration)
  */
 class CreateUserConfigurationType extends BaseRequestType
@@ -18,4 +17,12 @@ class CreateUserConfigurationType extends BaseRequestType
      * @var \garethp\ews\API\Type\UserConfigurationType
      */
     protected $userConfiguration = null;
+
+    /**
+     * @return \garethp\ews\API\Type\UserConfigurationType
+     */
+    public function getUserConfiguration()
+    {
+        return $this->userConfiguration;
+    }
 }

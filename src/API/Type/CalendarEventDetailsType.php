@@ -10,21 +10,13 @@ use garethp\ews\API\Type;
  *
  * XSD Type: CalendarEventDetails
  *
- * @method string getID()
  * @method CalendarEventDetailsType setID(string $iD)
- * @method string getSubject()
  * @method CalendarEventDetailsType setSubject(string $subject)
- * @method string getLocation()
  * @method CalendarEventDetailsType setLocation(string $location)
- * @method boolean getIsMeeting()
  * @method CalendarEventDetailsType setIsMeeting(boolean $isMeeting)
- * @method boolean getIsRecurring()
  * @method CalendarEventDetailsType setIsRecurring(boolean $isRecurring)
- * @method boolean getIsException()
  * @method CalendarEventDetailsType setIsException(boolean $isException)
- * @method boolean getIsReminderSet()
  * @method CalendarEventDetailsType setIsReminderSet(boolean $isReminderSet)
- * @method boolean getIsPrivate()
  * @method CalendarEventDetailsType setIsPrivate(boolean $isPrivate)
  */
 class CalendarEventDetailsType extends Type
@@ -71,11 +63,43 @@ class CalendarEventDetailsType extends Type
     protected $isPrivate = null;
 
     /**
+     * @return string
+     */
+    public function getID()
+    {
+        return $this->iD;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
      * @returns bool
      */
     public function isMeeting()
     {
         return ((bool) $this->isMeeting);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsMeeting()
+    {
+        return $this->isMeeting;
     }
 
     /**
@@ -87,11 +111,27 @@ class CalendarEventDetailsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsRecurring()
+    {
+        return $this->isRecurring;
+    }
+
+    /**
      * @returns bool
      */
     public function isException()
     {
         return ((bool) $this->isException);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsException()
+    {
+        return $this->isException;
     }
 
     /**
@@ -103,10 +143,26 @@ class CalendarEventDetailsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsReminderSet()
+    {
+        return $this->isReminderSet;
+    }
+
+    /**
      * @returns bool
      */
     public function isPrivate()
     {
         return ((bool) $this->isPrivate);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsPrivate()
+    {
+        return $this->isPrivate;
     }
 }

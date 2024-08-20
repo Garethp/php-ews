@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: NumberedRecurrenceRangeType
  *
- * @method integer getNumberOfOccurrences()
  * @method NumberedRecurrenceRangeType setNumberOfOccurrences(integer $numberOfOccurrences)
  */
 class NumberedRecurrenceRangeType extends RecurrenceRangeBaseType
@@ -18,4 +17,12 @@ class NumberedRecurrenceRangeType extends RecurrenceRangeBaseType
      * @var integer
      */
     protected $numberOfOccurrences = null;
+
+    /**
+     * @return integer
+     */
+    public function getNumberOfOccurrences()
+    {
+        return $this->numberOfOccurrences;
+    }
 }

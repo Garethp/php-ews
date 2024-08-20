@@ -8,11 +8,8 @@ namespace garethp\ews\API\Type;
  * Represents an alternate mailbox folder or item Id.
  * XSD Type: AlternateIdType
  *
- * @method string getId()
  * @method AlternateIdType setId(string $id)
- * @method string getMailbox()
  * @method AlternateIdType setMailbox(string $mailbox)
- * @method boolean getIsArchive()
  * @method AlternateIdType setIsArchive(boolean $isArchive)
  */
 class AlternateIdType extends AlternateIdBaseType
@@ -34,10 +31,34 @@ class AlternateIdType extends AlternateIdBaseType
     protected $isArchive = null;
 
     /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
+    }
+
+    /**
      * @returns bool
      */
     public function isArchive()
     {
         return ((bool) $this->isArchive);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsArchive()
+    {
+        return $this->isArchive;
     }
 }

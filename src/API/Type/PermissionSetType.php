@@ -11,10 +11,8 @@ use garethp\ews\API\Type;
  * XSD Type: PermissionSetType
  *
  * @method PermissionSetType addPermissions(PermissionType $permissions)
- * @method PermissionType[] getPermissions()
  * @method PermissionSetType setPermissions(array $permissions)
  * @method PermissionSetType addUnknownEntries(string $unknownEntries)
- * @method string[] getUnknownEntries()
  * @method PermissionSetType setUnknownEntries(array $unknownEntries)
  */
 class PermissionSetType extends Type
@@ -29,4 +27,20 @@ class PermissionSetType extends Type
      * @var string[]
      */
     protected $unknownEntries = null;
+
+    /**
+     * @return PermissionType[]
+     */
+    public function getPermissions()
+    {
+        return $this->permissions;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getUnknownEntries()
+    {
+        return $this->unknownEntries;
+    }
 }

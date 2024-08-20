@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: DirectoryEntryType
  *
- * @method EmailAddressType getId()
  * @method DirectoryEntryType setId(EmailAddressType $id)
  */
 class DirectoryEntryType extends Type
@@ -20,4 +19,12 @@ class DirectoryEntryType extends Type
      * @var \garethp\ews\API\Type\EmailAddressType
      */
     protected $id = null;
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

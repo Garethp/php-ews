@@ -9,9 +9,7 @@ namespace garethp\ews\API\Type;
  * XSD Type: WeeklyRecurrencePatternType
  *
  * @method WeeklyRecurrencePatternType addDaysOfWeek(string $daysOfWeek)
- * @method string[] getDaysOfWeek()
  * @method WeeklyRecurrencePatternType setDaysOfWeek(array $daysOfWeek)
- * @method string getFirstDayOfWeek()
  * @method WeeklyRecurrencePatternType setFirstDayOfWeek(string $firstDayOfWeek)
  */
 class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
@@ -26,4 +24,20 @@ class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
      * @var string
      */
     protected $firstDayOfWeek = null;
+
+    /**
+     * @return string[]
+     */
+    public function getDaysOfWeek()
+    {
+        return $this->daysOfWeek;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstDayOfWeek()
+    {
+        return $this->firstDayOfWeek;
+    }
 }

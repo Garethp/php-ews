@@ -10,17 +10,11 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ItemResponseShapeType
  *
- * @method string getBaseShape()
  * @method ItemResponseShapeType setBaseShape(string $baseShape)
- * @method boolean getIncludeMimeContent()
  * @method ItemResponseShapeType setIncludeMimeContent(boolean $includeMimeContent)
- * @method string getBodyType()
  * @method ItemResponseShapeType setBodyType(string $bodyType)
- * @method boolean getFilterHtmlContent()
  * @method ItemResponseShapeType setFilterHtmlContent(boolean $filterHtmlContent)
- * @method boolean getConvertHtmlCodePageToUTF8()
  * @method ItemResponseShapeType setConvertHtmlCodePageToUTF8(boolean $convertHtmlCodePageToUTF8)
- * @method NonEmptyArrayOfPathsToElementType getAdditionalProperties()
  * @method ItemResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class ItemResponseShapeType extends Type
@@ -57,11 +51,35 @@ class ItemResponseShapeType extends Type
     protected $additionalProperties = null;
 
     /**
+     * @return string
+     */
+    public function getBaseShape()
+    {
+        return $this->baseShape;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludeMimeContent()
     {
         return ((bool) $this->includeMimeContent);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludeMimeContent()
+    {
+        return $this->includeMimeContent;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBodyType()
+    {
+        return $this->bodyType;
     }
 
     /**
@@ -73,10 +91,34 @@ class ItemResponseShapeType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getFilterHtmlContent()
+    {
+        return $this->filterHtmlContent;
+    }
+
+    /**
      * @returns bool
      */
     public function isConvertHtmlCodePageToUTF8()
     {
         return ((bool) $this->convertHtmlCodePageToUTF8);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getConvertHtmlCodePageToUTF8()
+    {
+        return $this->convertHtmlCodePageToUTF8;
+    }
+
+    /**
+     * @return NonEmptyArrayOfPathsToElementType
+     */
+    public function getAdditionalProperties()
+    {
+        return $this->additionalProperties;
     }
 }

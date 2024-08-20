@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  * Identifier for a fully resolved item
  * XSD Type: ItemIdType
  *
- * @method string getId()
  * @method ItemIdType setId(string $id)
- * @method string getChangeKey()
  * @method ItemIdType setChangeKey(string $changeKey)
  */
 class ItemIdType extends BaseItemIdType
@@ -35,5 +33,21 @@ class ItemIdType extends BaseItemIdType
     public function toArray()
     {
         return ['Id' => $this->id, 'ChangeKey' => $this->changeKey ];
+    }
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getChangeKey()
+    {
+        return $this->changeKey;
     }
 }

@@ -9,9 +9,7 @@ namespace garethp\ews\API\Message;
  *  returned.
  * XSD Type: ConvertIdType
  *
- * @method string getDestinationFormat()
  * @method ConvertIdType setDestinationFormat(string $destinationFormat)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfAlternateIdsType getSourceIds()
  * @method ConvertIdType setSourceIds(\garethp\ews\API\Type\NonEmptyArrayOfAlternateIdsType $sourceIds)
  */
 class ConvertIdType extends BaseRequestType
@@ -26,4 +24,20 @@ class ConvertIdType extends BaseRequestType
      * @var \garethp\ews\API\Type\NonEmptyArrayOfAlternateIdsType
      */
     protected $sourceIds = null;
+
+    /**
+     * @return string
+     */
+    public function getDestinationFormat()
+    {
+        return $this->destinationFormat;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfAlternateIdsType
+     */
+    public function getSourceIds()
+    {
+        return $this->sourceIds;
+    }
 }

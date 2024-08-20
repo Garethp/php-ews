@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: CalendarPermissionType
  *
- * @method string getReadItems()
  * @method CalendarPermissionType setReadItems(string $readItems)
- * @method string getCalendarPermissionLevel()
  * @method CalendarPermissionType setCalendarPermissionLevel(string $calendarPermissionLevel)
  */
 class CalendarPermissionType extends BasePermissionType
@@ -25,4 +23,20 @@ class CalendarPermissionType extends BasePermissionType
      * @var string
      */
     protected $calendarPermissionLevel = null;
+
+    /**
+     * @return string
+     */
+    public function getReadItems()
+    {
+        return $this->readItems;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCalendarPermissionLevel()
+    {
+        return $this->calendarPermissionLevel;
+    }
 }

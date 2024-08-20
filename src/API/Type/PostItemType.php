@@ -8,21 +8,13 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: PostItemType
  *
- * @method string getConversationIndex()
  * @method PostItemType setConversationIndex(string $conversationIndex)
- * @method string getConversationTopic()
  * @method PostItemType setConversationTopic(string $conversationTopic)
- * @method SingleRecipientType getFrom()
  * @method PostItemType setFrom(SingleRecipientType $from)
- * @method string getInternetMessageId()
  * @method PostItemType setInternetMessageId(string $internetMessageId)
- * @method boolean getIsRead()
  * @method PostItemType setIsRead(boolean $isRead)
- * @method \DateTime getPostedTime()
  * @method PostItemType setPostedTime(\DateTime $postedTime)
- * @method string getReferences()
  * @method PostItemType setReferences(string $references)
- * @method SingleRecipientType getSender()
  * @method PostItemType setSender(SingleRecipientType $sender)
  */
 class PostItemType extends ItemType
@@ -73,10 +65,74 @@ class PostItemType extends ItemType
     protected $sender = null;
 
     /**
+     * @return string
+     */
+    public function getConversationIndex()
+    {
+        return $this->conversationIndex;
+    }
+
+    /**
+     * @return string
+     */
+    public function getConversationTopic()
+    {
+        return $this->conversationTopic;
+    }
+
+    /**
+     * @return SingleRecipientType
+     */
+    public function getFrom()
+    {
+        return $this->from;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInternetMessageId()
+    {
+        return $this->internetMessageId;
+    }
+
+    /**
      * @returns bool
      */
     public function isRead()
     {
         return ((bool) $this->isRead);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsRead()
+    {
+        return $this->isRead;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getPostedTime()
+    {
+        return $this->postedTime;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReferences()
+    {
+        return $this->references;
+    }
+
+    /**
+     * @return SingleRecipientType
+     */
+    public function getSender()
+    {
+        return $this->sender;
     }
 }

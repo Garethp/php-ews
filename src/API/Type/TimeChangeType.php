@@ -10,15 +10,10 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TimeChangeType
  *
- * @method string getTimeZoneName()
  * @method TimeChangeType setTimeZoneName(string $timeZoneName)
- * @method \DateInterval getOffset()
  * @method TimeChangeType setOffset(\DateInterval $offset)
- * @method RelativeYearlyRecurrencePatternType getRelativeYearlyRecurrence()
  * @method TimeChangeType setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $relativeYearlyRecurrence)
- * @method \DateTime getAbsoluteDate()
  * @method TimeChangeType setAbsoluteDate(\DateTime $absoluteDate)
- * @method \DateTime getTime()
  * @method TimeChangeType setTime(\DateTime $time)
  */
 class TimeChangeType extends Type
@@ -53,4 +48,44 @@ class TimeChangeType extends Type
      * @var \DateTime
      */
     protected $time = null;
+
+    /**
+     * @return string
+     */
+    public function getTimeZoneName()
+    {
+        return $this->timeZoneName;
+    }
+
+    /**
+     * @return \DateInterval
+     */
+    public function getOffset()
+    {
+        return $this->offset;
+    }
+
+    /**
+     * @return RelativeYearlyRecurrencePatternType
+     */
+    public function getRelativeYearlyRecurrence()
+    {
+        return $this->relativeYearlyRecurrence;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getAbsoluteDate()
+    {
+        return $this->absoluteDate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
 }

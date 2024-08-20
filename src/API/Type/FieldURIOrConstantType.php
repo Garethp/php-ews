@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: FieldURIOrConstantType
  *
- * @method FieldURI getFieldURI()
  * @method FieldURIOrConstantType setFieldURI(FieldURI $fieldURI)
- * @method IndexedFieldURI getIndexedFieldURI()
  * @method FieldURIOrConstantType setIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
- * @method ExtendedFieldURI getExtendedFieldURI()
  * @method FieldURIOrConstantType setExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
- * @method ConstantValueType getConstant()
  * @method FieldURIOrConstantType setConstant(ConstantValueType $constant)
  */
 class FieldURIOrConstantType extends Type
@@ -41,4 +37,36 @@ class FieldURIOrConstantType extends Type
      * @var \garethp\ews\API\Type\ConstantValueType
      */
     protected $constant = null;
+
+    /**
+     * @return FieldURI
+     */
+    public function getFieldURI()
+    {
+        return $this->fieldURI;
+    }
+
+    /**
+     * @return IndexedFieldURI
+     */
+    public function getIndexedFieldURI()
+    {
+        return $this->indexedFieldURI;
+    }
+
+    /**
+     * @return ExtendedFieldURI
+     */
+    public function getExtendedFieldURI()
+    {
+        return $this->extendedFieldURI;
+    }
+
+    /**
+     * @return ConstantValueType
+     */
+    public function getConstant()
+    {
+        return $this->constant;
+    }
 }

@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: RefreshSharingFolderType
  *
- * @method \garethp\ews\API\Type\FolderIdType getSharingFolderId()
  * @method RefreshSharingFolderType setSharingFolderId(\garethp\ews\API\Type\FolderIdType $sharingFolderId)
  */
 class RefreshSharingFolderType extends BaseRequestType
@@ -18,4 +17,12 @@ class RefreshSharingFolderType extends BaseRequestType
      * @var \garethp\ews\API\Type\FolderIdType
      */
     protected $sharingFolderId = null;
+
+    /**
+     * @return \garethp\ews\API\Type\FolderIdType
+     */
+    public function getSharingFolderId()
+    {
+        return $this->sharingFolderId;
+    }
 }

@@ -8,13 +8,9 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: DeleteItemType
  *
- * @method string getDeleteType()
  * @method DeleteItemType setDeleteType(string $deleteType)
- * @method string getSendMeetingCancellations()
  * @method DeleteItemType setSendMeetingCancellations(string $sendMeetingCancellations)
- * @method string getAffectedTaskOccurrences()
  * @method DeleteItemType setAffectedTaskOccurrences(string $affectedTaskOccurrences)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType getItemIds()
  * @method DeleteItemType setItemIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds)
  */
 class DeleteItemType extends BaseRequestType
@@ -39,4 +35,36 @@ class DeleteItemType extends BaseRequestType
      * @var \garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType
      */
     protected $itemIds = null;
+
+    /**
+     * @return string
+     */
+    public function getDeleteType()
+    {
+        return $this->deleteType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSendMeetingCancellations()
+    {
+        return $this->sendMeetingCancellations;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAffectedTaskOccurrences()
+    {
+        return $this->affectedTaskOccurrences;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType
+     */
+    public function getItemIds()
+    {
+        return $this->itemIds;
+    }
 }

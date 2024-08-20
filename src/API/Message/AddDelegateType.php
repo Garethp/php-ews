@@ -9,9 +9,7 @@ namespace garethp\ews\API\Message;
  * XSD Type: AddDelegateType
  *
  * @method AddDelegateType addDelegateUsers(\garethp\ews\API\Type\DelegateUserType $delegateUsers)
- * @method \garethp\ews\API\Type\DelegateUserType[] getDelegateUsers()
  * @method AddDelegateType setDelegateUsers(array $delegateUsers)
- * @method string getDeliverMeetingRequests()
  * @method AddDelegateType setDeliverMeetingRequests(string $deliverMeetingRequests)
  */
 class AddDelegateType extends BaseDelegateType
@@ -26,4 +24,20 @@ class AddDelegateType extends BaseDelegateType
      * @var string
      */
     protected $deliverMeetingRequests = null;
+
+    /**
+     * @return \garethp\ews\API\Type\DelegateUserType[]
+     */
+    public function getDelegateUsers()
+    {
+        return $this->delegateUsers;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeliverMeetingRequests()
+    {
+        return $this->deliverMeetingRequests;
+    }
 }

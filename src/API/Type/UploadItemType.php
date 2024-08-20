@@ -10,15 +10,10 @@ use garethp\ews\API\Type;
  *
  * XSD Type: UploadItemType
  *
- * @method string getCreateAction()
  * @method UploadItemType setCreateAction(string $createAction)
- * @method boolean getIsAssociated()
  * @method UploadItemType setIsAssociated(boolean $isAssociated)
- * @method FolderIdType getParentFolderId()
  * @method UploadItemType setParentFolderId(FolderIdType $parentFolderId)
- * @method ItemIdType getItemId()
  * @method UploadItemType setItemId(ItemIdType $itemId)
- * @method string getData()
  * @method UploadItemType setData(string $data)
  */
 class UploadItemType extends Type
@@ -50,10 +45,50 @@ class UploadItemType extends Type
     protected $data = null;
 
     /**
+     * @return string
+     */
+    public function getCreateAction()
+    {
+        return $this->createAction;
+    }
+
+    /**
      * @returns bool
      */
     public function isAssociated()
     {
         return ((bool) $this->isAssociated);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsAssociated()
+    {
+        return $this->isAssociated;
+    }
+
+    /**
+     * @return FolderIdType
+     */
+    public function getParentFolderId()
+    {
+        return $this->parentFolderId;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getData()
+    {
+        return $this->data;
     }
 }

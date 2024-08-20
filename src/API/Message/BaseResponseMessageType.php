@@ -10,7 +10,6 @@ use garethp\ews\API\Message;
  *
  * XSD Type: BaseResponseMessageType
  *
- * @method ArrayOfResponseMessagesType getResponseMessages()
  * @method BaseResponseMessageType setResponseMessages(ArrayOfResponseMessagesType $responseMessages)
  */
 class BaseResponseMessageType extends Message
@@ -20,4 +19,12 @@ class BaseResponseMessageType extends Message
      * @var \garethp\ews\API\Message\ArrayOfResponseMessagesType
      */
     protected $responseMessages = null;
+
+    /**
+     * @return ArrayOfResponseMessagesType
+     */
+    public function getResponseMessages()
+    {
+        return $this->responseMessages;
+    }
 }

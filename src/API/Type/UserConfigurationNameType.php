@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: UserConfigurationNameType
  *
- * @method string getName()
  * @method UserConfigurationNameType setName(string $name)
  */
 class UserConfigurationNameType extends TargetFolderIdType
@@ -18,4 +17,12 @@ class UserConfigurationNameType extends TargetFolderIdType
      * @var string
      */
     protected $name = null;
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 }

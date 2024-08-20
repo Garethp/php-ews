@@ -10,23 +10,14 @@ use garethp\ews\API\Type;
  * Rule type
  * XSD Type: RuleType
  *
- * @method string getRuleId()
  * @method RuleType setRuleId(string $ruleId)
- * @method string getDisplayName()
  * @method RuleType setDisplayName(string $displayName)
- * @method integer getPriority()
  * @method RuleType setPriority(integer $priority)
- * @method boolean getIsEnabled()
  * @method RuleType setIsEnabled(boolean $isEnabled)
- * @method boolean getIsNotSupported()
  * @method RuleType setIsNotSupported(boolean $isNotSupported)
- * @method boolean getIsInError()
  * @method RuleType setIsInError(boolean $isInError)
- * @method RulePredicatesType getConditions()
  * @method RuleType setConditions(RulePredicatesType $conditions)
- * @method RulePredicatesType getExceptions()
  * @method RuleType setExceptions(RulePredicatesType $exceptions)
- * @method RuleActionsType getActions()
  * @method RuleType setActions(RuleActionsType $actions)
  */
 class RuleType extends Type
@@ -78,11 +69,43 @@ class RuleType extends Type
     protected $actions = null;
 
     /**
+     * @return string
+     */
+    public function getRuleId()
+    {
+        return $this->ruleId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getPriority()
+    {
+        return $this->priority;
+    }
+
+    /**
      * @returns bool
      */
     public function isEnabled()
     {
         return ((bool) $this->isEnabled);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsEnabled()
+    {
+        return $this->isEnabled;
     }
 
     /**
@@ -94,10 +117,50 @@ class RuleType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsNotSupported()
+    {
+        return $this->isNotSupported;
+    }
+
+    /**
      * @returns bool
      */
     public function isInError()
     {
         return ((bool) $this->isInError);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsInError()
+    {
+        return $this->isInError;
+    }
+
+    /**
+     * @return RulePredicatesType
+     */
+    public function getConditions()
+    {
+        return $this->conditions;
+    }
+
+    /**
+     * @return RulePredicatesType
+     */
+    public function getExceptions()
+    {
+        return $this->exceptions;
+    }
+
+    /**
+     * @return RuleActionsType
+     */
+    public function getActions()
+    {
+        return $this->actions;
     }
 }

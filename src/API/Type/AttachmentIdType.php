@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: AttachmentIdType
  *
- * @method string getRootItemId()
  * @method AttachmentIdType setRootItemId(string $rootItemId)
- * @method string getRootItemChangeKey()
  * @method AttachmentIdType setRootItemChangeKey(string $rootItemChangeKey)
  */
 class AttachmentIdType extends RequestAttachmentIdType
@@ -25,4 +23,20 @@ class AttachmentIdType extends RequestAttachmentIdType
      * @var string
      */
     protected $rootItemChangeKey = null;
+
+    /**
+     * @return string
+     */
+    public function getRootItemId()
+    {
+        return $this->rootItemId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRootItemChangeKey()
+    {
+        return $this->rootItemChangeKey;
+    }
 }

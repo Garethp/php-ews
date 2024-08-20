@@ -8,9 +8,7 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: PlayOnPhoneType
  *
- * @method \garethp\ews\API\Type\ItemIdType getItemId()
  * @method PlayOnPhoneType setItemId(\garethp\ews\API\Type\ItemIdType $itemId)
- * @method string getDialString()
  * @method PlayOnPhoneType setDialString(string $dialString)
  */
 class PlayOnPhoneType extends BaseRequestType
@@ -25,4 +23,20 @@ class PlayOnPhoneType extends BaseRequestType
      * @var string
      */
     protected $dialString = null;
+
+    /**
+     * @return \garethp\ews\API\Type\ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDialString()
+    {
+        return $this->dialString;
+    }
 }

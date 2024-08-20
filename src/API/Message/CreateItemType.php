@@ -8,13 +8,9 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: CreateItemType
  *
- * @method string getMessageDisposition()
  * @method CreateItemType setMessageDisposition(string $messageDisposition)
- * @method string getSendMeetingInvitations()
  * @method CreateItemType setSendMeetingInvitations(string $sendMeetingInvitations)
- * @method \garethp\ews\API\Type\TargetFolderIdType getSavedItemFolderId()
  * @method CreateItemType setSavedItemFolderId(\garethp\ews\API\Type\TargetFolderIdType $savedItemFolderId)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfAllItemsType getItems()
  * @method CreateItemType setItems(\garethp\ews\API\Type\NonEmptyArrayOfAllItemsType $items)
  */
 class CreateItemType extends BaseRequestType
@@ -39,4 +35,36 @@ class CreateItemType extends BaseRequestType
      * @var \garethp\ews\API\Type\NonEmptyArrayOfAllItemsType
      */
     protected $items = null;
+
+    /**
+     * @return string
+     */
+    public function getMessageDisposition()
+    {
+        return $this->messageDisposition;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSendMeetingInvitations()
+    {
+        return $this->sendMeetingInvitations;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\TargetFolderIdType
+     */
+    public function getSavedItemFolderId()
+    {
+        return $this->savedItemFolderId;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfAllItemsType
+     */
+    public function getItems()
+    {
+        return $this->items;
+    }
 }

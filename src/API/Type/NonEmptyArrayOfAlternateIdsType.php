@@ -11,13 +11,10 @@ use garethp\ews\API\Type;
  * XSD Type: NonEmptyArrayOfAlternateIdsType
  *
  * @method NonEmptyArrayOfAlternateIdsType addAlternateId(AlternateIdType $alternateId)
- * @method AlternateIdType[] getAlternateId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternateId(array $alternateId)
  * @method NonEmptyArrayOfAlternateIdsType addAlternatePublicFolderId(AlternatePublicFolderIdType $alternatePublicFolderId)
- * @method AlternatePublicFolderIdType[] getAlternatePublicFolderId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternatePublicFolderId(array $alternatePublicFolderId)
  * @method NonEmptyArrayOfAlternateIdsType addAlternatePublicFolderItemId(AlternatePublicFolderItemIdType $alternatePublicFolderItemId)
- * @method AlternatePublicFolderItemIdType[] getAlternatePublicFolderItemId()
  * @method NonEmptyArrayOfAlternateIdsType setAlternatePublicFolderItemId(array $alternatePublicFolderItemId)
  */
 class NonEmptyArrayOfAlternateIdsType extends Type
@@ -37,4 +34,28 @@ class NonEmptyArrayOfAlternateIdsType extends Type
      * @var \garethp\ews\API\Type\AlternatePublicFolderItemIdType[]
      */
     protected $alternatePublicFolderItemId = null;
+
+    /**
+     * @return AlternateIdType[]
+     */
+    public function getAlternateId()
+    {
+        return $this->alternateId;
+    }
+
+    /**
+     * @return AlternatePublicFolderIdType[]
+     */
+    public function getAlternatePublicFolderId()
+    {
+        return $this->alternatePublicFolderId;
+    }
+
+    /**
+     * @return AlternatePublicFolderItemIdType[]
+     */
+    public function getAlternatePublicFolderItemId()
+    {
+        return $this->alternatePublicFolderItemId;
+    }
 }

@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: FolderChangeType
  *
- * @method FolderIdType getFolderId()
  * @method FolderChangeType setFolderId(FolderIdType $folderId)
- * @method DistinguishedFolderIdType getDistinguishedFolderId()
  * @method FolderChangeType setDistinguishedFolderId(DistinguishedFolderIdType $distinguishedFolderId)
- * @method NonEmptyArrayOfFolderChangeDescriptionsType getUpdates()
  * @method FolderChangeType setUpdates(NonEmptyArrayOfFolderChangeDescriptionsType $updates)
  */
 class FolderChangeType extends Type
@@ -34,4 +31,28 @@ class FolderChangeType extends Type
      * @var \garethp\ews\API\Type\NonEmptyArrayOfFolderChangeDescriptionsType
      */
     protected $updates = null;
+
+    /**
+     * @return FolderIdType
+     */
+    public function getFolderId()
+    {
+        return $this->folderId;
+    }
+
+    /**
+     * @return DistinguishedFolderIdType
+     */
+    public function getDistinguishedFolderId()
+    {
+        return $this->distinguishedFolderId;
+    }
+
+    /**
+     * @return NonEmptyArrayOfFolderChangeDescriptionsType
+     */
+    public function getUpdates()
+    {
+        return $this->updates;
+    }
 }

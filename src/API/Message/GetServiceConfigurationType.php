@@ -8,10 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetServiceConfigurationType
  *
- * @method \garethp\ews\API\Type\EmailAddressType getActingAs()
  * @method GetServiceConfigurationType setActingAs(\garethp\ews\API\Type\EmailAddressType $actingAs)
  * @method GetServiceConfigurationType addRequestedConfiguration(\garethp\ews\API\Enumeration\ServiceConfigurationType $requestedConfiguration)
- * @method \garethp\ews\API\Enumeration\ServiceConfigurationType[] getRequestedConfiguration()
  * @method GetServiceConfigurationType setRequestedConfiguration(array $requestedConfiguration)
  */
 class GetServiceConfigurationType extends BaseRequestType
@@ -26,4 +24,20 @@ class GetServiceConfigurationType extends BaseRequestType
      * @var \garethp\ews\API\Enumeration\ServiceConfigurationType[]
      */
     protected $requestedConfiguration = null;
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getActingAs()
+    {
+        return $this->actingAs;
+    }
+
+    /**
+     * @return \garethp\ews\API\Enumeration\ServiceConfigurationType[]
+     */
+    public function getRequestedConfiguration()
+    {
+        return $this->requestedConfiguration;
+    }
 }

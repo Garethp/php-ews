@@ -8,12 +8,9 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: FindConversationType
  *
- * @method \garethp\ews\API\Type\IndexedPageViewType getIndexedPageItemView()
  * @method FindConversationType setIndexedPageItemView(\garethp\ews\API\Type\IndexedPageViewType $indexedPageItemView)
  * @method FindConversationType addSortOrder(\garethp\ews\API\Type\FieldOrderType $sortOrder)
- * @method \garethp\ews\API\Type\FieldOrderType[] getSortOrder()
  * @method FindConversationType setSortOrder(array $sortOrder)
- * @method \garethp\ews\API\Type\TargetFolderIdType getParentFolderId()
  * @method FindConversationType setParentFolderId(\garethp\ews\API\Type\TargetFolderIdType $parentFolderId)
  */
 class FindConversationType extends BaseRequestType
@@ -33,4 +30,28 @@ class FindConversationType extends BaseRequestType
      * @var \garethp\ews\API\Type\TargetFolderIdType
      */
     protected $parentFolderId = null;
+
+    /**
+     * @return \garethp\ews\API\Type\IndexedPageViewType
+     */
+    public function getIndexedPageItemView()
+    {
+        return $this->indexedPageItemView;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\FieldOrderType[]
+     */
+    public function getSortOrder()
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\TargetFolderIdType
+     */
+    public function getParentFolderId()
+    {
+        return $this->parentFolderId;
+    }
 }

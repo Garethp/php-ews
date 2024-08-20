@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: RecurringTimeTransitionType
  *
- * @method \DateInterval getTimeOffset()
  * @method RecurringTimeTransitionType setTimeOffset(\DateInterval $timeOffset)
- * @method integer getMonth()
  * @method RecurringTimeTransitionType setMonth(integer $month)
  */
 class RecurringTimeTransitionType extends TransitionType
@@ -25,4 +23,20 @@ class RecurringTimeTransitionType extends TransitionType
      * @var integer
      */
     protected $month = null;
+
+    /**
+     * @return \DateInterval
+     */
+    public function getTimeOffset()
+    {
+        return $this->timeOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMonth()
+    {
+        return $this->month;
+    }
 }

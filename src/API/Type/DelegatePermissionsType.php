@@ -10,17 +10,11 @@ use garethp\ews\API\Type;
  *
  * XSD Type: DelegatePermissionsType
  *
- * @method string getCalendarFolderPermissionLevel()
  * @method DelegatePermissionsType setCalendarFolderPermissionLevel(string $calendarFolderPermissionLevel)
- * @method string getTasksFolderPermissionLevel()
  * @method DelegatePermissionsType setTasksFolderPermissionLevel(string $tasksFolderPermissionLevel)
- * @method string getInboxFolderPermissionLevel()
  * @method DelegatePermissionsType setInboxFolderPermissionLevel(string $inboxFolderPermissionLevel)
- * @method string getContactsFolderPermissionLevel()
  * @method DelegatePermissionsType setContactsFolderPermissionLevel(string $contactsFolderPermissionLevel)
- * @method string getNotesFolderPermissionLevel()
  * @method DelegatePermissionsType setNotesFolderPermissionLevel(string $notesFolderPermissionLevel)
- * @method string getJournalFolderPermissionLevel()
  * @method DelegatePermissionsType setJournalFolderPermissionLevel(string $journalFolderPermissionLevel)
  */
 class DelegatePermissionsType extends Type
@@ -55,4 +49,52 @@ class DelegatePermissionsType extends Type
      * @var string
      */
     protected $journalFolderPermissionLevel = null;
+
+    /**
+     * @return string
+     */
+    public function getCalendarFolderPermissionLevel()
+    {
+        return $this->calendarFolderPermissionLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTasksFolderPermissionLevel()
+    {
+        return $this->tasksFolderPermissionLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInboxFolderPermissionLevel()
+    {
+        return $this->inboxFolderPermissionLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContactsFolderPermissionLevel()
+    {
+        return $this->contactsFolderPermissionLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNotesFolderPermissionLevel()
+    {
+        return $this->notesFolderPermissionLevel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getJournalFolderPermissionLevel()
+    {
+        return $this->journalFolderPermissionLevel;
+    }
 }

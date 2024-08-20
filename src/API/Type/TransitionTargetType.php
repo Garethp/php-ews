@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TransitionTargetType
  *
- * @method string getKind()
  * @method TransitionTargetType setKind(string $kind)
  */
 class TransitionTargetType extends Type
@@ -20,4 +19,12 @@ class TransitionTargetType extends Type
      * @var string
      */
     protected $kind = null;
+
+    /**
+     * @return string
+     */
+    public function getKind()
+    {
+        return $this->kind;
+    }
 }

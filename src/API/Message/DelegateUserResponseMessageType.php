@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: DelegateUserResponseMessageType
  *
- * @method \garethp\ews\API\Type\DelegateUserType getDelegateUser()
  * @method DelegateUserResponseMessageType setDelegateUser(\garethp\ews\API\Type\DelegateUserType $delegateUser)
  */
 class DelegateUserResponseMessageType extends ResponseMessageType
@@ -18,4 +17,12 @@ class DelegateUserResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\DelegateUserType
      */
     protected $delegateUser = null;
+
+    /**
+     * @return \garethp\ews\API\Type\DelegateUserType
+     */
+    public function getDelegateUser()
+    {
+        return $this->delegateUser;
+    }
 }

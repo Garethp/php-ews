@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: DeleteUserConfigurationType
  *
- * @method \garethp\ews\API\Type\UserConfigurationNameType getUserConfigurationName()
  * @method DeleteUserConfigurationType setUserConfigurationName(\garethp\ews\API\Type\UserConfigurationNameType $userConfigurationName)
  */
 class DeleteUserConfigurationType extends BaseRequestType
@@ -18,4 +17,12 @@ class DeleteUserConfigurationType extends BaseRequestType
      * @var \garethp\ews\API\Type\UserConfigurationNameType
      */
     protected $userConfigurationName = null;
+
+    /**
+     * @return \garethp\ews\API\Type\UserConfigurationNameType
+     */
+    public function getUserConfigurationName()
+    {
+        return $this->userConfigurationName;
+    }
 }

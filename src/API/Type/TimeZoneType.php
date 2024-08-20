@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TimeZoneType
  *
- * @method string getTimeZoneName()
  * @method TimeZoneType setTimeZoneName(string $timeZoneName)
- * @method \DateInterval getBaseOffset()
  * @method TimeZoneType setBaseOffset(\DateInterval $baseOffset)
- * @method TimeChangeType getStandard()
  * @method TimeZoneType setStandard(TimeChangeType $standard)
- * @method TimeChangeType getDaylight()
  * @method TimeZoneType setDaylight(TimeChangeType $daylight)
  */
 class TimeZoneType extends Type
@@ -41,4 +37,36 @@ class TimeZoneType extends Type
      * @var \garethp\ews\API\Type\TimeChangeType
      */
     protected $daylight = null;
+
+    /**
+     * @return string
+     */
+    public function getTimeZoneName()
+    {
+        return $this->timeZoneName;
+    }
+
+    /**
+     * @return \DateInterval
+     */
+    public function getBaseOffset()
+    {
+        return $this->baseOffset;
+    }
+
+    /**
+     * @return TimeChangeType
+     */
+    public function getStandard()
+    {
+        return $this->standard;
+    }
+
+    /**
+     * @return TimeChangeType
+     */
+    public function getDaylight()
+    {
+        return $this->daylight;
+    }
 }

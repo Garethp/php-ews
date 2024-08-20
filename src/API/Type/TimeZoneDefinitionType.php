@@ -10,17 +10,12 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TimeZoneDefinitionType
  *
- * @method string getId()
  * @method TimeZoneDefinitionType setId(string $id)
- * @method string getName()
  * @method TimeZoneDefinitionType setName(string $name)
  * @method TimeZoneDefinitionType addPeriods(PeriodType $periods)
- * @method PeriodType[] getPeriods()
  * @method TimeZoneDefinitionType setPeriods(array $periods)
  * @method TimeZoneDefinitionType addTransitionsGroups(ArrayOfTransitionsType $transitionsGroups)
- * @method ArrayOfTransitionsType[] getTransitionsGroups()
  * @method TimeZoneDefinitionType setTransitionsGroups(array $transitionsGroups)
- * @method ArrayOfTransitionsType getTransitions()
  * @method TimeZoneDefinitionType setTransitions(ArrayOfTransitionsType $transitions)
  */
 class TimeZoneDefinitionType extends Type
@@ -50,4 +45,44 @@ class TimeZoneDefinitionType extends Type
      * @var \garethp\ews\API\Type\ArrayOfTransitionsType
      */
     protected $transitions = null;
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return PeriodType[]
+     */
+    public function getPeriods()
+    {
+        return $this->periods;
+    }
+
+    /**
+     * @return ArrayOfTransitionsType[]
+     */
+    public function getTransitionsGroups()
+    {
+        return $this->transitionsGroups;
+    }
+
+    /**
+     * @return ArrayOfTransitionsType
+     */
+    public function getTransitions()
+    {
+        return $this->transitions;
+    }
 }

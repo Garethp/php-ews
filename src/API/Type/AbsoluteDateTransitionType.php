@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: AbsoluteDateTransitionType
  *
- * @method \DateTime getDateTime()
  * @method AbsoluteDateTransitionType setDateTime(\DateTime $dateTime)
  */
 class AbsoluteDateTransitionType extends TransitionType
@@ -22,4 +21,12 @@ class AbsoluteDateTransitionType extends TransitionType
     protected $_typeMap = array(
         'dateTime' => 'dateTime',
     );
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateTime()
+    {
+        return $this->dateTime;
+    }
 }

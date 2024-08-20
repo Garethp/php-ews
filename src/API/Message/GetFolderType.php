@@ -8,9 +8,7 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetFolderType
  *
- * @method \garethp\ews\API\Type\FolderResponseShapeType getFolderShape()
  * @method GetFolderType setFolderShape(\garethp\ews\API\Type\FolderResponseShapeType $folderShape)
- * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method GetFolderType setFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $folderIds)
  */
 class GetFolderType extends BaseRequestType
@@ -25,4 +23,20 @@ class GetFolderType extends BaseRequestType
      * @var \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $folderIds = null;
+
+    /**
+     * @return \garethp\ews\API\Type\FolderResponseShapeType
+     */
+    public function getFolderShape()
+    {
+        return $this->folderShape;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
+     */
+    public function getFolderIds()
+    {
+        return $this->folderIds;
+    }
 }

@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: RequestTypeHeader
  *
- * @method string getRequestType()
  * @method RequestTypeHeaderType setRequestType(string $requestType)
  */
 class RequestTypeHeaderType extends Type
@@ -20,4 +19,12 @@ class RequestTypeHeaderType extends Type
      * @var string
      */
     protected $requestType = null;
+
+    /**
+     * @return string
+     */
+    public function getRequestType()
+    {
+        return $this->requestType;
+    }
 }

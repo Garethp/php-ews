@@ -10,14 +10,10 @@ use garethp\ews\API\Type;
  *
  * XSD Type: BaseSubscriptionRequestType
  *
- * @method boolean getSubscribeToAllFolders()
  * @method BaseSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
- * @method NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method BaseSubscriptionRequestType setFolderIds(NonEmptyArrayOfBaseFolderIdsType $folderIds)
  * @method BaseSubscriptionRequestType addEventTypes(string $eventTypes)
- * @method string[] getEventTypes()
  * @method BaseSubscriptionRequestType setEventTypes(array $eventTypes)
- * @method string getWatermark()
  * @method BaseSubscriptionRequestType setWatermark(string $watermark)
  */
 class BaseSubscriptionRequestType extends Type
@@ -49,5 +45,37 @@ class BaseSubscriptionRequestType extends Type
     public function isSubscribeToAllFolders()
     {
         return ((bool) $this->subscribeToAllFolders);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSubscribeToAllFolders()
+    {
+        return $this->subscribeToAllFolders;
+    }
+
+    /**
+     * @return NonEmptyArrayOfBaseFolderIdsType
+     */
+    public function getFolderIds()
+    {
+        return $this->folderIds;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getEventTypes()
+    {
+        return $this->eventTypes;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWatermark()
+    {
+        return $this->watermark;
     }
 }

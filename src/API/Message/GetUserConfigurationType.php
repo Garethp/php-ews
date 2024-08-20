@@ -8,10 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetUserConfigurationType
  *
- * @method \garethp\ews\API\Type\UserConfigurationNameType getUserConfigurationName()
  * @method GetUserConfigurationType setUserConfigurationName(\garethp\ews\API\Type\UserConfigurationNameType $userConfigurationName)
  * @method GetUserConfigurationType addUserConfigurationProperties(string $userConfigurationProperties)
- * @method string[] getUserConfigurationProperties()
  * @method GetUserConfigurationType setUserConfigurationProperties(array $userConfigurationProperties)
  */
 class GetUserConfigurationType extends BaseRequestType
@@ -26,4 +24,20 @@ class GetUserConfigurationType extends BaseRequestType
      * @var string[]
      */
     protected $userConfigurationProperties = null;
+
+    /**
+     * @return \garethp\ews\API\Type\UserConfigurationNameType
+     */
+    public function getUserConfigurationName()
+    {
+        return $this->userConfigurationName;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getUserConfigurationProperties()
+    {
+        return $this->userConfigurationProperties;
+    }
 }

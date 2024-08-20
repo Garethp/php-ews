@@ -8,15 +8,10 @@ namespace garethp\ews\API\Type;
  * Identifier for a fully resolved email address
  * XSD Type: EmailAddressType
  *
- * @method string getName()
  * @method EmailAddressType setName(string $name)
- * @method string getEmailAddress()
  * @method EmailAddressType setEmailAddress(string $emailAddress)
- * @method string getRoutingType()
  * @method EmailAddressType setRoutingType(string $routingType)
- * @method string getMailboxType()
  * @method EmailAddressType setMailboxType(string $mailboxType)
- * @method ItemIdType getItemId()
  * @method EmailAddressType setItemId(ItemIdType $itemId)
  */
 class EmailAddressType extends BaseEmailAddressType
@@ -46,4 +41,44 @@ class EmailAddressType extends BaseEmailAddressType
      * @var \garethp\ews\API\Type\ItemIdType
      */
     protected $itemId = null;
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmailAddress()
+    {
+        return $this->emailAddress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRoutingType()
+    {
+        return $this->routingType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMailboxType()
+    {
+        return $this->mailboxType;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
 }

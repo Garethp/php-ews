@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: PathToUnindexedFieldType
  *
- * @method string getFieldURI()
  * @method PathToUnindexedFieldType setFieldURI(string $fieldURI)
  */
 class PathToUnindexedFieldType extends BasePathToElementType
@@ -18,4 +17,12 @@ class PathToUnindexedFieldType extends BasePathToElementType
      * @var string
      */
     protected $fieldURI = null;
+
+    /**
+     * @return string
+     */
+    public function getFieldURI()
+    {
+        return $this->fieldURI;
+    }
 }

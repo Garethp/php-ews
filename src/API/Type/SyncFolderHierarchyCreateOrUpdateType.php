@@ -10,15 +10,10 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SyncFolderHierarchyCreateOrUpdateType
  *
- * @method FolderType getFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setFolder(FolderType $folder)
- * @method CalendarFolderType getCalendarFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setCalendarFolder(CalendarFolderType $calendarFolder)
- * @method ContactsFolderType getContactsFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setContactsFolder(ContactsFolderType $contactsFolder)
- * @method SearchFolderType getSearchFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setSearchFolder(SearchFolderType $searchFolder)
- * @method TasksFolderType getTasksFolder()
  * @method SyncFolderHierarchyCreateOrUpdateType setTasksFolder(TasksFolderType $tasksFolder)
  */
 class SyncFolderHierarchyCreateOrUpdateType extends Type
@@ -48,4 +43,44 @@ class SyncFolderHierarchyCreateOrUpdateType extends Type
      * @var \garethp\ews\API\Type\TasksFolderType
      */
     protected $tasksFolder = null;
+
+    /**
+     * @return FolderType
+     */
+    public function getFolder()
+    {
+        return $this->folder;
+    }
+
+    /**
+     * @return CalendarFolderType
+     */
+    public function getCalendarFolder()
+    {
+        return $this->calendarFolder;
+    }
+
+    /**
+     * @return ContactsFolderType
+     */
+    public function getContactsFolder()
+    {
+        return $this->contactsFolder;
+    }
+
+    /**
+     * @return SearchFolderType
+     */
+    public function getSearchFolder()
+    {
+        return $this->searchFolder;
+    }
+
+    /**
+     * @return TasksFolderType
+     */
+    public function getTasksFolder()
+    {
+        return $this->tasksFolder;
+    }
 }

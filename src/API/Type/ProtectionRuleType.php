@@ -10,15 +10,10 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ProtectionRuleType
  *
- * @method string getName()
  * @method ProtectionRuleType setName(string $name)
- * @method boolean getUserOverridable()
  * @method ProtectionRuleType setUserOverridable(boolean $userOverridable)
- * @method integer getPriority()
  * @method ProtectionRuleType setPriority(integer $priority)
- * @method ProtectionRuleConditionType getCondition()
  * @method ProtectionRuleType setCondition(ProtectionRuleConditionType $condition)
- * @method ProtectionRuleActionType getAction()
  * @method ProtectionRuleType setAction(ProtectionRuleActionType $action)
  */
 class ProtectionRuleType extends Type
@@ -50,10 +45,50 @@ class ProtectionRuleType extends Type
     protected $action = null;
 
     /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
      * @returns bool
      */
     public function isUserOverridable()
     {
         return ((bool) $this->userOverridable);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getUserOverridable()
+    {
+        return $this->userOverridable;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getPriority()
+    {
+        return $this->priority;
+    }
+
+    /**
+     * @return ProtectionRuleConditionType
+     */
+    public function getCondition()
+    {
+        return $this->condition;
+    }
+
+    /**
+     * @return ProtectionRuleActionType
+     */
+    public function getAction()
+    {
+        return $this->action;
     }
 }

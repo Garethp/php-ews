@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SidAndAttributesType
  *
- * @method integer getAttributes()
  * @method SidAndAttributesType setAttributes(integer $attributes)
- * @method string getSecurityIdentifier()
  * @method SidAndAttributesType setSecurityIdentifier(string $securityIdentifier)
  */
 class SidAndAttributesType extends Type
@@ -27,4 +25,20 @@ class SidAndAttributesType extends Type
      * @var string
      */
     protected $securityIdentifier = null;
+
+    /**
+     * @return integer
+     */
+    public function getAttributes()
+    {
+        return $this->attributes;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSecurityIdentifier()
+    {
+        return $this->securityIdentifier;
+    }
 }

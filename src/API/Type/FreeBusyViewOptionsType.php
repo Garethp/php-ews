@@ -10,12 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: FreeBusyViewOptionsType
  *
- * @method DurationType getTimeWindow()
  * @method FreeBusyViewOptionsType setTimeWindow(DurationType $timeWindow)
- * @method integer getMergedFreeBusyIntervalInMinutes()
  * @method FreeBusyViewOptionsType setMergedFreeBusyIntervalInMinutes(integer $mergedFreeBusyIntervalInMinutes)
  * @method FreeBusyViewOptionsType addRequestedView(string $requestedView)
- * @method string[] getRequestedView()
  * @method FreeBusyViewOptionsType setRequestedView(array $requestedView)
  */
 class FreeBusyViewOptionsType extends Type
@@ -35,4 +32,28 @@ class FreeBusyViewOptionsType extends Type
      * @var string[]
      */
     protected $requestedView = null;
+
+    /**
+     * @return DurationType
+     */
+    public function getTimeWindow()
+    {
+        return $this->timeWindow;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getMergedFreeBusyIntervalInMinutes()
+    {
+        return $this->mergedFreeBusyIntervalInMinutes;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getRequestedView()
+    {
+        return $this->requestedView;
+    }
 }

@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: DeleteAttachmentResponseMessageType
  *
- * @method \garethp\ews\API\Type\RootItemIdType getRootItemId()
  * @method DeleteAttachmentResponseMessageType setRootItemId(\garethp\ews\API\Type\RootItemIdType $rootItemId)
  */
 class DeleteAttachmentResponseMessageType extends ResponseMessageType
@@ -18,4 +17,12 @@ class DeleteAttachmentResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\RootItemIdType
      */
     protected $rootItemId = null;
+
+    /**
+     * @return \garethp\ews\API\Type\RootItemIdType
+     */
+    public function getRootItemId()
+    {
+        return $this->rootItemId;
+    }
 }

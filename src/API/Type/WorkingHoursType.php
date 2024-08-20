@@ -10,10 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: WorkingHours
  *
- * @method SerializableTimeZoneType getTimeZone()
  * @method WorkingHoursType setTimeZone(SerializableTimeZoneType $timeZone)
  * @method WorkingHoursType addWorkingPeriodArray(WorkingPeriodType $workingPeriodArray)
- * @method WorkingPeriodType[] getWorkingPeriodArray()
  * @method WorkingHoursType setWorkingPeriodArray(array $workingPeriodArray)
  */
 class WorkingHoursType extends Type
@@ -28,4 +26,20 @@ class WorkingHoursType extends Type
      * @var \garethp\ews\API\Type\WorkingPeriodType[]
      */
     protected $workingPeriodArray = null;
+
+    /**
+     * @return SerializableTimeZoneType
+     */
+    public function getTimeZone()
+    {
+        return $this->timeZone;
+    }
+
+    /**
+     * @return WorkingPeriodType[]
+     */
+    public function getWorkingPeriodArray()
+    {
+        return $this->workingPeriodArray;
+    }
 }

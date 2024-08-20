@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: PhoneNumberDictionaryEntryType
  *
- * @method string getKey()
  * @method PhoneNumberDictionaryEntryType setKey(string $key)
  */
 class PhoneNumberDictionaryEntryType extends Type
@@ -20,4 +19,12 @@ class PhoneNumberDictionaryEntryType extends Type
      * @var string
      */
     protected $key = null;
+
+    /**
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->key;
+    }
 }

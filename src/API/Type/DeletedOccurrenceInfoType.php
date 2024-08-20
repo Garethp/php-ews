@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: DeletedOccurrenceInfoType
  *
- * @method \DateTime getStart()
  * @method DeletedOccurrenceInfoType setStart(\DateTime $start)
  */
 class DeletedOccurrenceInfoType extends Type
@@ -24,4 +23,12 @@ class DeletedOccurrenceInfoType extends Type
     protected $_typeMap = array(
         'start' => 'dateTime',
     );
+
+    /**
+     * @return \DateTime
+     */
+    public function getStart()
+    {
+        return $this->start;
+    }
 }

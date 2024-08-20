@@ -15,20 +15,13 @@ use garethp\ews\API\Type;
  *
  * XSD Type: FindItemParentType
  *
- * @method integer getIndexedPagingOffset()
  * @method FindItemParentType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method integer getNumeratorOffset()
  * @method FindItemParentType setNumeratorOffset(integer $numeratorOffset)
- * @method integer getAbsoluteDenominator()
  * @method FindItemParentType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean getIncludesLastItemInRange()
  * @method FindItemParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method integer getTotalItemsInView()
  * @method FindItemParentType setTotalItemsInView(integer $totalItemsInView)
- * @method ArrayOfRealItemsType getItems()
  * @method FindItemParentType setItems(ArrayOfRealItemsType $items)
  * @method FindItemParentType addGroups(GroupedItemsType $groups)
- * @method GroupedItemsType[] getGroups()
  * @method FindItemParentType setGroups(array $groups)
  */
 class FindItemParentType extends Type implements Countable, ArrayAccess, IteratorAggregate
@@ -154,10 +147,66 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
     }
 
     /**
+     * @return integer
+     */
+    public function getIndexedPagingOffset()
+    {
+        return $this->indexedPagingOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNumeratorOffset()
+    {
+        return $this->numeratorOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getAbsoluteDenominator()
+    {
+        return $this->absoluteDenominator;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludesLastItemInRange()
     {
         return ((bool) $this->includesLastItemInRange);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getTotalItemsInView()
+    {
+        return $this->totalItemsInView;
+    }
+
+    /**
+     * @return ArrayOfRealItemsType
+     */
+    public function getItems()
+    {
+        return $this->items;
+    }
+
+    /**
+     * @return GroupedItemsType[]
+     */
+    public function getGroups()
+    {
+        return $this->groups;
     }
 }

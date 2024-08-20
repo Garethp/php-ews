@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: PathToExceptionFieldType
  *
- * @method string getFieldURI()
  * @method PathToExceptionFieldType setFieldURI(string $fieldURI)
  */
 class PathToExceptionFieldType extends BasePathToElementType
@@ -18,4 +17,12 @@ class PathToExceptionFieldType extends BasePathToElementType
      * @var string
      */
     protected $fieldURI = null;
+
+    /**
+     * @return string
+     */
+    public function getFieldURI()
+    {
+        return $this->fieldURI;
+    }
 }

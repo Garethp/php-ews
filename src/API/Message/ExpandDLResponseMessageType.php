@@ -8,17 +8,11 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: ExpandDLResponseMessageType
  *
- * @method integer getIndexedPagingOffset()
  * @method ExpandDLResponseMessageType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method integer getNumeratorOffset()
  * @method ExpandDLResponseMessageType setNumeratorOffset(integer $numeratorOffset)
- * @method integer getAbsoluteDenominator()
  * @method ExpandDLResponseMessageType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean getIncludesLastItemInRange()
  * @method ExpandDLResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method integer getTotalItemsInView()
  * @method ExpandDLResponseMessageType setTotalItemsInView(integer $totalItemsInView)
- * @method \garethp\ews\API\Type\ArrayOfDLExpansionType getDLExpansion()
  * @method ExpandDLResponseMessageType setDLExpansion(\garethp\ews\API\Type\ArrayOfDLExpansionType $dLExpansion)
  */
 class ExpandDLResponseMessageType extends ResponseMessageType
@@ -55,10 +49,58 @@ class ExpandDLResponseMessageType extends ResponseMessageType
     protected $dLExpansion = null;
 
     /**
+     * @return integer
+     */
+    public function getIndexedPagingOffset()
+    {
+        return $this->indexedPagingOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNumeratorOffset()
+    {
+        return $this->numeratorOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getAbsoluteDenominator()
+    {
+        return $this->absoluteDenominator;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludesLastItemInRange()
     {
         return ((bool) $this->includesLastItemInRange);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getTotalItemsInView()
+    {
+        return $this->totalItemsInView;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\ArrayOfDLExpansionType
+     */
+    public function getDLExpansion()
+    {
+        return $this->dLExpansion;
     }
 }

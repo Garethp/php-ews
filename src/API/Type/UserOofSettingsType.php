@@ -10,15 +10,10 @@ use garethp\ews\API\Type;
  *
  * XSD Type: UserOofSettings
  *
- * @method string getOofState()
  * @method UserOofSettingsType setOofState(string $oofState)
- * @method string getExternalAudience()
  * @method UserOofSettingsType setExternalAudience(string $externalAudience)
- * @method DurationType getDuration()
  * @method UserOofSettingsType setDuration(DurationType $duration)
- * @method ReplyBodyType getInternalReply()
  * @method UserOofSettingsType setInternalReply(ReplyBodyType $internalReply)
- * @method ReplyBodyType getExternalReply()
  * @method UserOofSettingsType setExternalReply(ReplyBodyType $externalReply)
  */
 class UserOofSettingsType extends Type
@@ -48,4 +43,44 @@ class UserOofSettingsType extends Type
      * @var \garethp\ews\API\Type\ReplyBodyType
      */
     protected $externalReply = null;
+
+    /**
+     * @return string
+     */
+    public function getOofState()
+    {
+        return $this->oofState;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExternalAudience()
+    {
+        return $this->externalAudience;
+    }
+
+    /**
+     * @return DurationType
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * @return ReplyBodyType
+     */
+    public function getInternalReply()
+    {
+        return $this->internalReply;
+    }
+
+    /**
+     * @return ReplyBodyType
+     */
+    public function getExternalReply()
+    {
+        return $this->externalReply;
+    }
 }

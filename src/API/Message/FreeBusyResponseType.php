@@ -10,9 +10,7 @@ use garethp\ews\API\Message;
  *
  * XSD Type: FreeBusyResponseType
  *
- * @method ResponseMessageType getResponseMessage()
  * @method FreeBusyResponseType setResponseMessage(ResponseMessageType $responseMessage)
- * @method \garethp\ews\API\Type\FreeBusyViewType getFreeBusyView()
  * @method FreeBusyResponseType setFreeBusyView(\garethp\ews\API\Type\FreeBusyViewType $freeBusyView)
  */
 class FreeBusyResponseType extends Message
@@ -27,4 +25,20 @@ class FreeBusyResponseType extends Message
      * @var \garethp\ews\API\Type\FreeBusyViewType
      */
     protected $freeBusyView = null;
+
+    /**
+     * @return ResponseMessageType
+     */
+    public function getResponseMessage()
+    {
+        return $this->responseMessage;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\FreeBusyViewType
+     */
+    public function getFreeBusyView()
+    {
+        return $this->freeBusyView;
+    }
 }

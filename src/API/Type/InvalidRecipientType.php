@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: InvalidRecipientType
  *
- * @method string getSmtpAddress()
  * @method InvalidRecipientType setSmtpAddress(string $smtpAddress)
- * @method string getResponseCode()
  * @method InvalidRecipientType setResponseCode(string $responseCode)
- * @method string getMessageText()
  * @method InvalidRecipientType setMessageText(string $messageText)
  */
 class InvalidRecipientType extends Type
@@ -34,4 +31,28 @@ class InvalidRecipientType extends Type
      * @var string
      */
     protected $messageText = null;
+
+    /**
+     * @return string
+     */
+    public function getSmtpAddress()
+    {
+        return $this->smtpAddress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResponseCode()
+    {
+        return $this->responseCode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessageText()
+    {
+        return $this->messageText;
+    }
 }

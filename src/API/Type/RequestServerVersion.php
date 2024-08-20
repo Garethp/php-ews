@@ -7,7 +7,6 @@ use garethp\ews\API\Type;
 /**
  * Class representing RequestServerVersion
  *
- * @method string getVersion()
  * @method RequestServerVersion setVersion(string $version)
  */
 class RequestServerVersion extends Type
@@ -17,4 +16,12 @@ class RequestServerVersion extends Type
      * @var string
      */
     protected $version = null;
+
+    /**
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
 }

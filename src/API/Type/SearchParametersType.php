@@ -10,11 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SearchParametersType
  *
- * @method string getTraversal()
  * @method SearchParametersType setTraversal(string $traversal)
- * @method RestrictionType getRestriction()
  * @method SearchParametersType setRestriction(RestrictionType $restriction)
- * @method NonEmptyArrayOfBaseFolderIdsType getBaseFolderIds()
  * @method SearchParametersType setBaseFolderIds(NonEmptyArrayOfBaseFolderIdsType $baseFolderIds)
  */
 class SearchParametersType extends Type
@@ -34,4 +31,28 @@ class SearchParametersType extends Type
      * @var \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $baseFolderIds = null;
+
+    /**
+     * @return string
+     */
+    public function getTraversal()
+    {
+        return $this->traversal;
+    }
+
+    /**
+     * @return RestrictionType
+     */
+    public function getRestriction()
+    {
+        return $this->restriction;
+    }
+
+    /**
+     * @return NonEmptyArrayOfBaseFolderIdsType
+     */
+    public function getBaseFolderIds()
+    {
+        return $this->baseFolderIds;
+    }
 }

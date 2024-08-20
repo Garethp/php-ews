@@ -11,35 +11,22 @@ use garethp\ews\API\Type;
  * XSD Type: RuleActionsType
  *
  * @method RuleActionsType addAssignCategories(string $assignCategories)
- * @method string[] getAssignCategories()
  * @method RuleActionsType setAssignCategories(array $assignCategories)
- * @method TargetFolderIdType getCopyToFolder()
  * @method RuleActionsType setCopyToFolder(TargetFolderIdType $copyToFolder)
- * @method boolean getDelete()
  * @method RuleActionsType setDelete(boolean $delete)
  * @method RuleActionsType addForwardAsAttachmentToRecipients(EmailAddressType $forwardAsAttachmentToRecipients)
- * @method EmailAddressType[] getForwardAsAttachmentToRecipients()
  * @method RuleActionsType setForwardAsAttachmentToRecipients(array $forwardAsAttachmentToRecipients)
  * @method RuleActionsType addForwardToRecipients(EmailAddressType $forwardToRecipients)
- * @method EmailAddressType[] getForwardToRecipients()
  * @method RuleActionsType setForwardToRecipients(array $forwardToRecipients)
- * @method string getMarkImportance()
  * @method RuleActionsType setMarkImportance(string $markImportance)
- * @method boolean getMarkAsRead()
  * @method RuleActionsType setMarkAsRead(boolean $markAsRead)
- * @method TargetFolderIdType getMoveToFolder()
  * @method RuleActionsType setMoveToFolder(TargetFolderIdType $moveToFolder)
- * @method boolean getPermanentDelete()
  * @method RuleActionsType setPermanentDelete(boolean $permanentDelete)
  * @method RuleActionsType addRedirectToRecipients(EmailAddressType $redirectToRecipients)
- * @method EmailAddressType[] getRedirectToRecipients()
  * @method RuleActionsType setRedirectToRecipients(array $redirectToRecipients)
  * @method RuleActionsType addSendSMSAlertToRecipients(EmailAddressType $sendSMSAlertToRecipients)
- * @method EmailAddressType[] getSendSMSAlertToRecipients()
  * @method RuleActionsType setSendSMSAlertToRecipients(array $sendSMSAlertToRecipients)
- * @method ItemIdType getServerReplyWithMessage()
  * @method RuleActionsType setServerReplyWithMessage(ItemIdType $serverReplyWithMessage)
- * @method boolean getStopProcessingRules()
  * @method RuleActionsType setStopProcessingRules(boolean $stopProcessingRules)
  */
 class RuleActionsType extends Type
@@ -111,11 +98,59 @@ class RuleActionsType extends Type
     protected $stopProcessingRules = null;
 
     /**
+     * @return string[]
+     */
+    public function getAssignCategories()
+    {
+        return $this->assignCategories;
+    }
+
+    /**
+     * @return TargetFolderIdType
+     */
+    public function getCopyToFolder()
+    {
+        return $this->copyToFolder;
+    }
+
+    /**
      * @returns bool
      */
     public function isDelete()
     {
         return ((bool) $this->delete);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getDelete()
+    {
+        return $this->delete;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getForwardAsAttachmentToRecipients()
+    {
+        return $this->forwardAsAttachmentToRecipients;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getForwardToRecipients()
+    {
+        return $this->forwardToRecipients;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMarkImportance()
+    {
+        return $this->markImportance;
     }
 
     /**
@@ -127,6 +162,22 @@ class RuleActionsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getMarkAsRead()
+    {
+        return $this->markAsRead;
+    }
+
+    /**
+     * @return TargetFolderIdType
+     */
+    public function getMoveToFolder()
+    {
+        return $this->moveToFolder;
+    }
+
+    /**
      * @returns bool
      */
     public function isPermanentDelete()
@@ -135,10 +186,50 @@ class RuleActionsType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getPermanentDelete()
+    {
+        return $this->permanentDelete;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getRedirectToRecipients()
+    {
+        return $this->redirectToRecipients;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getSendSMSAlertToRecipients()
+    {
+        return $this->sendSMSAlertToRecipients;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getServerReplyWithMessage()
+    {
+        return $this->serverReplyWithMessage;
+    }
+
+    /**
      * @returns bool
      */
     public function isStopProcessingRules()
     {
         return ((bool) $this->stopProcessingRules);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getStopProcessingRules()
+    {
+        return $this->stopProcessingRules;
     }
 }

@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: ContactsViewType
  *
- * @method string getInitialName()
  * @method ContactsViewType setInitialName(string $initialName)
- * @method string getFinalName()
  * @method ContactsViewType setFinalName(string $finalName)
  */
 class ContactsViewType extends BasePagingType
@@ -25,4 +23,20 @@ class ContactsViewType extends BasePagingType
      * @var string
      */
     protected $finalName = null;
+
+    /**
+     * @return string
+     */
+    public function getInitialName()
+    {
+        return $this->initialName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFinalName()
+    {
+        return $this->finalName;
+    }
 }

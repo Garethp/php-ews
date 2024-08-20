@@ -10,25 +10,15 @@ use garethp\ews\API\Type;
  *
  * XSD Type: CompleteNameType
  *
- * @method string getTitle()
  * @method CompleteNameType setTitle(string $title)
- * @method string getFirstName()
  * @method CompleteNameType setFirstName(string $firstName)
- * @method string getMiddleName()
  * @method CompleteNameType setMiddleName(string $middleName)
- * @method string getLastName()
  * @method CompleteNameType setLastName(string $lastName)
- * @method string getSuffix()
  * @method CompleteNameType setSuffix(string $suffix)
- * @method string getInitials()
  * @method CompleteNameType setInitials(string $initials)
- * @method string getFullName()
  * @method CompleteNameType setFullName(string $fullName)
- * @method string getNickname()
  * @method CompleteNameType setNickname(string $nickname)
- * @method string getYomiFirstName()
  * @method CompleteNameType setYomiFirstName(string $yomiFirstName)
- * @method string getYomiLastName()
  * @method CompleteNameType setYomiLastName(string $yomiLastName)
  */
 class CompleteNameType extends Type
@@ -83,4 +73,84 @@ class CompleteNameType extends Type
      * @var string
      */
     protected $yomiLastName = null;
+
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMiddleName()
+    {
+        return $this->middleName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSuffix()
+    {
+        return $this->suffix;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInitials()
+    {
+        return $this->initials;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->fullName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNickname()
+    {
+        return $this->nickname;
+    }
+
+    /**
+     * @return string
+     */
+    public function getYomiFirstName()
+    {
+        return $this->yomiFirstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getYomiLastName()
+    {
+        return $this->yomiLastName;
+    }
 }

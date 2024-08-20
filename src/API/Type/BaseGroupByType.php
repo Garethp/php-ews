@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: BaseGroupByType
  *
- * @method string getOrder()
  * @method BaseGroupByType setOrder(string $order)
  */
 class BaseGroupByType extends Type
@@ -20,4 +19,12 @@ class BaseGroupByType extends Type
      * @var string
      */
     protected $order = null;
+
+    /**
+     * @return string
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
 }

@@ -9,9 +9,7 @@ namespace garethp\ews\API\Message;
  * XSD Type: CreateManagedFolderRequestType
  *
  * @method CreateManagedFolderRequestType addFolderNames(string $folderNames)
- * @method string[] getFolderNames()
  * @method CreateManagedFolderRequestType setFolderNames(array $folderNames)
- * @method \garethp\ews\API\Type\EmailAddressType getMailbox()
  * @method CreateManagedFolderRequestType setMailbox(\garethp\ews\API\Type\EmailAddressType $mailbox)
  */
 class CreateManagedFolderRequestType extends BaseRequestType
@@ -26,4 +24,20 @@ class CreateManagedFolderRequestType extends BaseRequestType
      * @var \garethp\ews\API\Type\EmailAddressType
      */
     protected $mailbox = null;
+
+    /**
+     * @return string[]
+     */
+    public function getFolderNames()
+    {
+        return $this->folderNames;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
+    }
 }

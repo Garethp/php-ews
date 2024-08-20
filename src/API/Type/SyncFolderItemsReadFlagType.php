@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SyncFolderItemsReadFlagType
  *
- * @method ItemIdType getItemId()
  * @method SyncFolderItemsReadFlagType setItemId(ItemIdType $itemId)
- * @method boolean getIsRead()
  * @method SyncFolderItemsReadFlagType setIsRead(boolean $isRead)
  */
 class SyncFolderItemsReadFlagType extends Type
@@ -29,10 +27,26 @@ class SyncFolderItemsReadFlagType extends Type
     protected $isRead = null;
 
     /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
      * @returns bool
      */
     public function isRead()
     {
         return ((bool) $this->isRead);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsRead()
+    {
+        return $this->isRead;
     }
 }

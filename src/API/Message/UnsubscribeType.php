@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: UnsubscribeType
  *
- * @method string getSubscriptionId()
  * @method UnsubscribeType setSubscriptionId(string $subscriptionId)
  */
 class UnsubscribeType extends BaseRequestType
@@ -18,4 +17,12 @@ class UnsubscribeType extends BaseRequestType
      * @var string
      */
     protected $subscriptionId = null;
+
+    /**
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->subscriptionId;
+    }
 }

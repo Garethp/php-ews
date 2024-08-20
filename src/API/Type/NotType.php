@@ -9,40 +9,28 @@ namespace garethp\ews\API\Type;
  * XSD Type: NotType
  *
  * @method NotType addContains(Contains $contains)
- * @method Contains[] getContains()
  * @method NotType setContains(array $contains)
  * @method NotType addExcludes(Excludes $excludes)
- * @method Excludes[] getExcludes()
  * @method NotType setExcludes(array $excludes)
  * @method NotType addExists(Exists $exists)
- * @method Exists[] getExists()
  * @method NotType setExists(array $exists)
  * @method NotType addIsEqualTo(IsEqualTo $isEqualTo)
- * @method IsEqualTo[] getIsEqualTo()
  * @method NotType setIsEqualTo(array $isEqualTo)
  * @method NotType addIsNotEqualTo(IsNotEqualTo $isNotEqualTo)
- * @method IsNotEqualTo[] getIsNotEqualTo()
  * @method NotType setIsNotEqualTo(array $isNotEqualTo)
  * @method NotType addIsGreaterThan(IsGreaterThan $isGreaterThan)
- * @method IsGreaterThan[] getIsGreaterThan()
  * @method NotType setIsGreaterThan(array $isGreaterThan)
  * @method NotType addIsGreaterThanOrEqualTo(IsGreaterThanOrEqualTo $isGreaterThanOrEqualTo)
- * @method IsGreaterThanOrEqualTo[] getIsGreaterThanOrEqualTo()
  * @method NotType setIsGreaterThanOrEqualTo(array $isGreaterThanOrEqualTo)
  * @method NotType addIsLessThan(IsLessThan $isLessThan)
- * @method IsLessThan[] getIsLessThan()
  * @method NotType setIsLessThan(array $isLessThan)
  * @method NotType addIsLessThanOrEqualTo(IsLessThanOrEqualTo $isLessThanOrEqualTo)
- * @method IsLessThanOrEqualTo[] getIsLessThanOrEqualTo()
  * @method NotType setIsLessThanOrEqualTo(array $isLessThanOrEqualTo)
  * @method NotType addAnd(AndElement $and)
- * @method AndElement[] getAnd()
  * @method NotType setAnd(array $and)
  * @method NotType addNot(Not $not)
- * @method Not[] getNot()
  * @method NotType setNot(array $not)
  * @method NotType addOr(OrElement $or)
- * @method OrElement[] getOr()
  * @method NotType setOr(array $or)
  */
 class NotType extends SearchExpressionType
@@ -107,4 +95,100 @@ class NotType extends SearchExpressionType
      * @var \garethp\ews\API\Type\OrElement[]
      */
     protected $or = null;
+
+    /**
+     * @return Contains[]
+     */
+    public function getContains()
+    {
+        return $this->contains;
+    }
+
+    /**
+     * @return Excludes[]
+     */
+    public function getExcludes()
+    {
+        return $this->excludes;
+    }
+
+    /**
+     * @return Exists[]
+     */
+    public function getExists()
+    {
+        return $this->exists;
+    }
+
+    /**
+     * @return IsEqualTo[]
+     */
+    public function getIsEqualTo()
+    {
+        return $this->isEqualTo;
+    }
+
+    /**
+     * @return IsNotEqualTo[]
+     */
+    public function getIsNotEqualTo()
+    {
+        return $this->isNotEqualTo;
+    }
+
+    /**
+     * @return IsGreaterThan[]
+     */
+    public function getIsGreaterThan()
+    {
+        return $this->isGreaterThan;
+    }
+
+    /**
+     * @return IsGreaterThanOrEqualTo[]
+     */
+    public function getIsGreaterThanOrEqualTo()
+    {
+        return $this->isGreaterThanOrEqualTo;
+    }
+
+    /**
+     * @return IsLessThan[]
+     */
+    public function getIsLessThan()
+    {
+        return $this->isLessThan;
+    }
+
+    /**
+     * @return IsLessThanOrEqualTo[]
+     */
+    public function getIsLessThanOrEqualTo()
+    {
+        return $this->isLessThanOrEqualTo;
+    }
+
+    /**
+     * @return AndElement[]
+     */
+    public function getAnd()
+    {
+        return $this->and;
+    }
+
+    /**
+     * @return Not[]
+     */
+    public function getNot()
+    {
+        return $this->not;
+    }
+
+    /**
+     * @return OrElement[]
+     */
+    public function getOr()
+    {
+        return $this->or;
+    }
 }

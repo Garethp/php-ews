@@ -11,12 +11,9 @@ use garethp\ews\API\Type;
  *  associated value).
  * XSD Type: ExtendedPropertyType
  *
- * @method PathToExtendedFieldType getExtendedFieldURI()
  * @method ExtendedPropertyType setExtendedFieldURI(PathToExtendedFieldType $extendedFieldURI)
- * @method string getValue()
  * @method ExtendedPropertyType setValue(string $value)
  * @method ExtendedPropertyType addValues(string $values)
- * @method string[] getValues()
  * @method ExtendedPropertyType setValues(array $values)
  */
 class ExtendedPropertyType extends Type
@@ -36,4 +33,28 @@ class ExtendedPropertyType extends Type
      * @var string[]
      */
     protected $values = null;
+
+    /**
+     * @return PathToExtendedFieldType
+     */
+    public function getExtendedFieldURI()
+    {
+        return $this->extendedFieldURI;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getValues()
+    {
+        return $this->values;
+    }
 }

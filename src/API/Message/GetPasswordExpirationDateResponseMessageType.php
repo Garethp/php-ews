@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetPasswordExpirationDateResponseMessageType
  *
- * @method \DateTime getPasswordExpirationDate()
  * @method GetPasswordExpirationDateResponseMessageType setPasswordExpirationDate(\DateTime $passwordExpirationDate)
  */
 class GetPasswordExpirationDateResponseMessageType extends ResponseMessageType
@@ -22,4 +21,12 @@ class GetPasswordExpirationDateResponseMessageType extends ResponseMessageType
     protected $_typeMap = array(
         'passwordExpirationDate' => 'dateTime',
     );
+
+    /**
+     * @return \DateTime
+     */
+    public function getPasswordExpirationDate()
+    {
+        return $this->passwordExpirationDate;
+    }
 }

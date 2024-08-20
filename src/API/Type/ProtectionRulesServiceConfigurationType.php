@@ -8,13 +8,10 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: ProtectionRulesServiceConfiguration
  *
- * @method integer getRefreshInterval()
  * @method ProtectionRulesServiceConfigurationType setRefreshInterval(integer $refreshInterval)
  * @method ProtectionRulesServiceConfigurationType addRules(ProtectionRuleType $rules)
- * @method ProtectionRuleType[] getRules()
  * @method ProtectionRulesServiceConfigurationType setRules(array $rules)
  * @method ProtectionRulesServiceConfigurationType addInternalDomains(SmtpDomainType $internalDomains)
- * @method SmtpDomainType[] getInternalDomains()
  * @method ProtectionRulesServiceConfigurationType setInternalDomains(array $internalDomains)
  */
 class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
@@ -34,4 +31,28 @@ class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
      * @var \garethp\ews\API\Type\SmtpDomainType[]
      */
     protected $internalDomains = null;
+
+    /**
+     * @return integer
+     */
+    public function getRefreshInterval()
+    {
+        return $this->refreshInterval;
+    }
+
+    /**
+     * @return ProtectionRuleType[]
+     */
+    public function getRules()
+    {
+        return $this->rules;
+    }
+
+    /**
+     * @return SmtpDomainType[]
+     */
+    public function getInternalDomains()
+    {
+        return $this->internalDomains;
+    }
 }

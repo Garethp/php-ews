@@ -10,15 +10,10 @@ use garethp\ews\API\Message;
  *
  * XSD Type: ResponseMessageType
  *
- * @method string getResponseClass()
  * @method ResponseMessageType setResponseClass(string $responseClass)
- * @method string getMessageText()
  * @method ResponseMessageType setMessageText(string $messageText)
- * @method string getResponseCode()
  * @method ResponseMessageType setResponseCode(string $responseCode)
- * @method integer getDescriptiveLinkKey()
  * @method ResponseMessageType setDescriptiveLinkKey(integer $descriptiveLinkKey)
- * @method \garethp\ews\API\Message\ResponseMessageType\MessageXmlAType getMessageXml()
  * @method ResponseMessageType setMessageXml(\garethp\ews\API\Message\ResponseMessageType\MessageXmlAType $messageXml)
  */
 class ResponseMessageType extends Message
@@ -48,4 +43,44 @@ class ResponseMessageType extends Message
      * @var \garethp\ews\API\Message\ResponseMessageType\MessageXmlAType
      */
     protected $messageXml = null;
+
+    /**
+     * @return string
+     */
+    public function getResponseClass()
+    {
+        return $this->responseClass;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessageText()
+    {
+        return $this->messageText;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResponseCode()
+    {
+        return $this->responseCode;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getDescriptiveLinkKey()
+    {
+        return $this->descriptiveLinkKey;
+    }
+
+    /**
+     * @return \garethp\ews\API\Message\ResponseMessageType\MessageXmlAType
+     */
+    public function getMessageXml()
+    {
+        return $this->messageXml;
+    }
 }

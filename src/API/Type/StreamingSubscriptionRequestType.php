@@ -10,12 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: StreamingSubscriptionRequestType
  *
- * @method boolean getSubscribeToAllFolders()
  * @method StreamingSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
- * @method NonEmptyArrayOfBaseFolderIdsType getFolderIds()
  * @method StreamingSubscriptionRequestType setFolderIds(NonEmptyArrayOfBaseFolderIdsType $folderIds)
  * @method StreamingSubscriptionRequestType addEventTypes(string $eventTypes)
- * @method string[] getEventTypes()
  * @method StreamingSubscriptionRequestType setEventTypes(array $eventTypes)
  */
 class StreamingSubscriptionRequestType extends Type
@@ -42,5 +39,29 @@ class StreamingSubscriptionRequestType extends Type
     public function isSubscribeToAllFolders()
     {
         return ((bool) $this->subscribeToAllFolders);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSubscribeToAllFolders()
+    {
+        return $this->subscribeToAllFolders;
+    }
+
+    /**
+     * @return NonEmptyArrayOfBaseFolderIdsType
+     */
+    public function getFolderIds()
+    {
+        return $this->folderIds;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getEventTypes()
+    {
+        return $this->eventTypes;
     }
 }

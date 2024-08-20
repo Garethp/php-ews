@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  * Represents an alternate public folder item Id.
  * XSD Type: AlternatePublicFolderItemIdType
  *
- * @method string getItemId()
  * @method AlternatePublicFolderItemIdType setItemId(string $itemId)
  */
 class AlternatePublicFolderItemIdType extends AlternatePublicFolderIdType
@@ -18,4 +17,12 @@ class AlternatePublicFolderItemIdType extends AlternatePublicFolderIdType
      * @var string
      */
     protected $itemId = null;
+
+    /**
+     * @return string
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
 }

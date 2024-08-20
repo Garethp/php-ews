@@ -10,21 +10,13 @@ use garethp\ews\API\Type;
  *
  * XSD Type: AttachmentType
  *
- * @method AttachmentIdType getAttachmentId()
  * @method AttachmentType setAttachmentId(AttachmentIdType $attachmentId)
- * @method string getName()
  * @method AttachmentType setName(string $name)
- * @method string getContentType()
  * @method AttachmentType setContentType(string $contentType)
- * @method string getContentId()
  * @method AttachmentType setContentId(string $contentId)
- * @method string getContentLocation()
  * @method AttachmentType setContentLocation(string $contentLocation)
- * @method integer getSize()
  * @method AttachmentType setSize(integer $size)
- * @method \DateTime getLastModifiedTime()
  * @method AttachmentType setLastModifiedTime(\DateTime $lastModifiedTime)
- * @method boolean getIsInline()
  * @method AttachmentType setIsInline(boolean $isInline)
  */
 class AttachmentType extends Type
@@ -75,10 +67,74 @@ class AttachmentType extends Type
     protected $isInline = null;
 
     /**
+     * @return AttachmentIdType
+     */
+    public function getAttachmentId()
+    {
+        return $this->attachmentId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContentType()
+    {
+        return $this->contentType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContentId()
+    {
+        return $this->contentId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContentLocation()
+    {
+        return $this->contentLocation;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLastModifiedTime()
+    {
+        return $this->lastModifiedTime;
+    }
+
+    /**
      * @returns bool
      */
     public function isInline()
     {
         return ((bool) $this->isInline);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsInline()
+    {
+        return $this->isInline;
     }
 }

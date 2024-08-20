@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: BaseNotificationEventType
  *
- * @method string getWatermark()
  * @method BaseNotificationEventType setWatermark(string $watermark)
  */
 class BaseNotificationEventType extends Type
@@ -20,4 +19,12 @@ class BaseNotificationEventType extends Type
      * @var string
      */
     protected $watermark = null;
+
+    /**
+     * @return string
+     */
+    public function getWatermark()
+    {
+        return $this->watermark;
+    }
 }

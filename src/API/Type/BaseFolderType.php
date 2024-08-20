@@ -10,24 +10,15 @@ use garethp\ews\API\Type;
  *
  * XSD Type: BaseFolderType
  *
- * @method FolderIdType getFolderId()
  * @method BaseFolderType setFolderId(FolderIdType $folderId)
- * @method FolderIdType getParentFolderId()
  * @method BaseFolderType setParentFolderId(FolderIdType $parentFolderId)
- * @method string getFolderClass()
  * @method BaseFolderType setFolderClass(string $folderClass)
- * @method string getDisplayName()
  * @method BaseFolderType setDisplayName(string $displayName)
- * @method integer getTotalCount()
  * @method BaseFolderType setTotalCount(integer $totalCount)
- * @method integer getChildFolderCount()
  * @method BaseFolderType setChildFolderCount(integer $childFolderCount)
  * @method BaseFolderType addExtendedProperty(ExtendedPropertyType $extendedProperty)
- * @method ExtendedPropertyType[] getExtendedProperty()
  * @method BaseFolderType setExtendedProperty(array $extendedProperty)
- * @method ManagedFolderInformationType getManagedFolderInformation()
  * @method BaseFolderType setManagedFolderInformation(ManagedFolderInformationType $managedFolderInformation)
- * @method EffectiveRightsType getEffectiveRights()
  * @method BaseFolderType setEffectiveRights(EffectiveRightsType $effectiveRights)
  */
 class BaseFolderType extends Type
@@ -77,4 +68,76 @@ class BaseFolderType extends Type
      * @var \garethp\ews\API\Type\EffectiveRightsType
      */
     protected $effectiveRights = null;
+
+    /**
+     * @return FolderIdType
+     */
+    public function getFolderId()
+    {
+        return $this->folderId;
+    }
+
+    /**
+     * @return FolderIdType
+     */
+    public function getParentFolderId()
+    {
+        return $this->parentFolderId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFolderClass()
+    {
+        return $this->folderClass;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getTotalCount()
+    {
+        return $this->totalCount;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getChildFolderCount()
+    {
+        return $this->childFolderCount;
+    }
+
+    /**
+     * @return ExtendedPropertyType[]
+     */
+    public function getExtendedProperty()
+    {
+        return $this->extendedProperty;
+    }
+
+    /**
+     * @return ManagedFolderInformationType
+     */
+    public function getManagedFolderInformation()
+    {
+        return $this->managedFolderInformation;
+    }
+
+    /**
+     * @return EffectiveRightsType
+     */
+    public function getEffectiveRights()
+    {
+        return $this->effectiveRights;
+    }
 }

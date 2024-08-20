@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetInboxRulesRequestType
  *
- * @method string getMailboxSmtpAddress()
  * @method GetInboxRulesRequestType setMailboxSmtpAddress(string $mailboxSmtpAddress)
  */
 class GetInboxRulesRequestType extends BaseRequestType
@@ -18,4 +17,12 @@ class GetInboxRulesRequestType extends BaseRequestType
      * @var string
      */
     protected $mailboxSmtpAddress = null;
+
+    /**
+     * @return string
+     */
+    public function getMailboxSmtpAddress()
+    {
+        return $this->mailboxSmtpAddress;
+    }
 }

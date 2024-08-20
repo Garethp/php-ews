@@ -11,16 +11,12 @@ use garethp\ews\API\Type;
  * XSD Type: SyncFolderItemsChangesType
  *
  * @method SyncFolderItemsChangesType addCreate(SyncFolderItemsCreateOrUpdateType $create)
- * @method SyncFolderItemsCreateOrUpdateType[] getCreate()
  * @method SyncFolderItemsChangesType setCreate(array $create)
  * @method SyncFolderItemsChangesType addUpdate(SyncFolderItemsCreateOrUpdateType $update)
- * @method SyncFolderItemsCreateOrUpdateType[] getUpdate()
  * @method SyncFolderItemsChangesType setUpdate(array $update)
  * @method SyncFolderItemsChangesType addDelete(SyncFolderItemsDeleteType $delete)
- * @method SyncFolderItemsDeleteType[] getDelete()
  * @method SyncFolderItemsChangesType setDelete(array $delete)
  * @method SyncFolderItemsChangesType addReadFlagChange(SyncFolderItemsReadFlagType $readFlagChange)
- * @method SyncFolderItemsReadFlagType[] getReadFlagChange()
  * @method SyncFolderItemsChangesType setReadFlagChange(array $readFlagChange)
  */
 class SyncFolderItemsChangesType extends Type
@@ -45,4 +41,36 @@ class SyncFolderItemsChangesType extends Type
      * @var \garethp\ews\API\Type\SyncFolderItemsReadFlagType[]
      */
     protected $readFlagChange = null;
+
+    /**
+     * @return SyncFolderItemsCreateOrUpdateType[]
+     */
+    public function getCreate()
+    {
+        return $this->create;
+    }
+
+    /**
+     * @return SyncFolderItemsCreateOrUpdateType[]
+     */
+    public function getUpdate()
+    {
+        return $this->update;
+    }
+
+    /**
+     * @return SyncFolderItemsDeleteType[]
+     */
+    public function getDelete()
+    {
+        return $this->delete;
+    }
+
+    /**
+     * @return SyncFolderItemsReadFlagType[]
+     */
+    public function getReadFlagChange()
+    {
+        return $this->readFlagChange;
+    }
 }

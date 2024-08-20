@@ -10,16 +10,12 @@ use garethp\ews\API\Type;
  *
  * XSD Type: FieldOrderType
  *
- * @method string getOrder()
  * @method FieldOrderType setOrder(string $order)
  * @method FieldOrderType addFieldURI(FieldURI $fieldURI)
- * @method FieldURI[] getFieldURI()
  * @method FieldOrderType setFieldURI(array $fieldURI)
  * @method FieldOrderType addIndexedFieldURI(IndexedFieldURI $indexedFieldURI)
- * @method IndexedFieldURI[] getIndexedFieldURI()
  * @method FieldOrderType setIndexedFieldURI(array $indexedFieldURI)
  * @method FieldOrderType addExtendedFieldURI(ExtendedFieldURI $extendedFieldURI)
- * @method ExtendedFieldURI[] getExtendedFieldURI()
  * @method FieldOrderType setExtendedFieldURI(array $extendedFieldURI)
  */
 class FieldOrderType extends Type
@@ -44,4 +40,36 @@ class FieldOrderType extends Type
      * @var \garethp\ews\API\Type\ExtendedFieldURI[]
      */
     protected $extendedFieldURI = null;
+
+    /**
+     * @return string
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * @return FieldURI[]
+     */
+    public function getFieldURI()
+    {
+        return $this->fieldURI;
+    }
+
+    /**
+     * @return IndexedFieldURI[]
+     */
+    public function getIndexedFieldURI()
+    {
+        return $this->indexedFieldURI;
+    }
+
+    /**
+     * @return ExtendedFieldURI[]
+     */
+    public function getExtendedFieldURI()
+    {
+        return $this->extendedFieldURI;
+    }
 }

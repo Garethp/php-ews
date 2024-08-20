@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetRoomsType
  *
- * @method \garethp\ews\API\Type\EmailAddressType getRoomList()
  * @method GetRoomsType setRoomList(\garethp\ews\API\Type\EmailAddressType $roomList)
  */
 class GetRoomsType extends BaseRequestType
@@ -18,4 +17,12 @@ class GetRoomsType extends BaseRequestType
      * @var \garethp\ews\API\Type\EmailAddressType
      */
     protected $roomList = null;
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getRoomList()
+    {
+        return $this->roomList;
+    }
 }

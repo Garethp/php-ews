@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: BaseDelegateType
  *
- * @method \garethp\ews\API\Type\EmailAddressType getMailbox()
  * @method BaseDelegateType setMailbox(\garethp\ews\API\Type\EmailAddressType $mailbox)
  */
 class BaseDelegateType extends BaseRequestType
@@ -18,4 +17,12 @@ class BaseDelegateType extends BaseRequestType
      * @var \garethp\ews\API\Type\EmailAddressType
      */
     protected $mailbox = null;
+
+    /**
+     * @return \garethp\ews\API\Type\EmailAddressType
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
+    }
 }

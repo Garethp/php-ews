@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: DelegateUserType
  *
- * @method UserIdType getUserId()
  * @method DelegateUserType setUserId(UserIdType $userId)
- * @method DelegatePermissionsType getDelegatePermissions()
  * @method DelegateUserType setDelegatePermissions(DelegatePermissionsType $delegatePermissions)
- * @method boolean getReceiveCopiesOfMeetingMessages()
  * @method DelegateUserType setReceiveCopiesOfMeetingMessages(boolean $receiveCopiesOfMeetingMessages)
- * @method boolean getViewPrivateItems()
  * @method DelegateUserType setViewPrivateItems(boolean $viewPrivateItems)
  */
 class DelegateUserType extends Type
@@ -43,6 +39,22 @@ class DelegateUserType extends Type
     protected $viewPrivateItems = null;
 
     /**
+     * @return UserIdType
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    /**
+     * @return DelegatePermissionsType
+     */
+    public function getDelegatePermissions()
+    {
+        return $this->delegatePermissions;
+    }
+
+    /**
      * @returns bool
      */
     public function isReceiveCopiesOfMeetingMessages()
@@ -51,10 +63,26 @@ class DelegateUserType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getReceiveCopiesOfMeetingMessages()
+    {
+        return $this->receiveCopiesOfMeetingMessages;
+    }
+
+    /**
      * @returns bool
      */
     public function isViewPrivateItems()
     {
         return ((bool) $this->viewPrivateItems);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getViewPrivateItems()
+    {
+        return $this->viewPrivateItems;
     }
 }

@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: FileAttachmentType
  *
- * @method boolean getIsContactPhoto()
  * @method FileAttachmentType setIsContactPhoto(boolean $isContactPhoto)
- * @method string getContent()
  * @method FileAttachmentType setContent(string $content)
  */
 class FileAttachmentType extends AttachmentType
@@ -32,5 +30,21 @@ class FileAttachmentType extends AttachmentType
     public function isContactPhoto()
     {
         return ((bool) $this->isContactPhoto);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsContactPhoto()
+    {
+        return $this->isContactPhoto;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->content;
     }
 }

@@ -8,25 +8,15 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: ItemAttachmentType
  *
- * @method ItemType getItem()
  * @method ItemAttachmentType setItem(ItemType $item)
- * @method MessageType getMessage()
  * @method ItemAttachmentType setMessage(MessageType $message)
- * @method CalendarItemType getCalendarItem()
  * @method ItemAttachmentType setCalendarItem(CalendarItemType $calendarItem)
- * @method ContactItemType getContact()
  * @method ItemAttachmentType setContact(ContactItemType $contact)
- * @method MeetingMessageType getMeetingMessage()
  * @method ItemAttachmentType setMeetingMessage(MeetingMessageType $meetingMessage)
- * @method MeetingRequestMessageType getMeetingRequest()
  * @method ItemAttachmentType setMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method MeetingResponseMessageType getMeetingResponse()
  * @method ItemAttachmentType setMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method MeetingCancellationMessageType getMeetingCancellation()
  * @method ItemAttachmentType setMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method TaskType getTask()
  * @method ItemAttachmentType setTask(TaskType $task)
- * @method PostItemType getPostItem()
  * @method ItemAttachmentType setPostItem(PostItemType $postItem)
  */
 class ItemAttachmentType extends AttachmentType
@@ -117,5 +107,85 @@ class ItemAttachmentType extends AttachmentType
         }
 
         return null;
+    }
+
+    /**
+     * @return ItemType
+     */
+    public function getItem()
+    {
+        return $this->item;
+    }
+
+    /**
+     * @return MessageType
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return CalendarItemType
+     */
+    public function getCalendarItem()
+    {
+        return $this->calendarItem;
+    }
+
+    /**
+     * @return ContactItemType
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
+
+    /**
+     * @return MeetingMessageType
+     */
+    public function getMeetingMessage()
+    {
+        return $this->meetingMessage;
+    }
+
+    /**
+     * @return MeetingRequestMessageType
+     */
+    public function getMeetingRequest()
+    {
+        return $this->meetingRequest;
+    }
+
+    /**
+     * @return MeetingResponseMessageType
+     */
+    public function getMeetingResponse()
+    {
+        return $this->meetingResponse;
+    }
+
+    /**
+     * @return MeetingCancellationMessageType
+     */
+    public function getMeetingCancellation()
+    {
+        return $this->meetingCancellation;
+    }
+
+    /**
+     * @return TaskType
+     */
+    public function getTask()
+    {
+        return $this->task;
+    }
+
+    /**
+     * @return PostItemType
+     */
+    public function getPostItem()
+    {
+        return $this->postItem;
     }
 }

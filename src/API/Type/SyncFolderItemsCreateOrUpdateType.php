@@ -10,27 +10,16 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SyncFolderItemsCreateOrUpdateType
  *
- * @method ItemType getItem()
  * @method SyncFolderItemsCreateOrUpdateType setItem(ItemType $item)
- * @method MessageType getMessage()
  * @method SyncFolderItemsCreateOrUpdateType setMessage(MessageType $message)
- * @method CalendarItemType getCalendarItem()
  * @method SyncFolderItemsCreateOrUpdateType setCalendarItem(CalendarItemType $calendarItem)
- * @method ContactItemType getContact()
  * @method SyncFolderItemsCreateOrUpdateType setContact(ContactItemType $contact)
- * @method DistributionListType getDistributionList()
  * @method SyncFolderItemsCreateOrUpdateType setDistributionList(DistributionListType $distributionList)
- * @method MeetingMessageType getMeetingMessage()
  * @method SyncFolderItemsCreateOrUpdateType setMeetingMessage(MeetingMessageType $meetingMessage)
- * @method MeetingRequestMessageType getMeetingRequest()
  * @method SyncFolderItemsCreateOrUpdateType setMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method MeetingResponseMessageType getMeetingResponse()
  * @method SyncFolderItemsCreateOrUpdateType setMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method MeetingCancellationMessageType getMeetingCancellation()
  * @method SyncFolderItemsCreateOrUpdateType setMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method TaskType getTask()
  * @method SyncFolderItemsCreateOrUpdateType setTask(TaskType $task)
- * @method PostItemType getPostItem()
  * @method SyncFolderItemsCreateOrUpdateType setPostItem(PostItemType $postItem)
  */
 class SyncFolderItemsCreateOrUpdateType extends Type
@@ -90,4 +79,92 @@ class SyncFolderItemsCreateOrUpdateType extends Type
      * @var \garethp\ews\API\Type\PostItemType
      */
     protected $postItem = null;
+
+    /**
+     * @return ItemType
+     */
+    public function getItem()
+    {
+        return $this->item;
+    }
+
+    /**
+     * @return MessageType
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return CalendarItemType
+     */
+    public function getCalendarItem()
+    {
+        return $this->calendarItem;
+    }
+
+    /**
+     * @return ContactItemType
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
+
+    /**
+     * @return DistributionListType
+     */
+    public function getDistributionList()
+    {
+        return $this->distributionList;
+    }
+
+    /**
+     * @return MeetingMessageType
+     */
+    public function getMeetingMessage()
+    {
+        return $this->meetingMessage;
+    }
+
+    /**
+     * @return MeetingRequestMessageType
+     */
+    public function getMeetingRequest()
+    {
+        return $this->meetingRequest;
+    }
+
+    /**
+     * @return MeetingResponseMessageType
+     */
+    public function getMeetingResponse()
+    {
+        return $this->meetingResponse;
+    }
+
+    /**
+     * @return MeetingCancellationMessageType
+     */
+    public function getMeetingCancellation()
+    {
+        return $this->meetingCancellation;
+    }
+
+    /**
+     * @return TaskType
+     */
+    public function getTask()
+    {
+        return $this->task;
+    }
+
+    /**
+     * @return PostItemType
+     */
+    public function getPostItem()
+    {
+        return $this->postItem;
+    }
 }

@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: EncryptedSharedFolderDataType
  *
- * @method EncryptedDataContainerType getToken()
  * @method EncryptedSharedFolderDataType setToken(EncryptedDataContainerType $token)
- * @method EncryptedDataContainerType getData()
  * @method EncryptedSharedFolderDataType setData(EncryptedDataContainerType $data)
  */
 class EncryptedSharedFolderDataType extends Type
@@ -27,4 +25,20 @@ class EncryptedSharedFolderDataType extends Type
      * @var \garethp\ews\API\Type\EncryptedDataContainerType
      */
     protected $data = null;
+
+    /**
+     * @return EncryptedDataContainerType
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @return EncryptedDataContainerType
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
 }

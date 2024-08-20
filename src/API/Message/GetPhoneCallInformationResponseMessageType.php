@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetPhoneCallInformationResponseMessageType
  *
- * @method \garethp\ews\API\Type\PhoneCallInformationType getPhoneCallInformation()
  * @method GetPhoneCallInformationResponseMessageType setPhoneCallInformation(\garethp\ews\API\Type\PhoneCallInformationType $phoneCallInformation)
  */
 class GetPhoneCallInformationResponseMessageType extends ResponseMessageType
@@ -18,4 +17,12 @@ class GetPhoneCallInformationResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\PhoneCallInformationType
      */
     protected $phoneCallInformation = null;
+
+    /**
+     * @return \garethp\ews\API\Type\PhoneCallInformationType
+     */
+    public function getPhoneCallInformation()
+    {
+        return $this->phoneCallInformation;
+    }
 }

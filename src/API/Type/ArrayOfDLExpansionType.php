@@ -10,18 +10,12 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ArrayOfDLExpansionType
  *
- * @method integer getIndexedPagingOffset()
  * @method ArrayOfDLExpansionType setIndexedPagingOffset(integer $indexedPagingOffset)
- * @method integer getNumeratorOffset()
  * @method ArrayOfDLExpansionType setNumeratorOffset(integer $numeratorOffset)
- * @method integer getAbsoluteDenominator()
  * @method ArrayOfDLExpansionType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean getIncludesLastItemInRange()
  * @method ArrayOfDLExpansionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method integer getTotalItemsInView()
  * @method ArrayOfDLExpansionType setTotalItemsInView(integer $totalItemsInView)
  * @method ArrayOfDLExpansionType addMailbox(EmailAddressType $mailbox)
- * @method EmailAddressType[] getMailbox()
  * @method ArrayOfDLExpansionType setMailbox(array $mailbox)
  */
 class ArrayOfDLExpansionType extends Type
@@ -58,10 +52,58 @@ class ArrayOfDLExpansionType extends Type
     protected $mailbox = null;
 
     /**
+     * @return integer
+     */
+    public function getIndexedPagingOffset()
+    {
+        return $this->indexedPagingOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNumeratorOffset()
+    {
+        return $this->numeratorOffset;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getAbsoluteDenominator()
+    {
+        return $this->absoluteDenominator;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludesLastItemInRange()
     {
         return ((bool) $this->includesLastItemInRange);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getTotalItemsInView()
+    {
+        return $this->totalItemsInView;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
     }
 }

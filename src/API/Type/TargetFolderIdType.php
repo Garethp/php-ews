@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TargetFolderIdType
  *
- * @method FolderIdType getFolderId()
  * @method TargetFolderIdType setFolderId(FolderIdType $folderId)
- * @method DistinguishedFolderIdType getDistinguishedFolderId()
  * @method TargetFolderIdType setDistinguishedFolderId(DistinguishedFolderIdType $distinguishedFolderId)
  */
 class TargetFolderIdType extends Type
@@ -27,4 +25,20 @@ class TargetFolderIdType extends Type
      * @var \garethp\ews\API\Type\DistinguishedFolderIdType
      */
     protected $distinguishedFolderId = null;
+
+    /**
+     * @return FolderIdType
+     */
+    public function getFolderId()
+    {
+        return $this->folderId;
+    }
+
+    /**
+     * @return DistinguishedFolderIdType
+     */
+    public function getDistinguishedFolderId()
+    {
+        return $this->distinguishedFolderId;
+    }
 }

@@ -8,13 +8,9 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: GroupAttendeeConflictData
  *
- * @method integer getNumberOfMembers()
  * @method GroupAttendeeConflictDataType setNumberOfMembers(integer $numberOfMembers)
- * @method integer getNumberOfMembersAvailable()
  * @method GroupAttendeeConflictDataType setNumberOfMembersAvailable(integer $numberOfMembersAvailable)
- * @method integer getNumberOfMembersWithConflict()
  * @method GroupAttendeeConflictDataType setNumberOfMembersWithConflict(integer $numberOfMembersWithConflict)
- * @method integer getNumberOfMembersWithNoData()
  * @method GroupAttendeeConflictDataType setNumberOfMembersWithNoData(integer $numberOfMembersWithNoData)
  */
 class GroupAttendeeConflictDataType extends AttendeeConflictDataType
@@ -39,4 +35,36 @@ class GroupAttendeeConflictDataType extends AttendeeConflictDataType
      * @var integer
      */
     protected $numberOfMembersWithNoData = null;
+
+    /**
+     * @return integer
+     */
+    public function getNumberOfMembers()
+    {
+        return $this->numberOfMembers;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNumberOfMembersAvailable()
+    {
+        return $this->numberOfMembersAvailable;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNumberOfMembersWithConflict()
+    {
+        return $this->numberOfMembersWithConflict;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNumberOfMembersWithNoData()
+    {
+        return $this->numberOfMembersWithNoData;
+    }
 }

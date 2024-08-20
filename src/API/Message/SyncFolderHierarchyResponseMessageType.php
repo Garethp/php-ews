@@ -8,11 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: SyncFolderHierarchyResponseMessageType
  *
- * @method string getSyncState()
  * @method SyncFolderHierarchyResponseMessageType setSyncState(string $syncState)
- * @method boolean getIncludesLastFolderInRange()
  * @method SyncFolderHierarchyResponseMessageType setIncludesLastFolderInRange(boolean $includesLastFolderInRange)
- * @method \garethp\ews\API\Type\SyncFolderHierarchyChangesType getChanges()
  * @method SyncFolderHierarchyResponseMessageType setChanges(\garethp\ews\API\Type\SyncFolderHierarchyChangesType $changes)
  */
 class SyncFolderHierarchyResponseMessageType extends ResponseMessageType
@@ -34,10 +31,34 @@ class SyncFolderHierarchyResponseMessageType extends ResponseMessageType
     protected $changes = null;
 
     /**
+     * @return string
+     */
+    public function getSyncState()
+    {
+        return $this->syncState;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludesLastFolderInRange()
     {
         return ((bool) $this->includesLastFolderInRange);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludesLastFolderInRange()
+    {
+        return $this->includesLastFolderInRange;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\SyncFolderHierarchyChangesType
+     */
+    public function getChanges()
+    {
+        return $this->changes;
     }
 }

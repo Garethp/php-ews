@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SingleRecipientType
  *
- * @method EmailAddressType getMailbox()
  * @method SingleRecipientType setMailbox(EmailAddressType $mailbox)
  */
 class SingleRecipientType extends Type
@@ -28,5 +27,13 @@ class SingleRecipientType extends Type
     public function __construct($mailbox = null)
     {
         $this->mailbox = $mailbox;
+    }
+
+    /**
+     * @return EmailAddressType
+     */
+    public function getMailbox()
+    {
+        return $this->mailbox;
     }
 }

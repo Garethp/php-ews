@@ -8,11 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: SyncFolderItemsResponseMessageType
  *
- * @method string getSyncState()
  * @method SyncFolderItemsResponseMessageType setSyncState(string $syncState)
- * @method boolean getIncludesLastItemInRange()
  * @method SyncFolderItemsResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
- * @method \garethp\ews\API\Type\SyncFolderItemsChangesType getChanges()
  * @method SyncFolderItemsResponseMessageType setChanges(\garethp\ews\API\Type\SyncFolderItemsChangesType $changes)
  */
 class SyncFolderItemsResponseMessageType extends ResponseMessageType
@@ -34,10 +31,34 @@ class SyncFolderItemsResponseMessageType extends ResponseMessageType
     protected $changes = null;
 
     /**
+     * @return string
+     */
+    public function getSyncState()
+    {
+        return $this->syncState;
+    }
+
+    /**
      * @returns bool
      */
     public function isIncludesLastItemInRange()
     {
         return ((bool) $this->includesLastItemInRange);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\SyncFolderItemsChangesType
+     */
+    public function getChanges()
+    {
+        return $this->changes;
     }
 }

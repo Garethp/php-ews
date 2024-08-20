@@ -9,7 +9,6 @@ namespace garethp\ews\API\Message;
  *  that the AlternateId element will be missing in the case of an error.
  * XSD Type: ConvertIdResponseMessageType
  *
- * @method \garethp\ews\API\Type\AlternateIdBaseType getAlternateId()
  * @method ConvertIdResponseMessageType setAlternateId(\garethp\ews\API\Type\AlternateIdBaseType $alternateId)
  */
 class ConvertIdResponseMessageType extends ResponseMessageType
@@ -19,4 +18,12 @@ class ConvertIdResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\AlternateIdBaseType
      */
     protected $alternateId = null;
+
+    /**
+     * @return \garethp\ews\API\Type\AlternateIdBaseType
+     */
+    public function getAlternateId()
+    {
+        return $this->alternateId;
+    }
 }

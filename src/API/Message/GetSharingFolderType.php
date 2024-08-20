@@ -8,11 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetSharingFolderType
  *
- * @method string getSmtpAddress()
  * @method GetSharingFolderType setSmtpAddress(string $smtpAddress)
- * @method string getDataType()
  * @method GetSharingFolderType setDataType(string $dataType)
- * @method string getSharedFolderId()
  * @method GetSharingFolderType setSharedFolderId(string $sharedFolderId)
  */
 class GetSharingFolderType extends BaseRequestType
@@ -32,4 +29,28 @@ class GetSharingFolderType extends BaseRequestType
      * @var string
      */
     protected $sharedFolderId = null;
+
+    /**
+     * @return string
+     */
+    public function getSmtpAddress()
+    {
+        return $this->smtpAddress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDataType()
+    {
+        return $this->dataType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSharedFolderId()
+    {
+        return $this->sharedFolderId;
+    }
 }

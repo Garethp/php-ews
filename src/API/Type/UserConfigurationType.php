@@ -10,16 +10,11 @@ use garethp\ews\API\Type;
  *
  * XSD Type: UserConfigurationType
  *
- * @method UserConfigurationNameType getUserConfigurationName()
  * @method UserConfigurationType setUserConfigurationName(UserConfigurationNameType $userConfigurationName)
- * @method ItemIdType getItemId()
  * @method UserConfigurationType setItemId(ItemIdType $itemId)
  * @method UserConfigurationType addDictionary(UserConfigurationDictionaryEntryType $dictionary)
- * @method UserConfigurationDictionaryEntryType[] getDictionary()
  * @method UserConfigurationType setDictionary(array $dictionary)
- * @method string getXmlData()
  * @method UserConfigurationType setXmlData(string $xmlData)
- * @method string getBinaryData()
  * @method UserConfigurationType setBinaryData(string $binaryData)
  */
 class UserConfigurationType extends Type
@@ -49,4 +44,44 @@ class UserConfigurationType extends Type
      * @var string
      */
     protected $binaryData = null;
+
+    /**
+     * @return UserConfigurationNameType
+     */
+    public function getUserConfigurationName()
+    {
+        return $this->userConfigurationName;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @return UserConfigurationDictionaryEntryType[]
+     */
+    public function getDictionary()
+    {
+        return $this->dictionary;
+    }
+
+    /**
+     * @return string
+     */
+    public function getXmlData()
+    {
+        return $this->xmlData;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBinaryData()
+    {
+        return $this->binaryData;
+    }
 }

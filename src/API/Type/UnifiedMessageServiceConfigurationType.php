@@ -8,11 +8,8 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: UnifiedMessageServiceConfiguration
  *
- * @method boolean getUmEnabled()
  * @method UnifiedMessageServiceConfigurationType setUmEnabled(boolean $umEnabled)
- * @method string getPlayOnPhoneDialString()
  * @method UnifiedMessageServiceConfigurationType setPlayOnPhoneDialString(string $playOnPhoneDialString)
- * @method boolean getPlayOnPhoneEnabled()
  * @method UnifiedMessageServiceConfigurationType setPlayOnPhoneEnabled(boolean $playOnPhoneEnabled)
  */
 class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
@@ -42,10 +39,34 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
     }
 
     /**
+     * @return boolean
+     */
+    public function getUmEnabled()
+    {
+        return $this->umEnabled;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPlayOnPhoneDialString()
+    {
+        return $this->playOnPhoneDialString;
+    }
+
+    /**
      * @returns bool
      */
     public function isPlayOnPhoneEnabled()
     {
         return ((bool) $this->playOnPhoneEnabled);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getPlayOnPhoneEnabled()
+    {
+        return $this->playOnPhoneEnabled;
     }
 }

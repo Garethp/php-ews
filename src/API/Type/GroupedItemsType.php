@@ -13,9 +13,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: GroupedItemsType
  *
- * @method string getGroupIndex()
  * @method GroupedItemsType setGroupIndex(string $groupIndex)
- * @method ArrayOfRealItemsType getItems()
  * @method GroupedItemsType setItems(ArrayOfRealItemsType $items)
  */
 class GroupedItemsType extends Type implements Countable, ArrayAccess, IteratorAggregate
@@ -63,5 +61,21 @@ class GroupedItemsType extends Type implements Countable, ArrayAccess, IteratorA
     public function getIterator()
     {
         return new \ArrayIterator($this->items->getIterator());
+    }
+
+    /**
+     * @return string
+     */
+    public function getGroupIndex()
+    {
+        return $this->groupIndex;
+    }
+
+    /**
+     * @return ArrayOfRealItemsType
+     */
+    public function getItems()
+    {
+        return $this->items;
     }
 }

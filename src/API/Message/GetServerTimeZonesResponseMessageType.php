@@ -9,7 +9,6 @@ namespace garethp\ews\API\Message;
  * XSD Type: GetServerTimeZonesResponseMessageType
  *
  * @method GetServerTimeZonesResponseMessageType addTimeZoneDefinitions(\garethp\ews\API\Type\TimeZoneDefinitionType $timeZoneDefinitions)
- * @method \garethp\ews\API\Type\TimeZoneDefinitionType[] getTimeZoneDefinitions()
  * @method GetServerTimeZonesResponseMessageType setTimeZoneDefinitions(array $timeZoneDefinitions)
  */
 class GetServerTimeZonesResponseMessageType extends ResponseMessageType
@@ -19,4 +18,12 @@ class GetServerTimeZonesResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\TimeZoneDefinitionType[]
      */
     protected $timeZoneDefinitions = null;
+
+    /**
+     * @return \garethp\ews\API\Type\TimeZoneDefinitionType[]
+     */
+    public function getTimeZoneDefinitions()
+    {
+        return $this->timeZoneDefinitions;
+    }
 }

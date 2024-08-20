@@ -8,10 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetServerTimeZonesType
  *
- * @method boolean getReturnFullTimeZoneData()
  * @method GetServerTimeZonesType setReturnFullTimeZoneData(boolean $returnFullTimeZoneData)
  * @method GetServerTimeZonesType addIds(string $ids)
- * @method string[] getIds()
  * @method GetServerTimeZonesType setIds(array $ids)
  */
 class GetServerTimeZonesType extends BaseRequestType
@@ -33,5 +31,21 @@ class GetServerTimeZonesType extends BaseRequestType
     public function isReturnFullTimeZoneData()
     {
         return ((bool) $this->returnFullTimeZoneData);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getReturnFullTimeZoneData()
+    {
+        return $this->returnFullTimeZoneData;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getIds()
+    {
+        return $this->ids;
     }
 }

@@ -8,11 +8,8 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: SyncFolderHierarchyType
  *
- * @method \garethp\ews\API\Type\FolderResponseShapeType getFolderShape()
  * @method SyncFolderHierarchyType setFolderShape(\garethp\ews\API\Type\FolderResponseShapeType $folderShape)
- * @method \garethp\ews\API\Type\TargetFolderIdType getSyncFolderId()
  * @method SyncFolderHierarchyType setSyncFolderId(\garethp\ews\API\Type\TargetFolderIdType $syncFolderId)
- * @method string getSyncState()
  * @method SyncFolderHierarchyType setSyncState(string $syncState)
  */
 class SyncFolderHierarchyType extends BaseRequestType
@@ -32,4 +29,28 @@ class SyncFolderHierarchyType extends BaseRequestType
      * @var string
      */
     protected $syncState = null;
+
+    /**
+     * @return \garethp\ews\API\Type\FolderResponseShapeType
+     */
+    public function getFolderShape()
+    {
+        return $this->folderShape;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\TargetFolderIdType
+     */
+    public function getSyncFolderId()
+    {
+        return $this->syncFolderId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSyncState()
+    {
+        return $this->syncState;
+    }
 }

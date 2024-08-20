@@ -8,13 +8,9 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: BaseObjectChangedEventType
  *
- * @method \DateTime getTimeStamp()
  * @method BaseObjectChangedEventType setTimeStamp(\DateTime $timeStamp)
- * @method FolderIdType getFolderId()
  * @method BaseObjectChangedEventType setFolderId(FolderIdType $folderId)
- * @method ItemIdType getItemId()
  * @method BaseObjectChangedEventType setItemId(ItemIdType $itemId)
- * @method FolderIdType getParentFolderId()
  * @method BaseObjectChangedEventType setParentFolderId(FolderIdType $parentFolderId)
  */
 class BaseObjectChangedEventType extends BaseNotificationEventType
@@ -43,4 +39,36 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
      * @var \garethp\ews\API\Type\FolderIdType
      */
     protected $parentFolderId = null;
+
+    /**
+     * @return \DateTime
+     */
+    public function getTimeStamp()
+    {
+        return $this->timeStamp;
+    }
+
+    /**
+     * @return FolderIdType
+     */
+    public function getFolderId()
+    {
+        return $this->folderId;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @return FolderIdType
+     */
+    public function getParentFolderId()
+    {
+        return $this->parentFolderId;
+    }
 }

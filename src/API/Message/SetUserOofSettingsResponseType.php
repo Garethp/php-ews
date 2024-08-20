@@ -10,7 +10,6 @@ use garethp\ews\API\Message;
  *
  * XSD Type: SetUserOofSettingsResponse
  *
- * @method ResponseMessageType getResponseMessage()
  * @method SetUserOofSettingsResponseType setResponseMessage(ResponseMessageType $responseMessage)
  */
 class SetUserOofSettingsResponseType extends Message
@@ -20,4 +19,12 @@ class SetUserOofSettingsResponseType extends Message
      * @var \garethp\ews\API\Message\ResponseMessageType
      */
     protected $responseMessage = null;
+
+    /**
+     * @return ResponseMessageType
+     */
+    public function getResponseMessage()
+    {
+        return $this->responseMessage;
+    }
 }

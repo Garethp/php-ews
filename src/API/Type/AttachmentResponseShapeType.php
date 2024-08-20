@@ -10,13 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: AttachmentResponseShapeType
  *
- * @method boolean getIncludeMimeContent()
  * @method AttachmentResponseShapeType setIncludeMimeContent(boolean $includeMimeContent)
- * @method string getBodyType()
  * @method AttachmentResponseShapeType setBodyType(string $bodyType)
- * @method boolean getFilterHtmlContent()
  * @method AttachmentResponseShapeType setFilterHtmlContent(boolean $filterHtmlContent)
- * @method NonEmptyArrayOfPathsToElementType getAdditionalProperties()
  * @method AttachmentResponseShapeType setAdditionalProperties(NonEmptyArrayOfPathsToElementType $additionalProperties)
  */
 class AttachmentResponseShapeType extends Type
@@ -51,10 +47,42 @@ class AttachmentResponseShapeType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIncludeMimeContent()
+    {
+        return $this->includeMimeContent;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBodyType()
+    {
+        return $this->bodyType;
+    }
+
+    /**
      * @returns bool
      */
     public function isFilterHtmlContent()
     {
         return ((bool) $this->filterHtmlContent);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getFilterHtmlContent()
+    {
+        return $this->filterHtmlContent;
+    }
+
+    /**
+     * @return NonEmptyArrayOfPathsToElementType
+     */
+    public function getAdditionalProperties()
+    {
+        return $this->additionalProperties;
     }
 }

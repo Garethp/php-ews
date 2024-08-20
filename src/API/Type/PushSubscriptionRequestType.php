@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: PushSubscriptionRequestType
  *
- * @method integer getStatusFrequency()
  * @method PushSubscriptionRequestType setStatusFrequency(integer $statusFrequency)
- * @method string getURL()
  * @method PushSubscriptionRequestType setURL(string $uRL)
  */
 class PushSubscriptionRequestType extends BaseSubscriptionRequestType
@@ -25,4 +23,20 @@ class PushSubscriptionRequestType extends BaseSubscriptionRequestType
      * @var string
      */
     protected $uRL = null;
+
+    /**
+     * @return integer
+     */
+    public function getStatusFrequency()
+    {
+        return $this->statusFrequency;
+    }
+
+    /**
+     * @return string
+     */
+    public function getURL()
+    {
+        return $this->uRL;
+    }
 }

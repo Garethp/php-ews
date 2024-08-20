@@ -10,10 +10,8 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ProtectionRuleActionType
  *
- * @method string getName()
  * @method ProtectionRuleActionType setName(string $name)
  * @method ProtectionRuleActionType addArgument(ProtectionRuleArgumentType $argument)
- * @method ProtectionRuleArgumentType[] getArgument()
  * @method ProtectionRuleActionType setArgument(array $argument)
  */
 class ProtectionRuleActionType extends Type
@@ -28,4 +26,20 @@ class ProtectionRuleActionType extends Type
      * @var \garethp\ews\API\Type\ProtectionRuleArgumentType[]
      */
     protected $argument = null;
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return ProtectionRuleArgumentType[]
+     */
+    public function getArgument()
+    {
+        return $this->argument;
+    }
 }

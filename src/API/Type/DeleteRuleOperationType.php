@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: DeleteRuleOperationType
  *
- * @method string getRuleId()
  * @method DeleteRuleOperationType setRuleId(string $ruleId)
  */
 class DeleteRuleOperationType extends RuleOperationType
@@ -18,4 +17,12 @@ class DeleteRuleOperationType extends RuleOperationType
      * @var string
      */
     protected $ruleId = null;
+
+    /**
+     * @return string
+     */
+    public function getRuleId()
+    {
+        return $this->ruleId;
+    }
 }

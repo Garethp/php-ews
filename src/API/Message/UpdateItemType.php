@@ -8,16 +8,11 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: UpdateItemType
  *
- * @method string getConflictResolution()
  * @method UpdateItemType setConflictResolution(string $conflictResolution)
- * @method string getMessageDisposition()
  * @method UpdateItemType setMessageDisposition(string $messageDisposition)
- * @method string getSendMeetingInvitationsOrCancellations()
  * @method UpdateItemType setSendMeetingInvitationsOrCancellations(string $sendMeetingInvitationsOrCancellations)
- * @method \garethp\ews\API\Type\TargetFolderIdType getSavedItemFolderId()
  * @method UpdateItemType setSavedItemFolderId(\garethp\ews\API\Type\TargetFolderIdType $savedItemFolderId)
  * @method UpdateItemType addItemChanges(\garethp\ews\API\Type\ItemChangeType $itemChanges)
- * @method \garethp\ews\API\Type\ItemChangeType[] getItemChanges()
  * @method UpdateItemType setItemChanges(array $itemChanges)
  */
 class UpdateItemType extends BaseRequestType
@@ -47,4 +42,44 @@ class UpdateItemType extends BaseRequestType
      * @var \garethp\ews\API\Type\ItemChangeType[]
      */
     protected $itemChanges = null;
+
+    /**
+     * @return string
+     */
+    public function getConflictResolution()
+    {
+        return $this->conflictResolution;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessageDisposition()
+    {
+        return $this->messageDisposition;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSendMeetingInvitationsOrCancellations()
+    {
+        return $this->sendMeetingInvitationsOrCancellations;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\TargetFolderIdType
+     */
+    public function getSavedItemFolderId()
+    {
+        return $this->savedItemFolderId;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\ItemChangeType[]
+     */
+    public function getItemChanges()
+    {
+        return $this->itemChanges;
+    }
 }

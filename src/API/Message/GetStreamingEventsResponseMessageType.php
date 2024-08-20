@@ -9,12 +9,9 @@ namespace garethp\ews\API\Message;
  * XSD Type: GetStreamingEventsResponseMessageType
  *
  * @method GetStreamingEventsResponseMessageType addNotifications(\garethp\ews\API\Type\NotificationType $notifications)
- * @method \garethp\ews\API\Type\NotificationType[] getNotifications()
  * @method GetStreamingEventsResponseMessageType setNotifications(array $notifications)
  * @method GetStreamingEventsResponseMessageType addErrorSubscriptionIds(string $errorSubscriptionIds)
- * @method string[] getErrorSubscriptionIds()
  * @method GetStreamingEventsResponseMessageType setErrorSubscriptionIds(array $errorSubscriptionIds)
- * @method string getConnectionStatus()
  * @method GetStreamingEventsResponseMessageType setConnectionStatus(string $connectionStatus)
  */
 class GetStreamingEventsResponseMessageType extends ResponseMessageType
@@ -34,4 +31,28 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
      * @var string
      */
     protected $connectionStatus = null;
+
+    /**
+     * @return \garethp\ews\API\Type\NotificationType[]
+     */
+    public function getNotifications()
+    {
+        return $this->notifications;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getErrorSubscriptionIds()
+    {
+        return $this->errorSubscriptionIds;
+    }
+
+    /**
+     * @return string
+     */
+    public function getConnectionStatus()
+    {
+        return $this->connectionStatus;
+    }
 }

@@ -10,26 +10,16 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ConversationActionType
  *
- * @method string getAction()
  * @method ConversationActionType setAction(string $action)
- * @method ItemIdType getConversationId()
  * @method ConversationActionType setConversationId(ItemIdType $conversationId)
- * @method TargetFolderIdType getContextFolderId()
  * @method ConversationActionType setContextFolderId(TargetFolderIdType $contextFolderId)
- * @method \DateTime getConversationLastSyncTime()
  * @method ConversationActionType setConversationLastSyncTime(\DateTime $conversationLastSyncTime)
- * @method boolean getProcessRightAway()
  * @method ConversationActionType setProcessRightAway(boolean $processRightAway)
- * @method TargetFolderIdType getDestinationFolderId()
  * @method ConversationActionType setDestinationFolderId(TargetFolderIdType $destinationFolderId)
  * @method ConversationActionType addCategories(string $categories)
- * @method string[] getCategories()
  * @method ConversationActionType setCategories(array $categories)
- * @method boolean getEnableAlwaysDelete()
  * @method ConversationActionType setEnableAlwaysDelete(boolean $enableAlwaysDelete)
- * @method boolean getIsRead()
  * @method ConversationActionType setIsRead(boolean $isRead)
- * @method string getDeleteType()
  * @method ConversationActionType setDeleteType(string $deleteType)
  */
 class ConversationActionType extends Type
@@ -90,11 +80,67 @@ class ConversationActionType extends Type
     protected $deleteType = null;
 
     /**
+     * @return string
+     */
+    public function getAction()
+    {
+        return $this->action;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getConversationId()
+    {
+        return $this->conversationId;
+    }
+
+    /**
+     * @return TargetFolderIdType
+     */
+    public function getContextFolderId()
+    {
+        return $this->contextFolderId;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getConversationLastSyncTime()
+    {
+        return $this->conversationLastSyncTime;
+    }
+
+    /**
      * @returns bool
      */
     public function isProcessRightAway()
     {
         return ((bool) $this->processRightAway);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getProcessRightAway()
+    {
+        return $this->processRightAway;
+    }
+
+    /**
+     * @return TargetFolderIdType
+     */
+    public function getDestinationFolderId()
+    {
+        return $this->destinationFolderId;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getCategories()
+    {
+        return $this->categories;
     }
 
     /**
@@ -106,10 +152,34 @@ class ConversationActionType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getEnableAlwaysDelete()
+    {
+        return $this->enableAlwaysDelete;
+    }
+
+    /**
      * @returns bool
      */
     public function isRead()
     {
         return ((bool) $this->isRead);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsRead()
+    {
+        return $this->isRead;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeleteType()
+    {
+        return $this->deleteType;
     }
 }

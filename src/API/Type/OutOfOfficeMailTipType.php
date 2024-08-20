@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  *
  * XSD Type: OutOfOfficeMailTip
  *
- * @method ReplyBodyType getReplyBody()
  * @method OutOfOfficeMailTipType setReplyBody(ReplyBodyType $replyBody)
- * @method DurationType getDuration()
  * @method OutOfOfficeMailTipType setDuration(DurationType $duration)
  */
 class OutOfOfficeMailTipType extends Type
@@ -27,4 +25,20 @@ class OutOfOfficeMailTipType extends Type
      * @var \garethp\ews\API\Type\DurationType
      */
     protected $duration = null;
+
+    /**
+     * @return ReplyBodyType
+     */
+    public function getReplyBody()
+    {
+        return $this->replyBody;
+    }
+
+    /**
+     * @return DurationType
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
 }

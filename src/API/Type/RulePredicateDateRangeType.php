@@ -10,9 +10,7 @@ use garethp\ews\API\Type;
  * Date range type used for the WithinDateRange rule predicate.
  * XSD Type: RulePredicateDateRangeType
  *
- * @method \DateTime getStartDateTime()
  * @method RulePredicateDateRangeType setStartDateTime(\DateTime $startDateTime)
- * @method \DateTime getEndDateTime()
  * @method RulePredicateDateRangeType setEndDateTime(\DateTime $endDateTime)
  */
 class RulePredicateDateRangeType extends Type
@@ -32,4 +30,20 @@ class RulePredicateDateRangeType extends Type
      * @var \DateTime
      */
     protected $endDateTime = null;
+
+    /**
+     * @return \DateTime
+     */
+    public function getStartDateTime()
+    {
+        return $this->startDateTime;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getEndDateTime()
+    {
+        return $this->endDateTime;
+    }
 }

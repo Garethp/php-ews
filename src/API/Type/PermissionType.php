@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  * A permission on a folder
  * XSD Type: PermissionType
  *
- * @method string getReadItems()
  * @method PermissionType setReadItems(string $readItems)
- * @method string getPermissionLevel()
  * @method PermissionType setPermissionLevel(string $permissionLevel)
  */
 class PermissionType extends BasePermissionType
@@ -25,4 +23,20 @@ class PermissionType extends BasePermissionType
      * @var string
      */
     protected $permissionLevel = null;
+
+    /**
+     * @return string
+     */
+    public function getReadItems()
+    {
+        return $this->readItems;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPermissionLevel()
+    {
+        return $this->permissionLevel;
+    }
 }

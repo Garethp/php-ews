@@ -10,17 +10,11 @@ use garethp\ews\API\Type;
  *
  * XSD Type: PhysicalAddressDictionaryEntryType
  *
- * @method string getKey()
  * @method PhysicalAddressDictionaryEntryType setKey(string $key)
- * @method string getStreet()
  * @method PhysicalAddressDictionaryEntryType setStreet(string $street)
- * @method string getCity()
  * @method PhysicalAddressDictionaryEntryType setCity(string $city)
- * @method string getState()
  * @method PhysicalAddressDictionaryEntryType setState(string $state)
- * @method string getCountryOrRegion()
  * @method PhysicalAddressDictionaryEntryType setCountryOrRegion(string $countryOrRegion)
- * @method string getPostalCode()
  * @method PhysicalAddressDictionaryEntryType setPostalCode(string $postalCode)
  */
 class PhysicalAddressDictionaryEntryType extends Type
@@ -55,4 +49,52 @@ class PhysicalAddressDictionaryEntryType extends Type
      * @var string
      */
     protected $postalCode = null;
+
+    /**
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->key;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStreet()
+    {
+        return $this->street;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * @return string
+     */
+    public function getState()
+    {
+        return $this->state;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountryOrRegion()
+    {
+        return $this->countryOrRegion;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPostalCode()
+    {
+        return $this->postalCode;
+    }
 }

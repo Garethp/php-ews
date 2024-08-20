@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: PlayOnPhoneResponseMessageType
  *
- * @method \garethp\ews\API\Type\PhoneCallIdType getPhoneCallId()
  * @method PlayOnPhoneResponseMessageType setPhoneCallId(\garethp\ews\API\Type\PhoneCallIdType $phoneCallId)
  */
 class PlayOnPhoneResponseMessageType extends ResponseMessageType
@@ -18,4 +17,12 @@ class PlayOnPhoneResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\PhoneCallIdType
      */
     protected $phoneCallId = null;
+
+    /**
+     * @return \garethp\ews\API\Type\PhoneCallIdType
+     */
+    public function getPhoneCallId()
+    {
+        return $this->phoneCallId;
+    }
 }

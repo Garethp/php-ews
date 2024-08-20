@@ -8,21 +8,13 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: MeetingMessageType
  *
- * @method ItemIdType getAssociatedCalendarItemId()
  * @method MeetingMessageType setAssociatedCalendarItemId(ItemIdType $associatedCalendarItemId)
- * @method boolean getIsDelegated()
  * @method MeetingMessageType setIsDelegated(boolean $isDelegated)
- * @method boolean getIsOutOfDate()
  * @method MeetingMessageType setIsOutOfDate(boolean $isOutOfDate)
- * @method boolean getHasBeenProcessed()
  * @method MeetingMessageType setHasBeenProcessed(boolean $hasBeenProcessed)
- * @method string getResponseType()
  * @method MeetingMessageType setResponseType(string $responseType)
- * @method string getUID()
  * @method MeetingMessageType setUID(string $uID)
- * @method \DateTime getRecurrenceId()
  * @method MeetingMessageType setRecurrenceId(\DateTime $recurrenceId)
- * @method \DateTime getDateTimeStamp()
  * @method MeetingMessageType setDateTimeStamp(\DateTime $dateTimeStamp)
  */
 class MeetingMessageType extends MessageType
@@ -74,11 +66,27 @@ class MeetingMessageType extends MessageType
     protected $dateTimeStamp = null;
 
     /**
+     * @return ItemIdType
+     */
+    public function getAssociatedCalendarItemId()
+    {
+        return $this->associatedCalendarItemId;
+    }
+
+    /**
      * @returns bool
      */
     public function isDelegated()
     {
         return ((bool) $this->isDelegated);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsDelegated()
+    {
+        return $this->isDelegated;
     }
 
     /**
@@ -90,10 +98,58 @@ class MeetingMessageType extends MessageType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsOutOfDate()
+    {
+        return $this->isOutOfDate;
+    }
+
+    /**
      * @returns bool
      */
     public function isHasBeenProcessed()
     {
         return ((bool) $this->hasBeenProcessed);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getHasBeenProcessed()
+    {
+        return $this->hasBeenProcessed;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResponseType()
+    {
+        return $this->responseType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUID()
+    {
+        return $this->uID;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getRecurrenceId()
+    {
+        return $this->recurrenceId;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateTimeStamp()
+    {
+        return $this->dateTimeStamp;
     }
 }

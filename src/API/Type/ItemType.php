@@ -10,86 +10,47 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ItemType
  *
- * @method MimeContentType getMimeContent()
  * @method ItemType setMimeContent(MimeContentType $mimeContent)
- * @method ItemIdType getItemId()
  * @method ItemType setItemId(ItemIdType $itemId)
- * @method FolderIdType getParentFolderId()
  * @method ItemType setParentFolderId(FolderIdType $parentFolderId)
- * @method string getItemClass()
  * @method ItemType setItemClass(string $itemClass)
- * @method string getSubject()
  * @method ItemType setSubject(string $subject)
- * @method string getSensitivity()
  * @method ItemType setSensitivity(string $sensitivity)
- * @method BodyType getBody()
  * @method ItemType setBody(BodyType $body)
- * @method NonEmptyArrayOfAttachmentsType getAttachments()
  * @method ItemType setAttachments(NonEmptyArrayOfAttachmentsType $attachments)
- * @method \DateTime getDateTimeReceived()
  * @method ItemType setDateTimeReceived(\DateTime $dateTimeReceived)
- * @method integer getSize()
  * @method ItemType setSize(integer $size)
  * @method ItemType addCategories(string $categories)
- * @method string[] getCategories()
  * @method ItemType setCategories(array $categories)
- * @method string getImportance()
  * @method ItemType setImportance(string $importance)
- * @method string getInReplyTo()
  * @method ItemType setInReplyTo(string $inReplyTo)
- * @method boolean getIsSubmitted()
  * @method ItemType setIsSubmitted(boolean $isSubmitted)
- * @method boolean getIsDraft()
  * @method ItemType setIsDraft(boolean $isDraft)
- * @method boolean getIsFromMe()
  * @method ItemType setIsFromMe(boolean $isFromMe)
- * @method boolean getIsResend()
  * @method ItemType setIsResend(boolean $isResend)
- * @method boolean getIsUnmodified()
  * @method ItemType setIsUnmodified(boolean $isUnmodified)
  * @method ItemType addInternetMessageHeaders(InternetHeaderType $internetMessageHeaders)
- * @method InternetHeaderType[] getInternetMessageHeaders()
  * @method ItemType setInternetMessageHeaders(array $internetMessageHeaders)
- * @method \DateTime getDateTimeSent()
  * @method ItemType setDateTimeSent(\DateTime $dateTimeSent)
- * @method \DateTime getDateTimeCreated()
  * @method ItemType setDateTimeCreated(\DateTime $dateTimeCreated)
- * @method NonEmptyArrayOfResponseObjectsType getResponseObjects()
  * @method ItemType setResponseObjects(NonEmptyArrayOfResponseObjectsType $responseObjects)
- * @method \DateTime getReminderDueBy()
  * @method ItemType setReminderDueBy(\DateTime $reminderDueBy)
- * @method boolean getReminderIsSet()
  * @method ItemType setReminderIsSet(boolean $reminderIsSet)
- * @method integer getReminderMinutesBeforeStart()
  * @method ItemType setReminderMinutesBeforeStart(integer $reminderMinutesBeforeStart)
- * @method string getDisplayCc()
  * @method ItemType setDisplayCc(string $displayCc)
- * @method string getDisplayTo()
  * @method ItemType setDisplayTo(string $displayTo)
- * @method boolean getHasAttachments()
  * @method ItemType setHasAttachments(boolean $hasAttachments)
  * @method ItemType addExtendedProperty(ExtendedPropertyType $extendedProperty)
- * @method ExtendedPropertyType[] getExtendedProperty()
  * @method ItemType setExtendedProperty(array $extendedProperty)
- * @method string getCulture()
  * @method ItemType setCulture(string $culture)
- * @method EffectiveRightsType getEffectiveRights()
  * @method ItemType setEffectiveRights(EffectiveRightsType $effectiveRights)
- * @method string getLastModifiedName()
  * @method ItemType setLastModifiedName(string $lastModifiedName)
- * @method \DateTime getLastModifiedTime()
  * @method ItemType setLastModifiedTime(\DateTime $lastModifiedTime)
- * @method boolean getIsAssociated()
  * @method ItemType setIsAssociated(boolean $isAssociated)
- * @method string getWebClientReadFormQueryString()
  * @method ItemType setWebClientReadFormQueryString(string $webClientReadFormQueryString)
- * @method string getWebClientEditFormQueryString()
  * @method ItemType setWebClientEditFormQueryString(string $webClientEditFormQueryString)
- * @method ItemIdType getConversationId()
  * @method ItemType setConversationId(ItemIdType $conversationId)
- * @method BodyType getUniqueBody()
  * @method ItemType setUniqueBody(BodyType $uniqueBody)
- * @method string getStoreEntryId()
  * @method ItemType setStoreEntryId(string $storeEntryId)
  */
 class ItemType extends Type
@@ -299,11 +260,123 @@ class ItemType extends Type
     protected $storeEntryId = null;
 
     /**
+     * @return MimeContentType
+     */
+    public function getMimeContent()
+    {
+        return $this->mimeContent;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @return FolderIdType
+     */
+    public function getParentFolderId()
+    {
+        return $this->parentFolderId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getItemClass()
+    {
+        return $this->itemClass;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSensitivity()
+    {
+        return $this->sensitivity;
+    }
+
+    /**
+     * @return BodyType
+     */
+    public function getBody()
+    {
+        return $this->body;
+    }
+
+    /**
+     * @return NonEmptyArrayOfAttachmentsType
+     */
+    public function getAttachments()
+    {
+        return $this->attachments;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateTimeReceived()
+    {
+        return $this->dateTimeReceived;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImportance()
+    {
+        return $this->importance;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInReplyTo()
+    {
+        return $this->inReplyTo;
+    }
+
+    /**
      * @returns bool
      */
     public function isSubmitted()
     {
         return ((bool) $this->isSubmitted);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsSubmitted()
+    {
+        return $this->isSubmitted;
     }
 
     /**
@@ -315,11 +388,27 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsDraft()
+    {
+        return $this->isDraft;
+    }
+
+    /**
      * @returns bool
      */
     public function isFromMe()
     {
         return ((bool) $this->isFromMe);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsFromMe()
+    {
+        return $this->isFromMe;
     }
 
     /**
@@ -331,11 +420,67 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsResend()
+    {
+        return $this->isResend;
+    }
+
+    /**
      * @returns bool
      */
     public function isUnmodified()
     {
         return ((bool) $this->isUnmodified);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsUnmodified()
+    {
+        return $this->isUnmodified;
+    }
+
+    /**
+     * @return InternetHeaderType[]
+     */
+    public function getInternetMessageHeaders()
+    {
+        return $this->internetMessageHeaders;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateTimeSent()
+    {
+        return $this->dateTimeSent;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateTimeCreated()
+    {
+        return $this->dateTimeCreated;
+    }
+
+    /**
+     * @return NonEmptyArrayOfResponseObjectsType
+     */
+    public function getResponseObjects()
+    {
+        return $this->responseObjects;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getReminderDueBy()
+    {
+        return $this->reminderDueBy;
     }
 
     /**
@@ -347,6 +492,38 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getReminderIsSet()
+    {
+        return $this->reminderIsSet;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getReminderMinutesBeforeStart()
+    {
+        return $this->reminderMinutesBeforeStart;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisplayCc()
+    {
+        return $this->displayCc;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisplayTo()
+    {
+        return $this->displayTo;
+    }
+
+    /**
      * @returns bool
      */
     public function isHasAttachments()
@@ -355,10 +532,106 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getHasAttachments()
+    {
+        return $this->hasAttachments;
+    }
+
+    /**
+     * @return ExtendedPropertyType[]
+     */
+    public function getExtendedProperty()
+    {
+        return $this->extendedProperty;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCulture()
+    {
+        return $this->culture;
+    }
+
+    /**
+     * @return EffectiveRightsType
+     */
+    public function getEffectiveRights()
+    {
+        return $this->effectiveRights;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastModifiedName()
+    {
+        return $this->lastModifiedName;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLastModifiedTime()
+    {
+        return $this->lastModifiedTime;
+    }
+
+    /**
      * @returns bool
      */
     public function isAssociated()
     {
         return ((bool) $this->isAssociated);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsAssociated()
+    {
+        return $this->isAssociated;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWebClientReadFormQueryString()
+    {
+        return $this->webClientReadFormQueryString;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWebClientEditFormQueryString()
+    {
+        return $this->webClientEditFormQueryString;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getConversationId()
+    {
+        return $this->conversationId;
+    }
+
+    /**
+     * @return BodyType
+     */
+    public function getUniqueBody()
+    {
+        return $this->uniqueBody;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStoreEntryId()
+    {
+        return $this->storeEntryId;
     }
 }

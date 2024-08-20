@@ -10,10 +10,8 @@ use garethp\ews\API\Message;
  *
  * XSD Type: SuggestionsResponseType
  *
- * @method ResponseMessageType getResponseMessage()
  * @method SuggestionsResponseType setResponseMessage(ResponseMessageType $responseMessage)
  * @method SuggestionsResponseType addSuggestionDayResultArray(\garethp\ews\API\Type\SuggestionDayResultType $suggestionDayResultArray)
- * @method \garethp\ews\API\Type\SuggestionDayResultType[] getSuggestionDayResultArray()
  * @method SuggestionsResponseType setSuggestionDayResultArray(array $suggestionDayResultArray)
  */
 class SuggestionsResponseType extends Message
@@ -28,4 +26,20 @@ class SuggestionsResponseType extends Message
      * @var \garethp\ews\API\Type\SuggestionDayResultType[]
      */
     protected $suggestionDayResultArray = null;
+
+    /**
+     * @return ResponseMessageType
+     */
+    public function getResponseMessage()
+    {
+        return $this->responseMessage;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\SuggestionDayResultType[]
+     */
+    public function getSuggestionDayResultArray()
+    {
+        return $this->suggestionDayResultArray;
+    }
 }

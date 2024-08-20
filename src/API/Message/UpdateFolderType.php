@@ -9,7 +9,6 @@ namespace garethp\ews\API\Message;
  * XSD Type: UpdateFolderType
  *
  * @method UpdateFolderType addFolderChanges(\garethp\ews\API\Type\FolderChangeType $folderChanges)
- * @method \garethp\ews\API\Type\FolderChangeType[] getFolderChanges()
  * @method UpdateFolderType setFolderChanges(array $folderChanges)
  */
 class UpdateFolderType extends BaseRequestType
@@ -19,4 +18,12 @@ class UpdateFolderType extends BaseRequestType
      * @var \garethp\ews\API\Type\FolderChangeType[]
      */
     protected $folderChanges = null;
+
+    /**
+     * @return \garethp\ews\API\Type\FolderChangeType[]
+     */
+    public function getFolderChanges()
+    {
+        return $this->folderChanges;
+    }
 }

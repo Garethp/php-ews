@@ -8,9 +8,7 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: ExportItemsResponseMessageType
  *
- * @method \garethp\ews\API\Type\ItemIdType getItemId()
  * @method ExportItemsResponseMessageType setItemId(\garethp\ews\API\Type\ItemIdType $itemId)
- * @method string getData()
  * @method ExportItemsResponseMessageType setData(string $data)
  */
 class ExportItemsResponseMessageType extends ResponseMessageType
@@ -25,4 +23,20 @@ class ExportItemsResponseMessageType extends ResponseMessageType
      * @var string
      */
     protected $data = null;
+
+    /**
+     * @return \garethp\ews\API\Type\ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
 }

@@ -10,31 +10,18 @@ use garethp\ews\API\Type;
  *
  * XSD Type: TaskRecurrenceType
  *
- * @method RelativeYearlyRecurrencePatternType getRelativeYearlyRecurrence()
  * @method TaskRecurrenceType setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $relativeYearlyRecurrence)
- * @method AbsoluteYearlyRecurrencePatternType getAbsoluteYearlyRecurrence()
  * @method TaskRecurrenceType setAbsoluteYearlyRecurrence(AbsoluteYearlyRecurrencePatternType $absoluteYearlyRecurrence)
- * @method RelativeMonthlyRecurrencePatternType getRelativeMonthlyRecurrence()
  * @method TaskRecurrenceType setRelativeMonthlyRecurrence(RelativeMonthlyRecurrencePatternType $relativeMonthlyRecurrence)
- * @method AbsoluteMonthlyRecurrencePatternType getAbsoluteMonthlyRecurrence()
  * @method TaskRecurrenceType setAbsoluteMonthlyRecurrence(AbsoluteMonthlyRecurrencePatternType $absoluteMonthlyRecurrence)
- * @method WeeklyRecurrencePatternType getWeeklyRecurrence()
  * @method TaskRecurrenceType setWeeklyRecurrence(WeeklyRecurrencePatternType $weeklyRecurrence)
- * @method DailyRecurrencePatternType getDailyRecurrence()
  * @method TaskRecurrenceType setDailyRecurrence(DailyRecurrencePatternType $dailyRecurrence)
- * @method DailyRegeneratingPatternType getDailyRegeneration()
  * @method TaskRecurrenceType setDailyRegeneration(DailyRegeneratingPatternType $dailyRegeneration)
- * @method WeeklyRegeneratingPatternType getWeeklyRegeneration()
  * @method TaskRecurrenceType setWeeklyRegeneration(WeeklyRegeneratingPatternType $weeklyRegeneration)
- * @method MonthlyRegeneratingPatternType getMonthlyRegeneration()
  * @method TaskRecurrenceType setMonthlyRegeneration(MonthlyRegeneratingPatternType $monthlyRegeneration)
- * @method YearlyRegeneratingPatternType getYearlyRegeneration()
  * @method TaskRecurrenceType setYearlyRegeneration(YearlyRegeneratingPatternType $yearlyRegeneration)
- * @method NoEndRecurrenceRangeType getNoEndRecurrence()
  * @method TaskRecurrenceType setNoEndRecurrence(NoEndRecurrenceRangeType $noEndRecurrence)
- * @method EndDateRecurrenceRangeType getEndDateRecurrence()
  * @method TaskRecurrenceType setEndDateRecurrence(EndDateRecurrenceRangeType $endDateRecurrence)
- * @method NumberedRecurrenceRangeType getNumberedRecurrence()
  * @method TaskRecurrenceType setNumberedRecurrence(NumberedRecurrenceRangeType $numberedRecurrence)
  */
 class TaskRecurrenceType extends Type
@@ -104,4 +91,108 @@ class TaskRecurrenceType extends Type
      * @var \garethp\ews\API\Type\NumberedRecurrenceRangeType
      */
     protected $numberedRecurrence = null;
+
+    /**
+     * @return RelativeYearlyRecurrencePatternType
+     */
+    public function getRelativeYearlyRecurrence()
+    {
+        return $this->relativeYearlyRecurrence;
+    }
+
+    /**
+     * @return AbsoluteYearlyRecurrencePatternType
+     */
+    public function getAbsoluteYearlyRecurrence()
+    {
+        return $this->absoluteYearlyRecurrence;
+    }
+
+    /**
+     * @return RelativeMonthlyRecurrencePatternType
+     */
+    public function getRelativeMonthlyRecurrence()
+    {
+        return $this->relativeMonthlyRecurrence;
+    }
+
+    /**
+     * @return AbsoluteMonthlyRecurrencePatternType
+     */
+    public function getAbsoluteMonthlyRecurrence()
+    {
+        return $this->absoluteMonthlyRecurrence;
+    }
+
+    /**
+     * @return WeeklyRecurrencePatternType
+     */
+    public function getWeeklyRecurrence()
+    {
+        return $this->weeklyRecurrence;
+    }
+
+    /**
+     * @return DailyRecurrencePatternType
+     */
+    public function getDailyRecurrence()
+    {
+        return $this->dailyRecurrence;
+    }
+
+    /**
+     * @return DailyRegeneratingPatternType
+     */
+    public function getDailyRegeneration()
+    {
+        return $this->dailyRegeneration;
+    }
+
+    /**
+     * @return WeeklyRegeneratingPatternType
+     */
+    public function getWeeklyRegeneration()
+    {
+        return $this->weeklyRegeneration;
+    }
+
+    /**
+     * @return MonthlyRegeneratingPatternType
+     */
+    public function getMonthlyRegeneration()
+    {
+        return $this->monthlyRegeneration;
+    }
+
+    /**
+     * @return YearlyRegeneratingPatternType
+     */
+    public function getYearlyRegeneration()
+    {
+        return $this->yearlyRegeneration;
+    }
+
+    /**
+     * @return NoEndRecurrenceRangeType
+     */
+    public function getNoEndRecurrence()
+    {
+        return $this->noEndRecurrence;
+    }
+
+    /**
+     * @return EndDateRecurrenceRangeType
+     */
+    public function getEndDateRecurrence()
+    {
+        return $this->endDateRecurrence;
+    }
+
+    /**
+     * @return NumberedRecurrenceRangeType
+     */
+    public function getNumberedRecurrence()
+    {
+        return $this->numberedRecurrence;
+    }
 }

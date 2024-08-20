@@ -11,19 +11,14 @@ use garethp\ews\API\Type;
  * XSD Type: ProtectionRuleAndType
  *
  * @method ProtectionRuleAndType addAllInternal(string $allInternal)
- * @method string[] getAllInternal()
  * @method ProtectionRuleAndType setAllInternal(array $allInternal)
  * @method ProtectionRuleAndType addAnd(ProtectionRuleAndType $and)
- * @method ProtectionRuleAndType[] getAnd()
  * @method ProtectionRuleAndType setAnd(array $and)
  * @method ProtectionRuleAndType addRecipientIs(string $recipientIs)
- * @method string[] getRecipientIs()
  * @method ProtectionRuleAndType setRecipientIs(array $recipientIs)
  * @method ProtectionRuleAndType addSenderDepartments(string $senderDepartments)
- * @method string[] getSenderDepartments()
  * @method ProtectionRuleAndType setSenderDepartments(array $senderDepartments)
  * @method ProtectionRuleAndType addTrue(string $true)
- * @method string[] getTrue()
  * @method ProtectionRuleAndType setTrue(array $true)
  */
 class ProtectionRuleAndType extends Type
@@ -53,4 +48,44 @@ class ProtectionRuleAndType extends Type
      * @var string[]
      */
     protected $true = null;
+
+    /**
+     * @return string[]
+     */
+    public function getAllInternal()
+    {
+        return $this->allInternal;
+    }
+
+    /**
+     * @return ProtectionRuleAndType[]
+     */
+    public function getAnd()
+    {
+        return $this->and;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getRecipientIs()
+    {
+        return $this->recipientIs;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getSenderDepartments()
+    {
+        return $this->senderDepartments;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getTrue()
+    {
+        return $this->true;
+    }
 }

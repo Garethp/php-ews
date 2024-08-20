@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: FractionalPageViewType
  *
- * @method integer getNumerator()
  * @method FractionalPageViewType setNumerator(integer $numerator)
- * @method integer getDenominator()
  * @method FractionalPageViewType setDenominator(integer $denominator)
  */
 class FractionalPageViewType extends BasePagingType
@@ -25,4 +23,20 @@ class FractionalPageViewType extends BasePagingType
      * @var integer
      */
     protected $denominator = null;
+
+    /**
+     * @return integer
+     */
+    public function getNumerator()
+    {
+        return $this->numerator;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getDenominator()
+    {
+        return $this->denominator;
+    }
 }

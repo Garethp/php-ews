@@ -8,9 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: PathToIndexedFieldType
  *
- * @method string getFieldURI()
  * @method PathToIndexedFieldType setFieldURI(string $fieldURI)
- * @method string getFieldIndex()
  * @method PathToIndexedFieldType setFieldIndex(string $fieldIndex)
  */
 class PathToIndexedFieldType extends BasePathToElementType
@@ -25,4 +23,20 @@ class PathToIndexedFieldType extends BasePathToElementType
      * @var string
      */
     protected $fieldIndex = null;
+
+    /**
+     * @return string
+     */
+    public function getFieldURI()
+    {
+        return $this->fieldURI;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFieldIndex()
+    {
+        return $this->fieldIndex;
+    }
 }

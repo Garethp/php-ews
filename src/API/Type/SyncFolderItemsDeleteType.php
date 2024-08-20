@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: SyncFolderItemsDeleteType
  *
- * @method ItemIdType getItemId()
  * @method SyncFolderItemsDeleteType setItemId(ItemIdType $itemId)
  */
 class SyncFolderItemsDeleteType extends Type
@@ -20,4 +19,12 @@ class SyncFolderItemsDeleteType extends Type
      * @var \garethp\ews\API\Type\ItemIdType
      */
     protected $itemId = null;
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
+    }
 }

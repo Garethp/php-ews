@@ -11,13 +11,10 @@ use garethp\ews\API\Type;
  * XSD Type: ArrayOfRuleOperationsType
  *
  * @method ArrayOfRuleOperationsType addCreateRuleOperation(CreateRuleOperationType $createRuleOperation)
- * @method CreateRuleOperationType[] getCreateRuleOperation()
  * @method ArrayOfRuleOperationsType setCreateRuleOperation(array $createRuleOperation)
  * @method ArrayOfRuleOperationsType addSetRuleOperation(SetRuleOperationType $setRuleOperation)
- * @method SetRuleOperationType[] getSetRuleOperation()
  * @method ArrayOfRuleOperationsType setSetRuleOperation(array $setRuleOperation)
  * @method ArrayOfRuleOperationsType addDeleteRuleOperation(DeleteRuleOperationType $deleteRuleOperation)
- * @method DeleteRuleOperationType[] getDeleteRuleOperation()
  * @method ArrayOfRuleOperationsType setDeleteRuleOperation(array $deleteRuleOperation)
  */
 class ArrayOfRuleOperationsType extends Type
@@ -37,4 +34,28 @@ class ArrayOfRuleOperationsType extends Type
      * @var \garethp\ews\API\Type\DeleteRuleOperationType[]
      */
     protected $deleteRuleOperation = null;
+
+    /**
+     * @return CreateRuleOperationType[]
+     */
+    public function getCreateRuleOperation()
+    {
+        return $this->createRuleOperation;
+    }
+
+    /**
+     * @return SetRuleOperationType[]
+     */
+    public function getSetRuleOperation()
+    {
+        return $this->setRuleOperation;
+    }
+
+    /**
+     * @return DeleteRuleOperationType[]
+     */
+    public function getDeleteRuleOperation()
+    {
+        return $this->deleteRuleOperation;
+    }
 }
