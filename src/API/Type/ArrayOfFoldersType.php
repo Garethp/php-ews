@@ -5,7 +5,6 @@ namespace garethp\ews\API\Type;
 use Countable;
 use ArrayAccess;
 use IteratorAggregate;
-
 use garethp\ews\API\Type;
 
 /**

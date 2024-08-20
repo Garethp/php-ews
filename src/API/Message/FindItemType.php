@@ -99,7 +99,7 @@ class FindItemType extends BaseRequestType
      */
     protected $queryString = null;
 
-    public function setIndexedPage(IndexedPageViewType $page)
+    public function setIndexedPage(\garethp\ews\API\Type\IndexedPageViewType $page)
     {
         $this->indexedPageItemView = $page;
         return $this;

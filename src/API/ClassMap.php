@@ -4,8 +4,7 @@ namespace garethp\ews\API;
 
 class ClassMap
 {
-
-    protected static $classMap = array(
+    protected static $classMap = [
         'AddDelegateType' => '\\garethp\\ews\\API\\Message\\AddDelegateType',
         'AddDelegateResponseMessageType' => '\\garethp\\ews\\API\\Message\\AddDelegateResponseMessageType',
         'ApplyConversationActionType' => '\\garethp\\ews\\API\\Message\\ApplyConversationActionType',
@@ -438,7 +437,7 @@ class ClassMap
         'WorkingHours' => '\\garethp\\ews\\API\\Type\\WorkingHoursType',
         'WorkingPeriod' => '\\garethp\\ews\\API\\Type\\WorkingPeriodType',
         'YearlyRegeneratingPatternType' => '\\garethp\\ews\\API\\Type\\YearlyRegeneratingPatternType',
-    );
+    ];
 
     public static function getClassMap()
     {

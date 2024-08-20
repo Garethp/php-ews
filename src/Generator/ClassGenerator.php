@@ -16,7 +16,6 @@ use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClass;
 use Zend\Code\Generator\DocBlockGenerator;
 use Zend\Code\Generator\PropertyGenerator;
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPProperty;
-use Zend\Code\Generator\DocBlock\Tag\PropertyTag;
 use Doctrine\Common\Inflector\Inflector;
 
 class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator

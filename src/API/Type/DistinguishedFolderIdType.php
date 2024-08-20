@@ -17,6 +17,7 @@ namespace garethp\ews\API\Type;
  */
 class DistinguishedFolderIdType extends BaseFolderIdType
 {
+
     /**
      * @var string
      */

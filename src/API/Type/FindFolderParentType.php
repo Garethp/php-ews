@@ -7,7 +7,6 @@ use ArrayAccess;
 use garethp\ews\API\Enumeration\IndexBasePointType;
 use garethp\ews\API\Message\FindFolderType;
 use IteratorAggregate;
-
 use garethp\ews\API\Type;
 
 /**
@@ -119,14 +118,15 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
     /**
      * @param Type $lastRequest
      */
-    public function setLastRequest(Type $lastRequest)
+    public function setLastRequest($lastRequest)
     {
         $lastRequest = FindFolderType::buildFromArray($lastRequest->getNonNullItems());
         $this->lastRequest = $lastRequest;
     }
 
     /**
-     * Either returns the IndexedPageItemView of the last request or returns a new one, at index 0, Base Point Beginning
+     * Either returns the IndexedPageItemView of the last request or returns a new one,
+     * at index 0, Base Point Beginning
      * and MaxEntries equal to the count of this object
      *
      * @return IndexedPageViewType

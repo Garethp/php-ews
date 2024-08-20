@@ -28,7 +28,7 @@ class IndexedPageViewType extends BasePagingType
      */
     protected $basePoint = null;
 
-    public function __construct($maxEntries = 100, $offset = 0, $basePoint = IndexBasePointType::BEGINNING)
+    public function __construct($maxEntries = 100, $offset = 0, $basePoint = 'Beginning')
     {
         $this->maxEntriesReturned = $maxEntries;
         $this->offset = $offset;

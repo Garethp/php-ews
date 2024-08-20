@@ -56,7 +56,7 @@ class FindFolderType extends BaseRequestType
      */
     protected $parentFolderIds = null;
 
-    public function setIndexedPage(IndexedPageViewType $page)
+    public function setIndexedPage(\garethp\ews\API\Type\IndexedPageViewType $page)
     {
         $this->indexedPageFolderView = $page;
         return $this;

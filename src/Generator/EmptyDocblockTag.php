@@ -3,8 +3,8 @@
 
 namespace garethp\ews\Generator;
 
-use Zend\Code\Generator\DocBlock\Tag\AbstractTypeableTag;
-use Zend\Code\Generator\DocBlock\Tag\TagInterface;
+use Laminas\Code\Generator\DocBlock\Tag\AbstractTypeableTag;
+use Laminas\Code\Generator\DocBlock\Tag\TagInterface;
 
 class EmptyDocblockTag extends AbstractTypeableTag implements TagInterface
 {

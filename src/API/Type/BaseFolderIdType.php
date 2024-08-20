@@ -13,6 +13,7 @@ use garethp\ews\API\Type;
  */
 class BaseFolderIdType extends Type
 {
+
     public function toArray($getOuterArray = false)
     {
         throw new Exception('Cannot use BaseFolderIdType directly');
