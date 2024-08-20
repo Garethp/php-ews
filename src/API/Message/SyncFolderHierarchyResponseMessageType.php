@@ -10,7 +10,6 @@ namespace garethp\ews\API\Message;
  *
  * @method string getSyncState()
  * @method SyncFolderHierarchyResponseMessageType setSyncState(string $syncState)
- * @method boolean isIncludesLastFolderInRange()
  * @method boolean getIncludesLastFolderInRange()
  * @method SyncFolderHierarchyResponseMessageType setIncludesLastFolderInRange(boolean $includesLastFolderInRange)
  * @method \garethp\ews\API\Type\SyncFolderHierarchyChangesType getChanges()
@@ -33,4 +32,12 @@ class SyncFolderHierarchyResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\SyncFolderHierarchyChangesType
      */
     protected $changes = null;
+
+    /**
+     * @returns bool
+     */
+    public function isIncludesLastFolderInRange()
+    {
+        return $this->includesLastFolderInRange && $this->includesLastFolderInRange;
+    }
 }

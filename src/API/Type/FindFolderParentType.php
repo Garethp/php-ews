@@ -21,7 +21,6 @@ use garethp\ews\API\Type;
  * @method FindFolderParentType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method FindFolderParentType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method FindFolderParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()
@@ -138,5 +137,13 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
         }
 
         return new IndexedPageViewType($this->count(), 0, IndexBasePointType::BEGINNING);
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange && $this->includesLastItemInRange;
     }
 }

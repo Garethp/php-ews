@@ -46,10 +46,8 @@ use garethp\ews\API\Type;
  * @method ConversationType setFlagStatus(string $flagStatus)
  * @method string getGlobalFlagStatus()
  * @method ConversationType setGlobalFlagStatus(string $globalFlagStatus)
- * @method boolean isHasAttachments()
  * @method boolean getHasAttachments()
  * @method ConversationType setHasAttachments(boolean $hasAttachments)
- * @method boolean isGlobalHasAttachments()
  * @method boolean getGlobalHasAttachments()
  * @method ConversationType setGlobalHasAttachments(boolean $globalHasAttachments)
  * @method integer getMessageCount()
@@ -226,4 +224,20 @@ class ConversationType extends Type
      * @var \garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType
      */
     protected $globalItemIds = null;
+
+    /**
+     * @returns bool
+     */
+    public function isHasAttachments()
+    {
+        return $this->hasAttachments && $this->hasAttachments;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isGlobalHasAttachments()
+    {
+        return $this->globalHasAttachments && $this->globalHasAttachments;
+    }
 }

@@ -10,7 +10,6 @@ namespace garethp\ews\API\Message;
  *
  * @method string getMailboxSmtpAddress()
  * @method UpdateInboxRulesRequestType setMailboxSmtpAddress(string $mailboxSmtpAddress)
- * @method boolean isRemoveOutlookRuleBlob()
  * @method boolean getRemoveOutlookRuleBlob()
  * @method UpdateInboxRulesRequestType setRemoveOutlookRuleBlob(boolean $removeOutlookRuleBlob)
  * @method \garethp\ews\API\Type\ArrayOfRuleOperationsType getOperations()
@@ -33,4 +32,12 @@ class UpdateInboxRulesRequestType extends BaseRequestType
      * @var \garethp\ews\API\Type\ArrayOfRuleOperationsType
      */
     protected $operations = null;
+
+    /**
+     * @returns bool
+     */
+    public function isRemoveOutlookRuleBlob()
+    {
+        return $this->removeOutlookRuleBlob && $this->removeOutlookRuleBlob;
+    }
 }

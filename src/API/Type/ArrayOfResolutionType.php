@@ -16,7 +16,6 @@ use garethp\ews\API\Type;
  * @method ArrayOfResolutionType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method ArrayOfResolutionType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method ArrayOfResolutionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()
@@ -57,4 +56,12 @@ class ArrayOfResolutionType extends Type
      * @var \garethp\ews\API\Type\ResolutionType[]
      */
     protected $resolution = null;
+
+    /**
+     * @returns bool
+     */
+    public function isIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange && $this->includesLastItemInRange;
+    }
 }

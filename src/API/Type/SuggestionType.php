@@ -12,7 +12,6 @@ use garethp\ews\API\Type;
  *
  * @method \DateTime getMeetingTime()
  * @method SuggestionType setMeetingTime(\DateTime $meetingTime)
- * @method boolean isWorkTime()
  * @method boolean getIsWorkTime()
  * @method SuggestionType setIsWorkTime(boolean $isWorkTime)
  * @method string getSuggestionQuality()
@@ -46,4 +45,12 @@ class SuggestionType extends Type
      * @var \garethp\ews\API\Type\ArrayOfAttendeeConflictDataType
      */
     protected $attendeeConflictDataArray = null;
+
+    /**
+     * @returns bool
+     */
+    public function isWorkTime()
+    {
+        return $this->isWorkTime && $this->isWorkTime;
+    }
 }

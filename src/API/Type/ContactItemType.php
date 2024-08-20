@@ -74,7 +74,6 @@ namespace garethp\ews\API\Type;
  * @method ContactItemType setSurname(string $surname)
  * @method \DateTime getWeddingAnniversary()
  * @method ContactItemType setWeddingAnniversary(\DateTime $weddingAnniversary)
- * @method boolean isHasPicture()
  * @method boolean getHasPicture()
  * @method ContactItemType setHasPicture(boolean $hasPicture)
  * @method string getPhoneticFullName()
@@ -320,4 +319,12 @@ class ContactItemType extends ItemType
      * @var \garethp\ews\API\Type\EmailAddressType[]
      */
     protected $directReports = null;
+
+    /**
+     * @returns bool
+     */
+    public function isHasPicture()
+    {
+        return $this->hasPicture && $this->hasPicture;
+    }
 }

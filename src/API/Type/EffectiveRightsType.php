@@ -10,25 +10,18 @@ use garethp\ews\API\Type;
  *
  * XSD Type: EffectiveRightsType
  *
- * @method boolean isCreateAssociated()
  * @method boolean getCreateAssociated()
  * @method EffectiveRightsType setCreateAssociated(boolean $createAssociated)
- * @method boolean isCreateContents()
  * @method boolean getCreateContents()
  * @method EffectiveRightsType setCreateContents(boolean $createContents)
- * @method boolean isCreateHierarchy()
  * @method boolean getCreateHierarchy()
  * @method EffectiveRightsType setCreateHierarchy(boolean $createHierarchy)
- * @method boolean isDelete()
  * @method boolean getDelete()
  * @method EffectiveRightsType setDelete(boolean $delete)
- * @method boolean isModify()
  * @method boolean getModify()
  * @method EffectiveRightsType setModify(boolean $modify)
- * @method boolean isRead()
  * @method boolean getRead()
  * @method EffectiveRightsType setRead(boolean $read)
- * @method boolean isViewPrivateItems()
  * @method boolean getViewPrivateItems()
  * @method EffectiveRightsType setViewPrivateItems(boolean $viewPrivateItems)
  */
@@ -69,4 +62,60 @@ class EffectiveRightsType extends Type
      * @var boolean
      */
     protected $viewPrivateItems = null;
+
+    /**
+     * @returns bool
+     */
+    public function isCreateAssociated()
+    {
+        return $this->createAssociated && $this->createAssociated;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isCreateContents()
+    {
+        return $this->createContents && $this->createContents;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isCreateHierarchy()
+    {
+        return $this->createHierarchy && $this->createHierarchy;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isDelete()
+    {
+        return $this->delete && $this->delete;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isModify()
+    {
+        return $this->modify && $this->modify;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isRead()
+    {
+        return $this->read && $this->read;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isViewPrivateItems()
+    {
+        return $this->viewPrivateItems && $this->viewPrivateItems;
+    }
 }

@@ -12,7 +12,6 @@ use garethp\ews\API\Type;
  *
  * @method string getName()
  * @method SmtpDomainType setName(string $name)
- * @method boolean isIncludeSubdomains()
  * @method boolean getIncludeSubdomains()
  * @method SmtpDomainType setIncludeSubdomains(boolean $includeSubdomains)
  */
@@ -28,4 +27,12 @@ class SmtpDomainType extends Type
      * @var boolean
      */
     protected $includeSubdomains = null;
+
+    /**
+     * @returns bool
+     */
+    public function isIncludeSubdomains()
+    {
+        return $this->includeSubdomains && $this->includeSubdomains;
+    }
 }

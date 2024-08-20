@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: ResolveNamesType
  *
- * @method boolean isReturnFullContactData()
  * @method boolean getReturnFullContactData()
  * @method ResolveNamesType setReturnFullContactData(boolean $returnFullContactData)
  * @method string getSearchScope()
@@ -47,4 +46,12 @@ class ResolveNamesType extends BaseRequestType
      * @var string
      */
     protected $unresolvedEntry = null;
+
+    /**
+     * @returns bool
+     */
+    public function isReturnFullContactData()
+    {
+        return $this->returnFullContactData && $this->returnFullContactData;
+    }
 }

@@ -10,7 +10,6 @@ namespace garethp\ews\API\Message;
  *
  * @method string getSyncState()
  * @method SyncFolderItemsResponseMessageType setSyncState(string $syncState)
- * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method SyncFolderItemsResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method \garethp\ews\API\Type\SyncFolderItemsChangesType getChanges()
@@ -33,4 +32,12 @@ class SyncFolderItemsResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\SyncFolderItemsChangesType
      */
     protected $changes = null;
+
+    /**
+     * @returns bool
+     */
+    public function isIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange && $this->includesLastItemInRange;
+    }
 }

@@ -20,7 +20,6 @@ namespace garethp\ews\API\Type;
  * @method CalendarItemType setEnd(\DateTime $end)
  * @method \DateTime getOriginalStart()
  * @method CalendarItemType setOriginalStart(\DateTime $originalStart)
- * @method boolean isAllDayEvent()
  * @method boolean getIsAllDayEvent()
  * @method CalendarItemType setIsAllDayEvent(boolean $isAllDayEvent)
  * @method string getLegacyFreeBusyStatus()
@@ -29,19 +28,14 @@ namespace garethp\ews\API\Type;
  * @method CalendarItemType setLocation(string $location)
  * @method string getWhen()
  * @method CalendarItemType setWhen(string $when)
- * @method boolean isMeeting()
  * @method boolean getIsMeeting()
  * @method CalendarItemType setIsMeeting(boolean $isMeeting)
- * @method boolean isCancelled()
  * @method boolean getIsCancelled()
  * @method CalendarItemType setIsCancelled(boolean $isCancelled)
- * @method boolean isRecurring()
  * @method boolean getIsRecurring()
  * @method CalendarItemType setIsRecurring(boolean $isRecurring)
- * @method boolean isMeetingRequestWasSent()
  * @method boolean getMeetingRequestWasSent()
  * @method CalendarItemType setMeetingRequestWasSent(boolean $meetingRequestWasSent)
- * @method boolean isResponseRequested()
  * @method boolean getIsResponseRequested()
  * @method CalendarItemType setIsResponseRequested(boolean $isResponseRequested)
  * @method string getCalendarItemType()
@@ -97,10 +91,8 @@ namespace garethp\ews\API\Type;
  * @method CalendarItemType setEndTimeZone(TimeZoneDefinitionType $endTimeZone)
  * @method integer getConferenceType()
  * @method CalendarItemType setConferenceType(integer $conferenceType)
- * @method boolean isAllowNewTimeProposal()
  * @method boolean getAllowNewTimeProposal()
  * @method CalendarItemType setAllowNewTimeProposal(boolean $allowNewTimeProposal)
- * @method boolean isOnlineMeeting()
  * @method boolean getIsOnlineMeeting()
  * @method CalendarItemType setIsOnlineMeeting(boolean $isOnlineMeeting)
  * @method string getMeetingWorkspaceUrl()
@@ -334,4 +326,68 @@ class CalendarItemType extends ItemType
      * @var string
      */
     protected $netShowUrl = null;
+
+    /**
+     * @returns bool
+     */
+    public function isAllDayEvent()
+    {
+        return $this->isAllDayEvent && $this->isAllDayEvent;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMeeting()
+    {
+        return $this->isMeeting && $this->isMeeting;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isCancelled()
+    {
+        return $this->isCancelled && $this->isCancelled;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isRecurring()
+    {
+        return $this->isRecurring && $this->isRecurring;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMeetingRequestWasSent()
+    {
+        return $this->meetingRequestWasSent && $this->meetingRequestWasSent;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isResponseRequested()
+    {
+        return $this->isResponseRequested && $this->isResponseRequested;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isAllowNewTimeProposal()
+    {
+        return $this->allowNewTimeProposal && $this->allowNewTimeProposal;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isOnlineMeeting()
+    {
+        return $this->isOnlineMeeting && $this->isOnlineMeeting;
+    }
 }

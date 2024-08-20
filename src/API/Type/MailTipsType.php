@@ -17,7 +17,6 @@ use garethp\ews\API\Type;
  * @method MailTipsType setPendingMailTips(array $pendingMailTips)
  * @method OutOfOfficeMailTipType getOutOfOffice()
  * @method MailTipsType setOutOfOffice(OutOfOfficeMailTipType $outOfOffice)
- * @method boolean isMailboxFull()
  * @method boolean getMailboxFull()
  * @method MailTipsType setMailboxFull(boolean $mailboxFull)
  * @method string getCustomMailTip()
@@ -28,13 +27,10 @@ use garethp\ews\API\Type;
  * @method MailTipsType setExternalMemberCount(integer $externalMemberCount)
  * @method integer getMaxMessageSize()
  * @method MailTipsType setMaxMessageSize(integer $maxMessageSize)
- * @method boolean isDeliveryRestricted()
  * @method boolean getDeliveryRestricted()
  * @method MailTipsType setDeliveryRestricted(boolean $deliveryRestricted)
- * @method boolean isModerated()
  * @method boolean getIsModerated()
  * @method MailTipsType setIsModerated(boolean $isModerated)
- * @method boolean isInvalidRecipient()
  * @method boolean getInvalidRecipient()
  * @method MailTipsType setInvalidRecipient(boolean $invalidRecipient)
  */
@@ -95,4 +91,36 @@ class MailTipsType extends Type
      * @var boolean
      */
     protected $invalidRecipient = null;
+
+    /**
+     * @returns bool
+     */
+    public function isMailboxFull()
+    {
+        return $this->mailboxFull && $this->mailboxFull;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isDeliveryRestricted()
+    {
+        return $this->deliveryRestricted && $this->deliveryRestricted;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isModerated()
+    {
+        return $this->isModerated && $this->isModerated;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isInvalidRecipient()
+    {
+        return $this->invalidRecipient && $this->invalidRecipient;
+    }
 }

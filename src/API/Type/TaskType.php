@@ -32,13 +32,10 @@ namespace garethp\ews\API\Type;
  * @method TaskType setDueDate(\DateTime $dueDate)
  * @method integer getIsAssignmentEditable()
  * @method TaskType setIsAssignmentEditable(integer $isAssignmentEditable)
- * @method boolean isComplete()
  * @method boolean getIsComplete()
  * @method TaskType setIsComplete(boolean $isComplete)
- * @method boolean isRecurring()
  * @method boolean getIsRecurring()
  * @method TaskType setIsRecurring(boolean $isRecurring)
- * @method boolean isTeamTask()
  * @method boolean getIsTeamTask()
  * @method TaskType setIsTeamTask(boolean $isTeamTask)
  * @method string getMileage()
@@ -177,4 +174,28 @@ class TaskType extends ItemType
      * @var integer
      */
     protected $totalWork = null;
+
+    /**
+     * @returns bool
+     */
+    public function isComplete()
+    {
+        return $this->isComplete && $this->isComplete;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isRecurring()
+    {
+        return $this->isRecurring && $this->isRecurring;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isTeamTask()
+    {
+        return $this->isTeamTask && $this->isTeamTask;
+    }
 }

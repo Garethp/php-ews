@@ -8,7 +8,6 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: MailTipsServiceConfiguration
  *
- * @method boolean isMailTipsEnabled()
  * @method boolean getMailTipsEnabled()
  * @method MailTipsServiceConfigurationType setMailTipsEnabled(boolean $mailTipsEnabled)
  * @method integer getMaxRecipientsPerGetMailTipsRequest()
@@ -17,7 +16,6 @@ namespace garethp\ews\API\Type;
  * @method MailTipsServiceConfigurationType setMaxMessageSize(integer $maxMessageSize)
  * @method integer getLargeAudienceThreshold()
  * @method MailTipsServiceConfigurationType setLargeAudienceThreshold(integer $largeAudienceThreshold)
- * @method boolean isShowExternalRecipientCount()
  * @method boolean getShowExternalRecipientCount()
  * @method MailTipsServiceConfigurationType setShowExternalRecipientCount(boolean $showExternalRecipientCount)
  * @method MailTipsServiceConfigurationType addInternalDomains(SmtpDomainType $internalDomains)
@@ -56,4 +54,20 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      * @var \garethp\ews\API\Type\SmtpDomainType[]
      */
     protected $internalDomains = null;
+
+    /**
+     * @returns bool
+     */
+    public function isMailTipsEnabled()
+    {
+        return $this->mailTipsEnabled && $this->mailTipsEnabled;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isShowExternalRecipientCount()
+    {
+        return $this->showExternalRecipientCount && $this->showExternalRecipientCount;
+    }
 }

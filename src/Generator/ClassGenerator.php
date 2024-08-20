@@ -217,15 +217,11 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             $name = "is" . Inflector::classify($name);
         }
 
-        $fullName = "method boolean $name()";
+        if ($generator->hasMethod($name)) {
+            $generator->removeMethod($name);
+        }
 
-        $docblock = $generator->getDocBlock();
-        $docblock->setWordWrap(false);
-
-        $tag = new Generator\DocBlock\Tag();
-        $tag->setName($fullName);
-
-        $docblock->setTag($tag);
+        $generator->addMethod($name, [], [], "return \$this->{$prop->getName()} && \$this->{$prop->getName()};", "@returns bool");
 
         return;
     }
@@ -342,15 +338,15 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
     protected function isNativeType(PHPClass $class)
     {
         return !$class->getNamespace() && in_array($class->getName(), [
-            'string',
-            'int',
-            'float',
-            'integer',
-            'boolean',
-            'array',
-            'mixed',
-            'callable'
-        ]);
+                'string',
+                'int',
+                'float',
+                'integer',
+                'boolean',
+                'array',
+                'mixed',
+                'callable'
+            ]);
     }
 
     protected function isTypeMapped($class)

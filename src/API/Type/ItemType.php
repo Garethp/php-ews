@@ -37,19 +37,14 @@ use garethp\ews\API\Type;
  * @method ItemType setImportance(string $importance)
  * @method string getInReplyTo()
  * @method ItemType setInReplyTo(string $inReplyTo)
- * @method boolean isSubmitted()
  * @method boolean getIsSubmitted()
  * @method ItemType setIsSubmitted(boolean $isSubmitted)
- * @method boolean isDraft()
  * @method boolean getIsDraft()
  * @method ItemType setIsDraft(boolean $isDraft)
- * @method boolean isFromMe()
  * @method boolean getIsFromMe()
  * @method ItemType setIsFromMe(boolean $isFromMe)
- * @method boolean isResend()
  * @method boolean getIsResend()
  * @method ItemType setIsResend(boolean $isResend)
- * @method boolean isUnmodified()
  * @method boolean getIsUnmodified()
  * @method ItemType setIsUnmodified(boolean $isUnmodified)
  * @method ItemType addInternetMessageHeaders(InternetHeaderType $internetMessageHeaders)
@@ -63,7 +58,6 @@ use garethp\ews\API\Type;
  * @method ItemType setResponseObjects(NonEmptyArrayOfResponseObjectsType $responseObjects)
  * @method \DateTime getReminderDueBy()
  * @method ItemType setReminderDueBy(\DateTime $reminderDueBy)
- * @method boolean isReminderIsSet()
  * @method boolean getReminderIsSet()
  * @method ItemType setReminderIsSet(boolean $reminderIsSet)
  * @method integer getReminderMinutesBeforeStart()
@@ -72,7 +66,6 @@ use garethp\ews\API\Type;
  * @method ItemType setDisplayCc(string $displayCc)
  * @method string getDisplayTo()
  * @method ItemType setDisplayTo(string $displayTo)
- * @method boolean isHasAttachments()
  * @method boolean getHasAttachments()
  * @method ItemType setHasAttachments(boolean $hasAttachments)
  * @method ItemType addExtendedProperty(ExtendedPropertyType $extendedProperty)
@@ -86,7 +79,6 @@ use garethp\ews\API\Type;
  * @method ItemType setLastModifiedName(string $lastModifiedName)
  * @method \DateTime getLastModifiedTime()
  * @method ItemType setLastModifiedTime(\DateTime $lastModifiedTime)
- * @method boolean isAssociated()
  * @method boolean getIsAssociated()
  * @method ItemType setIsAssociated(boolean $isAssociated)
  * @method string getWebClientReadFormQueryString()
@@ -305,4 +297,68 @@ class ItemType extends Type
      * @var string
      */
     protected $storeEntryId = null;
+
+    /**
+     * @returns bool
+     */
+    public function isSubmitted()
+    {
+        return $this->isSubmitted && $this->isSubmitted;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isDraft()
+    {
+        return $this->isDraft && $this->isDraft;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isFromMe()
+    {
+        return $this->isFromMe && $this->isFromMe;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isResend()
+    {
+        return $this->isResend && $this->isResend;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isUnmodified()
+    {
+        return $this->isUnmodified && $this->isUnmodified;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isReminderIsSet()
+    {
+        return $this->reminderIsSet && $this->reminderIsSet;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isHasAttachments()
+    {
+        return $this->hasAttachments && $this->hasAttachments;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isAssociated()
+    {
+        return $this->isAssociated && $this->isAssociated;
+    }
 }

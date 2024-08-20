@@ -16,7 +16,6 @@ namespace garethp\ews\API\Message;
  * @method GetMessageTrackingReportRequestType setRecipientFilter(\garethp\ews\API\Type\EmailAddressType $recipientFilter)
  * @method string getMessageTrackingReportId()
  * @method GetMessageTrackingReportRequestType setMessageTrackingReportId(string $messageTrackingReportId)
- * @method boolean isReturnQueueEvents()
  * @method boolean getReturnQueueEvents()
  * @method GetMessageTrackingReportRequestType setReturnQueueEvents(boolean $returnQueueEvents)
  * @method string getDiagnosticsLevel()
@@ -62,4 +61,12 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      * @var \garethp\ews\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
+
+    /**
+     * @returns bool
+     */
+    public function isReturnQueueEvents()
+    {
+        return $this->returnQueueEvents && $this->returnQueueEvents;
+    }
 }

@@ -14,10 +14,8 @@ use garethp\ews\API\Type;
  * @method DelegateUserType setUserId(UserIdType $userId)
  * @method DelegatePermissionsType getDelegatePermissions()
  * @method DelegateUserType setDelegatePermissions(DelegatePermissionsType $delegatePermissions)
- * @method boolean isReceiveCopiesOfMeetingMessages()
  * @method boolean getReceiveCopiesOfMeetingMessages()
  * @method DelegateUserType setReceiveCopiesOfMeetingMessages(boolean $receiveCopiesOfMeetingMessages)
- * @method boolean isViewPrivateItems()
  * @method boolean getViewPrivateItems()
  * @method DelegateUserType setViewPrivateItems(boolean $viewPrivateItems)
  */
@@ -43,4 +41,20 @@ class DelegateUserType extends Type
      * @var boolean
      */
     protected $viewPrivateItems = null;
+
+    /**
+     * @returns bool
+     */
+    public function isReceiveCopiesOfMeetingMessages()
+    {
+        return $this->receiveCopiesOfMeetingMessages && $this->receiveCopiesOfMeetingMessages;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isViewPrivateItems()
+    {
+        return $this->viewPrivateItems && $this->viewPrivateItems;
+    }
 }

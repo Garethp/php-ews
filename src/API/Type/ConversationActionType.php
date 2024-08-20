@@ -18,7 +18,6 @@ use garethp\ews\API\Type;
  * @method ConversationActionType setContextFolderId(TargetFolderIdType $contextFolderId)
  * @method \DateTime getConversationLastSyncTime()
  * @method ConversationActionType setConversationLastSyncTime(\DateTime $conversationLastSyncTime)
- * @method boolean isProcessRightAway()
  * @method boolean getProcessRightAway()
  * @method ConversationActionType setProcessRightAway(boolean $processRightAway)
  * @method TargetFolderIdType getDestinationFolderId()
@@ -26,10 +25,8 @@ use garethp\ews\API\Type;
  * @method ConversationActionType addCategories(string $categories)
  * @method string[] getCategories()
  * @method ConversationActionType setCategories(array $categories)
- * @method boolean isEnableAlwaysDelete()
  * @method boolean getEnableAlwaysDelete()
  * @method ConversationActionType setEnableAlwaysDelete(boolean $enableAlwaysDelete)
- * @method boolean isRead()
  * @method boolean getIsRead()
  * @method ConversationActionType setIsRead(boolean $isRead)
  * @method string getDeleteType()
@@ -91,4 +88,28 @@ class ConversationActionType extends Type
      * @var string
      */
     protected $deleteType = null;
+
+    /**
+     * @returns bool
+     */
+    public function isProcessRightAway()
+    {
+        return $this->processRightAway && $this->processRightAway;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isEnableAlwaysDelete()
+    {
+        return $this->enableAlwaysDelete && $this->enableAlwaysDelete;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isRead()
+    {
+        return $this->isRead && $this->isRead;
+    }
 }

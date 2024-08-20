@@ -14,7 +14,6 @@ use garethp\ews\API\Type;
  * @method NotificationType setSubscriptionId(string $subscriptionId)
  * @method string getPreviousWatermark()
  * @method NotificationType setPreviousWatermark(string $previousWatermark)
- * @method boolean isMoreEvents()
  * @method boolean getMoreEvents()
  * @method NotificationType setMoreEvents(boolean $moreEvents)
  * @method NotificationType addCopiedEvent(MovedCopiedEventType $copiedEvent)
@@ -99,4 +98,12 @@ class NotificationType extends Type
      * @var \garethp\ews\API\Type\BaseObjectChangedEventType[]
      */
     protected $freeBusyChangedEvent = null;
+
+    /**
+     * @returns bool
+     */
+    public function isMoreEvents()
+    {
+        return $this->moreEvents && $this->moreEvents;
+    }
 }

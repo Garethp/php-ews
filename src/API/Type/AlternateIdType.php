@@ -12,7 +12,6 @@ namespace garethp\ews\API\Type;
  * @method AlternateIdType setId(string $id)
  * @method string getMailbox()
  * @method AlternateIdType setMailbox(string $mailbox)
- * @method boolean isArchive()
  * @method boolean getIsArchive()
  * @method AlternateIdType setIsArchive(boolean $isArchive)
  */
@@ -33,4 +32,12 @@ class AlternateIdType extends AlternateIdBaseType
      * @var boolean
      */
     protected $isArchive = null;
+
+    /**
+     * @returns bool
+     */
+    public function isArchive()
+    {
+        return $this->isArchive && $this->isArchive;
+    }
 }

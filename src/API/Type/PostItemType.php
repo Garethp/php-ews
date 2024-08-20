@@ -16,7 +16,6 @@ namespace garethp\ews\API\Type;
  * @method PostItemType setFrom(SingleRecipientType $from)
  * @method string getInternetMessageId()
  * @method PostItemType setInternetMessageId(string $internetMessageId)
- * @method boolean isRead()
  * @method boolean getIsRead()
  * @method PostItemType setIsRead(boolean $isRead)
  * @method \DateTime getPostedTime()
@@ -72,4 +71,12 @@ class PostItemType extends ItemType
      * @var \garethp\ews\API\Type\SingleRecipientType
      */
     protected $sender = null;
+
+    /**
+     * @returns bool
+     */
+    public function isRead()
+    {
+        return $this->isRead && $this->isRead;
+    }
 }

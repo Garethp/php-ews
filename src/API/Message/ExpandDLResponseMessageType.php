@@ -14,7 +14,6 @@ namespace garethp\ews\API\Message;
  * @method ExpandDLResponseMessageType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method ExpandDLResponseMessageType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method ExpandDLResponseMessageType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()
@@ -54,4 +53,12 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      * @var \garethp\ews\API\Type\ArrayOfDLExpansionType
      */
     protected $dLExpansion = null;
+
+    /**
+     * @returns bool
+     */
+    public function isIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange && $this->includesLastItemInRange;
+    }
 }

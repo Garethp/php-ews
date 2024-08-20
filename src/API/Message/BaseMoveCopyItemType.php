@@ -12,7 +12,6 @@ namespace garethp\ews\API\Message;
  * @method BaseMoveCopyItemType setToFolderId(\garethp\ews\API\Type\TargetFolderIdType $toFolderId)
  * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType getItemIds()
  * @method BaseMoveCopyItemType setItemIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType $itemIds)
- * @method boolean isReturnNewItemIds()
  * @method boolean getReturnNewItemIds()
  * @method BaseMoveCopyItemType setReturnNewItemIds(boolean $returnNewItemIds)
  */
@@ -33,4 +32,12 @@ class BaseMoveCopyItemType extends BaseRequestType
      * @var boolean
      */
     protected $returnNewItemIds = null;
+
+    /**
+     * @returns bool
+     */
+    public function isReturnNewItemIds()
+    {
+        return $this->returnNewItemIds && $this->returnNewItemIds;
+    }
 }

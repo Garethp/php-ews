@@ -21,7 +21,6 @@ use garethp\ews\API\Type;
  * @method FindItemParentType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method FindItemParentType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method FindItemParentType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()
@@ -152,5 +151,13 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
         }
 
         return new IndexedPageViewType($this->count(), 0, IndexBasePointType::BEGINNING);
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange && $this->includesLastItemInRange;
     }
 }

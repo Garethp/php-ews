@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: BaseSubscriptionRequestType
  *
- * @method boolean isSubscribeToAllFolders()
  * @method boolean getSubscribeToAllFolders()
  * @method BaseSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
  * @method NonEmptyArrayOfBaseFolderIdsType getFolderIds()
@@ -43,4 +42,12 @@ class BaseSubscriptionRequestType extends Type
      * @var string
      */
     protected $watermark = null;
+
+    /**
+     * @returns bool
+     */
+    public function isSubscribeToAllFolders()
+    {
+        return $this->subscribeToAllFolders && $this->subscribeToAllFolders;
+    }
 }

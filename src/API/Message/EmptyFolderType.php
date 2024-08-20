@@ -10,7 +10,6 @@ namespace garethp\ews\API\Message;
  *
  * @method string getDeleteType()
  * @method EmptyFolderType setDeleteType(string $deleteType)
- * @method boolean isDeleteSubFolders()
  * @method boolean getDeleteSubFolders()
  * @method EmptyFolderType setDeleteSubFolders(boolean $deleteSubFolders)
  * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType getFolderIds()
@@ -33,4 +32,12 @@ class EmptyFolderType extends BaseRequestType
      * @var \garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType
      */
     protected $folderIds = null;
+
+    /**
+     * @returns bool
+     */
+    public function isDeleteSubFolders()
+    {
+        return $this->deleteSubFolders && $this->deleteSubFolders;
+    }
 }

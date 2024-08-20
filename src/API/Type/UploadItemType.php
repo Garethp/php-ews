@@ -12,7 +12,6 @@ use garethp\ews\API\Type;
  *
  * @method string getCreateAction()
  * @method UploadItemType setCreateAction(string $createAction)
- * @method boolean isAssociated()
  * @method boolean getIsAssociated()
  * @method UploadItemType setIsAssociated(boolean $isAssociated)
  * @method FolderIdType getParentFolderId()
@@ -49,4 +48,12 @@ class UploadItemType extends Type
      * @var string
      */
     protected $data = null;
+
+    /**
+     * @returns bool
+     */
+    public function isAssociated()
+    {
+        return $this->isAssociated && $this->isAssociated;
+    }
 }

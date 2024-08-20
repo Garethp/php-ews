@@ -10,7 +10,6 @@ use garethp\ews\API\Type;
  *
  * XSD Type: StreamingSubscriptionRequestType
  *
- * @method boolean isSubscribeToAllFolders()
  * @method boolean getSubscribeToAllFolders()
  * @method StreamingSubscriptionRequestType setSubscribeToAllFolders(boolean $subscribeToAllFolders)
  * @method NonEmptyArrayOfBaseFolderIdsType getFolderIds()
@@ -36,4 +35,12 @@ class StreamingSubscriptionRequestType extends Type
      * @var string[]
      */
     protected $eventTypes = null;
+
+    /**
+     * @returns bool
+     */
+    public function isSubscribeToAllFolders()
+    {
+        return $this->subscribeToAllFolders && $this->subscribeToAllFolders;
+    }
 }

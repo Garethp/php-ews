@@ -25,10 +25,8 @@ use garethp\ews\API\Type;
  * @method RecipientTrackingEventType setServer(string $server)
  * @method integer getInternalId()
  * @method RecipientTrackingEventType setInternalId(integer $internalId)
- * @method boolean isBccRecipient()
  * @method boolean getBccRecipient()
  * @method RecipientTrackingEventType setBccRecipient(boolean $bccRecipient)
- * @method boolean isHiddenRecipient()
  * @method boolean getHiddenRecipient()
  * @method RecipientTrackingEventType setHiddenRecipient(boolean $hiddenRecipient)
  * @method string getUniquePathId()
@@ -105,4 +103,20 @@ class RecipientTrackingEventType extends Type
      * @var \garethp\ews\API\Type\TrackingPropertyType[]
      */
     protected $properties = null;
+
+    /**
+     * @returns bool
+     */
+    public function isBccRecipient()
+    {
+        return $this->bccRecipient && $this->bccRecipient;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isHiddenRecipient()
+    {
+        return $this->hiddenRecipient && $this->hiddenRecipient;
+    }
 }

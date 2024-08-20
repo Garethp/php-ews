@@ -14,7 +14,6 @@ use garethp\ews\API\Type;
  * @method MailboxDataType setEmail(EmailAddressType $email)
  * @method string getAttendeeType()
  * @method MailboxDataType setAttendeeType(string $attendeeType)
- * @method boolean isExcludeConflicts()
  * @method boolean getExcludeConflicts()
  * @method MailboxDataType setExcludeConflicts(boolean $excludeConflicts)
  */
@@ -35,4 +34,12 @@ class MailboxDataType extends Type
      * @var boolean
      */
     protected $excludeConflicts = null;
+
+    /**
+     * @returns bool
+     */
+    public function isExcludeConflicts()
+    {
+        return $this->excludeConflicts && $this->excludeConflicts;
+    }
 }

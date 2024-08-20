@@ -29,13 +29,10 @@ namespace garethp\ews\API\Message;
  * @method FindMailboxStatisticsByKeywordsType addMessageTypes(string $messageTypes)
  * @method string[] getMessageTypes()
  * @method FindMailboxStatisticsByKeywordsType setMessageTypes(array $messageTypes)
- * @method boolean isSearchDumpster()
  * @method boolean getSearchDumpster()
  * @method FindMailboxStatisticsByKeywordsType setSearchDumpster(boolean $searchDumpster)
- * @method boolean isIncludePersonalArchive()
  * @method boolean getIncludePersonalArchive()
  * @method FindMailboxStatisticsByKeywordsType setIncludePersonalArchive(boolean $includePersonalArchive)
- * @method boolean isIncludeUnsearchableItems()
  * @method boolean getIncludeUnsearchableItems()
  * @method FindMailboxStatisticsByKeywordsType setIncludeUnsearchableItems(boolean $includeUnsearchableItems)
  */
@@ -101,4 +98,28 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      * @var boolean
      */
     protected $includeUnsearchableItems = null;
+
+    /**
+     * @returns bool
+     */
+    public function isSearchDumpster()
+    {
+        return $this->searchDumpster && $this->searchDumpster;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isIncludePersonalArchive()
+    {
+        return $this->includePersonalArchive && $this->includePersonalArchive;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isIncludeUnsearchableItems()
+    {
+        return $this->includeUnsearchableItems && $this->includeUnsearchableItems;
+    }
 }

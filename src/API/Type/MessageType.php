@@ -22,10 +22,8 @@ use function garethp\ews\Utilities\ensureIsMailbox;
  * @method MessageType addBccRecipients(EmailAddressType $bccRecipients)
  * @method EmailAddressType[] getBccRecipients()
  * @method MessageType setBccRecipients(array $bccRecipients)
- * @method boolean isReadReceiptRequested()
  * @method boolean getIsReadReceiptRequested()
  * @method MessageType setIsReadReceiptRequested(boolean $isReadReceiptRequested)
- * @method boolean isDeliveryReceiptRequested()
  * @method boolean getIsDeliveryReceiptRequested()
  * @method MessageType setIsDeliveryReceiptRequested(boolean $isDeliveryReceiptRequested)
  * @method string getConversationIndex()
@@ -36,10 +34,8 @@ use function garethp\ews\Utilities\ensureIsMailbox;
  * @method MessageType setFrom(SingleRecipientType $from)
  * @method string getInternetMessageId()
  * @method MessageType setInternetMessageId(string $internetMessageId)
- * @method boolean isRead()
  * @method boolean getIsRead()
  * @method MessageType setIsRead(boolean $isRead)
- * @method boolean isResponseRequested()
  * @method boolean getIsResponseRequested()
  * @method MessageType setIsResponseRequested(boolean $isResponseRequested)
  * @method string getReferences()
@@ -231,5 +227,37 @@ class MessageType extends ItemType
         }
 
         return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isReadReceiptRequested()
+    {
+        return $this->isReadReceiptRequested && $this->isReadReceiptRequested;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isDeliveryReceiptRequested()
+    {
+        return $this->isDeliveryReceiptRequested && $this->isDeliveryReceiptRequested;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isRead()
+    {
+        return $this->isRead && $this->isRead;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isResponseRequested()
+    {
+        return $this->isResponseRequested && $this->isResponseRequested;
     }
 }

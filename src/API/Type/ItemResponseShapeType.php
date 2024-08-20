@@ -12,15 +12,12 @@ use garethp\ews\API\Type;
  *
  * @method string getBaseShape()
  * @method ItemResponseShapeType setBaseShape(string $baseShape)
- * @method boolean isIncludeMimeContent()
  * @method boolean getIncludeMimeContent()
  * @method ItemResponseShapeType setIncludeMimeContent(boolean $includeMimeContent)
  * @method string getBodyType()
  * @method ItemResponseShapeType setBodyType(string $bodyType)
- * @method boolean isFilterHtmlContent()
  * @method boolean getFilterHtmlContent()
  * @method ItemResponseShapeType setFilterHtmlContent(boolean $filterHtmlContent)
- * @method boolean isConvertHtmlCodePageToUTF8()
  * @method boolean getConvertHtmlCodePageToUTF8()
  * @method ItemResponseShapeType setConvertHtmlCodePageToUTF8(boolean $convertHtmlCodePageToUTF8)
  * @method NonEmptyArrayOfPathsToElementType getAdditionalProperties()
@@ -58,4 +55,28 @@ class ItemResponseShapeType extends Type
      * @var \garethp\ews\API\Type\NonEmptyArrayOfPathsToElementType
      */
     protected $additionalProperties = null;
+
+    /**
+     * @returns bool
+     */
+    public function isIncludeMimeContent()
+    {
+        return $this->includeMimeContent && $this->includeMimeContent;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isFilterHtmlContent()
+    {
+        return $this->filterHtmlContent && $this->filterHtmlContent;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isConvertHtmlCodePageToUTF8()
+    {
+        return $this->convertHtmlCodePageToUTF8 && $this->convertHtmlCodePageToUTF8;
+    }
 }

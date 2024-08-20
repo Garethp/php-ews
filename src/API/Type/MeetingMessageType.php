@@ -10,13 +10,10 @@ namespace garethp\ews\API\Type;
  *
  * @method ItemIdType getAssociatedCalendarItemId()
  * @method MeetingMessageType setAssociatedCalendarItemId(ItemIdType $associatedCalendarItemId)
- * @method boolean isDelegated()
  * @method boolean getIsDelegated()
  * @method MeetingMessageType setIsDelegated(boolean $isDelegated)
- * @method boolean isOutOfDate()
  * @method boolean getIsOutOfDate()
  * @method MeetingMessageType setIsOutOfDate(boolean $isOutOfDate)
- * @method boolean isHasBeenProcessed()
  * @method boolean getHasBeenProcessed()
  * @method MeetingMessageType setHasBeenProcessed(boolean $hasBeenProcessed)
  * @method string getResponseType()
@@ -75,4 +72,28 @@ class MeetingMessageType extends MessageType
      * @var \DateTime
      */
     protected $dateTimeStamp = null;
+
+    /**
+     * @returns bool
+     */
+    public function isDelegated()
+    {
+        return $this->isDelegated && $this->isDelegated;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isOutOfDate()
+    {
+        return $this->isOutOfDate && $this->isOutOfDate;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isHasBeenProcessed()
+    {
+        return $this->hasBeenProcessed && $this->hasBeenProcessed;
+    }
 }

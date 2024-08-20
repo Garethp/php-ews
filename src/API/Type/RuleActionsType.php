@@ -15,7 +15,6 @@ use garethp\ews\API\Type;
  * @method RuleActionsType setAssignCategories(array $assignCategories)
  * @method TargetFolderIdType getCopyToFolder()
  * @method RuleActionsType setCopyToFolder(TargetFolderIdType $copyToFolder)
- * @method boolean isDelete()
  * @method boolean getDelete()
  * @method RuleActionsType setDelete(boolean $delete)
  * @method RuleActionsType addForwardAsAttachmentToRecipients(EmailAddressType $forwardAsAttachmentToRecipients)
@@ -26,12 +25,10 @@ use garethp\ews\API\Type;
  * @method RuleActionsType setForwardToRecipients(array $forwardToRecipients)
  * @method string getMarkImportance()
  * @method RuleActionsType setMarkImportance(string $markImportance)
- * @method boolean isMarkAsRead()
  * @method boolean getMarkAsRead()
  * @method RuleActionsType setMarkAsRead(boolean $markAsRead)
  * @method TargetFolderIdType getMoveToFolder()
  * @method RuleActionsType setMoveToFolder(TargetFolderIdType $moveToFolder)
- * @method boolean isPermanentDelete()
  * @method boolean getPermanentDelete()
  * @method RuleActionsType setPermanentDelete(boolean $permanentDelete)
  * @method RuleActionsType addRedirectToRecipients(EmailAddressType $redirectToRecipients)
@@ -42,7 +39,6 @@ use garethp\ews\API\Type;
  * @method RuleActionsType setSendSMSAlertToRecipients(array $sendSMSAlertToRecipients)
  * @method ItemIdType getServerReplyWithMessage()
  * @method RuleActionsType setServerReplyWithMessage(ItemIdType $serverReplyWithMessage)
- * @method boolean isStopProcessingRules()
  * @method boolean getStopProcessingRules()
  * @method RuleActionsType setStopProcessingRules(boolean $stopProcessingRules)
  */
@@ -113,4 +109,36 @@ class RuleActionsType extends Type
      * @var boolean
      */
     protected $stopProcessingRules = null;
+
+    /**
+     * @returns bool
+     */
+    public function isDelete()
+    {
+        return $this->delete && $this->delete;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMarkAsRead()
+    {
+        return $this->markAsRead && $this->markAsRead;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isPermanentDelete()
+    {
+        return $this->permanentDelete && $this->permanentDelete;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isStopProcessingRules()
+    {
+        return $this->stopProcessingRules && $this->stopProcessingRules;
+    }
 }

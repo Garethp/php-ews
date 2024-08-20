@@ -16,7 +16,6 @@ use garethp\ews\API\Type;
  * @method ArrayOfDLExpansionType setNumeratorOffset(integer $numeratorOffset)
  * @method integer getAbsoluteDenominator()
  * @method ArrayOfDLExpansionType setAbsoluteDenominator(integer $absoluteDenominator)
- * @method boolean isIncludesLastItemInRange()
  * @method boolean getIncludesLastItemInRange()
  * @method ArrayOfDLExpansionType setIncludesLastItemInRange(boolean $includesLastItemInRange)
  * @method integer getTotalItemsInView()
@@ -57,4 +56,12 @@ class ArrayOfDLExpansionType extends Type
      * @var \garethp\ews\API\Type\EmailAddressType[]
      */
     protected $mailbox = null;
+
+    /**
+     * @returns bool
+     */
+    public function isIncludesLastItemInRange()
+    {
+        return $this->includesLastItemInRange && $this->includesLastItemInRange;
+    }
 }

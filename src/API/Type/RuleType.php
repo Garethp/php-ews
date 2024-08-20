@@ -16,13 +16,10 @@ use garethp\ews\API\Type;
  * @method RuleType setDisplayName(string $displayName)
  * @method integer getPriority()
  * @method RuleType setPriority(integer $priority)
- * @method boolean isEnabled()
  * @method boolean getIsEnabled()
  * @method RuleType setIsEnabled(boolean $isEnabled)
- * @method boolean isNotSupported()
  * @method boolean getIsNotSupported()
  * @method RuleType setIsNotSupported(boolean $isNotSupported)
- * @method boolean isInError()
  * @method boolean getIsInError()
  * @method RuleType setIsInError(boolean $isInError)
  * @method RulePredicatesType getConditions()
@@ -79,4 +76,28 @@ class RuleType extends Type
      * @var \garethp\ews\API\Type\RuleActionsType
      */
     protected $actions = null;
+
+    /**
+     * @returns bool
+     */
+    public function isEnabled()
+    {
+        return $this->isEnabled && $this->isEnabled;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isNotSupported()
+    {
+        return $this->isNotSupported && $this->isNotSupported;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isInError()
+    {
+        return $this->isInError && $this->isInError;
+    }
 }

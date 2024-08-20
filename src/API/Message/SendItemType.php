@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: SendItemType
  *
- * @method boolean isSaveItemToFolder()
  * @method boolean getSaveItemToFolder()
  * @method SendItemType setSaveItemToFolder(boolean $saveItemToFolder)
  * @method \garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType getItemIds()
@@ -33,4 +32,12 @@ class SendItemType extends BaseRequestType
      * @var \garethp\ews\API\Type\TargetFolderIdType
      */
     protected $savedItemFolderId = null;
+
+    /**
+     * @returns bool
+     */
+    public function isSaveItemToFolder()
+    {
+        return $this->saveItemToFolder && $this->saveItemToFolder;
+    }
 }

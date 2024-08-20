@@ -18,7 +18,6 @@ namespace garethp\ews\API\Type;
  * @method MeetingRequestMessageType setEnd(\DateTime $end)
  * @method \DateTime getOriginalStart()
  * @method MeetingRequestMessageType setOriginalStart(\DateTime $originalStart)
- * @method boolean isAllDayEvent()
  * @method boolean getIsAllDayEvent()
  * @method MeetingRequestMessageType setIsAllDayEvent(boolean $isAllDayEvent)
  * @method string getLegacyFreeBusyStatus()
@@ -27,16 +26,12 @@ namespace garethp\ews\API\Type;
  * @method MeetingRequestMessageType setLocation(string $location)
  * @method string getWhen()
  * @method MeetingRequestMessageType setWhen(string $when)
- * @method boolean isMeeting()
  * @method boolean getIsMeeting()
  * @method MeetingRequestMessageType setIsMeeting(boolean $isMeeting)
- * @method boolean isCancelled()
  * @method boolean getIsCancelled()
  * @method MeetingRequestMessageType setIsCancelled(boolean $isCancelled)
- * @method boolean isRecurring()
  * @method boolean getIsRecurring()
  * @method MeetingRequestMessageType setIsRecurring(boolean $isRecurring)
- * @method boolean isMeetingRequestWasSent()
  * @method boolean getMeetingRequestWasSent()
  * @method MeetingRequestMessageType setMeetingRequestWasSent(boolean $meetingRequestWasSent)
  * @method string getCalendarItemType()
@@ -92,10 +87,8 @@ namespace garethp\ews\API\Type;
  * @method MeetingRequestMessageType setEndTimeZone(TimeZoneDefinitionType $endTimeZone)
  * @method integer getConferenceType()
  * @method MeetingRequestMessageType setConferenceType(integer $conferenceType)
- * @method boolean isAllowNewTimeProposal()
  * @method boolean getAllowNewTimeProposal()
  * @method MeetingRequestMessageType setAllowNewTimeProposal(boolean $allowNewTimeProposal)
- * @method boolean isOnlineMeeting()
  * @method boolean getIsOnlineMeeting()
  * @method MeetingRequestMessageType setIsOnlineMeeting(boolean $isOnlineMeeting)
  * @method string getMeetingWorkspaceUrl()
@@ -317,4 +310,60 @@ class MeetingRequestMessageType extends MeetingMessageType
      * @var string
      */
     protected $netShowUrl = null;
+
+    /**
+     * @returns bool
+     */
+    public function isAllDayEvent()
+    {
+        return $this->isAllDayEvent && $this->isAllDayEvent;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMeeting()
+    {
+        return $this->isMeeting && $this->isMeeting;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isCancelled()
+    {
+        return $this->isCancelled && $this->isCancelled;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isRecurring()
+    {
+        return $this->isRecurring && $this->isRecurring;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMeetingRequestWasSent()
+    {
+        return $this->meetingRequestWasSent && $this->meetingRequestWasSent;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isAllowNewTimeProposal()
+    {
+        return $this->allowNewTimeProposal && $this->allowNewTimeProposal;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isOnlineMeeting()
+    {
+        return $this->isOnlineMeeting && $this->isOnlineMeeting;
+    }
 }

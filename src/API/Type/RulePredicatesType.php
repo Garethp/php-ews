@@ -39,42 +39,30 @@ use garethp\ews\API\Type;
  * @method RulePredicatesType addFromConnectedAccounts(string $fromConnectedAccounts)
  * @method string[] getFromConnectedAccounts()
  * @method RulePredicatesType setFromConnectedAccounts(array $fromConnectedAccounts)
- * @method boolean isHasAttachments()
  * @method boolean getHasAttachments()
  * @method RulePredicatesType setHasAttachments(boolean $hasAttachments)
  * @method string getImportance()
  * @method RulePredicatesType setImportance(string $importance)
- * @method boolean isApprovalRequest()
  * @method boolean getIsApprovalRequest()
  * @method RulePredicatesType setIsApprovalRequest(boolean $isApprovalRequest)
- * @method boolean isAutomaticForward()
  * @method boolean getIsAutomaticForward()
  * @method RulePredicatesType setIsAutomaticForward(boolean $isAutomaticForward)
- * @method boolean isAutomaticReply()
  * @method boolean getIsAutomaticReply()
  * @method RulePredicatesType setIsAutomaticReply(boolean $isAutomaticReply)
- * @method boolean isEncrypted()
  * @method boolean getIsEncrypted()
  * @method RulePredicatesType setIsEncrypted(boolean $isEncrypted)
- * @method boolean isMeetingRequest()
  * @method boolean getIsMeetingRequest()
  * @method RulePredicatesType setIsMeetingRequest(boolean $isMeetingRequest)
- * @method boolean isMeetingResponse()
  * @method boolean getIsMeetingResponse()
  * @method RulePredicatesType setIsMeetingResponse(boolean $isMeetingResponse)
- * @method boolean isNDR()
  * @method boolean getIsNDR()
  * @method RulePredicatesType setIsNDR(boolean $isNDR)
- * @method boolean isPermissionControlled()
  * @method boolean getIsPermissionControlled()
  * @method RulePredicatesType setIsPermissionControlled(boolean $isPermissionControlled)
- * @method boolean isReadReceipt()
  * @method boolean getIsReadReceipt()
  * @method RulePredicatesType setIsReadReceipt(boolean $isReadReceipt)
- * @method boolean isSigned()
  * @method boolean getIsSigned()
  * @method RulePredicatesType setIsSigned(boolean $isSigned)
- * @method boolean isVoicemail()
  * @method boolean getIsVoicemail()
  * @method RulePredicatesType setIsVoicemail(boolean $isVoicemail)
  * @method RulePredicatesType addItemClasses(string $itemClasses)
@@ -83,22 +71,17 @@ use garethp\ews\API\Type;
  * @method RulePredicatesType addMessageClassifications(string $messageClassifications)
  * @method string[] getMessageClassifications()
  * @method RulePredicatesType setMessageClassifications(array $messageClassifications)
- * @method boolean isNotSentToMe()
  * @method boolean getNotSentToMe()
  * @method RulePredicatesType setNotSentToMe(boolean $notSentToMe)
- * @method boolean isSentCcMe()
  * @method boolean getSentCcMe()
  * @method RulePredicatesType setSentCcMe(boolean $sentCcMe)
- * @method boolean isSentOnlyToMe()
  * @method boolean getSentOnlyToMe()
  * @method RulePredicatesType setSentOnlyToMe(boolean $sentOnlyToMe)
  * @method RulePredicatesType addSentToAddresses(EmailAddressType $sentToAddresses)
  * @method EmailAddressType[] getSentToAddresses()
  * @method RulePredicatesType setSentToAddresses(array $sentToAddresses)
- * @method boolean isSentToMe()
  * @method boolean getSentToMe()
  * @method RulePredicatesType setSentToMe(boolean $sentToMe)
- * @method boolean isSentToOrCcMe()
  * @method boolean getSentToOrCcMe()
  * @method RulePredicatesType setSentToOrCcMe(boolean $sentToOrCcMe)
  * @method string getSensitivity()
@@ -280,4 +263,140 @@ class RulePredicatesType extends Type
      * @var \garethp\ews\API\Type\RulePredicateSizeRangeType
      */
     protected $withinSizeRange = null;
+
+    /**
+     * @returns bool
+     */
+    public function isHasAttachments()
+    {
+        return $this->hasAttachments && $this->hasAttachments;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isApprovalRequest()
+    {
+        return $this->isApprovalRequest && $this->isApprovalRequest;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isAutomaticForward()
+    {
+        return $this->isAutomaticForward && $this->isAutomaticForward;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isAutomaticReply()
+    {
+        return $this->isAutomaticReply && $this->isAutomaticReply;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isEncrypted()
+    {
+        return $this->isEncrypted && $this->isEncrypted;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMeetingRequest()
+    {
+        return $this->isMeetingRequest && $this->isMeetingRequest;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMeetingResponse()
+    {
+        return $this->isMeetingResponse && $this->isMeetingResponse;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isNDR()
+    {
+        return $this->isNDR && $this->isNDR;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isPermissionControlled()
+    {
+        return $this->isPermissionControlled && $this->isPermissionControlled;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isReadReceipt()
+    {
+        return $this->isReadReceipt && $this->isReadReceipt;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSigned()
+    {
+        return $this->isSigned && $this->isSigned;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isVoicemail()
+    {
+        return $this->isVoicemail && $this->isVoicemail;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isNotSentToMe()
+    {
+        return $this->notSentToMe && $this->notSentToMe;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSentCcMe()
+    {
+        return $this->sentCcMe && $this->sentCcMe;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSentOnlyToMe()
+    {
+        return $this->sentOnlyToMe && $this->sentOnlyToMe;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSentToMe()
+    {
+        return $this->sentToMe && $this->sentToMe;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSentToOrCcMe()
+    {
+        return $this->sentToOrCcMe && $this->sentToOrCcMe;
+    }
 }

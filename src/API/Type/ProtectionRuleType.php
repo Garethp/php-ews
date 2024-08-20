@@ -12,7 +12,6 @@ use garethp\ews\API\Type;
  *
  * @method string getName()
  * @method ProtectionRuleType setName(string $name)
- * @method boolean isUserOverridable()
  * @method boolean getUserOverridable()
  * @method ProtectionRuleType setUserOverridable(boolean $userOverridable)
  * @method integer getPriority()
@@ -49,4 +48,12 @@ class ProtectionRuleType extends Type
      * @var \garethp\ews\API\Type\ProtectionRuleActionType
      */
     protected $action = null;
+
+    /**
+     * @returns bool
+     */
+    public function isUserOverridable()
+    {
+        return $this->userOverridable && $this->userOverridable;
+    }
 }

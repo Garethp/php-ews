@@ -12,7 +12,6 @@ use garethp\ews\API\Type;
  *
  * @method ItemIdType getItemId()
  * @method SyncFolderItemsReadFlagType setItemId(ItemIdType $itemId)
- * @method boolean isRead()
  * @method boolean getIsRead()
  * @method SyncFolderItemsReadFlagType setIsRead(boolean $isRead)
  */
@@ -28,4 +27,12 @@ class SyncFolderItemsReadFlagType extends Type
      * @var boolean
      */
     protected $isRead = null;
+
+    /**
+     * @returns bool
+     */
+    public function isRead()
+    {
+        return $this->isRead && $this->isRead;
+    }
 }

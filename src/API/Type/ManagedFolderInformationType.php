@@ -10,19 +10,14 @@ use garethp\ews\API\Type;
  * Compound property for Managed Folder related information for Managed Folders.
  * XSD Type: ManagedFolderInformationType
  *
- * @method boolean isCanDelete()
  * @method boolean getCanDelete()
  * @method ManagedFolderInformationType setCanDelete(boolean $canDelete)
- * @method boolean isCanRenameOrMove()
  * @method boolean getCanRenameOrMove()
  * @method ManagedFolderInformationType setCanRenameOrMove(boolean $canRenameOrMove)
- * @method boolean isMustDisplayComment()
  * @method boolean getMustDisplayComment()
  * @method ManagedFolderInformationType setMustDisplayComment(boolean $mustDisplayComment)
- * @method boolean isHasQuota()
  * @method boolean getHasQuota()
  * @method ManagedFolderInformationType setHasQuota(boolean $hasQuota)
- * @method boolean isManagedFoldersRoot()
  * @method boolean getIsManagedFoldersRoot()
  * @method ManagedFolderInformationType setIsManagedFoldersRoot(boolean $isManagedFoldersRoot)
  * @method string getManagedFolderId()
@@ -88,4 +83,44 @@ class ManagedFolderInformationType extends Type
      * @var string
      */
     protected $homePage = null;
+
+    /**
+     * @returns bool
+     */
+    public function isCanDelete()
+    {
+        return $this->canDelete && $this->canDelete;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isCanRenameOrMove()
+    {
+        return $this->canRenameOrMove && $this->canRenameOrMove;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMustDisplayComment()
+    {
+        return $this->mustDisplayComment && $this->mustDisplayComment;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isHasQuota()
+    {
+        return $this->hasQuota && $this->hasQuota;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isManagedFoldersRoot()
+    {
+        return $this->isManagedFoldersRoot && $this->isManagedFoldersRoot;
+    }
 }

@@ -12,19 +12,14 @@ use garethp\ews\API\Type;
  *
  * @method UserIdType getUserId()
  * @method BasePermissionType setUserId(UserIdType $userId)
- * @method boolean isCanCreateItems()
  * @method boolean getCanCreateItems()
  * @method BasePermissionType setCanCreateItems(boolean $canCreateItems)
- * @method boolean isCanCreateSubFolders()
  * @method boolean getCanCreateSubFolders()
  * @method BasePermissionType setCanCreateSubFolders(boolean $canCreateSubFolders)
- * @method boolean isFolderOwner()
  * @method boolean getIsFolderOwner()
  * @method BasePermissionType setIsFolderOwner(boolean $isFolderOwner)
- * @method boolean isFolderVisible()
  * @method boolean getIsFolderVisible()
  * @method BasePermissionType setIsFolderVisible(boolean $isFolderVisible)
- * @method boolean isFolderContact()
  * @method boolean getIsFolderContact()
  * @method BasePermissionType setIsFolderContact(boolean $isFolderContact)
  * @method string getEditItems()
@@ -74,4 +69,44 @@ class BasePermissionType extends Type
      * @var string
      */
     protected $deleteItems = null;
+
+    /**
+     * @returns bool
+     */
+    public function isCanCreateItems()
+    {
+        return $this->canCreateItems && $this->canCreateItems;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isCanCreateSubFolders()
+    {
+        return $this->canCreateSubFolders && $this->canCreateSubFolders;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isFolderOwner()
+    {
+        return $this->isFolderOwner && $this->isFolderOwner;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isFolderVisible()
+    {
+        return $this->isFolderVisible && $this->isFolderVisible;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isFolderContact()
+    {
+        return $this->isFolderContact && $this->isFolderContact;
+    }
 }

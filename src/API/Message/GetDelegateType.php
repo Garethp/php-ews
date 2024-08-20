@@ -8,7 +8,6 @@ namespace garethp\ews\API\Message;
  *
  * XSD Type: GetDelegateType
  *
- * @method boolean isIncludePermissions()
  * @method boolean getIncludePermissions()
  * @method GetDelegateType setIncludePermissions(boolean $includePermissions)
  * @method GetDelegateType addUserIds(\garethp\ews\API\Type\UserIdType $userIds)
@@ -27,4 +26,12 @@ class GetDelegateType extends BaseDelegateType
      * @var \garethp\ews\API\Type\UserIdType[]
      */
     protected $userIds = null;
+
+    /**
+     * @returns bool
+     */
+    public function isIncludePermissions()
+    {
+        return $this->includePermissions && $this->includePermissions;
+    }
 }
