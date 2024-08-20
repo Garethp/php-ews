@@ -34,7 +34,7 @@ class ExchangeAutodiscoverTest extends TestCase
             [
                 'httpPlayback' => [
                     'mode' => $mode,
-                    'recordFileName' => self::class . '.' . $this->getName() . '.json',
+                    'recordFileName' => self::class . '.' . $this->name() . '.json',
                     'recordLocation' => realpath(__DIR__ . '/../../../Resources/recordings') . '/'
                 ]
             ]
@@ -58,7 +58,7 @@ class ExchangeAutodiscoverTest extends TestCase
             [
                 'httpPlayback' => [
                     'mode' => $mode,
-                    'recordFileName' => self::class . '.' . $this->getName() . '.json',
+                    'recordFileName' => self::class . '.' . $this->name() . '.json',
                     'recordLocation' => realpath(__DIR__ . '/../../../Resources/recordings') . '/'
                 ]
             ]
