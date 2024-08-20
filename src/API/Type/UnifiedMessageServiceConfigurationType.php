@@ -38,7 +38,7 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
      */
     public function isUmEnabled()
     {
-        return $this->umEnabled && $this->umEnabled;
+        return ((bool) $this->umEnabled);
     }
 
     /**
@@ -46,6 +46,6 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
      */
     public function isPlayOnPhoneEnabled()
     {
-        return $this->playOnPhoneEnabled && $this->playOnPhoneEnabled;
+        return ((bool) $this->playOnPhoneEnabled);
     }
 }

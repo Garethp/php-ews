@@ -180,7 +180,7 @@ class TaskType extends ItemType
      */
     public function isComplete()
     {
-        return $this->isComplete && $this->isComplete;
+        return ((bool) $this->isComplete);
     }
 
     /**
@@ -188,7 +188,7 @@ class TaskType extends ItemType
      */
     public function isRecurring()
     {
-        return $this->isRecurring && $this->isRecurring;
+        return ((bool) $this->isRecurring);
     }
 
     /**
@@ -196,6 +196,6 @@ class TaskType extends ItemType
      */
     public function isTeamTask()
     {
-        return $this->isTeamTask && $this->isTeamTask;
+        return ((bool) $this->isTeamTask);
     }
 }

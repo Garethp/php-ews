@@ -82,7 +82,7 @@ class RuleType extends Type
      */
     public function isEnabled()
     {
-        return $this->isEnabled && $this->isEnabled;
+        return ((bool) $this->isEnabled);
     }
 
     /**
@@ -90,7 +90,7 @@ class RuleType extends Type
      */
     public function isNotSupported()
     {
-        return $this->isNotSupported && $this->isNotSupported;
+        return ((bool) $this->isNotSupported);
     }
 
     /**
@@ -98,6 +98,6 @@ class RuleType extends Type
      */
     public function isInError()
     {
-        return $this->isInError && $this->isInError;
+        return ((bool) $this->isInError);
     }
 }

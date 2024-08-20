@@ -78,7 +78,7 @@ class MeetingMessageType extends MessageType
      */
     public function isDelegated()
     {
-        return $this->isDelegated && $this->isDelegated;
+        return ((bool) $this->isDelegated);
     }
 
     /**
@@ -86,7 +86,7 @@ class MeetingMessageType extends MessageType
      */
     public function isOutOfDate()
     {
-        return $this->isOutOfDate && $this->isOutOfDate;
+        return ((bool) $this->isOutOfDate);
     }
 
     /**
@@ -94,6 +94,6 @@ class MeetingMessageType extends MessageType
      */
     public function isHasBeenProcessed()
     {
-        return $this->hasBeenProcessed && $this->hasBeenProcessed;
+        return ((bool) $this->hasBeenProcessed);
     }
 }

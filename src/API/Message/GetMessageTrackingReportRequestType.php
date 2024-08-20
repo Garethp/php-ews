@@ -67,6 +67,6 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      */
     public function isReturnQueueEvents()
     {
-        return $this->returnQueueEvents && $this->returnQueueEvents;
+        return ((bool) $this->returnQueueEvents);
     }
 }

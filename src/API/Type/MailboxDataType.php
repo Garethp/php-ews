@@ -40,6 +40,6 @@ class MailboxDataType extends Type
      */
     public function isExcludeConflicts()
     {
-        return $this->excludeConflicts && $this->excludeConflicts;
+        return ((bool) $this->excludeConflicts);
     }
 }

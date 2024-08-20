@@ -47,7 +47,7 @@ class AttachmentResponseShapeType extends Type
      */
     public function isIncludeMimeContent()
     {
-        return $this->includeMimeContent && $this->includeMimeContent;
+        return ((bool) $this->includeMimeContent);
     }
 
     /**
@@ -55,6 +55,6 @@ class AttachmentResponseShapeType extends Type
      */
     public function isFilterHtmlContent()
     {
-        return $this->filterHtmlContent && $this->filterHtmlContent;
+        return ((bool) $this->filterHtmlContent);
     }
 }

@@ -32,6 +32,6 @@ class GetDelegateType extends BaseDelegateType
      */
     public function isIncludePermissions()
     {
-        return $this->includePermissions && $this->includePermissions;
+        return ((bool) $this->includePermissions);
     }
 }

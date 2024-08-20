@@ -89,7 +89,7 @@ class ManagedFolderInformationType extends Type
      */
     public function isCanDelete()
     {
-        return $this->canDelete && $this->canDelete;
+        return ((bool) $this->canDelete);
     }
 
     /**
@@ -97,7 +97,7 @@ class ManagedFolderInformationType extends Type
      */
     public function isCanRenameOrMove()
     {
-        return $this->canRenameOrMove && $this->canRenameOrMove;
+        return ((bool) $this->canRenameOrMove);
     }
 
     /**
@@ -105,7 +105,7 @@ class ManagedFolderInformationType extends Type
      */
     public function isMustDisplayComment()
     {
-        return $this->mustDisplayComment && $this->mustDisplayComment;
+        return ((bool) $this->mustDisplayComment);
     }
 
     /**
@@ -113,7 +113,7 @@ class ManagedFolderInformationType extends Type
      */
     public function isHasQuota()
     {
-        return $this->hasQuota && $this->hasQuota;
+        return ((bool) $this->hasQuota);
     }
 
     /**
@@ -121,6 +121,6 @@ class ManagedFolderInformationType extends Type
      */
     public function isManagedFoldersRoot()
     {
-        return $this->isManagedFoldersRoot && $this->isManagedFoldersRoot;
+        return ((bool) $this->isManagedFoldersRoot);
     }
 }

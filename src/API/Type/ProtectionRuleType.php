@@ -54,6 +54,6 @@ class ProtectionRuleType extends Type
      */
     public function isUserOverridable()
     {
-        return $this->userOverridable && $this->userOverridable;
+        return ((bool) $this->userOverridable);
     }
 }

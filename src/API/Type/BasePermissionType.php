@@ -75,7 +75,7 @@ class BasePermissionType extends Type
      */
     public function isCanCreateItems()
     {
-        return $this->canCreateItems && $this->canCreateItems;
+        return ((bool) $this->canCreateItems);
     }
 
     /**
@@ -83,7 +83,7 @@ class BasePermissionType extends Type
      */
     public function isCanCreateSubFolders()
     {
-        return $this->canCreateSubFolders && $this->canCreateSubFolders;
+        return ((bool) $this->canCreateSubFolders);
     }
 
     /**
@@ -91,7 +91,7 @@ class BasePermissionType extends Type
      */
     public function isFolderOwner()
     {
-        return $this->isFolderOwner && $this->isFolderOwner;
+        return ((bool) $this->isFolderOwner);
     }
 
     /**
@@ -99,7 +99,7 @@ class BasePermissionType extends Type
      */
     public function isFolderVisible()
     {
-        return $this->isFolderVisible && $this->isFolderVisible;
+        return ((bool) $this->isFolderVisible);
     }
 
     /**
@@ -107,6 +107,6 @@ class BasePermissionType extends Type
      */
     public function isFolderContact()
     {
-        return $this->isFolderContact && $this->isFolderContact;
+        return ((bool) $this->isFolderContact);
     }
 }

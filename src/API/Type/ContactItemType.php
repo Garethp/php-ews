@@ -325,6 +325,6 @@ class ContactItemType extends ItemType
      */
     public function isHasPicture()
     {
-        return $this->hasPicture && $this->hasPicture;
+        return ((bool) $this->hasPicture);
     }
 }

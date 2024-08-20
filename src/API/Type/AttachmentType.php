@@ -79,6 +79,6 @@ class AttachmentType extends Type
      */
     public function isInline()
     {
-        return $this->isInline && $this->isInline;
+        return ((bool) $this->isInline);
     }
 }

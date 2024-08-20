@@ -230,7 +230,7 @@ class ConversationType extends Type
      */
     public function isHasAttachments()
     {
-        return $this->hasAttachments && $this->hasAttachments;
+        return ((bool) $this->hasAttachments);
     }
 
     /**
@@ -238,6 +238,6 @@ class ConversationType extends Type
      */
     public function isGlobalHasAttachments()
     {
-        return $this->globalHasAttachments && $this->globalHasAttachments;
+        return ((bool) $this->globalHasAttachments);
     }
 }

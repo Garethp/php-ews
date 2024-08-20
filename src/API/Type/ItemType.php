@@ -303,7 +303,7 @@ class ItemType extends Type
      */
     public function isSubmitted()
     {
-        return $this->isSubmitted && $this->isSubmitted;
+        return ((bool) $this->isSubmitted);
     }
 
     /**
@@ -311,7 +311,7 @@ class ItemType extends Type
      */
     public function isDraft()
     {
-        return $this->isDraft && $this->isDraft;
+        return ((bool) $this->isDraft);
     }
 
     /**
@@ -319,7 +319,7 @@ class ItemType extends Type
      */
     public function isFromMe()
     {
-        return $this->isFromMe && $this->isFromMe;
+        return ((bool) $this->isFromMe);
     }
 
     /**
@@ -327,7 +327,7 @@ class ItemType extends Type
      */
     public function isResend()
     {
-        return $this->isResend && $this->isResend;
+        return ((bool) $this->isResend);
     }
 
     /**
@@ -335,7 +335,7 @@ class ItemType extends Type
      */
     public function isUnmodified()
     {
-        return $this->isUnmodified && $this->isUnmodified;
+        return ((bool) $this->isUnmodified);
     }
 
     /**
@@ -343,7 +343,7 @@ class ItemType extends Type
      */
     public function isReminderIsSet()
     {
-        return $this->reminderIsSet && $this->reminderIsSet;
+        return ((bool) $this->reminderIsSet);
     }
 
     /**
@@ -351,7 +351,7 @@ class ItemType extends Type
      */
     public function isHasAttachments()
     {
-        return $this->hasAttachments && $this->hasAttachments;
+        return ((bool) $this->hasAttachments);
     }
 
     /**
@@ -359,6 +359,6 @@ class ItemType extends Type
      */
     public function isAssociated()
     {
-        return $this->isAssociated && $this->isAssociated;
+        return ((bool) $this->isAssociated);
     }
 }

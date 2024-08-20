@@ -104,7 +104,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function isSearchDumpster()
     {
-        return $this->searchDumpster && $this->searchDumpster;
+        return ((bool) $this->searchDumpster);
     }
 
     /**
@@ -112,7 +112,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function isIncludePersonalArchive()
     {
-        return $this->includePersonalArchive && $this->includePersonalArchive;
+        return ((bool) $this->includePersonalArchive);
     }
 
     /**
@@ -120,6 +120,6 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function isIncludeUnsearchableItems()
     {
-        return $this->includeUnsearchableItems && $this->includeUnsearchableItems;
+        return ((bool) $this->includeUnsearchableItems);
     }
 }

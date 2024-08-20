@@ -77,6 +77,6 @@ class PostItemType extends ItemType
      */
     public function isRead()
     {
-        return $this->isRead && $this->isRead;
+        return ((bool) $this->isRead);
     }
 }

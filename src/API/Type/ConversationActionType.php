@@ -94,7 +94,7 @@ class ConversationActionType extends Type
      */
     public function isProcessRightAway()
     {
-        return $this->processRightAway && $this->processRightAway;
+        return ((bool) $this->processRightAway);
     }
 
     /**
@@ -102,7 +102,7 @@ class ConversationActionType extends Type
      */
     public function isEnableAlwaysDelete()
     {
-        return $this->enableAlwaysDelete && $this->enableAlwaysDelete;
+        return ((bool) $this->enableAlwaysDelete);
     }
 
     /**
@@ -110,6 +110,6 @@ class ConversationActionType extends Type
      */
     public function isRead()
     {
-        return $this->isRead && $this->isRead;
+        return ((bool) $this->isRead);
     }
 }

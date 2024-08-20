@@ -75,7 +75,7 @@ class CalendarEventDetailsType extends Type
      */
     public function isMeeting()
     {
-        return $this->isMeeting && $this->isMeeting;
+        return ((bool) $this->isMeeting);
     }
 
     /**
@@ -83,7 +83,7 @@ class CalendarEventDetailsType extends Type
      */
     public function isRecurring()
     {
-        return $this->isRecurring && $this->isRecurring;
+        return ((bool) $this->isRecurring);
     }
 
     /**
@@ -91,7 +91,7 @@ class CalendarEventDetailsType extends Type
      */
     public function isException()
     {
-        return $this->isException && $this->isException;
+        return ((bool) $this->isException);
     }
 
     /**
@@ -99,7 +99,7 @@ class CalendarEventDetailsType extends Type
      */
     public function isReminderSet()
     {
-        return $this->isReminderSet && $this->isReminderSet;
+        return ((bool) $this->isReminderSet);
     }
 
     /**
@@ -107,6 +107,6 @@ class CalendarEventDetailsType extends Type
      */
     public function isPrivate()
     {
-        return $this->isPrivate && $this->isPrivate;
+        return ((bool) $this->isPrivate);
     }
 }

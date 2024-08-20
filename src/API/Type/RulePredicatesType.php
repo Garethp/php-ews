@@ -269,7 +269,7 @@ class RulePredicatesType extends Type
      */
     public function isHasAttachments()
     {
-        return $this->hasAttachments && $this->hasAttachments;
+        return ((bool) $this->hasAttachments);
     }
 
     /**
@@ -277,7 +277,7 @@ class RulePredicatesType extends Type
      */
     public function isApprovalRequest()
     {
-        return $this->isApprovalRequest && $this->isApprovalRequest;
+        return ((bool) $this->isApprovalRequest);
     }
 
     /**
@@ -285,7 +285,7 @@ class RulePredicatesType extends Type
      */
     public function isAutomaticForward()
     {
-        return $this->isAutomaticForward && $this->isAutomaticForward;
+        return ((bool) $this->isAutomaticForward);
     }
 
     /**
@@ -293,7 +293,7 @@ class RulePredicatesType extends Type
      */
     public function isAutomaticReply()
     {
-        return $this->isAutomaticReply && $this->isAutomaticReply;
+        return ((bool) $this->isAutomaticReply);
     }
 
     /**
@@ -301,7 +301,7 @@ class RulePredicatesType extends Type
      */
     public function isEncrypted()
     {
-        return $this->isEncrypted && $this->isEncrypted;
+        return ((bool) $this->isEncrypted);
     }
 
     /**
@@ -309,7 +309,7 @@ class RulePredicatesType extends Type
      */
     public function isMeetingRequest()
     {
-        return $this->isMeetingRequest && $this->isMeetingRequest;
+        return ((bool) $this->isMeetingRequest);
     }
 
     /**
@@ -317,7 +317,7 @@ class RulePredicatesType extends Type
      */
     public function isMeetingResponse()
     {
-        return $this->isMeetingResponse && $this->isMeetingResponse;
+        return ((bool) $this->isMeetingResponse);
     }
 
     /**
@@ -325,7 +325,7 @@ class RulePredicatesType extends Type
      */
     public function isNDR()
     {
-        return $this->isNDR && $this->isNDR;
+        return ((bool) $this->isNDR);
     }
 
     /**
@@ -333,7 +333,7 @@ class RulePredicatesType extends Type
      */
     public function isPermissionControlled()
     {
-        return $this->isPermissionControlled && $this->isPermissionControlled;
+        return ((bool) $this->isPermissionControlled);
     }
 
     /**
@@ -341,7 +341,7 @@ class RulePredicatesType extends Type
      */
     public function isReadReceipt()
     {
-        return $this->isReadReceipt && $this->isReadReceipt;
+        return ((bool) $this->isReadReceipt);
     }
 
     /**
@@ -349,7 +349,7 @@ class RulePredicatesType extends Type
      */
     public function isSigned()
     {
-        return $this->isSigned && $this->isSigned;
+        return ((bool) $this->isSigned);
     }
 
     /**
@@ -357,7 +357,7 @@ class RulePredicatesType extends Type
      */
     public function isVoicemail()
     {
-        return $this->isVoicemail && $this->isVoicemail;
+        return ((bool) $this->isVoicemail);
     }
 
     /**
@@ -365,7 +365,7 @@ class RulePredicatesType extends Type
      */
     public function isNotSentToMe()
     {
-        return $this->notSentToMe && $this->notSentToMe;
+        return ((bool) $this->notSentToMe);
     }
 
     /**
@@ -373,7 +373,7 @@ class RulePredicatesType extends Type
      */
     public function isSentCcMe()
     {
-        return $this->sentCcMe && $this->sentCcMe;
+        return ((bool) $this->sentCcMe);
     }
 
     /**
@@ -381,7 +381,7 @@ class RulePredicatesType extends Type
      */
     public function isSentOnlyToMe()
     {
-        return $this->sentOnlyToMe && $this->sentOnlyToMe;
+        return ((bool) $this->sentOnlyToMe);
     }
 
     /**
@@ -389,7 +389,7 @@ class RulePredicatesType extends Type
      */
     public function isSentToMe()
     {
-        return $this->sentToMe && $this->sentToMe;
+        return ((bool) $this->sentToMe);
     }
 
     /**
@@ -397,6 +397,6 @@ class RulePredicatesType extends Type
      */
     public function isSentToOrCcMe()
     {
-        return $this->sentToOrCcMe && $this->sentToOrCcMe;
+        return ((bool) $this->sentToOrCcMe);
     }
 }

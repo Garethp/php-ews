@@ -60,7 +60,7 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      */
     public function isMailTipsEnabled()
     {
-        return $this->mailTipsEnabled && $this->mailTipsEnabled;
+        return ((bool) $this->mailTipsEnabled);
     }
 
     /**
@@ -68,6 +68,6 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      */
     public function isShowExternalRecipientCount()
     {
-        return $this->showExternalRecipientCount && $this->showExternalRecipientCount;
+        return ((bool) $this->showExternalRecipientCount);
     }
 }

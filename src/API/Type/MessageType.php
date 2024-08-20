@@ -234,7 +234,7 @@ class MessageType extends ItemType
      */
     public function isReadReceiptRequested()
     {
-        return $this->isReadReceiptRequested && $this->isReadReceiptRequested;
+        return ((bool) $this->isReadReceiptRequested);
     }
 
     /**
@@ -242,7 +242,7 @@ class MessageType extends ItemType
      */
     public function isDeliveryReceiptRequested()
     {
-        return $this->isDeliveryReceiptRequested && $this->isDeliveryReceiptRequested;
+        return ((bool) $this->isDeliveryReceiptRequested);
     }
 
     /**
@@ -250,7 +250,7 @@ class MessageType extends ItemType
      */
     public function isRead()
     {
-        return $this->isRead && $this->isRead;
+        return ((bool) $this->isRead);
     }
 
     /**
@@ -258,6 +258,6 @@ class MessageType extends ItemType
      */
     public function isResponseRequested()
     {
-        return $this->isResponseRequested && $this->isResponseRequested;
+        return ((bool) $this->isResponseRequested);
     }
 }

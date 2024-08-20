@@ -33,6 +33,6 @@ class SmtpDomainType extends Type
      */
     public function isIncludeSubdomains()
     {
-        return $this->includeSubdomains && $this->includeSubdomains;
+        return ((bool) $this->includeSubdomains);
     }
 }

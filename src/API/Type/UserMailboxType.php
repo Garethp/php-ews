@@ -33,6 +33,6 @@ class UserMailboxType extends Type
      */
     public function isArchive()
     {
-        return $this->isArchive && $this->isArchive;
+        return ((bool) $this->isArchive);
     }
 }

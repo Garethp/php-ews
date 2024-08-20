@@ -144,6 +144,6 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
      */
     public function isIncludesLastItemInRange()
     {
-        return $this->includesLastItemInRange && $this->includesLastItemInRange;
+        return ((bool) $this->includesLastItemInRange);
     }
 }

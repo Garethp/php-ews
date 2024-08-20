@@ -38,6 +38,6 @@ class SendItemType extends BaseRequestType
      */
     public function isSaveItemToFolder()
     {
-        return $this->saveItemToFolder && $this->saveItemToFolder;
+        return ((bool) $this->saveItemToFolder);
     }
 }

@@ -52,6 +52,6 @@ class ResolveNamesType extends BaseRequestType
      */
     public function isReturnFullContactData()
     {
-        return $this->returnFullContactData && $this->returnFullContactData;
+        return ((bool) $this->returnFullContactData);
     }
 }

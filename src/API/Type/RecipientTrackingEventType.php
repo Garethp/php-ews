@@ -109,7 +109,7 @@ class RecipientTrackingEventType extends Type
      */
     public function isBccRecipient()
     {
-        return $this->bccRecipient && $this->bccRecipient;
+        return ((bool) $this->bccRecipient);
     }
 
     /**
@@ -117,6 +117,6 @@ class RecipientTrackingEventType extends Type
      */
     public function isHiddenRecipient()
     {
-        return $this->hiddenRecipient && $this->hiddenRecipient;
+        return ((bool) $this->hiddenRecipient);
     }
 }

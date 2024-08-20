@@ -38,6 +38,6 @@ class BaseMoveCopyItemType extends BaseRequestType
      */
     public function isReturnNewItemIds()
     {
-        return $this->returnNewItemIds && $this->returnNewItemIds;
+        return ((bool) $this->returnNewItemIds);
     }
 }

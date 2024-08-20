@@ -221,7 +221,7 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             $generator->removeMethod($name);
         }
 
-        $generator->addMethod($name, [], [], "return \$this->{$prop->getName()} && \$this->{$prop->getName()};", "@returns bool");
+        $generator->addMethod($name, [], [], "return ((bool) \$this->{$prop->getName()});", "@returns bool");
 
         return;
     }

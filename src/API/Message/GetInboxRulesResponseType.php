@@ -32,6 +32,6 @@ class GetInboxRulesResponseType extends ResponseMessageType
      */
     public function isOutlookRuleBlobExists()
     {
-        return $this->outlookRuleBlobExists && $this->outlookRuleBlobExists;
+        return ((bool) $this->outlookRuleBlobExists);
     }
 }

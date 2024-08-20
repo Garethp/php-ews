@@ -32,6 +32,6 @@ class GetServerTimeZonesType extends BaseRequestType
      */
     public function isReturnFullTimeZoneData()
     {
-        return $this->returnFullTimeZoneData && $this->returnFullTimeZoneData;
+        return ((bool) $this->returnFullTimeZoneData);
     }
 }

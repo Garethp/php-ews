@@ -54,6 +54,6 @@ class UploadItemType extends Type
      */
     public function isAssociated()
     {
-        return $this->isAssociated && $this->isAssociated;
+        return ((bool) $this->isAssociated);
     }
 }

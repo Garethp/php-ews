@@ -62,6 +62,6 @@ class ArrayOfDLExpansionType extends Type
      */
     public function isIncludesLastItemInRange()
     {
-        return $this->includesLastItemInRange && $this->includesLastItemInRange;
+        return ((bool) $this->includesLastItemInRange);
     }
 }

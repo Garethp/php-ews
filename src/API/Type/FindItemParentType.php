@@ -158,6 +158,6 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     public function isIncludesLastItemInRange()
     {
-        return $this->includesLastItemInRange && $this->includesLastItemInRange;
+        return ((bool) $this->includesLastItemInRange);
     }
 }

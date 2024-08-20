@@ -38,6 +38,6 @@ class UpdateInboxRulesRequestType extends BaseRequestType
      */
     public function isRemoveOutlookRuleBlob()
     {
-        return $this->removeOutlookRuleBlob && $this->removeOutlookRuleBlob;
+        return ((bool) $this->removeOutlookRuleBlob);
     }
 }

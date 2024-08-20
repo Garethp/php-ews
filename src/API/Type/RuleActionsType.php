@@ -115,7 +115,7 @@ class RuleActionsType extends Type
      */
     public function isDelete()
     {
-        return $this->delete && $this->delete;
+        return ((bool) $this->delete);
     }
 
     /**
@@ -123,7 +123,7 @@ class RuleActionsType extends Type
      */
     public function isMarkAsRead()
     {
-        return $this->markAsRead && $this->markAsRead;
+        return ((bool) $this->markAsRead);
     }
 
     /**
@@ -131,7 +131,7 @@ class RuleActionsType extends Type
      */
     public function isPermanentDelete()
     {
-        return $this->permanentDelete && $this->permanentDelete;
+        return ((bool) $this->permanentDelete);
     }
 
     /**
@@ -139,6 +139,6 @@ class RuleActionsType extends Type
      */
     public function isStopProcessingRules()
     {
-        return $this->stopProcessingRules && $this->stopProcessingRules;
+        return ((bool) $this->stopProcessingRules);
     }
 }

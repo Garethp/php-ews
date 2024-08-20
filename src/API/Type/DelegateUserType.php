@@ -47,7 +47,7 @@ class DelegateUserType extends Type
      */
     public function isReceiveCopiesOfMeetingMessages()
     {
-        return $this->receiveCopiesOfMeetingMessages && $this->receiveCopiesOfMeetingMessages;
+        return ((bool) $this->receiveCopiesOfMeetingMessages);
     }
 
     /**
@@ -55,6 +55,6 @@ class DelegateUserType extends Type
      */
     public function isViewPrivateItems()
     {
-        return $this->viewPrivateItems && $this->viewPrivateItems;
+        return ((bool) $this->viewPrivateItems);
     }
 }

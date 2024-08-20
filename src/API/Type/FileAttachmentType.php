@@ -31,6 +31,6 @@ class FileAttachmentType extends AttachmentType
      */
     public function isContactPhoto()
     {
-        return $this->isContactPhoto && $this->isContactPhoto;
+        return ((bool) $this->isContactPhoto);
     }
 }

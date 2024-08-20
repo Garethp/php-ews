@@ -51,6 +51,6 @@ class SuggestionType extends Type
      */
     public function isWorkTime()
     {
-        return $this->isWorkTime && $this->isWorkTime;
+        return ((bool) $this->isWorkTime);
     }
 }

@@ -316,7 +316,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      */
     public function isAllDayEvent()
     {
-        return $this->isAllDayEvent && $this->isAllDayEvent;
+        return ((bool) $this->isAllDayEvent);
     }
 
     /**
@@ -324,7 +324,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      */
     public function isMeeting()
     {
-        return $this->isMeeting && $this->isMeeting;
+        return ((bool) $this->isMeeting);
     }
 
     /**
@@ -332,7 +332,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      */
     public function isCancelled()
     {
-        return $this->isCancelled && $this->isCancelled;
+        return ((bool) $this->isCancelled);
     }
 
     /**
@@ -340,7 +340,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      */
     public function isRecurring()
     {
-        return $this->isRecurring && $this->isRecurring;
+        return ((bool) $this->isRecurring);
     }
 
     /**
@@ -348,7 +348,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      */
     public function isMeetingRequestWasSent()
     {
-        return $this->meetingRequestWasSent && $this->meetingRequestWasSent;
+        return ((bool) $this->meetingRequestWasSent);
     }
 
     /**
@@ -356,7 +356,7 @@ class MeetingRequestMessageType extends MeetingMessageType
      */
     public function isAllowNewTimeProposal()
     {
-        return $this->allowNewTimeProposal && $this->allowNewTimeProposal;
+        return ((bool) $this->allowNewTimeProposal);
     }
 
     /**
@@ -364,6 +364,6 @@ class MeetingRequestMessageType extends MeetingMessageType
      */
     public function isOnlineMeeting()
     {
-        return $this->isOnlineMeeting && $this->isOnlineMeeting;
+        return ((bool) $this->isOnlineMeeting);
     }
 }

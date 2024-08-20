@@ -97,7 +97,7 @@ class MailTipsType extends Type
      */
     public function isMailboxFull()
     {
-        return $this->mailboxFull && $this->mailboxFull;
+        return ((bool) $this->mailboxFull);
     }
 
     /**
@@ -105,7 +105,7 @@ class MailTipsType extends Type
      */
     public function isDeliveryRestricted()
     {
-        return $this->deliveryRestricted && $this->deliveryRestricted;
+        return ((bool) $this->deliveryRestricted);
     }
 
     /**
@@ -113,7 +113,7 @@ class MailTipsType extends Type
      */
     public function isModerated()
     {
-        return $this->isModerated && $this->isModerated;
+        return ((bool) $this->isModerated);
     }
 
     /**
@@ -121,6 +121,6 @@ class MailTipsType extends Type
      */
     public function isInvalidRecipient()
     {
-        return $this->invalidRecipient && $this->invalidRecipient;
+        return ((bool) $this->invalidRecipient);
     }
 }

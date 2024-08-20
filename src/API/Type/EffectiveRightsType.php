@@ -68,7 +68,7 @@ class EffectiveRightsType extends Type
      */
     public function isCreateAssociated()
     {
-        return $this->createAssociated && $this->createAssociated;
+        return ((bool) $this->createAssociated);
     }
 
     /**
@@ -76,7 +76,7 @@ class EffectiveRightsType extends Type
      */
     public function isCreateContents()
     {
-        return $this->createContents && $this->createContents;
+        return ((bool) $this->createContents);
     }
 
     /**
@@ -84,7 +84,7 @@ class EffectiveRightsType extends Type
      */
     public function isCreateHierarchy()
     {
-        return $this->createHierarchy && $this->createHierarchy;
+        return ((bool) $this->createHierarchy);
     }
 
     /**
@@ -92,7 +92,7 @@ class EffectiveRightsType extends Type
      */
     public function isDelete()
     {
-        return $this->delete && $this->delete;
+        return ((bool) $this->delete);
     }
 
     /**
@@ -100,7 +100,7 @@ class EffectiveRightsType extends Type
      */
     public function isModify()
     {
-        return $this->modify && $this->modify;
+        return ((bool) $this->modify);
     }
 
     /**
@@ -108,7 +108,7 @@ class EffectiveRightsType extends Type
      */
     public function isRead()
     {
-        return $this->read && $this->read;
+        return ((bool) $this->read);
     }
 
     /**
@@ -116,6 +116,6 @@ class EffectiveRightsType extends Type
      */
     public function isViewPrivateItems()
     {
-        return $this->viewPrivateItems && $this->viewPrivateItems;
+        return ((bool) $this->viewPrivateItems);
     }
 }

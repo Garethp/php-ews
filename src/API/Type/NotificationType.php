@@ -104,6 +104,6 @@ class NotificationType extends Type
      */
     public function isMoreEvents()
     {
-        return $this->moreEvents && $this->moreEvents;
+        return ((bool) $this->moreEvents);
     }
 }

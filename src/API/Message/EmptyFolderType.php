@@ -38,6 +38,6 @@ class EmptyFolderType extends BaseRequestType
      */
     public function isDeleteSubFolders()
     {
-        return $this->deleteSubFolders && $this->deleteSubFolders;
+        return ((bool) $this->deleteSubFolders);
     }
 }

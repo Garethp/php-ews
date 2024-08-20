@@ -332,7 +332,7 @@ class CalendarItemType extends ItemType
      */
     public function isAllDayEvent()
     {
-        return $this->isAllDayEvent && $this->isAllDayEvent;
+        return ((bool) $this->isAllDayEvent);
     }
 
     /**
@@ -340,7 +340,7 @@ class CalendarItemType extends ItemType
      */
     public function isMeeting()
     {
-        return $this->isMeeting && $this->isMeeting;
+        return ((bool) $this->isMeeting);
     }
 
     /**
@@ -348,7 +348,7 @@ class CalendarItemType extends ItemType
      */
     public function isCancelled()
     {
-        return $this->isCancelled && $this->isCancelled;
+        return ((bool) $this->isCancelled);
     }
 
     /**
@@ -356,7 +356,7 @@ class CalendarItemType extends ItemType
      */
     public function isRecurring()
     {
-        return $this->isRecurring && $this->isRecurring;
+        return ((bool) $this->isRecurring);
     }
 
     /**
@@ -364,7 +364,7 @@ class CalendarItemType extends ItemType
      */
     public function isMeetingRequestWasSent()
     {
-        return $this->meetingRequestWasSent && $this->meetingRequestWasSent;
+        return ((bool) $this->meetingRequestWasSent);
     }
 
     /**
@@ -372,7 +372,7 @@ class CalendarItemType extends ItemType
      */
     public function isResponseRequested()
     {
-        return $this->isResponseRequested && $this->isResponseRequested;
+        return ((bool) $this->isResponseRequested);
     }
 
     /**
@@ -380,7 +380,7 @@ class CalendarItemType extends ItemType
      */
     public function isAllowNewTimeProposal()
     {
-        return $this->allowNewTimeProposal && $this->allowNewTimeProposal;
+        return ((bool) $this->allowNewTimeProposal);
     }
 
     /**
@@ -388,6 +388,6 @@ class CalendarItemType extends ItemType
      */
     public function isOnlineMeeting()
     {
-        return $this->isOnlineMeeting && $this->isOnlineMeeting;
+        return ((bool) $this->isOnlineMeeting);
     }
 }

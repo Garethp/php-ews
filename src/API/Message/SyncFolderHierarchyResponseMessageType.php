@@ -38,6 +38,6 @@ class SyncFolderHierarchyResponseMessageType extends ResponseMessageType
      */
     public function isIncludesLastFolderInRange()
     {
-        return $this->includesLastFolderInRange && $this->includesLastFolderInRange;
+        return ((bool) $this->includesLastFolderInRange);
     }
 }

@@ -41,6 +41,6 @@ class StreamingSubscriptionRequestType extends Type
      */
     public function isSubscribeToAllFolders()
     {
-        return $this->subscribeToAllFolders && $this->subscribeToAllFolders;
+        return ((bool) $this->subscribeToAllFolders);
     }
 }

@@ -38,6 +38,6 @@ class AlternateIdType extends AlternateIdBaseType
      */
     public function isArchive()
     {
-        return $this->isArchive && $this->isArchive;
+        return ((bool) $this->isArchive);
     }
 }

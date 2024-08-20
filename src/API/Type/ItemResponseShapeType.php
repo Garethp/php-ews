@@ -61,7 +61,7 @@ class ItemResponseShapeType extends Type
      */
     public function isIncludeMimeContent()
     {
-        return $this->includeMimeContent && $this->includeMimeContent;
+        return ((bool) $this->includeMimeContent);
     }
 
     /**
@@ -69,7 +69,7 @@ class ItemResponseShapeType extends Type
      */
     public function isFilterHtmlContent()
     {
-        return $this->filterHtmlContent && $this->filterHtmlContent;
+        return ((bool) $this->filterHtmlContent);
     }
 
     /**
@@ -77,6 +77,6 @@ class ItemResponseShapeType extends Type
      */
     public function isConvertHtmlCodePageToUTF8()
     {
-        return $this->convertHtmlCodePageToUTF8 && $this->convertHtmlCodePageToUTF8;
+        return ((bool) $this->convertHtmlCodePageToUTF8);
     }
 }
