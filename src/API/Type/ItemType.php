@@ -10,48 +10,9 @@ use garethp\ews\API\Type;
  *
  * XSD Type: ItemType
  *
- * @method ItemType setMimeContent(MimeContentType $mimeContent)
- * @method ItemType setItemId(ItemIdType $itemId)
- * @method ItemType setParentFolderId(FolderIdType $parentFolderId)
- * @method ItemType setItemClass(string $itemClass)
- * @method ItemType setSubject(string $subject)
- * @method ItemType setSensitivity(string $sensitivity)
- * @method ItemType setBody(BodyType $body)
- * @method ItemType setAttachments(NonEmptyArrayOfAttachmentsType $attachments)
- * @method ItemType setDateTimeReceived(\DateTime $dateTimeReceived)
- * @method ItemType setSize(integer $size)
  * @method ItemType addCategories(string $categories)
- * @method ItemType setCategories(array $categories)
- * @method ItemType setImportance(string $importance)
- * @method ItemType setInReplyTo(string $inReplyTo)
- * @method ItemType setIsSubmitted(boolean $isSubmitted)
- * @method ItemType setIsDraft(boolean $isDraft)
- * @method ItemType setIsFromMe(boolean $isFromMe)
- * @method ItemType setIsResend(boolean $isResend)
- * @method ItemType setIsUnmodified(boolean $isUnmodified)
  * @method ItemType addInternetMessageHeaders(InternetHeaderType $internetMessageHeaders)
- * @method ItemType setInternetMessageHeaders(array $internetMessageHeaders)
- * @method ItemType setDateTimeSent(\DateTime $dateTimeSent)
- * @method ItemType setDateTimeCreated(\DateTime $dateTimeCreated)
- * @method ItemType setResponseObjects(NonEmptyArrayOfResponseObjectsType $responseObjects)
- * @method ItemType setReminderDueBy(\DateTime $reminderDueBy)
- * @method ItemType setReminderIsSet(boolean $reminderIsSet)
- * @method ItemType setReminderMinutesBeforeStart(integer $reminderMinutesBeforeStart)
- * @method ItemType setDisplayCc(string $displayCc)
- * @method ItemType setDisplayTo(string $displayTo)
- * @method ItemType setHasAttachments(boolean $hasAttachments)
  * @method ItemType addExtendedProperty(ExtendedPropertyType $extendedProperty)
- * @method ItemType setExtendedProperty(array $extendedProperty)
- * @method ItemType setCulture(string $culture)
- * @method ItemType setEffectiveRights(EffectiveRightsType $effectiveRights)
- * @method ItemType setLastModifiedName(string $lastModifiedName)
- * @method ItemType setLastModifiedTime(\DateTime $lastModifiedTime)
- * @method ItemType setIsAssociated(boolean $isAssociated)
- * @method ItemType setWebClientReadFormQueryString(string $webClientReadFormQueryString)
- * @method ItemType setWebClientEditFormQueryString(string $webClientEditFormQueryString)
- * @method ItemType setConversationId(ItemIdType $conversationId)
- * @method ItemType setUniqueBody(BodyType $uniqueBody)
- * @method ItemType setStoreEntryId(string $storeEntryId)
  */
 class ItemType extends Type
 {
@@ -364,27 +325,11 @@ class ItemType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isSubmitted()
-    {
-        return ((bool) $this->isSubmitted);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsSubmitted()
     {
         return $this->isSubmitted;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isDraft()
-    {
-        return ((bool) $this->isDraft);
     }
 
     /**
@@ -396,14 +341,6 @@ class ItemType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isFromMe()
-    {
-        return ((bool) $this->isFromMe);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsFromMe()
@@ -412,27 +349,11 @@ class ItemType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isResend()
-    {
-        return ((bool) $this->isResend);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsResend()
     {
         return $this->isResend;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isUnmodified()
-    {
-        return ((bool) $this->isUnmodified);
     }
 
     /**
@@ -484,14 +405,6 @@ class ItemType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isReminderIsSet()
-    {
-        return ((bool) $this->reminderIsSet);
-    }
-
-    /**
      * @return boolean
      */
     public function getReminderIsSet()
@@ -521,14 +434,6 @@ class ItemType extends Type
     public function getDisplayTo()
     {
         return $this->displayTo;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isHasAttachments()
-    {
-        return ((bool) $this->hasAttachments);
     }
 
     /**
@@ -580,14 +485,6 @@ class ItemType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isAssociated()
-    {
-        return ((bool) $this->isAssociated);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsAssociated()
@@ -633,5 +530,498 @@ class ItemType extends Type
     public function getStoreEntryId()
     {
         return $this->storeEntryId;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MimeContentType
+     * @return ItemType
+     */
+    public function setMimeContent(MimeContentType $value)
+    {
+        $this->mimeContent = $this->castValueIfNeeded("mimeContent", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ItemIdType
+     * @return ItemType
+     */
+    public function setItemId(ItemIdType $value)
+    {
+        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value FolderIdType
+     * @return ItemType
+     */
+    public function setParentFolderId(FolderIdType $value)
+    {
+        $this->parentFolderId = $this->castValueIfNeeded("parentFolderId", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setItemClass($value)
+    {
+        $this->itemClass = $this->castValueIfNeeded("itemClass", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setSubject($value)
+    {
+        $this->subject = $this->castValueIfNeeded("subject", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setSensitivity($value)
+    {
+        $this->sensitivity = $this->castValueIfNeeded("sensitivity", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value BodyType
+     * @return ItemType
+     */
+    public function setBody(BodyType $value)
+    {
+        $this->body = $this->castValueIfNeeded("body", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value NonEmptyArrayOfAttachmentsType
+     * @return ItemType
+     */
+    public function setAttachments(NonEmptyArrayOfAttachmentsType $value)
+    {
+        $this->attachments = $this->castValueIfNeeded("attachments", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return ItemType
+     */
+    public function setDateTimeReceived(\DateTime|string $value)
+    {
+        $this->dateTimeReceived = $this->castValueIfNeeded("dateTimeReceived", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value int
+     * @return ItemType
+     */
+    public function setSize($value)
+    {
+        $this->size = $this->castValueIfNeeded("size", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return ItemType
+     */
+    public function setCategories(array $value)
+    {
+        $this->categories = $this->castValueIfNeeded("categories", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setImportance($value)
+    {
+        $this->importance = $this->castValueIfNeeded("importance", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setInReplyTo($value)
+    {
+        $this->inReplyTo = $this->castValueIfNeeded("inReplyTo", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSubmitted()
+    {
+        return ((bool) $this->isSubmitted);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ItemType
+     */
+    public function setIsSubmitted($value)
+    {
+        $this->isSubmitted = $this->castValueIfNeeded("isSubmitted", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isDraft()
+    {
+        return ((bool) $this->isDraft);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ItemType
+     */
+    public function setIsDraft($value)
+    {
+        $this->isDraft = $this->castValueIfNeeded("isDraft", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isFromMe()
+    {
+        return ((bool) $this->isFromMe);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ItemType
+     */
+    public function setIsFromMe($value)
+    {
+        $this->isFromMe = $this->castValueIfNeeded("isFromMe", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isResend()
+    {
+        return ((bool) $this->isResend);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ItemType
+     */
+    public function setIsResend($value)
+    {
+        $this->isResend = $this->castValueIfNeeded("isResend", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isUnmodified()
+    {
+        return ((bool) $this->isUnmodified);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ItemType
+     */
+    public function setIsUnmodified($value)
+    {
+        $this->isUnmodified = $this->castValueIfNeeded("isUnmodified", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value InternetHeaderType[]
+     * @return ItemType
+     */
+    public function setInternetMessageHeaders(array $value)
+    {
+        $this->internetMessageHeaders = $this->castValueIfNeeded("internetMessageHeaders", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return ItemType
+     */
+    public function setDateTimeSent(\DateTime|string $value)
+    {
+        $this->dateTimeSent = $this->castValueIfNeeded("dateTimeSent", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return ItemType
+     */
+    public function setDateTimeCreated(\DateTime|string $value)
+    {
+        $this->dateTimeCreated = $this->castValueIfNeeded("dateTimeCreated", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value NonEmptyArrayOfResponseObjectsType
+     * @return ItemType
+     */
+    public function setResponseObjects(NonEmptyArrayOfResponseObjectsType $value)
+    {
+        $this->responseObjects = $this->castValueIfNeeded("responseObjects", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return ItemType
+     */
+    public function setReminderDueBy(\DateTime|string $value)
+    {
+        $this->reminderDueBy = $this->castValueIfNeeded("reminderDueBy", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isReminderIsSet()
+    {
+        return ((bool) $this->reminderIsSet);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ItemType
+     */
+    public function setReminderIsSet($value)
+    {
+        $this->reminderIsSet = $this->castValueIfNeeded("reminderIsSet", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value int
+     * @return ItemType
+     */
+    public function setReminderMinutesBeforeStart($value)
+    {
+        $this->reminderMinutesBeforeStart = $this->castValueIfNeeded("reminderMinutesBeforeStart", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setDisplayCc($value)
+    {
+        $this->displayCc = $this->castValueIfNeeded("displayCc", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setDisplayTo($value)
+    {
+        $this->displayTo = $this->castValueIfNeeded("displayTo", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isHasAttachments()
+    {
+        return ((bool) $this->hasAttachments);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ItemType
+     */
+    public function setHasAttachments($value)
+    {
+        $this->hasAttachments = $this->castValueIfNeeded("hasAttachments", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ExtendedPropertyType[]
+     * @return ItemType
+     */
+    public function setExtendedProperty(array $value)
+    {
+        $this->extendedProperty = $this->castValueIfNeeded("extendedProperty", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setCulture($value)
+    {
+        $this->culture = $this->castValueIfNeeded("culture", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value EffectiveRightsType
+     * @return ItemType
+     */
+    public function setEffectiveRights(EffectiveRightsType $value)
+    {
+        $this->effectiveRights = $this->castValueIfNeeded("effectiveRights", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setLastModifiedName($value)
+    {
+        $this->lastModifiedName = $this->castValueIfNeeded("lastModifiedName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return ItemType
+     */
+    public function setLastModifiedTime(\DateTime|string $value)
+    {
+        $this->lastModifiedTime = $this->castValueIfNeeded("lastModifiedTime", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isAssociated()
+    {
+        return ((bool) $this->isAssociated);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ItemType
+     */
+    public function setIsAssociated($value)
+    {
+        $this->isAssociated = $this->castValueIfNeeded("isAssociated", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setWebClientReadFormQueryString($value)
+    {
+        $this->webClientReadFormQueryString = $this->castValueIfNeeded("webClientReadFormQueryString", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setWebClientEditFormQueryString($value)
+    {
+        $this->webClientEditFormQueryString = $this->castValueIfNeeded("webClientEditFormQueryString", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ItemIdType
+     * @return ItemType
+     */
+    public function setConversationId(ItemIdType $value)
+    {
+        $this->conversationId = $this->castValueIfNeeded("conversationId", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value BodyType
+     * @return ItemType
+     */
+    public function setUniqueBody(BodyType $value)
+    {
+        $this->uniqueBody = $this->castValueIfNeeded("uniqueBody", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ItemType
+     */
+    public function setStoreEntryId($value)
+    {
+        $this->storeEntryId = $this->castValueIfNeeded("storeEntryId", $value);
+        return $this;
     }
 }

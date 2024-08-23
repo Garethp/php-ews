@@ -11,51 +11,17 @@ use garethp\ews\API\Type;
  * XSD Type: RulePredicatesType
  *
  * @method RulePredicatesType addCategories(string $categories)
- * @method RulePredicatesType setCategories(array $categories)
  * @method RulePredicatesType addContainsBodyStrings(string $containsBodyStrings)
- * @method RulePredicatesType setContainsBodyStrings(array $containsBodyStrings)
  * @method RulePredicatesType addContainsHeaderStrings(string $containsHeaderStrings)
- * @method RulePredicatesType setContainsHeaderStrings(array $containsHeaderStrings)
  * @method RulePredicatesType addContainsRecipientStrings(string $containsRecipientStrings)
- * @method RulePredicatesType setContainsRecipientStrings(array $containsRecipientStrings)
  * @method RulePredicatesType addContainsSenderStrings(string $containsSenderStrings)
- * @method RulePredicatesType setContainsSenderStrings(array $containsSenderStrings)
  * @method RulePredicatesType addContainsSubjectOrBodyStrings(string $containsSubjectOrBodyStrings)
- * @method RulePredicatesType setContainsSubjectOrBodyStrings(array $containsSubjectOrBodyStrings)
  * @method RulePredicatesType addContainsSubjectStrings(string $containsSubjectStrings)
- * @method RulePredicatesType setContainsSubjectStrings(array $containsSubjectStrings)
- * @method RulePredicatesType setFlaggedForAction(string $flaggedForAction)
  * @method RulePredicatesType addFromAddresses(EmailAddressType $fromAddresses)
- * @method RulePredicatesType setFromAddresses(array $fromAddresses)
  * @method RulePredicatesType addFromConnectedAccounts(string $fromConnectedAccounts)
- * @method RulePredicatesType setFromConnectedAccounts(array $fromConnectedAccounts)
- * @method RulePredicatesType setHasAttachments(boolean $hasAttachments)
- * @method RulePredicatesType setImportance(string $importance)
- * @method RulePredicatesType setIsApprovalRequest(boolean $isApprovalRequest)
- * @method RulePredicatesType setIsAutomaticForward(boolean $isAutomaticForward)
- * @method RulePredicatesType setIsAutomaticReply(boolean $isAutomaticReply)
- * @method RulePredicatesType setIsEncrypted(boolean $isEncrypted)
- * @method RulePredicatesType setIsMeetingRequest(boolean $isMeetingRequest)
- * @method RulePredicatesType setIsMeetingResponse(boolean $isMeetingResponse)
- * @method RulePredicatesType setIsNDR(boolean $isNDR)
- * @method RulePredicatesType setIsPermissionControlled(boolean $isPermissionControlled)
- * @method RulePredicatesType setIsReadReceipt(boolean $isReadReceipt)
- * @method RulePredicatesType setIsSigned(boolean $isSigned)
- * @method RulePredicatesType setIsVoicemail(boolean $isVoicemail)
  * @method RulePredicatesType addItemClasses(string $itemClasses)
- * @method RulePredicatesType setItemClasses(array $itemClasses)
  * @method RulePredicatesType addMessageClassifications(string $messageClassifications)
- * @method RulePredicatesType setMessageClassifications(array $messageClassifications)
- * @method RulePredicatesType setNotSentToMe(boolean $notSentToMe)
- * @method RulePredicatesType setSentCcMe(boolean $sentCcMe)
- * @method RulePredicatesType setSentOnlyToMe(boolean $sentOnlyToMe)
  * @method RulePredicatesType addSentToAddresses(EmailAddressType $sentToAddresses)
- * @method RulePredicatesType setSentToAddresses(array $sentToAddresses)
- * @method RulePredicatesType setSentToMe(boolean $sentToMe)
- * @method RulePredicatesType setSentToOrCcMe(boolean $sentToOrCcMe)
- * @method RulePredicatesType setSensitivity(string $sensitivity)
- * @method RulePredicatesType setWithinDateRange(RulePredicateDateRangeType $withinDateRange)
- * @method RulePredicatesType setWithinSizeRange(RulePredicateSizeRangeType $withinSizeRange)
  */
 class RulePredicatesType extends Type
 {
@@ -311,14 +277,6 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isHasAttachments()
-    {
-        return ((bool) $this->hasAttachments);
-    }
-
-    /**
      * @return boolean
      */
     public function getHasAttachments()
@@ -335,27 +293,11 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isApprovalRequest()
-    {
-        return ((bool) $this->isApprovalRequest);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsApprovalRequest()
     {
         return $this->isApprovalRequest;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isAutomaticForward()
-    {
-        return ((bool) $this->isAutomaticForward);
     }
 
     /**
@@ -367,27 +309,11 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isAutomaticReply()
-    {
-        return ((bool) $this->isAutomaticReply);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsAutomaticReply()
     {
         return $this->isAutomaticReply;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isEncrypted()
-    {
-        return ((bool) $this->isEncrypted);
     }
 
     /**
@@ -399,27 +325,11 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isMeetingRequest()
-    {
-        return ((bool) $this->isMeetingRequest);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsMeetingRequest()
     {
         return $this->isMeetingRequest;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isMeetingResponse()
-    {
-        return ((bool) $this->isMeetingResponse);
     }
 
     /**
@@ -431,27 +341,11 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isNDR()
-    {
-        return ((bool) $this->isNDR);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsNDR()
     {
         return $this->isNDR;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isPermissionControlled()
-    {
-        return ((bool) $this->isPermissionControlled);
     }
 
     /**
@@ -463,14 +357,6 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isReadReceipt()
-    {
-        return ((bool) $this->isReadReceipt);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsReadReceipt()
@@ -479,27 +365,11 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isSigned()
-    {
-        return ((bool) $this->isSigned);
-    }
-
-    /**
      * @return boolean
      */
     public function getIsSigned()
     {
         return $this->isSigned;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isVoicemail()
-    {
-        return ((bool) $this->isVoicemail);
     }
 
     /**
@@ -527,14 +397,6 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isNotSentToMe()
-    {
-        return ((bool) $this->notSentToMe);
-    }
-
-    /**
      * @return boolean
      */
     public function getNotSentToMe()
@@ -543,27 +405,11 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isSentCcMe()
-    {
-        return ((bool) $this->sentCcMe);
-    }
-
-    /**
      * @return boolean
      */
     public function getSentCcMe()
     {
         return $this->sentCcMe;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isSentOnlyToMe()
-    {
-        return ((bool) $this->sentOnlyToMe);
     }
 
     /**
@@ -583,27 +429,11 @@ class RulePredicatesType extends Type
     }
 
     /**
-     * @returns bool
-     */
-    public function isSentToMe()
-    {
-        return ((bool) $this->sentToMe);
-    }
-
-    /**
      * @return boolean
      */
     public function getSentToMe()
     {
         return $this->sentToMe;
-    }
-
-    /**
-     * @returns bool
-     */
-    public function isSentToOrCcMe()
-    {
-        return ((bool) $this->sentToOrCcMe);
     }
 
     /**
@@ -636,5 +466,515 @@ class RulePredicatesType extends Type
     public function getWithinSizeRange()
     {
         return $this->withinSizeRange;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setCategories(array $value)
+    {
+        $this->categories = $this->castValueIfNeeded("categories", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setContainsBodyStrings(array $value)
+    {
+        $this->containsBodyStrings = $this->castValueIfNeeded("containsBodyStrings", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setContainsHeaderStrings(array $value)
+    {
+        $this->containsHeaderStrings = $this->castValueIfNeeded("containsHeaderStrings", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setContainsRecipientStrings(array $value)
+    {
+        $this->containsRecipientStrings = $this->castValueIfNeeded("containsRecipientStrings", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setContainsSenderStrings(array $value)
+    {
+        $this->containsSenderStrings = $this->castValueIfNeeded("containsSenderStrings", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setContainsSubjectOrBodyStrings(array $value)
+    {
+        $this->containsSubjectOrBodyStrings = $this->castValueIfNeeded("containsSubjectOrBodyStrings", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setContainsSubjectStrings(array $value)
+    {
+        $this->containsSubjectStrings = $this->castValueIfNeeded("containsSubjectStrings", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return RulePredicatesType
+     */
+    public function setFlaggedForAction($value)
+    {
+        $this->flaggedForAction = $this->castValueIfNeeded("flaggedForAction", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value EmailAddressType[]
+     * @return RulePredicatesType
+     */
+    public function setFromAddresses(array $value)
+    {
+        $this->fromAddresses = $this->castValueIfNeeded("fromAddresses", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setFromConnectedAccounts(array $value)
+    {
+        $this->fromConnectedAccounts = $this->castValueIfNeeded("fromConnectedAccounts", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isHasAttachments()
+    {
+        return ((bool) $this->hasAttachments);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setHasAttachments($value)
+    {
+        $this->hasAttachments = $this->castValueIfNeeded("hasAttachments", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return RulePredicatesType
+     */
+    public function setImportance($value)
+    {
+        $this->importance = $this->castValueIfNeeded("importance", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isApprovalRequest()
+    {
+        return ((bool) $this->isApprovalRequest);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsApprovalRequest($value)
+    {
+        $this->isApprovalRequest = $this->castValueIfNeeded("isApprovalRequest", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isAutomaticForward()
+    {
+        return ((bool) $this->isAutomaticForward);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsAutomaticForward($value)
+    {
+        $this->isAutomaticForward = $this->castValueIfNeeded("isAutomaticForward", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isAutomaticReply()
+    {
+        return ((bool) $this->isAutomaticReply);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsAutomaticReply($value)
+    {
+        $this->isAutomaticReply = $this->castValueIfNeeded("isAutomaticReply", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isEncrypted()
+    {
+        return ((bool) $this->isEncrypted);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsEncrypted($value)
+    {
+        $this->isEncrypted = $this->castValueIfNeeded("isEncrypted", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMeetingRequest()
+    {
+        return ((bool) $this->isMeetingRequest);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsMeetingRequest($value)
+    {
+        $this->isMeetingRequest = $this->castValueIfNeeded("isMeetingRequest", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isMeetingResponse()
+    {
+        return ((bool) $this->isMeetingResponse);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsMeetingResponse($value)
+    {
+        $this->isMeetingResponse = $this->castValueIfNeeded("isMeetingResponse", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isNDR()
+    {
+        return ((bool) $this->isNDR);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsNDR($value)
+    {
+        $this->isNDR = $this->castValueIfNeeded("isNDR", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isPermissionControlled()
+    {
+        return ((bool) $this->isPermissionControlled);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsPermissionControlled($value)
+    {
+        $this->isPermissionControlled = $this->castValueIfNeeded("isPermissionControlled", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isReadReceipt()
+    {
+        return ((bool) $this->isReadReceipt);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsReadReceipt($value)
+    {
+        $this->isReadReceipt = $this->castValueIfNeeded("isReadReceipt", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSigned()
+    {
+        return ((bool) $this->isSigned);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsSigned($value)
+    {
+        $this->isSigned = $this->castValueIfNeeded("isSigned", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isVoicemail()
+    {
+        return ((bool) $this->isVoicemail);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setIsVoicemail($value)
+    {
+        $this->isVoicemail = $this->castValueIfNeeded("isVoicemail", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setItemClasses(array $value)
+    {
+        $this->itemClasses = $this->castValueIfNeeded("itemClasses", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return RulePredicatesType
+     */
+    public function setMessageClassifications(array $value)
+    {
+        $this->messageClassifications = $this->castValueIfNeeded("messageClassifications", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isNotSentToMe()
+    {
+        return ((bool) $this->notSentToMe);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setNotSentToMe($value)
+    {
+        $this->notSentToMe = $this->castValueIfNeeded("notSentToMe", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSentCcMe()
+    {
+        return ((bool) $this->sentCcMe);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setSentCcMe($value)
+    {
+        $this->sentCcMe = $this->castValueIfNeeded("sentCcMe", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSentOnlyToMe()
+    {
+        return ((bool) $this->sentOnlyToMe);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setSentOnlyToMe($value)
+    {
+        $this->sentOnlyToMe = $this->castValueIfNeeded("sentOnlyToMe", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value EmailAddressType[]
+     * @return RulePredicatesType
+     */
+    public function setSentToAddresses(array $value)
+    {
+        $this->sentToAddresses = $this->castValueIfNeeded("sentToAddresses", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSentToMe()
+    {
+        return ((bool) $this->sentToMe);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setSentToMe($value)
+    {
+        $this->sentToMe = $this->castValueIfNeeded("sentToMe", $value);
+        return $this;
+    }
+
+    /**
+     * @returns bool
+     */
+    public function isSentToOrCcMe()
+    {
+        return ((bool) $this->sentToOrCcMe);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return RulePredicatesType
+     */
+    public function setSentToOrCcMe($value)
+    {
+        $this->sentToOrCcMe = $this->castValueIfNeeded("sentToOrCcMe", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return RulePredicatesType
+     */
+    public function setSensitivity($value)
+    {
+        $this->sensitivity = $this->castValueIfNeeded("sensitivity", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value RulePredicateDateRangeType
+     * @return RulePredicatesType
+     */
+    public function setWithinDateRange(RulePredicateDateRangeType $value)
+    {
+        $this->withinDateRange = $this->castValueIfNeeded("withinDateRange", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value RulePredicateSizeRangeType
+     * @return RulePredicatesType
+     */
+    public function setWithinSizeRange(RulePredicateSizeRangeType $value)
+    {
+        $this->withinSizeRange = $this->castValueIfNeeded("withinSizeRange", $value);
+        return $this;
     }
 }
