@@ -24,27 +24,19 @@ class GetServerTimeZonesType extends BaseRequestType
     protected $ids = null;
 
     /**
-     * @return boolean
-     */
-    public function getReturnFullTimeZoneData()
-    {
-        return $this->returnFullTimeZoneData;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getIds()
-    {
-        return $this->ids;
-    }
-
-    /**
      * @returns bool
      */
     public function isReturnFullTimeZoneData()
     {
         return ((bool) $this->returnFullTimeZoneData);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getReturnFullTimeZoneData()
+    {
+        return $this->returnFullTimeZoneData;
     }
 
     /**
@@ -56,6 +48,14 @@ class GetServerTimeZonesType extends BaseRequestType
     {
         $this->returnFullTimeZoneData = $this->castValueIfNeeded("returnFullTimeZoneData", $value);
         return $this;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getIds()
+    {
+        return $this->ids;
     }
 
     /**

@@ -229,310 +229,6 @@ class ItemType extends Type
     }
 
     /**
-     * @return ItemIdType
-     */
-    public function getItemId()
-    {
-        return $this->itemId;
-    }
-
-    /**
-     * @return FolderIdType
-     */
-    public function getParentFolderId()
-    {
-        return $this->parentFolderId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getItemClass()
-    {
-        return $this->itemClass;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSubject()
-    {
-        return $this->subject;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSensitivity()
-    {
-        return $this->sensitivity;
-    }
-
-    /**
-     * @return BodyType
-     */
-    public function getBody()
-    {
-        return $this->body;
-    }
-
-    /**
-     * @return NonEmptyArrayOfAttachmentsType
-     */
-    public function getAttachments()
-    {
-        return $this->attachments;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateTimeReceived()
-    {
-        return $this->dateTimeReceived;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getSize()
-    {
-        return $this->size;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
-
-    /**
-     * @return string
-     */
-    public function getImportance()
-    {
-        return $this->importance;
-    }
-
-    /**
-     * @return string
-     */
-    public function getInReplyTo()
-    {
-        return $this->inReplyTo;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsSubmitted()
-    {
-        return $this->isSubmitted;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsDraft()
-    {
-        return $this->isDraft;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsFromMe()
-    {
-        return $this->isFromMe;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsResend()
-    {
-        return $this->isResend;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsUnmodified()
-    {
-        return $this->isUnmodified;
-    }
-
-    /**
-     * @return InternetHeaderType[]
-     */
-    public function getInternetMessageHeaders()
-    {
-        return $this->internetMessageHeaders;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateTimeSent()
-    {
-        return $this->dateTimeSent;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateTimeCreated()
-    {
-        return $this->dateTimeCreated;
-    }
-
-    /**
-     * @return NonEmptyArrayOfResponseObjectsType
-     */
-    public function getResponseObjects()
-    {
-        return $this->responseObjects;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getReminderDueBy()
-    {
-        return $this->reminderDueBy;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getReminderIsSet()
-    {
-        return $this->reminderIsSet;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getReminderMinutesBeforeStart()
-    {
-        return $this->reminderMinutesBeforeStart;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDisplayCc()
-    {
-        return $this->displayCc;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDisplayTo()
-    {
-        return $this->displayTo;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getHasAttachments()
-    {
-        return $this->hasAttachments;
-    }
-
-    /**
-     * @return ExtendedPropertyType[]
-     */
-    public function getExtendedProperty()
-    {
-        return $this->extendedProperty;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCulture()
-    {
-        return $this->culture;
-    }
-
-    /**
-     * @return EffectiveRightsType
-     */
-    public function getEffectiveRights()
-    {
-        return $this->effectiveRights;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLastModifiedName()
-    {
-        return $this->lastModifiedName;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getLastModifiedTime()
-    {
-        return $this->lastModifiedTime;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsAssociated()
-    {
-        return $this->isAssociated;
-    }
-
-    /**
-     * @return string
-     */
-    public function getWebClientReadFormQueryString()
-    {
-        return $this->webClientReadFormQueryString;
-    }
-
-    /**
-     * @return string
-     */
-    public function getWebClientEditFormQueryString()
-    {
-        return $this->webClientEditFormQueryString;
-    }
-
-    /**
-     * @return ItemIdType
-     */
-    public function getConversationId()
-    {
-        return $this->conversationId;
-    }
-
-    /**
-     * @return BodyType
-     */
-    public function getUniqueBody()
-    {
-        return $this->uniqueBody;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStoreEntryId()
-    {
-        return $this->storeEntryId;
-    }
-
-    /**
      * @autogenerated This method is safe to replace
      * @param $value MimeContentType
      * @return ItemType
@@ -541,6 +237,14 @@ class ItemType extends Type
     {
         $this->mimeContent = $this->castValueIfNeeded("mimeContent", $value);
         return $this;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getItemId()
+    {
+        return $this->itemId;
     }
 
     /**
@@ -555,6 +259,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return FolderIdType
+     */
+    public function getParentFolderId()
+    {
+        return $this->parentFolderId;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value FolderIdType
      * @return ItemType
@@ -563,6 +275,14 @@ class ItemType extends Type
     {
         $this->parentFolderId = $this->castValueIfNeeded("parentFolderId", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getItemClass()
+    {
+        return $this->itemClass;
     }
 
     /**
@@ -577,6 +297,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return string
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ItemType
@@ -585,6 +313,14 @@ class ItemType extends Type
     {
         $this->subject = $this->castValueIfNeeded("subject", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSensitivity()
+    {
+        return $this->sensitivity;
     }
 
     /**
@@ -599,6 +335,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return BodyType
+     */
+    public function getBody()
+    {
+        return $this->body;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value BodyType
      * @return ItemType
@@ -607,6 +351,14 @@ class ItemType extends Type
     {
         $this->body = $this->castValueIfNeeded("body", $value);
         return $this;
+    }
+
+    /**
+     * @return NonEmptyArrayOfAttachmentsType
+     */
+    public function getAttachments()
+    {
+        return $this->attachments;
     }
 
     /**
@@ -621,6 +373,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return \DateTime
+     */
+    public function getDateTimeReceived()
+    {
+        return $this->dateTimeReceived;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value \DateTime|string
      * @return ItemType
@@ -629,6 +389,14 @@ class ItemType extends Type
     {
         $this->dateTimeReceived = $this->castValueIfNeeded("dateTimeReceived", $value);
         return $this;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getSize()
+    {
+        return $this->size;
     }
 
     /**
@@ -643,6 +411,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return string[]
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string[]
      * @return ItemType
@@ -654,6 +430,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return string
+     */
+    public function getImportance()
+    {
+        return $this->importance;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ItemType
@@ -662,6 +446,14 @@ class ItemType extends Type
     {
         $this->importance = $this->castValueIfNeeded("importance", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInReplyTo()
+    {
+        return $this->inReplyTo;
     }
 
     /**
@@ -684,6 +476,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsSubmitted()
+    {
+        return $this->isSubmitted;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return ItemType
@@ -700,6 +500,14 @@ class ItemType extends Type
     public function isDraft()
     {
         return ((bool) $this->isDraft);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsDraft()
+    {
+        return $this->isDraft;
     }
 
     /**
@@ -722,6 +530,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsFromMe()
+    {
+        return $this->isFromMe;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return ItemType
@@ -738,6 +554,14 @@ class ItemType extends Type
     public function isResend()
     {
         return ((bool) $this->isResend);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsResend()
+    {
+        return $this->isResend;
     }
 
     /**
@@ -760,6 +584,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsUnmodified()
+    {
+        return $this->isUnmodified;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return ItemType
@@ -768,6 +600,14 @@ class ItemType extends Type
     {
         $this->isUnmodified = $this->castValueIfNeeded("isUnmodified", $value);
         return $this;
+    }
+
+    /**
+     * @return InternetHeaderType[]
+     */
+    public function getInternetMessageHeaders()
+    {
+        return $this->internetMessageHeaders;
     }
 
     /**
@@ -782,6 +622,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return \DateTime
+     */
+    public function getDateTimeSent()
+    {
+        return $this->dateTimeSent;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value \DateTime|string
      * @return ItemType
@@ -790,6 +638,14 @@ class ItemType extends Type
     {
         $this->dateTimeSent = $this->castValueIfNeeded("dateTimeSent", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateTimeCreated()
+    {
+        return $this->dateTimeCreated;
     }
 
     /**
@@ -804,6 +660,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return NonEmptyArrayOfResponseObjectsType
+     */
+    public function getResponseObjects()
+    {
+        return $this->responseObjects;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value NonEmptyArrayOfResponseObjectsType
      * @return ItemType
@@ -812,6 +676,14 @@ class ItemType extends Type
     {
         $this->responseObjects = $this->castValueIfNeeded("responseObjects", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getReminderDueBy()
+    {
+        return $this->reminderDueBy;
     }
 
     /**
@@ -834,6 +706,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getReminderIsSet()
+    {
+        return $this->reminderIsSet;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return ItemType
@@ -842,6 +722,14 @@ class ItemType extends Type
     {
         $this->reminderIsSet = $this->castValueIfNeeded("reminderIsSet", $value);
         return $this;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getReminderMinutesBeforeStart()
+    {
+        return $this->reminderMinutesBeforeStart;
     }
 
     /**
@@ -856,6 +744,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return string
+     */
+    public function getDisplayCc()
+    {
+        return $this->displayCc;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ItemType
@@ -864,6 +760,14 @@ class ItemType extends Type
     {
         $this->displayCc = $this->castValueIfNeeded("displayCc", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDisplayTo()
+    {
+        return $this->displayTo;
     }
 
     /**
@@ -886,6 +790,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getHasAttachments()
+    {
+        return $this->hasAttachments;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return ItemType
@@ -894,6 +806,14 @@ class ItemType extends Type
     {
         $this->hasAttachments = $this->castValueIfNeeded("hasAttachments", $value);
         return $this;
+    }
+
+    /**
+     * @return ExtendedPropertyType[]
+     */
+    public function getExtendedProperty()
+    {
+        return $this->extendedProperty;
     }
 
     /**
@@ -908,6 +828,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return string
+     */
+    public function getCulture()
+    {
+        return $this->culture;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ItemType
@@ -916,6 +844,14 @@ class ItemType extends Type
     {
         $this->culture = $this->castValueIfNeeded("culture", $value);
         return $this;
+    }
+
+    /**
+     * @return EffectiveRightsType
+     */
+    public function getEffectiveRights()
+    {
+        return $this->effectiveRights;
     }
 
     /**
@@ -930,6 +866,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return string
+     */
+    public function getLastModifiedName()
+    {
+        return $this->lastModifiedName;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ItemType
@@ -938,6 +882,14 @@ class ItemType extends Type
     {
         $this->lastModifiedName = $this->castValueIfNeeded("lastModifiedName", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLastModifiedTime()
+    {
+        return $this->lastModifiedTime;
     }
 
     /**
@@ -960,6 +912,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsAssociated()
+    {
+        return $this->isAssociated;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return ItemType
@@ -968,6 +928,14 @@ class ItemType extends Type
     {
         $this->isAssociated = $this->castValueIfNeeded("isAssociated", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWebClientReadFormQueryString()
+    {
+        return $this->webClientReadFormQueryString;
     }
 
     /**
@@ -982,6 +950,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return string
+     */
+    public function getWebClientEditFormQueryString()
+    {
+        return $this->webClientEditFormQueryString;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ItemType
@@ -990,6 +966,14 @@ class ItemType extends Type
     {
         $this->webClientEditFormQueryString = $this->castValueIfNeeded("webClientEditFormQueryString", $value);
         return $this;
+    }
+
+    /**
+     * @return ItemIdType
+     */
+    public function getConversationId()
+    {
+        return $this->conversationId;
     }
 
     /**
@@ -1004,6 +988,14 @@ class ItemType extends Type
     }
 
     /**
+     * @return BodyType
+     */
+    public function getUniqueBody()
+    {
+        return $this->uniqueBody;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value BodyType
      * @return ItemType
@@ -1012,6 +1004,14 @@ class ItemType extends Type
     {
         $this->uniqueBody = $this->castValueIfNeeded("uniqueBody", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStoreEntryId()
+    {
+        return $this->storeEntryId;
     }
 
     /**

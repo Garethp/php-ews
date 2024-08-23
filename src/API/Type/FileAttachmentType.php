@@ -22,27 +22,19 @@ class FileAttachmentType extends AttachmentType
     protected $content = null;
 
     /**
-     * @return boolean
-     */
-    public function getIsContactPhoto()
-    {
-        return $this->isContactPhoto;
-    }
-
-    /**
-     * @return string
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-
-    /**
      * @returns bool
      */
     public function isContactPhoto()
     {
         return ((bool) $this->isContactPhoto);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsContactPhoto()
+    {
+        return $this->isContactPhoto;
     }
 
     /**
@@ -54,6 +46,14 @@ class FileAttachmentType extends AttachmentType
     {
         $this->isContactPhoto = $this->castValueIfNeeded("isContactPhoto", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->content;
     }
 
     /**

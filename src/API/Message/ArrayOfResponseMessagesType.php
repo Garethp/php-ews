@@ -294,358 +294,6 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
-     * @return ResponseMessageType[]
-     */
-    public function getDeleteItemResponseMessage()
-    {
-        return $this->deleteItemResponseMessage;
-    }
-
-    /**
-     * @return ItemInfoResponseMessageType[]
-     */
-    public function getGetItemResponseMessage()
-    {
-        return $this->getItemResponseMessage;
-    }
-
-    /**
-     * @return UpdateItemResponseMessageType[]
-     */
-    public function getUpdateItemResponseMessage()
-    {
-        return $this->updateItemResponseMessage;
-    }
-
-    /**
-     * @return ResponseMessageType[]
-     */
-    public function getSendItemResponseMessage()
-    {
-        return $this->sendItemResponseMessage;
-    }
-
-    /**
-     * @return ResponseMessageType[]
-     */
-    public function getDeleteFolderResponseMessage()
-    {
-        return $this->deleteFolderResponseMessage;
-    }
-
-    /**
-     * @return ResponseMessageType[]
-     */
-    public function getEmptyFolderResponseMessage()
-    {
-        return $this->emptyFolderResponseMessage;
-    }
-
-    /**
-     * @return FolderInfoResponseMessageType[]
-     */
-    public function getCreateFolderResponseMessage()
-    {
-        return $this->createFolderResponseMessage;
-    }
-
-    /**
-     * @return FolderInfoResponseMessageType[]
-     */
-    public function getGetFolderResponseMessage()
-    {
-        return $this->getFolderResponseMessage;
-    }
-
-    /**
-     * @return FindFolderResponseMessageType[]
-     */
-    public function getFindFolderResponseMessage()
-    {
-        return $this->findFolderResponseMessage;
-    }
-
-    /**
-     * @return FolderInfoResponseMessageType[]
-     */
-    public function getUpdateFolderResponseMessage()
-    {
-        return $this->updateFolderResponseMessage;
-    }
-
-    /**
-     * @return FolderInfoResponseMessageType[]
-     */
-    public function getMoveFolderResponseMessage()
-    {
-        return $this->moveFolderResponseMessage;
-    }
-
-    /**
-     * @return FolderInfoResponseMessageType[]
-     */
-    public function getCopyFolderResponseMessage()
-    {
-        return $this->copyFolderResponseMessage;
-    }
-
-    /**
-     * @return AttachmentInfoResponseMessageType[]
-     */
-    public function getCreateAttachmentResponseMessage()
-    {
-        return $this->createAttachmentResponseMessage;
-    }
-
-    /**
-     * @return DeleteAttachmentResponseMessageType[]
-     */
-    public function getDeleteAttachmentResponseMessage()
-    {
-        return $this->deleteAttachmentResponseMessage;
-    }
-
-    /**
-     * @return AttachmentInfoResponseMessageType[]
-     */
-    public function getGetAttachmentResponseMessage()
-    {
-        return $this->getAttachmentResponseMessage;
-    }
-
-    /**
-     * @return UploadItemsResponseMessageType[]
-     */
-    public function getUploadItemsResponseMessage()
-    {
-        return $this->uploadItemsResponseMessage;
-    }
-
-    /**
-     * @return ExportItemsResponseMessageType[]
-     */
-    public function getExportItemsResponseMessage()
-    {
-        return $this->exportItemsResponseMessage;
-    }
-
-    /**
-     * @return FindItemResponseMessageType[]
-     */
-    public function getFindItemResponseMessage()
-    {
-        return $this->findItemResponseMessage;
-    }
-
-    /**
-     * @return ItemInfoResponseMessageType[]
-     */
-    public function getMoveItemResponseMessage()
-    {
-        return $this->moveItemResponseMessage;
-    }
-
-    /**
-     * @return ItemInfoResponseMessageType[]
-     */
-    public function getCopyItemResponseMessage()
-    {
-        return $this->copyItemResponseMessage;
-    }
-
-    /**
-     * @return ResolveNamesResponseMessageType[]
-     */
-    public function getResolveNamesResponseMessage()
-    {
-        return $this->resolveNamesResponseMessage;
-    }
-
-    /**
-     * @return ExpandDLResponseMessageType[]
-     */
-    public function getExpandDLResponseMessage()
-    {
-        return $this->expandDLResponseMessage;
-    }
-
-    /**
-     * @return GetServerTimeZonesResponseMessageType[]
-     */
-    public function getGetServerTimeZonesResponseMessage()
-    {
-        return $this->getServerTimeZonesResponseMessage;
-    }
-
-    /**
-     * @return GetEventsResponseMessageType[]
-     */
-    public function getGetEventsResponseMessage()
-    {
-        return $this->getEventsResponseMessage;
-    }
-
-    /**
-     * @return GetStreamingEventsResponseMessageType[]
-     */
-    public function getGetStreamingEventsResponseMessage()
-    {
-        return $this->getStreamingEventsResponseMessage;
-    }
-
-    /**
-     * @return SubscribeResponseMessageType[]
-     */
-    public function getSubscribeResponseMessage()
-    {
-        return $this->subscribeResponseMessage;
-    }
-
-    /**
-     * @return ResponseMessageType[]
-     */
-    public function getUnsubscribeResponseMessage()
-    {
-        return $this->unsubscribeResponseMessage;
-    }
-
-    /**
-     * @return SendNotificationResponseMessageType[]
-     */
-    public function getSendNotificationResponseMessage()
-    {
-        return $this->sendNotificationResponseMessage;
-    }
-
-    /**
-     * @return SyncFolderHierarchyResponseMessageType[]
-     */
-    public function getSyncFolderHierarchyResponseMessage()
-    {
-        return $this->syncFolderHierarchyResponseMessage;
-    }
-
-    /**
-     * @return SyncFolderItemsResponseMessageType[]
-     */
-    public function getSyncFolderItemsResponseMessage()
-    {
-        return $this->syncFolderItemsResponseMessage;
-    }
-
-    /**
-     * @return FolderInfoResponseMessageType[]
-     */
-    public function getCreateManagedFolderResponseMessage()
-    {
-        return $this->createManagedFolderResponseMessage;
-    }
-
-    /**
-     * @return ConvertIdResponseMessageType[]
-     */
-    public function getConvertIdResponseMessage()
-    {
-        return $this->convertIdResponseMessage;
-    }
-
-    /**
-     * @return GetSharingMetadataResponseMessageType[]
-     */
-    public function getGetSharingMetadataResponseMessage()
-    {
-        return $this->getSharingMetadataResponseMessage;
-    }
-
-    /**
-     * @return RefreshSharingFolderResponseMessageType[]
-     */
-    public function getRefreshSharingFolderResponseMessage()
-    {
-        return $this->refreshSharingFolderResponseMessage;
-    }
-
-    /**
-     * @return GetSharingFolderResponseMessageType[]
-     */
-    public function getGetSharingFolderResponseMessage()
-    {
-        return $this->getSharingFolderResponseMessage;
-    }
-
-    /**
-     * @return ResponseMessageType[]
-     */
-    public function getCreateUserConfigurationResponseMessage()
-    {
-        return $this->createUserConfigurationResponseMessage;
-    }
-
-    /**
-     * @return ResponseMessageType[]
-     */
-    public function getDeleteUserConfigurationResponseMessage()
-    {
-        return $this->deleteUserConfigurationResponseMessage;
-    }
-
-    /**
-     * @return GetUserConfigurationResponseMessageType[]
-     */
-    public function getGetUserConfigurationResponseMessage()
-    {
-        return $this->getUserConfigurationResponseMessage;
-    }
-
-    /**
-     * @return ResponseMessageType[]
-     */
-    public function getUpdateUserConfigurationResponseMessage()
-    {
-        return $this->updateUserConfigurationResponseMessage;
-    }
-
-    /**
-     * @return GetRoomListsResponseMessageType[]
-     */
-    public function getGetRoomListsResponse()
-    {
-        return $this->getRoomListsResponse;
-    }
-
-    /**
-     * @return GetRoomsResponseMessageType[]
-     */
-    public function getGetRoomsResponse()
-    {
-        return $this->getRoomsResponse;
-    }
-
-    /**
-     * @return ResponseMessageType[]
-     */
-    public function getApplyConversationActionResponseMessage()
-    {
-        return $this->applyConversationActionResponseMessage;
-    }
-
-    /**
-     * @return FindMailboxStatisticsByKeywordsResponseMessageType[]
-     */
-    public function getFindMailboxStatisticsByKeywordsResponseMessage()
-    {
-        return $this->findMailboxStatisticsByKeywordsResponseMessage;
-    }
-
-    /**
-     * @return GetPasswordExpirationDateResponseMessageType[]
-     */
-    public function getGetPasswordExpirationDateResponse()
-    {
-        return $this->getPasswordExpirationDateResponse;
-    }
-
-    /**
      * @autogenerated This method is safe to replace
      * @param $value ItemInfoResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -654,6 +302,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->createItemResponseMessage = $this->castValueIfNeeded("createItemResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getDeleteItemResponseMessage()
+    {
+        return $this->deleteItemResponseMessage;
     }
 
     /**
@@ -668,6 +324,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getGetItemResponseMessage()
+    {
+        return $this->getItemResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ItemInfoResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -676,6 +340,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->getItemResponseMessage = $this->castValueIfNeeded("getItemResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return UpdateItemResponseMessageType[]
+     */
+    public function getUpdateItemResponseMessage()
+    {
+        return $this->updateItemResponseMessage;
     }
 
     /**
@@ -690,6 +362,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return ResponseMessageType[]
+     */
+    public function getSendItemResponseMessage()
+    {
+        return $this->sendItemResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -698,6 +378,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->sendItemResponseMessage = $this->castValueIfNeeded("sendItemResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getDeleteFolderResponseMessage()
+    {
+        return $this->deleteFolderResponseMessage;
     }
 
     /**
@@ -712,6 +400,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return ResponseMessageType[]
+     */
+    public function getEmptyFolderResponseMessage()
+    {
+        return $this->emptyFolderResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -720,6 +416,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->emptyFolderResponseMessage = $this->castValueIfNeeded("emptyFolderResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getCreateFolderResponseMessage()
+    {
+        return $this->createFolderResponseMessage;
     }
 
     /**
@@ -734,6 +438,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getGetFolderResponseMessage()
+    {
+        return $this->getFolderResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value FolderInfoResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -742,6 +454,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->getFolderResponseMessage = $this->castValueIfNeeded("getFolderResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return FindFolderResponseMessageType[]
+     */
+    public function getFindFolderResponseMessage()
+    {
+        return $this->findFolderResponseMessage;
     }
 
     /**
@@ -756,6 +476,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getUpdateFolderResponseMessage()
+    {
+        return $this->updateFolderResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value FolderInfoResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -764,6 +492,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->updateFolderResponseMessage = $this->castValueIfNeeded("updateFolderResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getMoveFolderResponseMessage()
+    {
+        return $this->moveFolderResponseMessage;
     }
 
     /**
@@ -778,6 +514,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getCopyFolderResponseMessage()
+    {
+        return $this->copyFolderResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value FolderInfoResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -786,6 +530,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->copyFolderResponseMessage = $this->castValueIfNeeded("copyFolderResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return AttachmentInfoResponseMessageType[]
+     */
+    public function getCreateAttachmentResponseMessage()
+    {
+        return $this->createAttachmentResponseMessage;
     }
 
     /**
@@ -800,6 +552,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return DeleteAttachmentResponseMessageType[]
+     */
+    public function getDeleteAttachmentResponseMessage()
+    {
+        return $this->deleteAttachmentResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value DeleteAttachmentResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -808,6 +568,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->deleteAttachmentResponseMessage = $this->castValueIfNeeded("deleteAttachmentResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return AttachmentInfoResponseMessageType[]
+     */
+    public function getGetAttachmentResponseMessage()
+    {
+        return $this->getAttachmentResponseMessage;
     }
 
     /**
@@ -822,6 +590,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return UploadItemsResponseMessageType[]
+     */
+    public function getUploadItemsResponseMessage()
+    {
+        return $this->uploadItemsResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value UploadItemsResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -830,6 +606,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->uploadItemsResponseMessage = $this->castValueIfNeeded("uploadItemsResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return ExportItemsResponseMessageType[]
+     */
+    public function getExportItemsResponseMessage()
+    {
+        return $this->exportItemsResponseMessage;
     }
 
     /**
@@ -844,6 +628,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return FindItemResponseMessageType[]
+     */
+    public function getFindItemResponseMessage()
+    {
+        return $this->findItemResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value FindItemResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -852,6 +644,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->findItemResponseMessage = $this->castValueIfNeeded("findItemResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getMoveItemResponseMessage()
+    {
+        return $this->moveItemResponseMessage;
     }
 
     /**
@@ -866,6 +666,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getCopyItemResponseMessage()
+    {
+        return $this->copyItemResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ItemInfoResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -874,6 +682,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->copyItemResponseMessage = $this->castValueIfNeeded("copyItemResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return ResolveNamesResponseMessageType[]
+     */
+    public function getResolveNamesResponseMessage()
+    {
+        return $this->resolveNamesResponseMessage;
     }
 
     /**
@@ -888,6 +704,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return ExpandDLResponseMessageType[]
+     */
+    public function getExpandDLResponseMessage()
+    {
+        return $this->expandDLResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ExpandDLResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -896,6 +720,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->expandDLResponseMessage = $this->castValueIfNeeded("expandDLResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return GetServerTimeZonesResponseMessageType[]
+     */
+    public function getGetServerTimeZonesResponseMessage()
+    {
+        return $this->getServerTimeZonesResponseMessage;
     }
 
     /**
@@ -910,6 +742,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return GetEventsResponseMessageType[]
+     */
+    public function getGetEventsResponseMessage()
+    {
+        return $this->getEventsResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value GetEventsResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -918,6 +758,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->getEventsResponseMessage = $this->castValueIfNeeded("getEventsResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return GetStreamingEventsResponseMessageType[]
+     */
+    public function getGetStreamingEventsResponseMessage()
+    {
+        return $this->getStreamingEventsResponseMessage;
     }
 
     /**
@@ -932,6 +780,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return SubscribeResponseMessageType[]
+     */
+    public function getSubscribeResponseMessage()
+    {
+        return $this->subscribeResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value SubscribeResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -940,6 +796,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->subscribeResponseMessage = $this->castValueIfNeeded("subscribeResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getUnsubscribeResponseMessage()
+    {
+        return $this->unsubscribeResponseMessage;
     }
 
     /**
@@ -954,6 +818,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return SendNotificationResponseMessageType[]
+     */
+    public function getSendNotificationResponseMessage()
+    {
+        return $this->sendNotificationResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value SendNotificationResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -962,6 +834,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->sendNotificationResponseMessage = $this->castValueIfNeeded("sendNotificationResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return SyncFolderHierarchyResponseMessageType[]
+     */
+    public function getSyncFolderHierarchyResponseMessage()
+    {
+        return $this->syncFolderHierarchyResponseMessage;
     }
 
     /**
@@ -976,6 +856,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return SyncFolderItemsResponseMessageType[]
+     */
+    public function getSyncFolderItemsResponseMessage()
+    {
+        return $this->syncFolderItemsResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value SyncFolderItemsResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -984,6 +872,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->syncFolderItemsResponseMessage = $this->castValueIfNeeded("syncFolderItemsResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getCreateManagedFolderResponseMessage()
+    {
+        return $this->createManagedFolderResponseMessage;
     }
 
     /**
@@ -998,6 +894,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return ConvertIdResponseMessageType[]
+     */
+    public function getConvertIdResponseMessage()
+    {
+        return $this->convertIdResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ConvertIdResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -1006,6 +910,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->convertIdResponseMessage = $this->castValueIfNeeded("convertIdResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return GetSharingMetadataResponseMessageType[]
+     */
+    public function getGetSharingMetadataResponseMessage()
+    {
+        return $this->getSharingMetadataResponseMessage;
     }
 
     /**
@@ -1020,6 +932,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return RefreshSharingFolderResponseMessageType[]
+     */
+    public function getRefreshSharingFolderResponseMessage()
+    {
+        return $this->refreshSharingFolderResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value RefreshSharingFolderResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -1028,6 +948,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->refreshSharingFolderResponseMessage = $this->castValueIfNeeded("refreshSharingFolderResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return GetSharingFolderResponseMessageType[]
+     */
+    public function getGetSharingFolderResponseMessage()
+    {
+        return $this->getSharingFolderResponseMessage;
     }
 
     /**
@@ -1042,6 +970,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return ResponseMessageType[]
+     */
+    public function getCreateUserConfigurationResponseMessage()
+    {
+        return $this->createUserConfigurationResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -1050,6 +986,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->createUserConfigurationResponseMessage = $this->castValueIfNeeded("createUserConfigurationResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getDeleteUserConfigurationResponseMessage()
+    {
+        return $this->deleteUserConfigurationResponseMessage;
     }
 
     /**
@@ -1064,6 +1008,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return GetUserConfigurationResponseMessageType[]
+     */
+    public function getGetUserConfigurationResponseMessage()
+    {
+        return $this->getUserConfigurationResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value GetUserConfigurationResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -1072,6 +1024,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->getUserConfigurationResponseMessage = $this->castValueIfNeeded("getUserConfigurationResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return ResponseMessageType[]
+     */
+    public function getUpdateUserConfigurationResponseMessage()
+    {
+        return $this->updateUserConfigurationResponseMessage;
     }
 
     /**
@@ -1086,6 +1046,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return GetRoomListsResponseMessageType[]
+     */
+    public function getGetRoomListsResponse()
+    {
+        return $this->getRoomListsResponse;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value GetRoomListsResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -1094,6 +1062,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->getRoomListsResponse = $this->castValueIfNeeded("getRoomListsResponse", $value);
         return $this;
+    }
+
+    /**
+     * @return GetRoomsResponseMessageType[]
+     */
+    public function getGetRoomsResponse()
+    {
+        return $this->getRoomsResponse;
     }
 
     /**
@@ -1108,6 +1084,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return ResponseMessageType[]
+     */
+    public function getApplyConversationActionResponseMessage()
+    {
+        return $this->applyConversationActionResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -1119,6 +1103,14 @@ class ArrayOfResponseMessagesType extends Message
     }
 
     /**
+     * @return FindMailboxStatisticsByKeywordsResponseMessageType[]
+     */
+    public function getFindMailboxStatisticsByKeywordsResponseMessage()
+    {
+        return $this->findMailboxStatisticsByKeywordsResponseMessage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value FindMailboxStatisticsByKeywordsResponseMessageType[]
      * @return ArrayOfResponseMessagesType
@@ -1127,6 +1119,14 @@ class ArrayOfResponseMessagesType extends Message
     {
         $this->findMailboxStatisticsByKeywordsResponseMessage = $this->castValueIfNeeded("findMailboxStatisticsByKeywordsResponseMessage", $value);
         return $this;
+    }
+
+    /**
+     * @return GetPasswordExpirationDateResponseMessageType[]
+     */
+    public function getGetPasswordExpirationDateResponse()
+    {
+        return $this->getPasswordExpirationDateResponse;
     }
 
     /**

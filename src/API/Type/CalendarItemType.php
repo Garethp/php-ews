@@ -250,342 +250,6 @@ class CalendarItemType extends ItemType
     }
 
     /**
-     * @return \DateTime
-     */
-    public function getRecurrenceId()
-    {
-        return $this->recurrenceId;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateTimeStamp()
-    {
-        return $this->dateTimeStamp;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getStart()
-    {
-        return $this->start;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getEnd()
-    {
-        return $this->end;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getOriginalStart()
-    {
-        return $this->originalStart;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsAllDayEvent()
-    {
-        return $this->isAllDayEvent;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLegacyFreeBusyStatus()
-    {
-        return $this->legacyFreeBusyStatus;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLocation()
-    {
-        return $this->location;
-    }
-
-    /**
-     * @return string
-     */
-    public function getWhen()
-    {
-        return $this->when;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsMeeting()
-    {
-        return $this->isMeeting;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsCancelled()
-    {
-        return $this->isCancelled;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsRecurring()
-    {
-        return $this->isRecurring;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getMeetingRequestWasSent()
-    {
-        return $this->meetingRequestWasSent;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsResponseRequested()
-    {
-        return $this->isResponseRequested;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCalendarItemType()
-    {
-        return $this->calendarItemType;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMyResponseType()
-    {
-        return $this->myResponseType;
-    }
-
-    /**
-     * @return SingleRecipientType
-     */
-    public function getOrganizer()
-    {
-        return $this->organizer;
-    }
-
-    /**
-     * @return AttendeeType[]
-     */
-    public function getRequiredAttendees()
-    {
-        return $this->requiredAttendees;
-    }
-
-    /**
-     * @return AttendeeType[]
-     */
-    public function getOptionalAttendees()
-    {
-        return $this->optionalAttendees;
-    }
-
-    /**
-     * @return AttendeeType[]
-     */
-    public function getResources()
-    {
-        return $this->resources;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getConflictingMeetingCount()
-    {
-        return $this->conflictingMeetingCount;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getAdjacentMeetingCount()
-    {
-        return $this->adjacentMeetingCount;
-    }
-
-    /**
-     * @return NonEmptyArrayOfAllItemsType
-     */
-    public function getConflictingMeetings()
-    {
-        return $this->conflictingMeetings;
-    }
-
-    /**
-     * @return NonEmptyArrayOfAllItemsType
-     */
-    public function getAdjacentMeetings()
-    {
-        return $this->adjacentMeetings;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDuration()
-    {
-        return $this->duration;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTimeZone()
-    {
-        return $this->timeZone;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getAppointmentReplyTime()
-    {
-        return $this->appointmentReplyTime;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getAppointmentSequenceNumber()
-    {
-        return $this->appointmentSequenceNumber;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getAppointmentState()
-    {
-        return $this->appointmentState;
-    }
-
-    /**
-     * @return RecurrenceType
-     */
-    public function getRecurrence()
-    {
-        return $this->recurrence;
-    }
-
-    /**
-     * @return OccurrenceInfoType
-     */
-    public function getFirstOccurrence()
-    {
-        return $this->firstOccurrence;
-    }
-
-    /**
-     * @return OccurrenceInfoType
-     */
-    public function getLastOccurrence()
-    {
-        return $this->lastOccurrence;
-    }
-
-    /**
-     * @return OccurrenceInfoType[]
-     */
-    public function getModifiedOccurrences()
-    {
-        return $this->modifiedOccurrences;
-    }
-
-    /**
-     * @return DeletedOccurrenceInfoType[]
-     */
-    public function getDeletedOccurrences()
-    {
-        return $this->deletedOccurrences;
-    }
-
-    /**
-     * @return TimeZoneType
-     */
-    public function getMeetingTimeZone()
-    {
-        return $this->meetingTimeZone;
-    }
-
-    /**
-     * @return TimeZoneDefinitionType
-     */
-    public function getStartTimeZone()
-    {
-        return $this->startTimeZone;
-    }
-
-    /**
-     * @return TimeZoneDefinitionType
-     */
-    public function getEndTimeZone()
-    {
-        return $this->endTimeZone;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getConferenceType()
-    {
-        return $this->conferenceType;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getAllowNewTimeProposal()
-    {
-        return $this->allowNewTimeProposal;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getIsOnlineMeeting()
-    {
-        return $this->isOnlineMeeting;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMeetingWorkspaceUrl()
-    {
-        return $this->meetingWorkspaceUrl;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNetShowUrl()
-    {
-        return $this->netShowUrl;
-    }
-
-    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return CalendarItemType
@@ -594,6 +258,14 @@ class CalendarItemType extends ItemType
     {
         $this->uID = $this->castValueIfNeeded("uID", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getRecurrenceId()
+    {
+        return $this->recurrenceId;
     }
 
     /**
@@ -608,6 +280,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return \DateTime
+     */
+    public function getDateTimeStamp()
+    {
+        return $this->dateTimeStamp;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value \DateTime|string
      * @return CalendarItemType
@@ -616,6 +296,14 @@ class CalendarItemType extends ItemType
     {
         $this->dateTimeStamp = $this->castValueIfNeeded("dateTimeStamp", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getStart()
+    {
+        return $this->start;
     }
 
     /**
@@ -630,6 +318,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return \DateTime
+     */
+    public function getEnd()
+    {
+        return $this->end;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value \DateTime|string
      * @return CalendarItemType
@@ -638,6 +334,14 @@ class CalendarItemType extends ItemType
     {
         $this->end = $this->castValueIfNeeded("end", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getOriginalStart()
+    {
+        return $this->originalStart;
     }
 
     /**
@@ -660,6 +364,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsAllDayEvent()
+    {
+        return $this->isAllDayEvent;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return CalendarItemType
@@ -668,6 +380,14 @@ class CalendarItemType extends ItemType
     {
         $this->isAllDayEvent = $this->castValueIfNeeded("isAllDayEvent", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLegacyFreeBusyStatus()
+    {
+        return $this->legacyFreeBusyStatus;
     }
 
     /**
@@ -682,6 +402,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return CalendarItemType
@@ -690,6 +418,14 @@ class CalendarItemType extends ItemType
     {
         $this->location = $this->castValueIfNeeded("location", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWhen()
+    {
+        return $this->when;
     }
 
     /**
@@ -712,6 +448,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsMeeting()
+    {
+        return $this->isMeeting;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return CalendarItemType
@@ -728,6 +472,14 @@ class CalendarItemType extends ItemType
     public function isCancelled()
     {
         return ((bool) $this->isCancelled);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsCancelled()
+    {
+        return $this->isCancelled;
     }
 
     /**
@@ -750,6 +502,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsRecurring()
+    {
+        return $this->isRecurring;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return CalendarItemType
@@ -766,6 +526,14 @@ class CalendarItemType extends ItemType
     public function isMeetingRequestWasSent()
     {
         return ((bool) $this->meetingRequestWasSent);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getMeetingRequestWasSent()
+    {
+        return $this->meetingRequestWasSent;
     }
 
     /**
@@ -788,6 +556,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsResponseRequested()
+    {
+        return $this->isResponseRequested;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return CalendarItemType
@@ -796,6 +572,14 @@ class CalendarItemType extends ItemType
     {
         $this->isResponseRequested = $this->castValueIfNeeded("isResponseRequested", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCalendarItemType()
+    {
+        return $this->calendarItemType;
     }
 
     /**
@@ -810,6 +594,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getMyResponseType()
+    {
+        return $this->myResponseType;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return CalendarItemType
@@ -818,6 +610,14 @@ class CalendarItemType extends ItemType
     {
         $this->myResponseType = $this->castValueIfNeeded("myResponseType", $value);
         return $this;
+    }
+
+    /**
+     * @return SingleRecipientType
+     */
+    public function getOrganizer()
+    {
+        return $this->organizer;
     }
 
     /**
@@ -832,6 +632,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return AttendeeType[]
+     */
+    public function getRequiredAttendees()
+    {
+        return $this->requiredAttendees;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value AttendeeType[]
      * @return CalendarItemType
@@ -840,6 +648,14 @@ class CalendarItemType extends ItemType
     {
         $this->requiredAttendees = $this->castValueIfNeeded("requiredAttendees", $value);
         return $this;
+    }
+
+    /**
+     * @return AttendeeType[]
+     */
+    public function getOptionalAttendees()
+    {
+        return $this->optionalAttendees;
     }
 
     /**
@@ -854,6 +670,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return AttendeeType[]
+     */
+    public function getResources()
+    {
+        return $this->resources;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value AttendeeType[]
      * @return CalendarItemType
@@ -862,6 +686,14 @@ class CalendarItemType extends ItemType
     {
         $this->resources = $this->castValueIfNeeded("resources", $value);
         return $this;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getConflictingMeetingCount()
+    {
+        return $this->conflictingMeetingCount;
     }
 
     /**
@@ -876,6 +708,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return integer
+     */
+    public function getAdjacentMeetingCount()
+    {
+        return $this->adjacentMeetingCount;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value int
      * @return CalendarItemType
@@ -884,6 +724,14 @@ class CalendarItemType extends ItemType
     {
         $this->adjacentMeetingCount = $this->castValueIfNeeded("adjacentMeetingCount", $value);
         return $this;
+    }
+
+    /**
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function getConflictingMeetings()
+    {
+        return $this->conflictingMeetings;
     }
 
     /**
@@ -898,6 +746,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function getAdjacentMeetings()
+    {
+        return $this->adjacentMeetings;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value NonEmptyArrayOfAllItemsType
      * @return CalendarItemType
@@ -906,6 +762,14 @@ class CalendarItemType extends ItemType
     {
         $this->adjacentMeetings = $this->castValueIfNeeded("adjacentMeetings", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDuration()
+    {
+        return $this->duration;
     }
 
     /**
@@ -920,6 +784,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getTimeZone()
+    {
+        return $this->timeZone;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return CalendarItemType
@@ -928,6 +800,14 @@ class CalendarItemType extends ItemType
     {
         $this->timeZone = $this->castValueIfNeeded("timeZone", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getAppointmentReplyTime()
+    {
+        return $this->appointmentReplyTime;
     }
 
     /**
@@ -942,6 +822,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return integer
+     */
+    public function getAppointmentSequenceNumber()
+    {
+        return $this->appointmentSequenceNumber;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value int
      * @return CalendarItemType
@@ -950,6 +838,14 @@ class CalendarItemType extends ItemType
     {
         $this->appointmentSequenceNumber = $this->castValueIfNeeded("appointmentSequenceNumber", $value);
         return $this;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getAppointmentState()
+    {
+        return $this->appointmentState;
     }
 
     /**
@@ -964,6 +860,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return RecurrenceType
+     */
+    public function getRecurrence()
+    {
+        return $this->recurrence;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value RecurrenceType
      * @return CalendarItemType
@@ -972,6 +876,14 @@ class CalendarItemType extends ItemType
     {
         $this->recurrence = $this->castValueIfNeeded("recurrence", $value);
         return $this;
+    }
+
+    /**
+     * @return OccurrenceInfoType
+     */
+    public function getFirstOccurrence()
+    {
+        return $this->firstOccurrence;
     }
 
     /**
@@ -986,6 +898,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return OccurrenceInfoType
+     */
+    public function getLastOccurrence()
+    {
+        return $this->lastOccurrence;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value OccurrenceInfoType
      * @return CalendarItemType
@@ -994,6 +914,14 @@ class CalendarItemType extends ItemType
     {
         $this->lastOccurrence = $this->castValueIfNeeded("lastOccurrence", $value);
         return $this;
+    }
+
+    /**
+     * @return OccurrenceInfoType[]
+     */
+    public function getModifiedOccurrences()
+    {
+        return $this->modifiedOccurrences;
     }
 
     /**
@@ -1008,6 +936,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return DeletedOccurrenceInfoType[]
+     */
+    public function getDeletedOccurrences()
+    {
+        return $this->deletedOccurrences;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value DeletedOccurrenceInfoType[]
      * @return CalendarItemType
@@ -1016,6 +952,14 @@ class CalendarItemType extends ItemType
     {
         $this->deletedOccurrences = $this->castValueIfNeeded("deletedOccurrences", $value);
         return $this;
+    }
+
+    /**
+     * @return TimeZoneType
+     */
+    public function getMeetingTimeZone()
+    {
+        return $this->meetingTimeZone;
     }
 
     /**
@@ -1030,6 +974,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return TimeZoneDefinitionType
+     */
+    public function getStartTimeZone()
+    {
+        return $this->startTimeZone;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value TimeZoneDefinitionType
      * @return CalendarItemType
@@ -1041,6 +993,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return TimeZoneDefinitionType
+     */
+    public function getEndTimeZone()
+    {
+        return $this->endTimeZone;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value TimeZoneDefinitionType
      * @return CalendarItemType
@@ -1049,6 +1009,14 @@ class CalendarItemType extends ItemType
     {
         $this->endTimeZone = $this->castValueIfNeeded("endTimeZone", $value);
         return $this;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getConferenceType()
+    {
+        return $this->conferenceType;
     }
 
     /**
@@ -1071,6 +1039,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getAllowNewTimeProposal()
+    {
+        return $this->allowNewTimeProposal;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return CalendarItemType
@@ -1090,6 +1066,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getIsOnlineMeeting()
+    {
+        return $this->isOnlineMeeting;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return CalendarItemType
@@ -1101,6 +1085,14 @@ class CalendarItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getMeetingWorkspaceUrl()
+    {
+        return $this->meetingWorkspaceUrl;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return CalendarItemType
@@ -1109,6 +1101,14 @@ class CalendarItemType extends ItemType
     {
         $this->meetingWorkspaceUrl = $this->castValueIfNeeded("meetingWorkspaceUrl", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNetShowUrl()
+    {
+        return $this->netShowUrl;
     }
 
     /**

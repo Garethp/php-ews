@@ -27,35 +27,19 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
     protected $playOnPhoneEnabled = null;
 
     /**
-     * @return boolean
-     */
-    public function getUmEnabled()
-    {
-        return $this->umEnabled;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPlayOnPhoneDialString()
-    {
-        return $this->playOnPhoneDialString;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getPlayOnPhoneEnabled()
-    {
-        return $this->playOnPhoneEnabled;
-    }
-
-    /**
      * @returns bool
      */
     public function isUmEnabled()
     {
         return ((bool) $this->umEnabled);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getUmEnabled()
+    {
+        return $this->umEnabled;
     }
 
     /**
@@ -67,6 +51,14 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
     {
         $this->umEnabled = $this->castValueIfNeeded("umEnabled", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPlayOnPhoneDialString()
+    {
+        return $this->playOnPhoneDialString;
     }
 
     /**
@@ -86,6 +78,14 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
     public function isPlayOnPhoneEnabled()
     {
         return ((bool) $this->playOnPhoneEnabled);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getPlayOnPhoneEnabled()
+    {
+        return $this->playOnPhoneEnabled;
     }
 
     /**

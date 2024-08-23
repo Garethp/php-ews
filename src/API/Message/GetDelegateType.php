@@ -24,27 +24,19 @@ class GetDelegateType extends BaseDelegateType
     protected $userIds = null;
 
     /**
-     * @return boolean
-     */
-    public function getIncludePermissions()
-    {
-        return $this->includePermissions;
-    }
-
-    /**
-     * @return \garethp\ews\API\Type\UserIdType[]
-     */
-    public function getUserIds()
-    {
-        return $this->userIds;
-    }
-
-    /**
      * @returns bool
      */
     public function isIncludePermissions()
     {
         return ((bool) $this->includePermissions);
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIncludePermissions()
+    {
+        return $this->includePermissions;
     }
 
     /**
@@ -56,6 +48,14 @@ class GetDelegateType extends BaseDelegateType
     {
         $this->includePermissions = $this->castValueIfNeeded("includePermissions", $value);
         return $this;
+    }
+
+    /**
+     * @return \garethp\ews\API\Type\UserIdType[]
+     */
+    public function getUserIds()
+    {
+        return $this->userIds;
     }
 
     /**

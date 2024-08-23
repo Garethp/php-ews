@@ -245,334 +245,6 @@ class ContactItemType extends ItemType
     }
 
     /**
-     * @return string
-     */
-    public function getFileAsMapping()
-    {
-        return $this->fileAsMapping;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDisplayName()
-    {
-        return $this->displayName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getGivenName()
-    {
-        return $this->givenName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getInitials()
-    {
-        return $this->initials;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMiddleName()
-    {
-        return $this->middleName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNickname()
-    {
-        return $this->nickname;
-    }
-
-    /**
-     * @return CompleteNameType
-     */
-    public function getCompleteName()
-    {
-        return $this->completeName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCompanyName()
-    {
-        return $this->companyName;
-    }
-
-    /**
-     * @return EmailAddressDictionaryEntryType[]
-     */
-    public function getEmailAddresses()
-    {
-        return $this->emailAddresses;
-    }
-
-    /**
-     * @return PhysicalAddressDictionaryEntryType[]
-     */
-    public function getPhysicalAddresses()
-    {
-        return $this->physicalAddresses;
-    }
-
-    /**
-     * @return PhoneNumberDictionaryEntryType[]
-     */
-    public function getPhoneNumbers()
-    {
-        return $this->phoneNumbers;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAssistantName()
-    {
-        return $this->assistantName;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getBirthday()
-    {
-        return $this->birthday;
-    }
-
-    /**
-     * @return string
-     */
-    public function getBusinessHomePage()
-    {
-        return $this->businessHomePage;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getChildren()
-    {
-        return $this->children;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getCompanies()
-    {
-        return $this->companies;
-    }
-
-    /**
-     * @return string
-     */
-    public function getContactSource()
-    {
-        return $this->contactSource;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDepartment()
-    {
-        return $this->department;
-    }
-
-    /**
-     * @return string
-     */
-    public function getGeneration()
-    {
-        return $this->generation;
-    }
-
-    /**
-     * @return ImAddressDictionaryEntryType[]
-     */
-    public function getImAddresses()
-    {
-        return $this->imAddresses;
-    }
-
-    /**
-     * @return string
-     */
-    public function getJobTitle()
-    {
-        return $this->jobTitle;
-    }
-
-    /**
-     * @return string
-     */
-    public function getManager()
-    {
-        return $this->manager;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMileage()
-    {
-        return $this->mileage;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOfficeLocation()
-    {
-        return $this->officeLocation;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPostalAddressIndex()
-    {
-        return $this->postalAddressIndex;
-    }
-
-    /**
-     * @return string
-     */
-    public function getProfession()
-    {
-        return $this->profession;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSpouseName()
-    {
-        return $this->spouseName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSurname()
-    {
-        return $this->surname;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getWeddingAnniversary()
-    {
-        return $this->weddingAnniversary;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getHasPicture()
-    {
-        return $this->hasPicture;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPhoneticFullName()
-    {
-        return $this->phoneticFullName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPhoneticFirstName()
-    {
-        return $this->phoneticFirstName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPhoneticLastName()
-    {
-        return $this->phoneticLastName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAlias()
-    {
-        return $this->alias;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNotes()
-    {
-        return $this->notes;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getUserSMIMECertificate()
-    {
-        return $this->userSMIMECertificate;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getMSExchangeCertificate()
-    {
-        return $this->mSExchangeCertificate;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDirectoryId()
-    {
-        return $this->directoryId;
-    }
-
-    /**
-     * @return SingleRecipientType
-     */
-    public function getManagerMailbox()
-    {
-        return $this->managerMailbox;
-    }
-
-    /**
-     * @return EmailAddressType[]
-     */
-    public function getDirectReports()
-    {
-        return $this->directReports;
-    }
-
-    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -581,6 +253,14 @@ class ContactItemType extends ItemType
     {
         $this->fileAs = $this->castValueIfNeeded("fileAs", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFileAsMapping()
+    {
+        return $this->fileAsMapping;
     }
 
     /**
@@ -595,6 +275,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -603,6 +291,14 @@ class ContactItemType extends ItemType
     {
         $this->displayName = $this->castValueIfNeeded("displayName", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGivenName()
+    {
+        return $this->givenName;
     }
 
     /**
@@ -617,6 +313,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getInitials()
+    {
+        return $this->initials;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -625,6 +329,14 @@ class ContactItemType extends ItemType
     {
         $this->initials = $this->castValueIfNeeded("initials", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMiddleName()
+    {
+        return $this->middleName;
     }
 
     /**
@@ -639,6 +351,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getNickname()
+    {
+        return $this->nickname;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -647,6 +367,14 @@ class ContactItemType extends ItemType
     {
         $this->nickname = $this->castValueIfNeeded("nickname", $value);
         return $this;
+    }
+
+    /**
+     * @return CompleteNameType
+     */
+    public function getCompleteName()
+    {
+        return $this->completeName;
     }
 
     /**
@@ -661,6 +389,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getCompanyName()
+    {
+        return $this->companyName;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -669,6 +405,14 @@ class ContactItemType extends ItemType
     {
         $this->companyName = $this->castValueIfNeeded("companyName", $value);
         return $this;
+    }
+
+    /**
+     * @return EmailAddressDictionaryEntryType[]
+     */
+    public function getEmailAddresses()
+    {
+        return $this->emailAddresses;
     }
 
     /**
@@ -683,6 +427,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return PhysicalAddressDictionaryEntryType[]
+     */
+    public function getPhysicalAddresses()
+    {
+        return $this->physicalAddresses;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value PhysicalAddressDictionaryEntryType[]
      * @return ContactItemType
@@ -691,6 +443,14 @@ class ContactItemType extends ItemType
     {
         $this->physicalAddresses = $this->castValueIfNeeded("physicalAddresses", $value);
         return $this;
+    }
+
+    /**
+     * @return PhoneNumberDictionaryEntryType[]
+     */
+    public function getPhoneNumbers()
+    {
+        return $this->phoneNumbers;
     }
 
     /**
@@ -705,6 +465,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getAssistantName()
+    {
+        return $this->assistantName;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -713,6 +481,14 @@ class ContactItemType extends ItemType
     {
         $this->assistantName = $this->castValueIfNeeded("assistantName", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
     }
 
     /**
@@ -727,6 +503,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getBusinessHomePage()
+    {
+        return $this->businessHomePage;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -735,6 +519,14 @@ class ContactItemType extends ItemType
     {
         $this->businessHomePage = $this->castValueIfNeeded("businessHomePage", $value);
         return $this;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getChildren()
+    {
+        return $this->children;
     }
 
     /**
@@ -749,6 +541,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string[]
+     */
+    public function getCompanies()
+    {
+        return $this->companies;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string[]
      * @return ContactItemType
@@ -757,6 +557,14 @@ class ContactItemType extends ItemType
     {
         $this->companies = $this->castValueIfNeeded("companies", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContactSource()
+    {
+        return $this->contactSource;
     }
 
     /**
@@ -771,6 +579,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getDepartment()
+    {
+        return $this->department;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -779,6 +595,14 @@ class ContactItemType extends ItemType
     {
         $this->department = $this->castValueIfNeeded("department", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGeneration()
+    {
+        return $this->generation;
     }
 
     /**
@@ -793,6 +617,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return ImAddressDictionaryEntryType[]
+     */
+    public function getImAddresses()
+    {
+        return $this->imAddresses;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value ImAddressDictionaryEntryType[]
      * @return ContactItemType
@@ -801,6 +633,14 @@ class ContactItemType extends ItemType
     {
         $this->imAddresses = $this->castValueIfNeeded("imAddresses", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getJobTitle()
+    {
+        return $this->jobTitle;
     }
 
     /**
@@ -815,6 +655,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getManager()
+    {
+        return $this->manager;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -823,6 +671,14 @@ class ContactItemType extends ItemType
     {
         $this->manager = $this->castValueIfNeeded("manager", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMileage()
+    {
+        return $this->mileage;
     }
 
     /**
@@ -837,6 +693,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getOfficeLocation()
+    {
+        return $this->officeLocation;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -845,6 +709,14 @@ class ContactItemType extends ItemType
     {
         $this->officeLocation = $this->castValueIfNeeded("officeLocation", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPostalAddressIndex()
+    {
+        return $this->postalAddressIndex;
     }
 
     /**
@@ -859,6 +731,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getProfession()
+    {
+        return $this->profession;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -867,6 +747,14 @@ class ContactItemType extends ItemType
     {
         $this->profession = $this->castValueIfNeeded("profession", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSpouseName()
+    {
+        return $this->spouseName;
     }
 
     /**
@@ -881,6 +769,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -889,6 +785,14 @@ class ContactItemType extends ItemType
     {
         $this->surname = $this->castValueIfNeeded("surname", $value);
         return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getWeddingAnniversary()
+    {
+        return $this->weddingAnniversary;
     }
 
     /**
@@ -911,6 +815,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return boolean
+     */
+    public function getHasPicture()
+    {
+        return $this->hasPicture;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value bool
      * @return ContactItemType
@@ -919,6 +831,14 @@ class ContactItemType extends ItemType
     {
         $this->hasPicture = $this->castValueIfNeeded("hasPicture", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhoneticFullName()
+    {
+        return $this->phoneticFullName;
     }
 
     /**
@@ -933,6 +853,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getPhoneticFirstName()
+    {
+        return $this->phoneticFirstName;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -941,6 +869,14 @@ class ContactItemType extends ItemType
     {
         $this->phoneticFirstName = $this->castValueIfNeeded("phoneticFirstName", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhoneticLastName()
+    {
+        return $this->phoneticLastName;
     }
 
     /**
@@ -955,6 +891,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getAlias()
+    {
+        return $this->alias;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -963,6 +907,14 @@ class ContactItemType extends ItemType
     {
         $this->alias = $this->castValueIfNeeded("alias", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNotes()
+    {
+        return $this->notes;
     }
 
     /**
@@ -977,6 +929,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string
      * @return ContactItemType
@@ -985,6 +945,14 @@ class ContactItemType extends ItemType
     {
         $this->photo = $this->castValueIfNeeded("photo", $value);
         return $this;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getUserSMIMECertificate()
+    {
+        return $this->userSMIMECertificate;
     }
 
     /**
@@ -999,6 +967,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return string[]
+     */
+    public function getMSExchangeCertificate()
+    {
+        return $this->mSExchangeCertificate;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value string[]
      * @return ContactItemType
@@ -1007,6 +983,14 @@ class ContactItemType extends ItemType
     {
         $this->mSExchangeCertificate = $this->castValueIfNeeded("mSExchangeCertificate", $value);
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDirectoryId()
+    {
+        return $this->directoryId;
     }
 
     /**
@@ -1021,6 +1005,14 @@ class ContactItemType extends ItemType
     }
 
     /**
+     * @return SingleRecipientType
+     */
+    public function getManagerMailbox()
+    {
+        return $this->managerMailbox;
+    }
+
+    /**
      * @autogenerated This method is safe to replace
      * @param $value SingleRecipientType
      * @return ContactItemType
@@ -1029,6 +1021,14 @@ class ContactItemType extends ItemType
     {
         $this->managerMailbox = $this->castValueIfNeeded("managerMailbox", $value);
         return $this;
+    }
+
+    /**
+     * @return EmailAddressType[]
+     */
+    public function getDirectReports()
+    {
+        return $this->directReports;
     }
 
     /**
