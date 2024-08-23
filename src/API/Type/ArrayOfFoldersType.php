@@ -86,23 +86,23 @@ class ArrayOfFoldersType extends Type implements Countable, ArrayAccess, Iterato
         return $this->allFolders;
     }
 
-    public function count()
+    public function count(): int
     {
         return count($this->getAllFolders());
     }
 
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->getAllFolders()[$offset]);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         $this->getAllFolders();
         return isset($this->allFolders[$offset]) ? $this->allFolders[$offset] : null;
     }
 
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $this->getAllFolders();
 
@@ -113,13 +113,13 @@ class ArrayOfFoldersType extends Type implements Countable, ArrayAccess, Iterato
         }
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         $this->getAllFolders();
         unset($this->allFolders[$offset]);
     }
 
-    public function getIterator()
+    public function getIterator(): \ArrayIterator
     {
         $this->getAllFolders();
         return new \ArrayIterator($this->allFolders);

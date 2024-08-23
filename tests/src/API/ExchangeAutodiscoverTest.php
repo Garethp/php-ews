@@ -87,7 +87,7 @@ class ExchangeAutodiscoverTest extends TestCase
     /**
      * @TODO: Needs more, and better, test values
      */
-    public function serverVersionProvider()
+    public static function serverVersionProvider()
     {
         return [
             ['73C08484', 'Exchange2013_SP1'],

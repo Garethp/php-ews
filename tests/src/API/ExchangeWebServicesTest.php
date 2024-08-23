@@ -69,7 +69,7 @@ class ExchangeWebServicesTest extends TestCase
         $this->assertEquals($client->getPrimarySmtpEmailAddress(), 'test@test.com');
     }
 
-    public function cleanServerUrlProvider()
+    public static function cleanServerUrlProvider()
     {
         return array(
             array('test.com', 'test.com'),

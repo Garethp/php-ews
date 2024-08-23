@@ -53,22 +53,22 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
      */
     protected $folders = null;
 
-    public function count()
+    public function count(): int
     {
         return count($this->folders);
     }
 
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->folders[$offset]);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->folders[$offset]) ? $this->folders[$offset] : null;
     }
 
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             array_push($this->folders, $value);
@@ -77,12 +77,12 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
         }
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->folders[$offset]);
     }
 
-    public function getIterator()
+    public function getIterator(): \ArrayIterator
     {
         return new \ArrayIterator($this->folders->getIterator());
     }

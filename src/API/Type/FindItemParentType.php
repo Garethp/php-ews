@@ -58,24 +58,24 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     protected $lastRequest = null;
 
-    public function count()
+    public function count(): int
     {
         return count($this->items);
     }
 
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         $arrayAccessName = ($this->items != null ? 'items' : 'groups');
         return isset($this->{$arrayAccessName}[$offset]);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         $arrayAccessName = ($this->items != null ? 'items' : 'groups');
         return isset($this->{$arrayAccessName}[$offset]) ? $this->{$arrayAccessName}[$offset] : null;
     }
 
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $arrayAccessName = ($this->items != null ? 'items' : 'groups');
 
@@ -86,13 +86,13 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
         }
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         $arrayAccessName = ($this->items != null ? 'items' : 'groups');
         unset($this->{$arrayAccessName}[$offset]);
     }
 
-    public function getIterator()
+    public function getIterator(): \ArrayIterator
     {
         $arrayAccessName = ($this->items != null ? 'items' : 'groups');
         return new \ArrayIterator($this->{$arrayAccessName}->getIterator());

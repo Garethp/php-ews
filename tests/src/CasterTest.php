@@ -37,7 +37,7 @@ class CasterTest extends TestCase
         $this->assertEquals($expected, Caster::castExists($from, $to));
     }
 
-    public function castProvider()
+    public static function castProvider()
     {
         return array(
             //DateTime caster
@@ -64,7 +64,7 @@ class CasterTest extends TestCase
         );
     }
 
-    public function castExistsProvider()
+    public static function castExistsProvider()
     {
         return array(
             array('string', 'date', true),

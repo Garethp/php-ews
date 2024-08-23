@@ -136,7 +136,7 @@ class TypeTest extends TestCase
         $this->assertSame(['test' => 'test', '_value' => 'value'], $type->getNonNullItems(true));
     }
 
-    public function arrayAssocProvider()
+    public static function arrayAssocProvider()
     {
         return array(
             array(array(), false),
@@ -147,7 +147,7 @@ class TypeTest extends TestCase
         );
     }
 
-    public function toStringProvider()
+    public static function toStringProvider()
     {
         return array(
             array(null, ''),
@@ -158,7 +158,7 @@ class TypeTest extends TestCase
         );
     }
 
-    public function magicIsDataProvider()
+    public static function magicIsDataProvider()
     {
         return array(
             array(
@@ -175,7 +175,7 @@ class TypeTest extends TestCase
         );
     }
 
-    public function magicExceptionProvider()
+    public static function magicExceptionProvider()
     {
         return array (
             array('getSomeValue'),
