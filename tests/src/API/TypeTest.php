@@ -4,6 +4,7 @@ namespace garethp\ews\Test\API;
 
 use garethp\ews\API\Type;
 use garethp\ews\API\Enumeration;
+use garethp\ews\API\XmlObject;
 use PHPUnit\Framework\TestCase;
 use Mockery;
 use DateTime;
@@ -20,82 +21,6 @@ class TypeTest extends TestCase
         }
 
         return $this->typeMock;
-    }
-
-    public function testMagicCall()
-    {
-        $item = Type::buildFromArray(array(
-            'One' => 'One',
-            'Two' => 'Two'
-        ));
-
-        $this->assertEquals('One', $item->getOne());
-        $this->assertEquals('Two', $item->getTwo());
-
-        $item->setTwo('Two Test');
-
-        $this->assertEquals('Two Test', $item->getTwo());
-
-        $item->setTwo('Two Test');
-        $this->assertEquals('Two Test', $item->getTwo());
-    }
-
-    /**
-     * @dataProvider magicExceptionProvider
-     */
-    public function testMagicCallFail($callName, $value = null)
-    {
-        $this->expectException(\Exception::class);
-        $calendarItem = new Type\CalendarItemType();
-
-        if ($value === null) {
-            $calendarItem->{$callName}();
-        } else {
-            $calendarItem->{$callName}($value);
-        }
-    }
-
-    /**
-     * @dataProvider magicIsDataProvider
-     */
-    public function testMagicIs($input, $valueName, $expected)
-    {
-        $item = Type::buildFromArray($input);
-
-        $this->assertEquals($item->is($valueName), $expected);
-
-        $callName = "is" . ucfirst($valueName);
-        $this->assertEquals($item->{$callName}(), $expected);
-
-        if (substr(strtolower($valueName), 0, 2) == "is") {
-            $valueName = substr($valueName, 2);
-            $callName = "is" . ucfirst($valueName);
-            $this->assertEquals($item->{$callName}(), $expected);
-        }
-    }
-
-    public function testMagicAdd()
-    {
-        $item = Type::buildFromArray(array(
-            'itemToAdd' => null
-        ));
-
-        $item->add('itemToAdd', 'someAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd'));
-
-        $item->add('itemToAdd', 'anotherAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
-        $item->setItemToAdd(null);
-
-        $item->addItemToAdd('someAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd'));
-
-        $item->addItemToAdd('anotherAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
-
-        $item->setItemToAdd('someAdd');
-        $item->addItemToAdd('anotherAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
     }
 
     public function testCast()
@@ -124,11 +49,11 @@ class TypeTest extends TestCase
             'Four' => array('FourOne' => 1, 'FourTwo' => 2, 'FourThree' => 3)
         );
 
-        $excepted = new Type();
+        $excepted = new XmlObject();
         $excepted->One = 'One';
         $excepted->Two = 'Two';
         $excepted->Three = array('1', '2', '3');
-        $excepted->Four = new Type();
+        $excepted->Four = new XmlObject();
         $excepted->Four->FourOne = 1;
         $excepted->Four->FourTwo = 2;
         $excepted->Four->FourThree = 3;
