@@ -10,11 +10,6 @@ use function garethp\ews\Utilities\ensureIsMailbox;
  *
  *
  * XSD Type: MessageType
- *
- * @method MessageType addToRecipients(EmailAddressType $toRecipients)
- * @method MessageType addCcRecipients(EmailAddressType $ccRecipients)
- * @method MessageType addBccRecipients(EmailAddressType $bccRecipients)
- * @method MessageType addReplyTo(EmailAddressType $replyTo)
  */
 class MessageType extends ItemType
 {
