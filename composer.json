@@ -13,7 +13,7 @@
 		"calendar",
 		"contacts",
 		"push notification"
-	],	
+	],
 	"require": {
 		"garethp/http-playback": "^2.0",
 		"ext-curl": "*",
@@ -45,6 +45,6 @@
 		"mockery/mockery": "1.3.*",
 		"goetas/xsd2php": "2.1.*",
 		"goetas/xsd-reader": "2.0.x-dev",
-		"phpunit/phpunit": "11.*"
+		"phpunit/phpunit": "11.*|10.*"
 	}
 }
