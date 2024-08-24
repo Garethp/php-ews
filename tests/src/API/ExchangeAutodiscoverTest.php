@@ -7,6 +7,7 @@ use garethp\ews\API;
 use garethp\ews\API\ExchangeAutodiscover as Autodiscover;
 use garethp\ews\API\Exception\AutodiscoverFailed;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class ExchangeAutodiscoverTest extends TestCase
 {
@@ -67,12 +68,7 @@ class ExchangeAutodiscoverTest extends TestCase
         $this->assertInstanceOf(API::class, $client);
     }
 
-    /**
-     * @dataProvider serverVersionProvider
-     *
-     * @param $hex
-     * @param $expectedVersion
-     */
+    #[DataProvider('serverVersionProvider')]
     public function testParseServerVersion($hex, $expectedVersion)
     {
         $reflectedClass = new \ReflectionClass(Autodiscover::class);

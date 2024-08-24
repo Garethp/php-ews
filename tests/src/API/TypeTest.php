@@ -8,6 +8,7 @@ use garethp\ews\API\XmlObject;
 use PHPUnit\Framework\TestCase;
 use Mockery;
 use DateTime;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class TypeTest extends TestCase
 {
@@ -72,12 +73,7 @@ class TypeTest extends TestCase
         $this->assertEquals($calendarControl, $calendarItem);
     }
 
-    /**
-     * @dataProvider arrayAssocProvider
-     *
-     * @param $array
-     * @param $expected
-     */
+    #[DataProvider('arrayAssocProvider')]
     public function testArrayIsAssoc($array, $expected)
     {
         $type = $this->getTypeMock();
@@ -86,9 +82,7 @@ class TypeTest extends TestCase
         $this->assertEquals($expected, $isAssoc);
     }
 
-    /**
-     * @dataProvider toStringProvider
-     */
+    #[DataProvider('toStringProvider')]
     public function testToString($string, $expected)
     {
         $type = $this->getTypeMock();
