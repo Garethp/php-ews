@@ -21,7 +21,7 @@
 		"ext-libxml": "*",
 		"ext-dom": "*",
 		"ext-simplexml": "*",
-		"laminas/laminas-code": "4.14"
+		"laminas/laminas-code": "4.*"
 	},
 	"scripts": {
 		"cs": "./vendor/bin/phpcs --standard=ruleset.xml -np src/ tests/ examples/",
