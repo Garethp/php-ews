@@ -341,14 +341,14 @@ class APITest extends BaseTestCase
      *
      * @return array
      */
-    public function listChangesProvider()
+    public static function listChangesProvider()
     {
         return array(
             array(array('Test', 'calendar'))
         );
     }
 
-    public function getFolderByDisplayNameProvider()
+    public static function getFolderByDisplayNameProvider()
     {
         return array(
             array('Common Views', 'Common Views')
