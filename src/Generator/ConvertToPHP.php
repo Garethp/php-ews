@@ -18,10 +18,8 @@ use Goetas\Xsd\XsdToPhp\Naming\NamingStrategy;
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClass;
 
 /**
- * Created by PhpStorm.
- * User: gareth
- * Date: 7-8-15
- * Time: 15:18
+ * We extend the ConvertToPHP command since it did mostly what we want. We just want to provider some default values,
+ * sub in our own PHPConverter, alias maps, file generation and docblocks on the ExchangeWebServices class.
  */
 class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
 {
@@ -85,6 +83,22 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
         return new PhpConverter($naming);
     }
 
+    /**
+     * Here we're passed in a converter which we add our AliasMaps to and use that to fetch our schemas that'll be
+     * transformed into our PHP Classes. We then iterate over each of the classes, check if we've already got a class
+     * by that name and load those classes in (so that we don't override any custom code) or create new ones if they
+     * don't exist. We pass that into our PhpConverter which will generate the bodies of the classes. Finally, we write
+     * the generated classes to disk. We also generate a ClassMap class that represents which xsd types/messages map
+     * to which PHP classes.
+     *
+     * @param AbstractConverter $converter
+     * @param array $schemas
+     * @param array $targets
+     * @param OutputInterface $output
+     * @return void
+     * @throws \Goetas\Xsd\XsdToPhp\PathGenerator\PathGeneratorException
+     * @throws \ReflectionException
+     */
     protected function convert(AbstractConverter $converter, array $schemas, array $targets, OutputInterface $output)
     {
         $this->setClientMethodDocblocks();
@@ -132,6 +146,9 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
             $classGen = new \Zend\Code\Generator\ClassGenerator();
 
             $itemClass = $item->getNamespace() . '\\' . $item->getName();
+
+            // If our class already exists, we'll load that and use it for `$classGen` so that we don't override any
+            // custom code
             if (class_exists($itemClass)) {
                 $fileGen = new FileGenerator();
                 $fileGen->setFilename($path);
@@ -139,6 +156,8 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
                 $existingFile = (new \Zend\Code\Reflection\ClassReflection($itemClass))->getDeclaringFile();
                 $classGen = \Zend\Code\Generator\ClassGenerator::fromReflection(new \Zend\Code\Reflection\ClassReflection($itemClass));
 
+                // Neither Laminas/Zend Code packages preserve `use` statements, so we're going to look them up through
+                // regex and add them back in
                 $usesToPreserve = preg_match_all("/\nuse ([^;]+);/", $existingFile->getContents(), $matches);
 
                 if ($usesToPreserve > 0) {
@@ -154,14 +173,16 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
                 $fileGen->setBody($classGen->generate());
 
                 $fileGen->write();
+
+                // Add the class to our classMap for writing
                 if (isset($item->type) && $item->type->getName() != "" && $item->getNamespace() !== Enumeration::class) {
                     $classMap[$item->type->getName()] =
                         '\\' . $namespace . '\\' . $classGen->getName();
                 }
-            } else {
             }
         }
 
+        // Once we're done with all the classes, write out our ClassMap
         $mappingClassReflection = new ClassReflection(ClassMap::class);
         $mappingClass = Generator\ClassGenerator::fromReflection($mappingClassReflection);
         $mappingClass->getProperty('classMap')->setDefaultValue($classMap);
@@ -175,10 +196,15 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
     }
 
     /**
-     * @return array
+     * To allow for better IDE support, we're going to add docblocks to the ExchangeWebServices class that show what
+     * methods we can call on the SOAP client. We fetch the methods by creating an actual SoapClient and converting the
+     * method names into method names that we can then add to the docblock. We reflect on the current
+     * ExchangeWebServices class so that we're not overriding any custom code or docblocks, just addin our methods tags
+     * on top of the existing class.
      */
-    protected function setClientMethodDocblocks()
+    protected function setClientMethodDocblocks(): void
     {
+        // @TODO: Can we pass the TypeMap into this SoapClient and get the actual method responses in our docblocks?
         $client = new \SoapClient(__DIR__ . '/../../Resources/wsdl/services.wsdl');
         $functions = $client->__getFunctions();
 
@@ -207,6 +233,8 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
             '\Closure'
         ];
 
+        // The Laminas/Zend Code package doesn't preserve any `use` statements, so we've got a list of manual uses that
+        // we always need to add back in
         foreach ($uses as $use) {
             if (!$exchangeWebServicesClass->hasUse($use)) {
                 $exchangeWebServicesClass->addUse($use);
