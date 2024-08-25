@@ -18,8 +18,6 @@ use \Closure;
 /**
  * Base class of the Exchange Web Services application.
  *
- *
- *
  * @package php-ews\Client
  *
  * @method Type AddDelegate($request)
@@ -85,54 +83,54 @@ use \Closure;
  */
 class ExchangeWebServices
 {
-    const VERSION_2007 = 'Exchange2007';
+    public const VERSION_2007 = 'Exchange2007';
 
-    const VERSION_2007_SP1 = 'Exchange2007_SP1';
+    public const VERSION_2007_SP1 = 'Exchange2007_SP1';
 
-    const VERSION_2010 = 'Exchange2010';
+    public const VERSION_2010 = 'Exchange2010';
 
-    const VERSION_2010_SP1 = 'Exchange2010_SP1';
+    public const VERSION_2010_SP1 = 'Exchange2010_SP1';
 
-    const VERSION_2010_SP2 = 'Exchange2010_SP2';
+    public const VERSION_2010_SP2 = 'Exchange2010_SP2';
 
-    const VERSION_2013 = 'Exchange2013';
+    public const VERSION_2013 = 'Exchange2013';
 
-    const VERSION_2013_SP1 = 'Exchange2013_SP1';
+    public const VERSION_2013_SP1 = 'Exchange2013_SP1';
 
-    const VERSION_2016 = 'Exchange2016';
+    public const VERSION_2016 = 'Exchange2016';
 
     /**
      * Password to use when connecting to the Exchange server.
      *
      * @var string
      */
-    protected $password = null;
+    protected $password;
 
     /**
      * Location of the Exchange server.
      *
      * @var string
      */
-    protected $server = null;
+    protected $server;
 
     /**
      * SOAP client used to make the request
      *
      * @var NTLMSoapClient
      */
-    protected $soap = null;
+    protected $soap;
 
     /**
      * Username to use when connecting to the Exchange server.
      *
      * @var string
      */
-    protected $username = null;
+    protected $username;
 
     /**
      * @var EmailAddressType
      */
-    protected $primarySmtpMailbox = null;
+    protected $primarySmtpMailbox;
 
     /**
      * @var Callable[]
@@ -153,9 +151,9 @@ class ExchangeWebServices
      *
      * @var string
      */
-    protected $version = null;
+    protected $version;
 
-    protected $options = null;
+    protected $options;
 
     /**
      * The timezone for the client
@@ -222,7 +220,7 @@ class ExchangeWebServices
      * @param string $password
      * @param array $options
      */
-    protected function __construct($server = null, $username = null, $password = null, $options = array())
+    protected function __construct($server = null, $username = null, $password = null, $options = [])
     {
         if ($server !== null) {
             $this->createClient(
@@ -499,7 +497,7 @@ class ExchangeWebServices
      * @param MiddlewareRequest $request
      * @return MiddlewareResponse
      */
-    protected function executeMiddlewareStack(array $middlewareStack, MiddlewareRequest $request)
+    protected function executeMiddlewareStack(array $middlewareStack, \garethp\ews\API\MiddlewareRequest $request)
     {
         $newStack = [];
         foreach ($middlewareStack as $key => $current) {

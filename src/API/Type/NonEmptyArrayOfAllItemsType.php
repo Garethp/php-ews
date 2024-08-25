@@ -9,73 +9,6 @@ use garethp\ews\API\Type;
  *
  *
  * XSD Type: NonEmptyArrayOfAllItemsType
- *
- * @method NonEmptyArrayOfAllItemsType addItem(ItemType $item)
- * @method ItemType[] getItem()
- * @method NonEmptyArrayOfAllItemsType setItem(array $item)
- * @method NonEmptyArrayOfAllItemsType addMessage(MessageType $message)
- * @method MessageType[] getMessage()
- * @method NonEmptyArrayOfAllItemsType setMessage(array $message)
- * @method NonEmptyArrayOfAllItemsType addCalendarItem(CalendarItemType $calendarItem)
- * @method CalendarItemType[] getCalendarItem()
- * @method NonEmptyArrayOfAllItemsType setCalendarItem(array $calendarItem)
- * @method NonEmptyArrayOfAllItemsType addContact(ContactItemType $contact)
- * @method ContactItemType[] getContact()
- * @method NonEmptyArrayOfAllItemsType setContact(array $contact)
- * @method NonEmptyArrayOfAllItemsType addDistributionList(DistributionListType $distributionList)
- * @method DistributionListType[] getDistributionList()
- * @method NonEmptyArrayOfAllItemsType setDistributionList(array $distributionList)
- * @method NonEmptyArrayOfAllItemsType addMeetingMessage(MeetingMessageType $meetingMessage)
- * @method MeetingMessageType[] getMeetingMessage()
- * @method NonEmptyArrayOfAllItemsType setMeetingMessage(array $meetingMessage)
- * @method NonEmptyArrayOfAllItemsType addMeetingRequest(MeetingRequestMessageType $meetingRequest)
- * @method MeetingRequestMessageType[] getMeetingRequest()
- * @method NonEmptyArrayOfAllItemsType setMeetingRequest(array $meetingRequest)
- * @method NonEmptyArrayOfAllItemsType addMeetingResponse(MeetingResponseMessageType $meetingResponse)
- * @method MeetingResponseMessageType[] getMeetingResponse()
- * @method NonEmptyArrayOfAllItemsType setMeetingResponse(array $meetingResponse)
- * @method NonEmptyArrayOfAllItemsType addMeetingCancellation(MeetingCancellationMessageType $meetingCancellation)
- * @method MeetingCancellationMessageType[] getMeetingCancellation()
- * @method NonEmptyArrayOfAllItemsType setMeetingCancellation(array $meetingCancellation)
- * @method NonEmptyArrayOfAllItemsType addTask(TaskType $task)
- * @method TaskType[] getTask()
- * @method NonEmptyArrayOfAllItemsType setTask(array $task)
- * @method NonEmptyArrayOfAllItemsType addPostItem(PostItemType $postItem)
- * @method PostItemType[] getPostItem()
- * @method NonEmptyArrayOfAllItemsType setPostItem(array $postItem)
- * @method NonEmptyArrayOfAllItemsType addReplyToItem(ReplyToItemType $replyToItem)
- * @method ReplyToItemType[] getReplyToItem()
- * @method NonEmptyArrayOfAllItemsType setReplyToItem(array $replyToItem)
- * @method NonEmptyArrayOfAllItemsType addForwardItem(ForwardItemType $forwardItem)
- * @method ForwardItemType[] getForwardItem()
- * @method NonEmptyArrayOfAllItemsType setForwardItem(array $forwardItem)
- * @method NonEmptyArrayOfAllItemsType addReplyAllToItem(ReplyAllToItemType $replyAllToItem)
- * @method ReplyAllToItemType[] getReplyAllToItem()
- * @method NonEmptyArrayOfAllItemsType setReplyAllToItem(array $replyAllToItem)
- * @method NonEmptyArrayOfAllItemsType addAcceptItem(AcceptItemType $acceptItem)
- * @method AcceptItemType[] getAcceptItem()
- * @method NonEmptyArrayOfAllItemsType setAcceptItem(array $acceptItem)
- * @method NonEmptyArrayOfAllItemsType addTentativelyAcceptItem(TentativelyAcceptItemType $tentativelyAcceptItem)
- * @method TentativelyAcceptItemType[] getTentativelyAcceptItem()
- * @method NonEmptyArrayOfAllItemsType setTentativelyAcceptItem(array $tentativelyAcceptItem)
- * @method NonEmptyArrayOfAllItemsType addDeclineItem(DeclineItemType $declineItem)
- * @method DeclineItemType[] getDeclineItem()
- * @method NonEmptyArrayOfAllItemsType setDeclineItem(array $declineItem)
- * @method NonEmptyArrayOfAllItemsType addCancelCalendarItem(CancelCalendarItemType $cancelCalendarItem)
- * @method CancelCalendarItemType[] getCancelCalendarItem()
- * @method NonEmptyArrayOfAllItemsType setCancelCalendarItem(array $cancelCalendarItem)
- * @method NonEmptyArrayOfAllItemsType addRemoveItem(RemoveItemType $removeItem)
- * @method RemoveItemType[] getRemoveItem()
- * @method NonEmptyArrayOfAllItemsType setRemoveItem(array $removeItem)
- * @method NonEmptyArrayOfAllItemsType addSuppressReadReceipt(SuppressReadReceiptType $suppressReadReceipt)
- * @method SuppressReadReceiptType[] getSuppressReadReceipt()
- * @method NonEmptyArrayOfAllItemsType setSuppressReadReceipt(array $suppressReadReceipt)
- * @method NonEmptyArrayOfAllItemsType addPostReplyItem(PostReplyItemType $postReplyItem)
- * @method PostReplyItemType[] getPostReplyItem()
- * @method NonEmptyArrayOfAllItemsType setPostReplyItem(array $postReplyItem)
- * @method NonEmptyArrayOfAllItemsType addAcceptSharingInvitation(AcceptSharingInvitationType $acceptSharingInvitation)
- * @method AcceptSharingInvitationType[] getAcceptSharingInvitation()
- * @method NonEmptyArrayOfAllItemsType setAcceptSharingInvitation(array $acceptSharingInvitation)
  */
 class NonEmptyArrayOfAllItemsType extends Type
 {
@@ -189,4 +122,906 @@ class NonEmptyArrayOfAllItemsType extends Type
      * @var \garethp\ews\API\Type\AcceptSharingInvitationType[]
      */
     protected $acceptSharingInvitation = null;
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addItem(ItemType $value)
+    {
+        $value = $this->castValueIfNeeded("item", $value);
+
+        if ($this->item === null) {
+            $this->item = array();
+        }
+
+        if (!is_array($this->item)) {
+            $this->item = array($this->item);
+        }
+
+        $this->item[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ItemType[]
+     */
+    public function getItem()
+    {
+        return $this->item;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setItem(array $value)
+    {
+        $this->item = $this->castValueIfNeeded("item", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MessageType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addMessage(MessageType $value)
+    {
+        $value = $this->castValueIfNeeded("message", $value);
+
+        if ($this->message === null) {
+            $this->message = array();
+        }
+
+        if (!is_array($this->message)) {
+            $this->message = array($this->message);
+        }
+
+        $this->message[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return MessageType[]
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MessageType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setMessage(array $value)
+    {
+        $this->message = $this->castValueIfNeeded("message", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value CalendarItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addCalendarItem(CalendarItemType $value)
+    {
+        $value = $this->castValueIfNeeded("calendarItem", $value);
+
+        if ($this->calendarItem === null) {
+            $this->calendarItem = array();
+        }
+
+        if (!is_array($this->calendarItem)) {
+            $this->calendarItem = array($this->calendarItem);
+        }
+
+        $this->calendarItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return CalendarItemType[]
+     */
+    public function getCalendarItem()
+    {
+        return $this->calendarItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value CalendarItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setCalendarItem(array $value)
+    {
+        $this->calendarItem = $this->castValueIfNeeded("calendarItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ContactItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addContact(ContactItemType $value)
+    {
+        $value = $this->castValueIfNeeded("contact", $value);
+
+        if ($this->contact === null) {
+            $this->contact = array();
+        }
+
+        if (!is_array($this->contact)) {
+            $this->contact = array($this->contact);
+        }
+
+        $this->contact[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ContactItemType[]
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ContactItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setContact(array $value)
+    {
+        $this->contact = $this->castValueIfNeeded("contact", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value DistributionListType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addDistributionList(DistributionListType $value)
+    {
+        $value = $this->castValueIfNeeded("distributionList", $value);
+
+        if ($this->distributionList === null) {
+            $this->distributionList = array();
+        }
+
+        if (!is_array($this->distributionList)) {
+            $this->distributionList = array($this->distributionList);
+        }
+
+        $this->distributionList[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return DistributionListType[]
+     */
+    public function getDistributionList()
+    {
+        return $this->distributionList;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value DistributionListType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setDistributionList(array $value)
+    {
+        $this->distributionList = $this->castValueIfNeeded("distributionList", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MeetingMessageType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addMeetingMessage(MeetingMessageType $value)
+    {
+        $value = $this->castValueIfNeeded("meetingMessage", $value);
+
+        if ($this->meetingMessage === null) {
+            $this->meetingMessage = array();
+        }
+
+        if (!is_array($this->meetingMessage)) {
+            $this->meetingMessage = array($this->meetingMessage);
+        }
+
+        $this->meetingMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return MeetingMessageType[]
+     */
+    public function getMeetingMessage()
+    {
+        return $this->meetingMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MeetingMessageType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setMeetingMessage(array $value)
+    {
+        $this->meetingMessage = $this->castValueIfNeeded("meetingMessage", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MeetingRequestMessageType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addMeetingRequest(MeetingRequestMessageType $value)
+    {
+        $value = $this->castValueIfNeeded("meetingRequest", $value);
+
+        if ($this->meetingRequest === null) {
+            $this->meetingRequest = array();
+        }
+
+        if (!is_array($this->meetingRequest)) {
+            $this->meetingRequest = array($this->meetingRequest);
+        }
+
+        $this->meetingRequest[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return MeetingRequestMessageType[]
+     */
+    public function getMeetingRequest()
+    {
+        return $this->meetingRequest;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MeetingRequestMessageType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setMeetingRequest(array $value)
+    {
+        $this->meetingRequest = $this->castValueIfNeeded("meetingRequest", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MeetingResponseMessageType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addMeetingResponse(MeetingResponseMessageType $value)
+    {
+        $value = $this->castValueIfNeeded("meetingResponse", $value);
+
+        if ($this->meetingResponse === null) {
+            $this->meetingResponse = array();
+        }
+
+        if (!is_array($this->meetingResponse)) {
+            $this->meetingResponse = array($this->meetingResponse);
+        }
+
+        $this->meetingResponse[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return MeetingResponseMessageType[]
+     */
+    public function getMeetingResponse()
+    {
+        return $this->meetingResponse;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MeetingResponseMessageType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setMeetingResponse(array $value)
+    {
+        $this->meetingResponse = $this->castValueIfNeeded("meetingResponse", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MeetingCancellationMessageType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addMeetingCancellation(MeetingCancellationMessageType $value)
+    {
+        $value = $this->castValueIfNeeded("meetingCancellation", $value);
+
+        if ($this->meetingCancellation === null) {
+            $this->meetingCancellation = array();
+        }
+
+        if (!is_array($this->meetingCancellation)) {
+            $this->meetingCancellation = array($this->meetingCancellation);
+        }
+
+        $this->meetingCancellation[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return MeetingCancellationMessageType[]
+     */
+    public function getMeetingCancellation()
+    {
+        return $this->meetingCancellation;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MeetingCancellationMessageType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setMeetingCancellation(array $value)
+    {
+        $this->meetingCancellation = $this->castValueIfNeeded("meetingCancellation", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value TaskType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addTask(TaskType $value)
+    {
+        $value = $this->castValueIfNeeded("task", $value);
+
+        if ($this->task === null) {
+            $this->task = array();
+        }
+
+        if (!is_array($this->task)) {
+            $this->task = array($this->task);
+        }
+
+        $this->task[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return TaskType[]
+     */
+    public function getTask()
+    {
+        return $this->task;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value TaskType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setTask(array $value)
+    {
+        $this->task = $this->castValueIfNeeded("task", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PostItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addPostItem(PostItemType $value)
+    {
+        $value = $this->castValueIfNeeded("postItem", $value);
+
+        if ($this->postItem === null) {
+            $this->postItem = array();
+        }
+
+        if (!is_array($this->postItem)) {
+            $this->postItem = array($this->postItem);
+        }
+
+        $this->postItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return PostItemType[]
+     */
+    public function getPostItem()
+    {
+        return $this->postItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PostItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setPostItem(array $value)
+    {
+        $this->postItem = $this->castValueIfNeeded("postItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ReplyToItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addReplyToItem(ReplyToItemType $value)
+    {
+        $value = $this->castValueIfNeeded("replyToItem", $value);
+
+        if ($this->replyToItem === null) {
+            $this->replyToItem = array();
+        }
+
+        if (!is_array($this->replyToItem)) {
+            $this->replyToItem = array($this->replyToItem);
+        }
+
+        $this->replyToItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ReplyToItemType[]
+     */
+    public function getReplyToItem()
+    {
+        return $this->replyToItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ReplyToItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setReplyToItem(array $value)
+    {
+        $this->replyToItem = $this->castValueIfNeeded("replyToItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ForwardItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addForwardItem(ForwardItemType $value)
+    {
+        $value = $this->castValueIfNeeded("forwardItem", $value);
+
+        if ($this->forwardItem === null) {
+            $this->forwardItem = array();
+        }
+
+        if (!is_array($this->forwardItem)) {
+            $this->forwardItem = array($this->forwardItem);
+        }
+
+        $this->forwardItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ForwardItemType[]
+     */
+    public function getForwardItem()
+    {
+        return $this->forwardItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ForwardItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setForwardItem(array $value)
+    {
+        $this->forwardItem = $this->castValueIfNeeded("forwardItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ReplyAllToItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addReplyAllToItem(ReplyAllToItemType $value)
+    {
+        $value = $this->castValueIfNeeded("replyAllToItem", $value);
+
+        if ($this->replyAllToItem === null) {
+            $this->replyAllToItem = array();
+        }
+
+        if (!is_array($this->replyAllToItem)) {
+            $this->replyAllToItem = array($this->replyAllToItem);
+        }
+
+        $this->replyAllToItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ReplyAllToItemType[]
+     */
+    public function getReplyAllToItem()
+    {
+        return $this->replyAllToItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ReplyAllToItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setReplyAllToItem(array $value)
+    {
+        $this->replyAllToItem = $this->castValueIfNeeded("replyAllToItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AcceptItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addAcceptItem(AcceptItemType $value)
+    {
+        $value = $this->castValueIfNeeded("acceptItem", $value);
+
+        if ($this->acceptItem === null) {
+            $this->acceptItem = array();
+        }
+
+        if (!is_array($this->acceptItem)) {
+            $this->acceptItem = array($this->acceptItem);
+        }
+
+        $this->acceptItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return AcceptItemType[]
+     */
+    public function getAcceptItem()
+    {
+        return $this->acceptItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AcceptItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setAcceptItem(array $value)
+    {
+        $this->acceptItem = $this->castValueIfNeeded("acceptItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value TentativelyAcceptItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addTentativelyAcceptItem(TentativelyAcceptItemType $value)
+    {
+        $value = $this->castValueIfNeeded("tentativelyAcceptItem", $value);
+
+        if ($this->tentativelyAcceptItem === null) {
+            $this->tentativelyAcceptItem = array();
+        }
+
+        if (!is_array($this->tentativelyAcceptItem)) {
+            $this->tentativelyAcceptItem = array($this->tentativelyAcceptItem);
+        }
+
+        $this->tentativelyAcceptItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return TentativelyAcceptItemType[]
+     */
+    public function getTentativelyAcceptItem()
+    {
+        return $this->tentativelyAcceptItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value TentativelyAcceptItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setTentativelyAcceptItem(array $value)
+    {
+        $this->tentativelyAcceptItem = $this->castValueIfNeeded("tentativelyAcceptItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value DeclineItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addDeclineItem(DeclineItemType $value)
+    {
+        $value = $this->castValueIfNeeded("declineItem", $value);
+
+        if ($this->declineItem === null) {
+            $this->declineItem = array();
+        }
+
+        if (!is_array($this->declineItem)) {
+            $this->declineItem = array($this->declineItem);
+        }
+
+        $this->declineItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return DeclineItemType[]
+     */
+    public function getDeclineItem()
+    {
+        return $this->declineItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value DeclineItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setDeclineItem(array $value)
+    {
+        $this->declineItem = $this->castValueIfNeeded("declineItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value CancelCalendarItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addCancelCalendarItem(CancelCalendarItemType $value)
+    {
+        $value = $this->castValueIfNeeded("cancelCalendarItem", $value);
+
+        if ($this->cancelCalendarItem === null) {
+            $this->cancelCalendarItem = array();
+        }
+
+        if (!is_array($this->cancelCalendarItem)) {
+            $this->cancelCalendarItem = array($this->cancelCalendarItem);
+        }
+
+        $this->cancelCalendarItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return CancelCalendarItemType[]
+     */
+    public function getCancelCalendarItem()
+    {
+        return $this->cancelCalendarItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value CancelCalendarItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setCancelCalendarItem(array $value)
+    {
+        $this->cancelCalendarItem = $this->castValueIfNeeded("cancelCalendarItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value RemoveItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addRemoveItem(RemoveItemType $value)
+    {
+        $value = $this->castValueIfNeeded("removeItem", $value);
+
+        if ($this->removeItem === null) {
+            $this->removeItem = array();
+        }
+
+        if (!is_array($this->removeItem)) {
+            $this->removeItem = array($this->removeItem);
+        }
+
+        $this->removeItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return RemoveItemType[]
+     */
+    public function getRemoveItem()
+    {
+        return $this->removeItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value RemoveItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setRemoveItem(array $value)
+    {
+        $this->removeItem = $this->castValueIfNeeded("removeItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value SuppressReadReceiptType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addSuppressReadReceipt(SuppressReadReceiptType $value)
+    {
+        $value = $this->castValueIfNeeded("suppressReadReceipt", $value);
+
+        if ($this->suppressReadReceipt === null) {
+            $this->suppressReadReceipt = array();
+        }
+
+        if (!is_array($this->suppressReadReceipt)) {
+            $this->suppressReadReceipt = array($this->suppressReadReceipt);
+        }
+
+        $this->suppressReadReceipt[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return SuppressReadReceiptType[]
+     */
+    public function getSuppressReadReceipt()
+    {
+        return $this->suppressReadReceipt;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value SuppressReadReceiptType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setSuppressReadReceipt(array $value)
+    {
+        $this->suppressReadReceipt = $this->castValueIfNeeded("suppressReadReceipt", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PostReplyItemType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addPostReplyItem(PostReplyItemType $value)
+    {
+        $value = $this->castValueIfNeeded("postReplyItem", $value);
+
+        if ($this->postReplyItem === null) {
+            $this->postReplyItem = array();
+        }
+
+        if (!is_array($this->postReplyItem)) {
+            $this->postReplyItem = array($this->postReplyItem);
+        }
+
+        $this->postReplyItem[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return PostReplyItemType[]
+     */
+    public function getPostReplyItem()
+    {
+        return $this->postReplyItem;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PostReplyItemType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setPostReplyItem(array $value)
+    {
+        $this->postReplyItem = $this->castValueIfNeeded("postReplyItem", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AcceptSharingInvitationType
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function addAcceptSharingInvitation(AcceptSharingInvitationType $value)
+    {
+        $value = $this->castValueIfNeeded("acceptSharingInvitation", $value);
+
+        if ($this->acceptSharingInvitation === null) {
+            $this->acceptSharingInvitation = array();
+        }
+
+        if (!is_array($this->acceptSharingInvitation)) {
+            $this->acceptSharingInvitation = array($this->acceptSharingInvitation);
+        }
+
+        $this->acceptSharingInvitation[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return AcceptSharingInvitationType[]
+     */
+    public function getAcceptSharingInvitation()
+    {
+        return $this->acceptSharingInvitation;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AcceptSharingInvitationType[]
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function setAcceptSharingInvitation(array $value)
+    {
+        $this->acceptSharingInvitation = $this->castValueIfNeeded("acceptSharingInvitation", $value);
+        return $this;
+    }
 }

@@ -1,8 +1,4 @@
 <?php
-/**
- * Contains \garethp\ews\API\Enumeration\ConversationActionTypeType.
- */
-
 
 namespace garethp\ews\API\Enumeration;
 

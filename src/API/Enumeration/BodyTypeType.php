@@ -1,8 +1,4 @@
 <?php
-/**
- * Contains \garethp\ews\API\Enumeration\BodyTypeType.
- */
-
 
 namespace garethp\ews\API\Enumeration;
 

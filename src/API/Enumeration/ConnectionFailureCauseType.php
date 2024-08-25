@@ -1,8 +1,4 @@
 <?php
-/**
- * Contains \garethp\ews\API\EnumerationConnectionFailureCauseType.
- */
-
 
 namespace garethp\ews\API\Enumeration;
 
