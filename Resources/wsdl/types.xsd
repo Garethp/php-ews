@@ -2350,7 +2350,7 @@
     <xs:complexContent>
       <xs:extension base="t:RecurrencePatternBaseType">
         <xs:sequence>
-          <xs:element name="DaysOfWeek" type="t:DayOfWeekType" />
+          <xs:element name="DaysOfWeek" type="t:DaysOfWeekType" />
           <xs:element name="DayOfWeekIndex" type="t:DayOfWeekIndexType" />
           <xs:element name="Month" type="t:MonthNamesType" />
         </xs:sequence>
@@ -2373,7 +2373,7 @@
     <xs:complexContent>
       <xs:extension base="t:IntervalRecurrencePatternBaseType">
         <xs:sequence>
-          <xs:element name="DaysOfWeek" type="t:DayOfWeekType" />
+          <xs:element name="DaysOfWeek" type="t:DaysOfWeekType" />
           <xs:element name="DayOfWeekIndex" type="t:DayOfWeekIndexType" />
         </xs:sequence>
       </xs:extension>

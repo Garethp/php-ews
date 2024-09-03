@@ -8,8 +8,9 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: RelativeYearlyRecurrencePatternType
  *
- * @method string getDaysOfWeek()
- * @method RelativeYearlyRecurrencePatternType setDaysOfWeek(string $daysOfWeek)
+ * @method RelativeYearlyRecurrencePatternType addDaysOfWeek(string $daysOfWeek)
+ * @method string[] getDaysOfWeek()
+ * @method RelativeYearlyRecurrencePatternType setDaysOfWeek(array $daysOfWeek)
  * @method string getDayOfWeekIndex()
  * @method RelativeYearlyRecurrencePatternType setDayOfWeekIndex(string $dayOfWeekIndex)
  * @method string getMonth()
@@ -19,7 +20,7 @@ class RelativeYearlyRecurrencePatternType extends RecurrencePatternBaseType
 {
 
     /**
-     * @var string
+     * @var array
      */
     protected $daysOfWeek = null;
 

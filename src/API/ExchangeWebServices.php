@@ -85,6 +85,7 @@ use \Closure;
  */
 class ExchangeWebServices
 {
+
     const VERSION_2007 = 'Exchange2007';
 
     const VERSION_2007_SP1 = 'Exchange2007_SP1';
