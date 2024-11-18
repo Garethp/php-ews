@@ -12,9 +12,7 @@ $ews = ExchangeWebServices::withUsernameAndPassword('server', 'username', 'passw
 $request = [
     'ArchiveSourceFolderId' => (new DistinguishedFolderIdType(DistinguishedFolderIdNameType::INBOX))->toArray(true),
     'ItemIds' => [
-        'ItemId' => array_map(function($itemId) {
-            return (new Type\ItemIdType($itemId))->toArray();
-        }, ['ItemID1', 'ItemID2']),
+        'ItemId' => ['ItemID1', 'ItemID2'],
     ]
 ];
 $request = Type::buildFromArray($request);

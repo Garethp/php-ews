@@ -9,6 +9,11 @@ use garethp\ews\API\Type\DistinguishedFolderIdType;
 
 $ews = ExchangeWebServices::withUsernameAndPassword('server', 'username', 'password');
 
+// This request searches for mail items in INBOX folder that were already replied-to
+// and their subject or body contains a specific keyword or search phrase. The results
+// are ordered by message received time and paginated with 10 items per page.
+// It could be used as an example how to do a Restrictions-search on multiple fields
+// including extended properties search.
 $request = array(
     'Traversal' => 'Shallow',
     'ItemShape' => array(
