@@ -1171,7 +1171,9 @@
     <!-- using choice here so that proxy generator will not flatten the array and thus lose the
         item element names -->
     <xs:choice maxOccurs ="unbounded">
-      <xs:element ref="t:Path"/>
+      <xs:element ref="t:FieldURI"/>
+      <xs:element ref="t:IndexedFieldURI"/>
+      <xs:element ref="t:ExtendedFieldURI"/>
     </xs:choice>
   </xs:complexType>
 
@@ -1386,7 +1388,11 @@
             can then only hold a single property that is in agreement with the single path
             element-->
     <xs:sequence>
-      <xs:element ref="t:Path"/>
+       <xs:choice maxOccurs ="unbounded">
+          <xs:element ref="t:FieldURI"/>
+          <xs:element ref="t:IndexedFieldURI"/>
+          <xs:element ref="t:ExtendedFieldURI"/>
+      </xs:choice>
     </xs:sequence>
   </xs:complexType>
 
@@ -5784,7 +5790,11 @@
     <xs:complexContent>
       <xs:extension base="t:SearchExpressionType">
         <xs:sequence>
-          <xs:element ref="t:Path"/>
+          <xs:choice maxOccurs ="unbounded">
+            <xs:element ref="t:FieldURI"/>
+            <xs:element ref="t:IndexedFieldURI"/>
+            <xs:element ref="t:ExtendedFieldURI"/>
+          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -5793,7 +5803,9 @@
 
   <xs:complexType name="FieldURIOrConstantType">
     <xs:choice>
-      <xs:element ref="t:Path"/>
+      <xs:element ref="t:FieldURI"/>
+      <xs:element ref="t:IndexedFieldURI"/>
+      <xs:element ref="t:ExtendedFieldURI"/>
       <xs:element name="Constant" type="t:ConstantValueType" />
     </xs:choice>
   </xs:complexType>
@@ -5802,7 +5814,11 @@
     <xs:complexContent>
       <xs:extension base="t:SearchExpressionType">
         <xs:sequence>
-          <xs:element ref="t:Path"/>
+          <xs:choice maxOccurs ="unbounded">
+            <xs:element ref="t:FieldURI"/>
+            <xs:element ref="t:IndexedFieldURI"/>
+            <xs:element ref="t:ExtendedFieldURI"/>
+          </xs:choice>
           <xs:element name="FieldURIOrConstant" type="t:FieldURIOrConstantType"/>
         </xs:sequence>
       </xs:extension>
@@ -5824,7 +5840,11 @@
     <xs:complexContent>
       <xs:extension base="t:SearchExpressionType">
         <xs:sequence>
-          <xs:element ref="t:Path"/>
+          <xs:choice maxOccurs ="unbounded">
+            <xs:element ref="t:FieldURI"/>
+            <xs:element ref="t:IndexedFieldURI"/>
+            <xs:element ref="t:ExtendedFieldURI"/>
+          </xs:choice>
           <xs:element name="Bitmask" type="t:ExcludesValueType" />
         </xs:sequence>
       </xs:extension>
@@ -5898,7 +5918,11 @@
     <xs:complexContent>
       <xs:extension base="t:SearchExpressionType">
         <xs:sequence>
-          <xs:element ref="t:Path"/>
+          <xs:choice maxOccurs ="unbounded">
+            <xs:element ref="t:FieldURI"/>
+            <xs:element ref="t:IndexedFieldURI"/>
+            <xs:element ref="t:ExtendedFieldURI"/>
+          </xs:choice>
           <xs:element name="Constant" type="t:ConstantValueType" />
         </xs:sequence>
         <xs:attribute name="ContainmentMode" type="t:ContainmentModeType" use="optional" />
@@ -5913,7 +5937,20 @@
     <xs:complexContent>
       <xs:extension base="t:SearchExpressionType">
         <xs:sequence>
-          <xs:element ref="t:SearchExpression"/>
+          <xs:choice maxOccurs ="unbounded">
+            <xs:element ref="t:Contains"/>
+            <xs:element ref="t:Excludes"/>
+            <xs:element ref="t:Exists"/>
+            <xs:element ref="t:IsEqualTo"/>
+            <xs:element ref="t:IsNotEqualTo"/>
+            <xs:element ref="t:IsGreaterThan"/>
+            <xs:element ref="t:IsGreaterThanOrEqualTo"/>
+            <xs:element ref="t:IsLessThan"/>
+            <xs:element ref="t:IsLessThanOrEqualTo"/>
+            <xs:element ref="t:And"/>
+            <xs:element ref="t:Not"/>
+            <xs:element ref="t:Or"/>
+          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -5924,7 +5961,20 @@
     <xs:complexContent>
       <xs:extension base="t:SearchExpressionType">
         <xs:sequence>
-          <xs:element ref="t:SearchExpression" minOccurs="1" maxOccurs="unbounded"/>
+          <xs:choice minOccurs="1" maxOccurs ="unbounded">
+            <xs:element ref="t:Contains"/>
+            <xs:element ref="t:Excludes"/>
+            <xs:element ref="t:Exists"/>
+            <xs:element ref="t:IsEqualTo"/>
+            <xs:element ref="t:IsNotEqualTo"/>
+            <xs:element ref="t:IsGreaterThan"/>
+            <xs:element ref="t:IsGreaterThanOrEqualTo"/>
+            <xs:element ref="t:IsLessThan"/>
+            <xs:element ref="t:IsLessThanOrEqualTo"/>
+            <xs:element ref="t:And"/>
+            <xs:element ref="t:Not"/>
+            <xs:element ref="t:Or"/>
+          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -5958,9 +6008,20 @@
 
   <!-- The type of object which actually encodes a restriction -->
   <xs:complexType name="RestrictionType">
-    <xs:sequence>
-      <xs:element ref="t:SearchExpression"/>
-    </xs:sequence>
+    <xs:choice maxOccurs ="unbounded">
+      <xs:element ref="t:Contains"/>
+      <xs:element ref="t:Excludes"/>
+      <xs:element ref="t:Exists"/>
+      <xs:element ref="t:IsEqualTo"/>
+      <xs:element ref="t:IsNotEqualTo"/>
+      <xs:element ref="t:IsGreaterThan"/>
+      <xs:element ref="t:IsGreaterThanOrEqualTo"/>
+      <xs:element ref="t:IsLessThan"/>
+      <xs:element ref="t:IsLessThanOrEqualTo"/>
+      <xs:element ref="t:And"/>
+      <xs:element ref="t:Not"/>
+      <xs:element ref="t:Or"/>
+    </xs:choice>
   </xs:complexType>
   <!-- Sort order specification -->
   <xs:simpleType name="SortDirectionType">
@@ -5972,7 +6033,11 @@
 
   <xs:complexType name="FieldOrderType">
     <xs:sequence>
-      <xs:element ref="t:Path"/>
+      <xs:choice maxOccurs ="unbounded">
+        <xs:element ref="t:FieldURI"/>
+        <xs:element ref="t:IndexedFieldURI"/>
+        <xs:element ref="t:ExtendedFieldURI"/>
+      </xs:choice>
     </xs:sequence>
     <xs:attribute name="Order" type="t:SortDirectionType" use="required" />
   </xs:complexType>
