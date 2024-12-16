@@ -10,34 +10,23 @@ namespace garethp\ews\Test;
 
 use garethp\ews\Caster;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class CasterTest extends TestCase
 {
-    /**
-     * @param $input
-     * @param $type
-     * @param $expected
-     *
-     * @dataProvider castProvider
-     */
+    #[DataProvider('castProvider')]
     public function testCast($input, $type, $expected)
     {
         $this->assertEquals($expected, Caster::cast($input, $type));
     }
 
-    /**
-     * @param $from
-     * @param $to
-     * @param $expected
-     *
-     * @dataProvider castExistsProvider
-     */
+    #[DataProvider('castExistsProvider')]
     public function testCastExists($from, $to, $expected)
     {
         $this->assertEquals($expected, Caster::castExists($from, $to));
     }
 
-    public function castProvider()
+    public static function castProvider()
     {
         return array(
             //DateTime caster
@@ -64,7 +53,7 @@ class CasterTest extends TestCase
         );
     }
 
-    public function castExistsProvider()
+    public static function castExistsProvider()
     {
         return array(
             array('string', 'date', true),

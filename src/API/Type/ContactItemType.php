@@ -7,101 +7,6 @@ namespace garethp\ews\API\Type;
  *
  *
  * XSD Type: ContactItemType
- *
- * @method string getFileAs()
- * @method ContactItemType setFileAs(string $fileAs)
- * @method string getFileAsMapping()
- * @method ContactItemType setFileAsMapping(string $fileAsMapping)
- * @method string getDisplayName()
- * @method ContactItemType setDisplayName(string $displayName)
- * @method string getGivenName()
- * @method ContactItemType setGivenName(string $givenName)
- * @method string getInitials()
- * @method ContactItemType setInitials(string $initials)
- * @method string getMiddleName()
- * @method ContactItemType setMiddleName(string $middleName)
- * @method string getNickname()
- * @method ContactItemType setNickname(string $nickname)
- * @method CompleteNameType getCompleteName()
- * @method ContactItemType setCompleteName(CompleteNameType $completeName)
- * @method string getCompanyName()
- * @method ContactItemType setCompanyName(string $companyName)
- * @method ContactItemType addEmailAddresses(EmailAddressDictionaryEntryType $emailAddresses)
- * @method EmailAddressDictionaryEntryType[] getEmailAddresses()
- * @method ContactItemType setEmailAddresses(array $emailAddresses)
- * @method ContactItemType addPhysicalAddresses(PhysicalAddressDictionaryEntryType $physicalAddresses)
- * @method PhysicalAddressDictionaryEntryType[] getPhysicalAddresses()
- * @method ContactItemType setPhysicalAddresses(array $physicalAddresses)
- * @method ContactItemType addPhoneNumbers(PhoneNumberDictionaryEntryType $phoneNumbers)
- * @method PhoneNumberDictionaryEntryType[] getPhoneNumbers()
- * @method ContactItemType setPhoneNumbers(array $phoneNumbers)
- * @method string getAssistantName()
- * @method ContactItemType setAssistantName(string $assistantName)
- * @method \DateTime getBirthday()
- * @method ContactItemType setBirthday(\DateTime $birthday)
- * @method string getBusinessHomePage()
- * @method ContactItemType setBusinessHomePage(string $businessHomePage)
- * @method ContactItemType addChildren(string $children)
- * @method string[] getChildren()
- * @method ContactItemType setChildren(array $children)
- * @method ContactItemType addCompanies(string $companies)
- * @method string[] getCompanies()
- * @method ContactItemType setCompanies(array $companies)
- * @method string getContactSource()
- * @method ContactItemType setContactSource(string $contactSource)
- * @method string getDepartment()
- * @method ContactItemType setDepartment(string $department)
- * @method string getGeneration()
- * @method ContactItemType setGeneration(string $generation)
- * @method ContactItemType addImAddresses(ImAddressDictionaryEntryType $imAddresses)
- * @method ImAddressDictionaryEntryType[] getImAddresses()
- * @method ContactItemType setImAddresses(array $imAddresses)
- * @method string getJobTitle()
- * @method ContactItemType setJobTitle(string $jobTitle)
- * @method string getManager()
- * @method ContactItemType setManager(string $manager)
- * @method string getMileage()
- * @method ContactItemType setMileage(string $mileage)
- * @method string getOfficeLocation()
- * @method ContactItemType setOfficeLocation(string $officeLocation)
- * @method string getPostalAddressIndex()
- * @method ContactItemType setPostalAddressIndex(string $postalAddressIndex)
- * @method string getProfession()
- * @method ContactItemType setProfession(string $profession)
- * @method string getSpouseName()
- * @method ContactItemType setSpouseName(string $spouseName)
- * @method string getSurname()
- * @method ContactItemType setSurname(string $surname)
- * @method \DateTime getWeddingAnniversary()
- * @method ContactItemType setWeddingAnniversary(\DateTime $weddingAnniversary)
- * @method boolean isHasPicture()
- * @method boolean getHasPicture()
- * @method ContactItemType setHasPicture(boolean $hasPicture)
- * @method string getPhoneticFullName()
- * @method ContactItemType setPhoneticFullName(string $phoneticFullName)
- * @method string getPhoneticFirstName()
- * @method ContactItemType setPhoneticFirstName(string $phoneticFirstName)
- * @method string getPhoneticLastName()
- * @method ContactItemType setPhoneticLastName(string $phoneticLastName)
- * @method string getAlias()
- * @method ContactItemType setAlias(string $alias)
- * @method string getNotes()
- * @method ContactItemType setNotes(string $notes)
- * @method string getPhoto()
- * @method ContactItemType setPhoto(string $photo)
- * @method ContactItemType addUserSMIMECertificate(string $userSMIMECertificate)
- * @method string[] getUserSMIMECertificate()
- * @method ContactItemType setUserSMIMECertificate(array $userSMIMECertificate)
- * @method ContactItemType addMSExchangeCertificate(string $mSExchangeCertificate)
- * @method string[] getMSExchangeCertificate()
- * @method ContactItemType setMSExchangeCertificate(array $mSExchangeCertificate)
- * @method string getDirectoryId()
- * @method ContactItemType setDirectoryId(string $directoryId)
- * @method SingleRecipientType getManagerMailbox()
- * @method ContactItemType setManagerMailbox(SingleRecipientType $managerMailbox)
- * @method ContactItemType addDirectReports(EmailAddressType $directReports)
- * @method EmailAddressType[] getDirectReports()
- * @method ContactItemType setDirectReports(array $directReports)
  */
 class ContactItemType extends ItemType
 {
@@ -320,4 +225,1042 @@ class ContactItemType extends ItemType
      * @var \garethp\ews\API\Type\EmailAddressType[]
      */
     protected $directReports = null;
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getFileAs()
+    {
+        return $this->fileAs;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setFileAs($value)
+    {
+        $this->fileAs = $this->castValueIfNeeded("fileAs", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getFileAsMapping()
+    {
+        return $this->fileAsMapping;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setFileAsMapping($value)
+    {
+        $this->fileAsMapping = $this->castValueIfNeeded("fileAsMapping", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setDisplayName($value)
+    {
+        $this->displayName = $this->castValueIfNeeded("displayName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getGivenName()
+    {
+        return $this->givenName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setGivenName($value)
+    {
+        $this->givenName = $this->castValueIfNeeded("givenName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getInitials()
+    {
+        return $this->initials;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setInitials($value)
+    {
+        $this->initials = $this->castValueIfNeeded("initials", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getMiddleName()
+    {
+        return $this->middleName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setMiddleName($value)
+    {
+        $this->middleName = $this->castValueIfNeeded("middleName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getNickname()
+    {
+        return $this->nickname;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setNickname($value)
+    {
+        $this->nickname = $this->castValueIfNeeded("nickname", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return CompleteNameType
+     */
+    public function getCompleteName()
+    {
+        return $this->completeName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value CompleteNameType
+     * @return ContactItemType
+     */
+    public function setCompleteName(CompleteNameType $value)
+    {
+        $this->completeName = $this->castValueIfNeeded("completeName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getCompanyName()
+    {
+        return $this->companyName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setCompanyName($value)
+    {
+        $this->companyName = $this->castValueIfNeeded("companyName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value EmailAddressDictionaryEntryType
+     * @return ContactItemType
+     */
+    public function addEmailAddresses(EmailAddressDictionaryEntryType $value)
+    {
+        $value = $this->castValueIfNeeded("emailAddresses", $value);
+
+        if ($this->emailAddresses === null) {
+            $this->emailAddresses = array();
+        }
+
+        if (!is_array($this->emailAddresses)) {
+            $this->emailAddresses = array($this->emailAddresses);
+        }
+
+        $this->emailAddresses[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return EmailAddressDictionaryEntryType[]
+     */
+    public function getEmailAddresses()
+    {
+        return $this->emailAddresses;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value EmailAddressDictionaryEntryType[]
+     * @return ContactItemType
+     */
+    public function setEmailAddresses(array $value)
+    {
+        $this->emailAddresses = $this->castValueIfNeeded("emailAddresses", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PhysicalAddressDictionaryEntryType
+     * @return ContactItemType
+     */
+    public function addPhysicalAddresses(PhysicalAddressDictionaryEntryType $value)
+    {
+        $value = $this->castValueIfNeeded("physicalAddresses", $value);
+
+        if ($this->physicalAddresses === null) {
+            $this->physicalAddresses = array();
+        }
+
+        if (!is_array($this->physicalAddresses)) {
+            $this->physicalAddresses = array($this->physicalAddresses);
+        }
+
+        $this->physicalAddresses[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return PhysicalAddressDictionaryEntryType[]
+     */
+    public function getPhysicalAddresses()
+    {
+        return $this->physicalAddresses;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PhysicalAddressDictionaryEntryType[]
+     * @return ContactItemType
+     */
+    public function setPhysicalAddresses(array $value)
+    {
+        $this->physicalAddresses = $this->castValueIfNeeded("physicalAddresses", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PhoneNumberDictionaryEntryType
+     * @return ContactItemType
+     */
+    public function addPhoneNumbers(PhoneNumberDictionaryEntryType $value)
+    {
+        $value = $this->castValueIfNeeded("phoneNumbers", $value);
+
+        if ($this->phoneNumbers === null) {
+            $this->phoneNumbers = array();
+        }
+
+        if (!is_array($this->phoneNumbers)) {
+            $this->phoneNumbers = array($this->phoneNumbers);
+        }
+
+        $this->phoneNumbers[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return PhoneNumberDictionaryEntryType[]
+     */
+    public function getPhoneNumbers()
+    {
+        return $this->phoneNumbers;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PhoneNumberDictionaryEntryType[]
+     * @return ContactItemType
+     */
+    public function setPhoneNumbers(array $value)
+    {
+        $this->phoneNumbers = $this->castValueIfNeeded("phoneNumbers", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getAssistantName()
+    {
+        return $this->assistantName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setAssistantName($value)
+    {
+        $this->assistantName = $this->castValueIfNeeded("assistantName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return \DateTime
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return ContactItemType
+     */
+    public function setBirthday(\DateTime|string $value)
+    {
+        $this->birthday = $this->castValueIfNeeded("birthday", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getBusinessHomePage()
+    {
+        return $this->businessHomePage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setBusinessHomePage($value)
+    {
+        $this->businessHomePage = $this->castValueIfNeeded("businessHomePage", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function addChildren($value)
+    {
+        $value = $this->castValueIfNeeded("children", $value);
+
+        if ($this->children === null) {
+            $this->children = array();
+        }
+
+        if (!is_array($this->children)) {
+            $this->children = array($this->children);
+        }
+
+        $this->children[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string[]
+     */
+    public function getChildren()
+    {
+        return $this->children;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return ContactItemType
+     */
+    public function setChildren(array $value)
+    {
+        $this->children = $this->castValueIfNeeded("children", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function addCompanies($value)
+    {
+        $value = $this->castValueIfNeeded("companies", $value);
+
+        if ($this->companies === null) {
+            $this->companies = array();
+        }
+
+        if (!is_array($this->companies)) {
+            $this->companies = array($this->companies);
+        }
+
+        $this->companies[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string[]
+     */
+    public function getCompanies()
+    {
+        return $this->companies;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return ContactItemType
+     */
+    public function setCompanies(array $value)
+    {
+        $this->companies = $this->castValueIfNeeded("companies", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getContactSource()
+    {
+        return $this->contactSource;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setContactSource($value)
+    {
+        $this->contactSource = $this->castValueIfNeeded("contactSource", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getDepartment()
+    {
+        return $this->department;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setDepartment($value)
+    {
+        $this->department = $this->castValueIfNeeded("department", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getGeneration()
+    {
+        return $this->generation;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setGeneration($value)
+    {
+        $this->generation = $this->castValueIfNeeded("generation", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ImAddressDictionaryEntryType
+     * @return ContactItemType
+     */
+    public function addImAddresses(ImAddressDictionaryEntryType $value)
+    {
+        $value = $this->castValueIfNeeded("imAddresses", $value);
+
+        if ($this->imAddresses === null) {
+            $this->imAddresses = array();
+        }
+
+        if (!is_array($this->imAddresses)) {
+            $this->imAddresses = array($this->imAddresses);
+        }
+
+        $this->imAddresses[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ImAddressDictionaryEntryType[]
+     */
+    public function getImAddresses()
+    {
+        return $this->imAddresses;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ImAddressDictionaryEntryType[]
+     * @return ContactItemType
+     */
+    public function setImAddresses(array $value)
+    {
+        $this->imAddresses = $this->castValueIfNeeded("imAddresses", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getJobTitle()
+    {
+        return $this->jobTitle;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setJobTitle($value)
+    {
+        $this->jobTitle = $this->castValueIfNeeded("jobTitle", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getManager()
+    {
+        return $this->manager;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setManager($value)
+    {
+        $this->manager = $this->castValueIfNeeded("manager", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getMileage()
+    {
+        return $this->mileage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setMileage($value)
+    {
+        $this->mileage = $this->castValueIfNeeded("mileage", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getOfficeLocation()
+    {
+        return $this->officeLocation;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setOfficeLocation($value)
+    {
+        $this->officeLocation = $this->castValueIfNeeded("officeLocation", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getPostalAddressIndex()
+    {
+        return $this->postalAddressIndex;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setPostalAddressIndex($value)
+    {
+        $this->postalAddressIndex = $this->castValueIfNeeded("postalAddressIndex", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getProfession()
+    {
+        return $this->profession;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setProfession($value)
+    {
+        $this->profession = $this->castValueIfNeeded("profession", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getSpouseName()
+    {
+        return $this->spouseName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setSpouseName($value)
+    {
+        $this->spouseName = $this->castValueIfNeeded("spouseName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setSurname($value)
+    {
+        $this->surname = $this->castValueIfNeeded("surname", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return \DateTime
+     */
+    public function getWeddingAnniversary()
+    {
+        return $this->weddingAnniversary;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return ContactItemType
+     */
+    public function setWeddingAnniversary(\DateTime|string $value)
+    {
+        $this->weddingAnniversary = $this->castValueIfNeeded("weddingAnniversary", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return bool
+     */
+    public function isHasPicture()
+    {
+        return ((bool) $this->hasPicture);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return boolean
+     */
+    public function getHasPicture()
+    {
+        return $this->hasPicture;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return ContactItemType
+     */
+    public function setHasPicture($value)
+    {
+        $this->hasPicture = $this->castValueIfNeeded("hasPicture", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getPhoneticFullName()
+    {
+        return $this->phoneticFullName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setPhoneticFullName($value)
+    {
+        $this->phoneticFullName = $this->castValueIfNeeded("phoneticFullName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getPhoneticFirstName()
+    {
+        return $this->phoneticFirstName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setPhoneticFirstName($value)
+    {
+        $this->phoneticFirstName = $this->castValueIfNeeded("phoneticFirstName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getPhoneticLastName()
+    {
+        return $this->phoneticLastName;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setPhoneticLastName($value)
+    {
+        $this->phoneticLastName = $this->castValueIfNeeded("phoneticLastName", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getAlias()
+    {
+        return $this->alias;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setAlias($value)
+    {
+        $this->alias = $this->castValueIfNeeded("alias", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getNotes()
+    {
+        return $this->notes;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setNotes($value)
+    {
+        $this->notes = $this->castValueIfNeeded("notes", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setPhoto($value)
+    {
+        $this->photo = $this->castValueIfNeeded("photo", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function addUserSMIMECertificate($value)
+    {
+        $value = $this->castValueIfNeeded("userSMIMECertificate", $value);
+
+        if ($this->userSMIMECertificate === null) {
+            $this->userSMIMECertificate = array();
+        }
+
+        if (!is_array($this->userSMIMECertificate)) {
+            $this->userSMIMECertificate = array($this->userSMIMECertificate);
+        }
+
+        $this->userSMIMECertificate[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string[]
+     */
+    public function getUserSMIMECertificate()
+    {
+        return $this->userSMIMECertificate;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return ContactItemType
+     */
+    public function setUserSMIMECertificate(array $value)
+    {
+        $this->userSMIMECertificate = $this->castValueIfNeeded("userSMIMECertificate", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function addMSExchangeCertificate($value)
+    {
+        $value = $this->castValueIfNeeded("mSExchangeCertificate", $value);
+
+        if ($this->mSExchangeCertificate === null) {
+            $this->mSExchangeCertificate = array();
+        }
+
+        if (!is_array($this->mSExchangeCertificate)) {
+            $this->mSExchangeCertificate = array($this->mSExchangeCertificate);
+        }
+
+        $this->mSExchangeCertificate[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string[]
+     */
+    public function getMSExchangeCertificate()
+    {
+        return $this->mSExchangeCertificate;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string[]
+     * @return ContactItemType
+     */
+    public function setMSExchangeCertificate(array $value)
+    {
+        $this->mSExchangeCertificate = $this->castValueIfNeeded("mSExchangeCertificate", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getDirectoryId()
+    {
+        return $this->directoryId;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return ContactItemType
+     */
+    public function setDirectoryId($value)
+    {
+        $this->directoryId = $this->castValueIfNeeded("directoryId", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return SingleRecipientType
+     */
+    public function getManagerMailbox()
+    {
+        return $this->managerMailbox;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value SingleRecipientType
+     * @return ContactItemType
+     */
+    public function setManagerMailbox(SingleRecipientType $value)
+    {
+        $this->managerMailbox = $this->castValueIfNeeded("managerMailbox", $value);
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value EmailAddressType
+     * @return ContactItemType
+     */
+    public function addDirectReports(EmailAddressType $value)
+    {
+        $value = $this->castValueIfNeeded("directReports", $value);
+
+        if ($this->directReports === null) {
+            $this->directReports = array();
+        }
+
+        if (!is_array($this->directReports)) {
+            $this->directReports = array($this->directReports);
+        }
+
+        $this->directReports[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return EmailAddressType[]
+     */
+    public function getDirectReports()
+    {
+        return $this->directReports;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value EmailAddressType[]
+     * @return ContactItemType
+     */
+    public function setDirectReports(array $value)
+    {
+        $this->directReports = $this->castValueIfNeeded("directReports", $value);
+        return $this;
+    }
 }
