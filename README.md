@@ -25,10 +25,10 @@ composer require garethp/php-ews
 The library can be used to make several different request types. In order to make a request, you need to instantiate a new `API` object:
 
 ```php
-$ews = API::fromUsernameAndPassword($server, $username, $password, $options = array());
+$ews = API::withUsernameAndPassword($server, $username, $password, $options = array());
 ```
 
-The `API::fromUsernameAndPassword` static constructor takes four parameters:
+The `API::withUsernameAndPassword` static constructor takes four parameters:
 
 * `$server`: The url to the exchange server you wish to connect to, without the protocol. Example: mail.example.com.
 * `$username`: The user to connect to the server with. This is usually the local portion of the users email address. Example: "user" if the email address is "user@example.com".
