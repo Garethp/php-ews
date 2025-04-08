@@ -10,6 +10,7 @@ namespace garethp\ews\API;
  *
  * @package php-ews\Type
  */
+#[\AllowDynamicProperties]
 class Type
 {
     use MagicMethodsTrait;
