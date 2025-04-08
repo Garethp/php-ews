@@ -2,6 +2,18 @@
 	"name": "garethp/php-ews",
 	"license": "BSD-3-Clause",
 	"description": "A PHP Library to interact with the Exchange SOAP service",
+	"keywords": [
+		"Microsoft Exchange",
+		"Exchange Web Services",
+		"SOAP",
+		"NTLM",
+		"EWS",
+		"php",
+		"email",
+		"calendar",
+		"contacts",
+		"push notification"
+	],	
 	"require": {
 		"garethp/http-playback": "^2.0",
 		"ext-curl": "*",
