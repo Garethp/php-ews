@@ -12,6 +12,7 @@ use garethp\ews\API\ExchangeWebServices;
 use garethp\ews\API\Type;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class ExchangeWebServicesTest extends TestCase
 {
@@ -27,12 +28,7 @@ class ExchangeWebServicesTest extends TestCase
         return $mock;
     }
 
-    /**
-     *
-     * @dataProvider cleanServerUrlProvider
-     * @param $input
-     * @param $expected
-     */
+    #[DataProvider('cleanServerUrlProvider')]
     public function testCleanServerUrl($input, $expected)
     {
         $client = $this->getClientMock();
@@ -69,7 +65,7 @@ class ExchangeWebServicesTest extends TestCase
         $this->assertEquals($client->getPrimarySmtpEmailAddress(), 'test@test.com');
     }
 
-    public function cleanServerUrlProvider()
+    public static function cleanServerUrlProvider()
     {
         return array(
             array('test.com', 'test.com'),

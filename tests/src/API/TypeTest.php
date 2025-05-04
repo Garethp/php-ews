@@ -4,9 +4,11 @@ namespace garethp\ews\Test\API;
 
 use garethp\ews\API\Type;
 use garethp\ews\API\Enumeration;
+use garethp\ews\API\XmlObject;
 use PHPUnit\Framework\TestCase;
 use Mockery;
 use DateTime;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class TypeTest extends TestCase
 {
@@ -20,90 +22,6 @@ class TypeTest extends TestCase
         }
 
         return $this->typeMock;
-    }
-
-    public function testMagicCall()
-    {
-        $item = Type::buildFromArray(array(
-            'One' => 'One',
-            'Two' => 'Two'
-        ));
-
-        $this->assertEquals('One', $item->getOne());
-        $this->assertEquals('Two', $item->getTwo());
-
-        $item->setTwo('Two Test');
-
-        $this->assertEquals('Two Test', $item->getTwo());
-
-        $item->setTwo('Two Test');
-        $this->assertEquals('Two Test', $item->getTwo());
-    }
-
-    /**
-     * @dataProvider magicExceptionProvider
-     */
-    public function testMagicCallFail($callName, $value = null)
-    {
-        $this->expectException(\Exception::class);
-        $calendarItem = new Type\CalendarItemType();
-
-        if ($value === null) {
-            $calendarItem->{$callName}();
-        } else {
-            $calendarItem->{$callName}($value);
-        }
-    }
-
-    /**
-     * @dataProvider magicIsDataProvider
-     */
-    public function testMagicIs($input, $valueName, $expected)
-    {
-        $item = Type::buildFromArray($input);
-
-        $this->assertEquals($item->is($valueName), $expected);
-
-        $callName = "is" . ucfirst($valueName);
-        $this->assertEquals($item->{$callName}(), $expected);
-
-        if (substr(strtolower($valueName), 0, 2) == "is") {
-            $valueName = substr($valueName, 2);
-            $callName = "is" . ucfirst($valueName);
-            $this->assertEquals($item->{$callName}(), $expected);
-        }
-    }
-
-    public function testMagicAdd()
-    {
-        $item = Type::buildFromArray(array(
-            'itemToAdd' => null
-        ));
-
-        $item->add('itemToAdd', 'someAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd'));
-
-        $item->add('itemToAdd', 'anotherAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
-        $item->setItemToAdd(null);
-
-        $item->addItemToAdd('someAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd'));
-
-        $item->addItemToAdd('anotherAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
-
-        $item->setItemToAdd('someAdd');
-        $item->addItemToAdd('anotherAdd');
-        $this->assertEquals($item->getItemToAdd(), array('someAdd', 'anotherAdd'));
-    }
-
-    public function testCast()
-    {
-        $calendarItem = new Type\CalendarItemType();
-        $actual = $calendarItem->cast('2015-07-01', 'DateTime');
-
-        $this->assertEquals(new \DateTime('2015-07-01'), $actual);
     }
 
     public function testSetCasting()
@@ -124,11 +42,11 @@ class TypeTest extends TestCase
             'Four' => array('FourOne' => 1, 'FourTwo' => 2, 'FourThree' => 3)
         );
 
-        $excepted = new Type();
+        $excepted = new XmlObject();
         $excepted->One = 'One';
         $excepted->Two = 'Two';
         $excepted->Three = array('1', '2', '3');
-        $excepted->Four = new Type();
+        $excepted->Four = new XmlObject();
         $excepted->Four->FourOne = 1;
         $excepted->Four->FourTwo = 2;
         $excepted->Four->FourThree = 3;
@@ -147,12 +65,7 @@ class TypeTest extends TestCase
         $this->assertEquals($calendarControl, $calendarItem);
     }
 
-    /**
-     * @dataProvider arrayAssocProvider
-     *
-     * @param $array
-     * @param $expected
-     */
+    #[DataProvider('arrayAssocProvider')]
     public function testArrayIsAssoc($array, $expected)
     {
         $type = $this->getTypeMock();
@@ -161,9 +74,7 @@ class TypeTest extends TestCase
         $this->assertEquals($expected, $isAssoc);
     }
 
-    /**
-     * @dataProvider toStringProvider
-     */
+    #[DataProvider('toStringProvider')]
     public function testToString($string, $expected)
     {
         $type = $this->getTypeMock();
@@ -211,7 +122,7 @@ class TypeTest extends TestCase
         $this->assertSame(['test' => 'test', '_value' => 'value'], $type->getNonNullItems(true));
     }
 
-    public function arrayAssocProvider()
+    public static function arrayAssocProvider()
     {
         return array(
             array(array(), false),
@@ -222,7 +133,7 @@ class TypeTest extends TestCase
         );
     }
 
-    public function toStringProvider()
+    public static function toStringProvider()
     {
         return array(
             array(null, ''),
@@ -233,7 +144,7 @@ class TypeTest extends TestCase
         );
     }
 
-    public function magicIsDataProvider()
+    public static function magicIsDataProvider()
     {
         return array(
             array(
@@ -250,7 +161,7 @@ class TypeTest extends TestCase
         );
     }
 
-    public function magicExceptionProvider()
+    public static function magicExceptionProvider()
     {
         return array (
             array('getSomeValue'),

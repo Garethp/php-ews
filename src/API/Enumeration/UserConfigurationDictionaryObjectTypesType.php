@@ -1,9 +1,4 @@
 <?php
-/**
- * Contains
- * \garethp\ews\API\Enumeration\UserConfigurationDictionaryObjectTypesType.
- */
-
 
 namespace garethp\ews\API\Enumeration;
 

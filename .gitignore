@@ -4,3 +4,5 @@ vendor
 build/
 Resources/auth.json
 .vagrant
+.phpunit.result.cache
+.phpunit.cache/

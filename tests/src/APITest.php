@@ -3,8 +3,7 @@
 namespace garethp\ews\Test;
 
 use garethp\ews\API;
-use garethp\ews\API\Type;
-use Mockery;
+use PHPUnit\Framework\Attributes\DataProvider;
 use garethp\ews\API\ExchangeWebServices;
 use garethp\ews\API\Enumeration;
 
@@ -269,12 +268,7 @@ class APITest extends BaseTestCase
         $client->deleteItems($item->toArray(), ['SendMeetingCancellations' => 'SendToNone']);
     }
 
-    /**
-     * @dataProvider getFolderByDisplayNameProvider
-     *
-     * @param $input
-     * @param $expected
-     */
+    #[DataProvider('getFolderByDisplayNameProvider')]
     public function testGetFolderByDisplayName($input, $expected)
     {
         $client = $this->getClient();
@@ -291,12 +285,7 @@ class APITest extends BaseTestCase
         $this->assertFalse($folder);
     }
 
-    /**
-     * Test that the syncFolderItems() function passes the correct arguments to it's client.
-     *
-     * @dataProvider listChangesProvider
-     * @param $folderInput
-     */
+    #[DataProvider('listChangesProvider')]
     public function testListItemChanges($folderInput)
     {
 
@@ -341,14 +330,14 @@ class APITest extends BaseTestCase
      *
      * @return array
      */
-    public function listChangesProvider()
+    public static function listChangesProvider()
     {
         return array(
             array(array('Test', 'calendar'))
         );
     }
 
-    public function getFolderByDisplayNameProvider()
+    public static function getFolderByDisplayNameProvider()
     {
         return array(
             array('Common Views', 'Common Views')

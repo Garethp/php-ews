@@ -129,10 +129,10 @@ class ContactsAPITest extends BaseTestCase
 
         $contact = $api->getContact($contact);
         $this->assertEquals('Jane', $contact->getGivenName());
-        $this->assertEquals('jane.smith@gmail.com', $contact->getEmailAddresses()->Entry);
-        $this->assertEquals('111', $contact->getPhoneNumbers()->Entry);
-        $this->assertEquals('123 Street New', $contact->getPhysicalAddresses()->Entry->getStreet());
-        $this->assertEquals('123 City New', $contact->getPhysicalAddresses()->Entry->getCity());
+        $this->assertEquals('jane.smith@gmail.com', $contact->getEmailAddresses()[0]);
+        $this->assertEquals('111', $contact->getPhoneNumbers()[0]);
+        $this->assertEquals('123 Street New', $contact->getPhysicalAddresses()[0]->getStreet());
+        $this->assertEquals('123 City New', $contact->getPhysicalAddresses()[0]->getCity());
 
         $api->deleteItems($contact->getItemId());
     }
@@ -176,8 +176,8 @@ class ContactsAPITest extends BaseTestCase
         $contact = $api->getContact($contact);
         $api->deleteItems($contact->getItemId());
 
-        $this->assertInstanceOf(PhysicalAddressDictionaryEntryType::class, $contact->getPhysicalAddresses()->Entry);
-        $this->assertNull($contact->getPhysicalAddresses()->Entry->getCity());
+        $this->assertInstanceOf(PhysicalAddressDictionaryEntryType::class, $contact->getPhysicalAddresses()[0]);
+        $this->assertNull($contact->getPhysicalAddresses()[0]->getCity());
         $this->assertNull($contact->getGivenName());
     }
 

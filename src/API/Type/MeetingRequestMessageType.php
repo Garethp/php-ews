@@ -7,101 +7,6 @@ namespace garethp\ews\API\Type;
  *
  *
  * XSD Type: MeetingRequestMessageType
- *
- * @method string getMeetingRequestType()
- * @method MeetingRequestMessageType setMeetingRequestType(string $meetingRequestType)
- * @method string getIntendedFreeBusyStatus()
- * @method MeetingRequestMessageType setIntendedFreeBusyStatus(string $intendedFreeBusyStatus)
- * @method \DateTime getStart()
- * @method MeetingRequestMessageType setStart(\DateTime $start)
- * @method \DateTime getEnd()
- * @method MeetingRequestMessageType setEnd(\DateTime $end)
- * @method \DateTime getOriginalStart()
- * @method MeetingRequestMessageType setOriginalStart(\DateTime $originalStart)
- * @method boolean isAllDayEvent()
- * @method boolean getIsAllDayEvent()
- * @method MeetingRequestMessageType setIsAllDayEvent(boolean $isAllDayEvent)
- * @method string getLegacyFreeBusyStatus()
- * @method MeetingRequestMessageType setLegacyFreeBusyStatus(string $legacyFreeBusyStatus)
- * @method string getLocation()
- * @method MeetingRequestMessageType setLocation(string $location)
- * @method string getWhen()
- * @method MeetingRequestMessageType setWhen(string $when)
- * @method boolean isMeeting()
- * @method boolean getIsMeeting()
- * @method MeetingRequestMessageType setIsMeeting(boolean $isMeeting)
- * @method boolean isCancelled()
- * @method boolean getIsCancelled()
- * @method MeetingRequestMessageType setIsCancelled(boolean $isCancelled)
- * @method boolean isRecurring()
- * @method boolean getIsRecurring()
- * @method MeetingRequestMessageType setIsRecurring(boolean $isRecurring)
- * @method boolean isMeetingRequestWasSent()
- * @method boolean getMeetingRequestWasSent()
- * @method MeetingRequestMessageType setMeetingRequestWasSent(boolean $meetingRequestWasSent)
- * @method string getCalendarItemType()
- * @method MeetingRequestMessageType setCalendarItemType(string $calendarItemType)
- * @method string getMyResponseType()
- * @method MeetingRequestMessageType setMyResponseType(string $myResponseType)
- * @method SingleRecipientType getOrganizer()
- * @method MeetingRequestMessageType setOrganizer(SingleRecipientType $organizer)
- * @method MeetingRequestMessageType addRequiredAttendees(AttendeeType $requiredAttendees)
- * @method AttendeeType[] getRequiredAttendees()
- * @method MeetingRequestMessageType setRequiredAttendees(array $requiredAttendees)
- * @method MeetingRequestMessageType addOptionalAttendees(AttendeeType $optionalAttendees)
- * @method AttendeeType[] getOptionalAttendees()
- * @method MeetingRequestMessageType setOptionalAttendees(array $optionalAttendees)
- * @method MeetingRequestMessageType addResources(AttendeeType $resources)
- * @method AttendeeType[] getResources()
- * @method MeetingRequestMessageType setResources(array $resources)
- * @method integer getConflictingMeetingCount()
- * @method MeetingRequestMessageType setConflictingMeetingCount(integer $conflictingMeetingCount)
- * @method integer getAdjacentMeetingCount()
- * @method MeetingRequestMessageType setAdjacentMeetingCount(integer $adjacentMeetingCount)
- * @method NonEmptyArrayOfAllItemsType getConflictingMeetings()
- * @method MeetingRequestMessageType setConflictingMeetings(NonEmptyArrayOfAllItemsType $conflictingMeetings)
- * @method NonEmptyArrayOfAllItemsType getAdjacentMeetings()
- * @method MeetingRequestMessageType setAdjacentMeetings(NonEmptyArrayOfAllItemsType $adjacentMeetings)
- * @method string getDuration()
- * @method MeetingRequestMessageType setDuration(string $duration)
- * @method string getTimeZone()
- * @method MeetingRequestMessageType setTimeZone(string $timeZone)
- * @method \DateTime getAppointmentReplyTime()
- * @method MeetingRequestMessageType setAppointmentReplyTime(\DateTime $appointmentReplyTime)
- * @method integer getAppointmentSequenceNumber()
- * @method MeetingRequestMessageType setAppointmentSequenceNumber(integer $appointmentSequenceNumber)
- * @method integer getAppointmentState()
- * @method MeetingRequestMessageType setAppointmentState(integer $appointmentState)
- * @method RecurrenceType getRecurrence()
- * @method MeetingRequestMessageType setRecurrence(RecurrenceType $recurrence)
- * @method OccurrenceInfoType getFirstOccurrence()
- * @method MeetingRequestMessageType setFirstOccurrence(OccurrenceInfoType $firstOccurrence)
- * @method OccurrenceInfoType getLastOccurrence()
- * @method MeetingRequestMessageType setLastOccurrence(OccurrenceInfoType $lastOccurrence)
- * @method MeetingRequestMessageType addModifiedOccurrences(OccurrenceInfoType $modifiedOccurrences)
- * @method OccurrenceInfoType[] getModifiedOccurrences()
- * @method MeetingRequestMessageType setModifiedOccurrences(array $modifiedOccurrences)
- * @method MeetingRequestMessageType addDeletedOccurrences(DeletedOccurrenceInfoType $deletedOccurrences)
- * @method DeletedOccurrenceInfoType[] getDeletedOccurrences()
- * @method MeetingRequestMessageType setDeletedOccurrences(array $deletedOccurrences)
- * @method TimeZoneType getMeetingTimeZone()
- * @method MeetingRequestMessageType setMeetingTimeZone(TimeZoneType $meetingTimeZone)
- * @method TimeZoneDefinitionType getStartTimeZone()
- * @method MeetingRequestMessageType setStartTimeZone(TimeZoneDefinitionType $startTimeZone)
- * @method TimeZoneDefinitionType getEndTimeZone()
- * @method MeetingRequestMessageType setEndTimeZone(TimeZoneDefinitionType $endTimeZone)
- * @method integer getConferenceType()
- * @method MeetingRequestMessageType setConferenceType(integer $conferenceType)
- * @method boolean isAllowNewTimeProposal()
- * @method boolean getAllowNewTimeProposal()
- * @method MeetingRequestMessageType setAllowNewTimeProposal(boolean $allowNewTimeProposal)
- * @method boolean isOnlineMeeting()
- * @method boolean getIsOnlineMeeting()
- * @method MeetingRequestMessageType setIsOnlineMeeting(boolean $isOnlineMeeting)
- * @method string getMeetingWorkspaceUrl()
- * @method MeetingRequestMessageType setMeetingWorkspaceUrl(string $meetingWorkspaceUrl)
- * @method string getNetShowUrl()
- * @method MeetingRequestMessageType setNetShowUrl(string $netShowUrl)
  */
 class MeetingRequestMessageType extends MeetingMessageType
 {
@@ -120,13 +25,6 @@ class MeetingRequestMessageType extends MeetingMessageType
      * @var \DateTime
      */
     protected $start = null;
-
-    protected $_typeMap = array(
-        'start' => 'dateTime',
-        'end' => 'dateTime',
-        'originalStart' => 'dateTime',
-        'appointmentReplyTime' => 'dateTime',
-    );
 
     /**
      * @var \DateTime
@@ -317,4 +215,1009 @@ class MeetingRequestMessageType extends MeetingMessageType
      * @var string
      */
     protected $netShowUrl = null;
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getMeetingRequestType()
+    {
+        return $this->meetingRequestType;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setMeetingRequestType($value)
+    {
+        $this->meetingRequestType = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getIntendedFreeBusyStatus()
+    {
+        return $this->intendedFreeBusyStatus;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setIntendedFreeBusyStatus($value)
+    {
+        $this->intendedFreeBusyStatus = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return \DateTime
+     */
+    public function getStart()
+    {
+        return $this->start;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return MeetingRequestMessageType
+     */
+    public function setStart(\DateTime|string $value)
+    {
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->start = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return \DateTime
+     */
+    public function getEnd()
+    {
+        return $this->end;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return MeetingRequestMessageType
+     */
+    public function setEnd(\DateTime|string $value)
+    {
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->end = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return \DateTime
+     */
+    public function getOriginalStart()
+    {
+        return $this->originalStart;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return MeetingRequestMessageType
+     */
+    public function setOriginalStart(\DateTime|string $value)
+    {
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->originalStart = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return bool
+     */
+    public function isAllDayEvent()
+    {
+        return ((bool) $this->isAllDayEvent);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return boolean
+     */
+    public function getIsAllDayEvent()
+    {
+        return $this->isAllDayEvent;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return MeetingRequestMessageType
+     */
+    public function setIsAllDayEvent($value)
+    {
+        $this->isAllDayEvent = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getLegacyFreeBusyStatus()
+    {
+        return $this->legacyFreeBusyStatus;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setLegacyFreeBusyStatus($value)
+    {
+        $this->legacyFreeBusyStatus = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setLocation($value)
+    {
+        $this->location = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getWhen()
+    {
+        return $this->when;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setWhen($value)
+    {
+        $this->when = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return bool
+     */
+    public function isMeeting()
+    {
+        return ((bool) $this->isMeeting);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return boolean
+     */
+    public function getIsMeeting()
+    {
+        return $this->isMeeting;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return MeetingRequestMessageType
+     */
+    public function setIsMeeting($value)
+    {
+        $this->isMeeting = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return bool
+     */
+    public function isCancelled()
+    {
+        return ((bool) $this->isCancelled);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return boolean
+     */
+    public function getIsCancelled()
+    {
+        return $this->isCancelled;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return MeetingRequestMessageType
+     */
+    public function setIsCancelled($value)
+    {
+        $this->isCancelled = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return bool
+     */
+    public function isRecurring()
+    {
+        return ((bool) $this->isRecurring);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return boolean
+     */
+    public function getIsRecurring()
+    {
+        return $this->isRecurring;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return MeetingRequestMessageType
+     */
+    public function setIsRecurring($value)
+    {
+        $this->isRecurring = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return bool
+     */
+    public function isMeetingRequestWasSent()
+    {
+        return ((bool) $this->meetingRequestWasSent);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return boolean
+     */
+    public function getMeetingRequestWasSent()
+    {
+        return $this->meetingRequestWasSent;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return MeetingRequestMessageType
+     */
+    public function setMeetingRequestWasSent($value)
+    {
+        $this->meetingRequestWasSent = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getCalendarItemType()
+    {
+        return $this->calendarItemType;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setCalendarItemType($value)
+    {
+        $this->calendarItemType = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getMyResponseType()
+    {
+        return $this->myResponseType;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setMyResponseType($value)
+    {
+        $this->myResponseType = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return SingleRecipientType
+     */
+    public function getOrganizer()
+    {
+        return $this->organizer;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value SingleRecipientType
+     * @return MeetingRequestMessageType
+     */
+    public function setOrganizer(SingleRecipientType $value)
+    {
+        $this->organizer = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AttendeeType
+     * @return MeetingRequestMessageType
+     */
+    public function addRequiredAttendees(AttendeeType $value)
+    {
+        if ($this->requiredAttendees === null) {
+                        $this->requiredAttendees = array();
+        }
+
+        if (!is_array($this->requiredAttendees)) {
+            $this->requiredAttendees = array($this->requiredAttendees);
+        }
+
+        $this->requiredAttendees[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return AttendeeType[]
+     */
+    public function getRequiredAttendees()
+    {
+        return $this->requiredAttendees;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AttendeeType[]|AttendeeType
+     * @return MeetingRequestMessageType
+     */
+    public function setRequiredAttendees(array|AttendeeType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->requiredAttendees = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AttendeeType
+     * @return MeetingRequestMessageType
+     */
+    public function addOptionalAttendees(AttendeeType $value)
+    {
+        if ($this->optionalAttendees === null) {
+                        $this->optionalAttendees = array();
+        }
+
+        if (!is_array($this->optionalAttendees)) {
+            $this->optionalAttendees = array($this->optionalAttendees);
+        }
+
+        $this->optionalAttendees[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return AttendeeType[]
+     */
+    public function getOptionalAttendees()
+    {
+        return $this->optionalAttendees;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AttendeeType[]|AttendeeType
+     * @return MeetingRequestMessageType
+     */
+    public function setOptionalAttendees(array|AttendeeType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->optionalAttendees = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AttendeeType
+     * @return MeetingRequestMessageType
+     */
+    public function addResources(AttendeeType $value)
+    {
+        if ($this->resources === null) {
+                        $this->resources = array();
+        }
+
+        if (!is_array($this->resources)) {
+            $this->resources = array($this->resources);
+        }
+
+        $this->resources[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return AttendeeType[]
+     */
+    public function getResources()
+    {
+        return $this->resources;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AttendeeType[]|AttendeeType
+     * @return MeetingRequestMessageType
+     */
+    public function setResources(array|AttendeeType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->resources = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return integer
+     */
+    public function getConflictingMeetingCount()
+    {
+        return $this->conflictingMeetingCount;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value int
+     * @return MeetingRequestMessageType
+     */
+    public function setConflictingMeetingCount($value)
+    {
+        $this->conflictingMeetingCount = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return integer
+     */
+    public function getAdjacentMeetingCount()
+    {
+        return $this->adjacentMeetingCount;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value int
+     * @return MeetingRequestMessageType
+     */
+    public function setAdjacentMeetingCount($value)
+    {
+        $this->adjacentMeetingCount = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function getConflictingMeetings()
+    {
+        return $this->conflictingMeetings;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value NonEmptyArrayOfAllItemsType
+     * @return MeetingRequestMessageType
+     */
+    public function setConflictingMeetings(NonEmptyArrayOfAllItemsType $value)
+    {
+        $this->conflictingMeetings = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return NonEmptyArrayOfAllItemsType
+     */
+    public function getAdjacentMeetings()
+    {
+        return $this->adjacentMeetings;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value NonEmptyArrayOfAllItemsType
+     * @return MeetingRequestMessageType
+     */
+    public function setAdjacentMeetings(NonEmptyArrayOfAllItemsType $value)
+    {
+        $this->adjacentMeetings = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setDuration($value)
+    {
+        $this->duration = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getTimeZone()
+    {
+        return $this->timeZone;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setTimeZone($value)
+    {
+        $this->timeZone = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return \DateTime
+     */
+    public function getAppointmentReplyTime()
+    {
+        return $this->appointmentReplyTime;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value \DateTime|string
+     * @return MeetingRequestMessageType
+     */
+    public function setAppointmentReplyTime(\DateTime|string $value)
+    {
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->appointmentReplyTime = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return integer
+     */
+    public function getAppointmentSequenceNumber()
+    {
+        return $this->appointmentSequenceNumber;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value int
+     * @return MeetingRequestMessageType
+     */
+    public function setAppointmentSequenceNumber($value)
+    {
+        $this->appointmentSequenceNumber = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return integer
+     */
+    public function getAppointmentState()
+    {
+        return $this->appointmentState;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value int
+     * @return MeetingRequestMessageType
+     */
+    public function setAppointmentState($value)
+    {
+        $this->appointmentState = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return RecurrenceType
+     */
+    public function getRecurrence()
+    {
+        return $this->recurrence;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value RecurrenceType
+     * @return MeetingRequestMessageType
+     */
+    public function setRecurrence(RecurrenceType $value)
+    {
+        $this->recurrence = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return OccurrenceInfoType
+     */
+    public function getFirstOccurrence()
+    {
+        return $this->firstOccurrence;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value OccurrenceInfoType
+     * @return MeetingRequestMessageType
+     */
+    public function setFirstOccurrence(OccurrenceInfoType $value)
+    {
+        $this->firstOccurrence = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return OccurrenceInfoType
+     */
+    public function getLastOccurrence()
+    {
+        return $this->lastOccurrence;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value OccurrenceInfoType
+     * @return MeetingRequestMessageType
+     */
+    public function setLastOccurrence(OccurrenceInfoType $value)
+    {
+        $this->lastOccurrence = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value OccurrenceInfoType
+     * @return MeetingRequestMessageType
+     */
+    public function addModifiedOccurrences(OccurrenceInfoType $value)
+    {
+        if ($this->modifiedOccurrences === null) {
+                        $this->modifiedOccurrences = array();
+        }
+
+        if (!is_array($this->modifiedOccurrences)) {
+            $this->modifiedOccurrences = array($this->modifiedOccurrences);
+        }
+
+        $this->modifiedOccurrences[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return OccurrenceInfoType[]
+     */
+    public function getModifiedOccurrences()
+    {
+        return $this->modifiedOccurrences;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value OccurrenceInfoType[]|OccurrenceInfoType
+     * @return MeetingRequestMessageType
+     */
+    public function setModifiedOccurrences(array|OccurrenceInfoType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->modifiedOccurrences = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value DeletedOccurrenceInfoType
+     * @return MeetingRequestMessageType
+     */
+    public function addDeletedOccurrences(DeletedOccurrenceInfoType $value)
+    {
+        if ($this->deletedOccurrences === null) {
+                        $this->deletedOccurrences = array();
+        }
+
+        if (!is_array($this->deletedOccurrences)) {
+            $this->deletedOccurrences = array($this->deletedOccurrences);
+        }
+
+        $this->deletedOccurrences[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return DeletedOccurrenceInfoType[]
+     */
+    public function getDeletedOccurrences()
+    {
+        return $this->deletedOccurrences;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value DeletedOccurrenceInfoType[]|DeletedOccurrenceInfoType
+     * @return MeetingRequestMessageType
+     */
+    public function setDeletedOccurrences(array|DeletedOccurrenceInfoType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->deletedOccurrences = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return TimeZoneType
+     */
+    public function getMeetingTimeZone()
+    {
+        return $this->meetingTimeZone;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value TimeZoneType
+     * @return MeetingRequestMessageType
+     */
+    public function setMeetingTimeZone(TimeZoneType $value)
+    {
+        $this->meetingTimeZone = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return TimeZoneDefinitionType
+     */
+    public function getStartTimeZone()
+    {
+        return $this->startTimeZone;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value TimeZoneDefinitionType
+     * @return MeetingRequestMessageType
+     */
+    public function setStartTimeZone(TimeZoneDefinitionType $value)
+    {
+        $this->startTimeZone = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return TimeZoneDefinitionType
+     */
+    public function getEndTimeZone()
+    {
+        return $this->endTimeZone;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value TimeZoneDefinitionType
+     * @return MeetingRequestMessageType
+     */
+    public function setEndTimeZone(TimeZoneDefinitionType $value)
+    {
+        $this->endTimeZone = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return integer
+     */
+    public function getConferenceType()
+    {
+        return $this->conferenceType;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value int
+     * @return MeetingRequestMessageType
+     */
+    public function setConferenceType($value)
+    {
+        $this->conferenceType = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return bool
+     */
+    public function isAllowNewTimeProposal()
+    {
+        return ((bool) $this->allowNewTimeProposal);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return boolean
+     */
+    public function getAllowNewTimeProposal()
+    {
+        return $this->allowNewTimeProposal;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return MeetingRequestMessageType
+     */
+    public function setAllowNewTimeProposal($value)
+    {
+        $this->allowNewTimeProposal = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return bool
+     */
+    public function isOnlineMeeting()
+    {
+        return ((bool) $this->isOnlineMeeting);
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return boolean
+     */
+    public function getIsOnlineMeeting()
+    {
+        return $this->isOnlineMeeting;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value bool
+     * @return MeetingRequestMessageType
+     */
+    public function setIsOnlineMeeting($value)
+    {
+        $this->isOnlineMeeting = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getMeetingWorkspaceUrl()
+    {
+        return $this->meetingWorkspaceUrl;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setMeetingWorkspaceUrl($value)
+    {
+        $this->meetingWorkspaceUrl = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return string
+     */
+    public function getNetShowUrl()
+    {
+        return $this->netShowUrl;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value string
+     * @return MeetingRequestMessageType
+     */
+    public function setNetShowUrl($value)
+    {
+        $this->netShowUrl = $value;
+        return $this;
+    }
 }
