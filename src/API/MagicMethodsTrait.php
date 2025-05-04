@@ -12,27 +12,6 @@ use garethp\ews\Caster;
 
 trait MagicMethodsTrait
 {
-    public function __call($name, $arguments)
-    {
-        $callTypeIndex = 3;
-        if (substr($name, 0, 2) == "is") {
-            $callTypeIndex = 2;
-        }
-
-        $callType = substr($name, 0, $callTypeIndex);
-        $propertyName = substr($name, $callTypeIndex);
-
-        if (in_array($callType, array('get', 'is')) && count($arguments) == 0) {
-            return $this->{$callType}($propertyName);
-        }
-
-        if (in_array($callType, array('add', 'set')) && count($arguments) == 1) {
-            return $this->{$callType}($propertyName, $arguments[0]);
-        }
-
-        throw new \Exception("The method you tried to call doesn't exist");
-    }
-
     public function __set($name, $value)
     {
         if (is_object($value) && !($value instanceof Type) && property_exists($value, "Entry")) {
@@ -59,76 +38,5 @@ trait MagicMethodsTrait
     public function methodExists($name)
     {
         return method_exists($this, $name);
-    }
-
-    public function get($name)
-    {
-        $name = $this->getValidNameInCorrectCase([$name, "get$name"]);
-        return $this->$name;
-    }
-
-    public function set($name, $value)
-    {
-        $name = $this->getNameInCorrectCase($name);
-
-        $this->$name = $value;
-
-        return $this;
-    }
-
-    public function add($name, $value)
-    {
-        $name = $this->getNameInCorrectCase($name);
-
-        if ($this->$name == null) {
-            $this->$name = array();
-        }
-
-        if (!is_array($this->$name)) {
-            $this->$name = array($this->$name);
-        }
-
-        $this->{$name}[] = $value;
-
-        return $this;
-    }
-
-    public function is($name)
-    {
-        $nameWithIs = "Is$name";
-        $name = $this->getValidNameInCorrectCase([$nameWithIs, $name]);
-
-        return ((bool) $this->$name);
-    }
-
-    protected function getValidNameInCorrectCase($names)
-    {
-        foreach ($names as $name) {
-            try {
-                return $this->getNameInCorrectCase($name);
-            } catch (\Exception $e) {
-                //Nothing needed here. If everything errors out, we'll throw a new exception below
-            }
-        }
-
-        throw new \Exception('Property ' . $names[0] . ' does not exist');
-    }
-
-    /**
-     * @param $name
-     * @return string
-     * @throws \Exception
-     */
-    protected function getNameInCorrectCase($name)
-    {
-        if (!$this->exists($name) && $this->exists(lcfirst($name))) {
-            $name = lcfirst($name);
-        }
-
-        if (!$this->exists($name)) {
-            throw new \Exception('Property ' . $name . ' does not exist');
-        }
-
-        return $name;
     }
 }

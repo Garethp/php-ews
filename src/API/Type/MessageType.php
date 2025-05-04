@@ -112,7 +112,8 @@ class MessageType extends ItemType
             $body = new BodyType($body);
         }
 
-        return parent::setBody($body);
+        $this->body = $body;
+        return $this;
     }
 
     /**
@@ -121,27 +122,32 @@ class MessageType extends ItemType
      */
     public function setFrom($from)
     {
-        return parent::setFrom(new SingleRecipientType(ensureIsMailbox($from)));
+        $this->from = new SingleRecipientType(ensureIsMailbox($from));
+        return $this;
     }
 
     public function addToRecipients($recipient)
     {
-        return parent::addToRecipients(ensureIsMailbox($recipient));
+        $this->toRecipients[] = ensureIsMailbox($recipient);
+        return $this;
     }
 
     public function addCcRecipients($recipient)
     {
-        return parent::addCcRecipients(ensureIsMailbox($recipient));
+        $this->ccRecipients[] = ensureIsMailbox($recipient);
+        return $this;
     }
 
     public function addBccRecipients($recipient)
     {
-        return parent::addBccRecipients(ensureIsMailbox($recipient));
+        $this->bccRecipients[] = ensureIsMailbox($recipient);
+        return $this;
     }
 
     public function addReplyTo($recipient)
     {
-        return parent::addReplyTo(ensureIsMailbox($recipient));
+        $this->replyTo[] = ensureIsMailbox($recipient);
+        return $this;
     }
 
     public function setToRecipients($recipients)
