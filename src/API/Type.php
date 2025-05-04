@@ -12,6 +12,7 @@ use garethp\ews\BuildableTrait;
  *
  * @package php-ews\Type
  */
+#[\AllowDynamicProperties]
 class Type
 {
     use MagicMethodsTrait;
