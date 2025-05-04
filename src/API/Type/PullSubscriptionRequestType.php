@@ -32,7 +32,7 @@ class PullSubscriptionRequestType extends BaseSubscriptionRequestType
      */
     public function setTimeout($value)
     {
-        $this->timeout = $this->castValueIfNeeded("timeout", $value);
+        $this->timeout = $value;
         return $this;
     }
 }

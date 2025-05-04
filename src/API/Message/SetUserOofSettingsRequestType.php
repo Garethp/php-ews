@@ -37,7 +37,7 @@ class SetUserOofSettingsRequestType extends BaseRequestType
      */
     public function setMailbox(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->mailbox = $this->castValueIfNeeded("mailbox", $value);
+        $this->mailbox = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class SetUserOofSettingsRequestType extends BaseRequestType
      */
     public function setUserOofSettings(\garethp\ews\API\Type\UserOofSettings $value)
     {
-        $this->userOofSettings = $this->castValueIfNeeded("userOofSettings", $value);
+        $this->userOofSettings = $value;
         return $this;
     }
 }

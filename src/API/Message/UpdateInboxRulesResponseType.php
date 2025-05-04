@@ -23,10 +23,8 @@ class UpdateInboxRulesResponseType extends ResponseMessageType
      */
     public function addRuleOperationErrors(\garethp\ews\API\Type\RuleOperationErrorType $value)
     {
-        $value = $this->castValueIfNeeded("ruleOperationErrors", $value);
-
         if ($this->ruleOperationErrors === null) {
-            $this->ruleOperationErrors = array();
+                        $this->ruleOperationErrors = array();
         }
 
         if (!is_array($this->ruleOperationErrors)) {
@@ -57,7 +55,7 @@ class UpdateInboxRulesResponseType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->ruleOperationErrors = $this->castValueIfNeeded("ruleOperationErrors", $value);
+        $this->ruleOperationErrors = $value;
         return $this;
     }
 }

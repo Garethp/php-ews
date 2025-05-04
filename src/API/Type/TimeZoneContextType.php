@@ -34,7 +34,7 @@ class TimeZoneContextType extends Type
      */
     public function setTimeZoneDefinition(TimeZoneDefinitionType $value)
     {
-        $this->timeZoneDefinition = $this->castValueIfNeeded("timeZoneDefinition", $value);
+        $this->timeZoneDefinition = $value;
         return $this;
     }
 }

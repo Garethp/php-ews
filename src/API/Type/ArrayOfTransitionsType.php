@@ -54,7 +54,7 @@ class ArrayOfTransitionsType extends Type
      */
     public function setId($value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 
@@ -65,10 +65,8 @@ class ArrayOfTransitionsType extends Type
      */
     public function addAbsoluteDateTransition(AbsoluteDateTransition $value)
     {
-        $value = $this->castValueIfNeeded("absoluteDateTransition", $value);
-
         if ($this->absoluteDateTransition === null) {
-            $this->absoluteDateTransition = array();
+                        $this->absoluteDateTransition = array();
         }
 
         if (!is_array($this->absoluteDateTransition)) {
@@ -98,7 +96,7 @@ class ArrayOfTransitionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->absoluteDateTransition = $this->castValueIfNeeded("absoluteDateTransition", $value);
+        $this->absoluteDateTransition = $value;
         return $this;
     }
 
@@ -109,10 +107,8 @@ class ArrayOfTransitionsType extends Type
      */
     public function addRecurringDayTransition(RecurringDayTransition $value)
     {
-        $value = $this->castValueIfNeeded("recurringDayTransition", $value);
-
         if ($this->recurringDayTransition === null) {
-            $this->recurringDayTransition = array();
+                        $this->recurringDayTransition = array();
         }
 
         if (!is_array($this->recurringDayTransition)) {
@@ -142,7 +138,7 @@ class ArrayOfTransitionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recurringDayTransition = $this->castValueIfNeeded("recurringDayTransition", $value);
+        $this->recurringDayTransition = $value;
         return $this;
     }
 
@@ -153,10 +149,8 @@ class ArrayOfTransitionsType extends Type
      */
     public function addRecurringDateTransition(RecurringDateTransition $value)
     {
-        $value = $this->castValueIfNeeded("recurringDateTransition", $value);
-
         if ($this->recurringDateTransition === null) {
-            $this->recurringDateTransition = array();
+                        $this->recurringDateTransition = array();
         }
 
         if (!is_array($this->recurringDateTransition)) {
@@ -186,7 +180,7 @@ class ArrayOfTransitionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recurringDateTransition = $this->castValueIfNeeded("recurringDateTransition", $value);
+        $this->recurringDateTransition = $value;
         return $this;
     }
 
@@ -197,10 +191,8 @@ class ArrayOfTransitionsType extends Type
      */
     public function addTransition(Transition $value)
     {
-        $value = $this->castValueIfNeeded("transition", $value);
-
         if ($this->transition === null) {
-            $this->transition = array();
+                        $this->transition = array();
         }
 
         if (!is_array($this->transition)) {
@@ -230,7 +222,7 @@ class ArrayOfTransitionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->transition = $this->castValueIfNeeded("transition", $value);
+        $this->transition = $value;
         return $this;
     }
 }

@@ -39,7 +39,7 @@ class FreeBusyResponseType extends Message
      */
     public function setResponseMessage(ResponseMessageType $value)
     {
-        $this->responseMessage = $this->castValueIfNeeded("responseMessage", $value);
+        $this->responseMessage = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class FreeBusyResponseType extends Message
      */
     public function setFreeBusyView(\garethp\ews\API\Type\FreeBusyViewType $value)
     {
-        $this->freeBusyView = $this->castValueIfNeeded("freeBusyView", $value);
+        $this->freeBusyView = $value;
         return $this;
     }
 }

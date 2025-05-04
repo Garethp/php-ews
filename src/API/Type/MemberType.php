@@ -44,7 +44,7 @@ class MemberType extends Type
      */
     public function setKey($value)
     {
-        $this->key = $this->castValueIfNeeded("key", $value);
+        $this->key = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class MemberType extends Type
      */
     public function setMailbox(EmailAddressType $value)
     {
-        $this->mailbox = $this->castValueIfNeeded("mailbox", $value);
+        $this->mailbox = $value;
         return $this;
     }
 
@@ -84,7 +84,7 @@ class MemberType extends Type
      */
     public function setStatus($value)
     {
-        $this->status = $this->castValueIfNeeded("status", $value);
+        $this->status = $value;
         return $this;
     }
 }

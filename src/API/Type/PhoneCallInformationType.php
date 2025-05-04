@@ -49,7 +49,7 @@ class PhoneCallInformationType extends Type
      */
     public function setPhoneCallState($value)
     {
-        $this->phoneCallState = $this->castValueIfNeeded("phoneCallState", $value);
+        $this->phoneCallState = $value;
         return $this;
     }
 
@@ -69,7 +69,7 @@ class PhoneCallInformationType extends Type
      */
     public function setConnectionFailureCause($value)
     {
-        $this->connectionFailureCause = $this->castValueIfNeeded("connectionFailureCause", $value);
+        $this->connectionFailureCause = $value;
         return $this;
     }
 
@@ -89,7 +89,7 @@ class PhoneCallInformationType extends Type
      */
     public function setSIPResponseText($value)
     {
-        $this->sIPResponseText = $this->castValueIfNeeded("sIPResponseText", $value);
+        $this->sIPResponseText = $value;
         return $this;
     }
 
@@ -109,7 +109,7 @@ class PhoneCallInformationType extends Type
      */
     public function setSIPResponseCode($value)
     {
-        $this->sIPResponseCode = $this->castValueIfNeeded("sIPResponseCode", $value);
+        $this->sIPResponseCode = $value;
         return $this;
     }
 }

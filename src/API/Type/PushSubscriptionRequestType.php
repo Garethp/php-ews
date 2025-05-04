@@ -37,7 +37,7 @@ class PushSubscriptionRequestType extends BaseSubscriptionRequestType
      */
     public function setStatusFrequency($value)
     {
-        $this->statusFrequency = $this->castValueIfNeeded("statusFrequency", $value);
+        $this->statusFrequency = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class PushSubscriptionRequestType extends BaseSubscriptionRequestType
      */
     public function setURL($value)
     {
-        $this->uRL = $this->castValueIfNeeded("uRL", $value);
+        $this->uRL = $value;
         return $this;
     }
 }

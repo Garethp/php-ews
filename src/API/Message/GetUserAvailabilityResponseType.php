@@ -30,10 +30,8 @@ class GetUserAvailabilityResponseType extends Message
      */
     public function addFreeBusyResponseArray(FreeBusyResponseType $value)
     {
-        $value = $this->castValueIfNeeded("freeBusyResponseArray", $value);
-
         if ($this->freeBusyResponseArray === null) {
-            $this->freeBusyResponseArray = array();
+                        $this->freeBusyResponseArray = array();
         }
 
         if (!is_array($this->freeBusyResponseArray)) {
@@ -63,7 +61,7 @@ class GetUserAvailabilityResponseType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->freeBusyResponseArray = $this->castValueIfNeeded("freeBusyResponseArray", $value);
+        $this->freeBusyResponseArray = $value;
         return $this;
     }
 
@@ -83,7 +81,7 @@ class GetUserAvailabilityResponseType extends Message
      */
     public function setSuggestionsResponse(SuggestionsResponseType $value)
     {
-        $this->suggestionsResponse = $this->castValueIfNeeded("suggestionsResponse", $value);
+        $this->suggestionsResponse = $value;
         return $this;
     }
 }

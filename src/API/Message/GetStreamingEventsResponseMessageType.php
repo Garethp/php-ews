@@ -33,10 +33,8 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
      */
     public function addNotifications(\garethp\ews\API\Type\NotificationType $value)
     {
-        $value = $this->castValueIfNeeded("notifications", $value);
-
         if ($this->notifications === null) {
-            $this->notifications = array();
+                        $this->notifications = array();
         }
 
         if (!is_array($this->notifications)) {
@@ -67,7 +65,7 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->notifications = $this->castValueIfNeeded("notifications", $value);
+        $this->notifications = $value;
         return $this;
     }
 
@@ -78,10 +76,8 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
      */
     public function addErrorSubscriptionIds($value)
     {
-        $value = $this->castValueIfNeeded("errorSubscriptionIds", $value);
-
         if ($this->errorSubscriptionIds === null) {
-            $this->errorSubscriptionIds = array();
+                        $this->errorSubscriptionIds = array();
         }
 
         if (!is_array($this->errorSubscriptionIds)) {
@@ -111,7 +107,7 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->errorSubscriptionIds = $this->castValueIfNeeded("errorSubscriptionIds", $value);
+        $this->errorSubscriptionIds = $value;
         return $this;
     }
 
@@ -131,7 +127,7 @@ class GetStreamingEventsResponseMessageType extends ResponseMessageType
      */
     public function setConnectionStatus($value)
     {
-        $this->connectionStatus = $this->castValueIfNeeded("connectionStatus", $value);
+        $this->connectionStatus = $value;
         return $this;
     }
 }

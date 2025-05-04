@@ -59,7 +59,7 @@ class ItemResponseShapeType extends Type
      */
     public function setBaseShape($value)
     {
-        $this->baseShape = $this->castValueIfNeeded("baseShape", $value);
+        $this->baseShape = $value;
         return $this;
     }
 
@@ -88,7 +88,7 @@ class ItemResponseShapeType extends Type
      */
     public function setIncludeMimeContent($value)
     {
-        $this->includeMimeContent = $this->castValueIfNeeded("includeMimeContent", $value);
+        $this->includeMimeContent = $value;
         return $this;
     }
 
@@ -108,7 +108,7 @@ class ItemResponseShapeType extends Type
      */
     public function setBodyType($value)
     {
-        $this->bodyType = $this->castValueIfNeeded("bodyType", $value);
+        $this->bodyType = $value;
         return $this;
     }
 
@@ -137,7 +137,7 @@ class ItemResponseShapeType extends Type
      */
     public function setFilterHtmlContent($value)
     {
-        $this->filterHtmlContent = $this->castValueIfNeeded("filterHtmlContent", $value);
+        $this->filterHtmlContent = $value;
         return $this;
     }
 
@@ -166,7 +166,7 @@ class ItemResponseShapeType extends Type
      */
     public function setConvertHtmlCodePageToUTF8($value)
     {
-        $this->convertHtmlCodePageToUTF8 = $this->castValueIfNeeded("convertHtmlCodePageToUTF8", $value);
+        $this->convertHtmlCodePageToUTF8 = $value;
         return $this;
     }
 
@@ -186,7 +186,7 @@ class ItemResponseShapeType extends Type
      */
     public function setAdditionalProperties(NonEmptyArrayOfPathsToElementType $value)
     {
-        $this->additionalProperties = $this->castValueIfNeeded("additionalProperties", $value);
+        $this->additionalProperties = $value;
         return $this;
     }
 }

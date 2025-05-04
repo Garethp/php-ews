@@ -32,7 +32,7 @@ class PostReplyItemType extends PostReplyItemBaseType
      */
     public function setNewBodyContent(BodyType $value)
     {
-        $this->newBodyContent = $this->castValueIfNeeded("newBodyContent", $value);
+        $this->newBodyContent = $value;
         return $this;
     }
 }

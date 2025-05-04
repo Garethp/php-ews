@@ -63,7 +63,7 @@ class PathToExtendedFieldType extends BasePathToElementType
      */
     public function setDistinguishedPropertySetId($value)
     {
-        $this->distinguishedPropertySetId = $this->castValueIfNeeded("distinguishedPropertySetId", $value);
+        $this->distinguishedPropertySetId = $value;
         return $this;
     }
 
@@ -83,7 +83,7 @@ class PathToExtendedFieldType extends BasePathToElementType
      */
     public function setPropertySetId($value)
     {
-        $this->propertySetId = $this->castValueIfNeeded("propertySetId", $value);
+        $this->propertySetId = $value;
         return $this;
     }
 
@@ -103,7 +103,7 @@ class PathToExtendedFieldType extends BasePathToElementType
      */
     public function setPropertyTag($value)
     {
-        $this->propertyTag = $this->castValueIfNeeded("propertyTag", $value);
+        $this->propertyTag = $value;
         return $this;
     }
 
@@ -123,7 +123,7 @@ class PathToExtendedFieldType extends BasePathToElementType
      */
     public function setPropertyName($value)
     {
-        $this->propertyName = $this->castValueIfNeeded("propertyName", $value);
+        $this->propertyName = $value;
         return $this;
     }
 
@@ -143,7 +143,7 @@ class PathToExtendedFieldType extends BasePathToElementType
      */
     public function setPropertyId($value)
     {
-        $this->propertyId = $this->castValueIfNeeded("propertyId", $value);
+        $this->propertyId = $value;
         return $this;
     }
 
@@ -163,7 +163,7 @@ class PathToExtendedFieldType extends BasePathToElementType
      */
     public function setPropertyType($value)
     {
-        $this->propertyType = $this->castValueIfNeeded("propertyType", $value);
+        $this->propertyType = $value;
         return $this;
     }
 }

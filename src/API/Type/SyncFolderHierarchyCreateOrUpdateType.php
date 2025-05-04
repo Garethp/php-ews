@@ -54,7 +54,7 @@ class SyncFolderHierarchyCreateOrUpdateType extends Type
      */
     public function setFolder(FolderType $value)
     {
-        $this->folder = $this->castValueIfNeeded("folder", $value);
+        $this->folder = $value;
         return $this;
     }
 
@@ -74,7 +74,7 @@ class SyncFolderHierarchyCreateOrUpdateType extends Type
      */
     public function setCalendarFolder(CalendarFolderType $value)
     {
-        $this->calendarFolder = $this->castValueIfNeeded("calendarFolder", $value);
+        $this->calendarFolder = $value;
         return $this;
     }
 
@@ -94,7 +94,7 @@ class SyncFolderHierarchyCreateOrUpdateType extends Type
      */
     public function setContactsFolder(ContactsFolderType $value)
     {
-        $this->contactsFolder = $this->castValueIfNeeded("contactsFolder", $value);
+        $this->contactsFolder = $value;
         return $this;
     }
 
@@ -114,7 +114,7 @@ class SyncFolderHierarchyCreateOrUpdateType extends Type
      */
     public function setSearchFolder(SearchFolderType $value)
     {
-        $this->searchFolder = $this->castValueIfNeeded("searchFolder", $value);
+        $this->searchFolder = $value;
         return $this;
     }
 
@@ -134,7 +134,7 @@ class SyncFolderHierarchyCreateOrUpdateType extends Type
      */
     public function setTasksFolder(TasksFolderType $value)
     {
-        $this->tasksFolder = $this->castValueIfNeeded("tasksFolder", $value);
+        $this->tasksFolder = $value;
         return $this;
     }
 }

@@ -42,7 +42,7 @@ class GetSharingMetadataType extends BaseRequestType
      */
     public function setIdOfFolderToShare(\garethp\ews\API\Type\FolderIdType $value)
     {
-        $this->idOfFolderToShare = $this->castValueIfNeeded("idOfFolderToShare", $value);
+        $this->idOfFolderToShare = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class GetSharingMetadataType extends BaseRequestType
      */
     public function setSenderSmtpAddress($value)
     {
-        $this->senderSmtpAddress = $this->castValueIfNeeded("senderSmtpAddress", $value);
+        $this->senderSmtpAddress = $value;
         return $this;
     }
 
@@ -73,10 +73,8 @@ class GetSharingMetadataType extends BaseRequestType
      */
     public function addRecipients($value)
     {
-        $value = $this->castValueIfNeeded("recipients", $value);
-
         if ($this->recipients === null) {
-            $this->recipients = array();
+                        $this->recipients = array();
         }
 
         if (!is_array($this->recipients)) {
@@ -106,7 +104,7 @@ class GetSharingMetadataType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recipients = $this->castValueIfNeeded("recipients", $value);
+        $this->recipients = $value;
         return $this;
     }
 }

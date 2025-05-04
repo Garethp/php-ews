@@ -43,7 +43,7 @@ class SingleRecipientType extends Type
      */
     public function setMailbox(EmailAddressType $value)
     {
-        $this->mailbox = $this->castValueIfNeeded("mailbox", $value);
+        $this->mailbox = $value;
         return $this;
     }
 }

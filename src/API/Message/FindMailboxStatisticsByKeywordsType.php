@@ -41,11 +41,6 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     protected $fromDate = null;
 
-    protected $_typeMap = array(
-        'fromDate' => 'dateTime',
-        'toDate' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -78,10 +73,8 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function addMailboxes(\garethp\ews\API\Type\UserMailboxType $value)
     {
-        $value = $this->castValueIfNeeded("mailboxes", $value);
-
         if ($this->mailboxes === null) {
-            $this->mailboxes = array();
+                        $this->mailboxes = array();
         }
 
         if (!is_array($this->mailboxes)) {
@@ -112,7 +105,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->mailboxes = $this->castValueIfNeeded("mailboxes", $value);
+        $this->mailboxes = $value;
         return $this;
     }
 
@@ -123,10 +116,8 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function addKeywords($value)
     {
-        $value = $this->castValueIfNeeded("keywords", $value);
-
         if ($this->keywords === null) {
-            $this->keywords = array();
+                        $this->keywords = array();
         }
 
         if (!is_array($this->keywords)) {
@@ -156,7 +147,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->keywords = $this->castValueIfNeeded("keywords", $value);
+        $this->keywords = $value;
         return $this;
     }
 
@@ -176,7 +167,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function setLanguage($value)
     {
-        $this->language = $this->castValueIfNeeded("language", $value);
+        $this->language = $value;
         return $this;
     }
 
@@ -187,10 +178,8 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function addSenders($value)
     {
-        $value = $this->castValueIfNeeded("senders", $value);
-
         if ($this->senders === null) {
-            $this->senders = array();
+                        $this->senders = array();
         }
 
         if (!is_array($this->senders)) {
@@ -220,7 +209,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->senders = $this->castValueIfNeeded("senders", $value);
+        $this->senders = $value;
         return $this;
     }
 
@@ -231,10 +220,8 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function addRecipients($value)
     {
-        $value = $this->castValueIfNeeded("recipients", $value);
-
         if ($this->recipients === null) {
-            $this->recipients = array();
+                        $this->recipients = array();
         }
 
         if (!is_array($this->recipients)) {
@@ -264,7 +251,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recipients = $this->castValueIfNeeded("recipients", $value);
+        $this->recipients = $value;
         return $this;
     }
 
@@ -284,7 +271,10 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function setFromDate(\DateTime|string $value)
     {
-        $this->fromDate = $this->castValueIfNeeded("fromDate", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->fromDate = $value;
         return $this;
     }
 
@@ -304,7 +294,10 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function setToDate(\DateTime|string $value)
     {
-        $this->toDate = $this->castValueIfNeeded("toDate", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->toDate = $value;
         return $this;
     }
 
@@ -315,10 +308,8 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function addMessageTypes($value)
     {
-        $value = $this->castValueIfNeeded("messageTypes", $value);
-
         if ($this->messageTypes === null) {
-            $this->messageTypes = array();
+                        $this->messageTypes = array();
         }
 
         if (!is_array($this->messageTypes)) {
@@ -348,7 +339,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->messageTypes = $this->castValueIfNeeded("messageTypes", $value);
+        $this->messageTypes = $value;
         return $this;
     }
 
@@ -377,7 +368,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function setSearchDumpster($value)
     {
-        $this->searchDumpster = $this->castValueIfNeeded("searchDumpster", $value);
+        $this->searchDumpster = $value;
         return $this;
     }
 
@@ -406,7 +397,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function setIncludePersonalArchive($value)
     {
-        $this->includePersonalArchive = $this->castValueIfNeeded("includePersonalArchive", $value);
+        $this->includePersonalArchive = $value;
         return $this;
     }
 
@@ -435,7 +426,7 @@ class FindMailboxStatisticsByKeywordsType extends BaseRequestType
      */
     public function setIncludeUnsearchableItems($value)
     {
-        $this->includeUnsearchableItems = $this->castValueIfNeeded("includeUnsearchableItems", $value);
+        $this->includeUnsearchableItems = $value;
         return $this;
     }
 }

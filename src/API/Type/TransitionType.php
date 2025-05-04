@@ -34,7 +34,7 @@ class TransitionType extends Type
      */
     public function setTo(TransitionTargetType $value)
     {
-        $this->to = $this->castValueIfNeeded("to", $value);
+        $this->to = $value;
         return $this;
     }
 }

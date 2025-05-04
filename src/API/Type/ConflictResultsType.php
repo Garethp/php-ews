@@ -34,7 +34,7 @@ class ConflictResultsType extends Type
      */
     public function setCount($value)
     {
-        $this->count = $this->castValueIfNeeded("count", $value);
+        $this->count = $value;
         return $this;
     }
 }

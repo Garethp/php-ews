@@ -34,7 +34,7 @@ class PhoneNumberDictionaryEntryType extends Type
      */
     public function setKey($value)
     {
-        $this->key = $this->castValueIfNeeded("key", $value);
+        $this->key = $value;
         return $this;
     }
 }

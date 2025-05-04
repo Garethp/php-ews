@@ -32,7 +32,7 @@ class SearchFolderType extends FolderType
      */
     public function setSearchParameters(SearchParametersType $value)
     {
-        $this->searchParameters = $this->castValueIfNeeded("searchParameters", $value);
+        $this->searchParameters = $value;
         return $this;
     }
 }

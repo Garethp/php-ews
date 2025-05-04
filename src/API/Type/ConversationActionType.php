@@ -33,10 +33,6 @@ class ConversationActionType extends Type
      */
     protected $conversationLastSyncTime = null;
 
-    protected $_typeMap = array(
-        'conversationLastSyncTime' => 'dateTime',
-    );
-
     /**
      * @var boolean
      */
@@ -83,7 +79,7 @@ class ConversationActionType extends Type
      */
     public function setAction($value)
     {
-        $this->action = $this->castValueIfNeeded("action", $value);
+        $this->action = $value;
         return $this;
     }
 
@@ -103,7 +99,7 @@ class ConversationActionType extends Type
      */
     public function setConversationId(ItemIdType $value)
     {
-        $this->conversationId = $this->castValueIfNeeded("conversationId", $value);
+        $this->conversationId = $value;
         return $this;
     }
 
@@ -123,7 +119,7 @@ class ConversationActionType extends Type
      */
     public function setContextFolderId(TargetFolderIdType $value)
     {
-        $this->contextFolderId = $this->castValueIfNeeded("contextFolderId", $value);
+        $this->contextFolderId = $value;
         return $this;
     }
 
@@ -143,7 +139,10 @@ class ConversationActionType extends Type
      */
     public function setConversationLastSyncTime(\DateTime|string $value)
     {
-        $this->conversationLastSyncTime = $this->castValueIfNeeded("conversationLastSyncTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->conversationLastSyncTime = $value;
         return $this;
     }
 
@@ -172,7 +171,7 @@ class ConversationActionType extends Type
      */
     public function setProcessRightAway($value)
     {
-        $this->processRightAway = $this->castValueIfNeeded("processRightAway", $value);
+        $this->processRightAway = $value;
         return $this;
     }
 
@@ -192,7 +191,7 @@ class ConversationActionType extends Type
      */
     public function setDestinationFolderId(TargetFolderIdType $value)
     {
-        $this->destinationFolderId = $this->castValueIfNeeded("destinationFolderId", $value);
+        $this->destinationFolderId = $value;
         return $this;
     }
 
@@ -203,10 +202,8 @@ class ConversationActionType extends Type
      */
     public function addCategories($value)
     {
-        $value = $this->castValueIfNeeded("categories", $value);
-
         if ($this->categories === null) {
-            $this->categories = array();
+                        $this->categories = array();
         }
 
         if (!is_array($this->categories)) {
@@ -236,7 +233,7 @@ class ConversationActionType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->categories = $this->castValueIfNeeded("categories", $value);
+        $this->categories = $value;
         return $this;
     }
 
@@ -265,7 +262,7 @@ class ConversationActionType extends Type
      */
     public function setEnableAlwaysDelete($value)
     {
-        $this->enableAlwaysDelete = $this->castValueIfNeeded("enableAlwaysDelete", $value);
+        $this->enableAlwaysDelete = $value;
         return $this;
     }
 
@@ -294,7 +291,7 @@ class ConversationActionType extends Type
      */
     public function setIsRead($value)
     {
-        $this->isRead = $this->castValueIfNeeded("isRead", $value);
+        $this->isRead = $value;
         return $this;
     }
 
@@ -314,7 +311,7 @@ class ConversationActionType extends Type
      */
     public function setDeleteType($value)
     {
-        $this->deleteType = $this->castValueIfNeeded("deleteType", $value);
+        $this->deleteType = $value;
         return $this;
     }
 }

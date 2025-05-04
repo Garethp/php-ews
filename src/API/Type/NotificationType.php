@@ -84,7 +84,7 @@ class NotificationType extends Type
      */
     public function setSubscriptionId($value)
     {
-        $this->subscriptionId = $this->castValueIfNeeded("subscriptionId", $value);
+        $this->subscriptionId = $value;
         return $this;
     }
 
@@ -104,7 +104,7 @@ class NotificationType extends Type
      */
     public function setPreviousWatermark($value)
     {
-        $this->previousWatermark = $this->castValueIfNeeded("previousWatermark", $value);
+        $this->previousWatermark = $value;
         return $this;
     }
 
@@ -133,7 +133,7 @@ class NotificationType extends Type
      */
     public function setMoreEvents($value)
     {
-        $this->moreEvents = $this->castValueIfNeeded("moreEvents", $value);
+        $this->moreEvents = $value;
         return $this;
     }
 
@@ -144,10 +144,8 @@ class NotificationType extends Type
      */
     public function addCopiedEvent(MovedCopiedEventType $value)
     {
-        $value = $this->castValueIfNeeded("copiedEvent", $value);
-
         if ($this->copiedEvent === null) {
-            $this->copiedEvent = array();
+                        $this->copiedEvent = array();
         }
 
         if (!is_array($this->copiedEvent)) {
@@ -177,7 +175,7 @@ class NotificationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->copiedEvent = $this->castValueIfNeeded("copiedEvent", $value);
+        $this->copiedEvent = $value;
         return $this;
     }
 
@@ -188,10 +186,8 @@ class NotificationType extends Type
      */
     public function addCreatedEvent(BaseObjectChangedEventType $value)
     {
-        $value = $this->castValueIfNeeded("createdEvent", $value);
-
         if ($this->createdEvent === null) {
-            $this->createdEvent = array();
+                        $this->createdEvent = array();
         }
 
         if (!is_array($this->createdEvent)) {
@@ -221,7 +217,7 @@ class NotificationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->createdEvent = $this->castValueIfNeeded("createdEvent", $value);
+        $this->createdEvent = $value;
         return $this;
     }
 
@@ -232,10 +228,8 @@ class NotificationType extends Type
      */
     public function addDeletedEvent(BaseObjectChangedEventType $value)
     {
-        $value = $this->castValueIfNeeded("deletedEvent", $value);
-
         if ($this->deletedEvent === null) {
-            $this->deletedEvent = array();
+                        $this->deletedEvent = array();
         }
 
         if (!is_array($this->deletedEvent)) {
@@ -265,7 +259,7 @@ class NotificationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deletedEvent = $this->castValueIfNeeded("deletedEvent", $value);
+        $this->deletedEvent = $value;
         return $this;
     }
 
@@ -276,10 +270,8 @@ class NotificationType extends Type
      */
     public function addModifiedEvent(ModifiedEventType $value)
     {
-        $value = $this->castValueIfNeeded("modifiedEvent", $value);
-
         if ($this->modifiedEvent === null) {
-            $this->modifiedEvent = array();
+                        $this->modifiedEvent = array();
         }
 
         if (!is_array($this->modifiedEvent)) {
@@ -309,7 +301,7 @@ class NotificationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->modifiedEvent = $this->castValueIfNeeded("modifiedEvent", $value);
+        $this->modifiedEvent = $value;
         return $this;
     }
 
@@ -320,10 +312,8 @@ class NotificationType extends Type
      */
     public function addMovedEvent(MovedCopiedEventType $value)
     {
-        $value = $this->castValueIfNeeded("movedEvent", $value);
-
         if ($this->movedEvent === null) {
-            $this->movedEvent = array();
+                        $this->movedEvent = array();
         }
 
         if (!is_array($this->movedEvent)) {
@@ -353,7 +343,7 @@ class NotificationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->movedEvent = $this->castValueIfNeeded("movedEvent", $value);
+        $this->movedEvent = $value;
         return $this;
     }
 
@@ -364,10 +354,8 @@ class NotificationType extends Type
      */
     public function addNewMailEvent(BaseObjectChangedEventType $value)
     {
-        $value = $this->castValueIfNeeded("newMailEvent", $value);
-
         if ($this->newMailEvent === null) {
-            $this->newMailEvent = array();
+                        $this->newMailEvent = array();
         }
 
         if (!is_array($this->newMailEvent)) {
@@ -397,7 +385,7 @@ class NotificationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->newMailEvent = $this->castValueIfNeeded("newMailEvent", $value);
+        $this->newMailEvent = $value;
         return $this;
     }
 
@@ -408,10 +396,8 @@ class NotificationType extends Type
      */
     public function addStatusEvent(BaseNotificationEventType $value)
     {
-        $value = $this->castValueIfNeeded("statusEvent", $value);
-
         if ($this->statusEvent === null) {
-            $this->statusEvent = array();
+                        $this->statusEvent = array();
         }
 
         if (!is_array($this->statusEvent)) {
@@ -441,7 +427,7 @@ class NotificationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->statusEvent = $this->castValueIfNeeded("statusEvent", $value);
+        $this->statusEvent = $value;
         return $this;
     }
 
@@ -452,10 +438,8 @@ class NotificationType extends Type
      */
     public function addFreeBusyChangedEvent(BaseObjectChangedEventType $value)
     {
-        $value = $this->castValueIfNeeded("freeBusyChangedEvent", $value);
-
         if ($this->freeBusyChangedEvent === null) {
-            $this->freeBusyChangedEvent = array();
+                        $this->freeBusyChangedEvent = array();
         }
 
         if (!is_array($this->freeBusyChangedEvent)) {
@@ -485,7 +469,7 @@ class NotificationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->freeBusyChangedEvent = $this->castValueIfNeeded("freeBusyChangedEvent", $value);
+        $this->freeBusyChangedEvent = $value;
         return $this;
     }
 }

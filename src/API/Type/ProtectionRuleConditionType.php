@@ -54,7 +54,7 @@ class ProtectionRuleConditionType extends Type
      */
     public function setAllInternal($value)
     {
-        $this->allInternal = $this->castValueIfNeeded("allInternal", $value);
+        $this->allInternal = $value;
         return $this;
     }
 
@@ -74,7 +74,7 @@ class ProtectionRuleConditionType extends Type
      */
     public function setAnd(ProtectionRuleAndType $value)
     {
-        $this->and = $this->castValueIfNeeded("and", $value);
+        $this->and = $value;
         return $this;
     }
 
@@ -85,10 +85,8 @@ class ProtectionRuleConditionType extends Type
      */
     public function addRecipientIs($value)
     {
-        $value = $this->castValueIfNeeded("recipientIs", $value);
-
         if ($this->recipientIs === null) {
-            $this->recipientIs = array();
+                        $this->recipientIs = array();
         }
 
         if (!is_array($this->recipientIs)) {
@@ -118,7 +116,7 @@ class ProtectionRuleConditionType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recipientIs = $this->castValueIfNeeded("recipientIs", $value);
+        $this->recipientIs = $value;
         return $this;
     }
 
@@ -129,10 +127,8 @@ class ProtectionRuleConditionType extends Type
      */
     public function addSenderDepartments($value)
     {
-        $value = $this->castValueIfNeeded("senderDepartments", $value);
-
         if ($this->senderDepartments === null) {
-            $this->senderDepartments = array();
+                        $this->senderDepartments = array();
         }
 
         if (!is_array($this->senderDepartments)) {
@@ -162,7 +158,7 @@ class ProtectionRuleConditionType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->senderDepartments = $this->castValueIfNeeded("senderDepartments", $value);
+        $this->senderDepartments = $value;
         return $this;
     }
 
@@ -182,7 +178,7 @@ class ProtectionRuleConditionType extends Type
      */
     public function setTrue($value)
     {
-        $this->true = $this->castValueIfNeeded("true", $value);
+        $this->true = $value;
         return $this;
     }
 }

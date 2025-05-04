@@ -208,7 +208,7 @@ class MessageType extends ItemType
      */
     public function setSender(SingleRecipientType $value)
     {
-        $this->sender = $this->castValueIfNeeded("sender", $value);
+        $this->sender = $value;
         return $this;
     }
 
@@ -264,7 +264,7 @@ class MessageType extends ItemType
      */
     public function setIsReadReceiptRequested($value)
     {
-        $this->isReadReceiptRequested = $this->castValueIfNeeded("isReadReceiptRequested", $value);
+        $this->isReadReceiptRequested = $value;
         return $this;
     }
 
@@ -293,7 +293,7 @@ class MessageType extends ItemType
      */
     public function setIsDeliveryReceiptRequested($value)
     {
-        $this->isDeliveryReceiptRequested = $this->castValueIfNeeded("isDeliveryReceiptRequested", $value);
+        $this->isDeliveryReceiptRequested = $value;
         return $this;
     }
 
@@ -313,7 +313,7 @@ class MessageType extends ItemType
      */
     public function setConversationIndex($value)
     {
-        $this->conversationIndex = $this->castValueIfNeeded("conversationIndex", $value);
+        $this->conversationIndex = $value;
         return $this;
     }
 
@@ -333,7 +333,7 @@ class MessageType extends ItemType
      */
     public function setConversationTopic($value)
     {
-        $this->conversationTopic = $this->castValueIfNeeded("conversationTopic", $value);
+        $this->conversationTopic = $value;
         return $this;
     }
 
@@ -362,7 +362,7 @@ class MessageType extends ItemType
      */
     public function setInternetMessageId($value)
     {
-        $this->internetMessageId = $this->castValueIfNeeded("internetMessageId", $value);
+        $this->internetMessageId = $value;
         return $this;
     }
 
@@ -391,7 +391,7 @@ class MessageType extends ItemType
      */
     public function setIsRead($value)
     {
-        $this->isRead = $this->castValueIfNeeded("isRead", $value);
+        $this->isRead = $value;
         return $this;
     }
 
@@ -420,7 +420,7 @@ class MessageType extends ItemType
      */
     public function setIsResponseRequested($value)
     {
-        $this->isResponseRequested = $this->castValueIfNeeded("isResponseRequested", $value);
+        $this->isResponseRequested = $value;
         return $this;
     }
 
@@ -440,7 +440,7 @@ class MessageType extends ItemType
      */
     public function setReferences($value)
     {
-        $this->references = $this->castValueIfNeeded("references", $value);
+        $this->references = $value;
         return $this;
     }
 
@@ -469,7 +469,7 @@ class MessageType extends ItemType
      */
     public function setReceivedBy(SingleRecipientType $value)
     {
-        $this->receivedBy = $this->castValueIfNeeded("receivedBy", $value);
+        $this->receivedBy = $value;
         return $this;
     }
 
@@ -489,7 +489,7 @@ class MessageType extends ItemType
      */
     public function setReceivedRepresenting(SingleRecipientType $value)
     {
-        $this->receivedRepresenting = $this->castValueIfNeeded("receivedRepresenting", $value);
+        $this->receivedRepresenting = $value;
         return $this;
     }
 }

@@ -32,7 +32,7 @@ class AlternatePublicFolderIdType extends AlternateIdBaseType
      */
     public function setFolderId($value)
     {
-        $this->folderId = $this->castValueIfNeeded("folderId", $value);
+        $this->folderId = $value;
         return $this;
     }
 }

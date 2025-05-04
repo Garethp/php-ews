@@ -82,7 +82,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setItem(ItemType $value)
     {
-        $this->item = $this->castValueIfNeeded("item", $value);
+        $this->item = $value;
         return $this;
     }
 
@@ -102,7 +102,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setMessage(MessageType $value)
     {
-        $this->message = $this->castValueIfNeeded("message", $value);
+        $this->message = $value;
         return $this;
     }
 
@@ -122,7 +122,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setCalendarItem(CalendarItemType $value)
     {
-        $this->calendarItem = $this->castValueIfNeeded("calendarItem", $value);
+        $this->calendarItem = $value;
         return $this;
     }
 
@@ -142,7 +142,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setContact(ContactItemType $value)
     {
-        $this->contact = $this->castValueIfNeeded("contact", $value);
+        $this->contact = $value;
         return $this;
     }
 
@@ -162,7 +162,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setDistributionList(DistributionListType $value)
     {
-        $this->distributionList = $this->castValueIfNeeded("distributionList", $value);
+        $this->distributionList = $value;
         return $this;
     }
 
@@ -182,7 +182,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setMeetingMessage(MeetingMessageType $value)
     {
-        $this->meetingMessage = $this->castValueIfNeeded("meetingMessage", $value);
+        $this->meetingMessage = $value;
         return $this;
     }
 
@@ -202,7 +202,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setMeetingRequest(MeetingRequestMessageType $value)
     {
-        $this->meetingRequest = $this->castValueIfNeeded("meetingRequest", $value);
+        $this->meetingRequest = $value;
         return $this;
     }
 
@@ -222,7 +222,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setMeetingResponse(MeetingResponseMessageType $value)
     {
-        $this->meetingResponse = $this->castValueIfNeeded("meetingResponse", $value);
+        $this->meetingResponse = $value;
         return $this;
     }
 
@@ -242,7 +242,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setMeetingCancellation(MeetingCancellationMessageType $value)
     {
-        $this->meetingCancellation = $this->castValueIfNeeded("meetingCancellation", $value);
+        $this->meetingCancellation = $value;
         return $this;
     }
 
@@ -262,7 +262,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setTask(TaskType $value)
     {
-        $this->task = $this->castValueIfNeeded("task", $value);
+        $this->task = $value;
         return $this;
     }
 
@@ -282,7 +282,7 @@ class AppendToItemFieldType extends ItemChangeDescriptionType
      */
     public function setPostItem(PostItemType $value)
     {
-        $this->postItem = $this->castValueIfNeeded("postItem", $value);
+        $this->postItem = $value;
         return $this;
     }
 }

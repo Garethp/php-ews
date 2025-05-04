@@ -48,10 +48,6 @@ class SuggestionsViewOptionsType extends Type
      */
     protected $currentMeetingTime = null;
 
-    protected $_typeMap = array(
-        'currentMeetingTime' => 'dateTime',
-    );
-
     /**
      * @var string
      */
@@ -73,7 +69,7 @@ class SuggestionsViewOptionsType extends Type
      */
     public function setGoodThreshold($value)
     {
-        $this->goodThreshold = $this->castValueIfNeeded("goodThreshold", $value);
+        $this->goodThreshold = $value;
         return $this;
     }
 
@@ -93,7 +89,7 @@ class SuggestionsViewOptionsType extends Type
      */
     public function setMaximumResultsByDay($value)
     {
-        $this->maximumResultsByDay = $this->castValueIfNeeded("maximumResultsByDay", $value);
+        $this->maximumResultsByDay = $value;
         return $this;
     }
 
@@ -113,7 +109,7 @@ class SuggestionsViewOptionsType extends Type
      */
     public function setMaximumNonWorkHourResultsByDay($value)
     {
-        $this->maximumNonWorkHourResultsByDay = $this->castValueIfNeeded("maximumNonWorkHourResultsByDay", $value);
+        $this->maximumNonWorkHourResultsByDay = $value;
         return $this;
     }
 
@@ -133,7 +129,7 @@ class SuggestionsViewOptionsType extends Type
      */
     public function setMeetingDurationInMinutes($value)
     {
-        $this->meetingDurationInMinutes = $this->castValueIfNeeded("meetingDurationInMinutes", $value);
+        $this->meetingDurationInMinutes = $value;
         return $this;
     }
 
@@ -153,7 +149,7 @@ class SuggestionsViewOptionsType extends Type
      */
     public function setMinimumSuggestionQuality($value)
     {
-        $this->minimumSuggestionQuality = $this->castValueIfNeeded("minimumSuggestionQuality", $value);
+        $this->minimumSuggestionQuality = $value;
         return $this;
     }
 
@@ -173,7 +169,7 @@ class SuggestionsViewOptionsType extends Type
      */
     public function setDetailedSuggestionsWindow(DurationType $value)
     {
-        $this->detailedSuggestionsWindow = $this->castValueIfNeeded("detailedSuggestionsWindow", $value);
+        $this->detailedSuggestionsWindow = $value;
         return $this;
     }
 
@@ -193,7 +189,10 @@ class SuggestionsViewOptionsType extends Type
      */
     public function setCurrentMeetingTime(\DateTime|string $value)
     {
-        $this->currentMeetingTime = $this->castValueIfNeeded("currentMeetingTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->currentMeetingTime = $value;
         return $this;
     }
 
@@ -213,7 +212,7 @@ class SuggestionsViewOptionsType extends Type
      */
     public function setGlobalObjectId($value)
     {
-        $this->globalObjectId = $this->castValueIfNeeded("globalObjectId", $value);
+        $this->globalObjectId = $value;
         return $this;
     }
 }

@@ -23,10 +23,8 @@ class BaseDelegateResponseMessageType extends ResponseMessageType
      */
     public function addResponseMessages(DelegateUserResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("responseMessages", $value);
-
         if ($this->responseMessages === null) {
-            $this->responseMessages = array();
+                        $this->responseMessages = array();
         }
 
         if (!is_array($this->responseMessages)) {
@@ -56,7 +54,7 @@ class BaseDelegateResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->responseMessages = $this->castValueIfNeeded("responseMessages", $value);
+        $this->responseMessages = $value;
         return $this;
     }
 }

@@ -69,7 +69,7 @@ class CalendarEventDetailsType extends Type
      */
     public function setID($value)
     {
-        $this->iD = $this->castValueIfNeeded("iD", $value);
+        $this->iD = $value;
         return $this;
     }
 
@@ -89,7 +89,7 @@ class CalendarEventDetailsType extends Type
      */
     public function setSubject($value)
     {
-        $this->subject = $this->castValueIfNeeded("subject", $value);
+        $this->subject = $value;
         return $this;
     }
 
@@ -109,7 +109,7 @@ class CalendarEventDetailsType extends Type
      */
     public function setLocation($value)
     {
-        $this->location = $this->castValueIfNeeded("location", $value);
+        $this->location = $value;
         return $this;
     }
 
@@ -138,7 +138,7 @@ class CalendarEventDetailsType extends Type
      */
     public function setIsMeeting($value)
     {
-        $this->isMeeting = $this->castValueIfNeeded("isMeeting", $value);
+        $this->isMeeting = $value;
         return $this;
     }
 
@@ -167,7 +167,7 @@ class CalendarEventDetailsType extends Type
      */
     public function setIsRecurring($value)
     {
-        $this->isRecurring = $this->castValueIfNeeded("isRecurring", $value);
+        $this->isRecurring = $value;
         return $this;
     }
 
@@ -196,7 +196,7 @@ class CalendarEventDetailsType extends Type
      */
     public function setIsException($value)
     {
-        $this->isException = $this->castValueIfNeeded("isException", $value);
+        $this->isException = $value;
         return $this;
     }
 
@@ -225,7 +225,7 @@ class CalendarEventDetailsType extends Type
      */
     public function setIsReminderSet($value)
     {
-        $this->isReminderSet = $this->castValueIfNeeded("isReminderSet", $value);
+        $this->isReminderSet = $value;
         return $this;
     }
 
@@ -254,7 +254,7 @@ class CalendarEventDetailsType extends Type
      */
     public function setIsPrivate($value)
     {
-        $this->isPrivate = $this->castValueIfNeeded("isPrivate", $value);
+        $this->isPrivate = $value;
         return $this;
     }
 }

@@ -54,10 +54,8 @@ class NonEmptyArrayOfAttachmentsType extends Type
      */
     public function addItemAttachment(ItemAttachmentType $value)
     {
-        $value = $this->castValueIfNeeded("itemAttachment", $value);
-
         if ($this->itemAttachment === null) {
-            $this->itemAttachment = array();
+                        $this->itemAttachment = array();
         }
 
         if (!is_array($this->itemAttachment)) {
@@ -78,7 +76,7 @@ class NonEmptyArrayOfAttachmentsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->itemAttachment = $this->castValueIfNeeded("itemAttachment", $value);
+        $this->itemAttachment = $value;
         return $this;
     }
 
@@ -89,10 +87,8 @@ class NonEmptyArrayOfAttachmentsType extends Type
      */
     public function addFileAttachment(FileAttachmentType $value)
     {
-        $value = $this->castValueIfNeeded("fileAttachment", $value);
-
         if ($this->fileAttachment === null) {
-            $this->fileAttachment = array();
+                        $this->fileAttachment = array();
         }
 
         if (!is_array($this->fileAttachment)) {
@@ -113,7 +109,7 @@ class NonEmptyArrayOfAttachmentsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->fileAttachment = $this->castValueIfNeeded("fileAttachment", $value);
+        $this->fileAttachment = $value;
         return $this;
     }
 }

@@ -37,7 +37,7 @@ class ContactsViewType extends BasePagingType
      */
     public function setInitialName($value)
     {
-        $this->initialName = $this->castValueIfNeeded("initialName", $value);
+        $this->initialName = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class ContactsViewType extends BasePagingType
      */
     public function setFinalName($value)
     {
-        $this->finalName = $this->castValueIfNeeded("finalName", $value);
+        $this->finalName = $value;
         return $this;
     }
 }

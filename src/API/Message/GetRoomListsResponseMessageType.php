@@ -23,10 +23,8 @@ class GetRoomListsResponseMessageType extends ResponseMessageType
      */
     public function addRoomLists(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("roomLists", $value);
-
         if ($this->roomLists === null) {
-            $this->roomLists = array();
+                        $this->roomLists = array();
         }
 
         if (!is_array($this->roomLists)) {
@@ -57,7 +55,7 @@ class GetRoomListsResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->roomLists = $this->castValueIfNeeded("roomLists", $value);
+        $this->roomLists = $value;
         return $this;
     }
 }

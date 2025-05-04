@@ -23,10 +23,8 @@ class RemoveDelegateType extends BaseDelegateType
      */
     public function addUserIds(\garethp\ews\API\Type\UserIdType $value)
     {
-        $value = $this->castValueIfNeeded("userIds", $value);
-
         if ($this->userIds === null) {
-            $this->userIds = array();
+                        $this->userIds = array();
         }
 
         if (!is_array($this->userIds)) {
@@ -57,7 +55,7 @@ class RemoveDelegateType extends BaseDelegateType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->userIds = $this->castValueIfNeeded("userIds", $value);
+        $this->userIds = $value;
         return $this;
     }
 }

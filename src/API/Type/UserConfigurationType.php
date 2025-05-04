@@ -54,7 +54,7 @@ class UserConfigurationType extends Type
      */
     public function setUserConfigurationName(UserConfigurationNameType $value)
     {
-        $this->userConfigurationName = $this->castValueIfNeeded("userConfigurationName", $value);
+        $this->userConfigurationName = $value;
         return $this;
     }
 
@@ -74,7 +74,7 @@ class UserConfigurationType extends Type
      */
     public function setItemId(ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -85,10 +85,8 @@ class UserConfigurationType extends Type
      */
     public function addDictionary(UserConfigurationDictionaryEntryType $value)
     {
-        $value = $this->castValueIfNeeded("dictionary", $value);
-
         if ($this->dictionary === null) {
-            $this->dictionary = array();
+                        $this->dictionary = array();
         }
 
         if (!is_array($this->dictionary)) {
@@ -119,7 +117,7 @@ class UserConfigurationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->dictionary = $this->castValueIfNeeded("dictionary", $value);
+        $this->dictionary = $value;
         return $this;
     }
 
@@ -139,7 +137,7 @@ class UserConfigurationType extends Type
      */
     public function setXmlData($value)
     {
-        $this->xmlData = $this->castValueIfNeeded("xmlData", $value);
+        $this->xmlData = $value;
         return $this;
     }
 
@@ -159,7 +157,7 @@ class UserConfigurationType extends Type
      */
     public function setBinaryData($value)
     {
-        $this->binaryData = $this->castValueIfNeeded("binaryData", $value);
+        $this->binaryData = $value;
         return $this;
     }
 }

@@ -34,7 +34,7 @@ class SendNotificationResultType extends Message
      */
     public function setSubscriptionStatus($value)
     {
-        $this->subscriptionStatus = $this->castValueIfNeeded("subscriptionStatus", $value);
+        $this->subscriptionStatus = $value;
         return $this;
     }
 }

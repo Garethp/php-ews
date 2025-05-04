@@ -23,10 +23,8 @@ class ApplyConversationActionType extends BaseRequestType
      */
     public function addConversationActions(\garethp\ews\API\Type\ConversationActionType $value)
     {
-        $value = $this->castValueIfNeeded("conversationActions", $value);
-
         if ($this->conversationActions === null) {
-            $this->conversationActions = array();
+                        $this->conversationActions = array();
         }
 
         if (!is_array($this->conversationActions)) {
@@ -57,7 +55,7 @@ class ApplyConversationActionType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->conversationActions = $this->castValueIfNeeded("conversationActions", $value);
+        $this->conversationActions = $value;
         return $this;
     }
 }

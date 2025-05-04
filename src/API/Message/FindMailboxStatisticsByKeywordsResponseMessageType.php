@@ -32,7 +32,7 @@ class FindMailboxStatisticsByKeywordsResponseMessageType extends ResponseMessage
      */
     public function setMailboxStatisticsSearchResult(\garethp\ews\API\Type\MailboxStatisticsSearchResultType $value)
     {
-        $this->mailboxStatisticsSearchResult = $this->castValueIfNeeded("mailboxStatisticsSearchResult", $value);
+        $this->mailboxStatisticsSearchResult = $value;
         return $this;
     }
 }

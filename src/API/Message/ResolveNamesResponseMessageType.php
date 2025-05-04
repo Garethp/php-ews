@@ -32,7 +32,7 @@ class ResolveNamesResponseMessageType extends ResponseMessageType
      */
     public function setResolutionSet(\garethp\ews\API\Type\ArrayOfResolutionType $value)
     {
-        $this->resolutionSet = $this->castValueIfNeeded("resolutionSet", $value);
+        $this->resolutionSet = $value;
         return $this;
     }
 }

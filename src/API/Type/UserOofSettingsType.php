@@ -54,7 +54,7 @@ class UserOofSettingsType extends Type
      */
     public function setOofState($value)
     {
-        $this->oofState = $this->castValueIfNeeded("oofState", $value);
+        $this->oofState = $value;
         return $this;
     }
 
@@ -74,7 +74,7 @@ class UserOofSettingsType extends Type
      */
     public function setExternalAudience($value)
     {
-        $this->externalAudience = $this->castValueIfNeeded("externalAudience", $value);
+        $this->externalAudience = $value;
         return $this;
     }
 
@@ -94,7 +94,7 @@ class UserOofSettingsType extends Type
      */
     public function setDuration(DurationType $value)
     {
-        $this->duration = $this->castValueIfNeeded("duration", $value);
+        $this->duration = $value;
         return $this;
     }
 
@@ -114,7 +114,7 @@ class UserOofSettingsType extends Type
      */
     public function setInternalReply(ReplyBodyType $value)
     {
-        $this->internalReply = $this->castValueIfNeeded("internalReply", $value);
+        $this->internalReply = $value;
         return $this;
     }
 
@@ -134,7 +134,7 @@ class UserOofSettingsType extends Type
      */
     public function setExternalReply(ReplyBodyType $value)
     {
-        $this->externalReply = $this->castValueIfNeeded("externalReply", $value);
+        $this->externalReply = $value;
         return $this;
     }
 }

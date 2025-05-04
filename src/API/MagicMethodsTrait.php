@@ -12,8 +12,6 @@ use garethp\ews\Caster;
 
 trait MagicMethodsTrait
 {
-    protected $_typeMap = [];
-
     public function __call($name, $arguments)
     {
         $callTypeIndex = 3;
@@ -42,7 +40,7 @@ trait MagicMethodsTrait
         }
 
         if ($this->methodExists("set" . ucfirst($name))) {
-            $this->{"set" . ucfirst($name)}($this->castValueIfNeeded(lcfirst($name), $value));
+            $this->{"set" . ucfirst($name)}($value);
             return;
         }
 
@@ -72,7 +70,6 @@ trait MagicMethodsTrait
     public function set($name, $value)
     {
         $name = $this->getNameInCorrectCase($name);
-        $value = $this->castValueIfNeeded($name, $value);
 
         $this->$name = $value;
 
@@ -82,7 +79,6 @@ trait MagicMethodsTrait
     public function add($name, $value)
     {
         $name = $this->getNameInCorrectCase($name);
-        $value = $this->castValueIfNeeded($name, $value);
 
         if ($this->$name == null) {
             $this->$name = array();
@@ -103,20 +99,6 @@ trait MagicMethodsTrait
         $name = $this->getValidNameInCorrectCase([$nameWithIs, $name]);
 
         return ((bool) $this->$name);
-    }
-
-    public function cast($value, $type)
-    {
-        return Caster::cast($value, $type);
-    }
-
-    public function castToExchange($value, $type)
-    {
-        if (Caster::castExists($type, 'ExchangeFormat')) {
-            $value = Caster::cast($value, 'ExchangeFormat');
-        }
-
-        return $value;
     }
 
     protected function getValidNameInCorrectCase($names)
@@ -148,21 +130,5 @@ trait MagicMethodsTrait
         }
 
         return $name;
-    }
-
-    /**
-     * @param $name
-     * @param $value
-     * @return null
-     */
-    protected function castValueIfNeeded($name, $value)
-    {
-        if (isset($this->_typeMap[$name])) {
-            $value = $this->cast($value, $this->_typeMap[$name]);
-
-            return $value;
-        }
-
-        return $value;
     }
 }

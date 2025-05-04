@@ -37,7 +37,7 @@ class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
      */
     public function setDayOfMonth($value)
     {
-        $this->dayOfMonth = $this->castValueIfNeeded("dayOfMonth", $value);
+        $this->dayOfMonth = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class AbsoluteYearlyRecurrencePatternType extends RecurrencePatternBaseType
      */
     public function setMonth($value)
     {
-        $this->month = $this->castValueIfNeeded("month", $value);
+        $this->month = $value;
         return $this;
     }
 }

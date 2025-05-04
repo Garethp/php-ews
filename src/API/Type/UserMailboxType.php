@@ -39,7 +39,7 @@ class UserMailboxType extends Type
      */
     public function setId($value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 
@@ -68,7 +68,7 @@ class UserMailboxType extends Type
      */
     public function setIsArchive($value)
     {
-        $this->isArchive = $this->castValueIfNeeded("isArchive", $value);
+        $this->isArchive = $value;
         return $this;
     }
 }

@@ -32,7 +32,7 @@ class UnsubscribeType extends BaseRequestType
      */
     public function setSubscriptionId($value)
     {
-        $this->subscriptionId = $this->castValueIfNeeded("subscriptionId", $value);
+        $this->subscriptionId = $value;
         return $this;
     }
 }

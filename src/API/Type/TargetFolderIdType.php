@@ -39,7 +39,7 @@ class TargetFolderIdType extends Type
      */
     public function setFolderId(FolderIdType $value)
     {
-        $this->folderId = $this->castValueIfNeeded("folderId", $value);
+        $this->folderId = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class TargetFolderIdType extends Type
      */
     public function setDistinguishedFolderId(DistinguishedFolderIdType $value)
     {
-        $this->distinguishedFolderId = $this->castValueIfNeeded("distinguishedFolderId", $value);
+        $this->distinguishedFolderId = $value;
         return $this;
     }
 }

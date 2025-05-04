@@ -246,10 +246,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addCreateItemResponseMessage(ItemInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("createItemResponseMessage", $value);
-
         if ($this->createItemResponseMessage === null) {
-            $this->createItemResponseMessage = array();
+                        $this->createItemResponseMessage = array();
         }
 
         if (!is_array($this->createItemResponseMessage)) {
@@ -279,7 +277,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->createItemResponseMessage = $this->castValueIfNeeded("createItemResponseMessage", $value);
+        $this->createItemResponseMessage = $value;
         return $this;
     }
 
@@ -290,10 +288,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addDeleteItemResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("deleteItemResponseMessage", $value);
-
         if ($this->deleteItemResponseMessage === null) {
-            $this->deleteItemResponseMessage = array();
+                        $this->deleteItemResponseMessage = array();
         }
 
         if (!is_array($this->deleteItemResponseMessage)) {
@@ -323,7 +319,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deleteItemResponseMessage = $this->castValueIfNeeded("deleteItemResponseMessage", $value);
+        $this->deleteItemResponseMessage = $value;
         return $this;
     }
 
@@ -334,10 +330,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetItemResponseMessage(ItemInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getItemResponseMessage", $value);
-
         if ($this->getItemResponseMessage === null) {
-            $this->getItemResponseMessage = array();
+                        $this->getItemResponseMessage = array();
         }
 
         if (!is_array($this->getItemResponseMessage)) {
@@ -367,7 +361,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getItemResponseMessage = $this->castValueIfNeeded("getItemResponseMessage", $value);
+        $this->getItemResponseMessage = $value;
         return $this;
     }
 
@@ -378,10 +372,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addUpdateItemResponseMessage(UpdateItemResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("updateItemResponseMessage", $value);
-
         if ($this->updateItemResponseMessage === null) {
-            $this->updateItemResponseMessage = array();
+                        $this->updateItemResponseMessage = array();
         }
 
         if (!is_array($this->updateItemResponseMessage)) {
@@ -411,7 +403,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->updateItemResponseMessage = $this->castValueIfNeeded("updateItemResponseMessage", $value);
+        $this->updateItemResponseMessage = $value;
         return $this;
     }
 
@@ -422,10 +414,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addSendItemResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("sendItemResponseMessage", $value);
-
         if ($this->sendItemResponseMessage === null) {
-            $this->sendItemResponseMessage = array();
+                        $this->sendItemResponseMessage = array();
         }
 
         if (!is_array($this->sendItemResponseMessage)) {
@@ -455,7 +445,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->sendItemResponseMessage = $this->castValueIfNeeded("sendItemResponseMessage", $value);
+        $this->sendItemResponseMessage = $value;
         return $this;
     }
 
@@ -466,10 +456,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addDeleteFolderResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("deleteFolderResponseMessage", $value);
-
         if ($this->deleteFolderResponseMessage === null) {
-            $this->deleteFolderResponseMessage = array();
+                        $this->deleteFolderResponseMessage = array();
         }
 
         if (!is_array($this->deleteFolderResponseMessage)) {
@@ -499,7 +487,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deleteFolderResponseMessage = $this->castValueIfNeeded("deleteFolderResponseMessage", $value);
+        $this->deleteFolderResponseMessage = $value;
         return $this;
     }
 
@@ -510,10 +498,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addEmptyFolderResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("emptyFolderResponseMessage", $value);
-
         if ($this->emptyFolderResponseMessage === null) {
-            $this->emptyFolderResponseMessage = array();
+                        $this->emptyFolderResponseMessage = array();
         }
 
         if (!is_array($this->emptyFolderResponseMessage)) {
@@ -543,7 +529,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->emptyFolderResponseMessage = $this->castValueIfNeeded("emptyFolderResponseMessage", $value);
+        $this->emptyFolderResponseMessage = $value;
         return $this;
     }
 
@@ -554,10 +540,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addCreateFolderResponseMessage(FolderInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("createFolderResponseMessage", $value);
-
         if ($this->createFolderResponseMessage === null) {
-            $this->createFolderResponseMessage = array();
+                        $this->createFolderResponseMessage = array();
         }
 
         if (!is_array($this->createFolderResponseMessage)) {
@@ -587,7 +571,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->createFolderResponseMessage = $this->castValueIfNeeded("createFolderResponseMessage", $value);
+        $this->createFolderResponseMessage = $value;
         return $this;
     }
 
@@ -598,10 +582,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetFolderResponseMessage(FolderInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getFolderResponseMessage", $value);
-
         if ($this->getFolderResponseMessage === null) {
-            $this->getFolderResponseMessage = array();
+                        $this->getFolderResponseMessage = array();
         }
 
         if (!is_array($this->getFolderResponseMessage)) {
@@ -631,7 +613,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getFolderResponseMessage = $this->castValueIfNeeded("getFolderResponseMessage", $value);
+        $this->getFolderResponseMessage = $value;
         return $this;
     }
 
@@ -642,10 +624,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addFindFolderResponseMessage(FindFolderResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("findFolderResponseMessage", $value);
-
         if ($this->findFolderResponseMessage === null) {
-            $this->findFolderResponseMessage = array();
+                        $this->findFolderResponseMessage = array();
         }
 
         if (!is_array($this->findFolderResponseMessage)) {
@@ -675,7 +655,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->findFolderResponseMessage = $this->castValueIfNeeded("findFolderResponseMessage", $value);
+        $this->findFolderResponseMessage = $value;
         return $this;
     }
 
@@ -686,10 +666,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addUpdateFolderResponseMessage(FolderInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("updateFolderResponseMessage", $value);
-
         if ($this->updateFolderResponseMessage === null) {
-            $this->updateFolderResponseMessage = array();
+                        $this->updateFolderResponseMessage = array();
         }
 
         if (!is_array($this->updateFolderResponseMessage)) {
@@ -719,7 +697,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->updateFolderResponseMessage = $this->castValueIfNeeded("updateFolderResponseMessage", $value);
+        $this->updateFolderResponseMessage = $value;
         return $this;
     }
 
@@ -730,10 +708,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addMoveFolderResponseMessage(FolderInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("moveFolderResponseMessage", $value);
-
         if ($this->moveFolderResponseMessage === null) {
-            $this->moveFolderResponseMessage = array();
+                        $this->moveFolderResponseMessage = array();
         }
 
         if (!is_array($this->moveFolderResponseMessage)) {
@@ -763,7 +739,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->moveFolderResponseMessage = $this->castValueIfNeeded("moveFolderResponseMessage", $value);
+        $this->moveFolderResponseMessage = $value;
         return $this;
     }
 
@@ -774,10 +750,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addCopyFolderResponseMessage(FolderInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("copyFolderResponseMessage", $value);
-
         if ($this->copyFolderResponseMessage === null) {
-            $this->copyFolderResponseMessage = array();
+                        $this->copyFolderResponseMessage = array();
         }
 
         if (!is_array($this->copyFolderResponseMessage)) {
@@ -807,7 +781,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->copyFolderResponseMessage = $this->castValueIfNeeded("copyFolderResponseMessage", $value);
+        $this->copyFolderResponseMessage = $value;
         return $this;
     }
 
@@ -818,10 +792,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addCreateAttachmentResponseMessage(AttachmentInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("createAttachmentResponseMessage", $value);
-
         if ($this->createAttachmentResponseMessage === null) {
-            $this->createAttachmentResponseMessage = array();
+                        $this->createAttachmentResponseMessage = array();
         }
 
         if (!is_array($this->createAttachmentResponseMessage)) {
@@ -852,7 +824,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->createAttachmentResponseMessage = $this->castValueIfNeeded("createAttachmentResponseMessage", $value);
+        $this->createAttachmentResponseMessage = $value;
         return $this;
     }
 
@@ -863,10 +835,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addDeleteAttachmentResponseMessage(DeleteAttachmentResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("deleteAttachmentResponseMessage", $value);
-
         if ($this->deleteAttachmentResponseMessage === null) {
-            $this->deleteAttachmentResponseMessage = array();
+                        $this->deleteAttachmentResponseMessage = array();
         }
 
         if (!is_array($this->deleteAttachmentResponseMessage)) {
@@ -897,7 +867,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deleteAttachmentResponseMessage = $this->castValueIfNeeded("deleteAttachmentResponseMessage", $value);
+        $this->deleteAttachmentResponseMessage = $value;
         return $this;
     }
 
@@ -908,10 +878,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetAttachmentResponseMessage(AttachmentInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getAttachmentResponseMessage", $value);
-
         if ($this->getAttachmentResponseMessage === null) {
-            $this->getAttachmentResponseMessage = array();
+                        $this->getAttachmentResponseMessage = array();
         }
 
         if (!is_array($this->getAttachmentResponseMessage)) {
@@ -942,7 +910,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getAttachmentResponseMessage = $this->castValueIfNeeded("getAttachmentResponseMessage", $value);
+        $this->getAttachmentResponseMessage = $value;
         return $this;
     }
 
@@ -953,10 +921,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addUploadItemsResponseMessage(UploadItemsResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("uploadItemsResponseMessage", $value);
-
         if ($this->uploadItemsResponseMessage === null) {
-            $this->uploadItemsResponseMessage = array();
+                        $this->uploadItemsResponseMessage = array();
         }
 
         if (!is_array($this->uploadItemsResponseMessage)) {
@@ -986,7 +952,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->uploadItemsResponseMessage = $this->castValueIfNeeded("uploadItemsResponseMessage", $value);
+        $this->uploadItemsResponseMessage = $value;
         return $this;
     }
 
@@ -997,10 +963,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addExportItemsResponseMessage(ExportItemsResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("exportItemsResponseMessage", $value);
-
         if ($this->exportItemsResponseMessage === null) {
-            $this->exportItemsResponseMessage = array();
+                        $this->exportItemsResponseMessage = array();
         }
 
         if (!is_array($this->exportItemsResponseMessage)) {
@@ -1030,7 +994,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->exportItemsResponseMessage = $this->castValueIfNeeded("exportItemsResponseMessage", $value);
+        $this->exportItemsResponseMessage = $value;
         return $this;
     }
 
@@ -1041,10 +1005,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addFindItemResponseMessage(FindItemResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("findItemResponseMessage", $value);
-
         if ($this->findItemResponseMessage === null) {
-            $this->findItemResponseMessage = array();
+                        $this->findItemResponseMessage = array();
         }
 
         if (!is_array($this->findItemResponseMessage)) {
@@ -1074,7 +1036,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->findItemResponseMessage = $this->castValueIfNeeded("findItemResponseMessage", $value);
+        $this->findItemResponseMessage = $value;
         return $this;
     }
 
@@ -1085,10 +1047,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addMoveItemResponseMessage(ItemInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("moveItemResponseMessage", $value);
-
         if ($this->moveItemResponseMessage === null) {
-            $this->moveItemResponseMessage = array();
+                        $this->moveItemResponseMessage = array();
         }
 
         if (!is_array($this->moveItemResponseMessage)) {
@@ -1118,7 +1078,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->moveItemResponseMessage = $this->castValueIfNeeded("moveItemResponseMessage", $value);
+        $this->moveItemResponseMessage = $value;
         return $this;
     }
 
@@ -1129,10 +1089,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addCopyItemResponseMessage(ItemInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("copyItemResponseMessage", $value);
-
         if ($this->copyItemResponseMessage === null) {
-            $this->copyItemResponseMessage = array();
+                        $this->copyItemResponseMessage = array();
         }
 
         if (!is_array($this->copyItemResponseMessage)) {
@@ -1162,7 +1120,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->copyItemResponseMessage = $this->castValueIfNeeded("copyItemResponseMessage", $value);
+        $this->copyItemResponseMessage = $value;
         return $this;
     }
 
@@ -1173,10 +1131,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addResolveNamesResponseMessage(ResolveNamesResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("resolveNamesResponseMessage", $value);
-
         if ($this->resolveNamesResponseMessage === null) {
-            $this->resolveNamesResponseMessage = array();
+                        $this->resolveNamesResponseMessage = array();
         }
 
         if (!is_array($this->resolveNamesResponseMessage)) {
@@ -1206,7 +1162,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->resolveNamesResponseMessage = $this->castValueIfNeeded("resolveNamesResponseMessage", $value);
+        $this->resolveNamesResponseMessage = $value;
         return $this;
     }
 
@@ -1217,10 +1173,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addExpandDLResponseMessage(ExpandDLResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("expandDLResponseMessage", $value);
-
         if ($this->expandDLResponseMessage === null) {
-            $this->expandDLResponseMessage = array();
+                        $this->expandDLResponseMessage = array();
         }
 
         if (!is_array($this->expandDLResponseMessage)) {
@@ -1250,7 +1204,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->expandDLResponseMessage = $this->castValueIfNeeded("expandDLResponseMessage", $value);
+        $this->expandDLResponseMessage = $value;
         return $this;
     }
 
@@ -1261,10 +1215,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetServerTimeZonesResponseMessage(GetServerTimeZonesResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getServerTimeZonesResponseMessage", $value);
-
         if ($this->getServerTimeZonesResponseMessage === null) {
-            $this->getServerTimeZonesResponseMessage = array();
+                        $this->getServerTimeZonesResponseMessage = array();
         }
 
         if (!is_array($this->getServerTimeZonesResponseMessage)) {
@@ -1295,7 +1247,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getServerTimeZonesResponseMessage = $this->castValueIfNeeded("getServerTimeZonesResponseMessage", $value);
+        $this->getServerTimeZonesResponseMessage = $value;
         return $this;
     }
 
@@ -1306,10 +1258,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetEventsResponseMessage(GetEventsResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getEventsResponseMessage", $value);
-
         if ($this->getEventsResponseMessage === null) {
-            $this->getEventsResponseMessage = array();
+                        $this->getEventsResponseMessage = array();
         }
 
         if (!is_array($this->getEventsResponseMessage)) {
@@ -1339,7 +1289,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getEventsResponseMessage = $this->castValueIfNeeded("getEventsResponseMessage", $value);
+        $this->getEventsResponseMessage = $value;
         return $this;
     }
 
@@ -1350,10 +1300,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetStreamingEventsResponseMessage(GetStreamingEventsResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getStreamingEventsResponseMessage", $value);
-
         if ($this->getStreamingEventsResponseMessage === null) {
-            $this->getStreamingEventsResponseMessage = array();
+                        $this->getStreamingEventsResponseMessage = array();
         }
 
         if (!is_array($this->getStreamingEventsResponseMessage)) {
@@ -1384,7 +1332,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getStreamingEventsResponseMessage = $this->castValueIfNeeded("getStreamingEventsResponseMessage", $value);
+        $this->getStreamingEventsResponseMessage = $value;
         return $this;
     }
 
@@ -1395,10 +1343,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addSubscribeResponseMessage(SubscribeResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("subscribeResponseMessage", $value);
-
         if ($this->subscribeResponseMessage === null) {
-            $this->subscribeResponseMessage = array();
+                        $this->subscribeResponseMessage = array();
         }
 
         if (!is_array($this->subscribeResponseMessage)) {
@@ -1428,7 +1374,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->subscribeResponseMessage = $this->castValueIfNeeded("subscribeResponseMessage", $value);
+        $this->subscribeResponseMessage = $value;
         return $this;
     }
 
@@ -1439,10 +1385,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addUnsubscribeResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("unsubscribeResponseMessage", $value);
-
         if ($this->unsubscribeResponseMessage === null) {
-            $this->unsubscribeResponseMessage = array();
+                        $this->unsubscribeResponseMessage = array();
         }
 
         if (!is_array($this->unsubscribeResponseMessage)) {
@@ -1472,7 +1416,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->unsubscribeResponseMessage = $this->castValueIfNeeded("unsubscribeResponseMessage", $value);
+        $this->unsubscribeResponseMessage = $value;
         return $this;
     }
 
@@ -1483,10 +1427,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addSendNotificationResponseMessage(SendNotificationResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("sendNotificationResponseMessage", $value);
-
         if ($this->sendNotificationResponseMessage === null) {
-            $this->sendNotificationResponseMessage = array();
+                        $this->sendNotificationResponseMessage = array();
         }
 
         if (!is_array($this->sendNotificationResponseMessage)) {
@@ -1517,7 +1459,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->sendNotificationResponseMessage = $this->castValueIfNeeded("sendNotificationResponseMessage", $value);
+        $this->sendNotificationResponseMessage = $value;
         return $this;
     }
 
@@ -1528,10 +1470,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addSyncFolderHierarchyResponseMessage(SyncFolderHierarchyResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("syncFolderHierarchyResponseMessage", $value);
-
         if ($this->syncFolderHierarchyResponseMessage === null) {
-            $this->syncFolderHierarchyResponseMessage = array();
+                        $this->syncFolderHierarchyResponseMessage = array();
         }
 
         if (!is_array($this->syncFolderHierarchyResponseMessage)) {
@@ -1562,7 +1502,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->syncFolderHierarchyResponseMessage = $this->castValueIfNeeded("syncFolderHierarchyResponseMessage", $value);
+        $this->syncFolderHierarchyResponseMessage = $value;
         return $this;
     }
 
@@ -1573,10 +1513,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addSyncFolderItemsResponseMessage(SyncFolderItemsResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("syncFolderItemsResponseMessage", $value);
-
         if ($this->syncFolderItemsResponseMessage === null) {
-            $this->syncFolderItemsResponseMessage = array();
+                        $this->syncFolderItemsResponseMessage = array();
         }
 
         if (!is_array($this->syncFolderItemsResponseMessage)) {
@@ -1607,7 +1545,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->syncFolderItemsResponseMessage = $this->castValueIfNeeded("syncFolderItemsResponseMessage", $value);
+        $this->syncFolderItemsResponseMessage = $value;
         return $this;
     }
 
@@ -1618,10 +1556,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addCreateManagedFolderResponseMessage(FolderInfoResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("createManagedFolderResponseMessage", $value);
-
         if ($this->createManagedFolderResponseMessage === null) {
-            $this->createManagedFolderResponseMessage = array();
+                        $this->createManagedFolderResponseMessage = array();
         }
 
         if (!is_array($this->createManagedFolderResponseMessage)) {
@@ -1651,7 +1587,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->createManagedFolderResponseMessage = $this->castValueIfNeeded("createManagedFolderResponseMessage", $value);
+        $this->createManagedFolderResponseMessage = $value;
         return $this;
     }
 
@@ -1662,10 +1598,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addConvertIdResponseMessage(ConvertIdResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("convertIdResponseMessage", $value);
-
         if ($this->convertIdResponseMessage === null) {
-            $this->convertIdResponseMessage = array();
+                        $this->convertIdResponseMessage = array();
         }
 
         if (!is_array($this->convertIdResponseMessage)) {
@@ -1695,7 +1629,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->convertIdResponseMessage = $this->castValueIfNeeded("convertIdResponseMessage", $value);
+        $this->convertIdResponseMessage = $value;
         return $this;
     }
 
@@ -1706,10 +1640,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetSharingMetadataResponseMessage(GetSharingMetadataResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getSharingMetadataResponseMessage", $value);
-
         if ($this->getSharingMetadataResponseMessage === null) {
-            $this->getSharingMetadataResponseMessage = array();
+                        $this->getSharingMetadataResponseMessage = array();
         }
 
         if (!is_array($this->getSharingMetadataResponseMessage)) {
@@ -1740,7 +1672,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getSharingMetadataResponseMessage = $this->castValueIfNeeded("getSharingMetadataResponseMessage", $value);
+        $this->getSharingMetadataResponseMessage = $value;
         return $this;
     }
 
@@ -1751,10 +1683,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addRefreshSharingFolderResponseMessage(RefreshSharingFolderResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("refreshSharingFolderResponseMessage", $value);
-
         if ($this->refreshSharingFolderResponseMessage === null) {
-            $this->refreshSharingFolderResponseMessage = array();
+                        $this->refreshSharingFolderResponseMessage = array();
         }
 
         if (!is_array($this->refreshSharingFolderResponseMessage)) {
@@ -1785,7 +1715,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->refreshSharingFolderResponseMessage = $this->castValueIfNeeded("refreshSharingFolderResponseMessage", $value);
+        $this->refreshSharingFolderResponseMessage = $value;
         return $this;
     }
 
@@ -1796,10 +1726,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetSharingFolderResponseMessage(GetSharingFolderResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getSharingFolderResponseMessage", $value);
-
         if ($this->getSharingFolderResponseMessage === null) {
-            $this->getSharingFolderResponseMessage = array();
+                        $this->getSharingFolderResponseMessage = array();
         }
 
         if (!is_array($this->getSharingFolderResponseMessage)) {
@@ -1830,7 +1758,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getSharingFolderResponseMessage = $this->castValueIfNeeded("getSharingFolderResponseMessage", $value);
+        $this->getSharingFolderResponseMessage = $value;
         return $this;
     }
 
@@ -1841,10 +1769,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addCreateUserConfigurationResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("createUserConfigurationResponseMessage", $value);
-
         if ($this->createUserConfigurationResponseMessage === null) {
-            $this->createUserConfigurationResponseMessage = array();
+                        $this->createUserConfigurationResponseMessage = array();
         }
 
         if (!is_array($this->createUserConfigurationResponseMessage)) {
@@ -1874,7 +1800,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->createUserConfigurationResponseMessage = $this->castValueIfNeeded("createUserConfigurationResponseMessage", $value);
+        $this->createUserConfigurationResponseMessage = $value;
         return $this;
     }
 
@@ -1885,10 +1811,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addDeleteUserConfigurationResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("deleteUserConfigurationResponseMessage", $value);
-
         if ($this->deleteUserConfigurationResponseMessage === null) {
-            $this->deleteUserConfigurationResponseMessage = array();
+                        $this->deleteUserConfigurationResponseMessage = array();
         }
 
         if (!is_array($this->deleteUserConfigurationResponseMessage)) {
@@ -1918,7 +1842,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deleteUserConfigurationResponseMessage = $this->castValueIfNeeded("deleteUserConfigurationResponseMessage", $value);
+        $this->deleteUserConfigurationResponseMessage = $value;
         return $this;
     }
 
@@ -1929,10 +1853,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetUserConfigurationResponseMessage(GetUserConfigurationResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getUserConfigurationResponseMessage", $value);
-
         if ($this->getUserConfigurationResponseMessage === null) {
-            $this->getUserConfigurationResponseMessage = array();
+                        $this->getUserConfigurationResponseMessage = array();
         }
 
         if (!is_array($this->getUserConfigurationResponseMessage)) {
@@ -1963,7 +1885,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getUserConfigurationResponseMessage = $this->castValueIfNeeded("getUserConfigurationResponseMessage", $value);
+        $this->getUserConfigurationResponseMessage = $value;
         return $this;
     }
 
@@ -1974,10 +1896,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addUpdateUserConfigurationResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("updateUserConfigurationResponseMessage", $value);
-
         if ($this->updateUserConfigurationResponseMessage === null) {
-            $this->updateUserConfigurationResponseMessage = array();
+                        $this->updateUserConfigurationResponseMessage = array();
         }
 
         if (!is_array($this->updateUserConfigurationResponseMessage)) {
@@ -2007,7 +1927,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->updateUserConfigurationResponseMessage = $this->castValueIfNeeded("updateUserConfigurationResponseMessage", $value);
+        $this->updateUserConfigurationResponseMessage = $value;
         return $this;
     }
 
@@ -2018,10 +1938,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetRoomListsResponse(GetRoomListsResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getRoomListsResponse", $value);
-
         if ($this->getRoomListsResponse === null) {
-            $this->getRoomListsResponse = array();
+                        $this->getRoomListsResponse = array();
         }
 
         if (!is_array($this->getRoomListsResponse)) {
@@ -2051,7 +1969,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getRoomListsResponse = $this->castValueIfNeeded("getRoomListsResponse", $value);
+        $this->getRoomListsResponse = $value;
         return $this;
     }
 
@@ -2062,10 +1980,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetRoomsResponse(GetRoomsResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getRoomsResponse", $value);
-
         if ($this->getRoomsResponse === null) {
-            $this->getRoomsResponse = array();
+                        $this->getRoomsResponse = array();
         }
 
         if (!is_array($this->getRoomsResponse)) {
@@ -2095,7 +2011,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getRoomsResponse = $this->castValueIfNeeded("getRoomsResponse", $value);
+        $this->getRoomsResponse = $value;
         return $this;
     }
 
@@ -2106,10 +2022,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addApplyConversationActionResponseMessage(ResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("applyConversationActionResponseMessage", $value);
-
         if ($this->applyConversationActionResponseMessage === null) {
-            $this->applyConversationActionResponseMessage = array();
+                        $this->applyConversationActionResponseMessage = array();
         }
 
         if (!is_array($this->applyConversationActionResponseMessage)) {
@@ -2139,7 +2053,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->applyConversationActionResponseMessage = $this->castValueIfNeeded("applyConversationActionResponseMessage", $value);
+        $this->applyConversationActionResponseMessage = $value;
         return $this;
     }
 
@@ -2150,10 +2064,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addFindMailboxStatisticsByKeywordsResponseMessage(FindMailboxStatisticsByKeywordsResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("findMailboxStatisticsByKeywordsResponseMessage", $value);
-
         if ($this->findMailboxStatisticsByKeywordsResponseMessage === null) {
-            $this->findMailboxStatisticsByKeywordsResponseMessage = array();
+                        $this->findMailboxStatisticsByKeywordsResponseMessage = array();
         }
 
         if (!is_array($this->findMailboxStatisticsByKeywordsResponseMessage)) {
@@ -2184,7 +2096,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->findMailboxStatisticsByKeywordsResponseMessage = $this->castValueIfNeeded("findMailboxStatisticsByKeywordsResponseMessage", $value);
+        $this->findMailboxStatisticsByKeywordsResponseMessage = $value;
         return $this;
     }
 
@@ -2195,10 +2107,8 @@ class ArrayOfResponseMessagesType extends Message
      */
     public function addGetPasswordExpirationDateResponse(GetPasswordExpirationDateResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("getPasswordExpirationDateResponse", $value);
-
         if ($this->getPasswordExpirationDateResponse === null) {
-            $this->getPasswordExpirationDateResponse = array();
+                        $this->getPasswordExpirationDateResponse = array();
         }
 
         if (!is_array($this->getPasswordExpirationDateResponse)) {
@@ -2229,7 +2139,7 @@ class ArrayOfResponseMessagesType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->getPasswordExpirationDateResponse = $this->castValueIfNeeded("getPasswordExpirationDateResponse", $value);
+        $this->getPasswordExpirationDateResponse = $value;
         return $this;
     }
 }

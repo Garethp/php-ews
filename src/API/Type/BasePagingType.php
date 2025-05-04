@@ -34,7 +34,7 @@ class BasePagingType extends Type
      */
     public function setMaxEntriesReturned($value)
     {
-        $this->maxEntriesReturned = $this->castValueIfNeeded("maxEntriesReturned", $value);
+        $this->maxEntriesReturned = $value;
         return $this;
     }
 }

@@ -60,7 +60,7 @@ class DistinguishedFolderIdType extends BaseFolderIdType
      */
     public function setId($value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 
@@ -80,7 +80,7 @@ class DistinguishedFolderIdType extends BaseFolderIdType
      */
     public function setChangeKey($value)
     {
-        $this->changeKey = $this->castValueIfNeeded("changeKey", $value);
+        $this->changeKey = $value;
         return $this;
     }
 
@@ -100,7 +100,7 @@ class DistinguishedFolderIdType extends BaseFolderIdType
      */
     public function setMailbox(EmailAddressType $value)
     {
-        $this->mailbox = $this->castValueIfNeeded("mailbox", $value);
+        $this->mailbox = $value;
         return $this;
     }
 }

@@ -39,7 +39,7 @@ class RuleOperationErrorType extends Type
      */
     public function setOperationIndex($value)
     {
-        $this->operationIndex = $this->castValueIfNeeded("operationIndex", $value);
+        $this->operationIndex = $value;
         return $this;
     }
 
@@ -50,10 +50,8 @@ class RuleOperationErrorType extends Type
      */
     public function addValidationErrors(RuleValidationErrorType $value)
     {
-        $value = $this->castValueIfNeeded("validationErrors", $value);
-
         if ($this->validationErrors === null) {
-            $this->validationErrors = array();
+                        $this->validationErrors = array();
         }
 
         if (!is_array($this->validationErrors)) {
@@ -83,7 +81,7 @@ class RuleOperationErrorType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->validationErrors = $this->castValueIfNeeded("validationErrors", $value);
+        $this->validationErrors = $value;
         return $this;
     }
 }

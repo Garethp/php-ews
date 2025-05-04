@@ -32,7 +32,7 @@ class RefreshSharingFolderType extends BaseRequestType
      */
     public function setSharingFolderId(\garethp\ews\API\Type\FolderIdType $value)
     {
-        $this->sharingFolderId = $this->castValueIfNeeded("sharingFolderId", $value);
+        $this->sharingFolderId = $value;
         return $this;
     }
 }

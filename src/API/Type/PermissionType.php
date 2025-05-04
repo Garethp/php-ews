@@ -37,7 +37,7 @@ class PermissionType extends BasePermissionType
      */
     public function setReadItems($value)
     {
-        $this->readItems = $this->castValueIfNeeded("readItems", $value);
+        $this->readItems = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class PermissionType extends BasePermissionType
      */
     public function setPermissionLevel($value)
     {
-        $this->permissionLevel = $this->castValueIfNeeded("permissionLevel", $value);
+        $this->permissionLevel = $value;
         return $this;
     }
 }

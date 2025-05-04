@@ -51,7 +51,7 @@ class AggregateOnType extends Type
      */
     public function setAggregate($value)
     {
-        $this->aggregate = $this->castValueIfNeeded("aggregate", $value);
+        $this->aggregate = $value;
         return $this;
     }
 
@@ -71,7 +71,7 @@ class AggregateOnType extends Type
      */
     public function setFieldURI(PathToUnindexedFieldType $value)
     {
-        $this->fieldURI = $this->castValueIfNeeded("fieldURI", $value);
+        $this->fieldURI = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class AggregateOnType extends Type
      */
     public function setIndexedFieldURI(PathToIndexedFieldType $value)
     {
-        $this->indexedFieldURI = $this->castValueIfNeeded("indexedFieldURI", $value);
+        $this->indexedFieldURI = $value;
         return $this;
     }
 
@@ -111,7 +111,7 @@ class AggregateOnType extends Type
      */
     public function setExtendedFieldURI(PathToExtendedFieldType $value)
     {
-        $this->extendedFieldURI = $this->castValueIfNeeded("extendedFieldURI", $value);
+        $this->extendedFieldURI = $value;
         return $this;
     }
 }

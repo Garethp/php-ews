@@ -32,7 +32,7 @@ class NumberedRecurrenceRangeType extends RecurrenceRangeBaseType
      */
     public function setNumberOfOccurrences($value)
     {
-        $this->numberOfOccurrences = $this->castValueIfNeeded("numberOfOccurrences", $value);
+        $this->numberOfOccurrences = $value;
         return $this;
     }
 }

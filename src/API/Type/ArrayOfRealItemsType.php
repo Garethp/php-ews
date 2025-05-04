@@ -143,10 +143,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addItem(ItemType $value)
     {
-        $value = $this->castValueIfNeeded("item", $value);
-
         if ($this->item === null) {
-            $this->item = array();
+                        $this->item = array();
         }
 
         if (!is_array($this->item)) {
@@ -176,7 +174,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->item = $this->castValueIfNeeded("item", $value);
+        $this->item = $value;
         return $this;
     }
 
@@ -187,10 +185,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addMessage(MessageType $value)
     {
-        $value = $this->castValueIfNeeded("message", $value);
-
         if ($this->message === null) {
-            $this->message = array();
+                        $this->message = array();
         }
 
         if (!is_array($this->message)) {
@@ -220,7 +216,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->message = $this->castValueIfNeeded("message", $value);
+        $this->message = $value;
         return $this;
     }
 
@@ -231,10 +227,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addCalendarItem(CalendarItemType $value)
     {
-        $value = $this->castValueIfNeeded("calendarItem", $value);
-
         if ($this->calendarItem === null) {
-            $this->calendarItem = array();
+                        $this->calendarItem = array();
         }
 
         if (!is_array($this->calendarItem)) {
@@ -264,7 +258,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->calendarItem = $this->castValueIfNeeded("calendarItem", $value);
+        $this->calendarItem = $value;
         return $this;
     }
 
@@ -275,10 +269,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addContact(ContactItemType $value)
     {
-        $value = $this->castValueIfNeeded("contact", $value);
-
         if ($this->contact === null) {
-            $this->contact = array();
+                        $this->contact = array();
         }
 
         if (!is_array($this->contact)) {
@@ -308,7 +300,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->contact = $this->castValueIfNeeded("contact", $value);
+        $this->contact = $value;
         return $this;
     }
 
@@ -319,10 +311,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addDistributionList(DistributionListType $value)
     {
-        $value = $this->castValueIfNeeded("distributionList", $value);
-
         if ($this->distributionList === null) {
-            $this->distributionList = array();
+                        $this->distributionList = array();
         }
 
         if (!is_array($this->distributionList)) {
@@ -352,7 +342,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->distributionList = $this->castValueIfNeeded("distributionList", $value);
+        $this->distributionList = $value;
         return $this;
     }
 
@@ -363,10 +353,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addMeetingMessage(MeetingMessageType $value)
     {
-        $value = $this->castValueIfNeeded("meetingMessage", $value);
-
         if ($this->meetingMessage === null) {
-            $this->meetingMessage = array();
+                        $this->meetingMessage = array();
         }
 
         if (!is_array($this->meetingMessage)) {
@@ -396,7 +384,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->meetingMessage = $this->castValueIfNeeded("meetingMessage", $value);
+        $this->meetingMessage = $value;
         return $this;
     }
 
@@ -407,10 +395,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addMeetingRequest(MeetingRequestMessageType $value)
     {
-        $value = $this->castValueIfNeeded("meetingRequest", $value);
-
         if ($this->meetingRequest === null) {
-            $this->meetingRequest = array();
+                        $this->meetingRequest = array();
         }
 
         if (!is_array($this->meetingRequest)) {
@@ -440,7 +426,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->meetingRequest = $this->castValueIfNeeded("meetingRequest", $value);
+        $this->meetingRequest = $value;
         return $this;
     }
 
@@ -451,10 +437,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addMeetingResponse(MeetingResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("meetingResponse", $value);
-
         if ($this->meetingResponse === null) {
-            $this->meetingResponse = array();
+                        $this->meetingResponse = array();
         }
 
         if (!is_array($this->meetingResponse)) {
@@ -484,7 +468,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->meetingResponse = $this->castValueIfNeeded("meetingResponse", $value);
+        $this->meetingResponse = $value;
         return $this;
     }
 
@@ -495,10 +479,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addMeetingCancellation(MeetingCancellationMessageType $value)
     {
-        $value = $this->castValueIfNeeded("meetingCancellation", $value);
-
         if ($this->meetingCancellation === null) {
-            $this->meetingCancellation = array();
+                        $this->meetingCancellation = array();
         }
 
         if (!is_array($this->meetingCancellation)) {
@@ -528,7 +510,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->meetingCancellation = $this->castValueIfNeeded("meetingCancellation", $value);
+        $this->meetingCancellation = $value;
         return $this;
     }
 
@@ -539,10 +521,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addTask(TaskType $value)
     {
-        $value = $this->castValueIfNeeded("task", $value);
-
         if ($this->task === null) {
-            $this->task = array();
+                        $this->task = array();
         }
 
         if (!is_array($this->task)) {
@@ -572,7 +552,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->task = $this->castValueIfNeeded("task", $value);
+        $this->task = $value;
         return $this;
     }
 
@@ -583,10 +563,8 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
      */
     public function addPostItem(PostItemType $value)
     {
-        $value = $this->castValueIfNeeded("postItem", $value);
-
         if ($this->postItem === null) {
-            $this->postItem = array();
+                        $this->postItem = array();
         }
 
         if (!is_array($this->postItem)) {
@@ -616,7 +594,7 @@ class ArrayOfRealItemsType extends Type implements Countable, ArrayAccess, Itera
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->postItem = $this->castValueIfNeeded("postItem", $value);
+        $this->postItem = $value;
         return $this;
     }
 }

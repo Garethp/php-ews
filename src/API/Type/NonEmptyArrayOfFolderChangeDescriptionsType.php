@@ -35,10 +35,8 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
      */
     public function addAppendToFolderField(AppendToFolderFieldType $value)
     {
-        $value = $this->castValueIfNeeded("appendToFolderField", $value);
-
         if ($this->appendToFolderField === null) {
-            $this->appendToFolderField = array();
+                        $this->appendToFolderField = array();
         }
 
         if (!is_array($this->appendToFolderField)) {
@@ -68,7 +66,7 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->appendToFolderField = $this->castValueIfNeeded("appendToFolderField", $value);
+        $this->appendToFolderField = $value;
         return $this;
     }
 
@@ -79,10 +77,8 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
      */
     public function addSetFolderField(SetFolderFieldType $value)
     {
-        $value = $this->castValueIfNeeded("setFolderField", $value);
-
         if ($this->setFolderField === null) {
-            $this->setFolderField = array();
+                        $this->setFolderField = array();
         }
 
         if (!is_array($this->setFolderField)) {
@@ -112,7 +108,7 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->setFolderField = $this->castValueIfNeeded("setFolderField", $value);
+        $this->setFolderField = $value;
         return $this;
     }
 
@@ -123,10 +119,8 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
      */
     public function addDeleteFolderField(DeleteFolderFieldType $value)
     {
-        $value = $this->castValueIfNeeded("deleteFolderField", $value);
-
         if ($this->deleteFolderField === null) {
-            $this->deleteFolderField = array();
+                        $this->deleteFolderField = array();
         }
 
         if (!is_array($this->deleteFolderField)) {
@@ -156,7 +150,7 @@ class NonEmptyArrayOfFolderChangeDescriptionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deleteFolderField = $this->castValueIfNeeded("deleteFolderField", $value);
+        $this->deleteFolderField = $value;
         return $this;
     }
 }

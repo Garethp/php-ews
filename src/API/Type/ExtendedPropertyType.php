@@ -46,7 +46,7 @@ class ExtendedPropertyType extends Type
      */
     public function setExtendedFieldURI(PathToExtendedFieldType $value)
     {
-        $this->extendedFieldURI = $this->castValueIfNeeded("extendedFieldURI", $value);
+        $this->extendedFieldURI = $value;
         return $this;
     }
 
@@ -66,7 +66,7 @@ class ExtendedPropertyType extends Type
      */
     public function setValue($value)
     {
-        $this->value = $this->castValueIfNeeded("value", $value);
+        $this->value = $value;
         return $this;
     }
 
@@ -77,10 +77,8 @@ class ExtendedPropertyType extends Type
      */
     public function addValues($value)
     {
-        $value = $this->castValueIfNeeded("values", $value);
-
         if ($this->values === null) {
-            $this->values = array();
+                        $this->values = array();
         }
 
         if (!is_array($this->values)) {
@@ -110,7 +108,7 @@ class ExtendedPropertyType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->values = $this->castValueIfNeeded("values", $value);
+        $this->values = $value;
         return $this;
     }
 }

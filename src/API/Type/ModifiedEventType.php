@@ -32,7 +32,7 @@ class ModifiedEventType extends BaseObjectChangedEventType
      */
     public function setUnreadCount($value)
     {
-        $this->unreadCount = $this->castValueIfNeeded("unreadCount", $value);
+        $this->unreadCount = $value;
         return $this;
     }
 }

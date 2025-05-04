@@ -23,10 +23,8 @@ class FindConversationResponseMessageType extends ResponseMessageType
      */
     public function addConversations(\garethp\ews\API\Type\ConversationType $value)
     {
-        $value = $this->castValueIfNeeded("conversations", $value);
-
         if ($this->conversations === null) {
-            $this->conversations = array();
+                        $this->conversations = array();
         }
 
         if (!is_array($this->conversations)) {
@@ -57,7 +55,7 @@ class FindConversationResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->conversations = $this->castValueIfNeeded("conversations", $value);
+        $this->conversations = $value;
         return $this;
     }
 }

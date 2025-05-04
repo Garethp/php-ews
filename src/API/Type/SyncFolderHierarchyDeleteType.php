@@ -34,7 +34,7 @@ class SyncFolderHierarchyDeleteType extends Type
      */
     public function setFolderId(FolderIdType $value)
     {
-        $this->folderId = $this->castValueIfNeeded("folderId", $value);
+        $this->folderId = $value;
         return $this;
     }
 }

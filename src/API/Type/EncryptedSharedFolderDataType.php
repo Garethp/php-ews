@@ -39,7 +39,7 @@ class EncryptedSharedFolderDataType extends Type
      */
     public function setToken(EncryptedDataContainerType $value)
     {
-        $this->token = $this->castValueIfNeeded("token", $value);
+        $this->token = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class EncryptedSharedFolderDataType extends Type
      */
     public function setData(EncryptedDataContainerType $value)
     {
-        $this->data = $this->castValueIfNeeded("data", $value);
+        $this->data = $value;
         return $this;
     }
 }

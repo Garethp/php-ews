@@ -35,10 +35,8 @@ class SyncFolderHierarchyChangesType extends Type
      */
     public function addCreate(SyncFolderHierarchyCreateOrUpdateType $value)
     {
-        $value = $this->castValueIfNeeded("create", $value);
-
         if ($this->create === null) {
-            $this->create = array();
+                        $this->create = array();
         }
 
         if (!is_array($this->create)) {
@@ -69,7 +67,7 @@ class SyncFolderHierarchyChangesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->create = $this->castValueIfNeeded("create", $value);
+        $this->create = $value;
         return $this;
     }
 
@@ -80,10 +78,8 @@ class SyncFolderHierarchyChangesType extends Type
      */
     public function addUpdate(SyncFolderHierarchyCreateOrUpdateType $value)
     {
-        $value = $this->castValueIfNeeded("update", $value);
-
         if ($this->update === null) {
-            $this->update = array();
+                        $this->update = array();
         }
 
         if (!is_array($this->update)) {
@@ -114,7 +110,7 @@ class SyncFolderHierarchyChangesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->update = $this->castValueIfNeeded("update", $value);
+        $this->update = $value;
         return $this;
     }
 
@@ -125,10 +121,8 @@ class SyncFolderHierarchyChangesType extends Type
      */
     public function addDelete(SyncFolderHierarchyDeleteType $value)
     {
-        $value = $this->castValueIfNeeded("delete", $value);
-
         if ($this->delete === null) {
-            $this->delete = array();
+                        $this->delete = array();
         }
 
         if (!is_array($this->delete)) {
@@ -158,7 +152,7 @@ class SyncFolderHierarchyChangesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->delete = $this->castValueIfNeeded("delete", $value);
+        $this->delete = $value;
         return $this;
     }
 }

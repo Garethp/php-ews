@@ -37,7 +37,7 @@ class CreateAttachmentType extends BaseRequestType
      */
     public function setParentItemId(\garethp\ews\API\Type\ItemIdType $value)
     {
-        $this->parentItemId = $this->castValueIfNeeded("parentItemId", $value);
+        $this->parentItemId = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class CreateAttachmentType extends BaseRequestType
      */
     public function setAttachments(\garethp\ews\API\Type\NonEmptyArrayOfAttachmentsType $value)
     {
-        $this->attachments = $this->castValueIfNeeded("attachments", $value);
+        $this->attachments = $value;
         return $this;
     }
 }

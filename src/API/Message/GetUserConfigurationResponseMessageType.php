@@ -32,7 +32,7 @@ class GetUserConfigurationResponseMessageType extends ResponseMessageType
      */
     public function setUserConfiguration(\garethp\ews\API\Type\UserConfigurationType $value)
     {
-        $this->userConfiguration = $this->castValueIfNeeded("userConfiguration", $value);
+        $this->userConfiguration = $value;
         return $this;
     }
 }

@@ -37,7 +37,7 @@ class RecurringTimeTransitionType extends TransitionType
      */
     public function setTimeOffset(\DateInterval $value)
     {
-        $this->timeOffset = $this->castValueIfNeeded("timeOffset", $value);
+        $this->timeOffset = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class RecurringTimeTransitionType extends TransitionType
      */
     public function setMonth($value)
     {
-        $this->month = $this->castValueIfNeeded("month", $value);
+        $this->month = $value;
         return $this;
     }
 }

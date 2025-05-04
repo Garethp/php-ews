@@ -23,12 +23,6 @@ class OccurrenceInfoType extends Type
      */
     protected $start = null;
 
-    protected $_typeMap = array(
-        'start' => 'dateTime',
-        'end' => 'dateTime',
-        'originalStart' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -55,7 +49,7 @@ class OccurrenceInfoType extends Type
      */
     public function setItemId(ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -75,7 +69,10 @@ class OccurrenceInfoType extends Type
      */
     public function setStart(\DateTime|string $value)
     {
-        $this->start = $this->castValueIfNeeded("start", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->start = $value;
         return $this;
     }
 
@@ -95,7 +92,10 @@ class OccurrenceInfoType extends Type
      */
     public function setEnd(\DateTime|string $value)
     {
-        $this->end = $this->castValueIfNeeded("end", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->end = $value;
         return $this;
     }
 
@@ -115,7 +115,10 @@ class OccurrenceInfoType extends Type
      */
     public function setOriginalStart(\DateTime|string $value)
     {
-        $this->originalStart = $this->castValueIfNeeded("originalStart", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->originalStart = $value;
         return $this;
     }
 }

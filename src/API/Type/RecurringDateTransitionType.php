@@ -32,7 +32,7 @@ class RecurringDateTransitionType extends RecurringTimeTransitionType
      */
     public function setDay($value)
     {
-        $this->day = $this->castValueIfNeeded("day", $value);
+        $this->day = $value;
         return $this;
     }
 }

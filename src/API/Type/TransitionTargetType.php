@@ -34,7 +34,7 @@ class TransitionTargetType extends Type
      */
     public function setKind($value)
     {
-        $this->kind = $this->castValueIfNeeded("kind", $value);
+        $this->kind = $value;
         return $this;
     }
 }

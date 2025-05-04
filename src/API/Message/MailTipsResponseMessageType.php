@@ -32,7 +32,7 @@ class MailTipsResponseMessageType extends ResponseMessageType
      */
     public function setMailTips(\garethp\ews\API\Type\MailTipsType $value)
     {
-        $this->mailTips = $this->castValueIfNeeded("mailTips", $value);
+        $this->mailTips = $value;
         return $this;
     }
 }

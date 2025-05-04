@@ -32,7 +32,7 @@ class DelegateUserResponseMessageType extends ResponseMessageType
      */
     public function setDelegateUser(\garethp\ews\API\Type\DelegateUserType $value)
     {
-        $this->delegateUser = $this->castValueIfNeeded("delegateUser", $value);
+        $this->delegateUser = $value;
         return $this;
     }
 }

@@ -42,7 +42,7 @@ class SubscribeType extends BaseRequestType
      */
     public function setPullSubscriptionRequest(\garethp\ews\API\Type\PullSubscriptionRequestType $value)
     {
-        $this->pullSubscriptionRequest = $this->castValueIfNeeded("pullSubscriptionRequest", $value);
+        $this->pullSubscriptionRequest = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class SubscribeType extends BaseRequestType
      */
     public function setPushSubscriptionRequest(\garethp\ews\API\Type\PushSubscriptionRequestType $value)
     {
-        $this->pushSubscriptionRequest = $this->castValueIfNeeded("pushSubscriptionRequest", $value);
+        $this->pushSubscriptionRequest = $value;
         return $this;
     }
 
@@ -82,7 +82,7 @@ class SubscribeType extends BaseRequestType
      */
     public function setStreamingSubscriptionRequest(\garethp\ews\API\Type\StreamingSubscriptionRequestType $value)
     {
-        $this->streamingSubscriptionRequest = $this->castValueIfNeeded("streamingSubscriptionRequest", $value);
+        $this->streamingSubscriptionRequest = $value;
         return $this;
     }
 }

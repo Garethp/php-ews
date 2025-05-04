@@ -66,7 +66,7 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      */
     public function setMailTipsEnabled($value)
     {
-        $this->mailTipsEnabled = $this->castValueIfNeeded("mailTipsEnabled", $value);
+        $this->mailTipsEnabled = $value;
         return $this;
     }
 
@@ -86,7 +86,7 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      */
     public function setMaxRecipientsPerGetMailTipsRequest($value)
     {
-        $this->maxRecipientsPerGetMailTipsRequest = $this->castValueIfNeeded("maxRecipientsPerGetMailTipsRequest", $value);
+        $this->maxRecipientsPerGetMailTipsRequest = $value;
         return $this;
     }
 
@@ -106,7 +106,7 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      */
     public function setMaxMessageSize($value)
     {
-        $this->maxMessageSize = $this->castValueIfNeeded("maxMessageSize", $value);
+        $this->maxMessageSize = $value;
         return $this;
     }
 
@@ -126,7 +126,7 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      */
     public function setLargeAudienceThreshold($value)
     {
-        $this->largeAudienceThreshold = $this->castValueIfNeeded("largeAudienceThreshold", $value);
+        $this->largeAudienceThreshold = $value;
         return $this;
     }
 
@@ -155,7 +155,7 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      */
     public function setShowExternalRecipientCount($value)
     {
-        $this->showExternalRecipientCount = $this->castValueIfNeeded("showExternalRecipientCount", $value);
+        $this->showExternalRecipientCount = $value;
         return $this;
     }
 
@@ -166,10 +166,8 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
      */
     public function addInternalDomains(SmtpDomainType $value)
     {
-        $value = $this->castValueIfNeeded("internalDomains", $value);
-
         if ($this->internalDomains === null) {
-            $this->internalDomains = array();
+                        $this->internalDomains = array();
         }
 
         if (!is_array($this->internalDomains)) {
@@ -199,7 +197,7 @@ class MailTipsServiceConfigurationType extends ServiceConfigurationType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->internalDomains = $this->castValueIfNeeded("internalDomains", $value);
+        $this->internalDomains = $value;
         return $this;
     }
 }

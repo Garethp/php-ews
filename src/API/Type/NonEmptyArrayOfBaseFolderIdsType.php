@@ -30,10 +30,8 @@ class NonEmptyArrayOfBaseFolderIdsType extends Type
      */
     public function addFolderId(FolderIdType $value)
     {
-        $value = $this->castValueIfNeeded("folderId", $value);
-
         if ($this->folderId === null) {
-            $this->folderId = array();
+                        $this->folderId = array();
         }
 
         if (!is_array($this->folderId)) {
@@ -63,7 +61,7 @@ class NonEmptyArrayOfBaseFolderIdsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->folderId = $this->castValueIfNeeded("folderId", $value);
+        $this->folderId = $value;
         return $this;
     }
 
@@ -74,10 +72,8 @@ class NonEmptyArrayOfBaseFolderIdsType extends Type
      */
     public function addDistinguishedFolderId(DistinguishedFolderIdType $value)
     {
-        $value = $this->castValueIfNeeded("distinguishedFolderId", $value);
-
         if ($this->distinguishedFolderId === null) {
-            $this->distinguishedFolderId = array();
+                        $this->distinguishedFolderId = array();
         }
 
         if (!is_array($this->distinguishedFolderId)) {
@@ -107,7 +103,7 @@ class NonEmptyArrayOfBaseFolderIdsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->distinguishedFolderId = $this->castValueIfNeeded("distinguishedFolderId", $value);
+        $this->distinguishedFolderId = $value;
         return $this;
     }
 }

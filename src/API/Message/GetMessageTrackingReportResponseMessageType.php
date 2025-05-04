@@ -47,7 +47,7 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function setMessageTrackingReport(\garethp\ews\API\Type\MessageTrackingReportType $value)
     {
-        $this->messageTrackingReport = $this->castValueIfNeeded("messageTrackingReport", $value);
+        $this->messageTrackingReport = $value;
         return $this;
     }
 
@@ -58,10 +58,8 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function addDiagnostics($value)
     {
-        $value = $this->castValueIfNeeded("diagnostics", $value);
-
         if ($this->diagnostics === null) {
-            $this->diagnostics = array();
+                        $this->diagnostics = array();
         }
 
         if (!is_array($this->diagnostics)) {
@@ -91,7 +89,7 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->diagnostics = $this->castValueIfNeeded("diagnostics", $value);
+        $this->diagnostics = $value;
         return $this;
     }
 
@@ -102,10 +100,8 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function addErrors(\garethp\ews\API\Type\ArrayOfTrackingPropertiesType $value)
     {
-        $value = $this->castValueIfNeeded("errors", $value);
-
         if ($this->errors === null) {
-            $this->errors = array();
+                        $this->errors = array();
         }
 
         if (!is_array($this->errors)) {
@@ -136,7 +132,7 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->errors = $this->castValueIfNeeded("errors", $value);
+        $this->errors = $value;
         return $this;
     }
 
@@ -147,10 +143,8 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function addProperties(\garethp\ews\API\Type\TrackingPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("properties", $value);
-
         if ($this->properties === null) {
-            $this->properties = array();
+                        $this->properties = array();
         }
 
         if (!is_array($this->properties)) {
@@ -181,7 +175,7 @@ class GetMessageTrackingReportResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->properties = $this->castValueIfNeeded("properties", $value);
+        $this->properties = $value;
         return $this;
     }
 }

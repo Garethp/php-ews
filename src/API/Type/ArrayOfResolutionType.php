@@ -59,7 +59,7 @@ class ArrayOfResolutionType extends Type
      */
     public function setIndexedPagingOffset($value)
     {
-        $this->indexedPagingOffset = $this->castValueIfNeeded("indexedPagingOffset", $value);
+        $this->indexedPagingOffset = $value;
         return $this;
     }
 
@@ -79,7 +79,7 @@ class ArrayOfResolutionType extends Type
      */
     public function setNumeratorOffset($value)
     {
-        $this->numeratorOffset = $this->castValueIfNeeded("numeratorOffset", $value);
+        $this->numeratorOffset = $value;
         return $this;
     }
 
@@ -99,7 +99,7 @@ class ArrayOfResolutionType extends Type
      */
     public function setAbsoluteDenominator($value)
     {
-        $this->absoluteDenominator = $this->castValueIfNeeded("absoluteDenominator", $value);
+        $this->absoluteDenominator = $value;
         return $this;
     }
 
@@ -128,7 +128,7 @@ class ArrayOfResolutionType extends Type
      */
     public function setIncludesLastItemInRange($value)
     {
-        $this->includesLastItemInRange = $this->castValueIfNeeded("includesLastItemInRange", $value);
+        $this->includesLastItemInRange = $value;
         return $this;
     }
 
@@ -148,7 +148,7 @@ class ArrayOfResolutionType extends Type
      */
     public function setTotalItemsInView($value)
     {
-        $this->totalItemsInView = $this->castValueIfNeeded("totalItemsInView", $value);
+        $this->totalItemsInView = $value;
         return $this;
     }
 
@@ -159,10 +159,8 @@ class ArrayOfResolutionType extends Type
      */
     public function addResolution(ResolutionType $value)
     {
-        $value = $this->castValueIfNeeded("resolution", $value);
-
         if ($this->resolution === null) {
-            $this->resolution = array();
+                        $this->resolution = array();
         }
 
         if (!is_array($this->resolution)) {
@@ -192,7 +190,7 @@ class ArrayOfResolutionType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->resolution = $this->castValueIfNeeded("resolution", $value);
+        $this->resolution = $value;
         return $this;
     }
 }

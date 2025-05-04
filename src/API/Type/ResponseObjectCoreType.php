@@ -33,7 +33,7 @@ class ResponseObjectCoreType extends MessageType
      */
     public function setReferenceItemId(ItemIdType $value)
     {
-        $this->referenceItemId = $this->castValueIfNeeded("referenceItemId", $value);
+        $this->referenceItemId = $value;
         return $this;
     }
 }

@@ -57,7 +57,7 @@ class SyncFolderItemsType extends BaseRequestType
      */
     public function setItemShape(\garethp\ews\API\Type\ItemResponseShapeType $value)
     {
-        $this->itemShape = $this->castValueIfNeeded("itemShape", $value);
+        $this->itemShape = $value;
         return $this;
     }
 
@@ -77,7 +77,7 @@ class SyncFolderItemsType extends BaseRequestType
      */
     public function setSyncFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->syncFolderId = $this->castValueIfNeeded("syncFolderId", $value);
+        $this->syncFolderId = $value;
         return $this;
     }
 
@@ -97,7 +97,7 @@ class SyncFolderItemsType extends BaseRequestType
      */
     public function setSyncState($value)
     {
-        $this->syncState = $this->castValueIfNeeded("syncState", $value);
+        $this->syncState = $value;
         return $this;
     }
 
@@ -108,10 +108,8 @@ class SyncFolderItemsType extends BaseRequestType
      */
     public function addIgnore(\garethp\ews\API\Type\ItemIdType $value)
     {
-        $value = $this->castValueIfNeeded("ignore", $value);
-
         if ($this->ignore === null) {
-            $this->ignore = array();
+                        $this->ignore = array();
         }
 
         if (!is_array($this->ignore)) {
@@ -142,7 +140,7 @@ class SyncFolderItemsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->ignore = $this->castValueIfNeeded("ignore", $value);
+        $this->ignore = $value;
         return $this;
     }
 
@@ -162,7 +160,7 @@ class SyncFolderItemsType extends BaseRequestType
      */
     public function setMaxChangesReturned($value)
     {
-        $this->maxChangesReturned = $this->castValueIfNeeded("maxChangesReturned", $value);
+        $this->maxChangesReturned = $value;
         return $this;
     }
 
@@ -182,7 +180,7 @@ class SyncFolderItemsType extends BaseRequestType
      */
     public function setSyncScope($value)
     {
-        $this->syncScope = $this->castValueIfNeeded("syncScope", $value);
+        $this->syncScope = $value;
         return $this;
     }
 }

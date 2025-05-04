@@ -73,7 +73,7 @@ class EffectiveRightsType extends Type
      */
     public function setCreateAssociated($value)
     {
-        $this->createAssociated = $this->castValueIfNeeded("createAssociated", $value);
+        $this->createAssociated = $value;
         return $this;
     }
 
@@ -102,7 +102,7 @@ class EffectiveRightsType extends Type
      */
     public function setCreateContents($value)
     {
-        $this->createContents = $this->castValueIfNeeded("createContents", $value);
+        $this->createContents = $value;
         return $this;
     }
 
@@ -131,7 +131,7 @@ class EffectiveRightsType extends Type
      */
     public function setCreateHierarchy($value)
     {
-        $this->createHierarchy = $this->castValueIfNeeded("createHierarchy", $value);
+        $this->createHierarchy = $value;
         return $this;
     }
 
@@ -160,7 +160,7 @@ class EffectiveRightsType extends Type
      */
     public function setDelete($value)
     {
-        $this->delete = $this->castValueIfNeeded("delete", $value);
+        $this->delete = $value;
         return $this;
     }
 
@@ -189,7 +189,7 @@ class EffectiveRightsType extends Type
      */
     public function setModify($value)
     {
-        $this->modify = $this->castValueIfNeeded("modify", $value);
+        $this->modify = $value;
         return $this;
     }
 
@@ -218,7 +218,7 @@ class EffectiveRightsType extends Type
      */
     public function setRead($value)
     {
-        $this->read = $this->castValueIfNeeded("read", $value);
+        $this->read = $value;
         return $this;
     }
 
@@ -247,7 +247,7 @@ class EffectiveRightsType extends Type
      */
     public function setViewPrivateItems($value)
     {
-        $this->viewPrivateItems = $this->castValueIfNeeded("viewPrivateItems", $value);
+        $this->viewPrivateItems = $value;
         return $this;
     }
 }

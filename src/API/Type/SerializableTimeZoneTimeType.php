@@ -59,7 +59,7 @@ class SerializableTimeZoneTimeType extends Type
      */
     public function setBias($value)
     {
-        $this->bias = $this->castValueIfNeeded("bias", $value);
+        $this->bias = $value;
         return $this;
     }
 
@@ -79,7 +79,7 @@ class SerializableTimeZoneTimeType extends Type
      */
     public function setTime($value)
     {
-        $this->time = $this->castValueIfNeeded("time", $value);
+        $this->time = $value;
         return $this;
     }
 
@@ -99,7 +99,7 @@ class SerializableTimeZoneTimeType extends Type
      */
     public function setDayOrder($value)
     {
-        $this->dayOrder = $this->castValueIfNeeded("dayOrder", $value);
+        $this->dayOrder = $value;
         return $this;
     }
 
@@ -119,7 +119,7 @@ class SerializableTimeZoneTimeType extends Type
      */
     public function setMonth($value)
     {
-        $this->month = $this->castValueIfNeeded("month", $value);
+        $this->month = $value;
         return $this;
     }
 
@@ -139,7 +139,7 @@ class SerializableTimeZoneTimeType extends Type
      */
     public function setDayOfWeek($value)
     {
-        $this->dayOfWeek = $this->castValueIfNeeded("dayOfWeek", $value);
+        $this->dayOfWeek = $value;
         return $this;
     }
 
@@ -159,7 +159,7 @@ class SerializableTimeZoneTimeType extends Type
      */
     public function setYear($value)
     {
-        $this->year = $this->castValueIfNeeded("year", $value);
+        $this->year = $value;
         return $this;
     }
 }

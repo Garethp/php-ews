@@ -62,7 +62,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setScope($value)
     {
-        $this->scope = $this->castValueIfNeeded("scope", $value);
+        $this->scope = $value;
         return $this;
     }
 
@@ -82,7 +82,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setReportTemplate($value)
     {
-        $this->reportTemplate = $this->castValueIfNeeded("reportTemplate", $value);
+        $this->reportTemplate = $value;
         return $this;
     }
 
@@ -102,7 +102,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setRecipientFilter(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->recipientFilter = $this->castValueIfNeeded("recipientFilter", $value);
+        $this->recipientFilter = $value;
         return $this;
     }
 
@@ -122,7 +122,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setMessageTrackingReportId($value)
     {
-        $this->messageTrackingReportId = $this->castValueIfNeeded("messageTrackingReportId", $value);
+        $this->messageTrackingReportId = $value;
         return $this;
     }
 
@@ -151,7 +151,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setReturnQueueEvents($value)
     {
-        $this->returnQueueEvents = $this->castValueIfNeeded("returnQueueEvents", $value);
+        $this->returnQueueEvents = $value;
         return $this;
     }
 
@@ -171,7 +171,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setDiagnosticsLevel($value)
     {
-        $this->diagnosticsLevel = $this->castValueIfNeeded("diagnosticsLevel", $value);
+        $this->diagnosticsLevel = $value;
         return $this;
     }
 
@@ -182,10 +182,8 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
      */
     public function addProperties(\garethp\ews\API\Type\TrackingPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("properties", $value);
-
         if ($this->properties === null) {
-            $this->properties = array();
+                        $this->properties = array();
         }
 
         if (!is_array($this->properties)) {
@@ -216,7 +214,7 @@ class GetMessageTrackingReportRequestType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->properties = $this->castValueIfNeeded("properties", $value);
+        $this->properties = $value;
         return $this;
     }
 }

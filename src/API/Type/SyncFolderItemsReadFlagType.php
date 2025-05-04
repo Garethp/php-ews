@@ -39,7 +39,7 @@ class SyncFolderItemsReadFlagType extends Type
      */
     public function setItemId(ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -68,7 +68,7 @@ class SyncFolderItemsReadFlagType extends Type
      */
     public function setIsRead($value)
     {
-        $this->isRead = $this->castValueIfNeeded("isRead", $value);
+        $this->isRead = $value;
         return $this;
     }
 }

@@ -42,7 +42,7 @@ class GetMailTipsType extends BaseRequestType
      */
     public function setSendingAs(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->sendingAs = $this->castValueIfNeeded("sendingAs", $value);
+        $this->sendingAs = $value;
         return $this;
     }
 
@@ -53,10 +53,8 @@ class GetMailTipsType extends BaseRequestType
      */
     public function addRecipients(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("recipients", $value);
-
         if ($this->recipients === null) {
-            $this->recipients = array();
+                        $this->recipients = array();
         }
 
         if (!is_array($this->recipients)) {
@@ -87,7 +85,7 @@ class GetMailTipsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recipients = $this->castValueIfNeeded("recipients", $value);
+        $this->recipients = $value;
         return $this;
     }
 
@@ -98,10 +96,8 @@ class GetMailTipsType extends BaseRequestType
      */
     public function addMailTipsRequested($value)
     {
-        $value = $this->castValueIfNeeded("mailTipsRequested", $value);
-
         if ($this->mailTipsRequested === null) {
-            $this->mailTipsRequested = array();
+                        $this->mailTipsRequested = array();
         }
 
         if (!is_array($this->mailTipsRequested)) {
@@ -131,7 +127,7 @@ class GetMailTipsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->mailTipsRequested = $this->castValueIfNeeded("mailTipsRequested", $value);
+        $this->mailTipsRequested = $value;
         return $this;
     }
 }

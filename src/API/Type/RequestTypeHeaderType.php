@@ -34,7 +34,7 @@ class RequestTypeHeaderType extends Type
      */
     public function setRequestType($value)
     {
-        $this->requestType = $this->castValueIfNeeded("requestType", $value);
+        $this->requestType = $value;
         return $this;
     }
 }

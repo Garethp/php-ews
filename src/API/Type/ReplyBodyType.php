@@ -39,7 +39,7 @@ class ReplyBodyType extends Type
      */
     public function setLang($value)
     {
-        $this->lang = $this->castValueIfNeeded("lang", $value);
+        $this->lang = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class ReplyBodyType extends Type
      */
     public function setMessage($value)
     {
-        $this->message = $this->castValueIfNeeded("message", $value);
+        $this->message = $value;
         return $this;
     }
 }

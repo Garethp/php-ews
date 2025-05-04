@@ -49,7 +49,7 @@ class ConnectingSIDType extends Type
      */
     public function setPrincipalName($value)
     {
-        $this->principalName = $this->castValueIfNeeded("principalName", $value);
+        $this->principalName = $value;
         return $this;
     }
 
@@ -69,7 +69,7 @@ class ConnectingSIDType extends Type
      */
     public function setSID($value)
     {
-        $this->sID = $this->castValueIfNeeded("sID", $value);
+        $this->sID = $value;
         return $this;
     }
 
@@ -89,7 +89,7 @@ class ConnectingSIDType extends Type
      */
     public function setPrimarySmtpAddress($value)
     {
-        $this->primarySmtpAddress = $this->castValueIfNeeded("primarySmtpAddress", $value);
+        $this->primarySmtpAddress = $value;
         return $this;
     }
 
@@ -109,7 +109,7 @@ class ConnectingSIDType extends Type
      */
     public function setSmtpAddress($value)
     {
-        $this->smtpAddress = $this->castValueIfNeeded("smtpAddress", $value);
+        $this->smtpAddress = $value;
         return $this;
     }
 }

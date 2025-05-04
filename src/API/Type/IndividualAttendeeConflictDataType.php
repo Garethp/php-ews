@@ -32,7 +32,7 @@ class IndividualAttendeeConflictDataType extends AttendeeConflictDataType
      */
     public function setBusyType($value)
     {
-        $this->busyType = $this->castValueIfNeeded("busyType", $value);
+        $this->busyType = $value;
         return $this;
     }
 }

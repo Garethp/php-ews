@@ -23,10 +23,8 @@ class GetServiceConfigurationResponseMessageType extends ResponseMessageType
      */
     public function addResponseMessages(ServiceConfigurationResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("responseMessages", $value);
-
         if ($this->responseMessages === null) {
-            $this->responseMessages = array();
+                        $this->responseMessages = array();
         }
 
         if (!is_array($this->responseMessages)) {
@@ -57,7 +55,7 @@ class GetServiceConfigurationResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->responseMessages = $this->castValueIfNeeded("responseMessages", $value);
+        $this->responseMessages = $value;
         return $this;
     }
 }

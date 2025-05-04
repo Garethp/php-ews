@@ -39,7 +39,7 @@ class TrackingPropertyType extends Type
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class TrackingPropertyType extends Type
      */
     public function setValue($value)
     {
-        $this->value = $this->castValueIfNeeded("value", $value);
+        $this->value = $value;
         return $this;
     }
 }

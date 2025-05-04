@@ -37,7 +37,7 @@ class GetServiceConfigurationType extends BaseRequestType
      */
     public function setActingAs(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->actingAs = $this->castValueIfNeeded("actingAs", $value);
+        $this->actingAs = $value;
         return $this;
     }
 
@@ -48,10 +48,8 @@ class GetServiceConfigurationType extends BaseRequestType
      */
     public function addRequestedConfiguration(\garethp\ews\API\Enumeration\ServiceConfigurationType $value)
     {
-        $value = $this->castValueIfNeeded("requestedConfiguration", $value);
-
         if ($this->requestedConfiguration === null) {
-            $this->requestedConfiguration = array();
+                        $this->requestedConfiguration = array();
         }
 
         if (!is_array($this->requestedConfiguration)) {
@@ -82,7 +80,7 @@ class GetServiceConfigurationType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->requestedConfiguration = $this->castValueIfNeeded("requestedConfiguration", $value);
+        $this->requestedConfiguration = $value;
         return $this;
     }
 }

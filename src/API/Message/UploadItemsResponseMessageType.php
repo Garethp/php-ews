@@ -32,7 +32,7 @@ class UploadItemsResponseMessageType extends ResponseMessageType
      */
     public function setItemId(\garethp\ews\API\Type\ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 }

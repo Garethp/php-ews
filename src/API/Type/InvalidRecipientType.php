@@ -44,7 +44,7 @@ class InvalidRecipientType extends Type
      */
     public function setSmtpAddress($value)
     {
-        $this->smtpAddress = $this->castValueIfNeeded("smtpAddress", $value);
+        $this->smtpAddress = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class InvalidRecipientType extends Type
      */
     public function setResponseCode($value)
     {
-        $this->responseCode = $this->castValueIfNeeded("responseCode", $value);
+        $this->responseCode = $value;
         return $this;
     }
 
@@ -84,7 +84,7 @@ class InvalidRecipientType extends Type
      */
     public function setMessageText($value)
     {
-        $this->messageText = $this->castValueIfNeeded("messageText", $value);
+        $this->messageText = $value;
         return $this;
     }
 }

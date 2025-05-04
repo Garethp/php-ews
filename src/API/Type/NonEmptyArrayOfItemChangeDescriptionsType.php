@@ -35,10 +35,8 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends Type
      */
     public function addAppendToItemField(AppendToItemFieldType $value)
     {
-        $value = $this->castValueIfNeeded("appendToItemField", $value);
-
         if ($this->appendToItemField === null) {
-            $this->appendToItemField = array();
+                        $this->appendToItemField = array();
         }
 
         if (!is_array($this->appendToItemField)) {
@@ -68,7 +66,7 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->appendToItemField = $this->castValueIfNeeded("appendToItemField", $value);
+        $this->appendToItemField = $value;
         return $this;
     }
 
@@ -79,10 +77,8 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends Type
      */
     public function addSetItemField(SetItemFieldType $value)
     {
-        $value = $this->castValueIfNeeded("setItemField", $value);
-
         if ($this->setItemField === null) {
-            $this->setItemField = array();
+                        $this->setItemField = array();
         }
 
         if (!is_array($this->setItemField)) {
@@ -112,7 +108,7 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->setItemField = $this->castValueIfNeeded("setItemField", $value);
+        $this->setItemField = $value;
         return $this;
     }
 
@@ -123,10 +119,8 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends Type
      */
     public function addDeleteItemField(DeleteItemFieldType $value)
     {
-        $value = $this->castValueIfNeeded("deleteItemField", $value);
-
         if ($this->deleteItemField === null) {
-            $this->deleteItemField = array();
+                        $this->deleteItemField = array();
         }
 
         if (!is_array($this->deleteItemField)) {
@@ -156,7 +150,7 @@ class NonEmptyArrayOfItemChangeDescriptionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deleteItemField = $this->castValueIfNeeded("deleteItemField", $value);
+        $this->deleteItemField = $value;
         return $this;
     }
 }

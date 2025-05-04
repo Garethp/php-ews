@@ -47,7 +47,7 @@ class DistributionListType extends ItemType
      */
     public function setDisplayName($value)
     {
-        $this->displayName = $this->castValueIfNeeded("displayName", $value);
+        $this->displayName = $value;
         return $this;
     }
 
@@ -67,7 +67,7 @@ class DistributionListType extends ItemType
      */
     public function setFileAs($value)
     {
-        $this->fileAs = $this->castValueIfNeeded("fileAs", $value);
+        $this->fileAs = $value;
         return $this;
     }
 
@@ -87,7 +87,7 @@ class DistributionListType extends ItemType
      */
     public function setContactSource($value)
     {
-        $this->contactSource = $this->castValueIfNeeded("contactSource", $value);
+        $this->contactSource = $value;
         return $this;
     }
 
@@ -98,10 +98,8 @@ class DistributionListType extends ItemType
      */
     public function addMembers(MemberType $value)
     {
-        $value = $this->castValueIfNeeded("members", $value);
-
         if ($this->members === null) {
-            $this->members = array();
+                        $this->members = array();
         }
 
         if (!is_array($this->members)) {
@@ -131,7 +129,7 @@ class DistributionListType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->members = $this->castValueIfNeeded("members", $value);
+        $this->members = $value;
         return $this;
     }
 }

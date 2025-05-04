@@ -59,7 +59,7 @@ class DelegatePermissionsType extends Type
      */
     public function setCalendarFolderPermissionLevel($value)
     {
-        $this->calendarFolderPermissionLevel = $this->castValueIfNeeded("calendarFolderPermissionLevel", $value);
+        $this->calendarFolderPermissionLevel = $value;
         return $this;
     }
 
@@ -79,7 +79,7 @@ class DelegatePermissionsType extends Type
      */
     public function setTasksFolderPermissionLevel($value)
     {
-        $this->tasksFolderPermissionLevel = $this->castValueIfNeeded("tasksFolderPermissionLevel", $value);
+        $this->tasksFolderPermissionLevel = $value;
         return $this;
     }
 
@@ -99,7 +99,7 @@ class DelegatePermissionsType extends Type
      */
     public function setInboxFolderPermissionLevel($value)
     {
-        $this->inboxFolderPermissionLevel = $this->castValueIfNeeded("inboxFolderPermissionLevel", $value);
+        $this->inboxFolderPermissionLevel = $value;
         return $this;
     }
 
@@ -119,7 +119,7 @@ class DelegatePermissionsType extends Type
      */
     public function setContactsFolderPermissionLevel($value)
     {
-        $this->contactsFolderPermissionLevel = $this->castValueIfNeeded("contactsFolderPermissionLevel", $value);
+        $this->contactsFolderPermissionLevel = $value;
         return $this;
     }
 
@@ -139,7 +139,7 @@ class DelegatePermissionsType extends Type
      */
     public function setNotesFolderPermissionLevel($value)
     {
-        $this->notesFolderPermissionLevel = $this->castValueIfNeeded("notesFolderPermissionLevel", $value);
+        $this->notesFolderPermissionLevel = $value;
         return $this;
     }
 
@@ -159,7 +159,7 @@ class DelegatePermissionsType extends Type
      */
     public function setJournalFolderPermissionLevel($value)
     {
-        $this->journalFolderPermissionLevel = $this->castValueIfNeeded("journalFolderPermissionLevel", $value);
+        $this->journalFolderPermissionLevel = $value;
         return $this;
     }
 }

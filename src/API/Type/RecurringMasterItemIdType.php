@@ -37,7 +37,7 @@ class RecurringMasterItemIdType extends BaseItemIdType
      */
     public function setOccurrenceId($value)
     {
-        $this->occurrenceId = $this->castValueIfNeeded("occurrenceId", $value);
+        $this->occurrenceId = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class RecurringMasterItemIdType extends BaseItemIdType
      */
     public function setChangeKey($value)
     {
-        $this->changeKey = $this->castValueIfNeeded("changeKey", $value);
+        $this->changeKey = $value;
         return $this;
     }
 }

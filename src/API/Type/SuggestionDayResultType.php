@@ -18,10 +18,6 @@ class SuggestionDayResultType extends Type
      */
     protected $date = null;
 
-    protected $_typeMap = array(
-        'date' => 'dateTime',
-    );
-
     /**
      * @var string
      */
@@ -48,7 +44,10 @@ class SuggestionDayResultType extends Type
      */
     public function setDate(\DateTime|string $value)
     {
-        $this->date = $this->castValueIfNeeded("date", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->date = $value;
         return $this;
     }
 
@@ -68,7 +67,7 @@ class SuggestionDayResultType extends Type
      */
     public function setDayQuality($value)
     {
-        $this->dayQuality = $this->castValueIfNeeded("dayQuality", $value);
+        $this->dayQuality = $value;
         return $this;
     }
 
@@ -79,10 +78,8 @@ class SuggestionDayResultType extends Type
      */
     public function addSuggestionArray(SuggestionType $value)
     {
-        $value = $this->castValueIfNeeded("suggestionArray", $value);
-
         if ($this->suggestionArray === null) {
-            $this->suggestionArray = array();
+                        $this->suggestionArray = array();
         }
 
         if (!is_array($this->suggestionArray)) {
@@ -112,7 +109,7 @@ class SuggestionDayResultType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->suggestionArray = $this->castValueIfNeeded("suggestionArray", $value);
+        $this->suggestionArray = $value;
         return $this;
     }
 }

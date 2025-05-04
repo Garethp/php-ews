@@ -33,11 +33,6 @@ class TimeChangeType extends Type
      */
     protected $absoluteDate = null;
 
-    protected $_typeMap = array(
-        'absoluteDate' => 'date',
-        'time' => 'time',
-    );
-
     /**
      * @var \DateTime
      */
@@ -59,7 +54,7 @@ class TimeChangeType extends Type
      */
     public function setTimeZoneName($value)
     {
-        $this->timeZoneName = $this->castValueIfNeeded("timeZoneName", $value);
+        $this->timeZoneName = $value;
         return $this;
     }
 
@@ -79,7 +74,7 @@ class TimeChangeType extends Type
      */
     public function setOffset(\DateInterval $value)
     {
-        $this->offset = $this->castValueIfNeeded("offset", $value);
+        $this->offset = $value;
         return $this;
     }
 
@@ -99,7 +94,7 @@ class TimeChangeType extends Type
      */
     public function setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $value)
     {
-        $this->relativeYearlyRecurrence = $this->castValueIfNeeded("relativeYearlyRecurrence", $value);
+        $this->relativeYearlyRecurrence = $value;
         return $this;
     }
 
@@ -119,7 +114,10 @@ class TimeChangeType extends Type
      */
     public function setAbsoluteDate(\DateTime|string $value)
     {
-        $this->absoluteDate = $this->castValueIfNeeded("absoluteDate", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->absoluteDate = $value;
         return $this;
     }
 
@@ -139,7 +137,10 @@ class TimeChangeType extends Type
      */
     public function setTime(\DateTime|string $value)
     {
-        $this->time = $this->castValueIfNeeded("time", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->time = $value;
         return $this;
     }
 }

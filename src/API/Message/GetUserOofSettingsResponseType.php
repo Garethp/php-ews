@@ -44,7 +44,7 @@ class GetUserOofSettingsResponseType extends Message
      */
     public function setResponseMessage(ResponseMessageType $value)
     {
-        $this->responseMessage = $this->castValueIfNeeded("responseMessage", $value);
+        $this->responseMessage = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class GetUserOofSettingsResponseType extends Message
      */
     public function setOofSettings(\garethp\ews\API\Type\OofSettings $value)
     {
-        $this->oofSettings = $this->castValueIfNeeded("oofSettings", $value);
+        $this->oofSettings = $value;
         return $this;
     }
 
@@ -84,7 +84,7 @@ class GetUserOofSettingsResponseType extends Message
      */
     public function setAllowExternalOof($value)
     {
-        $this->allowExternalOof = $this->castValueIfNeeded("allowExternalOof", $value);
+        $this->allowExternalOof = $value;
         return $this;
     }
 }

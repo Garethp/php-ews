@@ -32,7 +32,7 @@ class GetPhoneCallInformationResponseMessageType extends ResponseMessageType
      */
     public function setPhoneCallInformation(\garethp\ews\API\Type\PhoneCallInformationType $value)
     {
-        $this->phoneCallInformation = $this->castValueIfNeeded("phoneCallInformation", $value);
+        $this->phoneCallInformation = $value;
         return $this;
     }
 }

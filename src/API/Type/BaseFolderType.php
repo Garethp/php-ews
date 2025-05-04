@@ -74,7 +74,7 @@ class BaseFolderType extends Type
      */
     public function setFolderId(FolderIdType $value)
     {
-        $this->folderId = $this->castValueIfNeeded("folderId", $value);
+        $this->folderId = $value;
         return $this;
     }
 
@@ -94,7 +94,7 @@ class BaseFolderType extends Type
      */
     public function setParentFolderId(FolderIdType $value)
     {
-        $this->parentFolderId = $this->castValueIfNeeded("parentFolderId", $value);
+        $this->parentFolderId = $value;
         return $this;
     }
 
@@ -114,7 +114,7 @@ class BaseFolderType extends Type
      */
     public function setFolderClass($value)
     {
-        $this->folderClass = $this->castValueIfNeeded("folderClass", $value);
+        $this->folderClass = $value;
         return $this;
     }
 
@@ -134,7 +134,7 @@ class BaseFolderType extends Type
      */
     public function setDisplayName($value)
     {
-        $this->displayName = $this->castValueIfNeeded("displayName", $value);
+        $this->displayName = $value;
         return $this;
     }
 
@@ -154,7 +154,7 @@ class BaseFolderType extends Type
      */
     public function setTotalCount($value)
     {
-        $this->totalCount = $this->castValueIfNeeded("totalCount", $value);
+        $this->totalCount = $value;
         return $this;
     }
 
@@ -174,7 +174,7 @@ class BaseFolderType extends Type
      */
     public function setChildFolderCount($value)
     {
-        $this->childFolderCount = $this->castValueIfNeeded("childFolderCount", $value);
+        $this->childFolderCount = $value;
         return $this;
     }
 
@@ -185,10 +185,8 @@ class BaseFolderType extends Type
      */
     public function addExtendedProperty(ExtendedPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("extendedProperty", $value);
-
         if ($this->extendedProperty === null) {
-            $this->extendedProperty = array();
+                        $this->extendedProperty = array();
         }
 
         if (!is_array($this->extendedProperty)) {
@@ -218,7 +216,7 @@ class BaseFolderType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->extendedProperty = $this->castValueIfNeeded("extendedProperty", $value);
+        $this->extendedProperty = $value;
         return $this;
     }
 
@@ -238,7 +236,7 @@ class BaseFolderType extends Type
      */
     public function setManagedFolderInformation(ManagedFolderInformationType $value)
     {
-        $this->managedFolderInformation = $this->castValueIfNeeded("managedFolderInformation", $value);
+        $this->managedFolderInformation = $value;
         return $this;
     }
 
@@ -258,7 +256,7 @@ class BaseFolderType extends Type
      */
     public function setEffectiveRights(EffectiveRightsType $value)
     {
-        $this->effectiveRights = $this->castValueIfNeeded("effectiveRights", $value);
+        $this->effectiveRights = $value;
         return $this;
     }
 }

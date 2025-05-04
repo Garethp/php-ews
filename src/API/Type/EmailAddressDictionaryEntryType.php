@@ -49,7 +49,7 @@ class EmailAddressDictionaryEntryType extends Type
      */
     public function setKey($value)
     {
-        $this->key = $this->castValueIfNeeded("key", $value);
+        $this->key = $value;
         return $this;
     }
 
@@ -69,7 +69,7 @@ class EmailAddressDictionaryEntryType extends Type
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -89,7 +89,7 @@ class EmailAddressDictionaryEntryType extends Type
      */
     public function setRoutingType($value)
     {
-        $this->routingType = $this->castValueIfNeeded("routingType", $value);
+        $this->routingType = $value;
         return $this;
     }
 
@@ -109,7 +109,7 @@ class EmailAddressDictionaryEntryType extends Type
      */
     public function setMailboxType($value)
     {
-        $this->mailboxType = $this->castValueIfNeeded("mailboxType", $value);
+        $this->mailboxType = $value;
         return $this;
     }
 }

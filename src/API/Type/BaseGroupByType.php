@@ -34,7 +34,7 @@ class BaseGroupByType extends Type
      */
     public function setOrder($value)
     {
-        $this->order = $this->castValueIfNeeded("order", $value);
+        $this->order = $value;
         return $this;
     }
 }

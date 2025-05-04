@@ -43,10 +43,8 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function addDiagnostics($value)
     {
-        $value = $this->castValueIfNeeded("diagnostics", $value);
-
         if ($this->diagnostics === null) {
-            $this->diagnostics = array();
+                        $this->diagnostics = array();
         }
 
         if (!is_array($this->diagnostics)) {
@@ -76,7 +74,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->diagnostics = $this->castValueIfNeeded("diagnostics", $value);
+        $this->diagnostics = $value;
         return $this;
     }
 
@@ -87,10 +85,8 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function addMessageTrackingSearchResults(\garethp\ews\API\Type\FindMessageTrackingSearchResultType $value)
     {
-        $value = $this->castValueIfNeeded("messageTrackingSearchResults", $value);
-
         if ($this->messageTrackingSearchResults === null) {
-            $this->messageTrackingSearchResults = array();
+                        $this->messageTrackingSearchResults = array();
         }
 
         if (!is_array($this->messageTrackingSearchResults)) {
@@ -121,7 +117,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->messageTrackingSearchResults = $this->castValueIfNeeded("messageTrackingSearchResults", $value);
+        $this->messageTrackingSearchResults = $value;
         return $this;
     }
 
@@ -141,7 +137,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function setExecutedSearchScope($value)
     {
-        $this->executedSearchScope = $this->castValueIfNeeded("executedSearchScope", $value);
+        $this->executedSearchScope = $value;
         return $this;
     }
 
@@ -152,10 +148,8 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function addErrors(\garethp\ews\API\Type\ArrayOfTrackingPropertiesType $value)
     {
-        $value = $this->castValueIfNeeded("errors", $value);
-
         if ($this->errors === null) {
-            $this->errors = array();
+                        $this->errors = array();
         }
 
         if (!is_array($this->errors)) {
@@ -186,7 +180,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->errors = $this->castValueIfNeeded("errors", $value);
+        $this->errors = $value;
         return $this;
     }
 
@@ -197,10 +191,8 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
      */
     public function addProperties(\garethp\ews\API\Type\TrackingPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("properties", $value);
-
         if ($this->properties === null) {
-            $this->properties = array();
+                        $this->properties = array();
         }
 
         if (!is_array($this->properties)) {
@@ -231,7 +223,7 @@ class FindMessageTrackingReportResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->properties = $this->castValueIfNeeded("properties", $value);
+        $this->properties = $value;
         return $this;
     }
 }

@@ -28,10 +28,8 @@ class GetStreamingEventsType extends BaseRequestType
      */
     public function addSubscriptionIds($value)
     {
-        $value = $this->castValueIfNeeded("subscriptionIds", $value);
-
         if ($this->subscriptionIds === null) {
-            $this->subscriptionIds = array();
+                        $this->subscriptionIds = array();
         }
 
         if (!is_array($this->subscriptionIds)) {
@@ -61,7 +59,7 @@ class GetStreamingEventsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->subscriptionIds = $this->castValueIfNeeded("subscriptionIds", $value);
+        $this->subscriptionIds = $value;
         return $this;
     }
 
@@ -81,7 +79,7 @@ class GetStreamingEventsType extends BaseRequestType
      */
     public function setConnectionTimeout($value)
     {
-        $this->connectionTimeout = $this->castValueIfNeeded("connectionTimeout", $value);
+        $this->connectionTimeout = $value;
         return $this;
     }
 }

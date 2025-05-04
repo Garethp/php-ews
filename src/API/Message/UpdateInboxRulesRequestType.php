@@ -42,7 +42,7 @@ class UpdateInboxRulesRequestType extends BaseRequestType
      */
     public function setMailboxSmtpAddress($value)
     {
-        $this->mailboxSmtpAddress = $this->castValueIfNeeded("mailboxSmtpAddress", $value);
+        $this->mailboxSmtpAddress = $value;
         return $this;
     }
 
@@ -71,7 +71,7 @@ class UpdateInboxRulesRequestType extends BaseRequestType
      */
     public function setRemoveOutlookRuleBlob($value)
     {
-        $this->removeOutlookRuleBlob = $this->castValueIfNeeded("removeOutlookRuleBlob", $value);
+        $this->removeOutlookRuleBlob = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class UpdateInboxRulesRequestType extends BaseRequestType
      */
     public function setOperations(\garethp\ews\API\Type\ArrayOfRuleOperationsType $value)
     {
-        $this->operations = $this->castValueIfNeeded("operations", $value);
+        $this->operations = $value;
         return $this;
     }
 }

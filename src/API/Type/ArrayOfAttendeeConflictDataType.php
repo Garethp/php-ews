@@ -40,10 +40,8 @@ class ArrayOfAttendeeConflictDataType extends Type
      */
     public function addUnknownAttendeeConflictData(UnknownAttendeeConflictDataType $value)
     {
-        $value = $this->castValueIfNeeded("unknownAttendeeConflictData", $value);
-
         if ($this->unknownAttendeeConflictData === null) {
-            $this->unknownAttendeeConflictData = array();
+                        $this->unknownAttendeeConflictData = array();
         }
 
         if (!is_array($this->unknownAttendeeConflictData)) {
@@ -73,7 +71,7 @@ class ArrayOfAttendeeConflictDataType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->unknownAttendeeConflictData = $this->castValueIfNeeded("unknownAttendeeConflictData", $value);
+        $this->unknownAttendeeConflictData = $value;
         return $this;
     }
 
@@ -84,10 +82,8 @@ class ArrayOfAttendeeConflictDataType extends Type
      */
     public function addIndividualAttendeeConflictData(IndividualAttendeeConflictDataType $value)
     {
-        $value = $this->castValueIfNeeded("individualAttendeeConflictData", $value);
-
         if ($this->individualAttendeeConflictData === null) {
-            $this->individualAttendeeConflictData = array();
+                        $this->individualAttendeeConflictData = array();
         }
 
         if (!is_array($this->individualAttendeeConflictData)) {
@@ -118,7 +114,7 @@ class ArrayOfAttendeeConflictDataType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->individualAttendeeConflictData = $this->castValueIfNeeded("individualAttendeeConflictData", $value);
+        $this->individualAttendeeConflictData = $value;
         return $this;
     }
 
@@ -129,10 +125,8 @@ class ArrayOfAttendeeConflictDataType extends Type
      */
     public function addTooBigGroupAttendeeConflictData(TooBigGroupAttendeeConflictDataType $value)
     {
-        $value = $this->castValueIfNeeded("tooBigGroupAttendeeConflictData", $value);
-
         if ($this->tooBigGroupAttendeeConflictData === null) {
-            $this->tooBigGroupAttendeeConflictData = array();
+                        $this->tooBigGroupAttendeeConflictData = array();
         }
 
         if (!is_array($this->tooBigGroupAttendeeConflictData)) {
@@ -163,7 +157,7 @@ class ArrayOfAttendeeConflictDataType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->tooBigGroupAttendeeConflictData = $this->castValueIfNeeded("tooBigGroupAttendeeConflictData", $value);
+        $this->tooBigGroupAttendeeConflictData = $value;
         return $this;
     }
 
@@ -174,10 +168,8 @@ class ArrayOfAttendeeConflictDataType extends Type
      */
     public function addGroupAttendeeConflictData(GroupAttendeeConflictDataType $value)
     {
-        $value = $this->castValueIfNeeded("groupAttendeeConflictData", $value);
-
         if ($this->groupAttendeeConflictData === null) {
-            $this->groupAttendeeConflictData = array();
+                        $this->groupAttendeeConflictData = array();
         }
 
         if (!is_array($this->groupAttendeeConflictData)) {
@@ -207,7 +199,7 @@ class ArrayOfAttendeeConflictDataType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->groupAttendeeConflictData = $this->castValueIfNeeded("groupAttendeeConflictData", $value);
+        $this->groupAttendeeConflictData = $value;
         return $this;
     }
 }

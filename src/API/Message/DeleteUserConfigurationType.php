@@ -32,7 +32,7 @@ class DeleteUserConfigurationType extends BaseRequestType
      */
     public function setUserConfigurationName(\garethp\ews\API\Type\UserConfigurationNameType $value)
     {
-        $this->userConfigurationName = $this->castValueIfNeeded("userConfigurationName", $value);
+        $this->userConfigurationName = $value;
         return $this;
     }
 }

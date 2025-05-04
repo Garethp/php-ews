@@ -32,7 +32,7 @@ class AlternatePublicFolderItemIdType extends AlternatePublicFolderIdType
      */
     public function setItemId($value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 }

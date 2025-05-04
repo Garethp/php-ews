@@ -32,7 +32,7 @@ class DeleteRuleOperationType extends RuleOperationType
      */
     public function setRuleId($value)
     {
-        $this->ruleId = $this->castValueIfNeeded("ruleId", $value);
+        $this->ruleId = $value;
         return $this;
     }
 }

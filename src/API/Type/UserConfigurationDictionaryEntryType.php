@@ -39,7 +39,7 @@ class UserConfigurationDictionaryEntryType extends Type
      */
     public function setDictionaryKey(UserConfigurationDictionaryObjectType $value)
     {
-        $this->dictionaryKey = $this->castValueIfNeeded("dictionaryKey", $value);
+        $this->dictionaryKey = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class UserConfigurationDictionaryEntryType extends Type
      */
     public function setDictionaryValue(UserConfigurationDictionaryObjectType $value)
     {
-        $this->dictionaryValue = $this->castValueIfNeeded("dictionaryValue", $value);
+        $this->dictionaryValue = $value;
         return $this;
     }
 }

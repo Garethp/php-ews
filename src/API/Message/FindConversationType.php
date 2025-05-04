@@ -42,7 +42,7 @@ class FindConversationType extends BaseRequestType
      */
     public function setIndexedPageItemView(\garethp\ews\API\Type\IndexedPageViewType $value)
     {
-        $this->indexedPageItemView = $this->castValueIfNeeded("indexedPageItemView", $value);
+        $this->indexedPageItemView = $value;
         return $this;
     }
 
@@ -53,10 +53,8 @@ class FindConversationType extends BaseRequestType
      */
     public function addSortOrder(\garethp\ews\API\Type\FieldOrderType $value)
     {
-        $value = $this->castValueIfNeeded("sortOrder", $value);
-
         if ($this->sortOrder === null) {
-            $this->sortOrder = array();
+                        $this->sortOrder = array();
         }
 
         if (!is_array($this->sortOrder)) {
@@ -87,7 +85,7 @@ class FindConversationType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->sortOrder = $this->castValueIfNeeded("sortOrder", $value);
+        $this->sortOrder = $value;
         return $this;
     }
 
@@ -107,7 +105,7 @@ class FindConversationType extends BaseRequestType
      */
     public function setParentFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->parentFolderId = $this->castValueIfNeeded("parentFolderId", $value);
+        $this->parentFolderId = $value;
         return $this;
     }
 }

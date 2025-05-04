@@ -51,7 +51,7 @@ class ServerVersionInfo extends Type
      */
     public function setMajorVersion($value)
     {
-        $this->majorVersion = $this->castValueIfNeeded("majorVersion", $value);
+        $this->majorVersion = $value;
         return $this;
     }
 
@@ -71,7 +71,7 @@ class ServerVersionInfo extends Type
      */
     public function setMinorVersion($value)
     {
-        $this->minorVersion = $this->castValueIfNeeded("minorVersion", $value);
+        $this->minorVersion = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class ServerVersionInfo extends Type
      */
     public function setMajorBuildNumber($value)
     {
-        $this->majorBuildNumber = $this->castValueIfNeeded("majorBuildNumber", $value);
+        $this->majorBuildNumber = $value;
         return $this;
     }
 
@@ -111,7 +111,7 @@ class ServerVersionInfo extends Type
      */
     public function setMinorBuildNumber($value)
     {
-        $this->minorBuildNumber = $this->castValueIfNeeded("minorBuildNumber", $value);
+        $this->minorBuildNumber = $value;
         return $this;
     }
 
@@ -131,7 +131,7 @@ class ServerVersionInfo extends Type
      */
     public function setVersion($value)
     {
-        $this->version = $this->castValueIfNeeded("version", $value);
+        $this->version = $value;
         return $this;
     }
 }

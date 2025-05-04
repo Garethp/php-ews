@@ -35,7 +35,7 @@ class ResponseObjectType extends ResponseObjectCoreType
      */
     public function setObjectName($value)
     {
-        $this->objectName = $this->castValueIfNeeded("objectName", $value);
+        $this->objectName = $value;
         return $this;
     }
 }

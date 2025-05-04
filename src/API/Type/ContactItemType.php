@@ -81,11 +81,6 @@ class ContactItemType extends ItemType
      */
     protected $birthday = null;
 
-    protected $_typeMap = array(
-        'birthday' => 'dateTime',
-        'weddingAnniversary' => 'dateTime',
-    );
-
     /**
      * @var string
      */
@@ -242,7 +237,7 @@ class ContactItemType extends ItemType
      */
     public function setFileAs($value)
     {
-        $this->fileAs = $this->castValueIfNeeded("fileAs", $value);
+        $this->fileAs = $value;
         return $this;
     }
 
@@ -262,7 +257,7 @@ class ContactItemType extends ItemType
      */
     public function setFileAsMapping($value)
     {
-        $this->fileAsMapping = $this->castValueIfNeeded("fileAsMapping", $value);
+        $this->fileAsMapping = $value;
         return $this;
     }
 
@@ -282,7 +277,7 @@ class ContactItemType extends ItemType
      */
     public function setDisplayName($value)
     {
-        $this->displayName = $this->castValueIfNeeded("displayName", $value);
+        $this->displayName = $value;
         return $this;
     }
 
@@ -302,7 +297,7 @@ class ContactItemType extends ItemType
      */
     public function setGivenName($value)
     {
-        $this->givenName = $this->castValueIfNeeded("givenName", $value);
+        $this->givenName = $value;
         return $this;
     }
 
@@ -322,7 +317,7 @@ class ContactItemType extends ItemType
      */
     public function setInitials($value)
     {
-        $this->initials = $this->castValueIfNeeded("initials", $value);
+        $this->initials = $value;
         return $this;
     }
 
@@ -342,7 +337,7 @@ class ContactItemType extends ItemType
      */
     public function setMiddleName($value)
     {
-        $this->middleName = $this->castValueIfNeeded("middleName", $value);
+        $this->middleName = $value;
         return $this;
     }
 
@@ -362,7 +357,7 @@ class ContactItemType extends ItemType
      */
     public function setNickname($value)
     {
-        $this->nickname = $this->castValueIfNeeded("nickname", $value);
+        $this->nickname = $value;
         return $this;
     }
 
@@ -382,7 +377,7 @@ class ContactItemType extends ItemType
      */
     public function setCompleteName(CompleteNameType $value)
     {
-        $this->completeName = $this->castValueIfNeeded("completeName", $value);
+        $this->completeName = $value;
         return $this;
     }
 
@@ -402,7 +397,7 @@ class ContactItemType extends ItemType
      */
     public function setCompanyName($value)
     {
-        $this->companyName = $this->castValueIfNeeded("companyName", $value);
+        $this->companyName = $value;
         return $this;
     }
 
@@ -413,10 +408,8 @@ class ContactItemType extends ItemType
      */
     public function addEmailAddresses(EmailAddressDictionaryEntryType $value)
     {
-        $value = $this->castValueIfNeeded("emailAddresses", $value);
-
         if ($this->emailAddresses === null) {
-            $this->emailAddresses = array();
+                        $this->emailAddresses = array();
         }
 
         if (!is_array($this->emailAddresses)) {
@@ -446,7 +439,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->emailAddresses = $this->castValueIfNeeded("emailAddresses", $value);
+        $this->emailAddresses = $value;
         return $this;
     }
 
@@ -457,10 +450,8 @@ class ContactItemType extends ItemType
      */
     public function addPhysicalAddresses(PhysicalAddressDictionaryEntryType $value)
     {
-        $value = $this->castValueIfNeeded("physicalAddresses", $value);
-
         if ($this->physicalAddresses === null) {
-            $this->physicalAddresses = array();
+                        $this->physicalAddresses = array();
         }
 
         if (!is_array($this->physicalAddresses)) {
@@ -491,7 +482,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->physicalAddresses = $this->castValueIfNeeded("physicalAddresses", $value);
+        $this->physicalAddresses = $value;
         return $this;
     }
 
@@ -502,10 +493,8 @@ class ContactItemType extends ItemType
      */
     public function addPhoneNumbers(PhoneNumberDictionaryEntryType $value)
     {
-        $value = $this->castValueIfNeeded("phoneNumbers", $value);
-
         if ($this->phoneNumbers === null) {
-            $this->phoneNumbers = array();
+                        $this->phoneNumbers = array();
         }
 
         if (!is_array($this->phoneNumbers)) {
@@ -535,7 +524,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->phoneNumbers = $this->castValueIfNeeded("phoneNumbers", $value);
+        $this->phoneNumbers = $value;
         return $this;
     }
 
@@ -555,7 +544,7 @@ class ContactItemType extends ItemType
      */
     public function setAssistantName($value)
     {
-        $this->assistantName = $this->castValueIfNeeded("assistantName", $value);
+        $this->assistantName = $value;
         return $this;
     }
 
@@ -575,7 +564,10 @@ class ContactItemType extends ItemType
      */
     public function setBirthday(\DateTime|string $value)
     {
-        $this->birthday = $this->castValueIfNeeded("birthday", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->birthday = $value;
         return $this;
     }
 
@@ -595,7 +587,7 @@ class ContactItemType extends ItemType
      */
     public function setBusinessHomePage($value)
     {
-        $this->businessHomePage = $this->castValueIfNeeded("businessHomePage", $value);
+        $this->businessHomePage = $value;
         return $this;
     }
 
@@ -606,10 +598,8 @@ class ContactItemType extends ItemType
      */
     public function addChildren($value)
     {
-        $value = $this->castValueIfNeeded("children", $value);
-
         if ($this->children === null) {
-            $this->children = array();
+                        $this->children = array();
         }
 
         if (!is_array($this->children)) {
@@ -639,7 +629,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->children = $this->castValueIfNeeded("children", $value);
+        $this->children = $value;
         return $this;
     }
 
@@ -650,10 +640,8 @@ class ContactItemType extends ItemType
      */
     public function addCompanies($value)
     {
-        $value = $this->castValueIfNeeded("companies", $value);
-
         if ($this->companies === null) {
-            $this->companies = array();
+                        $this->companies = array();
         }
 
         if (!is_array($this->companies)) {
@@ -683,7 +671,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->companies = $this->castValueIfNeeded("companies", $value);
+        $this->companies = $value;
         return $this;
     }
 
@@ -703,7 +691,7 @@ class ContactItemType extends ItemType
      */
     public function setContactSource($value)
     {
-        $this->contactSource = $this->castValueIfNeeded("contactSource", $value);
+        $this->contactSource = $value;
         return $this;
     }
 
@@ -723,7 +711,7 @@ class ContactItemType extends ItemType
      */
     public function setDepartment($value)
     {
-        $this->department = $this->castValueIfNeeded("department", $value);
+        $this->department = $value;
         return $this;
     }
 
@@ -743,7 +731,7 @@ class ContactItemType extends ItemType
      */
     public function setGeneration($value)
     {
-        $this->generation = $this->castValueIfNeeded("generation", $value);
+        $this->generation = $value;
         return $this;
     }
 
@@ -754,10 +742,8 @@ class ContactItemType extends ItemType
      */
     public function addImAddresses(ImAddressDictionaryEntryType $value)
     {
-        $value = $this->castValueIfNeeded("imAddresses", $value);
-
         if ($this->imAddresses === null) {
-            $this->imAddresses = array();
+                        $this->imAddresses = array();
         }
 
         if (!is_array($this->imAddresses)) {
@@ -787,7 +773,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->imAddresses = $this->castValueIfNeeded("imAddresses", $value);
+        $this->imAddresses = $value;
         return $this;
     }
 
@@ -807,7 +793,7 @@ class ContactItemType extends ItemType
      */
     public function setJobTitle($value)
     {
-        $this->jobTitle = $this->castValueIfNeeded("jobTitle", $value);
+        $this->jobTitle = $value;
         return $this;
     }
 
@@ -827,7 +813,7 @@ class ContactItemType extends ItemType
      */
     public function setManager($value)
     {
-        $this->manager = $this->castValueIfNeeded("manager", $value);
+        $this->manager = $value;
         return $this;
     }
 
@@ -847,7 +833,7 @@ class ContactItemType extends ItemType
      */
     public function setMileage($value)
     {
-        $this->mileage = $this->castValueIfNeeded("mileage", $value);
+        $this->mileage = $value;
         return $this;
     }
 
@@ -867,7 +853,7 @@ class ContactItemType extends ItemType
      */
     public function setOfficeLocation($value)
     {
-        $this->officeLocation = $this->castValueIfNeeded("officeLocation", $value);
+        $this->officeLocation = $value;
         return $this;
     }
 
@@ -887,7 +873,7 @@ class ContactItemType extends ItemType
      */
     public function setPostalAddressIndex($value)
     {
-        $this->postalAddressIndex = $this->castValueIfNeeded("postalAddressIndex", $value);
+        $this->postalAddressIndex = $value;
         return $this;
     }
 
@@ -907,7 +893,7 @@ class ContactItemType extends ItemType
      */
     public function setProfession($value)
     {
-        $this->profession = $this->castValueIfNeeded("profession", $value);
+        $this->profession = $value;
         return $this;
     }
 
@@ -927,7 +913,7 @@ class ContactItemType extends ItemType
      */
     public function setSpouseName($value)
     {
-        $this->spouseName = $this->castValueIfNeeded("spouseName", $value);
+        $this->spouseName = $value;
         return $this;
     }
 
@@ -947,7 +933,7 @@ class ContactItemType extends ItemType
      */
     public function setSurname($value)
     {
-        $this->surname = $this->castValueIfNeeded("surname", $value);
+        $this->surname = $value;
         return $this;
     }
 
@@ -967,7 +953,10 @@ class ContactItemType extends ItemType
      */
     public function setWeddingAnniversary(\DateTime|string $value)
     {
-        $this->weddingAnniversary = $this->castValueIfNeeded("weddingAnniversary", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->weddingAnniversary = $value;
         return $this;
     }
 
@@ -996,7 +985,7 @@ class ContactItemType extends ItemType
      */
     public function setHasPicture($value)
     {
-        $this->hasPicture = $this->castValueIfNeeded("hasPicture", $value);
+        $this->hasPicture = $value;
         return $this;
     }
 
@@ -1016,7 +1005,7 @@ class ContactItemType extends ItemType
      */
     public function setPhoneticFullName($value)
     {
-        $this->phoneticFullName = $this->castValueIfNeeded("phoneticFullName", $value);
+        $this->phoneticFullName = $value;
         return $this;
     }
 
@@ -1036,7 +1025,7 @@ class ContactItemType extends ItemType
      */
     public function setPhoneticFirstName($value)
     {
-        $this->phoneticFirstName = $this->castValueIfNeeded("phoneticFirstName", $value);
+        $this->phoneticFirstName = $value;
         return $this;
     }
 
@@ -1056,7 +1045,7 @@ class ContactItemType extends ItemType
      */
     public function setPhoneticLastName($value)
     {
-        $this->phoneticLastName = $this->castValueIfNeeded("phoneticLastName", $value);
+        $this->phoneticLastName = $value;
         return $this;
     }
 
@@ -1076,7 +1065,7 @@ class ContactItemType extends ItemType
      */
     public function setAlias($value)
     {
-        $this->alias = $this->castValueIfNeeded("alias", $value);
+        $this->alias = $value;
         return $this;
     }
 
@@ -1096,7 +1085,7 @@ class ContactItemType extends ItemType
      */
     public function setNotes($value)
     {
-        $this->notes = $this->castValueIfNeeded("notes", $value);
+        $this->notes = $value;
         return $this;
     }
 
@@ -1116,7 +1105,7 @@ class ContactItemType extends ItemType
      */
     public function setPhoto($value)
     {
-        $this->photo = $this->castValueIfNeeded("photo", $value);
+        $this->photo = $value;
         return $this;
     }
 
@@ -1127,10 +1116,8 @@ class ContactItemType extends ItemType
      */
     public function addUserSMIMECertificate($value)
     {
-        $value = $this->castValueIfNeeded("userSMIMECertificate", $value);
-
         if ($this->userSMIMECertificate === null) {
-            $this->userSMIMECertificate = array();
+                        $this->userSMIMECertificate = array();
         }
 
         if (!is_array($this->userSMIMECertificate)) {
@@ -1160,7 +1147,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->userSMIMECertificate = $this->castValueIfNeeded("userSMIMECertificate", $value);
+        $this->userSMIMECertificate = $value;
         return $this;
     }
 
@@ -1171,10 +1158,8 @@ class ContactItemType extends ItemType
      */
     public function addMSExchangeCertificate($value)
     {
-        $value = $this->castValueIfNeeded("mSExchangeCertificate", $value);
-
         if ($this->mSExchangeCertificate === null) {
-            $this->mSExchangeCertificate = array();
+                        $this->mSExchangeCertificate = array();
         }
 
         if (!is_array($this->mSExchangeCertificate)) {
@@ -1204,7 +1189,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->mSExchangeCertificate = $this->castValueIfNeeded("mSExchangeCertificate", $value);
+        $this->mSExchangeCertificate = $value;
         return $this;
     }
 
@@ -1224,7 +1209,7 @@ class ContactItemType extends ItemType
      */
     public function setDirectoryId($value)
     {
-        $this->directoryId = $this->castValueIfNeeded("directoryId", $value);
+        $this->directoryId = $value;
         return $this;
     }
 
@@ -1244,7 +1229,7 @@ class ContactItemType extends ItemType
      */
     public function setManagerMailbox(SingleRecipientType $value)
     {
-        $this->managerMailbox = $this->castValueIfNeeded("managerMailbox", $value);
+        $this->managerMailbox = $value;
         return $this;
     }
 
@@ -1255,10 +1240,8 @@ class ContactItemType extends ItemType
      */
     public function addDirectReports(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("directReports", $value);
-
         if ($this->directReports === null) {
-            $this->directReports = array();
+                        $this->directReports = array();
         }
 
         if (!is_array($this->directReports)) {
@@ -1288,7 +1271,7 @@ class ContactItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->directReports = $this->castValueIfNeeded("directReports", $value);
+        $this->directReports = $value;
         return $this;
     }
 }

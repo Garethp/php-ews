@@ -58,11 +58,6 @@ class ConversationType extends Type
      */
     protected $lastDeliveryTime = null;
 
-    protected $_typeMap = array(
-        'lastDeliveryTime' => 'dateTime',
-        'globalLastDeliveryTime' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -174,7 +169,7 @@ class ConversationType extends Type
      */
     public function setConversationId(ItemIdType $value)
     {
-        $this->conversationId = $this->castValueIfNeeded("conversationId", $value);
+        $this->conversationId = $value;
         return $this;
     }
 
@@ -194,7 +189,7 @@ class ConversationType extends Type
      */
     public function setConversationTopic($value)
     {
-        $this->conversationTopic = $this->castValueIfNeeded("conversationTopic", $value);
+        $this->conversationTopic = $value;
         return $this;
     }
 
@@ -205,10 +200,8 @@ class ConversationType extends Type
      */
     public function addUniqueRecipients($value)
     {
-        $value = $this->castValueIfNeeded("uniqueRecipients", $value);
-
         if ($this->uniqueRecipients === null) {
-            $this->uniqueRecipients = array();
+                        $this->uniqueRecipients = array();
         }
 
         if (!is_array($this->uniqueRecipients)) {
@@ -238,7 +231,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->uniqueRecipients = $this->castValueIfNeeded("uniqueRecipients", $value);
+        $this->uniqueRecipients = $value;
         return $this;
     }
 
@@ -249,10 +242,8 @@ class ConversationType extends Type
      */
     public function addGlobalUniqueRecipients($value)
     {
-        $value = $this->castValueIfNeeded("globalUniqueRecipients", $value);
-
         if ($this->globalUniqueRecipients === null) {
-            $this->globalUniqueRecipients = array();
+                        $this->globalUniqueRecipients = array();
         }
 
         if (!is_array($this->globalUniqueRecipients)) {
@@ -282,7 +273,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->globalUniqueRecipients = $this->castValueIfNeeded("globalUniqueRecipients", $value);
+        $this->globalUniqueRecipients = $value;
         return $this;
     }
 
@@ -293,10 +284,8 @@ class ConversationType extends Type
      */
     public function addUniqueUnreadSenders($value)
     {
-        $value = $this->castValueIfNeeded("uniqueUnreadSenders", $value);
-
         if ($this->uniqueUnreadSenders === null) {
-            $this->uniqueUnreadSenders = array();
+                        $this->uniqueUnreadSenders = array();
         }
 
         if (!is_array($this->uniqueUnreadSenders)) {
@@ -326,7 +315,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->uniqueUnreadSenders = $this->castValueIfNeeded("uniqueUnreadSenders", $value);
+        $this->uniqueUnreadSenders = $value;
         return $this;
     }
 
@@ -337,10 +326,8 @@ class ConversationType extends Type
      */
     public function addGlobalUniqueUnreadSenders($value)
     {
-        $value = $this->castValueIfNeeded("globalUniqueUnreadSenders", $value);
-
         if ($this->globalUniqueUnreadSenders === null) {
-            $this->globalUniqueUnreadSenders = array();
+                        $this->globalUniqueUnreadSenders = array();
         }
 
         if (!is_array($this->globalUniqueUnreadSenders)) {
@@ -370,7 +357,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->globalUniqueUnreadSenders = $this->castValueIfNeeded("globalUniqueUnreadSenders", $value);
+        $this->globalUniqueUnreadSenders = $value;
         return $this;
     }
 
@@ -381,10 +368,8 @@ class ConversationType extends Type
      */
     public function addUniqueSenders($value)
     {
-        $value = $this->castValueIfNeeded("uniqueSenders", $value);
-
         if ($this->uniqueSenders === null) {
-            $this->uniqueSenders = array();
+                        $this->uniqueSenders = array();
         }
 
         if (!is_array($this->uniqueSenders)) {
@@ -414,7 +399,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->uniqueSenders = $this->castValueIfNeeded("uniqueSenders", $value);
+        $this->uniqueSenders = $value;
         return $this;
     }
 
@@ -425,10 +410,8 @@ class ConversationType extends Type
      */
     public function addGlobalUniqueSenders($value)
     {
-        $value = $this->castValueIfNeeded("globalUniqueSenders", $value);
-
         if ($this->globalUniqueSenders === null) {
-            $this->globalUniqueSenders = array();
+                        $this->globalUniqueSenders = array();
         }
 
         if (!is_array($this->globalUniqueSenders)) {
@@ -458,7 +441,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->globalUniqueSenders = $this->castValueIfNeeded("globalUniqueSenders", $value);
+        $this->globalUniqueSenders = $value;
         return $this;
     }
 
@@ -478,7 +461,10 @@ class ConversationType extends Type
      */
     public function setLastDeliveryTime(\DateTime|string $value)
     {
-        $this->lastDeliveryTime = $this->castValueIfNeeded("lastDeliveryTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->lastDeliveryTime = $value;
         return $this;
     }
 
@@ -498,7 +484,10 @@ class ConversationType extends Type
      */
     public function setGlobalLastDeliveryTime(\DateTime|string $value)
     {
-        $this->globalLastDeliveryTime = $this->castValueIfNeeded("globalLastDeliveryTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->globalLastDeliveryTime = $value;
         return $this;
     }
 
@@ -509,10 +498,8 @@ class ConversationType extends Type
      */
     public function addCategories($value)
     {
-        $value = $this->castValueIfNeeded("categories", $value);
-
         if ($this->categories === null) {
-            $this->categories = array();
+                        $this->categories = array();
         }
 
         if (!is_array($this->categories)) {
@@ -542,7 +529,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->categories = $this->castValueIfNeeded("categories", $value);
+        $this->categories = $value;
         return $this;
     }
 
@@ -553,10 +540,8 @@ class ConversationType extends Type
      */
     public function addGlobalCategories($value)
     {
-        $value = $this->castValueIfNeeded("globalCategories", $value);
-
         if ($this->globalCategories === null) {
-            $this->globalCategories = array();
+                        $this->globalCategories = array();
         }
 
         if (!is_array($this->globalCategories)) {
@@ -586,7 +571,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->globalCategories = $this->castValueIfNeeded("globalCategories", $value);
+        $this->globalCategories = $value;
         return $this;
     }
 
@@ -606,7 +591,7 @@ class ConversationType extends Type
      */
     public function setFlagStatus($value)
     {
-        $this->flagStatus = $this->castValueIfNeeded("flagStatus", $value);
+        $this->flagStatus = $value;
         return $this;
     }
 
@@ -626,7 +611,7 @@ class ConversationType extends Type
      */
     public function setGlobalFlagStatus($value)
     {
-        $this->globalFlagStatus = $this->castValueIfNeeded("globalFlagStatus", $value);
+        $this->globalFlagStatus = $value;
         return $this;
     }
 
@@ -655,7 +640,7 @@ class ConversationType extends Type
      */
     public function setHasAttachments($value)
     {
-        $this->hasAttachments = $this->castValueIfNeeded("hasAttachments", $value);
+        $this->hasAttachments = $value;
         return $this;
     }
 
@@ -684,7 +669,7 @@ class ConversationType extends Type
      */
     public function setGlobalHasAttachments($value)
     {
-        $this->globalHasAttachments = $this->castValueIfNeeded("globalHasAttachments", $value);
+        $this->globalHasAttachments = $value;
         return $this;
     }
 
@@ -704,7 +689,7 @@ class ConversationType extends Type
      */
     public function setMessageCount($value)
     {
-        $this->messageCount = $this->castValueIfNeeded("messageCount", $value);
+        $this->messageCount = $value;
         return $this;
     }
 
@@ -724,7 +709,7 @@ class ConversationType extends Type
      */
     public function setGlobalMessageCount($value)
     {
-        $this->globalMessageCount = $this->castValueIfNeeded("globalMessageCount", $value);
+        $this->globalMessageCount = $value;
         return $this;
     }
 
@@ -744,7 +729,7 @@ class ConversationType extends Type
      */
     public function setUnreadCount($value)
     {
-        $this->unreadCount = $this->castValueIfNeeded("unreadCount", $value);
+        $this->unreadCount = $value;
         return $this;
     }
 
@@ -764,7 +749,7 @@ class ConversationType extends Type
      */
     public function setGlobalUnreadCount($value)
     {
-        $this->globalUnreadCount = $this->castValueIfNeeded("globalUnreadCount", $value);
+        $this->globalUnreadCount = $value;
         return $this;
     }
 
@@ -784,7 +769,7 @@ class ConversationType extends Type
      */
     public function setSize($value)
     {
-        $this->size = $this->castValueIfNeeded("size", $value);
+        $this->size = $value;
         return $this;
     }
 
@@ -804,7 +789,7 @@ class ConversationType extends Type
      */
     public function setGlobalSize($value)
     {
-        $this->globalSize = $this->castValueIfNeeded("globalSize", $value);
+        $this->globalSize = $value;
         return $this;
     }
 
@@ -815,10 +800,8 @@ class ConversationType extends Type
      */
     public function addItemClasses($value)
     {
-        $value = $this->castValueIfNeeded("itemClasses", $value);
-
         if ($this->itemClasses === null) {
-            $this->itemClasses = array();
+                        $this->itemClasses = array();
         }
 
         if (!is_array($this->itemClasses)) {
@@ -848,7 +831,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->itemClasses = $this->castValueIfNeeded("itemClasses", $value);
+        $this->itemClasses = $value;
         return $this;
     }
 
@@ -859,10 +842,8 @@ class ConversationType extends Type
      */
     public function addGlobalItemClasses($value)
     {
-        $value = $this->castValueIfNeeded("globalItemClasses", $value);
-
         if ($this->globalItemClasses === null) {
-            $this->globalItemClasses = array();
+                        $this->globalItemClasses = array();
         }
 
         if (!is_array($this->globalItemClasses)) {
@@ -892,7 +873,7 @@ class ConversationType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->globalItemClasses = $this->castValueIfNeeded("globalItemClasses", $value);
+        $this->globalItemClasses = $value;
         return $this;
     }
 
@@ -912,7 +893,7 @@ class ConversationType extends Type
      */
     public function setImportance($value)
     {
-        $this->importance = $this->castValueIfNeeded("importance", $value);
+        $this->importance = $value;
         return $this;
     }
 
@@ -932,7 +913,7 @@ class ConversationType extends Type
      */
     public function setGlobalImportance($value)
     {
-        $this->globalImportance = $this->castValueIfNeeded("globalImportance", $value);
+        $this->globalImportance = $value;
         return $this;
     }
 
@@ -952,7 +933,7 @@ class ConversationType extends Type
      */
     public function setItemIds(NonEmptyArrayOfBaseItemIdsType $value)
     {
-        $this->itemIds = $this->castValueIfNeeded("itemIds", $value);
+        $this->itemIds = $value;
         return $this;
     }
 
@@ -972,7 +953,7 @@ class ConversationType extends Type
      */
     public function setGlobalItemIds(NonEmptyArrayOfBaseItemIdsType $value)
     {
-        $this->globalItemIds = $this->castValueIfNeeded("globalItemIds", $value);
+        $this->globalItemIds = $value;
         return $this;
     }
 }

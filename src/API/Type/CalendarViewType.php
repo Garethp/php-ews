@@ -16,11 +16,6 @@ class CalendarViewType extends BasePagingType
      */
     protected $startDate = null;
 
-    protected $_typeMap = array(
-        'startDate' => 'dateTime',
-        'endDate' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -42,7 +37,10 @@ class CalendarViewType extends BasePagingType
      */
     public function setStartDate(\DateTime|string $value)
     {
-        $this->startDate = $this->castValueIfNeeded("startDate", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->startDate = $value;
         return $this;
     }
 
@@ -62,7 +60,10 @@ class CalendarViewType extends BasePagingType
      */
     public function setEndDate(\DateTime|string $value)
     {
-        $this->endDate = $this->castValueIfNeeded("endDate", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->endDate = $value;
         return $this;
     }
 }

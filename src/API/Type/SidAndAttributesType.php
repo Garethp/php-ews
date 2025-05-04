@@ -39,7 +39,7 @@ class SidAndAttributesType extends Type
      */
     public function setAttributes($value)
     {
-        $this->attributes = $this->castValueIfNeeded("attributes", $value);
+        $this->attributes = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class SidAndAttributesType extends Type
      */
     public function setSecurityIdentifier($value)
     {
-        $this->securityIdentifier = $this->castValueIfNeeded("securityIdentifier", $value);
+        $this->securityIdentifier = $value;
         return $this;
     }
 }

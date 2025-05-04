@@ -48,10 +48,6 @@ class AttachmentType extends Type
      */
     protected $lastModifiedTime = null;
 
-    protected $_typeMap = array(
-        'lastModifiedTime' => 'dateTime',
-    );
-
     /**
      * @var boolean
      */
@@ -73,7 +69,7 @@ class AttachmentType extends Type
      */
     public function setAttachmentId(AttachmentIdType $value)
     {
-        $this->attachmentId = $this->castValueIfNeeded("attachmentId", $value);
+        $this->attachmentId = $value;
         return $this;
     }
 
@@ -93,7 +89,7 @@ class AttachmentType extends Type
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -113,7 +109,7 @@ class AttachmentType extends Type
      */
     public function setContentType($value)
     {
-        $this->contentType = $this->castValueIfNeeded("contentType", $value);
+        $this->contentType = $value;
         return $this;
     }
 
@@ -133,7 +129,7 @@ class AttachmentType extends Type
      */
     public function setContentId($value)
     {
-        $this->contentId = $this->castValueIfNeeded("contentId", $value);
+        $this->contentId = $value;
         return $this;
     }
 
@@ -153,7 +149,7 @@ class AttachmentType extends Type
      */
     public function setContentLocation($value)
     {
-        $this->contentLocation = $this->castValueIfNeeded("contentLocation", $value);
+        $this->contentLocation = $value;
         return $this;
     }
 
@@ -173,7 +169,7 @@ class AttachmentType extends Type
      */
     public function setSize($value)
     {
-        $this->size = $this->castValueIfNeeded("size", $value);
+        $this->size = $value;
         return $this;
     }
 
@@ -193,7 +189,10 @@ class AttachmentType extends Type
      */
     public function setLastModifiedTime(\DateTime|string $value)
     {
-        $this->lastModifiedTime = $this->castValueIfNeeded("lastModifiedTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->lastModifiedTime = $value;
         return $this;
     }
 
@@ -222,7 +221,7 @@ class AttachmentType extends Type
      */
     public function setIsInline($value)
     {
-        $this->isInline = $this->castValueIfNeeded("isInline", $value);
+        $this->isInline = $value;
         return $this;
     }
 }

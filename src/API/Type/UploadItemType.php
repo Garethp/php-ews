@@ -54,7 +54,7 @@ class UploadItemType extends Type
      */
     public function setCreateAction($value)
     {
-        $this->createAction = $this->castValueIfNeeded("createAction", $value);
+        $this->createAction = $value;
         return $this;
     }
 
@@ -83,7 +83,7 @@ class UploadItemType extends Type
      */
     public function setIsAssociated($value)
     {
-        $this->isAssociated = $this->castValueIfNeeded("isAssociated", $value);
+        $this->isAssociated = $value;
         return $this;
     }
 
@@ -103,7 +103,7 @@ class UploadItemType extends Type
      */
     public function setParentFolderId(FolderIdType $value)
     {
-        $this->parentFolderId = $this->castValueIfNeeded("parentFolderId", $value);
+        $this->parentFolderId = $value;
         return $this;
     }
 
@@ -123,7 +123,7 @@ class UploadItemType extends Type
      */
     public function setItemId(ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -143,7 +143,7 @@ class UploadItemType extends Type
      */
     public function setData($value)
     {
-        $this->data = $this->castValueIfNeeded("data", $value);
+        $this->data = $value;
         return $this;
     }
 }

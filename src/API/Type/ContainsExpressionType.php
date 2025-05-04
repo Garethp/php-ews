@@ -57,7 +57,7 @@ class ContainsExpressionType extends SearchExpressionType
      */
     public function setContainmentMode($value)
     {
-        $this->containmentMode = $this->castValueIfNeeded("containmentMode", $value);
+        $this->containmentMode = $value;
         return $this;
     }
 
@@ -77,7 +77,7 @@ class ContainsExpressionType extends SearchExpressionType
      */
     public function setContainmentComparison($value)
     {
-        $this->containmentComparison = $this->castValueIfNeeded("containmentComparison", $value);
+        $this->containmentComparison = $value;
         return $this;
     }
 
@@ -88,10 +88,8 @@ class ContainsExpressionType extends SearchExpressionType
      */
     public function addFieldURI(FieldURI $value)
     {
-        $value = $this->castValueIfNeeded("fieldURI", $value);
-
         if ($this->fieldURI === null) {
-            $this->fieldURI = array();
+                        $this->fieldURI = array();
         }
 
         if (!is_array($this->fieldURI)) {
@@ -121,7 +119,7 @@ class ContainsExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->fieldURI = $this->castValueIfNeeded("fieldURI", $value);
+        $this->fieldURI = $value;
         return $this;
     }
 
@@ -132,10 +130,8 @@ class ContainsExpressionType extends SearchExpressionType
      */
     public function addIndexedFieldURI(IndexedFieldURI $value)
     {
-        $value = $this->castValueIfNeeded("indexedFieldURI", $value);
-
         if ($this->indexedFieldURI === null) {
-            $this->indexedFieldURI = array();
+                        $this->indexedFieldURI = array();
         }
 
         if (!is_array($this->indexedFieldURI)) {
@@ -165,7 +161,7 @@ class ContainsExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->indexedFieldURI = $this->castValueIfNeeded("indexedFieldURI", $value);
+        $this->indexedFieldURI = $value;
         return $this;
     }
 
@@ -176,10 +172,8 @@ class ContainsExpressionType extends SearchExpressionType
      */
     public function addExtendedFieldURI(ExtendedFieldURI $value)
     {
-        $value = $this->castValueIfNeeded("extendedFieldURI", $value);
-
         if ($this->extendedFieldURI === null) {
-            $this->extendedFieldURI = array();
+                        $this->extendedFieldURI = array();
         }
 
         if (!is_array($this->extendedFieldURI)) {
@@ -209,7 +203,7 @@ class ContainsExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->extendedFieldURI = $this->castValueIfNeeded("extendedFieldURI", $value);
+        $this->extendedFieldURI = $value;
         return $this;
     }
 
@@ -229,7 +223,7 @@ class ContainsExpressionType extends SearchExpressionType
      */
     public function setConstant(ConstantValueType $value)
     {
-        $this->constant = $this->castValueIfNeeded("constant", $value);
+        $this->constant = $value;
         return $this;
     }
 }

@@ -40,10 +40,8 @@ class SyncFolderItemsChangesType extends Type
      */
     public function addCreate(SyncFolderItemsCreateOrUpdateType $value)
     {
-        $value = $this->castValueIfNeeded("create", $value);
-
         if ($this->create === null) {
-            $this->create = array();
+                        $this->create = array();
         }
 
         if (!is_array($this->create)) {
@@ -74,7 +72,7 @@ class SyncFolderItemsChangesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->create = $this->castValueIfNeeded("create", $value);
+        $this->create = $value;
         return $this;
     }
 
@@ -85,10 +83,8 @@ class SyncFolderItemsChangesType extends Type
      */
     public function addUpdate(SyncFolderItemsCreateOrUpdateType $value)
     {
-        $value = $this->castValueIfNeeded("update", $value);
-
         if ($this->update === null) {
-            $this->update = array();
+                        $this->update = array();
         }
 
         if (!is_array($this->update)) {
@@ -119,7 +115,7 @@ class SyncFolderItemsChangesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->update = $this->castValueIfNeeded("update", $value);
+        $this->update = $value;
         return $this;
     }
 
@@ -130,10 +126,8 @@ class SyncFolderItemsChangesType extends Type
      */
     public function addDelete(SyncFolderItemsDeleteType $value)
     {
-        $value = $this->castValueIfNeeded("delete", $value);
-
         if ($this->delete === null) {
-            $this->delete = array();
+                        $this->delete = array();
         }
 
         if (!is_array($this->delete)) {
@@ -163,7 +157,7 @@ class SyncFolderItemsChangesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->delete = $this->castValueIfNeeded("delete", $value);
+        $this->delete = $value;
         return $this;
     }
 
@@ -174,10 +168,8 @@ class SyncFolderItemsChangesType extends Type
      */
     public function addReadFlagChange(SyncFolderItemsReadFlagType $value)
     {
-        $value = $this->castValueIfNeeded("readFlagChange", $value);
-
         if ($this->readFlagChange === null) {
-            $this->readFlagChange = array();
+                        $this->readFlagChange = array();
         }
 
         if (!is_array($this->readFlagChange)) {
@@ -207,7 +199,7 @@ class SyncFolderItemsChangesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->readFlagChange = $this->castValueIfNeeded("readFlagChange", $value);
+        $this->readFlagChange = $value;
         return $this;
     }
 }

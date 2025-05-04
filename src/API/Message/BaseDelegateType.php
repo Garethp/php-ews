@@ -32,7 +32,7 @@ class BaseDelegateType extends BaseRequestType
      */
     public function setMailbox(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->mailbox = $this->castValueIfNeeded("mailbox", $value);
+        $this->mailbox = $value;
         return $this;
     }
 }

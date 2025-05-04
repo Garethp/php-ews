@@ -54,7 +54,7 @@ class ResponseMessageType extends Message
      */
     public function setResponseClass($value)
     {
-        $this->responseClass = $this->castValueIfNeeded("responseClass", $value);
+        $this->responseClass = $value;
         return $this;
     }
 
@@ -74,7 +74,7 @@ class ResponseMessageType extends Message
      */
     public function setMessageText($value)
     {
-        $this->messageText = $this->castValueIfNeeded("messageText", $value);
+        $this->messageText = $value;
         return $this;
     }
 
@@ -94,7 +94,7 @@ class ResponseMessageType extends Message
      */
     public function setResponseCode($value)
     {
-        $this->responseCode = $this->castValueIfNeeded("responseCode", $value);
+        $this->responseCode = $value;
         return $this;
     }
 
@@ -114,7 +114,7 @@ class ResponseMessageType extends Message
      */
     public function setDescriptiveLinkKey($value)
     {
-        $this->descriptiveLinkKey = $this->castValueIfNeeded("descriptiveLinkKey", $value);
+        $this->descriptiveLinkKey = $value;
         return $this;
     }
 
@@ -134,7 +134,7 @@ class ResponseMessageType extends Message
      */
     public function setMessageXml(\garethp\ews\API\Message\ResponseMessageType\MessageXmlAType $value)
     {
-        $this->messageXml = $this->castValueIfNeeded("messageXml", $value);
+        $this->messageXml = $value;
         return $this;
     }
 }

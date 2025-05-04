@@ -32,7 +32,7 @@ class GetRoomsType extends BaseRequestType
      */
     public function setRoomList(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->roomList = $this->castValueIfNeeded("roomList", $value);
+        $this->roomList = $value;
         return $this;
     }
 }

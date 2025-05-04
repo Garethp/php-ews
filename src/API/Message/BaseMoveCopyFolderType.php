@@ -37,7 +37,7 @@ class BaseMoveCopyFolderType extends BaseRequestType
      */
     public function setToFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->toFolderId = $this->castValueIfNeeded("toFolderId", $value);
+        $this->toFolderId = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class BaseMoveCopyFolderType extends BaseRequestType
      */
     public function setFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $value)
     {
-        $this->folderIds = $this->castValueIfNeeded("folderIds", $value);
+        $this->folderIds = $value;
         return $this;
     }
 }

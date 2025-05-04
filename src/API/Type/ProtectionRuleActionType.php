@@ -39,7 +39,7 @@ class ProtectionRuleActionType extends Type
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -50,10 +50,8 @@ class ProtectionRuleActionType extends Type
      */
     public function addArgument(ProtectionRuleArgumentType $value)
     {
-        $value = $this->castValueIfNeeded("argument", $value);
-
         if ($this->argument === null) {
-            $this->argument = array();
+                        $this->argument = array();
         }
 
         if (!is_array($this->argument)) {
@@ -83,7 +81,7 @@ class ProtectionRuleActionType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->argument = $this->castValueIfNeeded("argument", $value);
+        $this->argument = $value;
         return $this;
     }
 }

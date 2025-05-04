@@ -42,7 +42,7 @@ class ServiceConfigurationResponseMessageType extends ResponseMessageType
      */
     public function setMailTipsConfiguration(\garethp\ews\API\Type\MailTipsServiceConfigurationType $value)
     {
-        $this->mailTipsConfiguration = $this->castValueIfNeeded("mailTipsConfiguration", $value);
+        $this->mailTipsConfiguration = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class ServiceConfigurationResponseMessageType extends ResponseMessageType
      */
     public function setUnifiedMessagingConfiguration(\garethp\ews\API\Type\UnifiedMessageServiceConfigurationType $value)
     {
-        $this->unifiedMessagingConfiguration = $this->castValueIfNeeded("unifiedMessagingConfiguration", $value);
+        $this->unifiedMessagingConfiguration = $value;
         return $this;
     }
 
@@ -82,7 +82,7 @@ class ServiceConfigurationResponseMessageType extends ResponseMessageType
      */
     public function setProtectionRulesConfiguration(\garethp\ews\API\Type\ProtectionRulesServiceConfigurationType $value)
     {
-        $this->protectionRulesConfiguration = $this->castValueIfNeeded("protectionRulesConfiguration", $value);
+        $this->protectionRulesConfiguration = $value;
         return $this;
     }
 }

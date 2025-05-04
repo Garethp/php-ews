@@ -37,7 +37,7 @@ class PlayOnPhoneType extends BaseRequestType
      */
     public function setItemId(\garethp\ews\API\Type\ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class PlayOnPhoneType extends BaseRequestType
      */
     public function setDialString($value)
     {
-        $this->dialString = $this->castValueIfNeeded("dialString", $value);
+        $this->dialString = $value;
         return $this;
     }
 }

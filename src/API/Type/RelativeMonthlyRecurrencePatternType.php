@@ -37,7 +37,7 @@ class RelativeMonthlyRecurrencePatternType extends IntervalRecurrencePatternBase
      */
     public function setDaysOfWeek($value)
     {
-        $this->daysOfWeek = $this->castValueIfNeeded("daysOfWeek", $value);
+        $this->daysOfWeek = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class RelativeMonthlyRecurrencePatternType extends IntervalRecurrencePatternBase
      */
     public function setDayOfWeekIndex($value)
     {
-        $this->dayOfWeekIndex = $this->castValueIfNeeded("dayOfWeekIndex", $value);
+        $this->dayOfWeekIndex = $value;
         return $this;
     }
 }

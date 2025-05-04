@@ -35,10 +35,8 @@ class NonEmptyArrayOfAlternateIdsType extends Type
      */
     public function addAlternateId(AlternateIdType $value)
     {
-        $value = $this->castValueIfNeeded("alternateId", $value);
-
         if ($this->alternateId === null) {
-            $this->alternateId = array();
+                        $this->alternateId = array();
         }
 
         if (!is_array($this->alternateId)) {
@@ -68,7 +66,7 @@ class NonEmptyArrayOfAlternateIdsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->alternateId = $this->castValueIfNeeded("alternateId", $value);
+        $this->alternateId = $value;
         return $this;
     }
 
@@ -79,10 +77,8 @@ class NonEmptyArrayOfAlternateIdsType extends Type
      */
     public function addAlternatePublicFolderId(AlternatePublicFolderIdType $value)
     {
-        $value = $this->castValueIfNeeded("alternatePublicFolderId", $value);
-
         if ($this->alternatePublicFolderId === null) {
-            $this->alternatePublicFolderId = array();
+                        $this->alternatePublicFolderId = array();
         }
 
         if (!is_array($this->alternatePublicFolderId)) {
@@ -112,7 +108,7 @@ class NonEmptyArrayOfAlternateIdsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->alternatePublicFolderId = $this->castValueIfNeeded("alternatePublicFolderId", $value);
+        $this->alternatePublicFolderId = $value;
         return $this;
     }
 
@@ -123,10 +119,8 @@ class NonEmptyArrayOfAlternateIdsType extends Type
      */
     public function addAlternatePublicFolderItemId(AlternatePublicFolderItemIdType $value)
     {
-        $value = $this->castValueIfNeeded("alternatePublicFolderItemId", $value);
-
         if ($this->alternatePublicFolderItemId === null) {
-            $this->alternatePublicFolderItemId = array();
+                        $this->alternatePublicFolderItemId = array();
         }
 
         if (!is_array($this->alternatePublicFolderItemId)) {
@@ -156,7 +150,7 @@ class NonEmptyArrayOfAlternateIdsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->alternatePublicFolderItemId = $this->castValueIfNeeded("alternatePublicFolderItemId", $value);
+        $this->alternatePublicFolderItemId = $value;
         return $this;
     }
 }

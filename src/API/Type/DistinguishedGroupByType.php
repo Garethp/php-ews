@@ -33,7 +33,7 @@ class DistinguishedGroupByType extends BaseGroupByType
      */
     public function setStandardGroupBy($value)
     {
-        $this->standardGroupBy = $this->castValueIfNeeded("standardGroupBy", $value);
+        $this->standardGroupBy = $value;
         return $this;
     }
 }

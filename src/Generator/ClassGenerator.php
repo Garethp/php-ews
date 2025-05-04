@@ -18,7 +18,6 @@ use Doctrine\Common\Inflector\Inflector;
  *
  * * Set the class to extend from either the Type/Message that already exists or a base class that we've created.
  * * For each property in the xsd schema, we create a property in the class.
- * * For each property in the xsd schema that is a Date, DateTime or Time method we add the property to a _typeMap
  * * For each property in the xsd schema, we create a getter and setter method.
  * * For each boolean property in the xsd schema, we create an is method.
  * * For each array property in the xsd schema, we create an adder method.
@@ -155,7 +154,7 @@ class ClassGenerator
      * don't have features such as Typed Arrays in PHP.
      *
      * We also check if the property is a type that we need to do some additional casting on, which is mostly DateTimes,
-     * Dates and Times. For these, we add them to a _typeMap property so that we can cast them when we need to.
+     * Dates and Times.
      *
      * @param Generator\ClassGenerator $class
      * @param PHPProperty $prop
@@ -181,22 +180,6 @@ class ClassGenerator
         $tag = new Generator\DocBlock\Tag();
         $tag->setName("@var {$this->getPropertyType($prop)}");
         $docBlock->setTag($tag);
-
-        $type = $prop->getType();
-        if ($type->type && $this->isTypeMapped($type->type->getName())) {
-            if (!$class->hasProperty('_typeMap')) {
-                $generatedProp = new PropertyGenerator('_typeMap');
-                $generatedProp->setDefaultValue([]);
-                $generatedProp->setVisibility(PropertyGenerator::VISIBILITY_PROTECTED);
-
-                $class->addPropertyFromGenerator($generatedProp);
-            }
-
-            $property = $class->getProperty('_typeMap');
-            $defaultValue = $property->getDefaultValue()->getValue();
-            $defaultValue[$prop->getName()] = $type->type->getName();
-            $property->setDefaultValue($defaultValue);
-        }
     }
 
     /**
@@ -261,8 +244,6 @@ class ClassGenerator
         $generatedMethod = (new Generator\MethodGenerator($name))
             ->setParameters([['name' => 'value', 'type' => $type]])
             ->setBody("
-            \$value = \$this->castValueIfNeeded(\"{$prop->getName()}\", \$value);
-
             if (\$this->{$prop->getName()} === null) {
                 \$this->{$prop->getName()} = array();
             }
@@ -419,8 +400,8 @@ return \$this->{$prop->getName()};");
             $type = "int";
         }
 
-        if ($prop->getType()->type && $this->isTypeMapped($prop->getType()->type->getName())) {
-            $type .= "|string";
+        if ($type === "\\DateTime") {
+            $type = "\\DateTime|string";
         }
 
         if ($generator->hasMethod($name)) {
@@ -435,7 +416,7 @@ return \$this->{$prop->getName()};");
 
         $newMethod = (new Generator\MethodGenerator($name))
             ->setParameters([['name' => 'value', 'type' => $type]])
-            ->setBody("\$this->{$prop->getName()} = \$this->castValueIfNeeded(\"{$prop->getName()}\", \$value);\nreturn \$this;")
+            ->setBody("\$this->{$prop->getName()} = \$value;\nreturn \$this;")
             ->setDocBlock(
                 (new DocBlockGenerator())
                     ->setTags([
@@ -447,6 +428,10 @@ return \$this->{$prop->getName()};");
 
         if (str_starts_with($type, "array|")) {
             $newMethod->setBody("if (!is_array(\$value)) { \n \$value = [\$value];\n } \n" . $newMethod->getBody());
+        }
+
+        if ($type === "\\DateTime|string") {
+            $newMethod->setBody("if (is_string(\$value)) { \n \$value = new \\DateTime(\$value);\n } \n" . $newMethod->getBody());
         }
 
         $generator->addMethodFromGenerator($newMethod);
@@ -542,24 +527,6 @@ return \$this->{$prop->getName()};");
                 'mixed',
                 'callable'
             ]);
-    }
-
-    /**
-     * A simple check to see if the type needs to be cast when transforming from/to the XML. This is mostly for
-     * DateTimes, Dates and Times.
-     *
-     * @param $class
-     * @return bool
-     */
-    protected function isTypeMapped($class): bool
-    {
-        $classMap = [
-            'dateTime',
-            'time',
-            'date'
-        ];
-
-        return in_array($class, $classMap);
     }
 
     /**

@@ -42,7 +42,7 @@ class SyncFolderHierarchyType extends BaseRequestType
      */
     public function setFolderShape(\garethp\ews\API\Type\FolderResponseShapeType $value)
     {
-        $this->folderShape = $this->castValueIfNeeded("folderShape", $value);
+        $this->folderShape = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class SyncFolderHierarchyType extends BaseRequestType
      */
     public function setSyncFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->syncFolderId = $this->castValueIfNeeded("syncFolderId", $value);
+        $this->syncFolderId = $value;
         return $this;
     }
 
@@ -82,7 +82,7 @@ class SyncFolderHierarchyType extends BaseRequestType
      */
     public function setSyncState($value)
     {
-        $this->syncState = $this->castValueIfNeeded("syncState", $value);
+        $this->syncState = $value;
         return $this;
     }
 }

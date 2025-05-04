@@ -39,7 +39,7 @@ class MailboxStatisticsSearchResultType extends Type
      */
     public function setUserMailbox(UserMailboxType $value)
     {
-        $this->userMailbox = $this->castValueIfNeeded("userMailbox", $value);
+        $this->userMailbox = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class MailboxStatisticsSearchResultType extends Type
      */
     public function setKeywordStatisticsSearchResult(KeywordStatisticsSearchResultType $value)
     {
-        $this->keywordStatisticsSearchResult = $this->castValueIfNeeded("keywordStatisticsSearchResult", $value);
+        $this->keywordStatisticsSearchResult = $value;
         return $this;
     }
 }

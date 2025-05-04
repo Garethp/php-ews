@@ -50,7 +50,7 @@ class RuleValidationErrorType extends Type
      */
     public function setFieldURI($value)
     {
-        $this->fieldURI = $this->castValueIfNeeded("fieldURI", $value);
+        $this->fieldURI = $value;
         return $this;
     }
 
@@ -70,7 +70,7 @@ class RuleValidationErrorType extends Type
      */
     public function setErrorCode($value)
     {
-        $this->errorCode = $this->castValueIfNeeded("errorCode", $value);
+        $this->errorCode = $value;
         return $this;
     }
 
@@ -90,7 +90,7 @@ class RuleValidationErrorType extends Type
      */
     public function setErrorMessage($value)
     {
-        $this->errorMessage = $this->castValueIfNeeded("errorMessage", $value);
+        $this->errorMessage = $value;
         return $this;
     }
 
@@ -110,7 +110,7 @@ class RuleValidationErrorType extends Type
      */
     public function setFieldValue($value)
     {
-        $this->fieldValue = $this->castValueIfNeeded("fieldValue", $value);
+        $this->fieldValue = $value;
         return $this;
     }
 }

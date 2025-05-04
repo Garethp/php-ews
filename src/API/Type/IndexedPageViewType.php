@@ -46,7 +46,7 @@ class IndexedPageViewType extends BasePagingType
      */
     public function setOffset($value)
     {
-        $this->offset = $this->castValueIfNeeded("offset", $value);
+        $this->offset = $value;
         return $this;
     }
 
@@ -66,7 +66,7 @@ class IndexedPageViewType extends BasePagingType
      */
     public function setBasePoint($value)
     {
-        $this->basePoint = $this->castValueIfNeeded("basePoint", $value);
+        $this->basePoint = $value;
         return $this;
     }
 }

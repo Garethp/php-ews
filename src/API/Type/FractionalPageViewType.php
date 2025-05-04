@@ -37,7 +37,7 @@ class FractionalPageViewType extends BasePagingType
      */
     public function setNumerator($value)
     {
-        $this->numerator = $this->castValueIfNeeded("numerator", $value);
+        $this->numerator = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class FractionalPageViewType extends BasePagingType
      */
     public function setDenominator($value)
     {
-        $this->denominator = $this->castValueIfNeeded("denominator", $value);
+        $this->denominator = $value;
         return $this;
     }
 }

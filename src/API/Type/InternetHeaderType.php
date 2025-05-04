@@ -34,7 +34,7 @@ class InternetHeaderType extends Type
      */
     public function setHeaderName($value)
     {
-        $this->headerName = $this->castValueIfNeeded("headerName", $value);
+        $this->headerName = $value;
         return $this;
     }
 }

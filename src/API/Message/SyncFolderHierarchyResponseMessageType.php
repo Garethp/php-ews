@@ -42,7 +42,7 @@ class SyncFolderHierarchyResponseMessageType extends ResponseMessageType
      */
     public function setSyncState($value)
     {
-        $this->syncState = $this->castValueIfNeeded("syncState", $value);
+        $this->syncState = $value;
         return $this;
     }
 
@@ -71,7 +71,7 @@ class SyncFolderHierarchyResponseMessageType extends ResponseMessageType
      */
     public function setIncludesLastFolderInRange($value)
     {
-        $this->includesLastFolderInRange = $this->castValueIfNeeded("includesLastFolderInRange", $value);
+        $this->includesLastFolderInRange = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class SyncFolderHierarchyResponseMessageType extends ResponseMessageType
      */
     public function setChanges(\garethp\ews\API\Type\SyncFolderHierarchyChangesType $value)
     {
-        $this->changes = $this->castValueIfNeeded("changes", $value);
+        $this->changes = $value;
         return $this;
     }
 }

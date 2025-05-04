@@ -42,7 +42,7 @@ class EmptyFolderType extends BaseRequestType
      */
     public function setDeleteType($value)
     {
-        $this->deleteType = $this->castValueIfNeeded("deleteType", $value);
+        $this->deleteType = $value;
         return $this;
     }
 
@@ -71,7 +71,7 @@ class EmptyFolderType extends BaseRequestType
      */
     public function setDeleteSubFolders($value)
     {
-        $this->deleteSubFolders = $this->castValueIfNeeded("deleteSubFolders", $value);
+        $this->deleteSubFolders = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class EmptyFolderType extends BaseRequestType
      */
     public function setFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $value)
     {
-        $this->folderIds = $this->castValueIfNeeded("folderIds", $value);
+        $this->folderIds = $value;
         return $this;
     }
 }

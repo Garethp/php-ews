@@ -49,7 +49,7 @@ class SerializedSecurityContextType extends Type
      */
     public function setUserSid($value)
     {
-        $this->userSid = $this->castValueIfNeeded("userSid", $value);
+        $this->userSid = $value;
         return $this;
     }
 
@@ -60,10 +60,8 @@ class SerializedSecurityContextType extends Type
      */
     public function addGroupSids(SidAndAttributesType $value)
     {
-        $value = $this->castValueIfNeeded("groupSids", $value);
-
         if ($this->groupSids === null) {
-            $this->groupSids = array();
+                        $this->groupSids = array();
         }
 
         if (!is_array($this->groupSids)) {
@@ -93,7 +91,7 @@ class SerializedSecurityContextType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->groupSids = $this->castValueIfNeeded("groupSids", $value);
+        $this->groupSids = $value;
         return $this;
     }
 
@@ -104,10 +102,8 @@ class SerializedSecurityContextType extends Type
      */
     public function addRestrictedGroupSids(SidAndAttributesType $value)
     {
-        $value = $this->castValueIfNeeded("restrictedGroupSids", $value);
-
         if ($this->restrictedGroupSids === null) {
-            $this->restrictedGroupSids = array();
+                        $this->restrictedGroupSids = array();
         }
 
         if (!is_array($this->restrictedGroupSids)) {
@@ -137,7 +133,7 @@ class SerializedSecurityContextType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->restrictedGroupSids = $this->castValueIfNeeded("restrictedGroupSids", $value);
+        $this->restrictedGroupSids = $value;
         return $this;
     }
 
@@ -157,7 +153,7 @@ class SerializedSecurityContextType extends Type
      */
     public function setPrimarySmtpAddress($value)
     {
-        $this->primarySmtpAddress = $this->castValueIfNeeded("primarySmtpAddress", $value);
+        $this->primarySmtpAddress = $value;
         return $this;
     }
 }

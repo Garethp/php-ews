@@ -35,10 +35,8 @@ class WorkingPeriodType extends Type
      */
     public function addDayOfWeek($value)
     {
-        $value = $this->castValueIfNeeded("dayOfWeek", $value);
-
         if ($this->dayOfWeek === null) {
-            $this->dayOfWeek = array();
+                        $this->dayOfWeek = array();
         }
 
         if (!is_array($this->dayOfWeek)) {
@@ -68,7 +66,7 @@ class WorkingPeriodType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->dayOfWeek = $this->castValueIfNeeded("dayOfWeek", $value);
+        $this->dayOfWeek = $value;
         return $this;
     }
 
@@ -88,7 +86,7 @@ class WorkingPeriodType extends Type
      */
     public function setStartTimeInMinutes($value)
     {
-        $this->startTimeInMinutes = $this->castValueIfNeeded("startTimeInMinutes", $value);
+        $this->startTimeInMinutes = $value;
         return $this;
     }
 
@@ -108,7 +106,7 @@ class WorkingPeriodType extends Type
      */
     public function setEndTimeInMinutes($value)
     {
-        $this->endTimeInMinutes = $this->castValueIfNeeded("endTimeInMinutes", $value);
+        $this->endTimeInMinutes = $value;
         return $this;
     }
 }

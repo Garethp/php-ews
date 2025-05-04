@@ -54,7 +54,7 @@ class ProtectionRuleType extends Type
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -83,7 +83,7 @@ class ProtectionRuleType extends Type
      */
     public function setUserOverridable($value)
     {
-        $this->userOverridable = $this->castValueIfNeeded("userOverridable", $value);
+        $this->userOverridable = $value;
         return $this;
     }
 
@@ -103,7 +103,7 @@ class ProtectionRuleType extends Type
      */
     public function setPriority($value)
     {
-        $this->priority = $this->castValueIfNeeded("priority", $value);
+        $this->priority = $value;
         return $this;
     }
 
@@ -123,7 +123,7 @@ class ProtectionRuleType extends Type
      */
     public function setCondition(ProtectionRuleConditionType $value)
     {
-        $this->condition = $this->castValueIfNeeded("condition", $value);
+        $this->condition = $value;
         return $this;
     }
 
@@ -143,7 +143,7 @@ class ProtectionRuleType extends Type
      */
     public function setAction(ProtectionRuleActionType $value)
     {
-        $this->action = $this->castValueIfNeeded("action", $value);
+        $this->action = $value;
         return $this;
     }
 }

@@ -37,7 +37,7 @@ class GetUserConfigurationType extends BaseRequestType
      */
     public function setUserConfigurationName(\garethp\ews\API\Type\UserConfigurationNameType $value)
     {
-        $this->userConfigurationName = $this->castValueIfNeeded("userConfigurationName", $value);
+        $this->userConfigurationName = $value;
         return $this;
     }
 
@@ -48,10 +48,8 @@ class GetUserConfigurationType extends BaseRequestType
      */
     public function addUserConfigurationProperties($value)
     {
-        $value = $this->castValueIfNeeded("userConfigurationProperties", $value);
-
         if ($this->userConfigurationProperties === null) {
-            $this->userConfigurationProperties = array();
+                        $this->userConfigurationProperties = array();
         }
 
         if (!is_array($this->userConfigurationProperties)) {
@@ -81,7 +79,7 @@ class GetUserConfigurationType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->userConfigurationProperties = $this->castValueIfNeeded("userConfigurationProperties", $value);
+        $this->userConfigurationProperties = $value;
         return $this;
     }
 }

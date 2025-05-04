@@ -42,7 +42,7 @@ class RelativeYearlyRecurrencePatternType extends RecurrencePatternBaseType
      */
     public function setDaysOfWeek($value)
     {
-        $this->daysOfWeek = $this->castValueIfNeeded("daysOfWeek", $value);
+        $this->daysOfWeek = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class RelativeYearlyRecurrencePatternType extends RecurrencePatternBaseType
      */
     public function setDayOfWeekIndex($value)
     {
-        $this->dayOfWeekIndex = $this->castValueIfNeeded("dayOfWeekIndex", $value);
+        $this->dayOfWeekIndex = $value;
         return $this;
     }
 
@@ -82,7 +82,7 @@ class RelativeYearlyRecurrencePatternType extends RecurrencePatternBaseType
      */
     public function setMonth($value)
     {
-        $this->month = $this->castValueIfNeeded("month", $value);
+        $this->month = $value;
         return $this;
     }
 }

@@ -44,7 +44,7 @@ class SearchParametersType extends Type
      */
     public function setTraversal($value)
     {
-        $this->traversal = $this->castValueIfNeeded("traversal", $value);
+        $this->traversal = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class SearchParametersType extends Type
      */
     public function setRestriction(RestrictionType $value)
     {
-        $this->restriction = $this->castValueIfNeeded("restriction", $value);
+        $this->restriction = $value;
         return $this;
     }
 
@@ -84,7 +84,7 @@ class SearchParametersType extends Type
      */
     public function setBaseFolderIds(NonEmptyArrayOfBaseFolderIdsType $value)
     {
-        $this->baseFolderIds = $this->castValueIfNeeded("baseFolderIds", $value);
+        $this->baseFolderIds = $value;
         return $this;
     }
 }

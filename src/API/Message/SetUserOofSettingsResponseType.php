@@ -34,7 +34,7 @@ class SetUserOofSettingsResponseType extends Message
      */
     public function setResponseMessage(ResponseMessageType $value)
     {
-        $this->responseMessage = $this->castValueIfNeeded("responseMessage", $value);
+        $this->responseMessage = $value;
         return $this;
     }
 }

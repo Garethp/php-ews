@@ -84,7 +84,7 @@ class MailTipsType extends Type
      */
     public function setRecipientAddress(EmailAddressType $value)
     {
-        $this->recipientAddress = $this->castValueIfNeeded("recipientAddress", $value);
+        $this->recipientAddress = $value;
         return $this;
     }
 
@@ -95,10 +95,8 @@ class MailTipsType extends Type
      */
     public function addPendingMailTips($value)
     {
-        $value = $this->castValueIfNeeded("pendingMailTips", $value);
-
         if ($this->pendingMailTips === null) {
-            $this->pendingMailTips = array();
+                        $this->pendingMailTips = array();
         }
 
         if (!is_array($this->pendingMailTips)) {
@@ -128,7 +126,7 @@ class MailTipsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->pendingMailTips = $this->castValueIfNeeded("pendingMailTips", $value);
+        $this->pendingMailTips = $value;
         return $this;
     }
 
@@ -148,7 +146,7 @@ class MailTipsType extends Type
      */
     public function setOutOfOffice(OutOfOfficeMailTipType $value)
     {
-        $this->outOfOffice = $this->castValueIfNeeded("outOfOffice", $value);
+        $this->outOfOffice = $value;
         return $this;
     }
 
@@ -177,7 +175,7 @@ class MailTipsType extends Type
      */
     public function setMailboxFull($value)
     {
-        $this->mailboxFull = $this->castValueIfNeeded("mailboxFull", $value);
+        $this->mailboxFull = $value;
         return $this;
     }
 
@@ -197,7 +195,7 @@ class MailTipsType extends Type
      */
     public function setCustomMailTip($value)
     {
-        $this->customMailTip = $this->castValueIfNeeded("customMailTip", $value);
+        $this->customMailTip = $value;
         return $this;
     }
 
@@ -217,7 +215,7 @@ class MailTipsType extends Type
      */
     public function setTotalMemberCount($value)
     {
-        $this->totalMemberCount = $this->castValueIfNeeded("totalMemberCount", $value);
+        $this->totalMemberCount = $value;
         return $this;
     }
 
@@ -237,7 +235,7 @@ class MailTipsType extends Type
      */
     public function setExternalMemberCount($value)
     {
-        $this->externalMemberCount = $this->castValueIfNeeded("externalMemberCount", $value);
+        $this->externalMemberCount = $value;
         return $this;
     }
 
@@ -257,7 +255,7 @@ class MailTipsType extends Type
      */
     public function setMaxMessageSize($value)
     {
-        $this->maxMessageSize = $this->castValueIfNeeded("maxMessageSize", $value);
+        $this->maxMessageSize = $value;
         return $this;
     }
 
@@ -286,7 +284,7 @@ class MailTipsType extends Type
      */
     public function setDeliveryRestricted($value)
     {
-        $this->deliveryRestricted = $this->castValueIfNeeded("deliveryRestricted", $value);
+        $this->deliveryRestricted = $value;
         return $this;
     }
 
@@ -315,7 +313,7 @@ class MailTipsType extends Type
      */
     public function setIsModerated($value)
     {
-        $this->isModerated = $this->castValueIfNeeded("isModerated", $value);
+        $this->isModerated = $value;
         return $this;
     }
 
@@ -344,7 +342,7 @@ class MailTipsType extends Type
      */
     public function setInvalidRecipient($value)
     {
-        $this->invalidRecipient = $this->castValueIfNeeded("invalidRecipient", $value);
+        $this->invalidRecipient = $value;
         return $this;
     }
 }

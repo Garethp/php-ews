@@ -33,7 +33,7 @@ class ConvertIdResponseMessageType extends ResponseMessageType
      */
     public function setAlternateId(\garethp\ews\API\Type\AlternateIdBaseType $value)
     {
-        $this->alternateId = $this->castValueIfNeeded("alternateId", $value);
+        $this->alternateId = $value;
         return $this;
     }
 }

@@ -88,7 +88,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setCanDelete($value)
     {
-        $this->canDelete = $this->castValueIfNeeded("canDelete", $value);
+        $this->canDelete = $value;
         return $this;
     }
 
@@ -117,7 +117,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setCanRenameOrMove($value)
     {
-        $this->canRenameOrMove = $this->castValueIfNeeded("canRenameOrMove", $value);
+        $this->canRenameOrMove = $value;
         return $this;
     }
 
@@ -146,7 +146,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setMustDisplayComment($value)
     {
-        $this->mustDisplayComment = $this->castValueIfNeeded("mustDisplayComment", $value);
+        $this->mustDisplayComment = $value;
         return $this;
     }
 
@@ -175,7 +175,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setHasQuota($value)
     {
-        $this->hasQuota = $this->castValueIfNeeded("hasQuota", $value);
+        $this->hasQuota = $value;
         return $this;
     }
 
@@ -204,7 +204,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setIsManagedFoldersRoot($value)
     {
-        $this->isManagedFoldersRoot = $this->castValueIfNeeded("isManagedFoldersRoot", $value);
+        $this->isManagedFoldersRoot = $value;
         return $this;
     }
 
@@ -224,7 +224,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setManagedFolderId($value)
     {
-        $this->managedFolderId = $this->castValueIfNeeded("managedFolderId", $value);
+        $this->managedFolderId = $value;
         return $this;
     }
 
@@ -244,7 +244,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setComment($value)
     {
-        $this->comment = $this->castValueIfNeeded("comment", $value);
+        $this->comment = $value;
         return $this;
     }
 
@@ -264,7 +264,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setStorageQuota($value)
     {
-        $this->storageQuota = $this->castValueIfNeeded("storageQuota", $value);
+        $this->storageQuota = $value;
         return $this;
     }
 
@@ -284,7 +284,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setFolderSize($value)
     {
-        $this->folderSize = $this->castValueIfNeeded("folderSize", $value);
+        $this->folderSize = $value;
         return $this;
     }
 
@@ -304,7 +304,7 @@ class ManagedFolderInformationType extends Type
      */
     public function setHomePage($value)
     {
-        $this->homePage = $this->castValueIfNeeded("homePage", $value);
+        $this->homePage = $value;
         return $this;
     }
 }

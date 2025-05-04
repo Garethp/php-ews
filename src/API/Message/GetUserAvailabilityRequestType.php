@@ -47,7 +47,7 @@ class GetUserAvailabilityRequestType extends BaseRequestType
      */
     public function setTimeZone(\garethp\ews\API\Type\TimeZone $value)
     {
-        $this->timeZone = $this->castValueIfNeeded("timeZone", $value);
+        $this->timeZone = $value;
         return $this;
     }
 
@@ -58,10 +58,8 @@ class GetUserAvailabilityRequestType extends BaseRequestType
      */
     public function addMailboxDataArray(\garethp\ews\API\Type\MailboxDataType $value)
     {
-        $value = $this->castValueIfNeeded("mailboxDataArray", $value);
-
         if ($this->mailboxDataArray === null) {
-            $this->mailboxDataArray = array();
+                        $this->mailboxDataArray = array();
         }
 
         if (!is_array($this->mailboxDataArray)) {
@@ -92,7 +90,7 @@ class GetUserAvailabilityRequestType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->mailboxDataArray = $this->castValueIfNeeded("mailboxDataArray", $value);
+        $this->mailboxDataArray = $value;
         return $this;
     }
 
@@ -112,7 +110,7 @@ class GetUserAvailabilityRequestType extends BaseRequestType
      */
     public function setFreeBusyViewOptions(\garethp\ews\API\Type\FreeBusyViewOptions $value)
     {
-        $this->freeBusyViewOptions = $this->castValueIfNeeded("freeBusyViewOptions", $value);
+        $this->freeBusyViewOptions = $value;
         return $this;
     }
 
@@ -132,7 +130,7 @@ class GetUserAvailabilityRequestType extends BaseRequestType
      */
     public function setSuggestionsViewOptions(\garethp\ews\API\Type\SuggestionsViewOptions $value)
     {
-        $this->suggestionsViewOptions = $this->castValueIfNeeded("suggestionsViewOptions", $value);
+        $this->suggestionsViewOptions = $value;
         return $this;
     }
 }

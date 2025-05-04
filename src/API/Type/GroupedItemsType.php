@@ -76,7 +76,7 @@ class GroupedItemsType extends Type implements Countable, ArrayAccess, IteratorA
      */
     public function setGroupIndex($value)
     {
-        $this->groupIndex = $this->castValueIfNeeded("groupIndex", $value);
+        $this->groupIndex = $value;
         return $this;
     }
 
@@ -96,7 +96,7 @@ class GroupedItemsType extends Type implements Countable, ArrayAccess, IteratorA
      */
     public function setItems(ArrayOfRealItemsType $value)
     {
-        $this->items = $this->castValueIfNeeded("items", $value);
+        $this->items = $value;
         return $this;
     }
 }

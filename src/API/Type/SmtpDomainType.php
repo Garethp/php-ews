@@ -39,7 +39,7 @@ class SmtpDomainType extends Type
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -68,7 +68,7 @@ class SmtpDomainType extends Type
      */
     public function setIncludeSubdomains($value)
     {
-        $this->includeSubdomains = $this->castValueIfNeeded("includeSubdomains", $value);
+        $this->includeSubdomains = $value;
         return $this;
     }
 }

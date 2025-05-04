@@ -44,7 +44,7 @@ class FreeBusyViewOptionsType extends Type
      */
     public function setTimeWindow(DurationType $value)
     {
-        $this->timeWindow = $this->castValueIfNeeded("timeWindow", $value);
+        $this->timeWindow = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class FreeBusyViewOptionsType extends Type
      */
     public function setMergedFreeBusyIntervalInMinutes($value)
     {
-        $this->mergedFreeBusyIntervalInMinutes = $this->castValueIfNeeded("mergedFreeBusyIntervalInMinutes", $value);
+        $this->mergedFreeBusyIntervalInMinutes = $value;
         return $this;
     }
 
@@ -75,10 +75,8 @@ class FreeBusyViewOptionsType extends Type
      */
     public function addRequestedView($value)
     {
-        $value = $this->castValueIfNeeded("requestedView", $value);
-
         if ($this->requestedView === null) {
-            $this->requestedView = array();
+                        $this->requestedView = array();
         }
 
         if (!is_array($this->requestedView)) {
@@ -108,7 +106,7 @@ class FreeBusyViewOptionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->requestedView = $this->castValueIfNeeded("requestedView", $value);
+        $this->requestedView = $value;
         return $this;
     }
 }

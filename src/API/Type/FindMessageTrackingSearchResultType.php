@@ -38,10 +38,6 @@ class FindMessageTrackingSearchResultType extends Type
      */
     protected $submittedTime = null;
 
-    protected $_typeMap = array(
-        'submittedTime' => 'dateTime',
-    );
-
     /**
      * @var string
      */
@@ -78,7 +74,7 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function setSubject($value)
     {
-        $this->subject = $this->castValueIfNeeded("subject", $value);
+        $this->subject = $value;
         return $this;
     }
 
@@ -98,7 +94,7 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function setSender(EmailAddressType $value)
     {
-        $this->sender = $this->castValueIfNeeded("sender", $value);
+        $this->sender = $value;
         return $this;
     }
 
@@ -118,7 +114,7 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function setPurportedSender(EmailAddressType $value)
     {
-        $this->purportedSender = $this->castValueIfNeeded("purportedSender", $value);
+        $this->purportedSender = $value;
         return $this;
     }
 
@@ -129,10 +125,8 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function addRecipients(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("recipients", $value);
-
         if ($this->recipients === null) {
-            $this->recipients = array();
+                        $this->recipients = array();
         }
 
         if (!is_array($this->recipients)) {
@@ -162,7 +156,7 @@ class FindMessageTrackingSearchResultType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recipients = $this->castValueIfNeeded("recipients", $value);
+        $this->recipients = $value;
         return $this;
     }
 
@@ -182,7 +176,10 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function setSubmittedTime(\DateTime|string $value)
     {
-        $this->submittedTime = $this->castValueIfNeeded("submittedTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->submittedTime = $value;
         return $this;
     }
 
@@ -202,7 +199,7 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function setMessageTrackingReportId($value)
     {
-        $this->messageTrackingReportId = $this->castValueIfNeeded("messageTrackingReportId", $value);
+        $this->messageTrackingReportId = $value;
         return $this;
     }
 
@@ -222,7 +219,7 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function setPreviousHopServer($value)
     {
-        $this->previousHopServer = $this->castValueIfNeeded("previousHopServer", $value);
+        $this->previousHopServer = $value;
         return $this;
     }
 
@@ -242,7 +239,7 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function setFirstHopServer($value)
     {
-        $this->firstHopServer = $this->castValueIfNeeded("firstHopServer", $value);
+        $this->firstHopServer = $value;
         return $this;
     }
 
@@ -253,10 +250,8 @@ class FindMessageTrackingSearchResultType extends Type
      */
     public function addProperties(TrackingPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("properties", $value);
-
         if ($this->properties === null) {
-            $this->properties = array();
+                        $this->properties = array();
         }
 
         if (!is_array($this->properties)) {
@@ -286,7 +281,7 @@ class FindMessageTrackingSearchResultType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->properties = $this->castValueIfNeeded("properties", $value);
+        $this->properties = $value;
         return $this;
     }
 }

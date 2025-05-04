@@ -46,7 +46,7 @@ class GetInboxRulesResponseType extends ResponseMessageType
      */
     public function setOutlookRuleBlobExists($value)
     {
-        $this->outlookRuleBlobExists = $this->castValueIfNeeded("outlookRuleBlobExists", $value);
+        $this->outlookRuleBlobExists = $value;
         return $this;
     }
 
@@ -57,10 +57,8 @@ class GetInboxRulesResponseType extends ResponseMessageType
      */
     public function addInboxRules(\garethp\ews\API\Type\RuleType $value)
     {
-        $value = $this->castValueIfNeeded("inboxRules", $value);
-
         if ($this->inboxRules === null) {
-            $this->inboxRules = array();
+                        $this->inboxRules = array();
         }
 
         if (!is_array($this->inboxRules)) {
@@ -90,7 +88,7 @@ class GetInboxRulesResponseType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->inboxRules = $this->castValueIfNeeded("inboxRules", $value);
+        $this->inboxRules = $value;
         return $this;
     }
 }

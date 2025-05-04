@@ -39,7 +39,7 @@ class ResolutionType extends Type
      */
     public function setMailbox(EmailAddressType $value)
     {
-        $this->mailbox = $this->castValueIfNeeded("mailbox", $value);
+        $this->mailbox = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class ResolutionType extends Type
      */
     public function setContact(ContactItemType $value)
     {
-        $this->contact = $this->castValueIfNeeded("contact", $value);
+        $this->contact = $value;
         return $this;
     }
 }

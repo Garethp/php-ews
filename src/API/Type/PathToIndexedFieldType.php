@@ -37,7 +37,7 @@ class PathToIndexedFieldType extends BasePathToElementType
      */
     public function setFieldURI($value)
     {
-        $this->fieldURI = $this->castValueIfNeeded("fieldURI", $value);
+        $this->fieldURI = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class PathToIndexedFieldType extends BasePathToElementType
      */
     public function setFieldIndex($value)
     {
-        $this->fieldIndex = $this->castValueIfNeeded("fieldIndex", $value);
+        $this->fieldIndex = $value;
         return $this;
     }
 }

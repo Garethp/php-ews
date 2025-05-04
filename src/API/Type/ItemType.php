@@ -58,14 +58,6 @@ class ItemType extends Type
      */
     protected $dateTimeReceived = null;
 
-    protected $_typeMap = array(
-        'dateTimeReceived' => 'dateTime',
-        'dateTimeSent' => 'dateTime',
-        'dateTimeCreated' => 'dateTime',
-        'reminderDueBy' => 'dateTime',
-        'lastModifiedTime' => 'dateTime',
-    );
-
     /**
      * @var integer
      */
@@ -232,7 +224,7 @@ class ItemType extends Type
      */
     public function setMimeContent(MimeContentType $value)
     {
-        $this->mimeContent = $this->castValueIfNeeded("mimeContent", $value);
+        $this->mimeContent = $value;
         return $this;
     }
 
@@ -252,7 +244,7 @@ class ItemType extends Type
      */
     public function setItemId(ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -272,7 +264,7 @@ class ItemType extends Type
      */
     public function setParentFolderId(FolderIdType $value)
     {
-        $this->parentFolderId = $this->castValueIfNeeded("parentFolderId", $value);
+        $this->parentFolderId = $value;
         return $this;
     }
 
@@ -292,7 +284,7 @@ class ItemType extends Type
      */
     public function setItemClass($value)
     {
-        $this->itemClass = $this->castValueIfNeeded("itemClass", $value);
+        $this->itemClass = $value;
         return $this;
     }
 
@@ -312,7 +304,7 @@ class ItemType extends Type
      */
     public function setSubject($value)
     {
-        $this->subject = $this->castValueIfNeeded("subject", $value);
+        $this->subject = $value;
         return $this;
     }
 
@@ -332,7 +324,7 @@ class ItemType extends Type
      */
     public function setSensitivity($value)
     {
-        $this->sensitivity = $this->castValueIfNeeded("sensitivity", $value);
+        $this->sensitivity = $value;
         return $this;
     }
 
@@ -352,7 +344,7 @@ class ItemType extends Type
      */
     public function setBody(BodyType $value)
     {
-        $this->body = $this->castValueIfNeeded("body", $value);
+        $this->body = $value;
         return $this;
     }
 
@@ -372,7 +364,7 @@ class ItemType extends Type
      */
     public function setAttachments(NonEmptyArrayOfAttachmentsType $value)
     {
-        $this->attachments = $this->castValueIfNeeded("attachments", $value);
+        $this->attachments = $value;
         return $this;
     }
 
@@ -392,7 +384,10 @@ class ItemType extends Type
      */
     public function setDateTimeReceived(\DateTime|string $value)
     {
-        $this->dateTimeReceived = $this->castValueIfNeeded("dateTimeReceived", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->dateTimeReceived = $value;
         return $this;
     }
 
@@ -412,7 +407,7 @@ class ItemType extends Type
      */
     public function setSize($value)
     {
-        $this->size = $this->castValueIfNeeded("size", $value);
+        $this->size = $value;
         return $this;
     }
 
@@ -423,10 +418,8 @@ class ItemType extends Type
      */
     public function addCategories($value)
     {
-        $value = $this->castValueIfNeeded("categories", $value);
-
         if ($this->categories === null) {
-            $this->categories = array();
+                        $this->categories = array();
         }
 
         if (!is_array($this->categories)) {
@@ -456,7 +449,7 @@ class ItemType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->categories = $this->castValueIfNeeded("categories", $value);
+        $this->categories = $value;
         return $this;
     }
 
@@ -476,7 +469,7 @@ class ItemType extends Type
      */
     public function setImportance($value)
     {
-        $this->importance = $this->castValueIfNeeded("importance", $value);
+        $this->importance = $value;
         return $this;
     }
 
@@ -496,7 +489,7 @@ class ItemType extends Type
      */
     public function setInReplyTo($value)
     {
-        $this->inReplyTo = $this->castValueIfNeeded("inReplyTo", $value);
+        $this->inReplyTo = $value;
         return $this;
     }
 
@@ -525,7 +518,7 @@ class ItemType extends Type
      */
     public function setIsSubmitted($value)
     {
-        $this->isSubmitted = $this->castValueIfNeeded("isSubmitted", $value);
+        $this->isSubmitted = $value;
         return $this;
     }
 
@@ -554,7 +547,7 @@ class ItemType extends Type
      */
     public function setIsDraft($value)
     {
-        $this->isDraft = $this->castValueIfNeeded("isDraft", $value);
+        $this->isDraft = $value;
         return $this;
     }
 
@@ -583,7 +576,7 @@ class ItemType extends Type
      */
     public function setIsFromMe($value)
     {
-        $this->isFromMe = $this->castValueIfNeeded("isFromMe", $value);
+        $this->isFromMe = $value;
         return $this;
     }
 
@@ -612,7 +605,7 @@ class ItemType extends Type
      */
     public function setIsResend($value)
     {
-        $this->isResend = $this->castValueIfNeeded("isResend", $value);
+        $this->isResend = $value;
         return $this;
     }
 
@@ -641,7 +634,7 @@ class ItemType extends Type
      */
     public function setIsUnmodified($value)
     {
-        $this->isUnmodified = $this->castValueIfNeeded("isUnmodified", $value);
+        $this->isUnmodified = $value;
         return $this;
     }
 
@@ -652,10 +645,8 @@ class ItemType extends Type
      */
     public function addInternetMessageHeaders(InternetHeaderType $value)
     {
-        $value = $this->castValueIfNeeded("internetMessageHeaders", $value);
-
         if ($this->internetMessageHeaders === null) {
-            $this->internetMessageHeaders = array();
+                        $this->internetMessageHeaders = array();
         }
 
         if (!is_array($this->internetMessageHeaders)) {
@@ -685,7 +676,7 @@ class ItemType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->internetMessageHeaders = $this->castValueIfNeeded("internetMessageHeaders", $value);
+        $this->internetMessageHeaders = $value;
         return $this;
     }
 
@@ -705,7 +696,10 @@ class ItemType extends Type
      */
     public function setDateTimeSent(\DateTime|string $value)
     {
-        $this->dateTimeSent = $this->castValueIfNeeded("dateTimeSent", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->dateTimeSent = $value;
         return $this;
     }
 
@@ -725,7 +719,10 @@ class ItemType extends Type
      */
     public function setDateTimeCreated(\DateTime|string $value)
     {
-        $this->dateTimeCreated = $this->castValueIfNeeded("dateTimeCreated", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->dateTimeCreated = $value;
         return $this;
     }
 
@@ -745,7 +742,7 @@ class ItemType extends Type
      */
     public function setResponseObjects(NonEmptyArrayOfResponseObjectsType $value)
     {
-        $this->responseObjects = $this->castValueIfNeeded("responseObjects", $value);
+        $this->responseObjects = $value;
         return $this;
     }
 
@@ -765,7 +762,10 @@ class ItemType extends Type
      */
     public function setReminderDueBy(\DateTime|string $value)
     {
-        $this->reminderDueBy = $this->castValueIfNeeded("reminderDueBy", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->reminderDueBy = $value;
         return $this;
     }
 
@@ -794,7 +794,7 @@ class ItemType extends Type
      */
     public function setReminderIsSet($value)
     {
-        $this->reminderIsSet = $this->castValueIfNeeded("reminderIsSet", $value);
+        $this->reminderIsSet = $value;
         return $this;
     }
 
@@ -814,7 +814,7 @@ class ItemType extends Type
      */
     public function setReminderMinutesBeforeStart($value)
     {
-        $this->reminderMinutesBeforeStart = $this->castValueIfNeeded("reminderMinutesBeforeStart", $value);
+        $this->reminderMinutesBeforeStart = $value;
         return $this;
     }
 
@@ -834,7 +834,7 @@ class ItemType extends Type
      */
     public function setDisplayCc($value)
     {
-        $this->displayCc = $this->castValueIfNeeded("displayCc", $value);
+        $this->displayCc = $value;
         return $this;
     }
 
@@ -854,7 +854,7 @@ class ItemType extends Type
      */
     public function setDisplayTo($value)
     {
-        $this->displayTo = $this->castValueIfNeeded("displayTo", $value);
+        $this->displayTo = $value;
         return $this;
     }
 
@@ -883,7 +883,7 @@ class ItemType extends Type
      */
     public function setHasAttachments($value)
     {
-        $this->hasAttachments = $this->castValueIfNeeded("hasAttachments", $value);
+        $this->hasAttachments = $value;
         return $this;
     }
 
@@ -894,10 +894,8 @@ class ItemType extends Type
      */
     public function addExtendedProperty(ExtendedPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("extendedProperty", $value);
-
         if ($this->extendedProperty === null) {
-            $this->extendedProperty = array();
+                        $this->extendedProperty = array();
         }
 
         if (!is_array($this->extendedProperty)) {
@@ -927,7 +925,7 @@ class ItemType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->extendedProperty = $this->castValueIfNeeded("extendedProperty", $value);
+        $this->extendedProperty = $value;
         return $this;
     }
 
@@ -947,7 +945,7 @@ class ItemType extends Type
      */
     public function setCulture($value)
     {
-        $this->culture = $this->castValueIfNeeded("culture", $value);
+        $this->culture = $value;
         return $this;
     }
 
@@ -967,7 +965,7 @@ class ItemType extends Type
      */
     public function setEffectiveRights(EffectiveRightsType $value)
     {
-        $this->effectiveRights = $this->castValueIfNeeded("effectiveRights", $value);
+        $this->effectiveRights = $value;
         return $this;
     }
 
@@ -987,7 +985,7 @@ class ItemType extends Type
      */
     public function setLastModifiedName($value)
     {
-        $this->lastModifiedName = $this->castValueIfNeeded("lastModifiedName", $value);
+        $this->lastModifiedName = $value;
         return $this;
     }
 
@@ -1007,7 +1005,10 @@ class ItemType extends Type
      */
     public function setLastModifiedTime(\DateTime|string $value)
     {
-        $this->lastModifiedTime = $this->castValueIfNeeded("lastModifiedTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->lastModifiedTime = $value;
         return $this;
     }
 
@@ -1036,7 +1037,7 @@ class ItemType extends Type
      */
     public function setIsAssociated($value)
     {
-        $this->isAssociated = $this->castValueIfNeeded("isAssociated", $value);
+        $this->isAssociated = $value;
         return $this;
     }
 
@@ -1056,7 +1057,7 @@ class ItemType extends Type
      */
     public function setWebClientReadFormQueryString($value)
     {
-        $this->webClientReadFormQueryString = $this->castValueIfNeeded("webClientReadFormQueryString", $value);
+        $this->webClientReadFormQueryString = $value;
         return $this;
     }
 
@@ -1076,7 +1077,7 @@ class ItemType extends Type
      */
     public function setWebClientEditFormQueryString($value)
     {
-        $this->webClientEditFormQueryString = $this->castValueIfNeeded("webClientEditFormQueryString", $value);
+        $this->webClientEditFormQueryString = $value;
         return $this;
     }
 
@@ -1096,7 +1097,7 @@ class ItemType extends Type
      */
     public function setConversationId(ItemIdType $value)
     {
-        $this->conversationId = $this->castValueIfNeeded("conversationId", $value);
+        $this->conversationId = $value;
         return $this;
     }
 
@@ -1116,7 +1117,7 @@ class ItemType extends Type
      */
     public function setUniqueBody(BodyType $value)
     {
-        $this->uniqueBody = $this->castValueIfNeeded("uniqueBody", $value);
+        $this->uniqueBody = $value;
         return $this;
     }
 
@@ -1136,7 +1137,7 @@ class ItemType extends Type
      */
     public function setStoreEntryId($value)
     {
-        $this->storeEntryId = $this->castValueIfNeeded("storeEntryId", $value);
+        $this->storeEntryId = $value;
         return $this;
     }
 }

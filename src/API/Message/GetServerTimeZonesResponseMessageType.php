@@ -23,10 +23,8 @@ class GetServerTimeZonesResponseMessageType extends ResponseMessageType
      */
     public function addTimeZoneDefinitions(\garethp\ews\API\Type\TimeZoneDefinitionType $value)
     {
-        $value = $this->castValueIfNeeded("timeZoneDefinitions", $value);
-
         if ($this->timeZoneDefinitions === null) {
-            $this->timeZoneDefinitions = array();
+                        $this->timeZoneDefinitions = array();
         }
 
         if (!is_array($this->timeZoneDefinitions)) {
@@ -57,7 +55,7 @@ class GetServerTimeZonesResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->timeZoneDefinitions = $this->castValueIfNeeded("timeZoneDefinitions", $value);
+        $this->timeZoneDefinitions = $value;
         return $this;
     }
 }

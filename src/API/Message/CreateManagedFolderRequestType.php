@@ -28,10 +28,8 @@ class CreateManagedFolderRequestType extends BaseRequestType
      */
     public function addFolderNames($value)
     {
-        $value = $this->castValueIfNeeded("folderNames", $value);
-
         if ($this->folderNames === null) {
-            $this->folderNames = array();
+                        $this->folderNames = array();
         }
 
         if (!is_array($this->folderNames)) {
@@ -61,7 +59,7 @@ class CreateManagedFolderRequestType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->folderNames = $this->castValueIfNeeded("folderNames", $value);
+        $this->folderNames = $value;
         return $this;
     }
 
@@ -81,7 +79,7 @@ class CreateManagedFolderRequestType extends BaseRequestType
      */
     public function setMailbox(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->mailbox = $this->castValueIfNeeded("mailbox", $value);
+        $this->mailbox = $value;
         return $this;
     }
 }

@@ -79,7 +79,7 @@ class CompleteNameType extends Type
      */
     public function setTitle($value)
     {
-        $this->title = $this->castValueIfNeeded("title", $value);
+        $this->title = $value;
         return $this;
     }
 
@@ -99,7 +99,7 @@ class CompleteNameType extends Type
      */
     public function setFirstName($value)
     {
-        $this->firstName = $this->castValueIfNeeded("firstName", $value);
+        $this->firstName = $value;
         return $this;
     }
 
@@ -119,7 +119,7 @@ class CompleteNameType extends Type
      */
     public function setMiddleName($value)
     {
-        $this->middleName = $this->castValueIfNeeded("middleName", $value);
+        $this->middleName = $value;
         return $this;
     }
 
@@ -139,7 +139,7 @@ class CompleteNameType extends Type
      */
     public function setLastName($value)
     {
-        $this->lastName = $this->castValueIfNeeded("lastName", $value);
+        $this->lastName = $value;
         return $this;
     }
 
@@ -159,7 +159,7 @@ class CompleteNameType extends Type
      */
     public function setSuffix($value)
     {
-        $this->suffix = $this->castValueIfNeeded("suffix", $value);
+        $this->suffix = $value;
         return $this;
     }
 
@@ -179,7 +179,7 @@ class CompleteNameType extends Type
      */
     public function setInitials($value)
     {
-        $this->initials = $this->castValueIfNeeded("initials", $value);
+        $this->initials = $value;
         return $this;
     }
 
@@ -199,7 +199,7 @@ class CompleteNameType extends Type
      */
     public function setFullName($value)
     {
-        $this->fullName = $this->castValueIfNeeded("fullName", $value);
+        $this->fullName = $value;
         return $this;
     }
 
@@ -219,7 +219,7 @@ class CompleteNameType extends Type
      */
     public function setNickname($value)
     {
-        $this->nickname = $this->castValueIfNeeded("nickname", $value);
+        $this->nickname = $value;
         return $this;
     }
 
@@ -239,7 +239,7 @@ class CompleteNameType extends Type
      */
     public function setYomiFirstName($value)
     {
-        $this->yomiFirstName = $this->castValueIfNeeded("yomiFirstName", $value);
+        $this->yomiFirstName = $value;
         return $this;
     }
 
@@ -259,7 +259,7 @@ class CompleteNameType extends Type
      */
     public function setYomiLastName($value)
     {
-        $this->yomiLastName = $this->castValueIfNeeded("yomiLastName", $value);
+        $this->yomiLastName = $value;
         return $this;
     }
 }

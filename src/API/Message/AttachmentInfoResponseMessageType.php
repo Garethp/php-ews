@@ -32,7 +32,7 @@ class AttachmentInfoResponseMessageType extends ResponseMessageType
      */
     public function setAttachments(\garethp\ews\API\Type\ArrayOfAttachmentsType $value)
     {
-        $this->attachments = $this->castValueIfNeeded("attachments", $value);
+        $this->attachments = $value;
         return $this;
     }
 }

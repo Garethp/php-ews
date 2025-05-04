@@ -53,7 +53,7 @@ class StreamingSubscriptionRequestType extends Type
      */
     public function setSubscribeToAllFolders($value)
     {
-        $this->subscribeToAllFolders = $this->castValueIfNeeded("subscribeToAllFolders", $value);
+        $this->subscribeToAllFolders = $value;
         return $this;
     }
 
@@ -73,7 +73,7 @@ class StreamingSubscriptionRequestType extends Type
      */
     public function setFolderIds(NonEmptyArrayOfBaseFolderIdsType $value)
     {
-        $this->folderIds = $this->castValueIfNeeded("folderIds", $value);
+        $this->folderIds = $value;
         return $this;
     }
 
@@ -84,10 +84,8 @@ class StreamingSubscriptionRequestType extends Type
      */
     public function addEventTypes($value)
     {
-        $value = $this->castValueIfNeeded("eventTypes", $value);
-
         if ($this->eventTypes === null) {
-            $this->eventTypes = array();
+                        $this->eventTypes = array();
         }
 
         if (!is_array($this->eventTypes)) {
@@ -117,7 +115,7 @@ class StreamingSubscriptionRequestType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->eventTypes = $this->castValueIfNeeded("eventTypes", $value);
+        $this->eventTypes = $value;
         return $this;
     }
 }

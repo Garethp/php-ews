@@ -78,10 +78,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addContains(Contains $value)
     {
-        $value = $this->castValueIfNeeded("contains", $value);
-
         if ($this->contains === null) {
-            $this->contains = array();
+                        $this->contains = array();
         }
 
         if (!is_array($this->contains)) {
@@ -111,7 +109,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->contains = $this->castValueIfNeeded("contains", $value);
+        $this->contains = $value;
         return $this;
     }
 
@@ -122,10 +120,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addExcludes(Excludes $value)
     {
-        $value = $this->castValueIfNeeded("excludes", $value);
-
         if ($this->excludes === null) {
-            $this->excludes = array();
+                        $this->excludes = array();
         }
 
         if (!is_array($this->excludes)) {
@@ -155,7 +151,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->excludes = $this->castValueIfNeeded("excludes", $value);
+        $this->excludes = $value;
         return $this;
     }
 
@@ -166,10 +162,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addExists(Exists $value)
     {
-        $value = $this->castValueIfNeeded("exists", $value);
-
         if ($this->exists === null) {
-            $this->exists = array();
+                        $this->exists = array();
         }
 
         if (!is_array($this->exists)) {
@@ -199,7 +193,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->exists = $this->castValueIfNeeded("exists", $value);
+        $this->exists = $value;
         return $this;
     }
 
@@ -210,10 +204,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addIsEqualTo(IsEqualTo $value)
     {
-        $value = $this->castValueIfNeeded("isEqualTo", $value);
-
         if ($this->isEqualTo === null) {
-            $this->isEqualTo = array();
+                        $this->isEqualTo = array();
         }
 
         if (!is_array($this->isEqualTo)) {
@@ -243,7 +235,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->isEqualTo = $this->castValueIfNeeded("isEqualTo", $value);
+        $this->isEqualTo = $value;
         return $this;
     }
 
@@ -254,10 +246,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addIsNotEqualTo(IsNotEqualTo $value)
     {
-        $value = $this->castValueIfNeeded("isNotEqualTo", $value);
-
         if ($this->isNotEqualTo === null) {
-            $this->isNotEqualTo = array();
+                        $this->isNotEqualTo = array();
         }
 
         if (!is_array($this->isNotEqualTo)) {
@@ -287,7 +277,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->isNotEqualTo = $this->castValueIfNeeded("isNotEqualTo", $value);
+        $this->isNotEqualTo = $value;
         return $this;
     }
 
@@ -298,10 +288,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addIsGreaterThan(IsGreaterThan $value)
     {
-        $value = $this->castValueIfNeeded("isGreaterThan", $value);
-
         if ($this->isGreaterThan === null) {
-            $this->isGreaterThan = array();
+                        $this->isGreaterThan = array();
         }
 
         if (!is_array($this->isGreaterThan)) {
@@ -331,7 +319,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->isGreaterThan = $this->castValueIfNeeded("isGreaterThan", $value);
+        $this->isGreaterThan = $value;
         return $this;
     }
 
@@ -342,10 +330,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addIsGreaterThanOrEqualTo(IsGreaterThanOrEqualTo $value)
     {
-        $value = $this->castValueIfNeeded("isGreaterThanOrEqualTo", $value);
-
         if ($this->isGreaterThanOrEqualTo === null) {
-            $this->isGreaterThanOrEqualTo = array();
+                        $this->isGreaterThanOrEqualTo = array();
         }
 
         if (!is_array($this->isGreaterThanOrEqualTo)) {
@@ -375,7 +361,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->isGreaterThanOrEqualTo = $this->castValueIfNeeded("isGreaterThanOrEqualTo", $value);
+        $this->isGreaterThanOrEqualTo = $value;
         return $this;
     }
 
@@ -386,10 +372,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addIsLessThan(IsLessThan $value)
     {
-        $value = $this->castValueIfNeeded("isLessThan", $value);
-
         if ($this->isLessThan === null) {
-            $this->isLessThan = array();
+                        $this->isLessThan = array();
         }
 
         if (!is_array($this->isLessThan)) {
@@ -419,7 +403,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->isLessThan = $this->castValueIfNeeded("isLessThan", $value);
+        $this->isLessThan = $value;
         return $this;
     }
 
@@ -430,10 +414,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addIsLessThanOrEqualTo(IsLessThanOrEqualTo $value)
     {
-        $value = $this->castValueIfNeeded("isLessThanOrEqualTo", $value);
-
         if ($this->isLessThanOrEqualTo === null) {
-            $this->isLessThanOrEqualTo = array();
+                        $this->isLessThanOrEqualTo = array();
         }
 
         if (!is_array($this->isLessThanOrEqualTo)) {
@@ -463,7 +445,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->isLessThanOrEqualTo = $this->castValueIfNeeded("isLessThanOrEqualTo", $value);
+        $this->isLessThanOrEqualTo = $value;
         return $this;
     }
 
@@ -474,10 +456,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addAnd(AndElement $value)
     {
-        $value = $this->castValueIfNeeded("and", $value);
-
         if ($this->and === null) {
-            $this->and = array();
+                        $this->and = array();
         }
 
         if (!is_array($this->and)) {
@@ -507,7 +487,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->and = $this->castValueIfNeeded("and", $value);
+        $this->and = $value;
         return $this;
     }
 
@@ -518,10 +498,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addNot(Not $value)
     {
-        $value = $this->castValueIfNeeded("not", $value);
-
         if ($this->not === null) {
-            $this->not = array();
+                        $this->not = array();
         }
 
         if (!is_array($this->not)) {
@@ -551,7 +529,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->not = $this->castValueIfNeeded("not", $value);
+        $this->not = $value;
         return $this;
     }
 
@@ -562,10 +540,8 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
      */
     public function addOr(OrElement $value)
     {
-        $value = $this->castValueIfNeeded("or", $value);
-
         if ($this->or === null) {
-            $this->or = array();
+                        $this->or = array();
         }
 
         if (!is_array($this->or)) {
@@ -595,7 +571,7 @@ class MultipleOperandBooleanExpressionType extends SearchExpressionType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->or = $this->castValueIfNeeded("or", $value);
+        $this->or = $value;
         return $this;
     }
 }

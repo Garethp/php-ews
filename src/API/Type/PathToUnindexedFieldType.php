@@ -32,7 +32,7 @@ class PathToUnindexedFieldType extends BasePathToElementType
      */
     public function setFieldURI($value)
     {
-        $this->fieldURI = $this->castValueIfNeeded("fieldURI", $value);
+        $this->fieldURI = $value;
         return $this;
     }
 }

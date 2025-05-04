@@ -85,10 +85,8 @@ class RuleActionsType extends Type
      */
     public function addAssignCategories($value)
     {
-        $value = $this->castValueIfNeeded("assignCategories", $value);
-
         if ($this->assignCategories === null) {
-            $this->assignCategories = array();
+                        $this->assignCategories = array();
         }
 
         if (!is_array($this->assignCategories)) {
@@ -118,7 +116,7 @@ class RuleActionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->assignCategories = $this->castValueIfNeeded("assignCategories", $value);
+        $this->assignCategories = $value;
         return $this;
     }
 
@@ -138,7 +136,7 @@ class RuleActionsType extends Type
      */
     public function setCopyToFolder(TargetFolderIdType $value)
     {
-        $this->copyToFolder = $this->castValueIfNeeded("copyToFolder", $value);
+        $this->copyToFolder = $value;
         return $this;
     }
 
@@ -167,7 +165,7 @@ class RuleActionsType extends Type
      */
     public function setDelete($value)
     {
-        $this->delete = $this->castValueIfNeeded("delete", $value);
+        $this->delete = $value;
         return $this;
     }
 
@@ -178,10 +176,8 @@ class RuleActionsType extends Type
      */
     public function addForwardAsAttachmentToRecipients(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("forwardAsAttachmentToRecipients", $value);
-
         if ($this->forwardAsAttachmentToRecipients === null) {
-            $this->forwardAsAttachmentToRecipients = array();
+                        $this->forwardAsAttachmentToRecipients = array();
         }
 
         if (!is_array($this->forwardAsAttachmentToRecipients)) {
@@ -211,7 +207,7 @@ class RuleActionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->forwardAsAttachmentToRecipients = $this->castValueIfNeeded("forwardAsAttachmentToRecipients", $value);
+        $this->forwardAsAttachmentToRecipients = $value;
         return $this;
     }
 
@@ -222,10 +218,8 @@ class RuleActionsType extends Type
      */
     public function addForwardToRecipients(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("forwardToRecipients", $value);
-
         if ($this->forwardToRecipients === null) {
-            $this->forwardToRecipients = array();
+                        $this->forwardToRecipients = array();
         }
 
         if (!is_array($this->forwardToRecipients)) {
@@ -255,7 +249,7 @@ class RuleActionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->forwardToRecipients = $this->castValueIfNeeded("forwardToRecipients", $value);
+        $this->forwardToRecipients = $value;
         return $this;
     }
 
@@ -275,7 +269,7 @@ class RuleActionsType extends Type
      */
     public function setMarkImportance($value)
     {
-        $this->markImportance = $this->castValueIfNeeded("markImportance", $value);
+        $this->markImportance = $value;
         return $this;
     }
 
@@ -304,7 +298,7 @@ class RuleActionsType extends Type
      */
     public function setMarkAsRead($value)
     {
-        $this->markAsRead = $this->castValueIfNeeded("markAsRead", $value);
+        $this->markAsRead = $value;
         return $this;
     }
 
@@ -324,7 +318,7 @@ class RuleActionsType extends Type
      */
     public function setMoveToFolder(TargetFolderIdType $value)
     {
-        $this->moveToFolder = $this->castValueIfNeeded("moveToFolder", $value);
+        $this->moveToFolder = $value;
         return $this;
     }
 
@@ -353,7 +347,7 @@ class RuleActionsType extends Type
      */
     public function setPermanentDelete($value)
     {
-        $this->permanentDelete = $this->castValueIfNeeded("permanentDelete", $value);
+        $this->permanentDelete = $value;
         return $this;
     }
 
@@ -364,10 +358,8 @@ class RuleActionsType extends Type
      */
     public function addRedirectToRecipients(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("redirectToRecipients", $value);
-
         if ($this->redirectToRecipients === null) {
-            $this->redirectToRecipients = array();
+                        $this->redirectToRecipients = array();
         }
 
         if (!is_array($this->redirectToRecipients)) {
@@ -397,7 +389,7 @@ class RuleActionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->redirectToRecipients = $this->castValueIfNeeded("redirectToRecipients", $value);
+        $this->redirectToRecipients = $value;
         return $this;
     }
 
@@ -408,10 +400,8 @@ class RuleActionsType extends Type
      */
     public function addSendSMSAlertToRecipients(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("sendSMSAlertToRecipients", $value);
-
         if ($this->sendSMSAlertToRecipients === null) {
-            $this->sendSMSAlertToRecipients = array();
+                        $this->sendSMSAlertToRecipients = array();
         }
 
         if (!is_array($this->sendSMSAlertToRecipients)) {
@@ -441,7 +431,7 @@ class RuleActionsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->sendSMSAlertToRecipients = $this->castValueIfNeeded("sendSMSAlertToRecipients", $value);
+        $this->sendSMSAlertToRecipients = $value;
         return $this;
     }
 
@@ -461,7 +451,7 @@ class RuleActionsType extends Type
      */
     public function setServerReplyWithMessage(ItemIdType $value)
     {
-        $this->serverReplyWithMessage = $this->castValueIfNeeded("serverReplyWithMessage", $value);
+        $this->serverReplyWithMessage = $value;
         return $this;
     }
 
@@ -490,7 +480,7 @@ class RuleActionsType extends Type
      */
     public function setStopProcessingRules($value)
     {
-        $this->stopProcessingRules = $this->castValueIfNeeded("stopProcessingRules", $value);
+        $this->stopProcessingRules = $value;
         return $this;
     }
 }

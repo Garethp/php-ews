@@ -39,7 +39,7 @@ class UserConfigurationDictionaryObjectType extends Type
      */
     public function setType($value)
     {
-        $this->type = $this->castValueIfNeeded("type", $value);
+        $this->type = $value;
         return $this;
     }
 
@@ -50,10 +50,8 @@ class UserConfigurationDictionaryObjectType extends Type
      */
     public function addValue($value)
     {
-        $value = $this->castValueIfNeeded("value", $value);
-
         if ($this->value === null) {
-            $this->value = array();
+                        $this->value = array();
         }
 
         if (!is_array($this->value)) {
@@ -83,7 +81,7 @@ class UserConfigurationDictionaryObjectType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->value = $this->castValueIfNeeded("value", $value);
+        $this->value = $value;
         return $this;
     }
 }

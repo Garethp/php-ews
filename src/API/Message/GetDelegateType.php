@@ -46,7 +46,7 @@ class GetDelegateType extends BaseDelegateType
      */
     public function setIncludePermissions($value)
     {
-        $this->includePermissions = $this->castValueIfNeeded("includePermissions", $value);
+        $this->includePermissions = $value;
         return $this;
     }
 
@@ -57,10 +57,8 @@ class GetDelegateType extends BaseDelegateType
      */
     public function addUserIds(\garethp\ews\API\Type\UserIdType $value)
     {
-        $value = $this->castValueIfNeeded("userIds", $value);
-
         if ($this->userIds === null) {
-            $this->userIds = array();
+                        $this->userIds = array();
         }
 
         if (!is_array($this->userIds)) {
@@ -91,7 +89,7 @@ class GetDelegateType extends BaseDelegateType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->userIds = $this->castValueIfNeeded("userIds", $value);
+        $this->userIds = $value;
         return $this;
     }
 }

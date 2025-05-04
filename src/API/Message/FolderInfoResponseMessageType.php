@@ -32,7 +32,7 @@ class FolderInfoResponseMessageType extends ResponseMessageType
      */
     public function setFolders(\garethp\ews\API\Type\ArrayOfFoldersType $value)
     {
-        $this->folders = $this->castValueIfNeeded("folders", $value);
+        $this->folders = $value;
         return $this;
     }
 }

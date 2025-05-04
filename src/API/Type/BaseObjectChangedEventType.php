@@ -16,10 +16,6 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
      */
     protected $timeStamp = null;
 
-    protected $_typeMap = array(
-        'timeStamp' => 'dateTime',
-    );
-
     /**
      * @var \garethp\ews\API\Type\FolderIdType
      */
@@ -51,7 +47,10 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
      */
     public function setTimeStamp(\DateTime|string $value)
     {
-        $this->timeStamp = $this->castValueIfNeeded("timeStamp", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->timeStamp = $value;
         return $this;
     }
 
@@ -71,7 +70,7 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
      */
     public function setFolderId(FolderIdType $value)
     {
-        $this->folderId = $this->castValueIfNeeded("folderId", $value);
+        $this->folderId = $value;
         return $this;
     }
 
@@ -91,7 +90,7 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
      */
     public function setItemId(ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -111,7 +110,7 @@ class BaseObjectChangedEventType extends BaseNotificationEventType
      */
     public function setParentFolderId(FolderIdType $value)
     {
-        $this->parentFolderId = $this->castValueIfNeeded("parentFolderId", $value);
+        $this->parentFolderId = $value;
         return $this;
     }
 }

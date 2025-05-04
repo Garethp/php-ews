@@ -46,7 +46,7 @@ class GetServerTimeZonesType extends BaseRequestType
      */
     public function setReturnFullTimeZoneData($value)
     {
-        $this->returnFullTimeZoneData = $this->castValueIfNeeded("returnFullTimeZoneData", $value);
+        $this->returnFullTimeZoneData = $value;
         return $this;
     }
 
@@ -57,10 +57,8 @@ class GetServerTimeZonesType extends BaseRequestType
      */
     public function addIds($value)
     {
-        $value = $this->castValueIfNeeded("ids", $value);
-
         if ($this->ids === null) {
-            $this->ids = array();
+                        $this->ids = array();
         }
 
         if (!is_array($this->ids)) {
@@ -90,7 +88,7 @@ class GetServerTimeZonesType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->ids = $this->castValueIfNeeded("ids", $value);
+        $this->ids = $value;
         return $this;
     }
 }

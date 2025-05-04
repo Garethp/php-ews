@@ -54,7 +54,7 @@ class TimeZoneDefinitionType extends Type
      */
     public function setId($value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 
@@ -74,7 +74,7 @@ class TimeZoneDefinitionType extends Type
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -85,10 +85,8 @@ class TimeZoneDefinitionType extends Type
      */
     public function addPeriods(PeriodType $value)
     {
-        $value = $this->castValueIfNeeded("periods", $value);
-
         if ($this->periods === null) {
-            $this->periods = array();
+                        $this->periods = array();
         }
 
         if (!is_array($this->periods)) {
@@ -118,7 +116,7 @@ class TimeZoneDefinitionType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->periods = $this->castValueIfNeeded("periods", $value);
+        $this->periods = $value;
         return $this;
     }
 
@@ -129,10 +127,8 @@ class TimeZoneDefinitionType extends Type
      */
     public function addTransitionsGroups(ArrayOfTransitionsType $value)
     {
-        $value = $this->castValueIfNeeded("transitionsGroups", $value);
-
         if ($this->transitionsGroups === null) {
-            $this->transitionsGroups = array();
+                        $this->transitionsGroups = array();
         }
 
         if (!is_array($this->transitionsGroups)) {
@@ -162,7 +158,7 @@ class TimeZoneDefinitionType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->transitionsGroups = $this->castValueIfNeeded("transitionsGroups", $value);
+        $this->transitionsGroups = $value;
         return $this;
     }
 
@@ -182,7 +178,7 @@ class TimeZoneDefinitionType extends Type
      */
     public function setTransitions(ArrayOfTransitionsType $value)
     {
-        $this->transitions = $this->castValueIfNeeded("transitions", $value);
+        $this->transitions = $value;
         return $this;
     }
 }

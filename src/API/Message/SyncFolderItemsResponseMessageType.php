@@ -42,7 +42,7 @@ class SyncFolderItemsResponseMessageType extends ResponseMessageType
      */
     public function setSyncState($value)
     {
-        $this->syncState = $this->castValueIfNeeded("syncState", $value);
+        $this->syncState = $value;
         return $this;
     }
 
@@ -71,7 +71,7 @@ class SyncFolderItemsResponseMessageType extends ResponseMessageType
      */
     public function setIncludesLastItemInRange($value)
     {
-        $this->includesLastItemInRange = $this->castValueIfNeeded("includesLastItemInRange", $value);
+        $this->includesLastItemInRange = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class SyncFolderItemsResponseMessageType extends ResponseMessageType
      */
     public function setChanges(\garethp\ews\API\Type\SyncFolderItemsChangesType $value)
     {
-        $this->changes = $this->castValueIfNeeded("changes", $value);
+        $this->changes = $value;
         return $this;
     }
 }

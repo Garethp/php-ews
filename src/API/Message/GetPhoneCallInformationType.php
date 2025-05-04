@@ -32,7 +32,7 @@ class GetPhoneCallInformationType extends BaseRequestType
      */
     public function setPhoneCallId(\garethp\ews\API\Type\PhoneCallIdType $value)
     {
-        $this->phoneCallId = $this->castValueIfNeeded("phoneCallId", $value);
+        $this->phoneCallId = $value;
         return $this;
     }
 }

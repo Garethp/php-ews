@@ -33,10 +33,6 @@ class MessageTrackingReportType extends Type
      */
     protected $submitTime = null;
 
-    protected $_typeMap = array(
-        'submitTime' => 'dateTime',
-    );
-
     /**
      * @var \garethp\ews\API\Type\EmailAddressType[]
      */
@@ -68,7 +64,7 @@ class MessageTrackingReportType extends Type
      */
     public function setSender(EmailAddressType $value)
     {
-        $this->sender = $this->castValueIfNeeded("sender", $value);
+        $this->sender = $value;
         return $this;
     }
 
@@ -88,7 +84,7 @@ class MessageTrackingReportType extends Type
      */
     public function setPurportedSender(EmailAddressType $value)
     {
-        $this->purportedSender = $this->castValueIfNeeded("purportedSender", $value);
+        $this->purportedSender = $value;
         return $this;
     }
 
@@ -108,7 +104,7 @@ class MessageTrackingReportType extends Type
      */
     public function setSubject($value)
     {
-        $this->subject = $this->castValueIfNeeded("subject", $value);
+        $this->subject = $value;
         return $this;
     }
 
@@ -128,7 +124,10 @@ class MessageTrackingReportType extends Type
      */
     public function setSubmitTime(\DateTime|string $value)
     {
-        $this->submitTime = $this->castValueIfNeeded("submitTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->submitTime = $value;
         return $this;
     }
 
@@ -139,10 +138,8 @@ class MessageTrackingReportType extends Type
      */
     public function addOriginalRecipients(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("originalRecipients", $value);
-
         if ($this->originalRecipients === null) {
-            $this->originalRecipients = array();
+                        $this->originalRecipients = array();
         }
 
         if (!is_array($this->originalRecipients)) {
@@ -172,7 +169,7 @@ class MessageTrackingReportType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->originalRecipients = $this->castValueIfNeeded("originalRecipients", $value);
+        $this->originalRecipients = $value;
         return $this;
     }
 
@@ -183,10 +180,8 @@ class MessageTrackingReportType extends Type
      */
     public function addRecipientTrackingEvents(RecipientTrackingEventType $value)
     {
-        $value = $this->castValueIfNeeded("recipientTrackingEvents", $value);
-
         if ($this->recipientTrackingEvents === null) {
-            $this->recipientTrackingEvents = array();
+                        $this->recipientTrackingEvents = array();
         }
 
         if (!is_array($this->recipientTrackingEvents)) {
@@ -216,7 +211,7 @@ class MessageTrackingReportType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recipientTrackingEvents = $this->castValueIfNeeded("recipientTrackingEvents", $value);
+        $this->recipientTrackingEvents = $value;
         return $this;
     }
 
@@ -227,10 +222,8 @@ class MessageTrackingReportType extends Type
      */
     public function addProperties(TrackingPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("properties", $value);
-
         if ($this->properties === null) {
-            $this->properties = array();
+                        $this->properties = array();
         }
 
         if (!is_array($this->properties)) {
@@ -260,7 +253,7 @@ class MessageTrackingReportType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->properties = $this->castValueIfNeeded("properties", $value);
+        $this->properties = $value;
         return $this;
     }
 }

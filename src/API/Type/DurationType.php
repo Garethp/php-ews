@@ -18,11 +18,6 @@ class DurationType extends Type
      */
     protected $startTime = null;
 
-    protected $_typeMap = array(
-        'startTime' => 'dateTime',
-        'endTime' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -44,7 +39,10 @@ class DurationType extends Type
      */
     public function setStartTime(\DateTime|string $value)
     {
-        $this->startTime = $this->castValueIfNeeded("startTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->startTime = $value;
         return $this;
     }
 
@@ -64,7 +62,10 @@ class DurationType extends Type
      */
     public function setEndTime(\DateTime|string $value)
     {
-        $this->endTime = $this->castValueIfNeeded("endTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->endTime = $value;
         return $this;
     }
 }

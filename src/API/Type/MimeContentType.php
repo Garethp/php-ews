@@ -34,7 +34,7 @@ class MimeContentType extends Type
      */
     public function setCharacterSet($value)
     {
-        $this->characterSet = $this->castValueIfNeeded("characterSet", $value);
+        $this->characterSet = $value;
         return $this;
     }
 }

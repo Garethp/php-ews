@@ -32,7 +32,7 @@ class AbsoluteMonthlyRecurrencePatternType extends IntervalRecurrencePatternBase
      */
     public function setDayOfMonth($value)
     {
-        $this->dayOfMonth = $this->castValueIfNeeded("dayOfMonth", $value);
+        $this->dayOfMonth = $value;
         return $this;
     }
 }

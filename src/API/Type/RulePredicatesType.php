@@ -190,10 +190,8 @@ class RulePredicatesType extends Type
      */
     public function addCategories($value)
     {
-        $value = $this->castValueIfNeeded("categories", $value);
-
         if ($this->categories === null) {
-            $this->categories = array();
+                        $this->categories = array();
         }
 
         if (!is_array($this->categories)) {
@@ -223,7 +221,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->categories = $this->castValueIfNeeded("categories", $value);
+        $this->categories = $value;
         return $this;
     }
 
@@ -234,10 +232,8 @@ class RulePredicatesType extends Type
      */
     public function addContainsBodyStrings($value)
     {
-        $value = $this->castValueIfNeeded("containsBodyStrings", $value);
-
         if ($this->containsBodyStrings === null) {
-            $this->containsBodyStrings = array();
+                        $this->containsBodyStrings = array();
         }
 
         if (!is_array($this->containsBodyStrings)) {
@@ -267,7 +263,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->containsBodyStrings = $this->castValueIfNeeded("containsBodyStrings", $value);
+        $this->containsBodyStrings = $value;
         return $this;
     }
 
@@ -278,10 +274,8 @@ class RulePredicatesType extends Type
      */
     public function addContainsHeaderStrings($value)
     {
-        $value = $this->castValueIfNeeded("containsHeaderStrings", $value);
-
         if ($this->containsHeaderStrings === null) {
-            $this->containsHeaderStrings = array();
+                        $this->containsHeaderStrings = array();
         }
 
         if (!is_array($this->containsHeaderStrings)) {
@@ -311,7 +305,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->containsHeaderStrings = $this->castValueIfNeeded("containsHeaderStrings", $value);
+        $this->containsHeaderStrings = $value;
         return $this;
     }
 
@@ -322,10 +316,8 @@ class RulePredicatesType extends Type
      */
     public function addContainsRecipientStrings($value)
     {
-        $value = $this->castValueIfNeeded("containsRecipientStrings", $value);
-
         if ($this->containsRecipientStrings === null) {
-            $this->containsRecipientStrings = array();
+                        $this->containsRecipientStrings = array();
         }
 
         if (!is_array($this->containsRecipientStrings)) {
@@ -355,7 +347,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->containsRecipientStrings = $this->castValueIfNeeded("containsRecipientStrings", $value);
+        $this->containsRecipientStrings = $value;
         return $this;
     }
 
@@ -366,10 +358,8 @@ class RulePredicatesType extends Type
      */
     public function addContainsSenderStrings($value)
     {
-        $value = $this->castValueIfNeeded("containsSenderStrings", $value);
-
         if ($this->containsSenderStrings === null) {
-            $this->containsSenderStrings = array();
+                        $this->containsSenderStrings = array();
         }
 
         if (!is_array($this->containsSenderStrings)) {
@@ -399,7 +389,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->containsSenderStrings = $this->castValueIfNeeded("containsSenderStrings", $value);
+        $this->containsSenderStrings = $value;
         return $this;
     }
 
@@ -410,10 +400,8 @@ class RulePredicatesType extends Type
      */
     public function addContainsSubjectOrBodyStrings($value)
     {
-        $value = $this->castValueIfNeeded("containsSubjectOrBodyStrings", $value);
-
         if ($this->containsSubjectOrBodyStrings === null) {
-            $this->containsSubjectOrBodyStrings = array();
+                        $this->containsSubjectOrBodyStrings = array();
         }
 
         if (!is_array($this->containsSubjectOrBodyStrings)) {
@@ -443,7 +431,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->containsSubjectOrBodyStrings = $this->castValueIfNeeded("containsSubjectOrBodyStrings", $value);
+        $this->containsSubjectOrBodyStrings = $value;
         return $this;
     }
 
@@ -454,10 +442,8 @@ class RulePredicatesType extends Type
      */
     public function addContainsSubjectStrings($value)
     {
-        $value = $this->castValueIfNeeded("containsSubjectStrings", $value);
-
         if ($this->containsSubjectStrings === null) {
-            $this->containsSubjectStrings = array();
+                        $this->containsSubjectStrings = array();
         }
 
         if (!is_array($this->containsSubjectStrings)) {
@@ -487,7 +473,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->containsSubjectStrings = $this->castValueIfNeeded("containsSubjectStrings", $value);
+        $this->containsSubjectStrings = $value;
         return $this;
     }
 
@@ -507,7 +493,7 @@ class RulePredicatesType extends Type
      */
     public function setFlaggedForAction($value)
     {
-        $this->flaggedForAction = $this->castValueIfNeeded("flaggedForAction", $value);
+        $this->flaggedForAction = $value;
         return $this;
     }
 
@@ -518,10 +504,8 @@ class RulePredicatesType extends Type
      */
     public function addFromAddresses(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("fromAddresses", $value);
-
         if ($this->fromAddresses === null) {
-            $this->fromAddresses = array();
+                        $this->fromAddresses = array();
         }
 
         if (!is_array($this->fromAddresses)) {
@@ -551,7 +535,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->fromAddresses = $this->castValueIfNeeded("fromAddresses", $value);
+        $this->fromAddresses = $value;
         return $this;
     }
 
@@ -562,10 +546,8 @@ class RulePredicatesType extends Type
      */
     public function addFromConnectedAccounts($value)
     {
-        $value = $this->castValueIfNeeded("fromConnectedAccounts", $value);
-
         if ($this->fromConnectedAccounts === null) {
-            $this->fromConnectedAccounts = array();
+                        $this->fromConnectedAccounts = array();
         }
 
         if (!is_array($this->fromConnectedAccounts)) {
@@ -595,7 +577,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->fromConnectedAccounts = $this->castValueIfNeeded("fromConnectedAccounts", $value);
+        $this->fromConnectedAccounts = $value;
         return $this;
     }
 
@@ -624,7 +606,7 @@ class RulePredicatesType extends Type
      */
     public function setHasAttachments($value)
     {
-        $this->hasAttachments = $this->castValueIfNeeded("hasAttachments", $value);
+        $this->hasAttachments = $value;
         return $this;
     }
 
@@ -644,7 +626,7 @@ class RulePredicatesType extends Type
      */
     public function setImportance($value)
     {
-        $this->importance = $this->castValueIfNeeded("importance", $value);
+        $this->importance = $value;
         return $this;
     }
 
@@ -673,7 +655,7 @@ class RulePredicatesType extends Type
      */
     public function setIsApprovalRequest($value)
     {
-        $this->isApprovalRequest = $this->castValueIfNeeded("isApprovalRequest", $value);
+        $this->isApprovalRequest = $value;
         return $this;
     }
 
@@ -702,7 +684,7 @@ class RulePredicatesType extends Type
      */
     public function setIsAutomaticForward($value)
     {
-        $this->isAutomaticForward = $this->castValueIfNeeded("isAutomaticForward", $value);
+        $this->isAutomaticForward = $value;
         return $this;
     }
 
@@ -731,7 +713,7 @@ class RulePredicatesType extends Type
      */
     public function setIsAutomaticReply($value)
     {
-        $this->isAutomaticReply = $this->castValueIfNeeded("isAutomaticReply", $value);
+        $this->isAutomaticReply = $value;
         return $this;
     }
 
@@ -760,7 +742,7 @@ class RulePredicatesType extends Type
      */
     public function setIsEncrypted($value)
     {
-        $this->isEncrypted = $this->castValueIfNeeded("isEncrypted", $value);
+        $this->isEncrypted = $value;
         return $this;
     }
 
@@ -789,7 +771,7 @@ class RulePredicatesType extends Type
      */
     public function setIsMeetingRequest($value)
     {
-        $this->isMeetingRequest = $this->castValueIfNeeded("isMeetingRequest", $value);
+        $this->isMeetingRequest = $value;
         return $this;
     }
 
@@ -818,7 +800,7 @@ class RulePredicatesType extends Type
      */
     public function setIsMeetingResponse($value)
     {
-        $this->isMeetingResponse = $this->castValueIfNeeded("isMeetingResponse", $value);
+        $this->isMeetingResponse = $value;
         return $this;
     }
 
@@ -847,7 +829,7 @@ class RulePredicatesType extends Type
      */
     public function setIsNDR($value)
     {
-        $this->isNDR = $this->castValueIfNeeded("isNDR", $value);
+        $this->isNDR = $value;
         return $this;
     }
 
@@ -876,7 +858,7 @@ class RulePredicatesType extends Type
      */
     public function setIsPermissionControlled($value)
     {
-        $this->isPermissionControlled = $this->castValueIfNeeded("isPermissionControlled", $value);
+        $this->isPermissionControlled = $value;
         return $this;
     }
 
@@ -905,7 +887,7 @@ class RulePredicatesType extends Type
      */
     public function setIsReadReceipt($value)
     {
-        $this->isReadReceipt = $this->castValueIfNeeded("isReadReceipt", $value);
+        $this->isReadReceipt = $value;
         return $this;
     }
 
@@ -934,7 +916,7 @@ class RulePredicatesType extends Type
      */
     public function setIsSigned($value)
     {
-        $this->isSigned = $this->castValueIfNeeded("isSigned", $value);
+        $this->isSigned = $value;
         return $this;
     }
 
@@ -963,7 +945,7 @@ class RulePredicatesType extends Type
      */
     public function setIsVoicemail($value)
     {
-        $this->isVoicemail = $this->castValueIfNeeded("isVoicemail", $value);
+        $this->isVoicemail = $value;
         return $this;
     }
 
@@ -974,10 +956,8 @@ class RulePredicatesType extends Type
      */
     public function addItemClasses($value)
     {
-        $value = $this->castValueIfNeeded("itemClasses", $value);
-
         if ($this->itemClasses === null) {
-            $this->itemClasses = array();
+                        $this->itemClasses = array();
         }
 
         if (!is_array($this->itemClasses)) {
@@ -1007,7 +987,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->itemClasses = $this->castValueIfNeeded("itemClasses", $value);
+        $this->itemClasses = $value;
         return $this;
     }
 
@@ -1018,10 +998,8 @@ class RulePredicatesType extends Type
      */
     public function addMessageClassifications($value)
     {
-        $value = $this->castValueIfNeeded("messageClassifications", $value);
-
         if ($this->messageClassifications === null) {
-            $this->messageClassifications = array();
+                        $this->messageClassifications = array();
         }
 
         if (!is_array($this->messageClassifications)) {
@@ -1051,7 +1029,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->messageClassifications = $this->castValueIfNeeded("messageClassifications", $value);
+        $this->messageClassifications = $value;
         return $this;
     }
 
@@ -1080,7 +1058,7 @@ class RulePredicatesType extends Type
      */
     public function setNotSentToMe($value)
     {
-        $this->notSentToMe = $this->castValueIfNeeded("notSentToMe", $value);
+        $this->notSentToMe = $value;
         return $this;
     }
 
@@ -1109,7 +1087,7 @@ class RulePredicatesType extends Type
      */
     public function setSentCcMe($value)
     {
-        $this->sentCcMe = $this->castValueIfNeeded("sentCcMe", $value);
+        $this->sentCcMe = $value;
         return $this;
     }
 
@@ -1138,7 +1116,7 @@ class RulePredicatesType extends Type
      */
     public function setSentOnlyToMe($value)
     {
-        $this->sentOnlyToMe = $this->castValueIfNeeded("sentOnlyToMe", $value);
+        $this->sentOnlyToMe = $value;
         return $this;
     }
 
@@ -1149,10 +1127,8 @@ class RulePredicatesType extends Type
      */
     public function addSentToAddresses(EmailAddressType $value)
     {
-        $value = $this->castValueIfNeeded("sentToAddresses", $value);
-
         if ($this->sentToAddresses === null) {
-            $this->sentToAddresses = array();
+                        $this->sentToAddresses = array();
         }
 
         if (!is_array($this->sentToAddresses)) {
@@ -1182,7 +1158,7 @@ class RulePredicatesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->sentToAddresses = $this->castValueIfNeeded("sentToAddresses", $value);
+        $this->sentToAddresses = $value;
         return $this;
     }
 
@@ -1211,7 +1187,7 @@ class RulePredicatesType extends Type
      */
     public function setSentToMe($value)
     {
-        $this->sentToMe = $this->castValueIfNeeded("sentToMe", $value);
+        $this->sentToMe = $value;
         return $this;
     }
 
@@ -1240,7 +1216,7 @@ class RulePredicatesType extends Type
      */
     public function setSentToOrCcMe($value)
     {
-        $this->sentToOrCcMe = $this->castValueIfNeeded("sentToOrCcMe", $value);
+        $this->sentToOrCcMe = $value;
         return $this;
     }
 
@@ -1260,7 +1236,7 @@ class RulePredicatesType extends Type
      */
     public function setSensitivity($value)
     {
-        $this->sensitivity = $this->castValueIfNeeded("sensitivity", $value);
+        $this->sensitivity = $value;
         return $this;
     }
 
@@ -1280,7 +1256,7 @@ class RulePredicatesType extends Type
      */
     public function setWithinDateRange(RulePredicateDateRangeType $value)
     {
-        $this->withinDateRange = $this->castValueIfNeeded("withinDateRange", $value);
+        $this->withinDateRange = $value;
         return $this;
     }
 
@@ -1300,7 +1276,7 @@ class RulePredicatesType extends Type
      */
     public function setWithinSizeRange(RulePredicateSizeRangeType $value)
     {
-        $this->withinSizeRange = $this->castValueIfNeeded("withinSizeRange", $value);
+        $this->withinSizeRange = $value;
         return $this;
     }
 }

@@ -37,7 +37,7 @@ class FolderType extends BaseFolderType
      */
     public function setPermissionSet(PermissionSetType $value)
     {
-        $this->permissionSet = $this->castValueIfNeeded("permissionSet", $value);
+        $this->permissionSet = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class FolderType extends BaseFolderType
      */
     public function setUnreadCount($value)
     {
-        $this->unreadCount = $this->castValueIfNeeded("unreadCount", $value);
+        $this->unreadCount = $value;
         return $this;
     }
 }

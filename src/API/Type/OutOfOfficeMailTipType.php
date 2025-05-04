@@ -39,7 +39,7 @@ class OutOfOfficeMailTipType extends Type
      */
     public function setReplyBody(ReplyBodyType $value)
     {
-        $this->replyBody = $this->castValueIfNeeded("replyBody", $value);
+        $this->replyBody = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class OutOfOfficeMailTipType extends Type
      */
     public function setDuration(DurationType $value)
     {
-        $this->duration = $this->castValueIfNeeded("duration", $value);
+        $this->duration = $value;
         return $this;
     }
 }

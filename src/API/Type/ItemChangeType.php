@@ -49,7 +49,7 @@ class ItemChangeType extends Type
      */
     public function setItemId(ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -69,7 +69,7 @@ class ItemChangeType extends Type
      */
     public function setOccurrenceItemId(OccurrenceItemIdType $value)
     {
-        $this->occurrenceItemId = $this->castValueIfNeeded("occurrenceItemId", $value);
+        $this->occurrenceItemId = $value;
         return $this;
     }
 
@@ -89,7 +89,7 @@ class ItemChangeType extends Type
      */
     public function setRecurringMasterItemId(RecurringMasterItemIdType $value)
     {
-        $this->recurringMasterItemId = $this->castValueIfNeeded("recurringMasterItemId", $value);
+        $this->recurringMasterItemId = $value;
         return $this;
     }
 
@@ -109,7 +109,7 @@ class ItemChangeType extends Type
      */
     public function setUpdates(NonEmptyArrayOfItemChangeDescriptionsType $value)
     {
-        $this->updates = $this->castValueIfNeeded("updates", $value);
+        $this->updates = $value;
         return $this;
     }
 }

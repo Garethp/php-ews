@@ -37,7 +37,7 @@ class RootItemIdType extends BaseItemIdType
      */
     public function setRootItemId($value)
     {
-        $this->rootItemId = $this->castValueIfNeeded("rootItemId", $value);
+        $this->rootItemId = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class RootItemIdType extends BaseItemIdType
      */
     public function setRootItemChangeKey($value)
     {
-        $this->rootItemChangeKey = $this->castValueIfNeeded("rootItemChangeKey", $value);
+        $this->rootItemChangeKey = $value;
         return $this;
     }
 }

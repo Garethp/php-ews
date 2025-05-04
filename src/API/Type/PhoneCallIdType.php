@@ -34,7 +34,7 @@ class PhoneCallIdType extends Type
      */
     public function setId($value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 }

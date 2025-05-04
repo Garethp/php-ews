@@ -46,7 +46,7 @@ class FileAttachmentType extends AttachmentType
      */
     public function setIsContactPhoto($value)
     {
-        $this->isContactPhoto = $this->castValueIfNeeded("isContactPhoto", $value);
+        $this->isContactPhoto = $value;
         return $this;
     }
 
@@ -66,7 +66,7 @@ class FileAttachmentType extends AttachmentType
      */
     public function setContent($value)
     {
-        $this->content = $this->castValueIfNeeded("content", $value);
+        $this->content = $value;
         return $this;
     }
 }

@@ -51,7 +51,7 @@ class SendItemType extends BaseRequestType
      */
     public function setSaveItemToFolder($value)
     {
-        $this->saveItemToFolder = $this->castValueIfNeeded("saveItemToFolder", $value);
+        $this->saveItemToFolder = $value;
         return $this;
     }
 
@@ -71,7 +71,7 @@ class SendItemType extends BaseRequestType
      */
     public function setItemIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType $value)
     {
-        $this->itemIds = $this->castValueIfNeeded("itemIds", $value);
+        $this->itemIds = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class SendItemType extends BaseRequestType
      */
     public function setSavedItemFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->savedItemFolderId = $this->castValueIfNeeded("savedItemFolderId", $value);
+        $this->savedItemFolderId = $value;
         return $this;
     }
 }

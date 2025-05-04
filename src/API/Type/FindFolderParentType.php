@@ -136,7 +136,7 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
      */
     public function setIndexedPagingOffset($value)
     {
-        $this->indexedPagingOffset = $this->castValueIfNeeded("indexedPagingOffset", $value);
+        $this->indexedPagingOffset = $value;
         return $this;
     }
 
@@ -156,7 +156,7 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
      */
     public function setNumeratorOffset($value)
     {
-        $this->numeratorOffset = $this->castValueIfNeeded("numeratorOffset", $value);
+        $this->numeratorOffset = $value;
         return $this;
     }
 
@@ -176,7 +176,7 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
      */
     public function setAbsoluteDenominator($value)
     {
-        $this->absoluteDenominator = $this->castValueIfNeeded("absoluteDenominator", $value);
+        $this->absoluteDenominator = $value;
         return $this;
     }
 
@@ -205,7 +205,7 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
      */
     public function setIncludesLastItemInRange($value)
     {
-        $this->includesLastItemInRange = $this->castValueIfNeeded("includesLastItemInRange", $value);
+        $this->includesLastItemInRange = $value;
         return $this;
     }
 
@@ -225,7 +225,7 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
      */
     public function setTotalItemsInView($value)
     {
-        $this->totalItemsInView = $this->castValueIfNeeded("totalItemsInView", $value);
+        $this->totalItemsInView = $value;
         return $this;
     }
 
@@ -245,7 +245,7 @@ class FindFolderParentType extends Type implements Countable, ArrayAccess, Itera
      */
     public function setFolders(ArrayOfFoldersType $value)
     {
-        $this->folders = $this->castValueIfNeeded("folders", $value);
+        $this->folders = $value;
         return $this;
     }
 }

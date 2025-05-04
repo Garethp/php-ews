@@ -37,7 +37,7 @@ class GetFolderType extends BaseRequestType
      */
     public function setFolderShape(\garethp\ews\API\Type\FolderResponseShapeType $value)
     {
-        $this->folderShape = $this->castValueIfNeeded("folderShape", $value);
+        $this->folderShape = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class GetFolderType extends BaseRequestType
      */
     public function setFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $value)
     {
-        $this->folderIds = $this->castValueIfNeeded("folderIds", $value);
+        $this->folderIds = $value;
         return $this;
     }
 }

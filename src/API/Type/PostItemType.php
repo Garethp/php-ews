@@ -41,10 +41,6 @@ class PostItemType extends ItemType
      */
     protected $postedTime = null;
 
-    protected $_typeMap = array(
-        'postedTime' => 'dateTime',
-    );
-
     /**
      * @var string
      */
@@ -71,7 +67,7 @@ class PostItemType extends ItemType
      */
     public function setConversationIndex($value)
     {
-        $this->conversationIndex = $this->castValueIfNeeded("conversationIndex", $value);
+        $this->conversationIndex = $value;
         return $this;
     }
 
@@ -91,7 +87,7 @@ class PostItemType extends ItemType
      */
     public function setConversationTopic($value)
     {
-        $this->conversationTopic = $this->castValueIfNeeded("conversationTopic", $value);
+        $this->conversationTopic = $value;
         return $this;
     }
 
@@ -111,7 +107,7 @@ class PostItemType extends ItemType
      */
     public function setFrom(SingleRecipientType $value)
     {
-        $this->from = $this->castValueIfNeeded("from", $value);
+        $this->from = $value;
         return $this;
     }
 
@@ -131,7 +127,7 @@ class PostItemType extends ItemType
      */
     public function setInternetMessageId($value)
     {
-        $this->internetMessageId = $this->castValueIfNeeded("internetMessageId", $value);
+        $this->internetMessageId = $value;
         return $this;
     }
 
@@ -160,7 +156,7 @@ class PostItemType extends ItemType
      */
     public function setIsRead($value)
     {
-        $this->isRead = $this->castValueIfNeeded("isRead", $value);
+        $this->isRead = $value;
         return $this;
     }
 
@@ -180,7 +176,10 @@ class PostItemType extends ItemType
      */
     public function setPostedTime(\DateTime|string $value)
     {
-        $this->postedTime = $this->castValueIfNeeded("postedTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->postedTime = $value;
         return $this;
     }
 
@@ -200,7 +199,7 @@ class PostItemType extends ItemType
      */
     public function setReferences($value)
     {
-        $this->references = $this->castValueIfNeeded("references", $value);
+        $this->references = $value;
         return $this;
     }
 
@@ -220,7 +219,7 @@ class PostItemType extends ItemType
      */
     public function setSender(SingleRecipientType $value)
     {
-        $this->sender = $this->castValueIfNeeded("sender", $value);
+        $this->sender = $value;
         return $this;
     }
 }

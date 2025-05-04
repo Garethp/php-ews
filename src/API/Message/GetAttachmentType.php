@@ -37,7 +37,7 @@ class GetAttachmentType extends BaseRequestType
      */
     public function setAttachmentShape(\garethp\ews\API\Type\AttachmentResponseShapeType $value)
     {
-        $this->attachmentShape = $this->castValueIfNeeded("attachmentShape", $value);
+        $this->attachmentShape = $value;
         return $this;
     }
 
@@ -48,10 +48,8 @@ class GetAttachmentType extends BaseRequestType
      */
     public function addAttachmentIds(\garethp\ews\API\Type\RequestAttachmentIdType $value)
     {
-        $value = $this->castValueIfNeeded("attachmentIds", $value);
-
         if ($this->attachmentIds === null) {
-            $this->attachmentIds = array();
+                        $this->attachmentIds = array();
         }
 
         if (!is_array($this->attachmentIds)) {
@@ -82,7 +80,7 @@ class GetAttachmentType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->attachmentIds = $this->castValueIfNeeded("attachmentIds", $value);
+        $this->attachmentIds = $value;
         return $this;
     }
 }

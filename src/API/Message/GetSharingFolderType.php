@@ -42,7 +42,7 @@ class GetSharingFolderType extends BaseRequestType
      */
     public function setSmtpAddress($value)
     {
-        $this->smtpAddress = $this->castValueIfNeeded("smtpAddress", $value);
+        $this->smtpAddress = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class GetSharingFolderType extends BaseRequestType
      */
     public function setDataType($value)
     {
-        $this->dataType = $this->castValueIfNeeded("dataType", $value);
+        $this->dataType = $value;
         return $this;
     }
 
@@ -82,7 +82,7 @@ class GetSharingFolderType extends BaseRequestType
      */
     public function setSharedFolderId($value)
     {
-        $this->sharedFolderId = $this->castValueIfNeeded("sharedFolderId", $value);
+        $this->sharedFolderId = $value;
         return $this;
     }
 }

@@ -47,7 +47,7 @@ class DeleteItemType extends BaseRequestType
      */
     public function setDeleteType($value)
     {
-        $this->deleteType = $this->castValueIfNeeded("deleteType", $value);
+        $this->deleteType = $value;
         return $this;
     }
 
@@ -67,7 +67,7 @@ class DeleteItemType extends BaseRequestType
      */
     public function setSendMeetingCancellations($value)
     {
-        $this->sendMeetingCancellations = $this->castValueIfNeeded("sendMeetingCancellations", $value);
+        $this->sendMeetingCancellations = $value;
         return $this;
     }
 
@@ -87,7 +87,7 @@ class DeleteItemType extends BaseRequestType
      */
     public function setAffectedTaskOccurrences($value)
     {
-        $this->affectedTaskOccurrences = $this->castValueIfNeeded("affectedTaskOccurrences", $value);
+        $this->affectedTaskOccurrences = $value;
         return $this;
     }
 
@@ -107,7 +107,7 @@ class DeleteItemType extends BaseRequestType
      */
     public function setItemIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType $value)
     {
-        $this->itemIds = $this->castValueIfNeeded("itemIds", $value);
+        $this->itemIds = $value;
         return $this;
     }
 }

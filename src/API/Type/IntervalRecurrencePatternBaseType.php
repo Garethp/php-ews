@@ -32,7 +32,7 @@ class IntervalRecurrencePatternBaseType extends RecurrencePatternBaseType
      */
     public function setInterval($value)
     {
-        $this->interval = $this->castValueIfNeeded("interval", $value);
+        $this->interval = $value;
         return $this;
     }
 }

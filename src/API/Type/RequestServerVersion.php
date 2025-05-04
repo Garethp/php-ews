@@ -31,7 +31,7 @@ class RequestServerVersion extends Type
      */
     public function setVersion($value)
     {
-        $this->version = $this->castValueIfNeeded("version", $value);
+        $this->version = $value;
         return $this;
     }
 }

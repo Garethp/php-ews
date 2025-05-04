@@ -74,7 +74,7 @@ class RuleType extends Type
      */
     public function setRuleId($value)
     {
-        $this->ruleId = $this->castValueIfNeeded("ruleId", $value);
+        $this->ruleId = $value;
         return $this;
     }
 
@@ -94,7 +94,7 @@ class RuleType extends Type
      */
     public function setDisplayName($value)
     {
-        $this->displayName = $this->castValueIfNeeded("displayName", $value);
+        $this->displayName = $value;
         return $this;
     }
 
@@ -114,7 +114,7 @@ class RuleType extends Type
      */
     public function setPriority($value)
     {
-        $this->priority = $this->castValueIfNeeded("priority", $value);
+        $this->priority = $value;
         return $this;
     }
 
@@ -143,7 +143,7 @@ class RuleType extends Type
      */
     public function setIsEnabled($value)
     {
-        $this->isEnabled = $this->castValueIfNeeded("isEnabled", $value);
+        $this->isEnabled = $value;
         return $this;
     }
 
@@ -172,7 +172,7 @@ class RuleType extends Type
      */
     public function setIsNotSupported($value)
     {
-        $this->isNotSupported = $this->castValueIfNeeded("isNotSupported", $value);
+        $this->isNotSupported = $value;
         return $this;
     }
 
@@ -201,7 +201,7 @@ class RuleType extends Type
      */
     public function setIsInError($value)
     {
-        $this->isInError = $this->castValueIfNeeded("isInError", $value);
+        $this->isInError = $value;
         return $this;
     }
 
@@ -221,7 +221,7 @@ class RuleType extends Type
      */
     public function setConditions(RulePredicatesType $value)
     {
-        $this->conditions = $this->castValueIfNeeded("conditions", $value);
+        $this->conditions = $value;
         return $this;
     }
 
@@ -241,7 +241,7 @@ class RuleType extends Type
      */
     public function setExceptions(RulePredicatesType $value)
     {
-        $this->exceptions = $this->castValueIfNeeded("exceptions", $value);
+        $this->exceptions = $value;
         return $this;
     }
 
@@ -261,7 +261,7 @@ class RuleType extends Type
      */
     public function setActions(RuleActionsType $value)
     {
-        $this->actions = $this->castValueIfNeeded("actions", $value);
+        $this->actions = $value;
         return $this;
     }
 }

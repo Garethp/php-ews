@@ -42,7 +42,7 @@ class BaseMoveCopyItemType extends BaseRequestType
      */
     public function setToFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->toFolderId = $this->castValueIfNeeded("toFolderId", $value);
+        $this->toFolderId = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class BaseMoveCopyItemType extends BaseRequestType
      */
     public function setItemIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType $value)
     {
-        $this->itemIds = $this->castValueIfNeeded("itemIds", $value);
+        $this->itemIds = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class BaseMoveCopyItemType extends BaseRequestType
      */
     public function setReturnNewItemIds($value)
     {
-        $this->returnNewItemIds = $this->castValueIfNeeded("returnNewItemIds", $value);
+        $this->returnNewItemIds = $value;
         return $this;
     }
 }

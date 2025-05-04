@@ -40,7 +40,7 @@ class BodyType extends Type
      */
     public function setBodyType($value)
     {
-        $this->bodyType = $this->castValueIfNeeded("bodyType", $value);
+        $this->bodyType = $value;
         return $this;
     }
 }

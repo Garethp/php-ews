@@ -46,11 +46,6 @@ class MeetingMessageType extends MessageType
      */
     protected $recurrenceId = null;
 
-    protected $_typeMap = array(
-        'recurrenceId' => 'dateTime',
-        'dateTimeStamp' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -72,7 +67,7 @@ class MeetingMessageType extends MessageType
      */
     public function setAssociatedCalendarItemId(ItemIdType $value)
     {
-        $this->associatedCalendarItemId = $this->castValueIfNeeded("associatedCalendarItemId", $value);
+        $this->associatedCalendarItemId = $value;
         return $this;
     }
 
@@ -101,7 +96,7 @@ class MeetingMessageType extends MessageType
      */
     public function setIsDelegated($value)
     {
-        $this->isDelegated = $this->castValueIfNeeded("isDelegated", $value);
+        $this->isDelegated = $value;
         return $this;
     }
 
@@ -130,7 +125,7 @@ class MeetingMessageType extends MessageType
      */
     public function setIsOutOfDate($value)
     {
-        $this->isOutOfDate = $this->castValueIfNeeded("isOutOfDate", $value);
+        $this->isOutOfDate = $value;
         return $this;
     }
 
@@ -159,7 +154,7 @@ class MeetingMessageType extends MessageType
      */
     public function setHasBeenProcessed($value)
     {
-        $this->hasBeenProcessed = $this->castValueIfNeeded("hasBeenProcessed", $value);
+        $this->hasBeenProcessed = $value;
         return $this;
     }
 
@@ -179,7 +174,7 @@ class MeetingMessageType extends MessageType
      */
     public function setResponseType($value)
     {
-        $this->responseType = $this->castValueIfNeeded("responseType", $value);
+        $this->responseType = $value;
         return $this;
     }
 
@@ -199,7 +194,7 @@ class MeetingMessageType extends MessageType
      */
     public function setUID($value)
     {
-        $this->uID = $this->castValueIfNeeded("uID", $value);
+        $this->uID = $value;
         return $this;
     }
 
@@ -219,7 +214,10 @@ class MeetingMessageType extends MessageType
      */
     public function setRecurrenceId(\DateTime|string $value)
     {
-        $this->recurrenceId = $this->castValueIfNeeded("recurrenceId", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->recurrenceId = $value;
         return $this;
     }
 
@@ -239,7 +237,10 @@ class MeetingMessageType extends MessageType
      */
     public function setDateTimeStamp(\DateTime|string $value)
     {
-        $this->dateTimeStamp = $this->castValueIfNeeded("dateTimeStamp", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->dateTimeStamp = $value;
         return $this;
     }
 }

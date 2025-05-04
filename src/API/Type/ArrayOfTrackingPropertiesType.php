@@ -25,10 +25,8 @@ class ArrayOfTrackingPropertiesType extends Type
      */
     public function addTrackingPropertyType(TrackingPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("trackingPropertyType", $value);
-
         if ($this->trackingPropertyType === null) {
-            $this->trackingPropertyType = array();
+                        $this->trackingPropertyType = array();
         }
 
         if (!is_array($this->trackingPropertyType)) {
@@ -58,7 +56,7 @@ class ArrayOfTrackingPropertiesType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->trackingPropertyType = $this->castValueIfNeeded("trackingPropertyType", $value);
+        $this->trackingPropertyType = $value;
         return $this;
     }
 }

@@ -49,7 +49,7 @@ class DelegateUserType extends Type
      */
     public function setUserId(UserIdType $value)
     {
-        $this->userId = $this->castValueIfNeeded("userId", $value);
+        $this->userId = $value;
         return $this;
     }
 
@@ -69,7 +69,7 @@ class DelegateUserType extends Type
      */
     public function setDelegatePermissions(DelegatePermissionsType $value)
     {
-        $this->delegatePermissions = $this->castValueIfNeeded("delegatePermissions", $value);
+        $this->delegatePermissions = $value;
         return $this;
     }
 
@@ -98,7 +98,7 @@ class DelegateUserType extends Type
      */
     public function setReceiveCopiesOfMeetingMessages($value)
     {
-        $this->receiveCopiesOfMeetingMessages = $this->castValueIfNeeded("receiveCopiesOfMeetingMessages", $value);
+        $this->receiveCopiesOfMeetingMessages = $value;
         return $this;
     }
 
@@ -127,7 +127,7 @@ class DelegateUserType extends Type
      */
     public function setViewPrivateItems($value)
     {
-        $this->viewPrivateItems = $this->castValueIfNeeded("viewPrivateItems", $value);
+        $this->viewPrivateItems = $value;
         return $this;
     }
 }

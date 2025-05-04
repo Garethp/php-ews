@@ -32,7 +32,7 @@ class DeleteAttachmentResponseMessageType extends ResponseMessageType
      */
     public function setRootItemId(\garethp\ews\API\Type\RootItemIdType $value)
     {
-        $this->rootItemId = $this->castValueIfNeeded("rootItemId", $value);
+        $this->rootItemId = $value;
         return $this;
     }
 }

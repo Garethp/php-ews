@@ -34,7 +34,7 @@ class DirectoryEntryType extends Type
      */
     public function setId(EmailAddressType $value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 }

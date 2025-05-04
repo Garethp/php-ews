@@ -42,7 +42,7 @@ class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
      */
     public function setRefreshInterval($value)
     {
-        $this->refreshInterval = $this->castValueIfNeeded("refreshInterval", $value);
+        $this->refreshInterval = $value;
         return $this;
     }
 
@@ -53,10 +53,8 @@ class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
      */
     public function addRules(ProtectionRuleType $value)
     {
-        $value = $this->castValueIfNeeded("rules", $value);
-
         if ($this->rules === null) {
-            $this->rules = array();
+                        $this->rules = array();
         }
 
         if (!is_array($this->rules)) {
@@ -86,7 +84,7 @@ class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->rules = $this->castValueIfNeeded("rules", $value);
+        $this->rules = $value;
         return $this;
     }
 
@@ -97,10 +95,8 @@ class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
      */
     public function addInternalDomains(SmtpDomainType $value)
     {
-        $value = $this->castValueIfNeeded("internalDomains", $value);
-
         if ($this->internalDomains === null) {
-            $this->internalDomains = array();
+                        $this->internalDomains = array();
         }
 
         if (!is_array($this->internalDomains)) {
@@ -130,7 +126,7 @@ class ProtectionRulesServiceConfigurationType extends ServiceConfigurationType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->internalDomains = $this->castValueIfNeeded("internalDomains", $value);
+        $this->internalDomains = $value;
         return $this;
     }
 }

@@ -52,7 +52,7 @@ class UpdateItemType extends BaseRequestType
      */
     public function setConflictResolution($value)
     {
-        $this->conflictResolution = $this->castValueIfNeeded("conflictResolution", $value);
+        $this->conflictResolution = $value;
         return $this;
     }
 
@@ -72,7 +72,7 @@ class UpdateItemType extends BaseRequestType
      */
     public function setMessageDisposition($value)
     {
-        $this->messageDisposition = $this->castValueIfNeeded("messageDisposition", $value);
+        $this->messageDisposition = $value;
         return $this;
     }
 
@@ -92,7 +92,7 @@ class UpdateItemType extends BaseRequestType
      */
     public function setSendMeetingInvitationsOrCancellations($value)
     {
-        $this->sendMeetingInvitationsOrCancellations = $this->castValueIfNeeded("sendMeetingInvitationsOrCancellations", $value);
+        $this->sendMeetingInvitationsOrCancellations = $value;
         return $this;
     }
 
@@ -112,7 +112,7 @@ class UpdateItemType extends BaseRequestType
      */
     public function setSavedItemFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->savedItemFolderId = $this->castValueIfNeeded("savedItemFolderId", $value);
+        $this->savedItemFolderId = $value;
         return $this;
     }
 
@@ -123,10 +123,8 @@ class UpdateItemType extends BaseRequestType
      */
     public function addItemChanges(\garethp\ews\API\Type\ItemChangeType $value)
     {
-        $value = $this->castValueIfNeeded("itemChanges", $value);
-
         if ($this->itemChanges === null) {
-            $this->itemChanges = array();
+                        $this->itemChanges = array();
         }
 
         if (!is_array($this->itemChanges)) {
@@ -157,7 +155,7 @@ class UpdateItemType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->itemChanges = $this->castValueIfNeeded("itemChanges", $value);
+        $this->itemChanges = $value;
         return $this;
     }
 }

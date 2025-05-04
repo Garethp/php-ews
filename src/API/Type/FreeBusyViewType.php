@@ -40,10 +40,8 @@ class FreeBusyViewType extends Type
      */
     public function addFreeBusyViewType($value)
     {
-        $value = $this->castValueIfNeeded("freeBusyViewType", $value);
-
         if ($this->freeBusyViewType === null) {
-            $this->freeBusyViewType = array();
+                        $this->freeBusyViewType = array();
         }
 
         if (!is_array($this->freeBusyViewType)) {
@@ -73,7 +71,7 @@ class FreeBusyViewType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->freeBusyViewType = $this->castValueIfNeeded("freeBusyViewType", $value);
+        $this->freeBusyViewType = $value;
         return $this;
     }
 
@@ -93,7 +91,7 @@ class FreeBusyViewType extends Type
      */
     public function setMergedFreeBusy($value)
     {
-        $this->mergedFreeBusy = $this->castValueIfNeeded("mergedFreeBusy", $value);
+        $this->mergedFreeBusy = $value;
         return $this;
     }
 
@@ -104,10 +102,8 @@ class FreeBusyViewType extends Type
      */
     public function addCalendarEventArray(CalendarEventType $value)
     {
-        $value = $this->castValueIfNeeded("calendarEventArray", $value);
-
         if ($this->calendarEventArray === null) {
-            $this->calendarEventArray = array();
+                        $this->calendarEventArray = array();
         }
 
         if (!is_array($this->calendarEventArray)) {
@@ -137,7 +133,7 @@ class FreeBusyViewType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->calendarEventArray = $this->castValueIfNeeded("calendarEventArray", $value);
+        $this->calendarEventArray = $value;
         return $this;
     }
 
@@ -157,7 +153,7 @@ class FreeBusyViewType extends Type
      */
     public function setWorkingHours(WorkingHoursType $value)
     {
-        $this->workingHours = $this->castValueIfNeeded("workingHours", $value);
+        $this->workingHours = $value;
         return $this;
     }
 }

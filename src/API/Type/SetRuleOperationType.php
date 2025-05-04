@@ -32,7 +32,7 @@ class SetRuleOperationType extends RuleOperationType
      */
     public function setRule(RuleType $value)
     {
-        $this->rule = $this->castValueIfNeeded("rule", $value);
+        $this->rule = $value;
         return $this;
     }
 }

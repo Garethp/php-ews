@@ -23,10 +23,8 @@ class UploadItemsType extends BaseRequestType
      */
     public function addItems(\garethp\ews\API\Type\UploadItemType $value)
     {
-        $value = $this->castValueIfNeeded("items", $value);
-
         if ($this->items === null) {
-            $this->items = array();
+                        $this->items = array();
         }
 
         if (!is_array($this->items)) {
@@ -57,7 +55,7 @@ class UploadItemsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->items = $this->castValueIfNeeded("items", $value);
+        $this->items = $value;
         return $this;
     }
 }

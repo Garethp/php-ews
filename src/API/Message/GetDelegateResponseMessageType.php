@@ -32,7 +32,7 @@ class GetDelegateResponseMessageType extends BaseDelegateResponseMessageType
      */
     public function setDeliverMeetingRequests($value)
     {
-        $this->deliverMeetingRequests = $this->castValueIfNeeded("deliverMeetingRequests", $value);
+        $this->deliverMeetingRequests = $value;
         return $this;
     }
 }

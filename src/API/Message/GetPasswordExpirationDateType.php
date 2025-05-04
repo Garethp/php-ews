@@ -32,7 +32,7 @@ class GetPasswordExpirationDateType extends BaseRequestType
      */
     public function setMailboxSmtpAddress($value)
     {
-        $this->mailboxSmtpAddress = $this->castValueIfNeeded("mailboxSmtpAddress", $value);
+        $this->mailboxSmtpAddress = $value;
         return $this;
     }
 }

@@ -24,14 +24,6 @@ class TypeTest extends TestCase
         return $this->typeMock;
     }
 
-    public function testCast()
-    {
-        $calendarItem = new Type\CalendarItemType();
-        $actual = $calendarItem->cast('2015-07-01', 'DateTime');
-
-        $this->assertEquals(new \DateTime('2015-07-01'), $actual);
-    }
-
     public function testSetCasting()
     {
         $calendarItem = new Type\CalendarItemType();

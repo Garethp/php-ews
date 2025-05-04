@@ -35,7 +35,7 @@ class AlternateIdBaseType extends Type
      */
     public function setFormat($value)
     {
-        $this->format = $this->castValueIfNeeded("format", $value);
+        $this->format = $value;
         return $this;
     }
 }

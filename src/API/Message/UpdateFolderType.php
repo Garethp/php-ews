@@ -23,10 +23,8 @@ class UpdateFolderType extends BaseRequestType
      */
     public function addFolderChanges(\garethp\ews\API\Type\FolderChangeType $value)
     {
-        $value = $this->castValueIfNeeded("folderChanges", $value);
-
         if ($this->folderChanges === null) {
-            $this->folderChanges = array();
+                        $this->folderChanges = array();
         }
 
         if (!is_array($this->folderChanges)) {
@@ -57,7 +55,7 @@ class UpdateFolderType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->folderChanges = $this->castValueIfNeeded("folderChanges", $value);
+        $this->folderChanges = $value;
         return $this;
     }
 }

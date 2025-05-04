@@ -69,7 +69,7 @@ class BasePermissionType extends Type
      */
     public function setUserId(UserIdType $value)
     {
-        $this->userId = $this->castValueIfNeeded("userId", $value);
+        $this->userId = $value;
         return $this;
     }
 
@@ -98,7 +98,7 @@ class BasePermissionType extends Type
      */
     public function setCanCreateItems($value)
     {
-        $this->canCreateItems = $this->castValueIfNeeded("canCreateItems", $value);
+        $this->canCreateItems = $value;
         return $this;
     }
 
@@ -127,7 +127,7 @@ class BasePermissionType extends Type
      */
     public function setCanCreateSubFolders($value)
     {
-        $this->canCreateSubFolders = $this->castValueIfNeeded("canCreateSubFolders", $value);
+        $this->canCreateSubFolders = $value;
         return $this;
     }
 
@@ -156,7 +156,7 @@ class BasePermissionType extends Type
      */
     public function setIsFolderOwner($value)
     {
-        $this->isFolderOwner = $this->castValueIfNeeded("isFolderOwner", $value);
+        $this->isFolderOwner = $value;
         return $this;
     }
 
@@ -185,7 +185,7 @@ class BasePermissionType extends Type
      */
     public function setIsFolderVisible($value)
     {
-        $this->isFolderVisible = $this->castValueIfNeeded("isFolderVisible", $value);
+        $this->isFolderVisible = $value;
         return $this;
     }
 
@@ -214,7 +214,7 @@ class BasePermissionType extends Type
      */
     public function setIsFolderContact($value)
     {
-        $this->isFolderContact = $this->castValueIfNeeded("isFolderContact", $value);
+        $this->isFolderContact = $value;
         return $this;
     }
 
@@ -234,7 +234,7 @@ class BasePermissionType extends Type
      */
     public function setEditItems($value)
     {
-        $this->editItems = $this->castValueIfNeeded("editItems", $value);
+        $this->editItems = $value;
         return $this;
     }
 
@@ -254,7 +254,7 @@ class BasePermissionType extends Type
      */
     public function setDeleteItems($value)
     {
-        $this->deleteItems = $this->castValueIfNeeded("deleteItems", $value);
+        $this->deleteItems = $value;
         return $this;
     }
 }

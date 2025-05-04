@@ -47,7 +47,7 @@ class GroupByType extends BaseGroupByType
      */
     public function setFieldURI(PathToUnindexedFieldType $value)
     {
-        $this->fieldURI = $this->castValueIfNeeded("fieldURI", $value);
+        $this->fieldURI = $value;
         return $this;
     }
 
@@ -67,7 +67,7 @@ class GroupByType extends BaseGroupByType
      */
     public function setIndexedFieldURI(PathToIndexedFieldType $value)
     {
-        $this->indexedFieldURI = $this->castValueIfNeeded("indexedFieldURI", $value);
+        $this->indexedFieldURI = $value;
         return $this;
     }
 
@@ -87,7 +87,7 @@ class GroupByType extends BaseGroupByType
      */
     public function setExtendedFieldURI(PathToExtendedFieldType $value)
     {
-        $this->extendedFieldURI = $this->castValueIfNeeded("extendedFieldURI", $value);
+        $this->extendedFieldURI = $value;
         return $this;
     }
 
@@ -107,7 +107,7 @@ class GroupByType extends BaseGroupByType
      */
     public function setAggregateOn(AggregateOnType $value)
     {
-        $this->aggregateOn = $this->castValueIfNeeded("aggregateOn", $value);
+        $this->aggregateOn = $value;
         return $this;
     }
 }

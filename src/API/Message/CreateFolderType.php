@@ -37,7 +37,7 @@ class CreateFolderType extends BaseRequestType
      */
     public function setParentFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->parentFolderId = $this->castValueIfNeeded("parentFolderId", $value);
+        $this->parentFolderId = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class CreateFolderType extends BaseRequestType
      */
     public function setFolders(\garethp\ews\API\Type\NonEmptyArrayOfFoldersType $value)
     {
-        $this->folders = $this->castValueIfNeeded("folders", $value);
+        $this->folders = $value;
         return $this;
     }
 }

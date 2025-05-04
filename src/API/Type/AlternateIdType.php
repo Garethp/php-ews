@@ -42,7 +42,7 @@ class AlternateIdType extends AlternateIdBaseType
      */
     public function setId($value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class AlternateIdType extends AlternateIdBaseType
      */
     public function setMailbox($value)
     {
-        $this->mailbox = $this->castValueIfNeeded("mailbox", $value);
+        $this->mailbox = $value;
         return $this;
     }
 
@@ -91,7 +91,7 @@ class AlternateIdType extends AlternateIdBaseType
      */
     public function setIsArchive($value)
     {
-        $this->isArchive = $this->castValueIfNeeded("isArchive", $value);
+        $this->isArchive = $value;
         return $this;
     }
 }

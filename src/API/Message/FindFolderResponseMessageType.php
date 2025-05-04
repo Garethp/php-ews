@@ -32,7 +32,7 @@ class FindFolderResponseMessageType extends ResponseMessageType
      */
     public function setRootFolder(\garethp\ews\API\Type\FindFolderParentType $value)
     {
-        $this->rootFolder = $this->castValueIfNeeded("rootFolder", $value);
+        $this->rootFolder = $value;
         return $this;
     }
 }

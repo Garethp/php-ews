@@ -57,7 +57,7 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      */
     public function setIndexedPagingOffset($value)
     {
-        $this->indexedPagingOffset = $this->castValueIfNeeded("indexedPagingOffset", $value);
+        $this->indexedPagingOffset = $value;
         return $this;
     }
 
@@ -77,7 +77,7 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      */
     public function setNumeratorOffset($value)
     {
-        $this->numeratorOffset = $this->castValueIfNeeded("numeratorOffset", $value);
+        $this->numeratorOffset = $value;
         return $this;
     }
 
@@ -97,7 +97,7 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      */
     public function setAbsoluteDenominator($value)
     {
-        $this->absoluteDenominator = $this->castValueIfNeeded("absoluteDenominator", $value);
+        $this->absoluteDenominator = $value;
         return $this;
     }
 
@@ -126,7 +126,7 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      */
     public function setIncludesLastItemInRange($value)
     {
-        $this->includesLastItemInRange = $this->castValueIfNeeded("includesLastItemInRange", $value);
+        $this->includesLastItemInRange = $value;
         return $this;
     }
 
@@ -146,7 +146,7 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      */
     public function setTotalItemsInView($value)
     {
-        $this->totalItemsInView = $this->castValueIfNeeded("totalItemsInView", $value);
+        $this->totalItemsInView = $value;
         return $this;
     }
 
@@ -166,7 +166,7 @@ class ExpandDLResponseMessageType extends ResponseMessageType
      */
     public function setDLExpansion(\garethp\ews\API\Type\ArrayOfDLExpansionType $value)
     {
-        $this->dLExpansion = $this->castValueIfNeeded("dLExpansion", $value);
+        $this->dLExpansion = $value;
         return $this;
     }
 }

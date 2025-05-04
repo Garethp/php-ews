@@ -39,7 +39,7 @@ class FolderResponseShapeType extends Type
      */
     public function setBaseShape($value)
     {
-        $this->baseShape = $this->castValueIfNeeded("baseShape", $value);
+        $this->baseShape = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class FolderResponseShapeType extends Type
      */
     public function setAdditionalProperties(NonEmptyArrayOfPathsToElementType $value)
     {
-        $this->additionalProperties = $this->castValueIfNeeded("additionalProperties", $value);
+        $this->additionalProperties = $value;
         return $this;
     }
 }

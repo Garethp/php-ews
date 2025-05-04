@@ -37,7 +37,7 @@ class RecurringDayTransitionType extends RecurringTimeTransitionType
      */
     public function setDayOfWeek($value)
     {
-        $this->dayOfWeek = $this->castValueIfNeeded("dayOfWeek", $value);
+        $this->dayOfWeek = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class RecurringDayTransitionType extends RecurringTimeTransitionType
      */
     public function setOccurrence($value)
     {
-        $this->occurrence = $this->castValueIfNeeded("occurrence", $value);
+        $this->occurrence = $value;
         return $this;
     }
 }

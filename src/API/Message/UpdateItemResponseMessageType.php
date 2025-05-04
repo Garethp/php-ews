@@ -32,7 +32,7 @@ class UpdateItemResponseMessageType extends ItemInfoResponseMessageType
      */
     public function setConflictResults(\garethp\ews\API\Type\ConflictResultsType $value)
     {
-        $this->conflictResults = $this->castValueIfNeeded("conflictResults", $value);
+        $this->conflictResults = $value;
         return $this;
     }
 }

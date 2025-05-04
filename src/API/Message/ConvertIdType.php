@@ -38,7 +38,7 @@ class ConvertIdType extends BaseRequestType
      */
     public function setDestinationFormat($value)
     {
-        $this->destinationFormat = $this->castValueIfNeeded("destinationFormat", $value);
+        $this->destinationFormat = $value;
         return $this;
     }
 
@@ -58,7 +58,7 @@ class ConvertIdType extends BaseRequestType
      */
     public function setSourceIds(\garethp\ews\API\Type\NonEmptyArrayOfAlternateIdsType $value)
     {
-        $this->sourceIds = $this->castValueIfNeeded("sourceIds", $value);
+        $this->sourceIds = $value;
         return $this;
     }
 }

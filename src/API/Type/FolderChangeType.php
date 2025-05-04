@@ -44,7 +44,7 @@ class FolderChangeType extends Type
      */
     public function setFolderId(FolderIdType $value)
     {
-        $this->folderId = $this->castValueIfNeeded("folderId", $value);
+        $this->folderId = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class FolderChangeType extends Type
      */
     public function setDistinguishedFolderId(DistinguishedFolderIdType $value)
     {
-        $this->distinguishedFolderId = $this->castValueIfNeeded("distinguishedFolderId", $value);
+        $this->distinguishedFolderId = $value;
         return $this;
     }
 
@@ -84,7 +84,7 @@ class FolderChangeType extends Type
      */
     public function setUpdates(NonEmptyArrayOfFolderChangeDescriptionsType $value)
     {
-        $this->updates = $this->castValueIfNeeded("updates", $value);
+        $this->updates = $value;
         return $this;
     }
 }

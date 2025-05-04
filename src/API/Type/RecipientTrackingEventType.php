@@ -18,10 +18,6 @@ class RecipientTrackingEventType extends Type
      */
     protected $date = null;
 
-    protected $_typeMap = array(
-        'date' => 'dateTime',
-    );
-
     /**
      * @var \garethp\ews\API\Type\EmailAddressType
      */
@@ -93,7 +89,10 @@ class RecipientTrackingEventType extends Type
      */
     public function setDate(\DateTime|string $value)
     {
-        $this->date = $this->castValueIfNeeded("date", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->date = $value;
         return $this;
     }
 
@@ -113,7 +112,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setRecipient(EmailAddressType $value)
     {
-        $this->recipient = $this->castValueIfNeeded("recipient", $value);
+        $this->recipient = $value;
         return $this;
     }
 
@@ -133,7 +132,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setDeliveryStatus($value)
     {
-        $this->deliveryStatus = $this->castValueIfNeeded("deliveryStatus", $value);
+        $this->deliveryStatus = $value;
         return $this;
     }
 
@@ -153,7 +152,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setEventDescription($value)
     {
-        $this->eventDescription = $this->castValueIfNeeded("eventDescription", $value);
+        $this->eventDescription = $value;
         return $this;
     }
 
@@ -164,10 +163,8 @@ class RecipientTrackingEventType extends Type
      */
     public function addEventData($value)
     {
-        $value = $this->castValueIfNeeded("eventData", $value);
-
         if ($this->eventData === null) {
-            $this->eventData = array();
+                        $this->eventData = array();
         }
 
         if (!is_array($this->eventData)) {
@@ -197,7 +194,7 @@ class RecipientTrackingEventType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->eventData = $this->castValueIfNeeded("eventData", $value);
+        $this->eventData = $value;
         return $this;
     }
 
@@ -217,7 +214,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setServer($value)
     {
-        $this->server = $this->castValueIfNeeded("server", $value);
+        $this->server = $value;
         return $this;
     }
 
@@ -237,7 +234,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setInternalId($value)
     {
-        $this->internalId = $this->castValueIfNeeded("internalId", $value);
+        $this->internalId = $value;
         return $this;
     }
 
@@ -266,7 +263,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setBccRecipient($value)
     {
-        $this->bccRecipient = $this->castValueIfNeeded("bccRecipient", $value);
+        $this->bccRecipient = $value;
         return $this;
     }
 
@@ -295,7 +292,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setHiddenRecipient($value)
     {
-        $this->hiddenRecipient = $this->castValueIfNeeded("hiddenRecipient", $value);
+        $this->hiddenRecipient = $value;
         return $this;
     }
 
@@ -315,7 +312,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setUniquePathId($value)
     {
-        $this->uniquePathId = $this->castValueIfNeeded("uniquePathId", $value);
+        $this->uniquePathId = $value;
         return $this;
     }
 
@@ -335,7 +332,7 @@ class RecipientTrackingEventType extends Type
      */
     public function setRootAddress($value)
     {
-        $this->rootAddress = $this->castValueIfNeeded("rootAddress", $value);
+        $this->rootAddress = $value;
         return $this;
     }
 
@@ -346,10 +343,8 @@ class RecipientTrackingEventType extends Type
      */
     public function addProperties(TrackingPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("properties", $value);
-
         if ($this->properties === null) {
-            $this->properties = array();
+                        $this->properties = array();
         }
 
         if (!is_array($this->properties)) {
@@ -379,7 +374,7 @@ class RecipientTrackingEventType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->properties = $this->castValueIfNeeded("properties", $value);
+        $this->properties = $value;
         return $this;
     }
 }

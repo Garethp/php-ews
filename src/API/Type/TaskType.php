@@ -21,13 +21,6 @@ class TaskType extends ItemType
      */
     protected $assignedTime = null;
 
-    protected $_typeMap = array(
-        'assignedTime' => 'dateTime',
-        'completeDate' => 'dateTime',
-        'dueDate' => 'dateTime',
-        'startDate' => 'dateTime',
-    );
-
     /**
      * @var string
      */
@@ -144,7 +137,7 @@ class TaskType extends ItemType
      */
     public function setActualWork($value)
     {
-        $this->actualWork = $this->castValueIfNeeded("actualWork", $value);
+        $this->actualWork = $value;
         return $this;
     }
 
@@ -164,7 +157,10 @@ class TaskType extends ItemType
      */
     public function setAssignedTime(\DateTime|string $value)
     {
-        $this->assignedTime = $this->castValueIfNeeded("assignedTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->assignedTime = $value;
         return $this;
     }
 
@@ -184,7 +180,7 @@ class TaskType extends ItemType
      */
     public function setBillingInformation($value)
     {
-        $this->billingInformation = $this->castValueIfNeeded("billingInformation", $value);
+        $this->billingInformation = $value;
         return $this;
     }
 
@@ -204,7 +200,7 @@ class TaskType extends ItemType
      */
     public function setChangeCount($value)
     {
-        $this->changeCount = $this->castValueIfNeeded("changeCount", $value);
+        $this->changeCount = $value;
         return $this;
     }
 
@@ -215,10 +211,8 @@ class TaskType extends ItemType
      */
     public function addCompanies($value)
     {
-        $value = $this->castValueIfNeeded("companies", $value);
-
         if ($this->companies === null) {
-            $this->companies = array();
+                        $this->companies = array();
         }
 
         if (!is_array($this->companies)) {
@@ -248,7 +242,7 @@ class TaskType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->companies = $this->castValueIfNeeded("companies", $value);
+        $this->companies = $value;
         return $this;
     }
 
@@ -268,7 +262,10 @@ class TaskType extends ItemType
      */
     public function setCompleteDate(\DateTime|string $value)
     {
-        $this->completeDate = $this->castValueIfNeeded("completeDate", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->completeDate = $value;
         return $this;
     }
 
@@ -279,10 +276,8 @@ class TaskType extends ItemType
      */
     public function addContacts($value)
     {
-        $value = $this->castValueIfNeeded("contacts", $value);
-
         if ($this->contacts === null) {
-            $this->contacts = array();
+                        $this->contacts = array();
         }
 
         if (!is_array($this->contacts)) {
@@ -312,7 +307,7 @@ class TaskType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->contacts = $this->castValueIfNeeded("contacts", $value);
+        $this->contacts = $value;
         return $this;
     }
 
@@ -332,7 +327,7 @@ class TaskType extends ItemType
      */
     public function setDelegationState($value)
     {
-        $this->delegationState = $this->castValueIfNeeded("delegationState", $value);
+        $this->delegationState = $value;
         return $this;
     }
 
@@ -352,7 +347,7 @@ class TaskType extends ItemType
      */
     public function setDelegator($value)
     {
-        $this->delegator = $this->castValueIfNeeded("delegator", $value);
+        $this->delegator = $value;
         return $this;
     }
 
@@ -372,7 +367,10 @@ class TaskType extends ItemType
      */
     public function setDueDate(\DateTime|string $value)
     {
-        $this->dueDate = $this->castValueIfNeeded("dueDate", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->dueDate = $value;
         return $this;
     }
 
@@ -392,7 +390,7 @@ class TaskType extends ItemType
      */
     public function setIsAssignmentEditable($value)
     {
-        $this->isAssignmentEditable = $this->castValueIfNeeded("isAssignmentEditable", $value);
+        $this->isAssignmentEditable = $value;
         return $this;
     }
 
@@ -421,7 +419,7 @@ class TaskType extends ItemType
      */
     public function setIsComplete($value)
     {
-        $this->isComplete = $this->castValueIfNeeded("isComplete", $value);
+        $this->isComplete = $value;
         return $this;
     }
 
@@ -450,7 +448,7 @@ class TaskType extends ItemType
      */
     public function setIsRecurring($value)
     {
-        $this->isRecurring = $this->castValueIfNeeded("isRecurring", $value);
+        $this->isRecurring = $value;
         return $this;
     }
 
@@ -479,7 +477,7 @@ class TaskType extends ItemType
      */
     public function setIsTeamTask($value)
     {
-        $this->isTeamTask = $this->castValueIfNeeded("isTeamTask", $value);
+        $this->isTeamTask = $value;
         return $this;
     }
 
@@ -499,7 +497,7 @@ class TaskType extends ItemType
      */
     public function setMileage($value)
     {
-        $this->mileage = $this->castValueIfNeeded("mileage", $value);
+        $this->mileage = $value;
         return $this;
     }
 
@@ -519,7 +517,7 @@ class TaskType extends ItemType
      */
     public function setOwner($value)
     {
-        $this->owner = $this->castValueIfNeeded("owner", $value);
+        $this->owner = $value;
         return $this;
     }
 
@@ -539,7 +537,7 @@ class TaskType extends ItemType
      */
     public function setPercentComplete($value)
     {
-        $this->percentComplete = $this->castValueIfNeeded("percentComplete", $value);
+        $this->percentComplete = $value;
         return $this;
     }
 
@@ -559,7 +557,7 @@ class TaskType extends ItemType
      */
     public function setRecurrence(TaskRecurrenceType $value)
     {
-        $this->recurrence = $this->castValueIfNeeded("recurrence", $value);
+        $this->recurrence = $value;
         return $this;
     }
 
@@ -579,7 +577,10 @@ class TaskType extends ItemType
      */
     public function setStartDate(\DateTime|string $value)
     {
-        $this->startDate = $this->castValueIfNeeded("startDate", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->startDate = $value;
         return $this;
     }
 
@@ -599,7 +600,7 @@ class TaskType extends ItemType
      */
     public function setStatus($value)
     {
-        $this->status = $this->castValueIfNeeded("status", $value);
+        $this->status = $value;
         return $this;
     }
 
@@ -619,7 +620,7 @@ class TaskType extends ItemType
      */
     public function setStatusDescription($value)
     {
-        $this->statusDescription = $this->castValueIfNeeded("statusDescription", $value);
+        $this->statusDescription = $value;
         return $this;
     }
 
@@ -639,7 +640,7 @@ class TaskType extends ItemType
      */
     public function setTotalWork($value)
     {
-        $this->totalWork = $this->castValueIfNeeded("totalWork", $value);
+        $this->totalWork = $value;
         return $this;
     }
 }

@@ -23,10 +23,8 @@ class DeleteAttachmentType extends BaseRequestType
      */
     public function addAttachmentIds(\garethp\ews\API\Type\RequestAttachmentIdType $value)
     {
-        $value = $this->castValueIfNeeded("attachmentIds", $value);
-
         if ($this->attachmentIds === null) {
-            $this->attachmentIds = array();
+                        $this->attachmentIds = array();
         }
 
         if (!is_array($this->attachmentIds)) {
@@ -57,7 +55,7 @@ class DeleteAttachmentType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->attachmentIds = $this->castValueIfNeeded("attachmentIds", $value);
+        $this->attachmentIds = $value;
         return $this;
     }
 }

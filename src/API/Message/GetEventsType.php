@@ -37,7 +37,7 @@ class GetEventsType extends BaseRequestType
      */
     public function setSubscriptionId($value)
     {
-        $this->subscriptionId = $this->castValueIfNeeded("subscriptionId", $value);
+        $this->subscriptionId = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class GetEventsType extends BaseRequestType
      */
     public function setWatermark($value)
     {
-        $this->watermark = $this->castValueIfNeeded("watermark", $value);
+        $this->watermark = $value;
         return $this;
     }
 }

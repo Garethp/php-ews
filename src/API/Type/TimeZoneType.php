@@ -49,7 +49,7 @@ class TimeZoneType extends Type
      */
     public function setTimeZoneName($value)
     {
-        $this->timeZoneName = $this->castValueIfNeeded("timeZoneName", $value);
+        $this->timeZoneName = $value;
         return $this;
     }
 
@@ -69,7 +69,7 @@ class TimeZoneType extends Type
      */
     public function setBaseOffset(\DateInterval $value)
     {
-        $this->baseOffset = $this->castValueIfNeeded("baseOffset", $value);
+        $this->baseOffset = $value;
         return $this;
     }
 
@@ -89,7 +89,7 @@ class TimeZoneType extends Type
      */
     public function setStandard(TimeChangeType $value)
     {
-        $this->standard = $this->castValueIfNeeded("standard", $value);
+        $this->standard = $value;
         return $this;
     }
 
@@ -109,7 +109,7 @@ class TimeZoneType extends Type
      */
     public function setDaylight(TimeChangeType $value)
     {
-        $this->daylight = $this->castValueIfNeeded("daylight", $value);
+        $this->daylight = $value;
         return $this;
     }
 }

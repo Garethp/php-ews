@@ -47,7 +47,7 @@ class CreateItemType extends BaseRequestType
      */
     public function setMessageDisposition($value)
     {
-        $this->messageDisposition = $this->castValueIfNeeded("messageDisposition", $value);
+        $this->messageDisposition = $value;
         return $this;
     }
 
@@ -67,7 +67,7 @@ class CreateItemType extends BaseRequestType
      */
     public function setSendMeetingInvitations($value)
     {
-        $this->sendMeetingInvitations = $this->castValueIfNeeded("sendMeetingInvitations", $value);
+        $this->sendMeetingInvitations = $value;
         return $this;
     }
 
@@ -87,7 +87,7 @@ class CreateItemType extends BaseRequestType
      */
     public function setSavedItemFolderId(\garethp\ews\API\Type\TargetFolderIdType $value)
     {
-        $this->savedItemFolderId = $this->castValueIfNeeded("savedItemFolderId", $value);
+        $this->savedItemFolderId = $value;
         return $this;
     }
 
@@ -107,7 +107,7 @@ class CreateItemType extends BaseRequestType
      */
     public function setItems(\garethp\ews\API\Type\NonEmptyArrayOfAllItemsType $value)
     {
-        $this->items = $this->castValueIfNeeded("items", $value);
+        $this->items = $value;
         return $this;
     }
 }

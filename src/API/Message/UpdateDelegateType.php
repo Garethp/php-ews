@@ -28,10 +28,8 @@ class UpdateDelegateType extends BaseDelegateType
      */
     public function addDelegateUsers(\garethp\ews\API\Type\DelegateUserType $value)
     {
-        $value = $this->castValueIfNeeded("delegateUsers", $value);
-
         if ($this->delegateUsers === null) {
-            $this->delegateUsers = array();
+                        $this->delegateUsers = array();
         }
 
         if (!is_array($this->delegateUsers)) {
@@ -62,7 +60,7 @@ class UpdateDelegateType extends BaseDelegateType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->delegateUsers = $this->castValueIfNeeded("delegateUsers", $value);
+        $this->delegateUsers = $value;
         return $this;
     }
 
@@ -82,7 +80,7 @@ class UpdateDelegateType extends BaseDelegateType
      */
     public function setDeliverMeetingRequests($value)
     {
-        $this->deliverMeetingRequests = $this->castValueIfNeeded("deliverMeetingRequests", $value);
+        $this->deliverMeetingRequests = $value;
         return $this;
     }
 }

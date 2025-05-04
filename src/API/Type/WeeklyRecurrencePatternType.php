@@ -28,10 +28,8 @@ class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
      */
     public function addDaysOfWeek($value)
     {
-        $value = $this->castValueIfNeeded("daysOfWeek", $value);
-
         if ($this->daysOfWeek === null) {
-            $this->daysOfWeek = array();
+                        $this->daysOfWeek = array();
         }
 
         if (!is_array($this->daysOfWeek)) {
@@ -61,7 +59,7 @@ class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->daysOfWeek = $this->castValueIfNeeded("daysOfWeek", $value);
+        $this->daysOfWeek = $value;
         return $this;
     }
 
@@ -81,7 +79,7 @@ class WeeklyRecurrencePatternType extends IntervalRecurrencePatternBaseType
      */
     public function setFirstDayOfWeek($value)
     {
-        $this->firstDayOfWeek = $this->castValueIfNeeded("firstDayOfWeek", $value);
+        $this->firstDayOfWeek = $value;
         return $this;
     }
 }

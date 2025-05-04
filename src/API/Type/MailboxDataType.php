@@ -44,7 +44,7 @@ class MailboxDataType extends Type
      */
     public function setEmail(EmailAddressType $value)
     {
-        $this->email = $this->castValueIfNeeded("email", $value);
+        $this->email = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class MailboxDataType extends Type
      */
     public function setAttendeeType($value)
     {
-        $this->attendeeType = $this->castValueIfNeeded("attendeeType", $value);
+        $this->attendeeType = $value;
         return $this;
     }
 
@@ -93,7 +93,7 @@ class MailboxDataType extends Type
      */
     public function setExcludeConflicts($value)
     {
-        $this->excludeConflicts = $this->castValueIfNeeded("excludeConflicts", $value);
+        $this->excludeConflicts = $value;
         return $this;
     }
 }

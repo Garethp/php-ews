@@ -34,7 +34,7 @@ class BaseResponseMessageType extends Message
      */
     public function setResponseMessages(ArrayOfResponseMessagesType $value)
     {
-        $this->responseMessages = $this->castValueIfNeeded("responseMessages", $value);
+        $this->responseMessages = $value;
         return $this;
     }
 }

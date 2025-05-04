@@ -39,7 +39,7 @@ class WorkingHoursType extends Type
      */
     public function setTimeZone(SerializableTimeZoneType $value)
     {
-        $this->timeZone = $this->castValueIfNeeded("timeZone", $value);
+        $this->timeZone = $value;
         return $this;
     }
 
@@ -50,10 +50,8 @@ class WorkingHoursType extends Type
      */
     public function addWorkingPeriodArray(WorkingPeriodType $value)
     {
-        $value = $this->castValueIfNeeded("workingPeriodArray", $value);
-
         if ($this->workingPeriodArray === null) {
-            $this->workingPeriodArray = array();
+                        $this->workingPeriodArray = array();
         }
 
         if (!is_array($this->workingPeriodArray)) {
@@ -83,7 +81,7 @@ class WorkingHoursType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->workingPeriodArray = $this->castValueIfNeeded("workingPeriodArray", $value);
+        $this->workingPeriodArray = $value;
         return $this;
     }
 }

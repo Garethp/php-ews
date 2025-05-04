@@ -42,7 +42,7 @@ class MovedCopiedEventType extends BaseObjectChangedEventType
      */
     public function setOldFolderId(FolderIdType $value)
     {
-        $this->oldFolderId = $this->castValueIfNeeded("oldFolderId", $value);
+        $this->oldFolderId = $value;
         return $this;
     }
 
@@ -62,7 +62,7 @@ class MovedCopiedEventType extends BaseObjectChangedEventType
      */
     public function setOldItemId(ItemIdType $value)
     {
-        $this->oldItemId = $this->castValueIfNeeded("oldItemId", $value);
+        $this->oldItemId = $value;
         return $this;
     }
 
@@ -82,7 +82,7 @@ class MovedCopiedEventType extends BaseObjectChangedEventType
      */
     public function setOldParentFolderId(FolderIdType $value)
     {
-        $this->oldParentFolderId = $this->castValueIfNeeded("oldParentFolderId", $value);
+        $this->oldParentFolderId = $value;
         return $this;
     }
 }

@@ -35,10 +35,8 @@ class ArrayOfRuleOperationsType extends Type
      */
     public function addCreateRuleOperation(CreateRuleOperationType $value)
     {
-        $value = $this->castValueIfNeeded("createRuleOperation", $value);
-
         if ($this->createRuleOperation === null) {
-            $this->createRuleOperation = array();
+                        $this->createRuleOperation = array();
         }
 
         if (!is_array($this->createRuleOperation)) {
@@ -68,7 +66,7 @@ class ArrayOfRuleOperationsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->createRuleOperation = $this->castValueIfNeeded("createRuleOperation", $value);
+        $this->createRuleOperation = $value;
         return $this;
     }
 
@@ -79,10 +77,8 @@ class ArrayOfRuleOperationsType extends Type
      */
     public function addSetRuleOperation(SetRuleOperationType $value)
     {
-        $value = $this->castValueIfNeeded("setRuleOperation", $value);
-
         if ($this->setRuleOperation === null) {
-            $this->setRuleOperation = array();
+                        $this->setRuleOperation = array();
         }
 
         if (!is_array($this->setRuleOperation)) {
@@ -112,7 +108,7 @@ class ArrayOfRuleOperationsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->setRuleOperation = $this->castValueIfNeeded("setRuleOperation", $value);
+        $this->setRuleOperation = $value;
         return $this;
     }
 
@@ -123,10 +119,8 @@ class ArrayOfRuleOperationsType extends Type
      */
     public function addDeleteRuleOperation(DeleteRuleOperationType $value)
     {
-        $value = $this->castValueIfNeeded("deleteRuleOperation", $value);
-
         if ($this->deleteRuleOperation === null) {
-            $this->deleteRuleOperation = array();
+                        $this->deleteRuleOperation = array();
         }
 
         if (!is_array($this->deleteRuleOperation)) {
@@ -156,7 +150,7 @@ class ArrayOfRuleOperationsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deleteRuleOperation = $this->castValueIfNeeded("deleteRuleOperation", $value);
+        $this->deleteRuleOperation = $value;
         return $this;
     }
 }

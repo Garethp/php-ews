@@ -47,7 +47,7 @@ class GroupAttendeeConflictDataType extends AttendeeConflictDataType
      */
     public function setNumberOfMembers($value)
     {
-        $this->numberOfMembers = $this->castValueIfNeeded("numberOfMembers", $value);
+        $this->numberOfMembers = $value;
         return $this;
     }
 
@@ -67,7 +67,7 @@ class GroupAttendeeConflictDataType extends AttendeeConflictDataType
      */
     public function setNumberOfMembersAvailable($value)
     {
-        $this->numberOfMembersAvailable = $this->castValueIfNeeded("numberOfMembersAvailable", $value);
+        $this->numberOfMembersAvailable = $value;
         return $this;
     }
 
@@ -87,7 +87,7 @@ class GroupAttendeeConflictDataType extends AttendeeConflictDataType
      */
     public function setNumberOfMembersWithConflict($value)
     {
-        $this->numberOfMembersWithConflict = $this->castValueIfNeeded("numberOfMembersWithConflict", $value);
+        $this->numberOfMembersWithConflict = $value;
         return $this;
     }
 
@@ -107,7 +107,7 @@ class GroupAttendeeConflictDataType extends AttendeeConflictDataType
      */
     public function setNumberOfMembersWithNoData($value)
     {
-        $this->numberOfMembersWithNoData = $this->castValueIfNeeded("numberOfMembersWithNoData", $value);
+        $this->numberOfMembersWithNoData = $value;
         return $this;
     }
 }

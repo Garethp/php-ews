@@ -37,7 +37,7 @@ class ExportItemsResponseMessageType extends ResponseMessageType
      */
     public function setItemId(\garethp\ews\API\Type\ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class ExportItemsResponseMessageType extends ResponseMessageType
      */
     public function setData($value)
     {
-        $this->data = $this->castValueIfNeeded("data", $value);
+        $this->data = $value;
         return $this;
     }
 }

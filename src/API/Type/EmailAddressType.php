@@ -52,7 +52,7 @@ class EmailAddressType extends BaseEmailAddressType
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -72,7 +72,7 @@ class EmailAddressType extends BaseEmailAddressType
      */
     public function setEmailAddress($value)
     {
-        $this->emailAddress = $this->castValueIfNeeded("emailAddress", $value);
+        $this->emailAddress = $value;
         return $this;
     }
 
@@ -92,7 +92,7 @@ class EmailAddressType extends BaseEmailAddressType
      */
     public function setRoutingType($value)
     {
-        $this->routingType = $this->castValueIfNeeded("routingType", $value);
+        $this->routingType = $value;
         return $this;
     }
 
@@ -112,7 +112,7 @@ class EmailAddressType extends BaseEmailAddressType
      */
     public function setMailboxType($value)
     {
-        $this->mailboxType = $this->castValueIfNeeded("mailboxType", $value);
+        $this->mailboxType = $value;
         return $this;
     }
 
@@ -132,7 +132,7 @@ class EmailAddressType extends BaseEmailAddressType
      */
     public function setItemId(ItemIdType $value)
     {
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 }

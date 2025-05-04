@@ -45,10 +45,8 @@ class ProtectionRuleAndType extends Type
      */
     public function addAllInternal($value)
     {
-        $value = $this->castValueIfNeeded("allInternal", $value);
-
         if ($this->allInternal === null) {
-            $this->allInternal = array();
+                        $this->allInternal = array();
         }
 
         if (!is_array($this->allInternal)) {
@@ -78,7 +76,7 @@ class ProtectionRuleAndType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->allInternal = $this->castValueIfNeeded("allInternal", $value);
+        $this->allInternal = $value;
         return $this;
     }
 
@@ -89,10 +87,8 @@ class ProtectionRuleAndType extends Type
      */
     public function addAnd(ProtectionRuleAndType $value)
     {
-        $value = $this->castValueIfNeeded("and", $value);
-
         if ($this->and === null) {
-            $this->and = array();
+                        $this->and = array();
         }
 
         if (!is_array($this->and)) {
@@ -122,7 +118,7 @@ class ProtectionRuleAndType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->and = $this->castValueIfNeeded("and", $value);
+        $this->and = $value;
         return $this;
     }
 
@@ -133,10 +129,8 @@ class ProtectionRuleAndType extends Type
      */
     public function addRecipientIs($value)
     {
-        $value = $this->castValueIfNeeded("recipientIs", $value);
-
         if ($this->recipientIs === null) {
-            $this->recipientIs = array();
+                        $this->recipientIs = array();
         }
 
         if (!is_array($this->recipientIs)) {
@@ -166,7 +160,7 @@ class ProtectionRuleAndType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recipientIs = $this->castValueIfNeeded("recipientIs", $value);
+        $this->recipientIs = $value;
         return $this;
     }
 
@@ -177,10 +171,8 @@ class ProtectionRuleAndType extends Type
      */
     public function addSenderDepartments($value)
     {
-        $value = $this->castValueIfNeeded("senderDepartments", $value);
-
         if ($this->senderDepartments === null) {
-            $this->senderDepartments = array();
+                        $this->senderDepartments = array();
         }
 
         if (!is_array($this->senderDepartments)) {
@@ -210,7 +202,7 @@ class ProtectionRuleAndType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->senderDepartments = $this->castValueIfNeeded("senderDepartments", $value);
+        $this->senderDepartments = $value;
         return $this;
     }
 
@@ -221,10 +213,8 @@ class ProtectionRuleAndType extends Type
      */
     public function addTrue($value)
     {
-        $value = $this->castValueIfNeeded("true", $value);
-
         if ($this->true === null) {
-            $this->true = array();
+                        $this->true = array();
         }
 
         if (!is_array($this->true)) {
@@ -254,7 +244,7 @@ class ProtectionRuleAndType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->true = $this->castValueIfNeeded("true", $value);
+        $this->true = $value;
         return $this;
     }
 }

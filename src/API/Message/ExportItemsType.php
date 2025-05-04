@@ -23,10 +23,8 @@ class ExportItemsType extends BaseRequestType
      */
     public function addItemIds(\garethp\ews\API\Type\ItemIdType $value)
     {
-        $value = $this->castValueIfNeeded("itemIds", $value);
-
         if ($this->itemIds === null) {
-            $this->itemIds = array();
+                        $this->itemIds = array();
         }
 
         if (!is_array($this->itemIds)) {
@@ -57,7 +55,7 @@ class ExportItemsType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->itemIds = $this->castValueIfNeeded("itemIds", $value);
+        $this->itemIds = $value;
         return $this;
     }
 }

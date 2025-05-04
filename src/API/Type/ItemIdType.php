@@ -48,7 +48,7 @@ class ItemIdType extends BaseItemIdType
      */
     public function setId($value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 
@@ -68,7 +68,7 @@ class ItemIdType extends BaseItemIdType
      */
     public function setChangeKey($value)
     {
-        $this->changeKey = $this->castValueIfNeeded("changeKey", $value);
+        $this->changeKey = $value;
         return $this;
     }
 }

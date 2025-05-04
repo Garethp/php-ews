@@ -51,7 +51,7 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
      */
     public function setUmEnabled($value)
     {
-        $this->umEnabled = $this->castValueIfNeeded("umEnabled", $value);
+        $this->umEnabled = $value;
         return $this;
     }
 
@@ -71,7 +71,7 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
      */
     public function setPlayOnPhoneDialString($value)
     {
-        $this->playOnPhoneDialString = $this->castValueIfNeeded("playOnPhoneDialString", $value);
+        $this->playOnPhoneDialString = $value;
         return $this;
     }
 
@@ -100,7 +100,7 @@ class UnifiedMessageServiceConfigurationType extends ServiceConfigurationType
      */
     public function setPlayOnPhoneEnabled($value)
     {
-        $this->playOnPhoneEnabled = $this->castValueIfNeeded("playOnPhoneEnabled", $value);
+        $this->playOnPhoneEnabled = $value;
         return $this;
     }
 }

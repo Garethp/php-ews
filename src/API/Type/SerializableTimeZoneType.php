@@ -44,7 +44,7 @@ class SerializableTimeZoneType extends Type
      */
     public function setBias($value)
     {
-        $this->bias = $this->castValueIfNeeded("bias", $value);
+        $this->bias = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class SerializableTimeZoneType extends Type
      */
     public function setStandardTime(SerializableTimeZoneTimeType $value)
     {
-        $this->standardTime = $this->castValueIfNeeded("standardTime", $value);
+        $this->standardTime = $value;
         return $this;
     }
 
@@ -84,7 +84,7 @@ class SerializableTimeZoneType extends Type
      */
     public function setDaylightTime(SerializableTimeZoneTimeType $value)
     {
-        $this->daylightTime = $this->castValueIfNeeded("daylightTime", $value);
+        $this->daylightTime = $value;
         return $this;
     }
 }

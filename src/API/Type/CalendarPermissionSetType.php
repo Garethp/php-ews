@@ -30,10 +30,8 @@ class CalendarPermissionSetType extends Type
      */
     public function addCalendarPermissions(CalendarPermissionType $value)
     {
-        $value = $this->castValueIfNeeded("calendarPermissions", $value);
-
         if ($this->calendarPermissions === null) {
-            $this->calendarPermissions = array();
+                        $this->calendarPermissions = array();
         }
 
         if (!is_array($this->calendarPermissions)) {
@@ -63,7 +61,7 @@ class CalendarPermissionSetType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->calendarPermissions = $this->castValueIfNeeded("calendarPermissions", $value);
+        $this->calendarPermissions = $value;
         return $this;
     }
 
@@ -74,10 +72,8 @@ class CalendarPermissionSetType extends Type
      */
     public function addUnknownEntries($value)
     {
-        $value = $this->castValueIfNeeded("unknownEntries", $value);
-
         if ($this->unknownEntries === null) {
-            $this->unknownEntries = array();
+                        $this->unknownEntries = array();
         }
 
         if (!is_array($this->unknownEntries)) {
@@ -107,7 +103,7 @@ class CalendarPermissionSetType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->unknownEntries = $this->castValueIfNeeded("unknownEntries", $value);
+        $this->unknownEntries = $value;
         return $this;
     }
 }

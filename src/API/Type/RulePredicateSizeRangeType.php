@@ -39,7 +39,7 @@ class RulePredicateSizeRangeType extends Type
      */
     public function setMinimumSize($value)
     {
-        $this->minimumSize = $this->castValueIfNeeded("minimumSize", $value);
+        $this->minimumSize = $value;
         return $this;
     }
 
@@ -59,7 +59,7 @@ class RulePredicateSizeRangeType extends Type
      */
     public function setMaximumSize($value)
     {
-        $this->maximumSize = $this->castValueIfNeeded("maximumSize", $value);
+        $this->maximumSize = $value;
         return $this;
     }
 }

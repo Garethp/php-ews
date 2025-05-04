@@ -45,10 +45,8 @@ class NonEmptyArrayOfFoldersType extends Type
      */
     public function addFolder(FolderType $value)
     {
-        $value = $this->castValueIfNeeded("folder", $value);
-
         if ($this->folder === null) {
-            $this->folder = array();
+                        $this->folder = array();
         }
 
         if (!is_array($this->folder)) {
@@ -78,7 +76,7 @@ class NonEmptyArrayOfFoldersType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->folder = $this->castValueIfNeeded("folder", $value);
+        $this->folder = $value;
         return $this;
     }
 
@@ -89,10 +87,8 @@ class NonEmptyArrayOfFoldersType extends Type
      */
     public function addCalendarFolder(CalendarFolderType $value)
     {
-        $value = $this->castValueIfNeeded("calendarFolder", $value);
-
         if ($this->calendarFolder === null) {
-            $this->calendarFolder = array();
+                        $this->calendarFolder = array();
         }
 
         if (!is_array($this->calendarFolder)) {
@@ -122,7 +118,7 @@ class NonEmptyArrayOfFoldersType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->calendarFolder = $this->castValueIfNeeded("calendarFolder", $value);
+        $this->calendarFolder = $value;
         return $this;
     }
 
@@ -133,10 +129,8 @@ class NonEmptyArrayOfFoldersType extends Type
      */
     public function addContactsFolder(ContactsFolderType $value)
     {
-        $value = $this->castValueIfNeeded("contactsFolder", $value);
-
         if ($this->contactsFolder === null) {
-            $this->contactsFolder = array();
+                        $this->contactsFolder = array();
         }
 
         if (!is_array($this->contactsFolder)) {
@@ -166,7 +160,7 @@ class NonEmptyArrayOfFoldersType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->contactsFolder = $this->castValueIfNeeded("contactsFolder", $value);
+        $this->contactsFolder = $value;
         return $this;
     }
 
@@ -177,10 +171,8 @@ class NonEmptyArrayOfFoldersType extends Type
      */
     public function addSearchFolder(SearchFolderType $value)
     {
-        $value = $this->castValueIfNeeded("searchFolder", $value);
-
         if ($this->searchFolder === null) {
-            $this->searchFolder = array();
+                        $this->searchFolder = array();
         }
 
         if (!is_array($this->searchFolder)) {
@@ -210,7 +202,7 @@ class NonEmptyArrayOfFoldersType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->searchFolder = $this->castValueIfNeeded("searchFolder", $value);
+        $this->searchFolder = $value;
         return $this;
     }
 
@@ -221,10 +213,8 @@ class NonEmptyArrayOfFoldersType extends Type
      */
     public function addTasksFolder(TasksFolderType $value)
     {
-        $value = $this->castValueIfNeeded("tasksFolder", $value);
-
         if ($this->tasksFolder === null) {
-            $this->tasksFolder = array();
+                        $this->tasksFolder = array();
         }
 
         if (!is_array($this->tasksFolder)) {
@@ -254,7 +244,7 @@ class NonEmptyArrayOfFoldersType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->tasksFolder = $this->castValueIfNeeded("tasksFolder", $value);
+        $this->tasksFolder = $value;
         return $this;
     }
 }

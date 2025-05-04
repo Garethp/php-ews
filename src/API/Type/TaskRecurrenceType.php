@@ -94,7 +94,7 @@ class TaskRecurrenceType extends Type
      */
     public function setRelativeYearlyRecurrence(RelativeYearlyRecurrencePatternType $value)
     {
-        $this->relativeYearlyRecurrence = $this->castValueIfNeeded("relativeYearlyRecurrence", $value);
+        $this->relativeYearlyRecurrence = $value;
         return $this;
     }
 
@@ -114,7 +114,7 @@ class TaskRecurrenceType extends Type
      */
     public function setAbsoluteYearlyRecurrence(AbsoluteYearlyRecurrencePatternType $value)
     {
-        $this->absoluteYearlyRecurrence = $this->castValueIfNeeded("absoluteYearlyRecurrence", $value);
+        $this->absoluteYearlyRecurrence = $value;
         return $this;
     }
 
@@ -134,7 +134,7 @@ class TaskRecurrenceType extends Type
      */
     public function setRelativeMonthlyRecurrence(RelativeMonthlyRecurrencePatternType $value)
     {
-        $this->relativeMonthlyRecurrence = $this->castValueIfNeeded("relativeMonthlyRecurrence", $value);
+        $this->relativeMonthlyRecurrence = $value;
         return $this;
     }
 
@@ -154,7 +154,7 @@ class TaskRecurrenceType extends Type
      */
     public function setAbsoluteMonthlyRecurrence(AbsoluteMonthlyRecurrencePatternType $value)
     {
-        $this->absoluteMonthlyRecurrence = $this->castValueIfNeeded("absoluteMonthlyRecurrence", $value);
+        $this->absoluteMonthlyRecurrence = $value;
         return $this;
     }
 
@@ -174,7 +174,7 @@ class TaskRecurrenceType extends Type
      */
     public function setWeeklyRecurrence(WeeklyRecurrencePatternType $value)
     {
-        $this->weeklyRecurrence = $this->castValueIfNeeded("weeklyRecurrence", $value);
+        $this->weeklyRecurrence = $value;
         return $this;
     }
 
@@ -194,7 +194,7 @@ class TaskRecurrenceType extends Type
      */
     public function setDailyRecurrence(DailyRecurrencePatternType $value)
     {
-        $this->dailyRecurrence = $this->castValueIfNeeded("dailyRecurrence", $value);
+        $this->dailyRecurrence = $value;
         return $this;
     }
 
@@ -214,7 +214,7 @@ class TaskRecurrenceType extends Type
      */
     public function setDailyRegeneration(DailyRegeneratingPatternType $value)
     {
-        $this->dailyRegeneration = $this->castValueIfNeeded("dailyRegeneration", $value);
+        $this->dailyRegeneration = $value;
         return $this;
     }
 
@@ -234,7 +234,7 @@ class TaskRecurrenceType extends Type
      */
     public function setWeeklyRegeneration(WeeklyRegeneratingPatternType $value)
     {
-        $this->weeklyRegeneration = $this->castValueIfNeeded("weeklyRegeneration", $value);
+        $this->weeklyRegeneration = $value;
         return $this;
     }
 
@@ -254,7 +254,7 @@ class TaskRecurrenceType extends Type
      */
     public function setMonthlyRegeneration(MonthlyRegeneratingPatternType $value)
     {
-        $this->monthlyRegeneration = $this->castValueIfNeeded("monthlyRegeneration", $value);
+        $this->monthlyRegeneration = $value;
         return $this;
     }
 
@@ -274,7 +274,7 @@ class TaskRecurrenceType extends Type
      */
     public function setYearlyRegeneration(YearlyRegeneratingPatternType $value)
     {
-        $this->yearlyRegeneration = $this->castValueIfNeeded("yearlyRegeneration", $value);
+        $this->yearlyRegeneration = $value;
         return $this;
     }
 
@@ -294,7 +294,7 @@ class TaskRecurrenceType extends Type
      */
     public function setNoEndRecurrence(NoEndRecurrenceRangeType $value)
     {
-        $this->noEndRecurrence = $this->castValueIfNeeded("noEndRecurrence", $value);
+        $this->noEndRecurrence = $value;
         return $this;
     }
 
@@ -314,7 +314,7 @@ class TaskRecurrenceType extends Type
      */
     public function setEndDateRecurrence(EndDateRecurrenceRangeType $value)
     {
-        $this->endDateRecurrence = $this->castValueIfNeeded("endDateRecurrence", $value);
+        $this->endDateRecurrence = $value;
         return $this;
     }
 
@@ -334,7 +334,7 @@ class TaskRecurrenceType extends Type
      */
     public function setNumberedRecurrence(NumberedRecurrenceRangeType $value)
     {
-        $this->numberedRecurrence = $this->castValueIfNeeded("numberedRecurrence", $value);
+        $this->numberedRecurrence = $value;
         return $this;
     }
 }

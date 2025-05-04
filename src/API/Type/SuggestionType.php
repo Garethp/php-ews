@@ -18,10 +18,6 @@ class SuggestionType extends Type
      */
     protected $meetingTime = null;
 
-    protected $_typeMap = array(
-        'meetingTime' => 'dateTime',
-    );
-
     /**
      * @var boolean
      */
@@ -53,7 +49,10 @@ class SuggestionType extends Type
      */
     public function setMeetingTime(\DateTime|string $value)
     {
-        $this->meetingTime = $this->castValueIfNeeded("meetingTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->meetingTime = $value;
         return $this;
     }
 
@@ -82,7 +81,7 @@ class SuggestionType extends Type
      */
     public function setIsWorkTime($value)
     {
-        $this->isWorkTime = $this->castValueIfNeeded("isWorkTime", $value);
+        $this->isWorkTime = $value;
         return $this;
     }
 
@@ -102,7 +101,7 @@ class SuggestionType extends Type
      */
     public function setSuggestionQuality($value)
     {
-        $this->suggestionQuality = $this->castValueIfNeeded("suggestionQuality", $value);
+        $this->suggestionQuality = $value;
         return $this;
     }
 
@@ -122,7 +121,7 @@ class SuggestionType extends Type
      */
     public function setAttendeeConflictDataArray(ArrayOfAttendeeConflictDataType $value)
     {
-        $this->attendeeConflictDataArray = $this->castValueIfNeeded("attendeeConflictDataArray", $value);
+        $this->attendeeConflictDataArray = $value;
         return $this;
     }
 }

@@ -131,8 +131,8 @@ trait BuildableTrait
      */
     protected function propertyToXml($name, $property)
     {
-        if (isset($this->_typeMap[lcfirst($name)])) {
-            return $this->castToExchange($property, $this->_typeMap[lcfirst($name)]);
+        if ($property instanceof \DateTime) {
+            $property = $property->format("c");
         }
 
         if ($property instanceof Type) {

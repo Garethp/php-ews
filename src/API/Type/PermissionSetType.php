@@ -30,10 +30,8 @@ class PermissionSetType extends Type
      */
     public function addPermissions(PermissionType $value)
     {
-        $value = $this->castValueIfNeeded("permissions", $value);
-
         if ($this->permissions === null) {
-            $this->permissions = array();
+                        $this->permissions = array();
         }
 
         if (!is_array($this->permissions)) {
@@ -63,7 +61,7 @@ class PermissionSetType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->permissions = $this->castValueIfNeeded("permissions", $value);
+        $this->permissions = $value;
         return $this;
     }
 
@@ -74,10 +72,8 @@ class PermissionSetType extends Type
      */
     public function addUnknownEntries($value)
     {
-        $value = $this->castValueIfNeeded("unknownEntries", $value);
-
         if ($this->unknownEntries === null) {
-            $this->unknownEntries = array();
+                        $this->unknownEntries = array();
         }
 
         if (!is_array($this->unknownEntries)) {
@@ -107,7 +103,7 @@ class PermissionSetType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->unknownEntries = $this->castValueIfNeeded("unknownEntries", $value);
+        $this->unknownEntries = $value;
         return $this;
     }
 }

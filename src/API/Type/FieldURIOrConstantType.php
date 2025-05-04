@@ -49,7 +49,7 @@ class FieldURIOrConstantType extends Type
      */
     public function setFieldURI(FieldURI $value)
     {
-        $this->fieldURI = $this->castValueIfNeeded("fieldURI", $value);
+        $this->fieldURI = $value;
         return $this;
     }
 
@@ -69,7 +69,7 @@ class FieldURIOrConstantType extends Type
      */
     public function setIndexedFieldURI(IndexedFieldURI $value)
     {
-        $this->indexedFieldURI = $this->castValueIfNeeded("indexedFieldURI", $value);
+        $this->indexedFieldURI = $value;
         return $this;
     }
 
@@ -89,7 +89,7 @@ class FieldURIOrConstantType extends Type
      */
     public function setExtendedFieldURI(ExtendedFieldURI $value)
     {
-        $this->extendedFieldURI = $this->castValueIfNeeded("extendedFieldURI", $value);
+        $this->extendedFieldURI = $value;
         return $this;
     }
 
@@ -109,7 +109,7 @@ class FieldURIOrConstantType extends Type
      */
     public function setConstant(ConstantValueType $value)
     {
-        $this->constant = $this->castValueIfNeeded("constant", $value);
+        $this->constant = $value;
         return $this;
     }
 }

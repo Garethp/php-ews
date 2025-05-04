@@ -37,7 +37,7 @@ class ContactsFolderType extends BaseFolderType
      */
     public function setSharingEffectiveRights($value)
     {
-        $this->sharingEffectiveRights = $this->castValueIfNeeded("sharingEffectiveRights", $value);
+        $this->sharingEffectiveRights = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class ContactsFolderType extends BaseFolderType
      */
     public function setPermissionSet(PermissionSetType $value)
     {
-        $this->permissionSet = $this->castValueIfNeeded("permissionSet", $value);
+        $this->permissionSet = $value;
         return $this;
     }
 }

@@ -18,11 +18,6 @@ class CalendarEventType extends Type
      */
     protected $startTime = null;
 
-    protected $_typeMap = array(
-        'startTime' => 'dateTime',
-        'endTime' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -54,7 +49,10 @@ class CalendarEventType extends Type
      */
     public function setStartTime(\DateTime|string $value)
     {
-        $this->startTime = $this->castValueIfNeeded("startTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->startTime = $value;
         return $this;
     }
 
@@ -74,7 +72,10 @@ class CalendarEventType extends Type
      */
     public function setEndTime(\DateTime|string $value)
     {
-        $this->endTime = $this->castValueIfNeeded("endTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->endTime = $value;
         return $this;
     }
 
@@ -94,7 +95,7 @@ class CalendarEventType extends Type
      */
     public function setBusyType($value)
     {
-        $this->busyType = $this->castValueIfNeeded("busyType", $value);
+        $this->busyType = $value;
         return $this;
     }
 
@@ -114,7 +115,7 @@ class CalendarEventType extends Type
      */
     public function setCalendarEventDetails(CalendarEventDetailsType $value)
     {
-        $this->calendarEventDetails = $this->castValueIfNeeded("calendarEventDetails", $value);
+        $this->calendarEventDetails = $value;
         return $this;
     }
 }

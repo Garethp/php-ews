@@ -21,15 +21,6 @@ class CalendarItemType extends ItemType
      */
     protected $recurrenceId = null;
 
-    protected $_typeMap = array(
-        'recurrenceId' => 'dateTime',
-        'dateTimeStamp' => 'dateTime',
-        'start' => 'dateTime',
-        'end' => 'dateTime',
-        'originalStart' => 'dateTime',
-        'appointmentReplyTime' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -251,7 +242,7 @@ class CalendarItemType extends ItemType
      */
     public function setUID($value)
     {
-        $this->uID = $this->castValueIfNeeded("uID", $value);
+        $this->uID = $value;
         return $this;
     }
 
@@ -271,7 +262,10 @@ class CalendarItemType extends ItemType
      */
     public function setRecurrenceId(\DateTime|string $value)
     {
-        $this->recurrenceId = $this->castValueIfNeeded("recurrenceId", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->recurrenceId = $value;
         return $this;
     }
 
@@ -291,7 +285,10 @@ class CalendarItemType extends ItemType
      */
     public function setDateTimeStamp(\DateTime|string $value)
     {
-        $this->dateTimeStamp = $this->castValueIfNeeded("dateTimeStamp", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->dateTimeStamp = $value;
         return $this;
     }
 
@@ -311,7 +308,10 @@ class CalendarItemType extends ItemType
      */
     public function setStart(\DateTime|string $value)
     {
-        $this->start = $this->castValueIfNeeded("start", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->start = $value;
         return $this;
     }
 
@@ -331,7 +331,10 @@ class CalendarItemType extends ItemType
      */
     public function setEnd(\DateTime|string $value)
     {
-        $this->end = $this->castValueIfNeeded("end", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->end = $value;
         return $this;
     }
 
@@ -351,7 +354,10 @@ class CalendarItemType extends ItemType
      */
     public function setOriginalStart(\DateTime|string $value)
     {
-        $this->originalStart = $this->castValueIfNeeded("originalStart", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->originalStart = $value;
         return $this;
     }
 
@@ -380,7 +386,7 @@ class CalendarItemType extends ItemType
      */
     public function setIsAllDayEvent($value)
     {
-        $this->isAllDayEvent = $this->castValueIfNeeded("isAllDayEvent", $value);
+        $this->isAllDayEvent = $value;
         return $this;
     }
 
@@ -400,7 +406,7 @@ class CalendarItemType extends ItemType
      */
     public function setLegacyFreeBusyStatus($value)
     {
-        $this->legacyFreeBusyStatus = $this->castValueIfNeeded("legacyFreeBusyStatus", $value);
+        $this->legacyFreeBusyStatus = $value;
         return $this;
     }
 
@@ -420,7 +426,7 @@ class CalendarItemType extends ItemType
      */
     public function setLocation($value)
     {
-        $this->location = $this->castValueIfNeeded("location", $value);
+        $this->location = $value;
         return $this;
     }
 
@@ -440,7 +446,7 @@ class CalendarItemType extends ItemType
      */
     public function setWhen($value)
     {
-        $this->when = $this->castValueIfNeeded("when", $value);
+        $this->when = $value;
         return $this;
     }
 
@@ -469,7 +475,7 @@ class CalendarItemType extends ItemType
      */
     public function setIsMeeting($value)
     {
-        $this->isMeeting = $this->castValueIfNeeded("isMeeting", $value);
+        $this->isMeeting = $value;
         return $this;
     }
 
@@ -498,7 +504,7 @@ class CalendarItemType extends ItemType
      */
     public function setIsCancelled($value)
     {
-        $this->isCancelled = $this->castValueIfNeeded("isCancelled", $value);
+        $this->isCancelled = $value;
         return $this;
     }
 
@@ -527,7 +533,7 @@ class CalendarItemType extends ItemType
      */
     public function setIsRecurring($value)
     {
-        $this->isRecurring = $this->castValueIfNeeded("isRecurring", $value);
+        $this->isRecurring = $value;
         return $this;
     }
 
@@ -556,7 +562,7 @@ class CalendarItemType extends ItemType
      */
     public function setMeetingRequestWasSent($value)
     {
-        $this->meetingRequestWasSent = $this->castValueIfNeeded("meetingRequestWasSent", $value);
+        $this->meetingRequestWasSent = $value;
         return $this;
     }
 
@@ -585,7 +591,7 @@ class CalendarItemType extends ItemType
      */
     public function setIsResponseRequested($value)
     {
-        $this->isResponseRequested = $this->castValueIfNeeded("isResponseRequested", $value);
+        $this->isResponseRequested = $value;
         return $this;
     }
 
@@ -605,7 +611,7 @@ class CalendarItemType extends ItemType
      */
     public function setCalendarItemType($value)
     {
-        $this->calendarItemType = $this->castValueIfNeeded("calendarItemType", $value);
+        $this->calendarItemType = $value;
         return $this;
     }
 
@@ -625,7 +631,7 @@ class CalendarItemType extends ItemType
      */
     public function setMyResponseType($value)
     {
-        $this->myResponseType = $this->castValueIfNeeded("myResponseType", $value);
+        $this->myResponseType = $value;
         return $this;
     }
 
@@ -645,7 +651,7 @@ class CalendarItemType extends ItemType
      */
     public function setOrganizer(SingleRecipientType $value)
     {
-        $this->organizer = $this->castValueIfNeeded("organizer", $value);
+        $this->organizer = $value;
         return $this;
     }
 
@@ -656,10 +662,8 @@ class CalendarItemType extends ItemType
      */
     public function addRequiredAttendees(AttendeeType $value)
     {
-        $value = $this->castValueIfNeeded("requiredAttendees", $value);
-
         if ($this->requiredAttendees === null) {
-            $this->requiredAttendees = array();
+                        $this->requiredAttendees = array();
         }
 
         if (!is_array($this->requiredAttendees)) {
@@ -689,7 +693,7 @@ class CalendarItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->requiredAttendees = $this->castValueIfNeeded("requiredAttendees", $value);
+        $this->requiredAttendees = $value;
         return $this;
     }
 
@@ -700,10 +704,8 @@ class CalendarItemType extends ItemType
      */
     public function addOptionalAttendees(AttendeeType $value)
     {
-        $value = $this->castValueIfNeeded("optionalAttendees", $value);
-
         if ($this->optionalAttendees === null) {
-            $this->optionalAttendees = array();
+                        $this->optionalAttendees = array();
         }
 
         if (!is_array($this->optionalAttendees)) {
@@ -733,7 +735,7 @@ class CalendarItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->optionalAttendees = $this->castValueIfNeeded("optionalAttendees", $value);
+        $this->optionalAttendees = $value;
         return $this;
     }
 
@@ -744,10 +746,8 @@ class CalendarItemType extends ItemType
      */
     public function addResources(AttendeeType $value)
     {
-        $value = $this->castValueIfNeeded("resources", $value);
-
         if ($this->resources === null) {
-            $this->resources = array();
+                        $this->resources = array();
         }
 
         if (!is_array($this->resources)) {
@@ -777,7 +777,7 @@ class CalendarItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->resources = $this->castValueIfNeeded("resources", $value);
+        $this->resources = $value;
         return $this;
     }
 
@@ -797,7 +797,7 @@ class CalendarItemType extends ItemType
      */
     public function setConflictingMeetingCount($value)
     {
-        $this->conflictingMeetingCount = $this->castValueIfNeeded("conflictingMeetingCount", $value);
+        $this->conflictingMeetingCount = $value;
         return $this;
     }
 
@@ -817,7 +817,7 @@ class CalendarItemType extends ItemType
      */
     public function setAdjacentMeetingCount($value)
     {
-        $this->adjacentMeetingCount = $this->castValueIfNeeded("adjacentMeetingCount", $value);
+        $this->adjacentMeetingCount = $value;
         return $this;
     }
 
@@ -837,7 +837,7 @@ class CalendarItemType extends ItemType
      */
     public function setConflictingMeetings(NonEmptyArrayOfAllItemsType $value)
     {
-        $this->conflictingMeetings = $this->castValueIfNeeded("conflictingMeetings", $value);
+        $this->conflictingMeetings = $value;
         return $this;
     }
 
@@ -857,7 +857,7 @@ class CalendarItemType extends ItemType
      */
     public function setAdjacentMeetings(NonEmptyArrayOfAllItemsType $value)
     {
-        $this->adjacentMeetings = $this->castValueIfNeeded("adjacentMeetings", $value);
+        $this->adjacentMeetings = $value;
         return $this;
     }
 
@@ -877,7 +877,7 @@ class CalendarItemType extends ItemType
      */
     public function setDuration($value)
     {
-        $this->duration = $this->castValueIfNeeded("duration", $value);
+        $this->duration = $value;
         return $this;
     }
 
@@ -897,7 +897,7 @@ class CalendarItemType extends ItemType
      */
     public function setTimeZone($value)
     {
-        $this->timeZone = $this->castValueIfNeeded("timeZone", $value);
+        $this->timeZone = $value;
         return $this;
     }
 
@@ -917,7 +917,10 @@ class CalendarItemType extends ItemType
      */
     public function setAppointmentReplyTime(\DateTime|string $value)
     {
-        $this->appointmentReplyTime = $this->castValueIfNeeded("appointmentReplyTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->appointmentReplyTime = $value;
         return $this;
     }
 
@@ -937,7 +940,7 @@ class CalendarItemType extends ItemType
      */
     public function setAppointmentSequenceNumber($value)
     {
-        $this->appointmentSequenceNumber = $this->castValueIfNeeded("appointmentSequenceNumber", $value);
+        $this->appointmentSequenceNumber = $value;
         return $this;
     }
 
@@ -957,7 +960,7 @@ class CalendarItemType extends ItemType
      */
     public function setAppointmentState($value)
     {
-        $this->appointmentState = $this->castValueIfNeeded("appointmentState", $value);
+        $this->appointmentState = $value;
         return $this;
     }
 
@@ -977,7 +980,7 @@ class CalendarItemType extends ItemType
      */
     public function setRecurrence(RecurrenceType $value)
     {
-        $this->recurrence = $this->castValueIfNeeded("recurrence", $value);
+        $this->recurrence = $value;
         return $this;
     }
 
@@ -997,7 +1000,7 @@ class CalendarItemType extends ItemType
      */
     public function setFirstOccurrence(OccurrenceInfoType $value)
     {
-        $this->firstOccurrence = $this->castValueIfNeeded("firstOccurrence", $value);
+        $this->firstOccurrence = $value;
         return $this;
     }
 
@@ -1017,7 +1020,7 @@ class CalendarItemType extends ItemType
      */
     public function setLastOccurrence(OccurrenceInfoType $value)
     {
-        $this->lastOccurrence = $this->castValueIfNeeded("lastOccurrence", $value);
+        $this->lastOccurrence = $value;
         return $this;
     }
 
@@ -1028,10 +1031,8 @@ class CalendarItemType extends ItemType
      */
     public function addModifiedOccurrences(OccurrenceInfoType $value)
     {
-        $value = $this->castValueIfNeeded("modifiedOccurrences", $value);
-
         if ($this->modifiedOccurrences === null) {
-            $this->modifiedOccurrences = array();
+                        $this->modifiedOccurrences = array();
         }
 
         if (!is_array($this->modifiedOccurrences)) {
@@ -1061,7 +1062,7 @@ class CalendarItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->modifiedOccurrences = $this->castValueIfNeeded("modifiedOccurrences", $value);
+        $this->modifiedOccurrences = $value;
         return $this;
     }
 
@@ -1072,10 +1073,8 @@ class CalendarItemType extends ItemType
      */
     public function addDeletedOccurrences(DeletedOccurrenceInfoType $value)
     {
-        $value = $this->castValueIfNeeded("deletedOccurrences", $value);
-
         if ($this->deletedOccurrences === null) {
-            $this->deletedOccurrences = array();
+                        $this->deletedOccurrences = array();
         }
 
         if (!is_array($this->deletedOccurrences)) {
@@ -1105,7 +1104,7 @@ class CalendarItemType extends ItemType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->deletedOccurrences = $this->castValueIfNeeded("deletedOccurrences", $value);
+        $this->deletedOccurrences = $value;
         return $this;
     }
 
@@ -1125,7 +1124,7 @@ class CalendarItemType extends ItemType
      */
     public function setMeetingTimeZone(TimeZoneType $value)
     {
-        $this->meetingTimeZone = $this->castValueIfNeeded("meetingTimeZone", $value);
+        $this->meetingTimeZone = $value;
         return $this;
     }
 
@@ -1145,7 +1144,7 @@ class CalendarItemType extends ItemType
      */
     public function setStartTimeZone(TimeZoneDefinitionType $value)
     {
-        $this->startTimeZone = $this->castValueIfNeeded("startTimeZone", $value);
+        $this->startTimeZone = $value;
         return $this;
     }
 
@@ -1165,7 +1164,7 @@ class CalendarItemType extends ItemType
      */
     public function setEndTimeZone(TimeZoneDefinitionType $value)
     {
-        $this->endTimeZone = $this->castValueIfNeeded("endTimeZone", $value);
+        $this->endTimeZone = $value;
         return $this;
     }
 
@@ -1185,7 +1184,7 @@ class CalendarItemType extends ItemType
      */
     public function setConferenceType($value)
     {
-        $this->conferenceType = $this->castValueIfNeeded("conferenceType", $value);
+        $this->conferenceType = $value;
         return $this;
     }
 
@@ -1214,7 +1213,7 @@ class CalendarItemType extends ItemType
      */
     public function setAllowNewTimeProposal($value)
     {
-        $this->allowNewTimeProposal = $this->castValueIfNeeded("allowNewTimeProposal", $value);
+        $this->allowNewTimeProposal = $value;
         return $this;
     }
 
@@ -1243,7 +1242,7 @@ class CalendarItemType extends ItemType
      */
     public function setIsOnlineMeeting($value)
     {
-        $this->isOnlineMeeting = $this->castValueIfNeeded("isOnlineMeeting", $value);
+        $this->isOnlineMeeting = $value;
         return $this;
     }
 
@@ -1263,7 +1262,7 @@ class CalendarItemType extends ItemType
      */
     public function setMeetingWorkspaceUrl($value)
     {
-        $this->meetingWorkspaceUrl = $this->castValueIfNeeded("meetingWorkspaceUrl", $value);
+        $this->meetingWorkspaceUrl = $value;
         return $this;
     }
 
@@ -1283,7 +1282,7 @@ class CalendarItemType extends ItemType
      */
     public function setNetShowUrl($value)
     {
-        $this->netShowUrl = $this->castValueIfNeeded("netShowUrl", $value);
+        $this->netShowUrl = $value;
         return $this;
     }
 }

@@ -18,11 +18,6 @@ class RulePredicateDateRangeType extends Type
      */
     protected $startDateTime = null;
 
-    protected $_typeMap = array(
-        'startDateTime' => 'dateTime',
-        'endDateTime' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -44,7 +39,10 @@ class RulePredicateDateRangeType extends Type
      */
     public function setStartDateTime(\DateTime|string $value)
     {
-        $this->startDateTime = $this->castValueIfNeeded("startDateTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->startDateTime = $value;
         return $this;
     }
 
@@ -64,7 +62,10 @@ class RulePredicateDateRangeType extends Type
      */
     public function setEndDateTime(\DateTime|string $value)
     {
-        $this->endDateTime = $this->castValueIfNeeded("endDateTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->endDateTime = $value;
         return $this;
     }
 }

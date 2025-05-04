@@ -35,10 +35,8 @@ class NonEmptyArrayOfPathsToElementType extends Type
      */
     public function addFieldURI(FieldURI $value)
     {
-        $value = $this->castValueIfNeeded("fieldURI", $value);
-
         if ($this->fieldURI === null) {
-            $this->fieldURI = array();
+                        $this->fieldURI = array();
         }
 
         if (!is_array($this->fieldURI)) {
@@ -68,7 +66,7 @@ class NonEmptyArrayOfPathsToElementType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->fieldURI = $this->castValueIfNeeded("fieldURI", $value);
+        $this->fieldURI = $value;
         return $this;
     }
 
@@ -79,10 +77,8 @@ class NonEmptyArrayOfPathsToElementType extends Type
      */
     public function addIndexedFieldURI(IndexedFieldURI $value)
     {
-        $value = $this->castValueIfNeeded("indexedFieldURI", $value);
-
         if ($this->indexedFieldURI === null) {
-            $this->indexedFieldURI = array();
+                        $this->indexedFieldURI = array();
         }
 
         if (!is_array($this->indexedFieldURI)) {
@@ -112,7 +108,7 @@ class NonEmptyArrayOfPathsToElementType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->indexedFieldURI = $this->castValueIfNeeded("indexedFieldURI", $value);
+        $this->indexedFieldURI = $value;
         return $this;
     }
 
@@ -123,10 +119,8 @@ class NonEmptyArrayOfPathsToElementType extends Type
      */
     public function addExtendedFieldURI(ExtendedFieldURI $value)
     {
-        $value = $this->castValueIfNeeded("extendedFieldURI", $value);
-
         if ($this->extendedFieldURI === null) {
-            $this->extendedFieldURI = array();
+                        $this->extendedFieldURI = array();
         }
 
         if (!is_array($this->extendedFieldURI)) {
@@ -156,7 +150,7 @@ class NonEmptyArrayOfPathsToElementType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->extendedFieldURI = $this->castValueIfNeeded("extendedFieldURI", $value);
+        $this->extendedFieldURI = $value;
         return $this;
     }
 }

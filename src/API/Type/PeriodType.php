@@ -44,7 +44,7 @@ class PeriodType extends Type
      */
     public function setBias(\DateInterval $value)
     {
-        $this->bias = $this->castValueIfNeeded("bias", $value);
+        $this->bias = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class PeriodType extends Type
      */
     public function setName($value)
     {
-        $this->name = $this->castValueIfNeeded("name", $value);
+        $this->name = $value;
         return $this;
     }
 
@@ -84,7 +84,7 @@ class PeriodType extends Type
      */
     public function setId($value)
     {
-        $this->id = $this->castValueIfNeeded("id", $value);
+        $this->id = $value;
         return $this;
     }
 }

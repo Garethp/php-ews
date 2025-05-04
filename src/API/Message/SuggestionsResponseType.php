@@ -39,7 +39,7 @@ class SuggestionsResponseType extends Message
      */
     public function setResponseMessage(ResponseMessageType $value)
     {
-        $this->responseMessage = $this->castValueIfNeeded("responseMessage", $value);
+        $this->responseMessage = $value;
         return $this;
     }
 
@@ -50,10 +50,8 @@ class SuggestionsResponseType extends Message
      */
     public function addSuggestionDayResultArray(\garethp\ews\API\Type\SuggestionDayResultType $value)
     {
-        $value = $this->castValueIfNeeded("suggestionDayResultArray", $value);
-
         if ($this->suggestionDayResultArray === null) {
-            $this->suggestionDayResultArray = array();
+                        $this->suggestionDayResultArray = array();
         }
 
         if (!is_array($this->suggestionDayResultArray)) {
@@ -84,7 +82,7 @@ class SuggestionsResponseType extends Message
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->suggestionDayResultArray = $this->castValueIfNeeded("suggestionDayResultArray", $value);
+        $this->suggestionDayResultArray = $value;
         return $this;
     }
 }

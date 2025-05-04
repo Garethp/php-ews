@@ -54,7 +54,7 @@ class UserIdType extends Type
      */
     public function setSID($value)
     {
-        $this->sID = $this->castValueIfNeeded("sID", $value);
+        $this->sID = $value;
         return $this;
     }
 
@@ -74,7 +74,7 @@ class UserIdType extends Type
      */
     public function setPrimarySmtpAddress($value)
     {
-        $this->primarySmtpAddress = $this->castValueIfNeeded("primarySmtpAddress", $value);
+        $this->primarySmtpAddress = $value;
         return $this;
     }
 
@@ -94,7 +94,7 @@ class UserIdType extends Type
      */
     public function setDisplayName($value)
     {
-        $this->displayName = $this->castValueIfNeeded("displayName", $value);
+        $this->displayName = $value;
         return $this;
     }
 
@@ -114,7 +114,7 @@ class UserIdType extends Type
      */
     public function setDistinguishedUser($value)
     {
-        $this->distinguishedUser = $this->castValueIfNeeded("distinguishedUser", $value);
+        $this->distinguishedUser = $value;
         return $this;
     }
 
@@ -134,7 +134,7 @@ class UserIdType extends Type
      */
     public function setExternalUserIdentity($value)
     {
-        $this->externalUserIdentity = $this->castValueIfNeeded("externalUserIdentity", $value);
+        $this->externalUserIdentity = $value;
         return $this;
     }
 }

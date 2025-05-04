@@ -44,7 +44,7 @@ class ExchangeImpersonationType extends Type
      */
     public function setConnectingSID(ConnectingSIDType $value)
     {
-        $this->connectingSID = $this->castValueIfNeeded("connectingSID", $value);
+        $this->connectingSID = $value;
         return $this;
     }
 }

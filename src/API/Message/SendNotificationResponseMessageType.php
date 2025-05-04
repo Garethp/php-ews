@@ -32,7 +32,7 @@ class SendNotificationResponseMessageType extends ResponseMessageType
      */
     public function setNotification(\garethp\ews\API\Type\NotificationType $value)
     {
-        $this->notification = $this->castValueIfNeeded("notification", $value);
+        $this->notification = $value;
         return $this;
     }
 }

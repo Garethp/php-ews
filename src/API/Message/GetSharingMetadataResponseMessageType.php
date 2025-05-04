@@ -28,10 +28,8 @@ class GetSharingMetadataResponseMessageType extends ResponseMessageType
      */
     public function addEncryptedSharedFolderDataCollection(\garethp\ews\API\Type\EncryptedSharedFolderDataType $value)
     {
-        $value = $this->castValueIfNeeded("encryptedSharedFolderDataCollection", $value);
-
         if ($this->encryptedSharedFolderDataCollection === null) {
-            $this->encryptedSharedFolderDataCollection = array();
+                        $this->encryptedSharedFolderDataCollection = array();
         }
 
         if (!is_array($this->encryptedSharedFolderDataCollection)) {
@@ -62,7 +60,7 @@ class GetSharingMetadataResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->encryptedSharedFolderDataCollection = $this->castValueIfNeeded("encryptedSharedFolderDataCollection", $value);
+        $this->encryptedSharedFolderDataCollection = $value;
         return $this;
     }
 
@@ -73,10 +71,8 @@ class GetSharingMetadataResponseMessageType extends ResponseMessageType
      */
     public function addInvalidRecipients(\garethp\ews\API\Type\InvalidRecipientType $value)
     {
-        $value = $this->castValueIfNeeded("invalidRecipients", $value);
-
         if ($this->invalidRecipients === null) {
-            $this->invalidRecipients = array();
+                        $this->invalidRecipients = array();
         }
 
         if (!is_array($this->invalidRecipients)) {
@@ -107,7 +103,7 @@ class GetSharingMetadataResponseMessageType extends ResponseMessageType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->invalidRecipients = $this->castValueIfNeeded("invalidRecipients", $value);
+        $this->invalidRecipients = $value;
         return $this;
     }
 }

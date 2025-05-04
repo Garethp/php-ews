@@ -37,7 +37,7 @@ class CalendarPermissionType extends BasePermissionType
      */
     public function setReadItems($value)
     {
-        $this->readItems = $this->castValueIfNeeded("readItems", $value);
+        $this->readItems = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class CalendarPermissionType extends BasePermissionType
      */
     public function setCalendarPermissionLevel($value)
     {
-        $this->calendarPermissionLevel = $this->castValueIfNeeded("calendarPermissionLevel", $value);
+        $this->calendarPermissionLevel = $value;
         return $this;
     }
 }

@@ -130,10 +130,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addItem(ItemType $value)
     {
-        $value = $this->castValueIfNeeded("item", $value);
-
         if ($this->item === null) {
-            $this->item = array();
+                        $this->item = array();
         }
 
         if (!is_array($this->item)) {
@@ -163,7 +161,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->item = $this->castValueIfNeeded("item", $value);
+        $this->item = $value;
         return $this;
     }
 
@@ -174,10 +172,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addMessage(MessageType $value)
     {
-        $value = $this->castValueIfNeeded("message", $value);
-
         if ($this->message === null) {
-            $this->message = array();
+                        $this->message = array();
         }
 
         if (!is_array($this->message)) {
@@ -207,7 +203,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->message = $this->castValueIfNeeded("message", $value);
+        $this->message = $value;
         return $this;
     }
 
@@ -218,10 +214,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addCalendarItem(CalendarItemType $value)
     {
-        $value = $this->castValueIfNeeded("calendarItem", $value);
-
         if ($this->calendarItem === null) {
-            $this->calendarItem = array();
+                        $this->calendarItem = array();
         }
 
         if (!is_array($this->calendarItem)) {
@@ -251,7 +245,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->calendarItem = $this->castValueIfNeeded("calendarItem", $value);
+        $this->calendarItem = $value;
         return $this;
     }
 
@@ -262,10 +256,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addContact(ContactItemType $value)
     {
-        $value = $this->castValueIfNeeded("contact", $value);
-
         if ($this->contact === null) {
-            $this->contact = array();
+                        $this->contact = array();
         }
 
         if (!is_array($this->contact)) {
@@ -295,7 +287,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->contact = $this->castValueIfNeeded("contact", $value);
+        $this->contact = $value;
         return $this;
     }
 
@@ -306,10 +298,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addDistributionList(DistributionListType $value)
     {
-        $value = $this->castValueIfNeeded("distributionList", $value);
-
         if ($this->distributionList === null) {
-            $this->distributionList = array();
+                        $this->distributionList = array();
         }
 
         if (!is_array($this->distributionList)) {
@@ -339,7 +329,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->distributionList = $this->castValueIfNeeded("distributionList", $value);
+        $this->distributionList = $value;
         return $this;
     }
 
@@ -350,10 +340,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addMeetingMessage(MeetingMessageType $value)
     {
-        $value = $this->castValueIfNeeded("meetingMessage", $value);
-
         if ($this->meetingMessage === null) {
-            $this->meetingMessage = array();
+                        $this->meetingMessage = array();
         }
 
         if (!is_array($this->meetingMessage)) {
@@ -383,7 +371,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->meetingMessage = $this->castValueIfNeeded("meetingMessage", $value);
+        $this->meetingMessage = $value;
         return $this;
     }
 
@@ -394,10 +382,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addMeetingRequest(MeetingRequestMessageType $value)
     {
-        $value = $this->castValueIfNeeded("meetingRequest", $value);
-
         if ($this->meetingRequest === null) {
-            $this->meetingRequest = array();
+                        $this->meetingRequest = array();
         }
 
         if (!is_array($this->meetingRequest)) {
@@ -427,7 +413,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->meetingRequest = $this->castValueIfNeeded("meetingRequest", $value);
+        $this->meetingRequest = $value;
         return $this;
     }
 
@@ -438,10 +424,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addMeetingResponse(MeetingResponseMessageType $value)
     {
-        $value = $this->castValueIfNeeded("meetingResponse", $value);
-
         if ($this->meetingResponse === null) {
-            $this->meetingResponse = array();
+                        $this->meetingResponse = array();
         }
 
         if (!is_array($this->meetingResponse)) {
@@ -471,7 +455,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->meetingResponse = $this->castValueIfNeeded("meetingResponse", $value);
+        $this->meetingResponse = $value;
         return $this;
     }
 
@@ -482,10 +466,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addMeetingCancellation(MeetingCancellationMessageType $value)
     {
-        $value = $this->castValueIfNeeded("meetingCancellation", $value);
-
         if ($this->meetingCancellation === null) {
-            $this->meetingCancellation = array();
+                        $this->meetingCancellation = array();
         }
 
         if (!is_array($this->meetingCancellation)) {
@@ -515,7 +497,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->meetingCancellation = $this->castValueIfNeeded("meetingCancellation", $value);
+        $this->meetingCancellation = $value;
         return $this;
     }
 
@@ -526,10 +508,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addTask(TaskType $value)
     {
-        $value = $this->castValueIfNeeded("task", $value);
-
         if ($this->task === null) {
-            $this->task = array();
+                        $this->task = array();
         }
 
         if (!is_array($this->task)) {
@@ -559,7 +539,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->task = $this->castValueIfNeeded("task", $value);
+        $this->task = $value;
         return $this;
     }
 
@@ -570,10 +550,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addPostItem(PostItemType $value)
     {
-        $value = $this->castValueIfNeeded("postItem", $value);
-
         if ($this->postItem === null) {
-            $this->postItem = array();
+                        $this->postItem = array();
         }
 
         if (!is_array($this->postItem)) {
@@ -603,7 +581,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->postItem = $this->castValueIfNeeded("postItem", $value);
+        $this->postItem = $value;
         return $this;
     }
 
@@ -614,10 +592,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addReplyToItem(ReplyToItemType $value)
     {
-        $value = $this->castValueIfNeeded("replyToItem", $value);
-
         if ($this->replyToItem === null) {
-            $this->replyToItem = array();
+                        $this->replyToItem = array();
         }
 
         if (!is_array($this->replyToItem)) {
@@ -647,7 +623,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->replyToItem = $this->castValueIfNeeded("replyToItem", $value);
+        $this->replyToItem = $value;
         return $this;
     }
 
@@ -658,10 +634,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addForwardItem(ForwardItemType $value)
     {
-        $value = $this->castValueIfNeeded("forwardItem", $value);
-
         if ($this->forwardItem === null) {
-            $this->forwardItem = array();
+                        $this->forwardItem = array();
         }
 
         if (!is_array($this->forwardItem)) {
@@ -691,7 +665,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->forwardItem = $this->castValueIfNeeded("forwardItem", $value);
+        $this->forwardItem = $value;
         return $this;
     }
 
@@ -702,10 +676,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addReplyAllToItem(ReplyAllToItemType $value)
     {
-        $value = $this->castValueIfNeeded("replyAllToItem", $value);
-
         if ($this->replyAllToItem === null) {
-            $this->replyAllToItem = array();
+                        $this->replyAllToItem = array();
         }
 
         if (!is_array($this->replyAllToItem)) {
@@ -735,7 +707,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->replyAllToItem = $this->castValueIfNeeded("replyAllToItem", $value);
+        $this->replyAllToItem = $value;
         return $this;
     }
 
@@ -746,10 +718,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addAcceptItem(AcceptItemType $value)
     {
-        $value = $this->castValueIfNeeded("acceptItem", $value);
-
         if ($this->acceptItem === null) {
-            $this->acceptItem = array();
+                        $this->acceptItem = array();
         }
 
         if (!is_array($this->acceptItem)) {
@@ -779,7 +749,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->acceptItem = $this->castValueIfNeeded("acceptItem", $value);
+        $this->acceptItem = $value;
         return $this;
     }
 
@@ -790,10 +760,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addTentativelyAcceptItem(TentativelyAcceptItemType $value)
     {
-        $value = $this->castValueIfNeeded("tentativelyAcceptItem", $value);
-
         if ($this->tentativelyAcceptItem === null) {
-            $this->tentativelyAcceptItem = array();
+                        $this->tentativelyAcceptItem = array();
         }
 
         if (!is_array($this->tentativelyAcceptItem)) {
@@ -823,7 +791,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->tentativelyAcceptItem = $this->castValueIfNeeded("tentativelyAcceptItem", $value);
+        $this->tentativelyAcceptItem = $value;
         return $this;
     }
 
@@ -834,10 +802,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addDeclineItem(DeclineItemType $value)
     {
-        $value = $this->castValueIfNeeded("declineItem", $value);
-
         if ($this->declineItem === null) {
-            $this->declineItem = array();
+                        $this->declineItem = array();
         }
 
         if (!is_array($this->declineItem)) {
@@ -867,7 +833,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->declineItem = $this->castValueIfNeeded("declineItem", $value);
+        $this->declineItem = $value;
         return $this;
     }
 
@@ -878,10 +844,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addCancelCalendarItem(CancelCalendarItemType $value)
     {
-        $value = $this->castValueIfNeeded("cancelCalendarItem", $value);
-
         if ($this->cancelCalendarItem === null) {
-            $this->cancelCalendarItem = array();
+                        $this->cancelCalendarItem = array();
         }
 
         if (!is_array($this->cancelCalendarItem)) {
@@ -911,7 +875,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->cancelCalendarItem = $this->castValueIfNeeded("cancelCalendarItem", $value);
+        $this->cancelCalendarItem = $value;
         return $this;
     }
 
@@ -922,10 +886,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addRemoveItem(RemoveItemType $value)
     {
-        $value = $this->castValueIfNeeded("removeItem", $value);
-
         if ($this->removeItem === null) {
-            $this->removeItem = array();
+                        $this->removeItem = array();
         }
 
         if (!is_array($this->removeItem)) {
@@ -955,7 +917,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->removeItem = $this->castValueIfNeeded("removeItem", $value);
+        $this->removeItem = $value;
         return $this;
     }
 
@@ -966,10 +928,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addSuppressReadReceipt(SuppressReadReceiptType $value)
     {
-        $value = $this->castValueIfNeeded("suppressReadReceipt", $value);
-
         if ($this->suppressReadReceipt === null) {
-            $this->suppressReadReceipt = array();
+                        $this->suppressReadReceipt = array();
         }
 
         if (!is_array($this->suppressReadReceipt)) {
@@ -999,7 +959,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->suppressReadReceipt = $this->castValueIfNeeded("suppressReadReceipt", $value);
+        $this->suppressReadReceipt = $value;
         return $this;
     }
 
@@ -1010,10 +970,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addPostReplyItem(PostReplyItemType $value)
     {
-        $value = $this->castValueIfNeeded("postReplyItem", $value);
-
         if ($this->postReplyItem === null) {
-            $this->postReplyItem = array();
+                        $this->postReplyItem = array();
         }
 
         if (!is_array($this->postReplyItem)) {
@@ -1043,7 +1001,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->postReplyItem = $this->castValueIfNeeded("postReplyItem", $value);
+        $this->postReplyItem = $value;
         return $this;
     }
 
@@ -1054,10 +1012,8 @@ class NonEmptyArrayOfAllItemsType extends Type
      */
     public function addAcceptSharingInvitation(AcceptSharingInvitationType $value)
     {
-        $value = $this->castValueIfNeeded("acceptSharingInvitation", $value);
-
         if ($this->acceptSharingInvitation === null) {
-            $this->acceptSharingInvitation = array();
+                        $this->acceptSharingInvitation = array();
         }
 
         if (!is_array($this->acceptSharingInvitation)) {
@@ -1087,7 +1043,7 @@ class NonEmptyArrayOfAllItemsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->acceptSharingInvitation = $this->castValueIfNeeded("acceptSharingInvitation", $value);
+        $this->acceptSharingInvitation = $value;
         return $this;
     }
 }

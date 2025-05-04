@@ -37,7 +37,7 @@ class GetItemType extends BaseRequestType
      */
     public function setItemShape(\garethp\ews\API\Type\ItemResponseShapeType $value)
     {
-        $this->itemShape = $this->castValueIfNeeded("itemShape", $value);
+        $this->itemShape = $value;
         return $this;
     }
 
@@ -57,7 +57,7 @@ class GetItemType extends BaseRequestType
      */
     public function setItemIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseItemIdsType $value)
     {
-        $this->itemIds = $this->castValueIfNeeded("itemIds", $value);
+        $this->itemIds = $value;
         return $this;
     }
 }

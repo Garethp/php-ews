@@ -34,7 +34,7 @@ class ProtectionRuleArgumentType extends Type
      */
     public function setValue($value)
     {
-        $this->value = $this->castValueIfNeeded("value", $value);
+        $this->value = $value;
         return $this;
     }
 }

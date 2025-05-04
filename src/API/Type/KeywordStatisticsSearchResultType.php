@@ -44,7 +44,7 @@ class KeywordStatisticsSearchResultType extends Type
      */
     public function setKeyword($value)
     {
-        $this->keyword = $this->castValueIfNeeded("keyword", $value);
+        $this->keyword = $value;
         return $this;
     }
 
@@ -64,7 +64,7 @@ class KeywordStatisticsSearchResultType extends Type
      */
     public function setItemHits($value)
     {
-        $this->itemHits = $this->castValueIfNeeded("itemHits", $value);
+        $this->itemHits = $value;
         return $this;
     }
 
@@ -84,7 +84,7 @@ class KeywordStatisticsSearchResultType extends Type
      */
     public function setSize($value)
     {
-        $this->size = $this->castValueIfNeeded("size", $value);
+        $this->size = $value;
         return $this;
     }
 }

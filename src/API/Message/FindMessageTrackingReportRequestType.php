@@ -46,11 +46,6 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     protected $startDateTime = null;
 
-    protected $_typeMap = array(
-        'startDateTime' => 'dateTime',
-        'endDateTime' => 'dateTime',
-    );
-
     /**
      * @var \DateTime
      */
@@ -97,7 +92,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setScope($value)
     {
-        $this->scope = $this->castValueIfNeeded("scope", $value);
+        $this->scope = $value;
         return $this;
     }
 
@@ -117,7 +112,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setDomain($value)
     {
-        $this->domain = $this->castValueIfNeeded("domain", $value);
+        $this->domain = $value;
         return $this;
     }
 
@@ -137,7 +132,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setSender(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->sender = $this->castValueIfNeeded("sender", $value);
+        $this->sender = $value;
         return $this;
     }
 
@@ -157,7 +152,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setPurportedSender(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->purportedSender = $this->castValueIfNeeded("purportedSender", $value);
+        $this->purportedSender = $value;
         return $this;
     }
 
@@ -177,7 +172,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setRecipient(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->recipient = $this->castValueIfNeeded("recipient", $value);
+        $this->recipient = $value;
         return $this;
     }
 
@@ -197,7 +192,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setSubject($value)
     {
-        $this->subject = $this->castValueIfNeeded("subject", $value);
+        $this->subject = $value;
         return $this;
     }
 
@@ -217,7 +212,10 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setStartDateTime(\DateTime|string $value)
     {
-        $this->startDateTime = $this->castValueIfNeeded("startDateTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->startDateTime = $value;
         return $this;
     }
 
@@ -237,7 +235,10 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setEndDateTime(\DateTime|string $value)
     {
-        $this->endDateTime = $this->castValueIfNeeded("endDateTime", $value);
+        if (is_string($value)) {
+            $value = new \DateTime($value);
+        }
+        $this->endDateTime = $value;
         return $this;
     }
 
@@ -257,7 +258,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setMessageId($value)
     {
-        $this->messageId = $this->castValueIfNeeded("messageId", $value);
+        $this->messageId = $value;
         return $this;
     }
 
@@ -277,7 +278,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setFederatedDeliveryMailbox(\garethp\ews\API\Type\EmailAddressType $value)
     {
-        $this->federatedDeliveryMailbox = $this->castValueIfNeeded("federatedDeliveryMailbox", $value);
+        $this->federatedDeliveryMailbox = $value;
         return $this;
     }
 
@@ -297,7 +298,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setDiagnosticsLevel($value)
     {
-        $this->diagnosticsLevel = $this->castValueIfNeeded("diagnosticsLevel", $value);
+        $this->diagnosticsLevel = $value;
         return $this;
     }
 
@@ -317,7 +318,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function setServerHint($value)
     {
-        $this->serverHint = $this->castValueIfNeeded("serverHint", $value);
+        $this->serverHint = $value;
         return $this;
     }
 
@@ -328,10 +329,8 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
      */
     public function addProperties(\garethp\ews\API\Type\TrackingPropertyType $value)
     {
-        $value = $this->castValueIfNeeded("properties", $value);
-
         if ($this->properties === null) {
-            $this->properties = array();
+                        $this->properties = array();
         }
 
         if (!is_array($this->properties)) {
@@ -362,7 +361,7 @@ class FindMessageTrackingReportRequestType extends BaseRequestType
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->properties = $this->castValueIfNeeded("properties", $value);
+        $this->properties = $value;
         return $this;
     }
 }

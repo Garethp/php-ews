@@ -35,10 +35,8 @@ class NonEmptyArrayOfBaseItemIdsType extends Type
      */
     public function addItemId(ItemIdType $value)
     {
-        $value = $this->castValueIfNeeded("itemId", $value);
-
         if ($this->itemId === null) {
-            $this->itemId = array();
+                        $this->itemId = array();
         }
 
         if (!is_array($this->itemId)) {
@@ -68,7 +66,7 @@ class NonEmptyArrayOfBaseItemIdsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->itemId = $this->castValueIfNeeded("itemId", $value);
+        $this->itemId = $value;
         return $this;
     }
 
@@ -79,10 +77,8 @@ class NonEmptyArrayOfBaseItemIdsType extends Type
      */
     public function addOccurrenceItemId(OccurrenceItemIdType $value)
     {
-        $value = $this->castValueIfNeeded("occurrenceItemId", $value);
-
         if ($this->occurrenceItemId === null) {
-            $this->occurrenceItemId = array();
+                        $this->occurrenceItemId = array();
         }
 
         if (!is_array($this->occurrenceItemId)) {
@@ -112,7 +108,7 @@ class NonEmptyArrayOfBaseItemIdsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->occurrenceItemId = $this->castValueIfNeeded("occurrenceItemId", $value);
+        $this->occurrenceItemId = $value;
         return $this;
     }
 
@@ -123,10 +119,8 @@ class NonEmptyArrayOfBaseItemIdsType extends Type
      */
     public function addRecurringMasterItemId(RecurringMasterItemIdType $value)
     {
-        $value = $this->castValueIfNeeded("recurringMasterItemId", $value);
-
         if ($this->recurringMasterItemId === null) {
-            $this->recurringMasterItemId = array();
+                        $this->recurringMasterItemId = array();
         }
 
         if (!is_array($this->recurringMasterItemId)) {
@@ -156,7 +150,7 @@ class NonEmptyArrayOfBaseItemIdsType extends Type
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->recurringMasterItemId = $this->castValueIfNeeded("recurringMasterItemId", $value);
+        $this->recurringMasterItemId = $value;
         return $this;
     }
 }

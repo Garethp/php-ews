@@ -59,7 +59,7 @@ class PhysicalAddressDictionaryEntryType extends Type
      */
     public function setKey($value)
     {
-        $this->key = $this->castValueIfNeeded("key", $value);
+        $this->key = $value;
         return $this;
     }
 
@@ -79,7 +79,7 @@ class PhysicalAddressDictionaryEntryType extends Type
      */
     public function setStreet($value)
     {
-        $this->street = $this->castValueIfNeeded("street", $value);
+        $this->street = $value;
         return $this;
     }
 
@@ -99,7 +99,7 @@ class PhysicalAddressDictionaryEntryType extends Type
      */
     public function setCity($value)
     {
-        $this->city = $this->castValueIfNeeded("city", $value);
+        $this->city = $value;
         return $this;
     }
 
@@ -119,7 +119,7 @@ class PhysicalAddressDictionaryEntryType extends Type
      */
     public function setState($value)
     {
-        $this->state = $this->castValueIfNeeded("state", $value);
+        $this->state = $value;
         return $this;
     }
 
@@ -139,7 +139,7 @@ class PhysicalAddressDictionaryEntryType extends Type
      */
     public function setCountryOrRegion($value)
     {
-        $this->countryOrRegion = $this->castValueIfNeeded("countryOrRegion", $value);
+        $this->countryOrRegion = $value;
         return $this;
     }
 
@@ -159,7 +159,7 @@ class PhysicalAddressDictionaryEntryType extends Type
      */
     public function setPostalCode($value)
     {
-        $this->postalCode = $this->castValueIfNeeded("postalCode", $value);
+        $this->postalCode = $value;
         return $this;
     }
 }

@@ -147,7 +147,7 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     public function setIndexedPagingOffset($value)
     {
-        $this->indexedPagingOffset = $this->castValueIfNeeded("indexedPagingOffset", $value);
+        $this->indexedPagingOffset = $value;
         return $this;
     }
 
@@ -167,7 +167,7 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     public function setNumeratorOffset($value)
     {
-        $this->numeratorOffset = $this->castValueIfNeeded("numeratorOffset", $value);
+        $this->numeratorOffset = $value;
         return $this;
     }
 
@@ -187,7 +187,7 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     public function setAbsoluteDenominator($value)
     {
-        $this->absoluteDenominator = $this->castValueIfNeeded("absoluteDenominator", $value);
+        $this->absoluteDenominator = $value;
         return $this;
     }
 
@@ -216,7 +216,7 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     public function setIncludesLastItemInRange($value)
     {
-        $this->includesLastItemInRange = $this->castValueIfNeeded("includesLastItemInRange", $value);
+        $this->includesLastItemInRange = $value;
         return $this;
     }
 
@@ -236,7 +236,7 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     public function setTotalItemsInView($value)
     {
-        $this->totalItemsInView = $this->castValueIfNeeded("totalItemsInView", $value);
+        $this->totalItemsInView = $value;
         return $this;
     }
 
@@ -256,7 +256,7 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     public function setItems(ArrayOfRealItemsType $value)
     {
-        $this->items = $this->castValueIfNeeded("items", $value);
+        $this->items = $value;
         return $this;
     }
 
@@ -267,10 +267,8 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
      */
     public function addGroups(GroupedItemsType $value)
     {
-        $value = $this->castValueIfNeeded("groups", $value);
-
         if ($this->groups === null) {
-            $this->groups = array();
+                        $this->groups = array();
         }
 
         if (!is_array($this->groups)) {
@@ -300,7 +298,7 @@ class FindItemParentType extends Type implements Countable, ArrayAccess, Iterato
         if (!is_array($value)) {
             $value = [$value];
         }
-        $this->groups = $this->castValueIfNeeded("groups", $value);
+        $this->groups = $value;
         return $this;
     }
 }

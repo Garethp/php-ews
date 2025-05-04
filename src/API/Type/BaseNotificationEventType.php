@@ -34,7 +34,7 @@ class BaseNotificationEventType extends Type
      */
     public function setWatermark($value)
     {
-        $this->watermark = $this->castValueIfNeeded("watermark", $value);
+        $this->watermark = $value;
         return $this;
     }
 }

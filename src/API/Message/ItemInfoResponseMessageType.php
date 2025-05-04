@@ -32,7 +32,7 @@ class ItemInfoResponseMessageType extends ResponseMessageType
      */
     public function setItems(\garethp\ews\API\Type\ArrayOfRealItemsType $value)
     {
-        $this->items = $this->castValueIfNeeded("items", $value);
+        $this->items = $value;
         return $this;
     }
 }

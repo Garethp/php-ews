@@ -61,7 +61,7 @@ class ResolveNamesType extends BaseRequestType
      */
     public function setReturnFullContactData($value)
     {
-        $this->returnFullContactData = $this->castValueIfNeeded("returnFullContactData", $value);
+        $this->returnFullContactData = $value;
         return $this;
     }
 
@@ -81,7 +81,7 @@ class ResolveNamesType extends BaseRequestType
      */
     public function setSearchScope($value)
     {
-        $this->searchScope = $this->castValueIfNeeded("searchScope", $value);
+        $this->searchScope = $value;
         return $this;
     }
 
@@ -101,7 +101,7 @@ class ResolveNamesType extends BaseRequestType
      */
     public function setContactDataShape($value)
     {
-        $this->contactDataShape = $this->castValueIfNeeded("contactDataShape", $value);
+        $this->contactDataShape = $value;
         return $this;
     }
 
@@ -121,7 +121,7 @@ class ResolveNamesType extends BaseRequestType
      */
     public function setParentFolderIds(\garethp\ews\API\Type\NonEmptyArrayOfBaseFolderIdsType $value)
     {
-        $this->parentFolderIds = $this->castValueIfNeeded("parentFolderIds", $value);
+        $this->parentFolderIds = $value;
         return $this;
     }
 
@@ -141,7 +141,7 @@ class ResolveNamesType extends BaseRequestType
      */
     public function setUnresolvedEntry($value)
     {
-        $this->unresolvedEntry = $this->castValueIfNeeded("unresolvedEntry", $value);
+        $this->unresolvedEntry = $value;
         return $this;
     }
 }
