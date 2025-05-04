@@ -33,12 +33,18 @@ trait BuildableTrait
 
     /**
      * @param $array
+     * @param bool $strict When set to true, we'll use reflection to build the objects
+     *
      * @return static|XmlObject
      */
-    public static function buildFromArray($array)
+    public static function buildFromArray($array, bool $strict = false)
     {
         if (static::class === Type::class) {
-            return XmlObject::buildFromArray($array);
+            return XmlObject::buildFromArray($array, $strict);
+        }
+
+        if ($array instanceof XmlObject && $strict) {
+            $array = (array)$array;
         }
 
         if (!is_array($array)) {
@@ -46,16 +52,34 @@ trait BuildableTrait
         }
 
         if (!self::arrayIsAssoc($array)) {
-            return self::buildArrayFromArray($array);
+            return self::buildArrayFromArray($array, $strict);
         } else {
-            return self::buildObjectFromArray($array);
+            return self::buildObjectFromArray($array, $strict);
         }
     }
 
-    protected static function buildObjectFromArray($array)
+    protected static function buildObjectFromArray($array, bool $strict = false)
     {
         $object = new static();
+        $reflect = new \ReflectionClass(static::class);
+
         foreach ($array as $key => $value) {
+            // If we're in strict mode, let's take the reflection class, check for a setter and try to use that to build
+            // the array, resulting in type-correct responses the whole way down.
+            if ($strict === true && $reflect->hasMethod("set" . ucfirst($key))) {
+                $parameters = $reflect->getMethod("set" . ucfirst($key))->getParameters();
+
+                if (count($parameters) === 1
+                    && $parameters[0]->hasType()
+                    && $parameters[0]->getClass() !== null) {
+                    $classToBuild = $parameters[0]->getClass()->getName();
+
+                    $newValue = call_user_func("$classToBuild::buildFromArray", $value, true);
+                    $object->$key = $newValue;
+                    continue;
+                }
+            }
+
             if (is_array($value)) {
                 $value = self::buildFromArray($value);
             }
@@ -83,7 +107,7 @@ trait BuildableTrait
     public function toXmlObject()
     {
         $objectToReturn = new XmlObject();
-        $objectToReturn->_ = (string) $this;
+        $objectToReturn->_ = (string)$this;
 
         $properties = $this->getNonNullItems(true);
 
@@ -134,7 +158,7 @@ trait BuildableTrait
 
     public static function arrayIsAssoc($array)
     {
-        return (bool) count(array_filter(array_keys($array), 'is_string'));
+        return (bool)count(array_filter(array_keys($array), 'is_string'));
     }
 
     /**

@@ -395,8 +395,12 @@ class ExchangeWebServices
         if (count($items) === 1) {
             reset($items);
             $key = key($items);
-            $methodName = "get$key";
-            $response = $response->$methodName();
+            if ($key === 0) {
+                $response = $items[$key];
+            } else {
+                $methodName = "get$key";
+                $response = $response->$methodName();
+            }
 
             return self::drillDownResponseLevels($response);
         }

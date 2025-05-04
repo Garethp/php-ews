@@ -37,6 +37,15 @@ trait MagicMethodsTrait
 
     public function __set($name, $value)
     {
+        if (is_object($value) && !($value instanceof Type) && property_exists($value, "Entry")) {
+            $value = $value->Entry;
+        }
+
+        if ($this->methodExists("set" . ucfirst($name))) {
+            $this->{"set" . ucfirst($name)}($this->castValueIfNeeded(lcfirst($name), $value));
+            return;
+        }
+
         if (!$this->exists($name) && $this->exists(lcfirst($name))) {
             $name = lcfirst($name);
         }
@@ -47,6 +56,11 @@ trait MagicMethodsTrait
     public function exists($name)
     {
         return property_exists($this, $name);
+    }
+
+    public function methodExists($name)
+    {
+        return method_exists($this, $name);
     }
 
     public function get($name)

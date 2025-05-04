@@ -406,8 +406,9 @@ return \$this->{$prop->getName()};");
             $type = $namespaceClass;
         }
         if (substr($type, -2) === "[]") {
-            $originalType = $type;
-            $type = "array";
+            $originalSingleType = substr($type, 0, -2);
+            $originalType = "$type|$originalSingleType";
+            $type = "array|$originalSingleType";
         }
 
         if ($type === "boolean") {
@@ -443,6 +444,10 @@ return \$this->{$prop->getName()};");
                         new Generator\DocBlock\Tag\GenericTag("@return", $class->getName())
                     ])
             );
+
+        if (str_starts_with($type, "array|")) {
+            $newMethod->setBody("if (!is_array(\$value)) { \n \$value = [\$value];\n } \n" . $newMethod->getBody());
+        }
 
         $generator->addMethodFromGenerator($newMethod);
     }

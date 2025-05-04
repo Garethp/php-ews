@@ -168,4 +168,9 @@ class FindFolderType extends BaseRequestType
         $this->parentFolderIds = $this->castValueIfNeeded("parentFolderIds", $value);
         return $this;
     }
+
+    public static function buildFromArray($array, bool $strict = false)
+    {
+        return parent::buildFromArray($array, true);
+    }
 }
