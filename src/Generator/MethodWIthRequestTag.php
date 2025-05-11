@@ -3,7 +3,7 @@
 
 namespace garethp\ews\Generator;
 
-use Zend\Code\Generator\DocBlock\Tag\MethodTag;
+use Laminas\Code\Generator\DocBlock\Tag\MethodTag;
 
 class MethodWIthRequestTag extends MethodTag
 {

@@ -1,8 +1,4 @@
 <?php
-/**
- * Contains \garethp\ews\API\Enumeration\DeliverMeetingRequestsType.
- */
-
 
 namespace garethp\ews\API\Enumeration;
 

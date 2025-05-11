@@ -1,0 +1,27 @@
+filter:
+  excluded_paths:
+    - 'tests/*'
+    - 'src/API/Type/*'
+    - 'src/API/Message/*'
+    - 'src/Generator/*'
+    - 'examples/*'
+tools:
+  external_code_coverage: true
+checks:
+  php:
+    code_rating: true
+    duplication: true
+coding_style:
+  php:
+    indentation:
+      general:
+        size: 1
+
+build:
+  environment:
+    php: 8.3.1
+  nodes:
+    analysis:
+      tests:
+        override:
+          - php-scrutinizer-run

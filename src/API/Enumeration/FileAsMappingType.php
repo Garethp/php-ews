@@ -1,8 +1,4 @@
 <?php
-/**
- * Contains \garethp\ews\API\Enumeration\FileAsMappingType.
- */
-
 
 namespace garethp\ews\API\Enumeration;
 

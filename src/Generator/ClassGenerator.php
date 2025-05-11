@@ -1,27 +1,30 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gareth
- * Date: 7-8-15
- * Time: 15:51
- */
 
 namespace garethp\ews\Generator;
 
 use garethp\ews\API\Enumeration;
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClassOf;
-use phpDocumentor\Reflection\DocBlock\Tag\VarTag;
 use Zend\Code\Generator;
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPClass;
 use Zend\Code\Generator\DocBlockGenerator;
 use Zend\Code\Generator\PropertyGenerator;
 use Goetas\Xsd\XsdToPhp\Php\Structure\PHPProperty;
-use Zend\Code\Generator\DocBlock\Tag\PropertyTag;
 use Doctrine\Common\Inflector\Inflector;
 
-class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
+/**
+ * This whole class acts as our main generator for our Types and Messages from the xsd specifications. It's responsible
+ * for creating the class, properties and methods that exist within the class. The list of things that we attempt to
+ * handle are:
+ *
+ * * Set the class to extend from either the Type/Message that already exists or a base class that we've created.
+ * * For each property in the xsd schema, we create a property in the class.
+ * * For each property in the xsd schema, we create a getter and setter method.
+ * * For each boolean property in the xsd schema, we create an is method.
+ * * For each array property in the xsd schema, we create an adder method.
+ */
+class ClassGenerator
 {
-    public function fixInterfaces(Generator\ClassGenerator $class)
+    public function fixInterfaces(Generator\ClassGenerator $class): Generator\ClassGenerator
     {
         $interfaces = $class->getImplementedInterfaces();
 
@@ -38,6 +41,11 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
     {
         $class = $this->fixInterfaces($class);
 
+        /**
+         * If the class doesn't already exist and there's a class with the same name as it's namespace
+         * (Example: the class is \garethp\ews\API\Type\EmailAddressType and the class \garethp\ews\API\Type exists)
+         * then we should extend that class.
+         */
         if (!($extends = $type->getExtends()) && class_exists($type->getNamespace())) {
             $extendNamespace = $type->getNamespace();
             $extendNamespace = explode('\\', $extendNamespace);
@@ -109,7 +117,15 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         }
     }
 
-    protected function handleBody(Generator\ClassGenerator $class, PHPClass $type)
+    /**
+     * This acts as our entrypoint to creating the body of the class, all the properties and methods that existing
+     * within it. We loop over the properties twice so that properties will always sit at the top of the class.
+     *
+     * @param Generator\ClassGenerator $class
+     * @param PHPClass $type
+     * @return bool
+     */
+    protected function handleBody(Generator\ClassGenerator $class, PHPClass $type): bool
     {
         $this->handleEnumeration($class, $type);
 
@@ -118,6 +134,7 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
                 $this->handleProperty($class, $prop);
             }
         }
+
         foreach ($type->getProperties() as $prop) {
             if ($prop->getName() !== '__value') {
                 $this->handleMethod($class, $prop, $type);
@@ -131,7 +148,19 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         return true;
     }
 
-    protected function handleProperty(Generator\ClassGenerator $class, PHPProperty $prop)
+    /**
+     * Here we generate the actual property for the class. We check if there's an existing property so that we can
+     * respect any Docblock changes that we've made ourselves. We attach the correct typing to the property since we
+     * don't have features such as Typed Arrays in PHP.
+     *
+     * We also check if the property is a type that we need to do some additional casting on, which is mostly DateTimes,
+     * Dates and Times.
+     *
+     * @param Generator\ClassGenerator $class
+     * @param PHPProperty $prop
+     * @return void
+     */
+    protected function handleProperty(Generator\ClassGenerator $class, PHPProperty $prop): void
     {
         $generatedProp = new PropertyGenerator($prop->getName());
         $generatedProp->setVisibility(PropertyGenerator::VISIBILITY_PROTECTED);
@@ -151,25 +180,18 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $tag = new Generator\DocBlock\Tag();
         $tag->setName("@var {$this->getPropertyType($prop)}");
         $docBlock->setTag($tag);
-
-        $type = $prop->getType();
-        if ($type->type && $this->isTypeMapped($type->type->getName())) {
-            if (!$class->hasProperty('_typeMap')) {
-                $generatedProp = new PropertyGenerator('_typeMap');
-                $generatedProp->setDefaultValue([]);
-                $generatedProp->setVisibility(PropertyGenerator::VISIBILITY_PROTECTED);
-
-                $class->addPropertyFromGenerator($generatedProp);
-            }
-
-            $property = $class->getProperty('_typeMap');
-            $defaultValue = $property->getDefaultValue()->getValue();
-            $defaultValue[$prop->getName()] = $type->type->getName();
-            $property->setDefaultValue($defaultValue);
-        }
     }
 
-    protected function handleMethod(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
+    /**
+     * This acts as our entry point into creating the methods for our properties. For Arrays, we create an adder method,
+     * for boolean properties we create an is method and for all properties we create a getter and setter.
+     *
+     * @param Generator\ClassGenerator $generator
+     * @param PHPProperty $prop
+     * @param PHPClass $class
+     * @return void
+     */
+    protected function handleMethod(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class): void
     {
         if ($prop->getType() instanceof PHPClassOf) {
             $this->handleAdder($generator, $prop, $class);
@@ -183,7 +205,19 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $this->handleSetter($generator, $prop, $class);
     }
 
-    protected function handleAdder(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
+    /**
+     * add* methods are created for properties that are supposed to be collections, so we can add an item onto the
+     * array. However, the property can either be null for no values or a single value (due to how EWS returns
+     * collections), so we have a small check in the add* method to ensure that our property is an array before we add
+     * the value to it. If it's not an array, we convert it to an array (preserving any values in it) and then add the\
+     * item
+     *
+     * @param Generator\ClassGenerator $generator
+     * @param PHPProperty $prop
+     * @param PHPClass $class
+     * @return void
+     */
+    protected function handleAdder(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class): void
     {
         $name = "add" . Inflector::classify($prop->getName());
 
@@ -191,6 +225,7 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $namespace = explode("\\", $type);
         $namespaceClass = array_pop($namespace);
         $namespace = implode("\\", $namespace);
+
         if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
             $type = $namespaceClass;
         }
@@ -198,40 +233,89 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
             $type = substr($type, 0, strlen($type) - 2);
         }
 
-        $fullName = "method {$class->getName()} $name($type \${$prop->getName()})";
+        if ($generator->hasMethod($name)) {
+            if (!$this->isMethodAutoGenerated($generator->getMethod($name))) {
+                return;
+            }
 
-        $docblock = $generator->getDocBlock();
-        $docblock->setWordWrap(false);
+            $generator->removeMethod($name);
+        }
 
-        $tag = new Generator\DocBlock\Tag();
-        $tag->setName($fullName);
+        $generatedMethod = (new Generator\MethodGenerator($name))
+            ->setParameters([['name' => 'value', 'type' => $type]])
+            ->setBody("
+            if (\$this->{$prop->getName()} === null) {
+                \$this->{$prop->getName()} = array();
+            }
 
-        $docblock->setTag($tag);
+            if (!is_array(\$this->{$prop->getName()})) {
+                \$this->{$prop->getName()} = array(\$this->{$prop->getName()});
+            }\n\n\$this->{$prop->getName()}[] = \$value;\nreturn \$this;
+            ")
+            ->setDocBlock(
+                (new DocBlockGenerator())
+                    ->setTags([
+                        new Generator\DocBlock\Tag\GenericTag("@autogenerated", "This method is safe to replace"),
+                        new Generator\DocBlock\Tag\GenericTag("@param", "\$value $type"),
+                        new Generator\DocBlock\Tag\GenericTag("@return", $class->getName())
+                    ])
+            )
+        ;
 
-        return;
+        $generator->addMethodFromGenerator($generatedMethod);
     }
 
-    protected function handleIs(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
+    /**
+     * is* methods are generated for boolean properties, it just returns the property cast as a boolean, which means
+     * that if the property is null it'll return false.
+     *
+     * @param Generator\ClassGenerator $generator
+     * @param PHPProperty $prop
+     * @param PHPClass $class
+     * @return void
+     */
+    protected function handleIs(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class): void
     {
         $name = $prop->getName();
         if (strtolower(substr($name, 0, 2)) !== "is") {
             $name = "is" . Inflector::classify($name);
         }
 
-        $fullName = "method boolean $name()";
+        if ($generator->hasMethod($name)) {
+            if (!$this->isMethodAutoGenerated($generator->getMethod($name))) {
+                return;
+            }
 
-        $docblock = $generator->getDocBlock();
-        $docblock->setWordWrap(false);
+            $generator->removeMethod($name);
+        }
 
-        $tag = new Generator\DocBlock\Tag();
-        $tag->setName($fullName);
+        $newMethod = (new Generator\MethodGenerator($name))
+            ->setBody("return ((bool) \$this->{$prop->getName()});")
+            ->setDocBlock(
+                (new DocBlockGenerator())
+                    ->setTags([
+                        new Generator\DocBlock\Tag\GenericTag("@autogenerated", "This method is safe to replace"),
+                        new Generator\DocBlock\Tag\GenericTag("@return", "bool")
+                    ])
+            );
 
-        $docblock->setTag($tag);
-
-        return;
+        $generator->addMethodFromGenerator($newMethod);
     }
 
-    protected function handleGetter(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
+    /**
+     * This is where we generate our concrete getter method for the property. It's overall pretty simple, getter methods
+     * don't do much, however in a future version we'd like to force returning an array when we have a property that's
+     * meant to be a collection. EWS doesn't actually work like that, collections will sometimes come back as single
+     * items instead so at the moment properties that are meant to be collections can come back as single items. This
+     * will be a breaking change, so I've implemented the logic but left it disabled. Though it's probably going to be
+     * a better idea to handle this in the setter method instead.
+     *
+     * @param Generator\ClassGenerator $generator
+     * @param PHPProperty $prop
+     * @param PHPClass $class
+     * @return void
+     */
+    protected function handleGetter(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class): void
     {
         $type = $this->getPropertyType($prop);
         $namespace = explode("\\", $type);
@@ -242,19 +326,53 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         }
 
         $name = "get" . Inflector::classify($prop->getName());
-        $fullName = "method $type $name()";
 
-        $docblock = $generator->getDocBlock();
+        $ensureArrayWhenGettingArray = false;
 
-        $tag = new Generator\DocBlock\Tag();
-        $tag->setName($fullName);
+        if ($generator->hasMethod($name)) {
+            if (!$ensureArrayWhenGettingArray && !$this->isMethodAutoGenerated($generator->getMethod($name))) {
+                return;
+            }
 
-        $docblock->setTag($tag);
+            $generator->removeMethod($name);
+        }
 
-        return;
+        $newMethod = (new Generator\MethodGenerator($name))
+            ->setDocBlock(
+                (new DocBlockGenerator())
+                    ->setTags([
+                        new Generator\DocBlock\Tag\GenericTag("@autogenerated", "This method is safe to replace"),
+                        new Generator\DocBlock\Tag\GenericTag("@return", $type)
+                    ])
+            );
+
+        if (str_ends_with($type, "[]") && $ensureArrayWhenGettingArray) {
+            $newMethod->setBody("if (!is_array(\$this->{$prop->getName()}) && \$this->{$prop->getName()} !== null) {
+return array(\$this->{$prop->getName()});
+        }
+
+return \$this->{$prop->getName()};");
+        } else {
+            $newMethod->setBody("return \$this->{$prop->getName()};");
+        }
+
+        $generator->addMethodFromGenerator($newMethod);
     }
 
-    protected function handleSetter(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class)
+    /**
+     * Here we generate the setter methods for each property. Type-mapped properties (Date, DateTime, Time) need to also
+     * accept string as a parameter since we'll be casting the value to the correct type. We also need to accept single
+     * values for properties that are meant to be collections. At the moment we're calling a castValueIfNeeded method
+     * for each property, however we want to inline this logic. In the future we probably also want to ensure
+     * collections get cast to arrays when setting them, rather than allowing single values from EWS. This is going to
+     * be a breaking change and require more testing.
+     *
+     * @param Generator\ClassGenerator $generator
+     * @param PHPProperty $prop
+     * @param PHPClass $class
+     * @return void
+     */
+    protected function handleSetter(Generator\ClassGenerator $generator, PHPProperty $prop, PHPClass $class): void
     {
         $name = "set" . Inflector::classify($prop->getName());
 
@@ -262,27 +380,72 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         $namespace = explode("\\", $type);
         $namespaceClass = array_pop($namespace);
         $namespace = implode("\\", $namespace);
+
+        $originalType = "";
+
         if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
             $type = $namespaceClass;
         }
-        if (substr($type, -2) == "[]") {
-            $type = "array";
+        if (substr($type, -2) === "[]") {
+            $originalSingleType = substr($type, 0, -2);
+            $originalType = "$type|$originalSingleType";
+            $type = "array|$originalSingleType";
         }
 
-        $fullName = "method {$class->getName()} $name($type \${$prop->getName()})";
+        if ($type === "boolean") {
+            $type = "bool";
+        }
 
-        $docblock = $generator->getDocBlock();
-        $docblock->setWordWrap(false);
+        if ($type === "integer") {
+            $type = "int";
+        }
 
-        $tag = new Generator\DocBlock\Tag();
-        $tag->setName($fullName);
+        if ($type === "\\DateTime") {
+            $type = "\\DateTime|string";
+        }
 
-        $docblock->setTag($tag);
+        if ($generator->hasMethod($name)) {
+            if (!$this->isMethodAutoGenerated($generator->getMethod($name))) {
+                return;
+            }
 
-        return;
+            $generator->removeMethod($name);
+        }
+
+        $docblockType = $originalType === "" ? $type : $originalType;
+
+        $newMethod = (new Generator\MethodGenerator($name))
+            ->setParameters([['name' => 'value', 'type' => $type]])
+            ->setBody("\$this->{$prop->getName()} = \$value;\nreturn \$this;")
+            ->setDocBlock(
+                (new DocBlockGenerator())
+                    ->setTags([
+                        new Generator\DocBlock\Tag\GenericTag("@autogenerated", "This method is safe to replace"),
+                        new Generator\DocBlock\Tag\GenericTag("@param", "\$value $docblockType"),
+                        new Generator\DocBlock\Tag\GenericTag("@return", $class->getName())
+                    ])
+            );
+
+        if (str_starts_with($type, "array|")) {
+            $newMethod->setBody("if (!is_array(\$value)) { \n \$value = [\$value];\n } \n" . $newMethod->getBody());
+        }
+
+        if ($type === "\\DateTime|string") {
+            $newMethod->setBody("if (is_string(\$value)) { \n \$value = new \\DateTime(\$value);\n } \n" . $newMethod->getBody());
+        }
+
+        $generator->addMethodFromGenerator($newMethod);
     }
 
-    protected function handleEnumeration(Generator\ClassGenerator $class, PHPClass $type)
+    /**
+     * If the type that we fetched from the xsd schema has an enumeration check on it's value, then we can create those
+     * enumerated constants on the class.
+     *
+     * @param Generator\ClassGenerator $class
+     * @param PHPClass $type
+     * @return void
+     */
+    protected function handleEnumeration(Generator\ClassGenerator $class, PHPClass $type): void
     {
         if ($type->getChecks('__value') && isset($type->getChecks('__value')['enumeration'])) {
             $enums = $type->getChecks('__value')['enumeration'];
@@ -314,10 +477,10 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
     protected function isOneType(PHPClass $type, $onlyParent = false)
     {
         if ($onlyParent) {
-            $e = $type->getExtends();
-            if ($e) {
-                if ($e->hasProperty('__value')) {
-                    return $e->getProperty('__value');
+            $extension = $type->getExtends();
+            if ($extension) {
+                if ($extension->hasProperty('__value')) {
+                    return $extension->getProperty('__value');
                 }
             }
         } else {
@@ -327,11 +490,17 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         }
     }
 
-    protected function getPhpType(PHPClass $class)
+    /**
+     * Gets the FQN of the PHP Type for the given class
+     *
+     * @param PHPClass $class
+     * @return string|null
+     */
+    protected function getPhpType(PHPClass $class): ?string
     {
         if (!$class->getNamespace()) {
             if ($this->isNativeType($class)) {
-                return $class->getName();
+                return (string) $class->getName();
             }
 
             return "\\" . $class->getName();
@@ -340,40 +509,68 @@ class ClassGenerator extends \Goetas\Xsd\XsdToPhp\Php\ClassGenerator
         return "\\" . $class->getFullName();
     }
 
-    protected function isNativeType(PHPClass $class)
+    /**
+     * Checks whether the given class is a PHP Native Type or not
+     *
+     * @param PHPClass $class
+     * @return bool
+     */
+    protected function isNativeType(PHPClass $class): bool
     {
         return !$class->getNamespace() && in_array($class->getName(), [
-            'string',
-            'int',
-            'float',
-            'integer',
-            'boolean',
-            'array',
-            'mixed',
-            'callable'
-        ]);
+                'string',
+                'int',
+                'float',
+                'integer',
+                'boolean',
+                'array',
+                'mixed',
+                'callable'
+            ]);
     }
 
-    protected function isTypeMapped($class)
+    /**
+     * Checks whether we've auto-generated a method or not based on the presence of the @autogenerated tag in the
+     * DocBlock. This is useful for when we need to regenerate the class and don't want to overwrite any custom
+     * changes that have been made.
+     *
+     * @param Generator\MethodGenerator $method
+     * @return bool
+     */
+    protected function isMethodAutoGenerated(Generator\MethodGenerator $method): bool
     {
-        $classMap = [
-            'dateTime',
-            'time',
-            'date'
-        ];
-
-        return in_array($class, $classMap);
+        $tags = $method->getDocBlock()?->getTags() ?? [];
+        return count(array_filter($tags, static function ($tag) {
+                return $tag->getName() === "autogenerated";
+        })) !== 0;
     }
 
-    protected function getPropertyType($property)
+    /**
+     * Here, we fetch the PHP Type for a property. This won't be our concrete type-hint, since we'll return typed arrays
+     * such as "EmailAddress[]" however it'll return the information that we actually care about
+     *
+     * @param $property
+     * @return string
+     */
+    protected function getPropertyType($property): string
     {
         $type = $property->getType();
         $returnType = "";
 
+        // For some reason we were generating properties that were expecting a \garethp\ews\API\Type\LangAType for the
+        // xml property "lang" on ReplyBodyType without actually generating a "LangAType" class. Looking at EWS
+        // documentation it should just be the language code as a string, so we manually set it to be a string.
+        if ($property->getName() === "lang" && $type->getName() === "LangAType") {
+            return "string";
+        }
+
+        // PHPClassOf indicates that it's a collection of a single type. Even though we don't have typed arrays in PHP,
+        // we'll still return it as a typed array for Docblock purposes. When we create the actual concrete type-hints
+        // we'll detect it and turn it into array|SingleType.
         if ($type && $type instanceof PHPClassOf) {
-            $tt = $type->getArg()->getType();
-            $returnType = $this->getPhpType($tt) . "[]";
-            if ($p = $this->isOneType($tt)) {
+            $singleType = $type->getArg()->getType();
+            $returnType = $this->getPhpType($singleType) . "[]";
+            if ($p = $this->isOneType($singleType)) {
                 if (($t = $p->getType())) {
                     $returnType = $this->getPhpType($t) . "[]";
                 }

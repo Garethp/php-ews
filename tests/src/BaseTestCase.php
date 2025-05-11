@@ -40,7 +40,7 @@ class BaseTestCase extends TestCase
             [
                 'httpPlayback' => [
                     'mode' => $mode,
-                    'recordFileName' => static::class . '.' . $this->getName() . '.json',
+                    'recordFileName' => static::class . '.' . $this->name() . '.json',
                     'recordLocation' => realpath(__DIR__ . '/../../Resources/recordings')
                 ]
             ]
