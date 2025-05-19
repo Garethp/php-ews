@@ -18,6 +18,10 @@ trait MagicMethodsTrait
             $value = $value->Entry;
         }
 
+        if (is_object($value) && !($value instanceof Type) && property_exists($value, "Member")) {
+            $value = $value->Member;
+        }
+
         if ($this->methodExists("set" . ucfirst($name))) {
             $this->{"set" . ucfirst($name)}($value);
             return;
