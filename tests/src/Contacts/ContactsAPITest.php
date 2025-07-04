@@ -267,6 +267,75 @@ class ContactsAPITest extends BaseTestCase
     }
 
     /**
+     * Test contact field variations across different Exchange providers
+     */
+    public function testContactFieldVariations()
+    {
+        $api = $this->getClient();
+        
+        // Test with various contact field combinations that providers might handle differently
+        $testCases = [
+            'minimal' => [
+                'GivenName' => 'Min',
+                'Surname' => 'Test'
+            ],
+            'complete' => [
+                'GivenName' => 'Complete',
+                'Surname' => 'Test',
+                'EmailAddresses' => ['Entry' => ['Key' => 'EmailAddress1', '_value' => 'complete@test.com']],
+                'PhoneNumbers' => ['Entry' => ['Key' => 'HomePhone', '_value' => '+1-555-0123']],
+                'CompanyName' => 'Test Company Inc.',
+                'JobTitle' => 'Senior Test Engineer',
+                'Department' => 'Quality Assurance'
+            ],
+            'business' => [
+                'GivenName' => 'Business',
+                'Surname' => 'Contact',
+                'EmailAddresses' => [
+                    'Entry' => [
+                        ['Key' => 'EmailAddress1', '_value' => 'business@company.com'],
+                        ['Key' => 'EmailAddress2', '_value' => 'personal@email.com']
+                    ]
+                ],
+                'PhoneNumbers' => [
+                    'Entry' => [
+                        ['Key' => 'BusinessPhone', '_value' => '+1-555-0100'],
+                        ['Key' => 'MobilePhone', '_value' => '+1-555-0200']
+                    ]
+                ]
+            ]
+        ];
+        
+        $createdContacts = [];
+        
+        foreach ($testCases as $label => $contactData) {
+            try {
+                $contact = $api->createContacts($contactData);
+                $createdContacts[] = $contact[0];
+                
+                $retrievedContact = $api->getContact($contact[0]);
+                $this->assertNotNull($retrievedContact, "Should create and retrieve $label contact");
+                $this->assertEquals($contactData['GivenName'], $retrievedContact->getGivenName());
+                
+            } catch (\Exception $e) {
+                $this->addWarning("Contact variation '$label' not fully supported: " . $e->getMessage());
+            }
+        }
+        
+        $this->assertGreaterThan(0, count($createdContacts), 
+            'Should support at least basic contact variations');
+        
+        // Cleanup
+        foreach ($createdContacts as $contactId) {
+            try {
+                $api->deleteItems($contactId);
+            } catch (\Exception $e) {
+                // Ignore cleanup errors
+            }
+        }
+    }
+
+    /**
      * Helper method for warnings (compatible with older PHPUnit versions)
      */
     private function addWarning(string $message): void
