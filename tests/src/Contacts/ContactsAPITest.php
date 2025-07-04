@@ -336,6 +336,49 @@ class ContactsAPITest extends BaseTestCase
     }
 
     /**
+     * Test contact performance with bulk operations
+     */
+    public function testContactBulkOperations()
+    {
+        $api = $this->getClient();
+        
+        $startTime = microtime(true);
+        
+        // Create multiple contacts to test bulk performance
+        $contacts = [];
+        for ($i = 1; $i <= 10; $i++) {
+            $contacts[] = [
+                'GivenName' => "Bulk$i",
+                'Surname' => 'Test',
+                'EmailAddresses' => ['Entry' => ['Key' => 'EmailAddress1', '_value' => "bulk$i@test.com"]]
+            ];
+        }
+        
+        try {
+            $createdContacts = $api->createContacts($contacts);
+            $creationTime = microtime(true) - $startTime;
+            
+            $this->assertCount(10, $createdContacts, 'Should create all bulk contacts');
+            $this->assertLessThan(30, $creationTime, 'Bulk creation should complete within 30 seconds');
+            
+            // Test bulk retrieval
+            $startTime = microtime(true);
+            $allContacts = $api->getContacts();
+            $retrievalTime = microtime(true) - $startTime;
+            
+            $this->assertGreaterThanOrEqual(10, count($allContacts), 
+                'Should retrieve at least the created contacts');
+            $this->assertLessThan(10, $retrievalTime, 'Bulk retrieval should complete within 10 seconds');
+            
+            // Cleanup
+            $api->deleteItems($createdContacts);
+            
+        } catch (\Exception $e) {
+            $this->fail('Bulk contact operations should work on all providers: ' . $e->getMessage());
+        }
+    }
+
+    /**
      * Helper method for warnings (compatible with older PHPUnit versions)
      */
     private function addWarning(string $message): void
