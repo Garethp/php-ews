@@ -153,4 +153,32 @@ class CalendarTest extends BaseTestCase
         $this->assertNotNull($event->getStart(), 'Event should have start time');
         $this->assertNotNull($event->getEnd(), 'Event should have end time');
     }
+
+    /**
+     * Test calendar with international characters and Unicode handling
+     */
+    public function testCalendarInternationalCharacters()
+    {
+        $client = $this->getClient();
+        
+        $start = new \DateTime('2015-07-01 16:00:00');
+        $end = new \DateTime('2015-07-01 17:00:00');
+        
+        // Create event with international characters
+        $items = $client->createCalendarItems([
+            'Subject' => 'Réunion équipe - Café & Discusion',
+            'Start' => $start->format('c'),
+            'End' => $end->format('c'),
+            'Location' => 'Salle de réunion #1'
+        ]);
+        
+        $this->assertNotEmpty($items, 'Should handle international characters');
+        
+        $retrievedItems = $client->getCalendarItems($start->format('c'), $end->format('c'));
+        $this->assertNotEmpty($retrievedItems, 'Should retrieve items with international characters');
+        
+        $event = $retrievedItems[0];
+        $this->assertStringContainsString('Réunion', $event->getSubject(), 
+            'Should preserve international characters in subject');
+    }
 }
