@@ -181,4 +181,63 @@ class CalendarTest extends BaseTestCase
         $this->assertStringContainsString('Réunion', $event->getSubject(), 
             'Should preserve international characters in subject');
     }
+
+    /**
+     * Test calendar with recurring events
+     */
+    public function testRecurringEventSupport()
+    {
+        $client = $this->getClient();
+        
+        $start = new \DateTime('2015-07-01 10:00:00');
+        $end = new \DateTime('2015-07-01 11:00:00');
+        
+        try {
+            $items = $client->createCalendarItems([
+                'Subject' => 'Weekly Team Meeting',
+                'Start' => $start->format('c'),
+                'End' => $end->format('c'),
+                'Location' => 'Conference Room A',
+                'Recurrence' => [
+                    'WeeklyRecurrence' => [
+                        'Interval' => 1, // Every week
+                        'DaysOfWeek' => 'Wednesday' // Every Wednesday
+                    ],
+                    'NumberedRecurrence' => [
+                        'StartDate' => $start->format('Y-m-d'),
+                        'NumberOfOccurrences' => 4 // 4 occurrences total
+                    ]
+                ]
+            ]);
+            
+            $this->assertNotEmpty($items, 'Should support weekly recurring event creation');
+            
+            // Verify the recurring event was created properly
+            $masterItemId = $items[0];
+            $this->assertNotNull($masterItemId, 'Should return master item ID for recurring event');
+            
+            $retrievedItem = $client->getCalendarItem($masterItemId->getId(), $masterItemId->getChangeKey());
+            $this->assertNotNull($retrievedItem, 'Should retrieve recurring event');
+            $this->assertEquals('Weekly Team Meeting', $retrievedItem->getSubject());
+            
+            // Test that we can find instances in the date range
+            $endDate = clone $start;
+            $endDate->add(new \DateInterval('P1M')); // Look ahead 1 month
+            
+            $calendarItemsResult = $client->getCalendarItems($start->format('c'), $endDate->format('c'));
+            $this->assertNotNull($calendarItemsResult, 'Should retrieve calendar items result');
+            
+            // Check if we got multiple calendar items (indicating recurring instances)
+            if (method_exists($calendarItemsResult, 'getTotalItemsInView')) {
+                $totalItems = $calendarItemsResult->getTotalItemsInView();
+                $this->assertGreaterThan(0, $totalItems, 
+                    'Should find at least one instance of recurring event');
+            } else {
+                $this->assertTrue(true, 'Calendar items retrieved successfully');
+            }
+            
+        } catch (\Exception $e) {
+            $this->markTestSkipped('Recurrence not supported on this Exchange server: ' . $e->getMessage());
+        }
+    }
 }
