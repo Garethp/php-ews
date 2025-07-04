@@ -124,4 +124,33 @@ class CalendarTest extends BaseTestCase
         $items = $client->getCalendarItems($start->format('c'), $end->format('c'));
         $this->assertEmpty($items);
     }
+
+    /**
+     * Test calendar functionality with different timezone configurations
+     */
+    public function testCalendarTimezoneHandling()
+    {
+        $client = $this->getClient();
+        
+        // Create event with explicit timezone
+        $start = new \DateTime('2015-07-01 14:00:00', new \DateTimeZone('Europe/Paris'));
+        $end = new \DateTime('2015-07-01 15:00:00', new \DateTimeZone('Europe/Paris'));
+        
+        $items = $client->createCalendarItems([
+            'Subject' => 'Timezone Test Event',
+            'Start' => $start->format('c'),
+            'End' => $end->format('c'),
+            'Location' => 'Paris Office'
+        ]);
+        
+        $this->assertNotEmpty($items, 'Should create calendar items with timezone info');
+        
+        $retrievedItems = $client->getCalendarItems($start->format('c'), $end->format('c'));
+        $this->assertNotEmpty($retrievedItems, 'Should retrieve calendar items with timezone');
+        
+        $event = $retrievedItems[0];
+        $this->assertEquals('Timezone Test Event', $event->getSubject());
+        $this->assertNotNull($event->getStart(), 'Event should have start time');
+        $this->assertNotNull($event->getEnd(), 'Event should have end time');
+    }
 }
