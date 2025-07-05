@@ -126,32 +126,35 @@ class CalendarTest extends BaseTestCase
     }
 
     /**
-     * Test calendar functionality with different timezone configurations
+     * Test calendar functionality with timezone handling
      */
     public function testCalendarTimezoneHandling()
     {
         $client = $this->getClient();
-        
-        // Create event with explicit timezone
-        $start = new \DateTime('2015-07-01 14:00:00', new \DateTimeZone('Europe/Paris'));
-        $end = new \DateTime('2015-07-01 15:00:00', new \DateTimeZone('Europe/Paris'));
-        
+
+        $parisStart = new \DateTime('2015-07-01 14:00:00', new \DateTimeZone('Europe/Paris'));
+        $parisEnd = new \DateTime('2015-07-01 15:00:00', new \DateTimeZone('Europe/Paris'));
+
         $items = $client->createCalendarItems([
-            'Subject' => 'Timezone Test Event',
-            'Start' => $start->format('c'),
-            'End' => $end->format('c'),
-            'Location' => 'Paris Office'
+            'Subject' => 'Timezone Test Meeting',
+            'Start' => $parisStart->format('c'),
+            'End' => $parisEnd->format('c')
         ]);
-        
+
         $this->assertNotEmpty($items, 'Should create calendar items with timezone info');
-        
-        $retrievedItems = $client->getCalendarItems($start->format('c'), $end->format('c'));
-        $this->assertNotEmpty($retrievedItems, 'Should retrieve calendar items with timezone');
-        
+
+        $retrievedItems = $client->getCalendarItems($parisStart->format('c'), $parisEnd->format('c'));
         $event = $retrievedItems[0];
-        $this->assertEquals('Timezone Test Event', $event->getSubject());
-        $this->assertNotNull($event->getStart(), 'Event should have start time');
-        $this->assertNotNull($event->getEnd(), 'Event should have end time');
+
+        // Convert both original and retrieved times to UTC for comparison
+        $originalUtc = new \DateTime('2015-07-01 14:00:00', new \DateTimeZone('Europe/Paris'));
+        $originalUtc->setTimezone(new \DateTimeZone('UTC'));
+
+        $retrievedUtc = clone $event->getStart();
+        $retrievedUtc->setTimezone(new \DateTimeZone('UTC'));
+
+        $this->assertEquals($originalUtc->format('H:i'), $retrievedUtc->format('H:i'), 
+            'EWS should preserve timezone-correct time data');
     }
 
     /**
@@ -161,8 +164,8 @@ class CalendarTest extends BaseTestCase
     {
         $client = $this->getClient();
         
-        $start = new \DateTime('2015-07-01 16:00:00');
-        $end = new \DateTime('2015-07-01 17:00:00');
+        $start = new \DateTime('2025-07-01 16:00:00');
+        $end = new \DateTime('2025-07-01 17:00:00');
         
         // Create event with international characters
         $items = $client->createCalendarItems([
@@ -189,8 +192,8 @@ class CalendarTest extends BaseTestCase
     {
         $client = $this->getClient();
         
-        $start = new \DateTime('2015-07-01 10:00:00');
-        $end = new \DateTime('2015-07-01 11:00:00');
+        $start = new \DateTime('2025-07-01 10:00:00');
+        $end = new \DateTime('2025-07-01 11:00:00');
         
         try {
             $items = $client->createCalendarItems([
@@ -201,11 +204,11 @@ class CalendarTest extends BaseTestCase
                 'Recurrence' => [
                     'WeeklyRecurrence' => [
                         'Interval' => 1, // Every week
-                        'DaysOfWeek' => 'Wednesday' // Every Wednesday
+                        'DaysOfWeek' => 'Wednesday'
                     ],
                     'NumberedRecurrence' => [
                         'StartDate' => $start->format('Y-m-d'),
-                        'NumberOfOccurrences' => 4 // 4 occurrences total
+                        'NumberOfOccurrences' => 4
                     ]
                 ]
             ]);
