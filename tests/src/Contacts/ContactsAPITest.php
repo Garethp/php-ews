@@ -244,17 +244,22 @@ class ContactsAPITest extends BaseTestCase
                 // Verify the contact can be retrieved with correct encoding
                 $retrievedContact = $api->getContact($contact[0]);
                 $this->assertNotNull($retrievedContact, 'Should retrieve international contact');
-                $this->assertEquals($contactData['GivenName'], $retrievedContact->getGivenName(),
-                    'Should preserve international characters in first name');
-                
+                $this->assertEquals(
+                    $contactData['GivenName'],
+                    $retrievedContact->getGivenName(),
+                    'Should preserve international characters in first name'
+                );
             } catch (\Exception $e) {
                 // Some providers might have limited international support
                 $this->addWarning('International contact support limited: ' . $e->getMessage());
             }
         }
         
-        $this->assertGreaterThan(0, count($createdContacts), 
-            'Should support at least basic international characters');
+        $this->assertGreaterThan(
+            0,
+            count($createdContacts),
+            'Should support at least basic international characters'
+        );
         
         // Cleanup
         foreach ($createdContacts as $contactId) {
@@ -316,14 +321,16 @@ class ContactsAPITest extends BaseTestCase
                 $retrievedContact = $api->getContact($contact[0]);
                 $this->assertNotNull($retrievedContact, "Should create and retrieve $label contact");
                 $this->assertEquals($contactData['GivenName'], $retrievedContact->getGivenName());
-                
             } catch (\Exception $e) {
                 $this->addWarning("Contact variation '$label' not fully supported: " . $e->getMessage());
             }
         }
         
-        $this->assertGreaterThan(0, count($createdContacts), 
-            'Should support at least basic contact variations');
+        $this->assertGreaterThan(
+            0,
+            count($createdContacts),
+            'Should support at least basic contact variations'
+        );
         
         // Cleanup
         foreach ($createdContacts as $contactId) {
@@ -366,13 +373,15 @@ class ContactsAPITest extends BaseTestCase
             $allContacts = $api->getContacts();
             $retrievalTime = microtime(true) - $startTime;
             
-            $this->assertGreaterThanOrEqual(10, count($allContacts), 
-                'Should retrieve at least the created contacts');
+            $this->assertGreaterThanOrEqual(
+                10,
+                count($allContacts),
+                'Should retrieve at least the created contacts'
+            );
             $this->assertLessThan(10, $retrievalTime, 'Bulk retrieval should complete within 10 seconds');
             
             // Cleanup
             $api->deleteItems($createdContacts);
-            
         } catch (\Exception $e) {
             $this->fail('Bulk contact operations should work on all providers: ' . $e->getMessage());
         }

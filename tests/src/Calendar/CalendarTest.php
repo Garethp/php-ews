@@ -153,8 +153,11 @@ class CalendarTest extends BaseTestCase
         $retrievedUtc = clone $event->getStart();
         $retrievedUtc->setTimezone(new \DateTimeZone('UTC'));
 
-        $this->assertEquals($originalUtc->format('H:i'), $retrievedUtc->format('H:i'), 
-            'EWS should preserve timezone-correct time data');
+        $this->assertEquals(
+            $originalUtc->format('H:i'),
+            $retrievedUtc->format('H:i'),
+            'EWS should preserve timezone-correct time data'
+        );
     }
 
     /**
@@ -181,8 +184,11 @@ class CalendarTest extends BaseTestCase
         $this->assertNotEmpty($retrievedItems, 'Should retrieve items with international characters');
         
         $event = $retrievedItems[0];
-        $this->assertStringContainsString('Réunion', $event->getSubject(), 
-            'Should preserve international characters in subject');
+        $this->assertStringContainsString(
+            'Réunion',
+            $event->getSubject(),
+            'Should preserve international characters in subject'
+        );
     }
 
     /**
@@ -233,12 +239,14 @@ class CalendarTest extends BaseTestCase
             // Check if we got multiple calendar items (indicating recurring instances)
             if (method_exists($calendarItemsResult, 'getTotalItemsInView')) {
                 $totalItems = $calendarItemsResult->getTotalItemsInView();
-                $this->assertGreaterThan(0, $totalItems, 
-                    'Should find at least one instance of recurring event');
+                $this->assertGreaterThan(
+                    0,
+                    $totalItems,
+                    'Should find at least one instance of recurring event'
+                );
             } else {
                 $this->assertTrue(true, 'Calendar items retrieved successfully');
             }
-            
         } catch (\Exception $e) {
             $this->markTestSkipped('Recurrence not supported on this Exchange server: ' . $e->getMessage());
         }
