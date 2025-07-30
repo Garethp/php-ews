@@ -4,10 +4,28 @@ namespace garethp\ews\API;
 
 /**
  * Type converter for handling SOAP stdClass objects
- * Automatically converts stdClass objects to proper EWS type objects
+ * Converts stdClass objects to proper EWS type objects
  */
 class TypeConverter
 {
+    /**
+     * Convert stdClass objects to proper EWS type objects
+     *
+     * @param object $object The object containing the property
+     * @param mixed $value The value to convert
+     * @param string $propertyName The property name
+     * @return mixed Converted value
+     */
+    public static function convertValueToExpectedType($object, $value, string $propertyName)
+    {
+        if (!($value instanceof \stdClass || (is_array($value) && current($value) instanceof \stdClass))) {
+            return $value;
+        }
+
+        $type = self::getSetterType($object, $propertyName);
+        return $type ? self::convertToType($value, $type) : $value;
+    }
+
     /**
      * Convert stdClass objects to proper EWS types using reflection
      *
@@ -15,44 +33,58 @@ class TypeConverter
      * @param string $targetType The expected EWS type class name
      * @return mixed Converted value or original if no conversion needed
      */
-    public static function convertToType($value, string $targetType)
+    public static function convertToType($value, string $type)
     {
-        if (is_array($value)) {
-            return array_map(function ($item) use ($targetType) {
-                return self::convertSingleObject($item, $targetType);
-            }, $value);
+        if (!class_exists($type)) {
+            return $value;
         }
-        
-        return self::convertSingleObject($value, $targetType);
-    }
-    
-    /**
-     * Convert a single stdClass object to target type
-     *
-     * @param mixed $value The value to convert
-     * @param string $targetType The target EWS type class name
-     * @return mixed Converted object or original value
-     */
-    private static function convertSingleObject($value, string $targetType)
-    {
+
+        if (is_array($value)) {
+            return array_map(fn($v) => self::convertToType($v, $type), $value);
+        }
+
         if (!($value instanceof \stdClass)) {
             return $value;
         }
-        
-        if (!class_exists($targetType)) {
-            return $value;
+
+        $object = new $type();
+        foreach (get_object_vars($value) as $prop => $val) {
+            self::setProperty($object, $prop, $val);
         }
-        
-        $instance = new $targetType();
-        
-        // Map stdClass properties to typed object
-        foreach (get_object_vars($value) as $property => $propertyValue) {
-            self::setProperty($instance, $property, $propertyValue);
-        }
-        
-        return $instance;
+
+        return $object;
     }
-    
+
+    /**
+     * Get the setter method type for a property
+     *
+     * @param object $object The object to inspect
+     * @param string $property The property name
+     * @return string|null The expected type or null if no setter exists
+     */
+    private static function getSetterType($object, string $property): ?string
+    {
+        $method = 'set' . ucfirst($property);
+        if (!method_exists($object, $method)) {
+            return null;
+        }
+
+        $type = (new \ReflectionMethod($object, $method))
+            ->getParameters()[0]?->getType();
+
+        if ($type instanceof \ReflectionUnionType) {
+            foreach ($type->getTypes() as $t) {
+                if (!$t->isBuiltin() && $t->getName() !== 'array') {
+                    return $t->getName();
+                }
+            }
+        }
+
+        return ($type instanceof \ReflectionNamedType && !$type->isBuiltin())
+            ? $type->getName()
+            : null;
+    }
+
     /**
      * Set property on target object using setter method or direct assignment
      *
@@ -62,39 +94,43 @@ class TypeConverter
      */
     private static function setProperty(object $instance, string $property, $value): void
     {
-        // Try setter method first
-        $setterMethod = 'set' . ucfirst($property);
-        if (method_exists($instance, $setterMethod)) {
-            $instance->$setterMethod($value);
+        $setter = 'set' . ucfirst($property);
+        if (!method_exists($instance, $setter)) {
+            if (property_exists($instance, $property)) {
+                $instance->$property = $value;
+            }
             return;
         }
-        
-        // Try direct property assignment
-        if (property_exists($instance, $property)) {
-            $instance->$property = $value;
-        }
+
+        $type = (new \ReflectionMethod($instance, $setter))->getParameters()[0]?->getType();
+        $value = self::convertIfStdClass($value, $type);
+        $instance->$setter($value);
     }
-    
-    /**
-     * Check if value contains any stdClass objects
-     *
-     * @param mixed $value Value to check
-     * @return bool True if contains stdClass objects
-     */
-    public static function containsStdClass($value): bool
+
+    private static function convertIfStdClass($value, ?\ReflectionType $type)
     {
-        if ($value instanceof \stdClass) {
-            return true;
+        if (!($value instanceof \stdClass) || !$type) {
+            return $value;
         }
-        
-        if (is_array($value)) {
-            foreach ($value as $item) {
-                if ($item instanceof \stdClass) {
-                    return true;
+
+        if ($type instanceof \ReflectionUnionType) {
+            foreach ($type->getTypes() as $t) {
+                $name = $t->getName();
+                if (!$t->isBuiltin() && class_exists($name)) {
+                    return self::convertToType($value, $name);
+                }
+                if ($name === 'array') {
+                    $props = get_object_vars($value);
+                    $arr = count($props) === 1 ? current($props) : (array)$value;
+                    return is_array($arr) ? $arr : [$arr];
                 }
             }
         }
-        
-        return false;
+
+        if ($type instanceof \ReflectionNamedType && !$type->isBuiltin()) {
+            return self::convertToType($value, $type->getName());
+        }
+
+        return $value;
     }
 }
