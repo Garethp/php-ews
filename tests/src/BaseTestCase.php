@@ -32,19 +32,36 @@ class BaseTestCase extends TestCase
             $auth = json_decode(file_get_contents(getcwd() . '/Resources/auth.json'), true);
         }
 
-        $client = call_user_func(
-            $apiClass . '::withUsernameAndPassword',
-            $auth['server'],
-            $auth['user'],
-            $auth['password'],
-            [
-                'httpPlayback' => [
-                    'mode' => $mode,
-                    'recordFileName' => static::class . '.' . $this->name() . '.json',
-                    'recordLocation' => realpath(__DIR__ . '/../../Resources/recordings')
+        if (isset($auth['token'])) {
+            $client = call_user_func(
+                $apiClass . '::withCallbackToken',
+                $auth['server'],
+                $auth['token'],
+                [
+                    'httpPlayback' => [
+                        'mode' => $mode,
+                        'recordFileName' => static::class . '.' . $this->name() . '.json',
+                        'recordLocation' => realpath(__DIR__ . '/../../Resources/recordings')
+                    ]
                 ]
-            ]
-        );
+            );
+        } else {
+            $client = call_user_func(
+                $apiClass . '::withUsernameAndPassword',
+                $auth['server'],
+                $auth['user'],
+                $auth['password'],
+                [
+                    'httpPlayback' => [
+                        'mode' => $mode,
+                        'recordFileName' => static::class . '.' . $this->name() . '.json',
+                        'recordLocation' => realpath(__DIR__ . '/../../Resources/recordings')
+                    ]
+                ]
+            );
+        }
+
+
 
         return $client;
     }
