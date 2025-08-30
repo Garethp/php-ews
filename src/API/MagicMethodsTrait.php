@@ -19,7 +19,8 @@ trait MagicMethodsTrait
         }
 
         if ($this->methodExists("set" . ucfirst($name))) {
-            $this->{"set" . ucfirst($name)}($value);
+            $convertedValue = TypeConverter::convertValueToExpectedType($this, $value, $name);
+            $this->{"set" . ucfirst($name)}($convertedValue);
             return;
         }
 
