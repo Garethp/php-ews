@@ -386,6 +386,36 @@ return \$this->{$prop->getName()};");
         if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
             $type = $namespaceClass;
         }
+
+        // It looks like we may be requiring too narrow a class. If the class we require is empty (has no methods and
+        // no properties), we should then look for the nearest parent class that has some properties/methods
+        if ($type === "Transition[]") {
+            $t1 = $namespaceClass;
+            if (substr($t1, -2) === "[]") {
+                $t1 = substr($t1, 0, -2);
+            }
+            $c1 = $namespace . "\\" . $t1;
+            $exists = class_exists($c1);
+            if (class_exists($c1)) {
+                while (true) {
+                    $classGen = $classGen = \Zend\Code\Generator\ClassGenerator::fromReflection(new \Zend\Code\Reflection\ClassReflection($c1));
+
+                    if (count($classGen->getProperties()) > 0 || count($classGen->getMethods()) > 0) {
+                        break;
+                    }
+
+                    $c1 = $classGen->getExtendedClass();
+                }
+            }
+
+            $t1 = $classGen->getName();
+            if (substr($type, -2) === "[]") {
+                $t1 .= "[]";
+            }
+
+            $type = $t1;
+        }
+
         if (substr($type, -2) === "[]") {
             $originalSingleType = substr($type, 0, -2);
             $originalType = "$type|$originalSingleType";
@@ -402,6 +432,10 @@ return \$this->{$prop->getName()};");
 
         if ($type === "\\DateTime") {
             $type = "\\DateTime|string";
+        }
+
+        if ($type === "\\DateInterval") {
+            $type = "\\DateInterval|string";
         }
 
         if ($generator->hasMethod($name)) {
@@ -432,6 +466,10 @@ return \$this->{$prop->getName()};");
 
         if ($type === "\\DateTime|string") {
             $newMethod->setBody("if (is_string(\$value)) { \n \$value = new \\DateTime(\$value);\n } \n" . $newMethod->getBody());
+        }
+
+        if ($type === "\\DateInterval|string") {
+            $newMethod->setBody("if (is_string(\$value)) { \n \$invert = false; \n \$value = new \\DateInterval(\$value);\n \$value->invert = \$invert; \n } \n" . $newMethod->getBody());
         }
 
         $generator->addMethodFromGenerator($newMethod);

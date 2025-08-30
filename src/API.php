@@ -449,8 +449,6 @@ class API
         }
 
         $timezones = $this->getClient()->GetServerTimeZones($request);
-        $timezones = $timezones->TimeZoneDefinition;
-
         return Utilities\ensureIsArray($timezones);
     }
 

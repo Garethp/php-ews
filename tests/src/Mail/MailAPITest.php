@@ -180,4 +180,15 @@ class MailAPITest extends BaseTestCase
         self::assertContainsOnlyInstancesOf(Type\Mailbox::class, $message->getCcRecipients());
         self::assertContainsOnlyInstancesOf(Type\Mailbox::class, $message->getBccRecipients());
     }
+
+    public function testGetSingleMailItem() {
+        $client = $this->getClient();
+        $this->createTestMail();
+
+        $mailItems = $client->getMailItems();
+        $mailItem = $client->getItem($mailItems[0]->getItemId());
+
+        $this->assertEquals('Test Message', $mailItem->getSubject());
+        $this->assertStringContainsString('Test Draft Body', $mailItem->getBody()->__toString());
+    }
 }

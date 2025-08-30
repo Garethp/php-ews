@@ -383,4 +383,16 @@ class APITest extends BaseTestCase
         $this->assertEquals('Deep 4', $nextChildFolders[1]->getDisplayName());
         $this->assertEquals('Deep 5', $lastChildFolders[0]->getDisplayName());
     }
+
+    public function testGetServerTimezones()
+    {
+        $client = $this->getClient();
+        $timezones = $client->getServerTimezones();
+
+        $this->assertIsArray($timezones);
+        $this->assertNotCount(0, $timezones);
+
+        $this->assertInstanceOf(API\Type\TimeZoneDefinitionType::class, $timezones[0]);
+        $this->assertEquals("Dateline Standard Time", $timezones[0]->getId());
+    }
 }

@@ -165,7 +165,8 @@ class NTLMSoapClient extends SoapClient
                 'TimeZoneContext',
                 array(
                     'TimeZoneDefinition' => array(
-                        'Id' => $options['timezone']
+                        'Id' => $options['timezone'],
+                        'Periods' => [],
                     )
                 )
             );

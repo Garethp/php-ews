@@ -47,8 +47,15 @@ class TypeConverter
             return $value;
         }
 
+        // We'll sometimes get objects where they only hold a single key that, rather than matching the type that it
+        // goes into it'll be containing the items that the type expects.
+        $valueProperties = get_object_vars($value);
+        if (count($valueProperties) === 1 && !property_exists($type, lcfirst(key($valueProperties)))) {
+            return self::convertToType($value->{key($valueProperties)}, $type);
+        }
+
         $object = new $type();
-        foreach (get_object_vars($value) as $prop => $val) {
+        foreach ($valueProperties as $prop => $val) {
             self::setProperty($object, $prop, $val);
         }
 

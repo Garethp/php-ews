@@ -28,18 +28,33 @@ class ExchangeAutodiscoverTest extends TestCase
             $auth = json_decode(file_get_contents(getcwd() . '/Resources/auth.json'), true);
         }
 
-        $client = Autodiscover::getAPI(
-            $auth['user'],
-            $auth['password'],
-            $auth['user'],
-            [
-                'httpPlayback' => [
-                    'mode' => $mode,
-                    'recordFileName' => self::class . '.' . $this->name() . '.json',
-                    'recordLocation' => realpath(__DIR__ . '/../../../Resources/recordings') . '/'
+        if (isset($auth['token'])) {
+            $client = Autodiscover::getAPI(
+                $auth['user'],
+                $auth['password'],
+                $auth['user'],
+                [
+                    'httpPlayback' => [
+                        'mode' => $mode,
+                        'recordFileName' => self::class . '.' . $this->name() . '.json',
+                        'recordLocation' => realpath(__DIR__ . '/../../../Resources/recordings') . '/'
+                    ]
                 ]
-            ]
-        );
+            );
+        } else {
+            $client = Autodiscover::getAPI(
+                $auth['user'],
+                $auth['password'],
+                $auth['user'],
+                [
+                    'httpPlayback' => [
+                        'mode' => $mode,
+                        'recordFileName' => self::class . '.' . $this->name() . '.json',
+                        'recordLocation' => realpath(__DIR__ . '/../../../Resources/recordings') . '/'
+                    ]
+                ]
+            );
+        }
 
         $this->assertInstanceOf(API::class, $client);
     }
