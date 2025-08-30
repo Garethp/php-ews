@@ -118,8 +118,8 @@ class TypeTest extends TestCase
         ]);
         $type->_value = 'value';
 
-        $this->assertSame(['test' => 'test'], $type->getNonNullItems());
-        $this->assertSame(['test' => 'test', '_value' => 'value'], $type->getNonNullItems(true));
+        $this->assertSame(['Test' => 'test'], $type->getNonNullItems());
+        $this->assertSame(['Test' => 'test', '_value' => 'value'], $type->getNonNullItems(true));
     }
 
     public static function arrayAssocProvider()
