@@ -39,9 +39,14 @@ class RecurringTimeTransitionType extends TransitionType
     {
         if (is_string($value)) {
             $invert = false;
+            if (str_starts_with($value, "-")) {
+                $invert = true;
+                $value = substr($value, 1);
+            }
             $value = new \DateInterval($value);
             $value->invert = $invert;
         }
+
         $this->timeOffset = $value;
         return $this;
     }

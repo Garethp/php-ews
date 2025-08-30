@@ -50,10 +50,10 @@ class PeriodType extends Type
                 $invert = true;
                 $value = substr($value, 1);
             }
-
             $value = new \DateInterval($value);
             $value->invert = $invert;
         }
+
         $this->bias = $value;
         return $this;
     }

@@ -383,37 +383,44 @@ return \$this->{$prop->getName()};");
 
         $originalType = "";
 
-        if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
-            $type = $namespaceClass;
-        }
-
         // It looks like we may be requiring too narrow a class. If the class we require is empty (has no methods and
         // no properties), we should then look for the nearest parent class that has some properties/methods
-        if ($type === "Transition[]") {
-            $t1 = $namespaceClass;
-            if (substr($t1, -2) === "[]") {
-                $t1 = substr($t1, 0, -2);
+        if ($namespace === "\\garethp\\ews\\API\\Type") {
+            $temporaryType = $namespaceClass;
+            if (substr($temporaryType, -2) === "[]") {
+                $temporaryType = substr($temporaryType, 0, -2);
             }
-            $c1 = $namespace . "\\" . $t1;
-            $exists = class_exists($c1);
-            if (class_exists($c1)) {
-                while (true) {
-                    $classGen = $classGen = \Zend\Code\Generator\ClassGenerator::fromReflection(new \Zend\Code\Reflection\ClassReflection($c1));
+            $currentClass = $namespace . "\\" . $temporaryType;
 
-                    if (count($classGen->getProperties()) > 0 || count($classGen->getMethods()) > 0) {
+            if (class_exists($currentClass)) {
+                while (true) {
+                    $classReflection = $classReflection = \Zend\Code\Generator\ClassGenerator::fromReflection(
+                        new \Zend\Code\Reflection\ClassReflection($currentClass)
+                    );
+
+                    if (count($classReflection->getProperties()) > 0 ||
+                        count($classReflection->getMethods()) > 0 ||
+                        $classReflection->getExtendedClass() === "garethp\\ews\\API\\Type"
+                    ) {
                         break;
                     }
 
-                    $c1 = $classGen->getExtendedClass();
+                    $currentClass = $classReflection->getExtendedClass();
                 }
             }
 
-            $t1 = $classGen->getName();
+            $temporaryType = $classReflection->getName();
             if (substr($type, -2) === "[]") {
-                $t1 .= "[]";
+                $temporaryType .= "[]";
             }
 
-            $type = $t1;
+            $namespaceClass = $temporaryType;
+
+            $type = $namespace . "\\" . $namespaceClass;
+        }
+
+        if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
+            $type = $namespaceClass;
         }
 
         if (substr($type, -2) === "[]") {
@@ -469,7 +476,7 @@ return \$this->{$prop->getName()};");
         }
 
         if ($type === "\\DateInterval|string") {
-            $newMethod->setBody("if (is_string(\$value)) { \n \$invert = false; \n \$value = new \\DateInterval(\$value);\n \$value->invert = \$invert; \n } \n" . $newMethod->getBody());
+            $newMethod->setBody("if (is_string(\$value)) { \n \$invert = false; \n if (str_starts_with(\$value, \"-\")) { \n \$invert = true; \n \$value = substr(\$value, 1); \n } \n \$value = new \\DateInterval(\$value);\n \$value->invert = \$invert; \n } \n\n" . $newMethod->getBody());
         }
 
         $generator->addMethodFromGenerator($newMethod);
@@ -538,7 +545,7 @@ return \$this->{$prop->getName()};");
     {
         if (!$class->getNamespace()) {
             if ($this->isNativeType($class)) {
-                return (string) $class->getName();
+                return (string)$class->getName();
             }
 
             return "\\" . $class->getName();

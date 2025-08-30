@@ -71,9 +71,14 @@ class TimeZoneType extends Type
     {
         if (is_string($value)) {
             $invert = false;
+            if (str_starts_with($value, "-")) {
+                $invert = true;
+                $value = substr($value, 1);
+            }
             $value = new \DateInterval($value);
             $value->invert = $invert;
         }
+
         $this->baseOffset = $value;
         return $this;
     }
