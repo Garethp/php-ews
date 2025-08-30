@@ -75,7 +75,7 @@ trait BuildableTrait
                     $classToBuild = $parameters[0]->getClass()->getName();
 
                     $newValue = call_user_func("$classToBuild::buildFromArray", $value, true);
-                    $object->$key = $newValue;
+                    $object->{ucfirst($key)} = $newValue;
                     continue;
                 }
             }
@@ -89,7 +89,11 @@ trait BuildableTrait
                 $key = "_";
             }
 
-            $object->$key = $value;
+            if ($value instanceof Type) {
+                $value = $value->toXmlObject();
+            }
+
+            $object->{ucfirst($key)} = $value;
         }
 
         return $object;

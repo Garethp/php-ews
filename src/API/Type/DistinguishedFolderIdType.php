@@ -35,7 +35,7 @@ class DistinguishedFolderIdType extends BaseFolderIdType
 
     public function toArray($getOuterArray = false)
     {
-        $id = [ 'Id' => $this->id, 'ChangeKey' => $this->changeKey ];
+        $id = [ 'Id' => $this->id, 'ChangeKey' => $this->changeKey, 'Mailbox' => $this->mailbox ];
 
         if ($getOuterArray === true) {
             return ['DistinguishedFolderId' => $id];
