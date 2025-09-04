@@ -22,6 +22,7 @@ use \Closure;
  *
  * @method Type AddDelegate($request)
  * @method Type ApplyConversationAction($request)
+ * @method Type ArchiveItem($request)
  * @method Type ConvertId($request)
  * @method Type CopyFolder($request)
  * @method Type CopyItem($request)
