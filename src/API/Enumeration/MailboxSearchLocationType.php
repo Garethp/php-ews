@@ -5,6 +5,8 @@
 
 namespace garethp\ews\API\Enumeration;
 
+use garethp\ews\API\Enumeration;
+
 /**
  * Defines whether a search or fetch for a conversation should span either the
  * primary mailbox, archive mailbox, or both the primary and archive mailbox.
