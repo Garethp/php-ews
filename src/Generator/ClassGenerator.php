@@ -72,12 +72,12 @@ class ClassGenerator
             $class->setExtendedClass($extends);
         }
 
-        if ($extends->getName() == "string"
+        if ($extends !== null && $extends->getName() === "string"
             && $extends->getNamespace() == ""
             && class_exists($type->getNamespace() . '\\String')) {
             $extends->setName('String');
             $extends->setNamespace($type->getNamespace());
-        } elseif ($extends->getName() == "string"
+        } elseif ($extends !== null && $extends->getName() === "string"
             && $extends->getNamespace() == ""
             && class_exists(($type->getNamespace()))) {
             $extendNamespace = $type->getNamespace();
@@ -100,15 +100,17 @@ class ClassGenerator
         $class->setName($type->getName());
         $class->setDocblock($docblock);
 
-        $class->setExtendedClass($extends->getName());
+        if ($extends !== null) {
+            $class->setExtendedClass($extends->getName());
 
-        if ($extends->getNamespace() != $type->getNamespace()) {
-            if ($extends->getName() == $type->getName()) {
-                $class->addUse($type->getExtends()
-                    ->getFullName(), $extends->getName() . "Base");
-                $class->setExtendedClass($extends->getName() . "Base");
-            } else {
-                $class->addUse($extends->getFullName());
+            if ($extends->getNamespace() != $type->getNamespace()) {
+                if ($extends->getName() == $type->getName()) {
+                    $class->addUse($type->getExtends()
+                        ->getFullName(), $extends->getName() . "Base");
+                    $class->setExtendedClass($extends->getName() . "Base");
+                } else {
+                    $class->addUse($extends->getFullName());
+                }
             }
         }
 
@@ -407,16 +409,16 @@ return \$this->{$prop->getName()};");
 
                     $currentClass = $classReflection->getExtendedClass();
                 }
+
+                $temporaryType = $classReflection->getName();
+                if (substr($type, -2) === "[]") {
+                    $temporaryType .= "[]";
+                }
+
+                $namespaceClass = $temporaryType;
+
+                $type = $namespace . "\\" . $namespaceClass;
             }
-
-            $temporaryType = $classReflection->getName();
-            if (substr($type, -2) === "[]") {
-                $temporaryType .= "[]";
-            }
-
-            $namespaceClass = $temporaryType;
-
-            $type = $namespace . "\\" . $namespaceClass;
         }
 
         if ($namespace == $class->getNamespace() || $namespace == "\\" . $class->getNamespace()) {
