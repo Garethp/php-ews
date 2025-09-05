@@ -26,4 +26,8 @@ class ConversationActionTypeType extends Enumeration
     const MOVE = 'Move';
 
     const SET_READ_STATE = 'SetReadState';
+
+    const SET_RETENTION_POLICY = 'SetRetentionPolicy';
+
+    const FLAG = 'Flag';
 }

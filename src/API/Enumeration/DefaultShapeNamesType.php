@@ -20,4 +20,6 @@ class DefaultShapeNamesType extends Enumeration
     const ID_ONLY = 'IdOnly';
 
     const DEFAULT_CONSTANT = 'Default';
+
+    const PCX_PEOPLE_SEARCH = 'PcxPeopleSearch';
 }

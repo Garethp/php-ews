@@ -19,7 +19,7 @@ class ArrayOfResponseMessagesType extends Message
     protected $createItemResponseMessage = null;
 
     /**
-     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     * @var \garethp\ews\API\Message\DeleteItemResponseMessageType[]
      */
     protected $deleteItemResponseMessage = null;
 
@@ -224,7 +224,7 @@ class ArrayOfResponseMessagesType extends Message
     protected $getRoomsResponse = null;
 
     /**
-     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     * @var \garethp\ews\API\Message\ApplyConversationActionResponseMessageType[]
      */
     protected $applyConversationActionResponseMessage = null;
 
@@ -238,6 +238,167 @@ class ArrayOfResponseMessagesType extends Message
      * @var \garethp\ews\API\Message\GetPasswordExpirationDateResponseMessageType[]
      */
     protected $getPasswordExpirationDateResponse = null;
+
+    /**
+     * @var \garethp\ews\API\Message\UpdateItemInRecoverableItemsResponseMessageType[]
+     */
+    protected $updateItemInRecoverableItemsResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\FolderInfoResponseMessageType[]
+     */
+    protected $createFolderPathResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     */
+    protected $markAllItemsAsReadResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetClientAccessTokenResponseMessageType[]
+     */
+    protected $getClientAccessTokenResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     */
+    protected $getAppManifestsResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     */
+    protected $setClientExtensionResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     */
+    protected $getOMEConfigurationResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     */
+    protected $setOMEConfigurationResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ItemInfoResponseMessageType[]
+     */
+    protected $archiveItemResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetSpecificUserConfigurationResponseMessageType[]
+     */
+    protected $getSpecificUserConfigurationResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetRemindersResponseMessageType[]
+     */
+    protected $getRemindersResponse = null;
+
+    /**
+     * @var \garethp\ews\API\Message\PerformReminderActionResponseMessageType[]
+     */
+    protected $performReminderActionResponse = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetSearchableMailboxesResponseMessageType[]
+     */
+    protected $getSearchableMailboxesResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\SearchMailboxesResponseMessageType[]
+     */
+    protected $searchMailboxesResponseMessage = null;
+
+    /**
+     * @var
+     * \garethp\ews\API\Message\GetDiscoverySearchConfigurationResponseMessageType[]
+     */
+    protected $getDiscoverySearchConfigurationResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetHoldOnMailboxesResponseMessageType[]
+     */
+    protected $getHoldOnMailboxesResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\SetHoldOnMailboxesResponseMessageType[]
+     */
+    protected $setHoldOnMailboxesResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetNonIndexableItemStatisticsResponseMessageType[]
+     */
+    protected $getNonIndexableItemStatisticsResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetNonIndexableItemDetailsResponseMessageType[]
+     */
+    protected $getNonIndexableItemDetailsResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\FindPeopleResponseMessageType[]
+     */
+    protected $findPeopleResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\FindTagsResponseMessageType[]
+     */
+    protected $findTagsResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\AddTagResponseMessageType[]
+     */
+    protected $addTagResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\HideTagResponseMessageType[]
+     */
+    protected $hideTagResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetPersonaResponseMessageType[]
+     */
+    protected $getPersonaResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetConversationItemsResponseMessageType[]
+     */
+    protected $getConversationItemsResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetUserRetentionPolicyTagsResponseMessageType[]
+     */
+    protected $getUserRetentionPolicyTagsResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\GetUserPhotoResponseMessageType[]
+     */
+    protected $getUserPhotoResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\MarkAsJunkResponseMessageType[]
+     */
+    protected $markAsJunkResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ReportMessageResponseMessageType[]
+     */
+    protected $reportMessageResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ItemInfoResponseMessageType[]
+     */
+    protected $postModernGroupItemResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     */
+    protected $getLastPrivateCatalogUpdateResponseMessage = null;
+
+    /**
+     * @var \garethp\ews\API\Message\ResponseMessageType[]
+     */
+    protected $getPrivateCatalogAddInsResponseMessage = null;
 
     /**
      * @autogenerated This method is safe to replace
@@ -283,10 +444,10 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
-     * @param $value ResponseMessageType
+     * @param $value DeleteItemResponseMessageType
      * @return ArrayOfResponseMessagesType
      */
-    public function addDeleteItemResponseMessage(ResponseMessageType $value)
+    public function addDeleteItemResponseMessage(DeleteItemResponseMessageType $value)
     {
         if ($this->deleteItemResponseMessage === null) {
                         $this->deleteItemResponseMessage = array();
@@ -302,7 +463,7 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
-     * @return ResponseMessageType[]
+     * @return DeleteItemResponseMessageType[]
      */
     public function getDeleteItemResponseMessage()
     {
@@ -311,10 +472,10 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
-     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @param $value DeleteItemResponseMessageType[]|DeleteItemResponseMessageType
      * @return ArrayOfResponseMessagesType
      */
-    public function setDeleteItemResponseMessage(array|ResponseMessageType $value)
+    public function setDeleteItemResponseMessage(array|DeleteItemResponseMessageType $value)
     {
         if (!is_array($value)) {
             $value = [$value];
@@ -404,6 +565,49 @@ class ArrayOfResponseMessagesType extends Message
             $value = [$value];
         }
         $this->updateItemResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value UpdateItemInRecoverableItemsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addUpdateItemInRecoverableItemsResponseMessage(UpdateItemInRecoverableItemsResponseMessageType $value)
+    {
+        if ($this->updateItemInRecoverableItemsResponseMessage === null) {
+                        $this->updateItemInRecoverableItemsResponseMessage = array();
+        }
+
+        if (!is_array($this->updateItemInRecoverableItemsResponseMessage)) {
+            $this->updateItemInRecoverableItemsResponseMessage = array($this->updateItemInRecoverableItemsResponseMessage);
+        }
+
+        $this->updateItemInRecoverableItemsResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return UpdateItemInRecoverableItemsResponseMessageType[]
+     */
+    public function getUpdateItemInRecoverableItemsResponseMessage()
+    {
+        return $this->updateItemInRecoverableItemsResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * UpdateItemInRecoverableItemsResponseMessageType[]|UpdateItemInRecoverableItemsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setUpdateItemInRecoverableItemsResponseMessage(array|UpdateItemInRecoverableItemsResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->updateItemInRecoverableItemsResponseMessage = $value;
         return $this;
     }
 
@@ -787,6 +991,48 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
+     * @param $value FolderInfoResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addCreateFolderPathResponseMessage(FolderInfoResponseMessageType $value)
+    {
+        if ($this->createFolderPathResponseMessage === null) {
+                        $this->createFolderPathResponseMessage = array();
+        }
+
+        if (!is_array($this->createFolderPathResponseMessage)) {
+            $this->createFolderPathResponseMessage = array($this->createFolderPathResponseMessage);
+        }
+
+        $this->createFolderPathResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return FolderInfoResponseMessageType[]
+     */
+    public function getCreateFolderPathResponseMessage()
+    {
+        return $this->createFolderPathResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value FolderInfoResponseMessageType[]|FolderInfoResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setCreateFolderPathResponseMessage(array|FolderInfoResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->createFolderPathResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
      * @param $value AttachmentInfoResponseMessageType
      * @return ArrayOfResponseMessagesType
      */
@@ -1000,6 +1246,259 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addMarkAllItemsAsReadResponseMessage(ResponseMessageType $value)
+    {
+        if ($this->markAllItemsAsReadResponseMessage === null) {
+                        $this->markAllItemsAsReadResponseMessage = array();
+        }
+
+        if (!is_array($this->markAllItemsAsReadResponseMessage)) {
+            $this->markAllItemsAsReadResponseMessage = array($this->markAllItemsAsReadResponseMessage);
+        }
+
+        $this->markAllItemsAsReadResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ResponseMessageType[]
+     */
+    public function getMarkAllItemsAsReadResponseMessage()
+    {
+        return $this->markAllItemsAsReadResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setMarkAllItemsAsReadResponseMessage(array|ResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->markAllItemsAsReadResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetClientAccessTokenResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetClientAccessTokenResponseMessage(GetClientAccessTokenResponseMessageType $value)
+    {
+        if ($this->getClientAccessTokenResponseMessage === null) {
+                        $this->getClientAccessTokenResponseMessage = array();
+        }
+
+        if (!is_array($this->getClientAccessTokenResponseMessage)) {
+            $this->getClientAccessTokenResponseMessage = array($this->getClientAccessTokenResponseMessage);
+        }
+
+        $this->getClientAccessTokenResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetClientAccessTokenResponseMessageType[]
+     */
+    public function getGetClientAccessTokenResponseMessage()
+    {
+        return $this->getClientAccessTokenResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetClientAccessTokenResponseMessageType[]|GetClientAccessTokenResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetClientAccessTokenResponseMessage(array|GetClientAccessTokenResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getClientAccessTokenResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetAppManifestsResponseMessage(ResponseMessageType $value)
+    {
+        if ($this->getAppManifestsResponseMessage === null) {
+                        $this->getAppManifestsResponseMessage = array();
+        }
+
+        if (!is_array($this->getAppManifestsResponseMessage)) {
+            $this->getAppManifestsResponseMessage = array($this->getAppManifestsResponseMessage);
+        }
+
+        $this->getAppManifestsResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ResponseMessageType[]
+     */
+    public function getGetAppManifestsResponseMessage()
+    {
+        return $this->getAppManifestsResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetAppManifestsResponseMessage(array|ResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getAppManifestsResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addSetClientExtensionResponseMessage(ResponseMessageType $value)
+    {
+        if ($this->setClientExtensionResponseMessage === null) {
+                        $this->setClientExtensionResponseMessage = array();
+        }
+
+        if (!is_array($this->setClientExtensionResponseMessage)) {
+            $this->setClientExtensionResponseMessage = array($this->setClientExtensionResponseMessage);
+        }
+
+        $this->setClientExtensionResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ResponseMessageType[]
+     */
+    public function getSetClientExtensionResponseMessage()
+    {
+        return $this->setClientExtensionResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setSetClientExtensionResponseMessage(array|ResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->setClientExtensionResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetOMEConfigurationResponseMessage(ResponseMessageType $value)
+    {
+        if ($this->getOMEConfigurationResponseMessage === null) {
+                        $this->getOMEConfigurationResponseMessage = array();
+        }
+
+        if (!is_array($this->getOMEConfigurationResponseMessage)) {
+            $this->getOMEConfigurationResponseMessage = array($this->getOMEConfigurationResponseMessage);
+        }
+
+        $this->getOMEConfigurationResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ResponseMessageType[]
+     */
+    public function getGetOMEConfigurationResponseMessage()
+    {
+        return $this->getOMEConfigurationResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetOMEConfigurationResponseMessage(array|ResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getOMEConfigurationResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addSetOMEConfigurationResponseMessage(ResponseMessageType $value)
+    {
+        if ($this->setOMEConfigurationResponseMessage === null) {
+                        $this->setOMEConfigurationResponseMessage = array();
+        }
+
+        if (!is_array($this->setOMEConfigurationResponseMessage)) {
+            $this->setOMEConfigurationResponseMessage = array($this->setOMEConfigurationResponseMessage);
+        }
+
+        $this->setOMEConfigurationResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ResponseMessageType[]
+     */
+    public function getSetOMEConfigurationResponseMessage()
+    {
+        return $this->setOMEConfigurationResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setSetOMEConfigurationResponseMessage(array|ResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->setOMEConfigurationResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
      * @param $value FindItemResponseMessageType
      * @return ArrayOfResponseMessagesType
      */
@@ -1079,6 +1578,48 @@ class ArrayOfResponseMessagesType extends Message
             $value = [$value];
         }
         $this->moveItemResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ItemInfoResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addArchiveItemResponseMessage(ItemInfoResponseMessageType $value)
+    {
+        if ($this->archiveItemResponseMessage === null) {
+                        $this->archiveItemResponseMessage = array();
+        }
+
+        if (!is_array($this->archiveItemResponseMessage)) {
+            $this->archiveItemResponseMessage = array($this->archiveItemResponseMessage);
+        }
+
+        $this->archiveItemResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getArchiveItemResponseMessage()
+    {
+        return $this->archiveItemResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ItemInfoResponseMessageType[]|ItemInfoResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setArchiveItemResponseMessage(array|ItemInfoResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->archiveItemResponseMessage = $value;
         return $this;
     }
 
@@ -1891,6 +2432,49 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
+     * @param $value GetSpecificUserConfigurationResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetSpecificUserConfigurationResponseMessage(GetSpecificUserConfigurationResponseMessageType $value)
+    {
+        if ($this->getSpecificUserConfigurationResponseMessage === null) {
+                        $this->getSpecificUserConfigurationResponseMessage = array();
+        }
+
+        if (!is_array($this->getSpecificUserConfigurationResponseMessage)) {
+            $this->getSpecificUserConfigurationResponseMessage = array($this->getSpecificUserConfigurationResponseMessage);
+        }
+
+        $this->getSpecificUserConfigurationResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetSpecificUserConfigurationResponseMessageType[]
+     */
+    public function getGetSpecificUserConfigurationResponseMessage()
+    {
+        return $this->getSpecificUserConfigurationResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetSpecificUserConfigurationResponseMessageType[]|GetSpecificUserConfigurationResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetSpecificUserConfigurationResponseMessage(array|GetSpecificUserConfigurationResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getSpecificUserConfigurationResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
      * @param $value ResponseMessageType
      * @return ArrayOfResponseMessagesType
      */
@@ -2017,10 +2601,95 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
-     * @param $value ResponseMessageType
+     * @param $value GetRemindersResponseMessageType
      * @return ArrayOfResponseMessagesType
      */
-    public function addApplyConversationActionResponseMessage(ResponseMessageType $value)
+    public function addGetRemindersResponse(GetRemindersResponseMessageType $value)
+    {
+        if ($this->getRemindersResponse === null) {
+                        $this->getRemindersResponse = array();
+        }
+
+        if (!is_array($this->getRemindersResponse)) {
+            $this->getRemindersResponse = array($this->getRemindersResponse);
+        }
+
+        $this->getRemindersResponse[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetRemindersResponseMessageType[]
+     */
+    public function getGetRemindersResponse()
+    {
+        return $this->getRemindersResponse;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetRemindersResponseMessageType[]|GetRemindersResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetRemindersResponse(array|GetRemindersResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getRemindersResponse = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value PerformReminderActionResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addPerformReminderActionResponse(PerformReminderActionResponseMessageType $value)
+    {
+        if ($this->performReminderActionResponse === null) {
+                        $this->performReminderActionResponse = array();
+        }
+
+        if (!is_array($this->performReminderActionResponse)) {
+            $this->performReminderActionResponse = array($this->performReminderActionResponse);
+        }
+
+        $this->performReminderActionResponse[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return PerformReminderActionResponseMessageType[]
+     */
+    public function getPerformReminderActionResponse()
+    {
+        return $this->performReminderActionResponse;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * PerformReminderActionResponseMessageType[]|PerformReminderActionResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setPerformReminderActionResponse(array|PerformReminderActionResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->performReminderActionResponse = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ApplyConversationActionResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addApplyConversationActionResponseMessage(ApplyConversationActionResponseMessageType $value)
     {
         if ($this->applyConversationActionResponseMessage === null) {
                         $this->applyConversationActionResponseMessage = array();
@@ -2036,7 +2705,7 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
-     * @return ResponseMessageType[]
+     * @return ApplyConversationActionResponseMessageType[]
      */
     public function getApplyConversationActionResponseMessage()
     {
@@ -2045,10 +2714,11 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
-     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @param $value
+     * ApplyConversationActionResponseMessageType[]|ApplyConversationActionResponseMessageType
      * @return ArrayOfResponseMessagesType
      */
-    public function setApplyConversationActionResponseMessage(array|ResponseMessageType $value)
+    public function setApplyConversationActionResponseMessage(array|ApplyConversationActionResponseMessageType $value)
     {
         if (!is_array($value)) {
             $value = [$value];
@@ -2102,6 +2772,475 @@ class ArrayOfResponseMessagesType extends Message
 
     /**
      * @autogenerated This method is safe to replace
+     * @param $value GetSearchableMailboxesResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetSearchableMailboxesResponseMessage(GetSearchableMailboxesResponseMessageType $value)
+    {
+        if ($this->getSearchableMailboxesResponseMessage === null) {
+                        $this->getSearchableMailboxesResponseMessage = array();
+        }
+
+        if (!is_array($this->getSearchableMailboxesResponseMessage)) {
+            $this->getSearchableMailboxesResponseMessage = array($this->getSearchableMailboxesResponseMessage);
+        }
+
+        $this->getSearchableMailboxesResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetSearchableMailboxesResponseMessageType[]
+     */
+    public function getGetSearchableMailboxesResponseMessage()
+    {
+        return $this->getSearchableMailboxesResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetSearchableMailboxesResponseMessageType[]|GetSearchableMailboxesResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetSearchableMailboxesResponseMessage(array|GetSearchableMailboxesResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getSearchableMailboxesResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value SearchMailboxesResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addSearchMailboxesResponseMessage(SearchMailboxesResponseMessageType $value)
+    {
+        if ($this->searchMailboxesResponseMessage === null) {
+                        $this->searchMailboxesResponseMessage = array();
+        }
+
+        if (!is_array($this->searchMailboxesResponseMessage)) {
+            $this->searchMailboxesResponseMessage = array($this->searchMailboxesResponseMessage);
+        }
+
+        $this->searchMailboxesResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return SearchMailboxesResponseMessageType[]
+     */
+    public function getSearchMailboxesResponseMessage()
+    {
+        return $this->searchMailboxesResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * SearchMailboxesResponseMessageType[]|SearchMailboxesResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setSearchMailboxesResponseMessage(array|SearchMailboxesResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->searchMailboxesResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetDiscoverySearchConfigurationResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetDiscoverySearchConfigurationResponseMessage(GetDiscoverySearchConfigurationResponseMessageType $value)
+    {
+        if ($this->getDiscoverySearchConfigurationResponseMessage === null) {
+                        $this->getDiscoverySearchConfigurationResponseMessage = array();
+        }
+
+        if (!is_array($this->getDiscoverySearchConfigurationResponseMessage)) {
+            $this->getDiscoverySearchConfigurationResponseMessage = array($this->getDiscoverySearchConfigurationResponseMessage);
+        }
+
+        $this->getDiscoverySearchConfigurationResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetDiscoverySearchConfigurationResponseMessageType[]
+     */
+    public function getGetDiscoverySearchConfigurationResponseMessage()
+    {
+        return $this->getDiscoverySearchConfigurationResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetDiscoverySearchConfigurationResponseMessageType[]|GetDiscoverySearchConfigurationResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetDiscoverySearchConfigurationResponseMessage(array|GetDiscoverySearchConfigurationResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getDiscoverySearchConfigurationResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetHoldOnMailboxesResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetHoldOnMailboxesResponseMessage(GetHoldOnMailboxesResponseMessageType $value)
+    {
+        if ($this->getHoldOnMailboxesResponseMessage === null) {
+                        $this->getHoldOnMailboxesResponseMessage = array();
+        }
+
+        if (!is_array($this->getHoldOnMailboxesResponseMessage)) {
+            $this->getHoldOnMailboxesResponseMessage = array($this->getHoldOnMailboxesResponseMessage);
+        }
+
+        $this->getHoldOnMailboxesResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetHoldOnMailboxesResponseMessageType[]
+     */
+    public function getGetHoldOnMailboxesResponseMessage()
+    {
+        return $this->getHoldOnMailboxesResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetHoldOnMailboxesResponseMessageType[]|GetHoldOnMailboxesResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetHoldOnMailboxesResponseMessage(array|GetHoldOnMailboxesResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getHoldOnMailboxesResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value SetHoldOnMailboxesResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addSetHoldOnMailboxesResponseMessage(SetHoldOnMailboxesResponseMessageType $value)
+    {
+        if ($this->setHoldOnMailboxesResponseMessage === null) {
+                        $this->setHoldOnMailboxesResponseMessage = array();
+        }
+
+        if (!is_array($this->setHoldOnMailboxesResponseMessage)) {
+            $this->setHoldOnMailboxesResponseMessage = array($this->setHoldOnMailboxesResponseMessage);
+        }
+
+        $this->setHoldOnMailboxesResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return SetHoldOnMailboxesResponseMessageType[]
+     */
+    public function getSetHoldOnMailboxesResponseMessage()
+    {
+        return $this->setHoldOnMailboxesResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * SetHoldOnMailboxesResponseMessageType[]|SetHoldOnMailboxesResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setSetHoldOnMailboxesResponseMessage(array|SetHoldOnMailboxesResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->setHoldOnMailboxesResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetNonIndexableItemStatisticsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetNonIndexableItemStatisticsResponseMessage(GetNonIndexableItemStatisticsResponseMessageType $value)
+    {
+        if ($this->getNonIndexableItemStatisticsResponseMessage === null) {
+                        $this->getNonIndexableItemStatisticsResponseMessage = array();
+        }
+
+        if (!is_array($this->getNonIndexableItemStatisticsResponseMessage)) {
+            $this->getNonIndexableItemStatisticsResponseMessage = array($this->getNonIndexableItemStatisticsResponseMessage);
+        }
+
+        $this->getNonIndexableItemStatisticsResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetNonIndexableItemStatisticsResponseMessageType[]
+     */
+    public function getGetNonIndexableItemStatisticsResponseMessage()
+    {
+        return $this->getNonIndexableItemStatisticsResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetNonIndexableItemStatisticsResponseMessageType[]|GetNonIndexableItemStatisticsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetNonIndexableItemStatisticsResponseMessage(array|GetNonIndexableItemStatisticsResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getNonIndexableItemStatisticsResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetNonIndexableItemDetailsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetNonIndexableItemDetailsResponseMessage(GetNonIndexableItemDetailsResponseMessageType $value)
+    {
+        if ($this->getNonIndexableItemDetailsResponseMessage === null) {
+                        $this->getNonIndexableItemDetailsResponseMessage = array();
+        }
+
+        if (!is_array($this->getNonIndexableItemDetailsResponseMessage)) {
+            $this->getNonIndexableItemDetailsResponseMessage = array($this->getNonIndexableItemDetailsResponseMessage);
+        }
+
+        $this->getNonIndexableItemDetailsResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetNonIndexableItemDetailsResponseMessageType[]
+     */
+    public function getGetNonIndexableItemDetailsResponseMessage()
+    {
+        return $this->getNonIndexableItemDetailsResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetNonIndexableItemDetailsResponseMessageType[]|GetNonIndexableItemDetailsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetNonIndexableItemDetailsResponseMessage(array|GetNonIndexableItemDetailsResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getNonIndexableItemDetailsResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value FindPeopleResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addFindPeopleResponseMessage(FindPeopleResponseMessageType $value)
+    {
+        if ($this->findPeopleResponseMessage === null) {
+                        $this->findPeopleResponseMessage = array();
+        }
+
+        if (!is_array($this->findPeopleResponseMessage)) {
+            $this->findPeopleResponseMessage = array($this->findPeopleResponseMessage);
+        }
+
+        $this->findPeopleResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return FindPeopleResponseMessageType[]
+     */
+    public function getFindPeopleResponseMessage()
+    {
+        return $this->findPeopleResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value FindPeopleResponseMessageType[]|FindPeopleResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setFindPeopleResponseMessage(array|FindPeopleResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->findPeopleResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value FindTagsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addFindTagsResponseMessage(FindTagsResponseMessageType $value)
+    {
+        if ($this->findTagsResponseMessage === null) {
+                        $this->findTagsResponseMessage = array();
+        }
+
+        if (!is_array($this->findTagsResponseMessage)) {
+            $this->findTagsResponseMessage = array($this->findTagsResponseMessage);
+        }
+
+        $this->findTagsResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return FindTagsResponseMessageType[]
+     */
+    public function getFindTagsResponseMessage()
+    {
+        return $this->findTagsResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value FindTagsResponseMessageType[]|FindTagsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setFindTagsResponseMessage(array|FindTagsResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->findTagsResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AddTagResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addAddTagResponseMessage(AddTagResponseMessageType $value)
+    {
+        if ($this->addTagResponseMessage === null) {
+                        $this->addTagResponseMessage = array();
+        }
+
+        if (!is_array($this->addTagResponseMessage)) {
+            $this->addTagResponseMessage = array($this->addTagResponseMessage);
+        }
+
+        $this->addTagResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return AddTagResponseMessageType[]
+     */
+    public function getAddTagResponseMessage()
+    {
+        return $this->addTagResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value AddTagResponseMessageType[]|AddTagResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setAddTagResponseMessage(array|AddTagResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->addTagResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value HideTagResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addHideTagResponseMessage(HideTagResponseMessageType $value)
+    {
+        if ($this->hideTagResponseMessage === null) {
+                        $this->hideTagResponseMessage = array();
+        }
+
+        if (!is_array($this->hideTagResponseMessage)) {
+            $this->hideTagResponseMessage = array($this->hideTagResponseMessage);
+        }
+
+        $this->hideTagResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return HideTagResponseMessageType[]
+     */
+    public function getHideTagResponseMessage()
+    {
+        return $this->hideTagResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value HideTagResponseMessageType[]|HideTagResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setHideTagResponseMessage(array|HideTagResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->hideTagResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
      * @param $value GetPasswordExpirationDateResponseMessageType
      * @return ArrayOfResponseMessagesType
      */
@@ -2140,6 +3279,387 @@ class ArrayOfResponseMessagesType extends Message
             $value = [$value];
         }
         $this->getPasswordExpirationDateResponse = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetPersonaResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetPersonaResponseMessage(GetPersonaResponseMessageType $value)
+    {
+        if ($this->getPersonaResponseMessage === null) {
+                        $this->getPersonaResponseMessage = array();
+        }
+
+        if (!is_array($this->getPersonaResponseMessage)) {
+            $this->getPersonaResponseMessage = array($this->getPersonaResponseMessage);
+        }
+
+        $this->getPersonaResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetPersonaResponseMessageType[]
+     */
+    public function getGetPersonaResponseMessage()
+    {
+        return $this->getPersonaResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetPersonaResponseMessageType[]|GetPersonaResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetPersonaResponseMessage(array|GetPersonaResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getPersonaResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetConversationItemsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetConversationItemsResponseMessage(GetConversationItemsResponseMessageType $value)
+    {
+        if ($this->getConversationItemsResponseMessage === null) {
+                        $this->getConversationItemsResponseMessage = array();
+        }
+
+        if (!is_array($this->getConversationItemsResponseMessage)) {
+            $this->getConversationItemsResponseMessage = array($this->getConversationItemsResponseMessage);
+        }
+
+        $this->getConversationItemsResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetConversationItemsResponseMessageType[]
+     */
+    public function getGetConversationItemsResponseMessage()
+    {
+        return $this->getConversationItemsResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetConversationItemsResponseMessageType[]|GetConversationItemsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetConversationItemsResponseMessage(array|GetConversationItemsResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getConversationItemsResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetUserRetentionPolicyTagsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetUserRetentionPolicyTagsResponseMessage(GetUserRetentionPolicyTagsResponseMessageType $value)
+    {
+        if ($this->getUserRetentionPolicyTagsResponseMessage === null) {
+                        $this->getUserRetentionPolicyTagsResponseMessage = array();
+        }
+
+        if (!is_array($this->getUserRetentionPolicyTagsResponseMessage)) {
+            $this->getUserRetentionPolicyTagsResponseMessage = array($this->getUserRetentionPolicyTagsResponseMessage);
+        }
+
+        $this->getUserRetentionPolicyTagsResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetUserRetentionPolicyTagsResponseMessageType[]
+     */
+    public function getGetUserRetentionPolicyTagsResponseMessage()
+    {
+        return $this->getUserRetentionPolicyTagsResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * GetUserRetentionPolicyTagsResponseMessageType[]|GetUserRetentionPolicyTagsResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetUserRetentionPolicyTagsResponseMessage(array|GetUserRetentionPolicyTagsResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getUserRetentionPolicyTagsResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetUserPhotoResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetUserPhotoResponseMessage(GetUserPhotoResponseMessageType $value)
+    {
+        if ($this->getUserPhotoResponseMessage === null) {
+                        $this->getUserPhotoResponseMessage = array();
+        }
+
+        if (!is_array($this->getUserPhotoResponseMessage)) {
+            $this->getUserPhotoResponseMessage = array($this->getUserPhotoResponseMessage);
+        }
+
+        $this->getUserPhotoResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return GetUserPhotoResponseMessageType[]
+     */
+    public function getGetUserPhotoResponseMessage()
+    {
+        return $this->getUserPhotoResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value GetUserPhotoResponseMessageType[]|GetUserPhotoResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetUserPhotoResponseMessage(array|GetUserPhotoResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getUserPhotoResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MarkAsJunkResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addMarkAsJunkResponseMessage(MarkAsJunkResponseMessageType $value)
+    {
+        if ($this->markAsJunkResponseMessage === null) {
+                        $this->markAsJunkResponseMessage = array();
+        }
+
+        if (!is_array($this->markAsJunkResponseMessage)) {
+            $this->markAsJunkResponseMessage = array($this->markAsJunkResponseMessage);
+        }
+
+        $this->markAsJunkResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return MarkAsJunkResponseMessageType[]
+     */
+    public function getMarkAsJunkResponseMessage()
+    {
+        return $this->markAsJunkResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value MarkAsJunkResponseMessageType[]|MarkAsJunkResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setMarkAsJunkResponseMessage(array|MarkAsJunkResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->markAsJunkResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ReportMessageResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addReportMessageResponseMessage(ReportMessageResponseMessageType $value)
+    {
+        if ($this->reportMessageResponseMessage === null) {
+                        $this->reportMessageResponseMessage = array();
+        }
+
+        if (!is_array($this->reportMessageResponseMessage)) {
+            $this->reportMessageResponseMessage = array($this->reportMessageResponseMessage);
+        }
+
+        $this->reportMessageResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ReportMessageResponseMessageType[]
+     */
+    public function getReportMessageResponseMessage()
+    {
+        return $this->reportMessageResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value
+     * ReportMessageResponseMessageType[]|ReportMessageResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setReportMessageResponseMessage(array|ReportMessageResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->reportMessageResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ItemInfoResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addPostModernGroupItemResponseMessage(ItemInfoResponseMessageType $value)
+    {
+        if ($this->postModernGroupItemResponseMessage === null) {
+                        $this->postModernGroupItemResponseMessage = array();
+        }
+
+        if (!is_array($this->postModernGroupItemResponseMessage)) {
+            $this->postModernGroupItemResponseMessage = array($this->postModernGroupItemResponseMessage);
+        }
+
+        $this->postModernGroupItemResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ItemInfoResponseMessageType[]
+     */
+    public function getPostModernGroupItemResponseMessage()
+    {
+        return $this->postModernGroupItemResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ItemInfoResponseMessageType[]|ItemInfoResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setPostModernGroupItemResponseMessage(array|ItemInfoResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->postModernGroupItemResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetLastPrivateCatalogUpdateResponseMessage(ResponseMessageType $value)
+    {
+        if ($this->getLastPrivateCatalogUpdateResponseMessage === null) {
+                        $this->getLastPrivateCatalogUpdateResponseMessage = array();
+        }
+
+        if (!is_array($this->getLastPrivateCatalogUpdateResponseMessage)) {
+            $this->getLastPrivateCatalogUpdateResponseMessage = array($this->getLastPrivateCatalogUpdateResponseMessage);
+        }
+
+        $this->getLastPrivateCatalogUpdateResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ResponseMessageType[]
+     */
+    public function getGetLastPrivateCatalogUpdateResponseMessage()
+    {
+        return $this->getLastPrivateCatalogUpdateResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetLastPrivateCatalogUpdateResponseMessage(array|ResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getLastPrivateCatalogUpdateResponseMessage = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function addGetPrivateCatalogAddInsResponseMessage(ResponseMessageType $value)
+    {
+        if ($this->getPrivateCatalogAddInsResponseMessage === null) {
+                        $this->getPrivateCatalogAddInsResponseMessage = array();
+        }
+
+        if (!is_array($this->getPrivateCatalogAddInsResponseMessage)) {
+            $this->getPrivateCatalogAddInsResponseMessage = array($this->getPrivateCatalogAddInsResponseMessage);
+        }
+
+        $this->getPrivateCatalogAddInsResponseMessage[] = $value;
+        return $this;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @return ResponseMessageType[]
+     */
+    public function getGetPrivateCatalogAddInsResponseMessage()
+    {
+        return $this->getPrivateCatalogAddInsResponseMessage;
+    }
+
+    /**
+     * @autogenerated This method is safe to replace
+     * @param $value ResponseMessageType[]|ResponseMessageType
+     * @return ArrayOfResponseMessagesType
+     */
+    public function setGetPrivateCatalogAddInsResponseMessage(array|ResponseMessageType $value)
+    {
+        if (!is_array($value)) {
+            $value = [$value];
+        }
+        $this->getPrivateCatalogAddInsResponseMessage = $value;
         return $this;
     }
 }

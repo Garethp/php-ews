@@ -590,4 +590,3 @@ class ExchangeWebServices
         return $top($request);
     }
 }
-

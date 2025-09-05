@@ -8,7 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: TentativelyAcceptItemType
  */
-class TentativelyAcceptItemType extends WellKnownResponseObjectType
+class TentativelyAcceptItemType extends MeetingRegistrationResponseObjectType
 {
 
 
