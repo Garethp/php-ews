@@ -172,8 +172,11 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
 
                 $fileGen->setBody($classGen->generate());
 
-                $fileGen->write();
-
+                if ($existingFile === null || preg_replace('/\s/', '', $existingFile->getContents())
+                    !== preg_replace('/\s/', '', $fileGen->generate())
+                ) {
+                    $fileGen->write();
+                }
                 // Add the class to our classMap for writing
                 if (isset($item->type) && $item->type->getName() != "" && $item->getNamespace() !== Enumeration::class) {
                     $classMap[$item->type->getName()] =
@@ -190,7 +193,12 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
         $fileGen = new FileGenerator();
         $fileGen->setFilename($mappingClassReflection->getFileName());
         $fileGen->setClass($mappingClass);
-        $fileGen->write();
+
+        if (preg_replace('/\s/', '', file_get_contents($mappingClassReflection->getFileName()))
+            !== preg_replace('/\s/', '', $fileGen->generate())
+        ) {
+            $fileGen->write();
+        }
 
         $progress->finish();
     }
@@ -266,6 +274,10 @@ class ConvertToPHP extends \Goetas\Xsd\XsdToPhp\Command\ConvertToPHP
             (new Generator\DocBlockGenerator())->setShortDescription("Contains ExchangeWebServices.")
         );
 
-        $fileGen->write();
+        if (preg_replace('/\s/', '', file_get_contents($fileGen->getFileName()))
+            !== preg_replace('/\s/', '', $fileGen->generate())
+        ) {
+            $fileGen->write();
+        }
     }
 }
