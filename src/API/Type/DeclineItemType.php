@@ -8,7 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: DeclineItemType
  */
-class DeclineItemType extends WellKnownResponseObjectType
+class DeclineItemType extends MeetingRegistrationResponseObjectType
 {
 
 

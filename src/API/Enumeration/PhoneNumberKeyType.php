@@ -54,4 +54,12 @@ class PhoneNumberKeyType extends Enumeration
     const OTHER_TELEPHONE = 'OtherTelephone';
 
     const TTY_TDD_PHONE = 'TtyTddPhone';
+
+    const BUSINESS_MOBILE = 'BusinessMobile';
+
+    const IPPHONE = 'IPPhone';
+
+    const MMS = 'Mms';
+
+    const MSN = 'Msn';
 }

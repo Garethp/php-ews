@@ -30,4 +30,8 @@ class MailboxTypeType extends Enumeration
     const PUBLIC_DL = 'PublicDL';
 
     const PRIVATE_DL = 'PrivateDL';
+
+    const GROUP_MAILBOX = 'GroupMailbox';
+
+    const IMPLICIT_CONTACT = 'ImplicitContact';
 }

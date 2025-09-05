@@ -30,4 +30,6 @@ class DistinguishedPropertySetType extends Enumeration
     const TASK = 'Task';
 
     const UNIFIED_MESSAGING = 'UnifiedMessaging';
+
+    const SHARING = 'Sharing';
 }

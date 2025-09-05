@@ -696,4 +696,390 @@ class UnindexedFieldURIType extends Enumeration
     const CONVERSATION_CONVERSATION_ID = 'conversation:ConversationId';
 
     const CONVERSATION_CONVERSATION_TOPIC = 'conversation:ConversationTopic';
+
+    const FOLDER_DISTINGUISHED_FOLDER_ID = 'folder:DistinguishedFolderId';
+
+    const FOLDER_POLICY_TAG = 'folder:PolicyTag';
+
+    const FOLDER_ARCHIVE_TAG = 'folder:ArchiveTag';
+
+    const FOLDER_REPLICA_LIST = 'folder:ReplicaList';
+
+    const ITEM_DISPLAY_BCC = 'item:DisplayBcc';
+
+    const ITEM_PREDICTED_ACTION_REASONS = 'item:PredictedActionReasons';
+
+    const ITEM_IS_CLUTTER = 'item:IsClutter';
+
+    const ITEM_ICON_INDEX = 'item:IconIndex';
+
+    const ITEM_MIME_CONTENT_UTF8 = 'item:MimeContentUTF8';
+
+    const ITEM_MENTIONS = 'item:Mentions';
+
+    const ITEM_MENTIONED_ME = 'item:MentionedMe';
+
+    const ITEM_MENTIONS_PREVIEW = 'item:MentionsPreview';
+
+    const ITEM_MENTIONS_EX = 'item:MentionsEx';
+
+    const ITEM_HASHTAGS = 'item:Hashtags';
+
+    const ITEM_APPLIED_HASHTAGS = 'item:AppliedHashtags';
+
+    const ITEM_APPLIED_HASHTAGS_PREVIEW = 'item:AppliedHashtagsPreview';
+
+    const ITEM_LIKES = 'item:Likes';
+
+    const ITEM_LIKES_PREVIEW = 'item:LikesPreview';
+
+    const ITEM_PENDING_SOCIAL_ACTIVITY_TAG_IDS = 'item:PendingSocialActivityTagIds';
+
+    const ITEM_AT_ALL_MENTION = 'item:AtAllMention';
+
+    const ITEM_CAN_DELETE = 'item:CanDelete';
+
+    const ITEM_INFERENCE_CLASSIFICATION = 'item:InferenceClassification';
+
+    const ITEM_FIRST_BODY = 'item:FirstBody';
+
+    const MESSAGE_APPROVAL_REQUEST_DATA = 'message:ApprovalRequestData';
+
+    const MESSAGE_VOTING_INFORMATION = 'message:VotingInformation';
+
+    const MESSAGE_REMINDER_MESSAGE_DATA = 'message:ReminderMessageData';
+
+    const MESSAGE_PUBLISHED_CALENDAR_ITEM_ICS = 'message:PublishedCalendarItemIcs';
+
+    const MESSAGE_PUBLISHED_CALENDAR_ITEM_NAME = 'message:PublishedCalendarItemName';
+
+    const MESSAGE_MESSAGE_SAFETY = 'message:MessageSafety';
+
+    const SHARING_MESSAGE_SHARING_MESSAGE_ACTION = 'sharingMessage:SharingMessageAction';
+
+    const MEETING_DO_NOT_FORWARD_MEETING = 'meeting:DoNotForwardMeeting';
+
+    const CALENDAR_ENHANCED_LOCATION = 'calendar:EnhancedLocation';
+
+    const CALENDAR_INBOX_REMINDERS = 'calendar:InboxReminders';
+
+    const CALENDAR_CALENDAR_ACTIVITY_DATA = 'calendar:CalendarActivityData';
+
+    const CALENDAR_DO_NOT_FORWARD_MEETING = 'calendar:DoNotForwardMeeting';
+
+    const CONTACTS_ABCH_EMAIL_ADDRESSES = 'contacts:AbchEmailAddresses';
+
+    const CONTACTS_ACCOUNT_NAME = 'contacts:AccountName';
+
+    const CONTACTS_IS_AUTO_UPDATE_DISABLED = 'contacts:IsAutoUpdateDisabled';
+
+    const CONTACTS_IS_MESSENGER_ENABLED = 'contacts:IsMessengerEnabled';
+
+    const CONTACTS_COMMENT = 'contacts:Comment';
+
+    const CONTACTS_CONTACT_SHORT_ID = 'contacts:ContactShortId';
+
+    const CONTACTS_CONTACT_TYPE = 'contacts:ContactType';
+
+    const CONTACTS_CREATED_BY = 'contacts:CreatedBy';
+
+    const CONTACTS_GENDER = 'contacts:Gender';
+
+    const CONTACTS_IS_HIDDEN = 'contacts:IsHidden';
+
+    const CONTACTS_OBJECT_ID = 'contacts:ObjectId';
+
+    const CONTACTS_PASSPORT_ID = 'contacts:PassportId';
+
+    const CONTACTS_IS_PRIVATE = 'contacts:IsPrivate';
+
+    const CONTACTS_SOURCE_ID = 'contacts:SourceId';
+
+    const CONTACTS_TRUST_LEVEL = 'contacts:TrustLevel';
+
+    const CONTACTS_URLS = 'contacts:Urls';
+
+    const CONTACTS_CID = 'contacts:Cid';
+
+    const CONTACTS_SKYPE_AUTH_CERTIFICATE = 'contacts:SkypeAuthCertificate';
+
+    const CONTACTS_SKYPE_CONTEXT = 'contacts:SkypeContext';
+
+    const CONTACTS_SKYPE_ID = 'contacts:SkypeId';
+
+    const CONTACTS_XBOX_LIVE_TAG = 'contacts:XboxLiveTag';
+
+    const CONTACTS_SKYPE_RELATIONSHIP = 'contacts:SkypeRelationship';
+
+    const CONTACTS_YOMI_NICKNAME = 'contacts:YomiNickname';
+
+    const CONTACTS_INVITE_FREE = 'contacts:InviteFree';
+
+    const CONTACTS_HIDE_PRESENCE_AND_PROFILE = 'contacts:HidePresenceAndProfile';
+
+    const CONTACTS_IS_PENDING_OUTBOUND = 'contacts:IsPendingOutbound';
+
+    const CONTACTS_SUPPORT_GROUP_FEEDS = 'contacts:SupportGroupFeeds';
+
+    const CONTACTS_USER_TILE_HASH = 'contacts:UserTileHash';
+
+    const CONTACTS_UNIFIED_INBOX = 'contacts:UnifiedInbox';
+
+    const CONTACTS_MRIS = 'contacts:Mris';
+
+    const CONTACTS_WLID = 'contacts:Wlid';
+
+    const CONTACTS_ABCH_CONTACT_ID = 'contacts:AbchContactId';
+
+    const CONTACTS_NOT_IN_BIRTHDAY_CALENDAR = 'contacts:NotInBirthdayCalendar';
+
+    const CONTACTS_SHELL_CONTACT_TYPE = 'contacts:ShellContactType';
+
+    const CONTACTS_IM_MRI = 'contacts:ImMri';
+
+    const CONTACTS_PRESENCE_TRUST_LEVEL = 'contacts:PresenceTrustLevel';
+
+    const CONTACTS_OTHER_MRI = 'contacts:OtherMri';
+
+    const CONTACTS_PROFILE_LAST_CHANGED = 'contacts:ProfileLastChanged';
+
+    const CONTACTS_MOBILE_IMENABLED = 'contacts:MobileIMEnabled';
+
+    const CONTACTS_PARTNER_NETWORK_PROFILE_PHOTO_URL = 'contacts:PartnerNetworkProfilePhotoUrl';
+
+    const CONTACTS_PARTNER_NETWORK_THUMBNAIL_PHOTO_URL = 'contacts:PartnerNetworkThumbnailPhotoUrl';
+
+    const CONTACTS_PERSON_ID = 'contacts:PersonId';
+
+    const CONTACTS_CONVERSATION_GUID = 'contacts:ConversationGuid';
+
+    const CONVERSATION_HAS_IRM = 'conversation:HasIrm';
+
+    const CONVERSATION_GLOBAL_HAS_IRM = 'conversation:GlobalHasIrm';
+
+    const CONVERSATION_ICON_INDEX = 'conversation:IconIndex';
+
+    const CONVERSATION_GLOBAL_ICON_INDEX = 'conversation:GlobalIconIndex';
+
+    const CONVERSATION_DRAFT_ITEM_IDS = 'conversation:DraftItemIds';
+
+    const CONVERSATION_HAS_CLUTTER = 'conversation:HasClutter';
+
+    const CONVERSATION_MENTIONED_ME = 'conversation:MentionedMe';
+
+    const CONVERSATION_GLOBAL_MENTIONED_ME = 'conversation:GlobalMentionedMe';
+
+    const CONVERSATION_AT_ALL_MENTION = 'conversation:AtAllMention';
+
+    const CONVERSATION_GLOBAL_AT_ALL_MENTION = 'conversation:GlobalAtAllMention';
+
+    const PERSON_FULL_NAME = 'person:FullName';
+
+    const PERSON_GIVEN_NAME = 'person:GivenName';
+
+    const PERSON_SURNAME = 'person:Surname';
+
+    const PERSON_PHONE_NUMBER = 'person:PhoneNumber';
+
+    const PERSON_SMSNUMBER = 'person:SMSNumber';
+
+    const PERSON_EMAIL_ADDRESS = 'person:EmailAddress';
+
+    const PERSON_ALIAS = 'person:Alias';
+
+    const PERSON_DEPARTMENT = 'person:Department';
+
+    const PERSON_LINKED_IN_PROFILE_LINK = 'person:LinkedInProfileLink';
+
+    const PERSON_SKILLS = 'person:Skills';
+
+    const PERSON_PROFESSIONAL_BIOGRAPHY = 'person:ProfessionalBiography';
+
+    const PERSON_MANAGEMENT_CHAIN = 'person:ManagementChain';
+
+    const PERSON_DIRECT_REPORTS = 'person:DirectReports';
+
+    const PERSON_PEERS = 'person:Peers';
+
+    const PERSON_TEAM_SIZE = 'person:TeamSize';
+
+    const PERSON_CURRENT_JOB = 'person:CurrentJob';
+
+    const PERSON_BIRTHDAY = 'person:Birthday';
+
+    const PERSON_HOMETOWN = 'person:Hometown';
+
+    const PERSON_CURRENT_LOCATION = 'person:CurrentLocation';
+
+    const PERSON_COMPANY_PROFILE = 'person:CompanyProfile';
+
+    const PERSON_OFFICE = 'person:Office';
+
+    const PERSON_HEADLINE = 'person:Headline';
+
+    const PERSON_MUTUAL_CONNECTIONS = 'person:MutualConnections';
+
+    const PERSON_TITLE = 'person:Title';
+
+    const PERSON_MUTUAL_MANAGER = 'person:MutualManager';
+
+    const PERSON_INSIGHTS = 'person:Insights';
+
+    const PERSON_USER_PROFILE_PICTURE = 'person:UserProfilePicture';
+
+    const PERSONA_PERSONA_ID = 'persona:PersonaId';
+
+    const PERSONA_PERSONA_TYPE = 'persona:PersonaType';
+
+    const PERSONA_RANKING_WEIGHT = 'persona:RankingWeight';
+
+    const PERSONA_PERSONA_OBJECT_STATUS = 'persona:PersonaObjectStatus';
+
+    const PERSONA_IS_FAVORITE = 'persona:IsFavorite';
+
+    const PERSONA_INLINE_LINKS = 'persona:InlineLinks';
+
+    const PERSONA_ITEM_LINK_IDS = 'persona:ItemLinkIds';
+
+    const PERSONA_HAS_ACTIVE_DEALS = 'persona:HasActiveDeals';
+
+    const PERSONA_IS_BUSINESS_CONTACT = 'persona:IsBusinessContact';
+
+    const PERSONA_ATTRIBUTED_HAS_ACTIVE_DEALS = 'persona:AttributedHasActiveDeals';
+
+    const PERSONA_ATTRIBUTED_IS_BUSINESS_CONTACT = 'persona:AttributedIsBusinessContact';
+
+    const PERSONA_SOURCE_MAILBOX_GUIDS = 'persona:SourceMailboxGuids';
+
+    const PERSONA_LAST_CONTACTED_DATE = 'persona:LastContactedDate';
+
+    const PERSONA_EXTERNAL_DIRECTORY_OBJECT_ID = 'persona:ExternalDirectoryObjectId';
+
+    const PERSONA_MAPI_ENTRY_ID = 'persona:MapiEntryId';
+
+    const PERSONA_MAPI_EMAIL_ADDRESS = 'persona:MapiEmailAddress';
+
+    const PERSONA_MAPI_ADDRESS_TYPE = 'persona:MapiAddressType';
+
+    const PERSONA_MAPI_SEARCH_KEY = 'persona:MapiSearchKey';
+
+    const PERSONA_MAPI_TRANSMITTABLE_DISPLAY_NAME = 'persona:MapiTransmittableDisplayName';
+
+    const PERSONA_MAPI_SEND_RICH_INFO = 'persona:MapiSendRichInfo';
+
+    const ROLEMEMBER_MEMBER_TYPE = 'rolemember:MemberType';
+
+    const ROLEMEMBER_MEMBER_ID = 'rolemember:MemberId';
+
+    const ROLEMEMBER_DISPLAY_NAME = 'rolemember:DisplayName';
+
+    const NETWORK_TOKEN_REFRESH_LAST_COMPLETED = 'network:TokenRefreshLastCompleted';
+
+    const NETWORK_TOKEN_REFRESH_LAST_ATTEMPTED = 'network:TokenRefreshLastAttempted';
+
+    const NETWORK_SYNC_ENABLED = 'network:SyncEnabled';
+
+    const NETWORK_REJECTED_OFFERS = 'network:RejectedOffers';
+
+    const NETWORK_SESSION_HANDLE = 'network:SessionHandle';
+
+    const NETWORK_REFRESH_TOKEN_EXPIRY_2 = 'network:RefreshTokenExpiry2';
+
+    const NETWORK_REFRESH_TOKEN_2 = 'network:RefreshToken2';
+
+    const NETWORK_PSA_LAST_CHANGED = 'network:PsaLastChanged';
+
+    const NETWORK_OFFERS = 'network:Offers';
+
+    const NETWORK_LAST_WELCOME_CONTACT = 'network:LastWelcomeContact';
+
+    const NETWORK_LAST_VERSION_SAVED = 'network:LastVersionSaved';
+
+    const NETWORK_DOMAIN_TAG = 'network:DomainTag';
+
+    const NETWORK_FIRST_AUTH_ERROR_DATES = 'network:FirstAuthErrorDates';
+
+    const NETWORK_ERROR_OFFERS = 'network:ErrorOffers';
+
+    const NETWORK_CONTACT_SYNC_SUCCESS = 'network:ContactSyncSuccess';
+
+    const NETWORK_CONTACT_SYNC_ERROR = 'network:ContactSyncError';
+
+    const NETWORK_CLIENT_TOKEN_2 = 'network:ClientToken2';
+
+    const NETWORK_CLIENT_TOKEN = 'network:ClientToken';
+
+    const NETWORK_CLIENT_PUBLISH_SECRET = 'network:ClientPublishSecret';
+
+    const NETWORK_USER_EMAIL = 'network:UserEmail';
+
+    const NETWORK_AUTO_LINK_SUCCESS = 'network:AutoLinkSuccess';
+
+    const NETWORK_AUTO_LINK_ERROR = 'network:AutoLinkError';
+
+    const NETWORK_IS_DEFAULT = 'network:IsDefault';
+
+    const NETWORK_SETTINGS = 'network:Settings';
+
+    const NETWORK_PROFILE_URL = 'network:ProfileUrl';
+
+    const NETWORK_USER_TILE_URL = 'network:UserTileUrl';
+
+    const NETWORK_DOMAIN_ID = 'network:DomainId';
+
+    const NETWORK_DISPLAY_NAME = 'network:DisplayName';
+
+    const NETWORK_ACCOUNT_NAME = 'network:AccountName';
+
+    const NETWORK_SOURCE_ENTRY_ID = 'network:SourceEntryID';
+
+    const ABCHPERSON_FAVORITE_ORDER = 'abchperson:FavoriteOrder';
+
+    const ABCHPERSON_PERSON_ID = 'abchperson:PersonId';
+
+    const ABCHPERSON_EXCHANGE_PERSON_ID_GUID = 'abchperson:ExchangePersonIdGuid';
+
+    const ABCHPERSON_ANTI_LINK_INFO = 'abchperson:AntiLinkInfo';
+
+    const ABCHPERSON_RELEVANCE_ORDER_1 = 'abchperson:RelevanceOrder1';
+
+    const ABCHPERSON_RELEVANCE_ORDER_2 = 'abchperson:RelevanceOrder2';
+
+    const ABCHPERSON_CONTACT_HANDLES = 'abchperson:ContactHandles';
+
+    const ABCHPERSON_CATEGORIES = 'abchperson:Categories';
+
+    const BOOKING_SERVICE_IDS = 'booking:ServiceIds';
+
+    const BOOKING_STAFF_IDS = 'booking:StaffIds';
+
+    const BOOKING_STAFF_INITIALS = 'booking:StaffInitials';
+
+    const BOOKING_CUSTOMER_NAME = 'booking:CustomerName';
+
+    const BOOKING_CUSTOMER_EMAIL = 'booking:CustomerEmail';
+
+    const BOOKING_CUSTOMER_PHONE = 'booking:CustomerPhone';
+
+    const BOOKING_CUSTOMER_ID = 'booking:CustomerId';
+
+    const INSIGHT_INSIGHT_ID = 'insight:InsightId';
+
+    const INSIGHT_TYPE = 'insight:Type';
+
+    const INSIGHT_START_TIME_UTC = 'insight:StartTimeUtc';
+
+    const INSIGHT_END_TIME_UTC = 'insight:EndTimeUtc';
+
+    const INSIGHT_STATUS = 'insight:Status';
+
+    const INSIGHT_VERSION = 'insight:Version';
+
+    const INSIGHT_APPLICATIONS_IDS = 'insight:ApplicationsIds';
+
+    const INSIGHT_TEXT = 'insight:Text';
+
+    const INSIGHT_SUGGESTED_ACTIONS = 'insight:SuggestedActions';
+
+    const INSIGHT_APP_CONTEXTS = 'insight:AppContexts';
 }

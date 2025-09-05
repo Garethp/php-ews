@@ -2310,4 +2310,280 @@ class ResponseCodeType extends Message
     const ERROR_NEW_EVENT_STREAM_CONNECTION_OPENED = 'ErrorNewEventStreamConnectionOpened';
 
     const ERROR_MISSED_NOTIFICATION_EVENTS = 'ErrorMissedNotificationEvents';
+
+    const ERROR_SERVICE_UNAVAILABLE = 'ErrorServiceUnavailable';
+
+    const ERROR_ARCHIVE_FOLDER_PATH_CREATION = 'ErrorArchiveFolderPathCreation';
+
+    const ERROR_ARCHIVE_MAILBOX_NOT_ENABLED = 'ErrorArchiveMailboxNotEnabled';
+
+    const ERROR_ARCHIVE_MAILBOX_SERVICE_DISCOVERY_FAILED = 'ErrorArchiveMailboxServiceDiscoveryFailed';
+
+    const ERROR_CANNOT_ACCESS_DELETED_PUBLIC_FOLDER = 'ErrorCannotAccessDeletedPublicFolder';
+
+    const ERROR_CANNOT_ARCHIVE_CALENDAR_CONTACT_TASK_FOLDER_EXCEPTION = 'ErrorCannotArchiveCalendarContactTaskFolderException';
+
+    const ERROR_CANNOT_ARCHIVE_ITEMS_IN_PUBLIC_FOLDERS = 'ErrorCannotArchiveItemsInPublicFolders';
+
+    const ERROR_CANNOT_ARCHIVE_ITEMS_IN_ARCHIVE_MAILBOX = 'ErrorCannotArchiveItemsInArchiveMailbox';
+
+    const ERROR_CANNOT_DISABLE_MANDATORY_EXTENSION = 'ErrorCannotDisableMandatoryExtension';
+
+    const ERROR_CANNOT_FIND_USER = 'ErrorCannotFindUser';
+
+    const ERROR_CANNOT_GET_SOURCE_FOLDER_PATH = 'ErrorCannotGetSourceFolderPath';
+
+    const ERROR_CANNOT_GET_EXTERNAL_ECP_URL = 'ErrorCannotGetExternalEcpUrl';
+
+    const ERROR_CANNOT_SPECIFY_SEARCH_FOLDER_AS_SOURCE_FOLDER = 'ErrorCannotSpecifySearchFolderAsSourceFolder';
+
+    const ERROR_CLIENT_INTENT_INVALID_STATE_DEFINITION = 'ErrorClientIntentInvalidStateDefinition';
+
+    const ERROR_CLIENT_INTENT_NOT_FOUND = 'ErrorClientIntentNotFound';
+
+    const ERROR_CONTENT_INDEXING_NOT_ENABLED = 'ErrorContentIndexingNotEnabled';
+
+    const ERROR_DELETE_UNIFIED_MESSAGING_PROMPT_FAILED = 'ErrorDeleteUnifiedMessagingPromptFailed';
+
+    const ERROR_EXTENSION_NOT_FOUND = 'ErrorExtensionNotFound';
+
+    const ERROR_EXTENSIONS_NOT_AUTHORIZED = 'ErrorExtensionsNotAuthorized';
+
+    const ERROR_IM_CONTACT_LIMIT_REACHED = 'ErrorImContactLimitReached';
+
+    const ERROR_IM_GROUP_DISPLAY_NAME_ALREADY_EXISTS = 'ErrorImGroupDisplayNameAlreadyExists';
+
+    const ERROR_IM_GROUP_LIMIT_REACHED = 'ErrorImGroupLimitReached';
+
+    const ERROR_INVALID_IM_CONTACT_ID = 'ErrorInvalidImContactId';
+
+    const ERROR_INVALID_IM_DISTRIBUTION_GROUP_SMTP_ADDRESS = 'ErrorInvalidImDistributionGroupSmtpAddress';
+
+    const ERROR_INVALID_IM_GROUP_ID = 'ErrorInvalidImGroupId';
+
+    const ERROR_INVALID_ITEM_FOR_OPERATION_ARCHIVE_ITEM = 'ErrorInvalidItemForOperationArchiveItem';
+
+    const ERROR_INVALID_LIKE_REQUEST = 'ErrorInvalidLikeRequest';
+
+    const ERROR_INVALID_RETENTION_TAG_TYPE_MISMATCH = 'ErrorInvalidRetentionTagTypeMismatch';
+
+    const ERROR_INVALID_RETENTION_TAG_INVISIBLE = 'ErrorInvalidRetentionTagInvisible';
+
+    const ERROR_INVALID_RETENTION_TAG_INHERITANCE = 'ErrorInvalidRetentionTagInheritance';
+
+    const ERROR_INVALID_RETENTION_TAG_ID_GUID = 'ErrorInvalidRetentionTagIdGuid';
+
+    const ERROR_MAILBOX_HOLD_NOT_FOUND = 'ErrorMailboxHoldNotFound';
+
+    const ERROR_MULTI_LEGACY_MAILBOX_ACCESS = 'ErrorMultiLegacyMailboxAccess';
+
+    const ERROR_PROMPT_PUBLISHING_OPERATION_FAILED = 'ErrorPromptPublishingOperationFailed';
+
+    const ERROR_PUBLIC_FOLDER_MAILBOX_DISCOVERY_FAILED = 'ErrorPublicFolderMailboxDiscoveryFailed';
+
+    const ERROR_PUBLIC_FOLDER_OPERATION_FAILED = 'ErrorPublicFolderOperationFailed';
+
+    const ERROR_PUBLIC_FOLDER_SYNC_EXCEPTION = 'ErrorPublicFolderSyncException';
+
+    const ERROR_TEAM_MAILBOX_NOT_FOUND = 'ErrorTeamMailboxNotFound';
+
+    const ERROR_TEAM_MAILBOX_NOT_LINKED_TO_SHARE_POINT = 'ErrorTeamMailboxNotLinkedToSharePoint';
+
+    const ERROR_TEAM_MAILBOX_URL_VALIDATION_FAILED = 'ErrorTeamMailboxUrlValidationFailed';
+
+    const ERROR_TEAM_MAILBOX_NOT_AUTHORIZED_OWNER = 'ErrorTeamMailboxNotAuthorizedOwner';
+
+    const ERROR_TEAM_MAILBOX_ACTIVE_TO_PENDING_DELETE = 'ErrorTeamMailboxActiveToPendingDelete';
+
+    const ERROR_TEAM_MAILBOX_FAILED_SENDING_NOTIFICATIONS = 'ErrorTeamMailboxFailedSendingNotifications';
+
+    const ERROR_TEAM_MAILBOX_ERROR_UNKNOWN = 'ErrorTeamMailboxErrorUnknown';
+
+    const ERROR_TOO_MANY_OBJECTS_OPENED = 'ErrorTooManyObjectsOpened';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_AADCREATION_FAILED = 'ErrorUnifiedGroupMailboxAADCreationFailed';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_AADDELETE_FAILED = 'ErrorUnifiedGroupMailboxAADDeleteFailed';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_NAMING_POLICY = 'ErrorUnifiedGroupMailboxNamingPolicy';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_DELETE_FAILED = 'ErrorUnifiedGroupMailboxDeleteFailed';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_NOT_FOUND = 'ErrorUnifiedGroupMailboxNotFound';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_UPDATE_DELAYED = 'ErrorUnifiedGroupMailboxUpdateDelayed';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_UPDATED_PARTIAL_PROPERTIES = 'ErrorUnifiedGroupMailboxUpdatedPartialProperties';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_UPDATE_FAILED = 'ErrorUnifiedGroupMailboxUpdateFailed';
+
+    const ERROR_UNIFIED_GROUP_MAILBOX_PROVISION_FAILED = 'ErrorUnifiedGroupMailboxProvisionFailed';
+
+    const ERROR_UNIFIED_MESSAGING_REPORT_DATA_NOT_FOUND = 'ErrorUnifiedMessagingReportDataNotFound';
+
+    const ERROR_UNIFIED_MESSAGING_PROMPT_NOT_FOUND = 'ErrorUnifiedMessagingPromptNotFound';
+
+    const ERROR_UNABLE_TO_REMOVE_IM_CONTACT_FROM_GROUP = 'ErrorUnableToRemoveImContactFromGroup';
+
+    const ERROR_DUPLICATE_LEGACY_DISTINGUISHED_NAME = 'ErrorDuplicateLegacyDistinguishedName';
+
+    const ERROR_INVALID_CLIENT_ACCESS_TOKEN_REQUEST = 'ErrorInvalidClientAccessTokenRequest';
+
+    const ERROR_UNAUTHORIZED_CLIENT_ACCESS_TOKEN_REQUEST = 'ErrorUnauthorizedClientAccessTokenRequest';
+
+    const ERROR_NO_SPEECH_DETECTED = 'ErrorNoSpeechDetected';
+
+    const ERROR_UMSERVER_UNAVAILABLE = 'ErrorUMServerUnavailable';
+
+    const ERROR_RECIPIENT_NOT_FOUND = 'ErrorRecipientNotFound';
+
+    const ERROR_RECOGNIZER_NOT_INSTALLED = 'ErrorRecognizerNotInstalled';
+
+    const ERROR_SPEECH_GRAMMAR_ERROR = 'ErrorSpeechGrammarError';
+
+    const ERROR_INVALID_MANAGEMENT_ROLE_HEADER = 'ErrorInvalidManagementRoleHeader';
+
+    const ERROR_LOCATION_SERVICES_DISABLED = 'ErrorLocationServicesDisabled';
+
+    const ERROR_LOCATION_SERVICES_REQUEST_TIMED_OUT = 'ErrorLocationServicesRequestTimedOut';
+
+    const ERROR_LOCATION_SERVICES_REQUEST_FAILED = 'ErrorLocationServicesRequestFailed';
+
+    const ERROR_LOCATION_SERVICES_INVALID_REQUEST = 'ErrorLocationServicesInvalidRequest';
+
+    const ERROR_WEATHER_SERVICE_DISABLED = 'ErrorWeatherServiceDisabled';
+
+    const ERROR_MAILBOX_SCOPE_NOT_ALLOWED_WITHOUT_QUERY_STRING = 'ErrorMailboxScopeNotAllowedWithoutQueryString';
+
+    const ERROR_ARCHIVE_MAILBOX_SEARCH_FAILED = 'ErrorArchiveMailboxSearchFailed';
+
+    const ERROR_GET_REMOTE_ARCHIVE_FOLDER_FAILED = 'ErrorGetRemoteArchiveFolderFailed';
+
+    const ERROR_FIND_REMOTE_ARCHIVE_FOLDER_FAILED = 'ErrorFindRemoteArchiveFolderFailed';
+
+    const ERROR_GET_REMOTE_ARCHIVE_ITEM_FAILED = 'ErrorGetRemoteArchiveItemFailed';
+
+    const ERROR_EXPORT_REMOTE_ARCHIVE_ITEMS_FAILED = 'ErrorExportRemoteArchiveItemsFailed';
+
+    const ERROR_INVALID_PHOTO_SIZE = 'ErrorInvalidPhotoSize';
+
+    const ERROR_SEARCH_QUERY_HAS_TOO_MANY_KEYWORDS = 'ErrorSearchQueryHasTooManyKeywords';
+
+    const ERROR_SEARCH_TOO_MANY_MAILBOXES = 'ErrorSearchTooManyMailboxes';
+
+    const ERROR_INVALID_RETENTION_TAG_NONE = 'ErrorInvalidRetentionTagNone';
+
+    const ERROR_DISCOVERY_SEARCHES_DISABLED = 'ErrorDiscoverySearchesDisabled';
+
+    const ERROR_CALENDAR_SEEK_TO_CONDITION_NOT_SUPPORTED = 'ErrorCalendarSeekToConditionNotSupported';
+
+    const ERROR_CALENDAR_IS_GROUP_MAILBOX_FOR_ACCEPT = 'ErrorCalendarIsGroupMailboxForAccept';
+
+    const ERROR_CALENDAR_IS_GROUP_MAILBOX_FOR_DECLINE = 'ErrorCalendarIsGroupMailboxForDecline';
+
+    const ERROR_CALENDAR_IS_GROUP_MAILBOX_FOR_TENTATIVE = 'ErrorCalendarIsGroupMailboxForTentative';
+
+    const ERROR_CALENDAR_IS_GROUP_MAILBOX_FOR_SUPPRESS_READ_RECEIPT = 'ErrorCalendarIsGroupMailboxForSuppressReadReceipt';
+
+    const ERROR_ORGANIZATION_ACCESS_BLOCKED = 'ErrorOrganizationAccessBlocked';
+
+    const ERROR_INVALID_LICENSE = 'ErrorInvalidLicense';
+
+    const ERROR_MESSAGE_PER_FOLDER_COUNT_RECEIVE_QUOTA_EXCEEDED = 'ErrorMessagePerFolderCountReceiveQuotaExceeded';
+
+    const ERROR_INVALID_BULK_ACTION_TYPE = 'ErrorInvalidBulkActionType';
+
+    const ERROR_INVALID_KEEP_NCOUNT = 'ErrorInvalidKeepNCount';
+
+    const ERROR_INVALID_KEEP_NTYPE = 'ErrorInvalidKeepNType';
+
+    const ERROR_NO_OAUTH_SERVER_AVAILABLE_FOR_REQUEST = 'ErrorNoOAuthServerAvailableForRequest';
+
+    const ERROR_INSTANT_SEARCH_SESSION_EXPIRED = 'ErrorInstantSearchSessionExpired';
+
+    const ERROR_INSTANT_SEARCH_TIMEOUT = 'ErrorInstantSearchTimeout';
+
+    const ERROR_INSTANT_SEARCH_FAILED = 'ErrorInstantSearchFailed';
+
+    const ERROR_UNSUPPORTED_USER_FOR_EXECUTE_SEARCH = 'ErrorUnsupportedUserForExecuteSearch';
+
+    const ERROR_DUPLICATE_EXTENDED_KEYWORD_DEFINITION = 'ErrorDuplicateExtendedKeywordDefinition';
+
+    const ERROR_MISSING_EXCHANGE_PRINCIPAL = 'ErrorMissingExchangePrincipal';
+
+    const ERROR_UNEXPECTED_UNIFIED_GROUPS_COUNT = 'ErrorUnexpectedUnifiedGroupsCount';
+
+    const ERROR_PARSING_XMLRESPONSE = 'ErrorParsingXMLResponse';
+
+    const ERROR_INVALID_FEDERATION_ORGANIZATION_IDENTIFIER = 'ErrorInvalidFederationOrganizationIdentifier';
+
+    const ERROR_INVALID_SWEEP_RULE = 'ErrorInvalidSweepRule';
+
+    const ERROR_INVALID_SWEEP_RULE_OPERATION_TYPE = 'ErrorInvalidSweepRuleOperationType';
+
+    const ERROR_TARGET_DOMAIN_NOT_SUPPORTED = 'ErrorTargetDomainNotSupported';
+
+    const ERROR_INVALID_INTERNET_WEB_PROXY_ON_LOCAL_SERVER = 'ErrorInvalidInternetWebProxyOnLocalServer';
+
+    const ERROR_NO_SENDER_RESTRICTIONS_SETTINGS_FOUND_IN_REQUEST = 'ErrorNoSenderRestrictionsSettingsFoundInRequest';
+
+    const ERROR_DUPLICATE_SENDER_RESTRICTIONS_INPUT_FOUND = 'ErrorDuplicateSenderRestrictionsInputFound';
+
+    const ERROR_SENDER_RESTRICTIONS_UPDATE_FAILED = 'ErrorSenderRestrictionsUpdateFailed';
+
+    const ERROR_MESSAGE_SUBMISSION_BLOCKED = 'ErrorMessageSubmissionBlocked';
+
+    const ERROR_EXCEEDED_MESSAGE_LIMIT = 'ErrorExceededMessageLimit';
+
+    const ERROR_EXCEEDED_MAX_RECIPIENT_LIMIT_BLOCK = 'ErrorExceededMaxRecipientLimitBlock';
+
+    const ERROR_ACCOUNT_SUSPEND = 'ErrorAccountSuspend';
+
+    const ERROR_EXCEEDED_MAX_RECIPIENT_LIMIT = 'ErrorExceededMaxRecipientLimit';
+
+    const ERROR_MESSAGE_BLOCKED = 'ErrorMessageBlocked';
+
+    const ERROR_ACCOUNT_SUSPEND_SHOW_TIER_UPGRADE = 'ErrorAccountSuspendShowTierUpgrade';
+
+    const ERROR_EXCEEDED_MESSAGE_LIMIT_SHOW_TIER_UPGRADE = 'ErrorExceededMessageLimitShowTierUpgrade';
+
+    const ERROR_EXCEEDED_MAX_RECIPIENT_LIMIT_SHOW_TIER_UPGRADE = 'ErrorExceededMaxRecipientLimitShowTierUpgrade';
+
+    const ERROR_INVALID_LONGITUDE = 'ErrorInvalidLongitude';
+
+    const ERROR_INVALID_LATITUDE = 'ErrorInvalidLatitude';
+
+    const ERROR_PROXY_SOAP_EXCEPTION = 'ErrorProxySoapException';
+
+    const ERROR_UNIFIED_GROUP_ALREADY_EXISTS = 'ErrorUnifiedGroupAlreadyExists';
+
+    const ERROR_UNIFIED_GROUP_AAD_AUTHORIZATION_REQUEST_DENIED = 'ErrorUnifiedGroupAadAuthorizationRequestDenied';
+
+    const ERROR_UNIFIED_GROUP_CREATION_DISABLED = 'ErrorUnifiedGroupCreationDisabled';
+
+    const ERROR_MARKET_PLACE_EXTENSION_ALREADY_INSTALLED_FOR_ORG = 'ErrorMarketPlaceExtensionAlreadyInstalledForOrg';
+
+    const ERROR_EXTENSION_ALREADY_INSTALLED_FOR_ORG = 'ErrorExtensionAlreadyInstalledForOrg';
+
+    const ERROR_NEWER_EXTENSION_ALREADY_INSTALLED = 'ErrorNewerExtensionAlreadyInstalled';
+
+    const ERROR_NEWER_MARKET_PLACE_EXTENSION_ALREADY_INSTALLED = 'ErrorNewerMarketPlaceExtensionAlreadyInstalled';
+
+    const ERROR_INVALID_EXTENSION_ID = 'ErrorInvalidExtensionId';
+
+    const ERROR_CANNOT_UNINSTALL_PROVIDED_EXTENSIONS = 'ErrorCannotUninstallProvidedExtensions';
+
+    const ERROR_NO_RBAC_PERMISSION_TO_INSTALL_MARKET_PLACE_EXTENSIONS = 'ErrorNoRbacPermissionToInstallMarketPlaceExtensions';
+
+    const ERROR_NO_RBAC_PERMISSION_TO_INSTALL_READ_WRITE_MAILBOX_EXTENSIONS = 'ErrorNoRbacPermissionToInstallReadWriteMailboxExtensions';
+
+    const ERROR_INVALID_REPORT_MESSAGE_ACTION_TYPE = 'ErrorInvalidReportMessageActionType';
+
+    const ERROR_CANNOT_DOWNLOAD_EXTENSION_MANIFEST = 'ErrorCannotDownloadExtensionManifest';
+
+    const ERROR_CALENDAR_FORWARD_ACTION_NOT_ALLOWED = 'ErrorCalendarForwardActionNotAllowed';
+
+    const ERROR_UNIFIED_GROUP_ALIAS_NAMING_POLICY = 'ErrorUnifiedGroupAliasNamingPolicy';
+
+    const ERROR_SUBSCRIPTIONS_DISABLED_FOR_GROUP = 'ErrorSubscriptionsDisabledForGroup';
 }
