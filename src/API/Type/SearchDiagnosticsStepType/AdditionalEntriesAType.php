@@ -2,10 +2,12 @@
 
 namespace garethp\ews\API\Type\SearchDiagnosticsStepType;
 
+use garethp\ews\API\Type\SearchDiagnosticsStepType;
+
 /**
  * Class representing AdditionalEntriesAType
  */
-class AdditionalEntriesAType
+class AdditionalEntriesAType extends SearchDiagnosticsStepType
 {
 
     /**

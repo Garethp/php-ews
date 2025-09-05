@@ -2,10 +2,12 @@
 
 namespace garethp\ews\API\Type\SearchResultsType;
 
+use garethp\ews\API\Type\SearchResultsType;
+
 /**
  * Class representing PeopleAType
  */
-class PeopleAType
+class PeopleAType extends SearchResultsType
 {
 
     /**

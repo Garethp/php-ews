@@ -2,10 +2,12 @@
 
 namespace garethp\ews\API\Type\SearchResultsType;
 
+use garethp\ews\API\Type\SearchResultsType;
+
 /**
  * Class representing SearchRefinersAType
  */
-class SearchRefinersAType
+class SearchRefinersAType extends SearchResultsType
 {
 
     /**

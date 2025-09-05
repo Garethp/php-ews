@@ -2,10 +2,12 @@
 
 namespace garethp\ews\API\Message\ExecuteSearchType;
 
+use garethp\ews\API\Message\ExecuteSearchType;
+
 /**
  * Class representing ExtendedKeywordsAType
  */
-class ExtendedKeywordsAType
+class ExtendedKeywordsAType extends ExecuteSearchType
 {
 
     /**

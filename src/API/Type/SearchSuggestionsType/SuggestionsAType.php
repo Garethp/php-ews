@@ -2,10 +2,12 @@
 
 namespace garethp\ews\API\Type\SearchSuggestionsType;
 
+use garethp\ews\API\Type\SearchSuggestionsType;
+
 /**
  * Class representing SuggestionsAType
  */
-class SuggestionsAType
+class SuggestionsAType extends SearchSuggestionsType
 {
 
     /**

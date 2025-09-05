@@ -2,10 +2,12 @@
 
 namespace garethp\ews\API\Message\ExecuteSearchType;
 
+use garethp\ews\API\Message\ExecuteSearchType;
+
 /**
  * Class representing SearchRefinersAType
  */
-class SearchRefinersAType
+class SearchRefinersAType extends ExecuteSearchType
 {
 
     /**
