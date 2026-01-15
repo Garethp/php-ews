@@ -6,7 +6,7 @@
 The PHP Exchange Web Services library (php-ews) is intended to make communication with Microsoft Exchange servers using Exchange Web Services easier. It handles the NTLM authentication required to use the SOAP services and provides an object-oriented interface to the complex types required to form a request.
 
 # Dependencies
-* PHP 5.5+
+* PHP 8.5+
 * cURL with NTLM support (7.23.0+ recommended)
 * Composer
 * Exchange 2007 or 2010*

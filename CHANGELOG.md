@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.7 - TBD
+ * PHP 8.5 compatibility migration
+ * Updated PHPUnit from 4.x/5.x to 10.x
+ * Updated development dependencies (CodeSniffer, Mockery)
+ * Fixed `__doRequest()` method signature for PHP 8.5 SoapClient compatibility
+ * Updated all test classes for PHPUnit 10.x compatibility
+ * Upgraded garethp/http-playback from v1.2.0 to v2.0 (supports Guzzle 7.x)
+ * Upgraded guzzlehttp/guzzle from 6.5.8 to 7.10.0
+ * Fixed null response handling in http-playback v2.0 for better PHP 8.5 compatibility
+
 ## 0.9.6 - TBD
  * Added a `$options = []` parameter to various methods
  * Made `ExchangeWebServices::drillDownResponses()` static

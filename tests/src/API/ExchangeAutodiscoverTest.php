@@ -6,8 +6,9 @@ namespace garethp\ews\Test\API;
 use garethp\ews\API;
 use garethp\ews\API\ExchangeAutodiscover as Autodiscover;
 use garethp\ews\API\Exception\AutodiscoverFailed;
+use PHPUnit\Framework\TestCase;
 
-class ExchangeAutodiscoverTest extends \PHPUnit_Framework_TestCase
+class ExchangeAutodiscoverTest extends TestCase
 {
     public function testGetAPI()
     {
@@ -33,7 +34,7 @@ class ExchangeAutodiscoverTest extends \PHPUnit_Framework_TestCase
             [
                 'httpPlayback' => [
                     'mode' => $mode,
-                    'recordFileName' => self::class . '.' . $this->getName() . '.json',
+                    'recordFileName' => self::class . '.' . $this->name() . '.json',
                     'recordLocation' => realpath(__DIR__ . '/../../../Resources/recordings') . '/'
                 ]
             ]
@@ -42,11 +43,10 @@ class ExchangeAutodiscoverTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(API::class, $client);
     }
 
-    /**
-     * @expectedException \garethp\ews\API\Exception\AutodiscoverFailed
-     */
     public function testGetAPIFailure()
     {
+        $this->expectException(\garethp\ews\API\Exception\AutodiscoverFailed::class);
+        
         $mode = getenv('HttpPlayback');
         if ($mode == false) {
             $mode = 'playback';
@@ -59,7 +59,7 @@ class ExchangeAutodiscoverTest extends \PHPUnit_Framework_TestCase
             [
                 'httpPlayback' => [
                     'mode' => $mode,
-                    'recordFileName' => self::class . '.' . $this->getName() . '.json',
+                    'recordFileName' => self::class . '.' . $this->name() . '.json',
                     'recordLocation' => realpath(__DIR__ . '/../../../Resources/recordings') . '/'
                 ]
             ]

@@ -5,9 +5,9 @@ namespace garethp\ews\Test\API;
 use garethp\ews\API\ExchangeWebServicesAuth;
 use garethp\ews\API\Type;
 use Mockery;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class ExchangeWebServicesAuthTest extends PHPUnit_Framework_TestCase
+class ExchangeWebServicesAuthTest extends TestCase
 {
     public function testFromUsernameAndPassword()
     {

@@ -14,7 +14,6 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use garethp\ews\API\NTLMSoapClient;
-use PHPUnit_Framework_TestCase;
 use ReflectionClass;
 use Mockery;
 use GuzzleHttp\Middleware;

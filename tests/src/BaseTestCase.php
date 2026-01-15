@@ -4,8 +4,9 @@ namespace garethp\ews\Test;
 
 use garethp\ews\API;
 use garethp\HttpPlayback\Client;
+use PHPUnit\Framework\TestCase;
 
-class BaseTestCase extends \PHPUnit_Framework_TestCase
+class BaseTestCase extends TestCase
 {
     /**
      * @param null $apiClass
@@ -40,7 +41,7 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
             [
                 'httpPlayback' => [
                     'mode' => $mode,
-                    'recordFileName' => static::class . '.' . $this->getName() . '.json',
+                    'recordFileName' => static::class . '.' . $this->name() . '.json',
                     'recordLocation' => realpath(__DIR__ . '/../../Resources/recordings') . '/'
                 ]
             ]

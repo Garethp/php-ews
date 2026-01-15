@@ -14,11 +14,11 @@ use garethp\ews\API\ExchangeWebServicesAuth;
 use garethp\ews\API\NTLMSoapClient;
 use garethp\ews\API\Type;
 use Mockery;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class ExchangeWebServicesTest extends PHPUnit_Framework_TestCase
+class ExchangeWebServicesTest extends TestCase
 {
-    public function tearDown()
+    public function tearDown(): void
     {
         Mockery::close();
     }
