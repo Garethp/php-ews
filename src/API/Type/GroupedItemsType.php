@@ -31,22 +31,22 @@ class GroupedItemsType extends Type implements Countable, ArrayAccess, IteratorA
      */
     protected $groupSummary = null;
 
-    public function count()
+    public function count(): int
     {
         return count($this->items);
     }
 
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->items[$offset]);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->items[$offset]) ? $this->items[$offset] : null;
     }
 
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->items[] = $value;
@@ -55,12 +55,12 @@ class GroupedItemsType extends Type implements Countable, ArrayAccess, IteratorA
         }
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->items[$offset]);
     }
 
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new \ArrayIterator($this->items->getIterator());
     }
