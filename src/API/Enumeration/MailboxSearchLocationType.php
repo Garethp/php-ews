@@ -1,43 +1,25 @@
 <?php
-/**
- * Contains \garethp\ews\API\Enumeration\MailboxSearchLocationType.
- */
 
 namespace garethp\ews\API\Enumeration;
 
+use garethp\ews\API\Enumeration;
+
 /**
- * Defines whether a search or fetch for a conversation should span either the
- * primary mailbox, archive mailbox, or both the primary and archive mailbox.
+ * Class representing MailboxSearchLocationType
  *
- * @package php-ews\Enumeration
+ *
+ * XSD Type: MailboxSearchLocationType
  */
 class MailboxSearchLocationType extends Enumeration
 {
-    /**
-     * Indicates a scope that targets both the primary mailbox and archive
-     * mailbox.
-     *
-     * @since Exchange 2013
-     *
-     * @var string
-     */
+
     const ALL = 'All';
 
-    /**
-     * Indicates a scope that targets the archive mailbox for a user.
-     *
-     * @since Exchange 2013
-     *
-     * @var string
-     */
     const ARCHIVE = 'ArchiveOnly';
 
-    /**
-     * Indicates a scope that targets the primary mailbox for a user.
-     *
-     * @since Exchange 2013
-     *
-     * @var string
-     */
     const PRIMARY = 'PrimaryOnly';
+
+    const PRIMARY_ONLY = 'PrimaryOnly';
+
+    const ARCHIVE_ONLY = 'ArchiveOnly';
 }

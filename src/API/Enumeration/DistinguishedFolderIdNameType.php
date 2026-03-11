@@ -130,4 +130,78 @@ class DistinguishedFolderIdNameType extends Enumeration
     const ARCHIVERECOVERABLEITEMSVERSIONS = 'archiverecoverableitemsversions';
 
     const ARCHIVERECOVERABLEITEMSPURGES = 'archiverecoverableitemspurges';
+
+    const RECOVERABLEITEMSDISCOVERYHOLDS = 'recoverableitemsdiscoveryholds';
+
+    const ARCHIVEINBOX = 'archiveinbox';
+
+    const ARCHIVERECOVERABLEITEMSDISCOVERYHOLDS = 'archiverecoverableitemsdiscoveryholds';
+
+    const SYNCISSUES = 'syncissues';
+
+    const LOCALFAILURES = 'localfailures';
+
+    const SERVERFAILURES = 'serverfailures';
+
+    const RECIPIENTCACHE = 'recipientcache';
+
+    const QUICKCONTACTS = 'quickcontacts';
+
+    const CONVERSATIONHISTORY = 'conversationhistory';
+
+    const ADMINAUDITLOGS = 'adminauditlogs';
+
+    const TODOSEARCH = 'todosearch';
+
+    const MYCONTACTS = 'mycontacts';
+
+    const IMCONTACTLIST = 'imcontactlist';
+
+    const PEOPLECONNECT = 'peopleconnect';
+
+    const MECONTACT = 'mecontact';
+
+    const PERSONMETADATA = 'personmetadata';
+
+    const TEAMSPACEACTIVITY = 'teamspaceactivity';
+
+    const TEAMSPACEMESSAGING = 'teamspacemessaging';
+
+    const TEAMSPACEWORKITEMS = 'teamspaceworkitems';
+
+    const SCHEDULED = 'scheduled';
+
+    const ORIONNOTES = 'orionnotes';
+
+    const TAGITEMS = 'tagitems';
+
+    const ALLTAGGEDITEMS = 'alltaggeditems';
+
+    const EXTERNALCONTACTS = 'externalcontacts';
+
+    const TEAMCHAT = 'teamchat';
+
+    const TEAMCHATHISTORY = 'teamchathistory';
+
+    const YAMMERROOT = 'yammerroot';
+
+    const YAMMERINBOUND = 'yammerinbound';
+
+    const YAMMEROUTBOUND = 'yammeroutbound';
+
+    const YAMMERFEEDS = 'yammerfeeds';
+
+    const ONEDRIVEROOT = 'onedriveroot';
+
+    const ONEDRIVERECYLEBIN = 'onedriverecylebin';
+
+    const ONEDRIVESYSTEM = 'onedrivesystem';
+
+    const ONEDRIVEVOLUME = 'onedrivevolume';
+
+    const IMPORTANT = 'important';
+
+    const STARRED = 'starred';
+
+    const ARCHIVE = 'archive';
 }

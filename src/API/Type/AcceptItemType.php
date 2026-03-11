@@ -8,7 +8,7 @@ namespace garethp\ews\API\Type;
  *
  * XSD Type: AcceptItemType
  */
-class AcceptItemType extends WellKnownResponseObjectType
+class AcceptItemType extends MeetingRegistrationResponseObjectType
 {
 
 
