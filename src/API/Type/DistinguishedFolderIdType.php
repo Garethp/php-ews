@@ -26,7 +26,7 @@ class DistinguishedFolderIdType extends BaseFolderIdType
      */
     protected $mailbox = null;
 
-    public function __construct($id = null, $changeKey = null, EmailAddressType $mailbox = null)
+    public function __construct($id = null, $changeKey = null, ?EmailAddressType $mailbox = null)
     {
         $this->id = $id;
         $this->changeKey = $changeKey;

@@ -13,7 +13,7 @@ class ExchangeException extends API\Exception
      */
     private $response;
 
-    public function __construct(ResponseMessageType $response, $code = 0, Throwable $previous = null)
+    public function __construct(ResponseMessageType $response, $code = 0, ?Throwable $previous = null)
     {
         $this->response = $response;
         parent::__construct($response->getMessageText(), $code, $previous);

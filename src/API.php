@@ -22,7 +22,7 @@ class API
         'version' => ExchangeWebServices::VERSION_2010
     );
 
-    public function __construct(ExchangeWebServices $client = null)
+    public function __construct(?ExchangeWebServices $client = null)
     {
         if ($client) {
             $this->setClient($client);
@@ -180,7 +180,7 @@ class API
         return Utilities\ensureIsArray($response);
     }
 
-    public function createCalendars($names, BaseFolderIdType $parentFolder = null, $options = array())
+    public function createCalendars($names, ?BaseFolderIdType $parentFolder = null, $options = array())
     {
         if ($parentFolder === null) {
             $parentFolder = $this->getDistinguishedFolderId('calendar');
@@ -189,7 +189,7 @@ class API
         return $this->createFolders($names, $parentFolder, $options, 'IPF.Appointment');
     }
 
-    public function createContactsFolder($names, BaseFolderIdType $parentFolder = null, $options = array())
+    public function createContactsFolder($names, ?BaseFolderIdType $parentFolder = null, $options = array())
     {
         if ($parentFolder === null) {
             $parentFolder = $this->getDistinguishedFolderId('contacts');
