@@ -5,6 +5,8 @@
 
 namespace garethp\ews\API\Enumeration;
 
+use garethp\ews\API\Enumeration;
+
 /**
  * Defines the types of mail tips requested from the service.
  *

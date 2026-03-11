@@ -5,6 +5,8 @@
 
 namespace garethp\ews\API\Enumeration;
 
+use garethp\ews\API\Enumeration;
+
 /**
  * Defines the type of conferencing that is performed with a calendar item.
  *

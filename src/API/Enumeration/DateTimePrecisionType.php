@@ -5,6 +5,8 @@
 
 namespace garethp\ews\API\Enumeration;
 
+use garethp\ews\API\Enumeration;
+
 /**
  * Specifies the precision for returned date/time values.
  *
