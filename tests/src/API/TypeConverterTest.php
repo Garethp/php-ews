@@ -14,6 +14,7 @@ use garethp\ews\API\Type\EmailAddressType;
 use garethp\ews\API\Type\FolderType;
 use garethp\ews\API\Type\PermissionSetType;
 use garethp\ews\API\Type\PermissionType;
+use garethp\ews\API\Type\ContactType;
 use PHPUnit\Framework\TestCase;
 
 class TypeConverterTest extends TestCase
@@ -168,5 +169,27 @@ class TypeConverterTest extends TestCase
         $this->assertIsArray($headers, 'Expected internetMessageHeaders to be an array');
         $this->assertCount(1, $headers, 'Expected 1 header to be present');
         $this->assertSame($properHeader, $headers[0], 'Expected header to match the original InternetHeaderType instance');
+    }
+
+    public function testConvertStdClassToArrayForUnionType()
+    {
+        $contact = new ContactType();
+
+        // Simulate SOAP response with EmailAddresses as stdClass
+        $soapData = (object)[
+            'Name' => 'test name',
+            'Email' => 'test@example.com'
+        ];
+
+        // This should convert stdClass to array for array|string type
+        $contact->emailAddresses = $soapData;
+
+        $emails = $contact->getEmailAddresses();
+
+        $this->assertIsArray($emails, 'Expected emailAddresses to be converted to array');
+        $this->assertArrayHasKey('Name', $emails, 'Expected Name property in converted array');
+        $this->assertArrayHasKey('Email', $emails, 'Expected Email property in converted array');
+        $this->assertEquals('test name', $emails['Name'], 'Expected Name value to match');
+        $this->assertEquals('test@example.com', $emails['Email'], 'Expected Email value to match');
     }
 }
