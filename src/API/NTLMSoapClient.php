@@ -187,10 +187,11 @@ class NTLMSoapClient extends SoapClient
      * @param string $action the soap action.
      * @param integer $version the soap version
      * @param integer $one_way
+     * @param string $uriParserClass
      * @return string the xml soap response.
      */
     #[\ReturnTypeWillChange]
-    public function __doRequest($request, $location, $action, $version, $one_way = 0)
+    public function __doRequest($request, $location, $action, $version, $one_way = 0, ?string $uriParserClass = null)
     {
         $postOptions = array(
             'body' => $request,
