@@ -35,6 +35,19 @@ class TypeConverter
      */
     public static function convertToType($value, string $type)
     {
+        // Handle special case for 'array' type
+        if ($type === 'array') {
+            if (is_array($value)) {
+                return $value;
+            }
+            if ($value instanceof \stdClass) {
+                $props = get_object_vars($value);
+                $arr = count($props) === 1 ? current($props) : (array)$value;
+                return is_array($arr) ? $arr : [$arr];
+            }
+            return is_array($value) ? $value : [$value];
+        }
+
         if (!class_exists($type)) {
             return $value;
         }
@@ -83,6 +96,10 @@ class TypeConverter
             foreach ($type->getTypes() as $t) {
                 if (!$t->isBuiltin() && $t->getName() !== 'array') {
                     return $t->getName();
+                }
+                // Return 'array' as the conversion target type for union types that include it
+                if ($t->getName() === 'array') {
+                    return 'array';
                 }
             }
         }

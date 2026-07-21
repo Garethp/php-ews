@@ -251,4 +251,42 @@ class CalendarTest extends BaseTestCase
             $this->markTestSkipped('Recurrence not supported on this Exchange server: ' . $e->getMessage());
         }
     }
+
+    /**
+    * Test that Categories field on CalendarItem properly handles union type of array|string
+    */
+    public function testGetCalendarItemWithCategories()
+    {
+        $client = $this->getClient();
+
+        // Create a calendar item with Categories
+        $start = new \DateTime('2026-04-09 10:00:00');
+        $end = new \DateTime('2026-04-09 11:00:00');
+
+        $itemIds = $client->createCalendarItems([
+            'Subject' => 'Union Type Test Event',
+            'Start' => $start->format('c'),
+            'End' => $end->format('c'),
+            'Categories' => ['TestCategory', 'UnionTypeTest']
+        ]);
+
+        $this->assertNotEmpty($itemIds, 'Should create calendar item with Categories');
+
+        $itemId = $itemIds[0];
+
+        $queriedEvent = $client->getItem($itemId, [
+            'ItemShape' => [
+                'BodyType' => 'Text',
+            ],
+        ]);
+
+        $this->assertNotNull($queriedEvent, 'Should retrieve calendar item with Categories');
+
+        $categories = $queriedEvent->getCategories();
+        $this->assertNotInstanceOf(\stdClass::class, $categories, 'Categories must be array or string, not stdClass');
+        $this->assertTrue(is_array($categories) || is_string($categories), 'Categories must be array or string');
+
+        // Clean up
+        $client->deleteItems($itemId, ['SendMeetingCancellations' => 'SendToNone']);
+    }
 }
