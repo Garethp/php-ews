@@ -307,6 +307,55 @@ class API
         return $response;
     }
 
+    
+    /**
+     * Apply a set of field changes to a folder.
+     *
+     * $foldersFields are the contents of the <Updates> element, e.g.
+     *       [
+     *          'FieldURI' => ['FieldURI' => 'folder:DisplayName'],
+     *          'Folder' =>['DisplayName' => 'New Folder Name'],
+     *       ];
+     *
+     * @param BaseFolderIdType $folderId
+     * @param array $foldersFields
+     * @param array $options
+     * @return Type\BaseFolderType[]|Type
+     */
+    public function updateFolder(BaseFolderIdType $folderId, $foldersFields, $options = [])
+    {
+        $folderChange = $folderId->toArray(true);
+        $folderChange['Updates'] =['SetFolderField' => $foldersFields];
+        $request = [
+            'FolderChanges' => [
+                'FolderChange' => $folderChange
+            ]
+        ];
+
+        $request = array_replace_recursive($request, $options);
+
+        $request = Type::buildFromArray($request);
+
+        try {
+            $response = $this->getClient()->UpdateFolder($request);
+        } catch (API\Exception $e) {
+            // Exchange renames the folder but returns ErrorInternalServerError
+            // ("Value cannot be null. (Parameter 'participantResolver')") on
+            // cold/app-only mailboxes. The write succeeds, so verify the folder
+            // instead of failing outright; rethrow anything else.
+            if (stripos($e->getMessage(), 'internal server error') === false) {
+                throw $e;
+            }
+
+            return Utilities\ensureIsArray($this->getFolder($folderId->toArray(true)));
+        }
+
+        if ($response instanceof FolderInfoResponseMessageType) {
+            return $response->getFolders();
+        }
+        return Utilities\ensureIsArray($response);
+    }
+    
     /**
      * Get a folder by it's distinguishedId
      *
