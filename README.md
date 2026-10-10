@@ -43,6 +43,17 @@ Once you have your `API` object, you need to build your request object. The type
 
 The request objects are build similar to the XML body of the request. See the resources section below for more information on building the requests.
 
+# Used by
+
+php-ews is used in these Open Source projects:
+
+- [Cypht](https://github.com/cypht-org/cypht): webmail that combines all your accounts in one place. Uses php-ews for Exchange (EWS) accounts.
+- [Kolab](https://git.kolab.org/source/kolab/): Open Source Email and Groupware platform.
+- [NTI TicketBundle](https://github.com/ntidev/TicketBundle): ticketing bundle for Symfony.
+- [EWSBundle](https://github.com/hboie/EWSBundle): Symfony bundle that wraps php-ews.
+
+Using php-ews in your project? [Open a PR](https://github.com/Garethp/php-ews/pulls) to add it here.
+
 # Simple Library Usage
 There's work in progress to simplify some operations so that you don't have to create the requests yourself.
 Examples are located [here](examples/) to browse in small snippets. If you have more examples you want to add, just make
