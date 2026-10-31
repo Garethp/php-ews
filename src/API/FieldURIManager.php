@@ -4,7 +4,6 @@ namespace garethp\ews\API;
 
 use garethp\ews\API\Enumeration\DictionaryURIType;
 use garethp\ews\API\Enumeration\UnindexedFieldURIType;
-use garethp\ews\API\Exception\ExchangeException;
 
 class FieldURIManager
 {
@@ -85,7 +84,7 @@ class FieldURIManager
         }
 
         if (!isset(self::$unIndexedFieldURIs[$fieldName][$preference])) {
-            throw new ExchangeException("Could not find uri $preference:$fieldName");
+            throw new Exception("Could not find uri $preference:$fieldName");
         }
 
         return self::$unIndexedFieldURIs[$fieldName][$preference];
@@ -103,7 +102,7 @@ class FieldURIManager
         }
 
         if (!isset(self::$dictionaryFieldURIs[$fieldName][$preference])) {
-            throw new ExchangeException("Could not find uri $preference:$fieldName");
+            throw new Exception("Could not find uri $preference:$fieldName");
         }
 
         $fieldUri = self::$dictionaryFieldURIs[$fieldName][$preference];
@@ -112,7 +111,7 @@ class FieldURIManager
         }
 
         if (!$entryKey || !isset($fieldUri[$entryKey])) {
-            throw new ExchangeException("Could not find FieldURI");
+            throw new Exception("Could not find FieldURI");
         }
 
         return $fieldUri[$entryKey];

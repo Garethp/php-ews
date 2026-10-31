@@ -4,6 +4,7 @@ namespace garethp\ews\Test\API;
 
 use garethp\ews\API\Enumeration\DictionaryURIType;
 use garethp\ews\API\Enumeration\UnindexedFieldURIType;
+use garethp\ews\API\Exception;
 use garethp\ews\API\FieldURIManager;
 use PHPUnit\Framework\TestCase;
 
@@ -20,5 +21,13 @@ class FieldURIManagerTest extends TestCase
 
         $unindexedFieldURIs = $reflectionMethod->invoke(new DictionaryURIType(), UnindexedFieldURIType::class);
         $this->assertEquals('item:Body', $unindexedFieldURIs['body']['item']);
+    }
+
+    public function testGetFieldUriByNameThrowsExceptionForUnknownPreference()
+    {
+        $this->expectException(Exception::class);
+        $this->expectExceptionMessage('Could not find uri item:adjacentmeetingcount');
+
+        FieldURIManager::getFieldUriByName('adjacentmeetingcount', 'bogus');
     }
 }
