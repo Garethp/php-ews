@@ -14,6 +14,8 @@ use garethp\ews\API\Type\EmailAddressType;
 use garethp\ews\API\Type\FolderType;
 use garethp\ews\API\Type\PermissionSetType;
 use garethp\ews\API\Type\PermissionType;
+use garethp\ews\API\Type\DistinguishedFolderIdType;
+use garethp\ews\API\TypeConverter;
 use PHPUnit\Framework\TestCase;
 
 class TypeConverterTest extends TestCase
@@ -152,6 +154,17 @@ class TypeConverterTest extends TestCase
         // Test normal assignment for unreadCount
         $folder->unreadCount = 42;
         $this->assertEquals(42, $folder->getUnreadCount(), 'Expected unreadCount to match');
+    }
+
+    public function testConvertSkipsNullPropertyForNonNullableSetter()
+    {
+        $soapData = (object)['Mailbox' => null, 'Id' => 'inbox'];
+
+        $folderId = TypeConverter::convertToType($soapData, DistinguishedFolderIdType::class);
+
+        $this->assertInstanceOf(DistinguishedFolderIdType::class, $folderId);
+        $this->assertEquals('inbox', $folderId->getId());
+        $this->assertNull($folderId->getMailbox());
     }
 
     public function testHandlesNonStdClassData()

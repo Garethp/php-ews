@@ -69,14 +69,16 @@ trait BuildableTrait
             if ($strict === true && $reflect->hasMethod("set" . ucfirst($key))) {
                 $parameters = $reflect->getMethod("set" . ucfirst($key))->getParameters();
 
-                if (count($parameters) === 1
-                    && $parameters[0]->hasType()
-                    && $parameters[0]->getClass() !== null) {
-                    $classToBuild = $parameters[0]->getClass()->getName();
+                if (count($parameters) === 1 && $parameters[0]->hasType()) {
+                    $type = $parameters[0]->getType();
 
-                    $newValue = call_user_func("$classToBuild::buildFromArray", $value, true);
-                    $object->{ucfirst($key)} = $newValue;
-                    continue;
+                    if ($type instanceof \ReflectionNamedType && !$type->isBuiltin()) {
+                        $classToBuild = $type->getName();
+
+                        $newValue = call_user_func("$classToBuild::buildFromArray", $value, true);
+                        $object->{ucfirst($key)} = $newValue;
+                        continue;
+                    }
                 }
             }
 

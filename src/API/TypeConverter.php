@@ -118,6 +118,10 @@ class TypeConverter
      */
     private static function setProperty(object $instance, string $property, $value): void
     {
+        if ($value === null) {
+            return;
+        }
+
         $setter = 'set' . ucfirst($property);
         if (!method_exists($instance, $setter)) {
             if (property_exists($instance, $property)) {
