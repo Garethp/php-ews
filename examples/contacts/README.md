@@ -7,6 +7,7 @@ that have been made simpler
  * [Get a list of contacts](listContacts.php)
  * [Create a contact](createContacts.php)
  * [Update a contact](updateContact.php)
+ * [Update a contact's extended properties](updateContactExtendedProperty.php)
  * [Delete one field from a contact](deleteContactField.php)
  * [Delete a contact](deleteContact.php)
  * [Upload a contact Photo](uploadContactPhoto.php)

@@ -2,6 +2,9 @@
 
 namespace garethp\ews\API;
 
+use garethp\ews\API\Type\ExtendedPropertyType;
+use garethp\ews\API\Type\PathToExtendedFieldType;
+
 class ItemUpdateBuilder
 {
     /**
@@ -28,7 +31,9 @@ class ItemUpdateBuilder
     {
         $deleteItemFields = [];
         foreach ($changes as $key) {
-            if (strpos($key, 'PhysicalAddress:') === 0 && $uriType == "contacts") {
+            if (self::isExtendedFieldURI($key)) {
+                $deleteItemFields[] = ['ExtendedFieldURI' => self::getExtendedFieldURI($key)];
+            } elseif (strpos($key, 'PhysicalAddress:') === 0 && $uriType == "contacts") {
                 $deleteItemFields =
                     self::deleteContactPhysicalAddressField($key, $deleteItemFields);
             } else {
@@ -44,6 +49,17 @@ class ItemUpdateBuilder
     {
         $setItemFields = [];
         foreach ($changes as $key => $valueArray) {
+            if ($key === 'ExtendedProperty') {
+                foreach (self::normalizeExtendedProperties($valueArray) as $property) {
+                    $setItemFields[] = [
+                        'ExtendedFieldURI' => self::getExtendedFieldURI($property),
+                        $itemType => ['ExtendedProperty' => $property]
+                    ];
+                }
+
+                continue;
+            }
+
             $valueArray = self::splitDictionaryUpdateEntries($valueArray);
             if (!is_array($valueArray) || Type::arrayIsAssoc($valueArray)) {
                 $valueArray = array($valueArray);
@@ -59,6 +75,51 @@ class ItemUpdateBuilder
         }
 
         return $setItemFields;
+    }
+
+    /**
+     * Wraps a single extended property into a list
+     *
+     * @param array|ExtendedPropertyType $properties
+     * @return array[]|ExtendedPropertyType[]
+     */
+    protected static function normalizeExtendedProperties(array|ExtendedPropertyType $properties): array
+    {
+        if (!is_array($properties) || Type::arrayIsAssoc($properties)) {
+            return [$properties];
+        }
+
+        return $properties;
+    }
+
+    /**
+     * Checks if the field is an extended property field
+     *
+     * @param mixed $field
+     * @return bool
+     */
+    protected static function isExtendedFieldURI(mixed $field): bool
+    {
+        return $field instanceof PathToExtendedFieldType
+            || (is_array($field) && isset($field['ExtendedFieldURI']));
+    }
+
+    /**
+     * @param array|ExtendedPropertyType|PathToExtendedFieldType $field
+     * @return array|PathToExtendedFieldType
+     */
+    protected static function getExtendedFieldURI(
+        array|ExtendedPropertyType|PathToExtendedFieldType $field
+    ): array|PathToExtendedFieldType {
+        if ($field instanceof ExtendedPropertyType) {
+            return $field->getExtendedFieldURI();
+        }
+
+        if (is_array($field) && isset($field['ExtendedFieldURI'])) {
+            return $field['ExtendedFieldURI'];
+        }
+
+        return $field;
     }
 
     protected static function deleteContactPhysicalAddressField($key, $deleteItemFields)
