@@ -137,6 +137,54 @@ class ContactsAPITest extends BaseTestCase
         $api->deleteItems($contact->getItemId());
     }
 
+    public function testUpdateContactExtendedProperty()
+    {
+        $api = $this->getClient();
+
+        $contact = $api->createContacts(array(
+            'GivenName' => 'John',
+            'Surname' => 'Smith'
+        ))[0];
+
+        $fieldUri = array(
+            'DistinguishedPropertySetId' => 'PublicStrings',
+            'PropertyName' => 'PhpEwsTestProperty',
+            'PropertyType' => 'String'
+        );
+        $readOptions = array('ItemShape' => array('AdditionalProperties' => array('ExtendedFieldURI' => $fieldUri)));
+
+        try {
+            // Create
+            $api->updateContactItem($contact, array(
+                'GivenName' => 'Jane',
+                'ExtendedProperty' => array('ExtendedFieldURI' => $fieldUri, 'Value' => 'first value')
+            ));
+
+            $result = $api->getContact($contact, $readOptions);
+            $this->assertEquals('Jane', $result->getGivenName());
+            $this->assertEquals('first value', $result->getExtendedProperty()[0]->getValue());
+
+            // Replace
+            $api->updateContactItem($result->getItemId(), array(
+                'ExtendedProperty' => array(array('ExtendedFieldURI' => $fieldUri, 'Value' => 'second value'))
+            ));
+
+            $result = $api->getContact($contact, $readOptions);
+            $this->assertEquals('second value', $result->getExtendedProperty()[0]->getValue());
+
+            // Delete
+            $api->updateContactItem($result->getItemId(), array(
+                'deleteFields' => array(array('ExtendedFieldURI' => $fieldUri))
+            ));
+
+            $result = $api->getContact($contact, $readOptions);
+            $this->assertEquals('Jane', $result->getGivenName());
+            $this->assertEmpty($result->getExtendedProperty());
+        } finally {
+            $api->deleteItems($contact);
+        }
+    }
+
     public function testDeleteContactField()
     {
         $api = $this->getClient();
